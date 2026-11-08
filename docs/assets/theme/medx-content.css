@@ -436,3 +436,4 @@
 /* ---------- 11. پاک‌سازی نشانه‌های تزئینی قدیمی ---------- */
 .sec__body .emoji,
 .sec__body .deco-emoji{display:none}
+.sec__body a.anchor-plain{color:inherit;text-decoration:none;cursor:default}

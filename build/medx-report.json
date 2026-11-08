@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T18:10:44Z",
+ "generatedAt": "2026-11-08T18:12:52Z",
  "totals": {
   "lessons": 156,
   "subjects": 8,
@@ -37,7 +37,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0415,
-   "seconds": 0.043,
+   "seconds": 0.042,
    "section_specs": [
     {
      "id": "s1",
@@ -259,7 +259,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0543,
-   "seconds": 0.032,
+   "seconds": 0.031,
    "section_specs": [
     {
      "id": "s1",
@@ -765,7 +765,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0518,
-   "seconds": 0.024,
+   "seconds": 0.025,
    "section_specs": [
     {
      "id": "overview",
@@ -1073,7 +1073,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.056,
-   "seconds": 0.026,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "overview",
@@ -1248,7 +1248,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0519,
-   "seconds": 0.03,
+   "seconds": 0.031,
    "section_specs": [
     {
      "id": "s1",
@@ -1397,7 +1397,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0555,
-   "seconds": 0.025,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "overview",
@@ -1556,7 +1556,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0531,
-   "seconds": 0.03,
+   "seconds": 0.029,
    "section_specs": [
     {
      "id": "s1",
@@ -2005,7 +2005,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0547,
-   "seconds": 0.024,
+   "seconds": 0.025,
    "section_specs": [
     {
      "id": "s1",
@@ -2154,7 +2154,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0539,
-   "seconds": 0.021,
+   "seconds": 0.022,
    "section_specs": [
     {
      "id": "s1",
@@ -2469,7 +2469,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0553,
-   "seconds": 0.022,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "s1",
@@ -2760,7 +2760,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.058,
-   "seconds": 0.021,
+   "seconds": 0.024,
    "section_specs": [
     {
      "id": "s1",
@@ -3187,7 +3187,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0613,
-   "seconds": 0.025,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -3471,7 +3471,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0691,
-   "seconds": 0.039,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -3620,7 +3620,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0353,
-   "seconds": 0.025,
+   "seconds": 0.029,
    "section_specs": [
     {
      "id": "s1",
@@ -3872,7 +3872,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.056,
-   "seconds": 0.026,
+   "seconds": 0.025,
    "section_specs": [
     {
      "id": "s1",
@@ -3997,7 +3997,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0357,
-   "seconds": 0.027,
+   "seconds": 0.026,
    "section_specs": [
     {
      "id": "s1",
@@ -4131,7 +4131,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0672,
-   "seconds": 0.028,
+   "seconds": 0.027,
    "section_specs": [
     {
      "id": "s1",
@@ -4297,7 +4297,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0598,
-   "seconds": 0.031,
+   "seconds": 0.027,
    "section_specs": [
     {
      "id": "s1",
@@ -4422,7 +4422,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0382,
-   "seconds": 0.026,
+   "seconds": 0.04,
    "section_specs": [
     {
      "id": "s1",
@@ -4548,7 +4548,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0586,
-   "seconds": 0.036,
+   "seconds": 0.029,
    "section_specs": [
     {
      "id": "s1",
@@ -4674,7 +4674,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0661,
-   "seconds": 0.025,
+   "seconds": 0.026,
    "section_specs": [
     {
      "id": "s1",
@@ -4840,7 +4840,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0697,
-   "seconds": 0.026,
+   "seconds": 0.027,
    "section_specs": [
     {
      "id": "s1",
@@ -5108,7 +5108,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1079,
-   "seconds": 0.022,
+   "seconds": 0.024,
    "section_specs": [
     {
      "id": "s1",
@@ -5289,7 +5289,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1206,
-   "seconds": 0.02,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "s1",
@@ -5643,7 +5643,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1277,
-   "seconds": 0.018,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "s1",
@@ -5875,7 +5875,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1574,
-   "seconds": 0.016,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -6015,7 +6015,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1286,
-   "seconds": 0.013,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -6109,7 +6109,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1808,
-   "seconds": 0.015,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -6250,7 +6250,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.208,
-   "seconds": 0.015,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -6406,7 +6406,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1843,
-   "seconds": 0.013,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -6539,7 +6539,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2186,
-   "seconds": 0.015,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -6648,7 +6648,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2401,
-   "seconds": 0.017,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -6726,7 +6726,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0355,
-   "seconds": 0.044,
+   "seconds": 0.036,
    "section_specs": [
     {
      "id": "s1",
@@ -6866,7 +6866,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0957,
-   "seconds": 0.015,
+   "seconds": 0.016,
    "section_specs": [
     {
      "id": "s1",
@@ -6975,7 +6975,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1497,
-   "seconds": 0.014,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -7091,7 +7091,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1495,
-   "seconds": 0.013,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -7176,7 +7176,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1646,
-   "seconds": 0.013,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -7402,7 +7402,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1582,
-   "seconds": 0.012,
+   "seconds": 0.016,
    "section_specs": [
     {
      "id": "s1",
@@ -7495,7 +7495,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1969,
-   "seconds": 0.014,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -7644,7 +7644,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2321,
-   "seconds": 0.014,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -7768,7 +7768,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1983,
-   "seconds": 0.013,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -7884,7 +7884,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2278,
-   "seconds": 0.012,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -8118,7 +8118,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2369,
-   "seconds": 0.012,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -8321,7 +8321,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0804,
-   "seconds": 0.032,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -8445,7 +8445,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0861,
-   "seconds": 0.015,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -8562,7 +8562,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1004,
-   "seconds": 0.019,
+   "seconds": 0.023,
    "section_specs": [
     {
      "id": "s1",
@@ -8720,7 +8720,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1182,
-   "seconds": 0.021,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -8868,7 +8868,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.092,
-   "seconds": 0.02,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -9057,7 +9057,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1173,
-   "seconds": 0.017,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -9182,7 +9182,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1186,
-   "seconds": 0.022,
+   "seconds": 0.035,
    "section_specs": [
     {
      "id": "s1",
@@ -9347,7 +9347,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1298,
-   "seconds": 0.022,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "s1",
@@ -9676,7 +9676,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1301,
-   "seconds": 0.016,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -9785,7 +9785,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1417,
-   "seconds": 0.016,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -9919,7 +9919,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0277,
-   "seconds": 0.044,
+   "seconds": 0.043,
    "section_specs": [
     {
      "id": "s1",
@@ -10093,7 +10093,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0279,
-   "seconds": 0.048,
+   "seconds": 0.051,
    "section_specs": [
     {
      "id": "s1",
@@ -10267,7 +10267,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0315,
-   "seconds": 0.042,
+   "seconds": 0.038,
    "section_specs": [
     {
      "id": "s1",
@@ -10441,7 +10441,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0314,
-   "seconds": 0.048,
+   "seconds": 0.038,
    "section_specs": [
     {
      "id": "s1",
@@ -10615,7 +10615,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0338,
-   "seconds": 0.033,
+   "seconds": 0.05,
    "section_specs": [
     {
      "id": "s1",
@@ -10789,7 +10789,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.031,
-   "seconds": 0.036,
+   "seconds": 0.045,
    "section_specs": [
     {
      "id": "s1",
@@ -10963,7 +10963,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0294,
-   "seconds": 0.036,
+   "seconds": 0.039,
    "section_specs": [
     {
      "id": "s1",
@@ -11137,7 +11137,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0297,
-   "seconds": 0.043,
+   "seconds": 0.038,
    "section_specs": [
     {
      "id": "s1",
@@ -11311,7 +11311,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0281,
-   "seconds": 0.038,
+   "seconds": 0.041,
    "section_specs": [
     {
      "id": "s1",
@@ -11659,7 +11659,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0285,
-   "seconds": 0.036,
+   "seconds": 0.04,
    "section_specs": [
     {
      "id": "s1",
@@ -11833,7 +11833,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0308,
-   "seconds": 0.037,
+   "seconds": 0.04,
    "section_specs": [
     {
      "id": "s1",
@@ -12007,7 +12007,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0299,
-   "seconds": 0.038,
+   "seconds": 0.042,
    "section_specs": [
     {
      "id": "s1",
@@ -12181,7 +12181,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0282,
-   "seconds": 0.038,
+   "seconds": 0.041,
    "section_specs": [
     {
      "id": "s1",
@@ -12355,7 +12355,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0282,
-   "seconds": 0.038,
+   "seconds": 0.052,
    "section_specs": [
     {
      "id": "s1",
@@ -12529,7 +12529,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0258,
-   "seconds": 0.038,
+   "seconds": 0.041,
    "section_specs": [
     {
      "id": "s1",
@@ -12703,7 +12703,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0252,
-   "seconds": 0.039,
+   "seconds": 0.04,
    "section_specs": [
     {
      "id": "s1",
@@ -12877,7 +12877,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0283,
-   "seconds": 0.037,
+   "seconds": 0.039,
    "section_specs": [
     {
      "id": "s1",
@@ -13225,7 +13225,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0279,
-   "seconds": 0.036,
+   "seconds": 0.037,
    "section_specs": [
     {
      "id": "s1",
@@ -13399,7 +13399,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0229,
-   "seconds": 0.04,
+   "seconds": 0.044,
    "section_specs": [
     {
      "id": "s1",
@@ -13747,7 +13747,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.024,
-   "seconds": 0.04,
+   "seconds": 0.042,
    "section_specs": [
     {
      "id": "s1",
@@ -13921,7 +13921,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0216,
-   "seconds": 0.043,
+   "seconds": 0.044,
    "section_specs": [
     {
      "id": "s1",
@@ -14095,7 +14095,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0226,
-   "seconds": 0.042,
+   "seconds": 0.045,
    "section_specs": [
     {
      "id": "s1",
@@ -14269,7 +14269,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0218,
-   "seconds": 0.042,
+   "seconds": 0.052,
    "section_specs": [
     {
      "id": "s1",
@@ -14443,7 +14443,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0215,
-   "seconds": 0.044,
+   "seconds": 0.049,
    "section_specs": [
     {
      "id": "s1",
@@ -14617,7 +14617,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0227,
-   "seconds": 0.043,
+   "seconds": 0.047,
    "section_specs": [
     {
      "id": "s1",
@@ -14792,7 +14792,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0278,
-   "seconds": 0.044,
+   "seconds": 0.05,
    "section_specs": [
     {
      "id": "s1",
@@ -14959,7 +14959,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0265,
-   "seconds": 0.042,
+   "seconds": 0.045,
    "section_specs": [
     {
      "id": "s1",
@@ -15126,7 +15126,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0274,
-   "seconds": 0.04,
+   "seconds": 0.043,
    "section_specs": [
     {
      "id": "s1",
@@ -15293,7 +15293,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.028,
-   "seconds": 0.041,
+   "seconds": 0.043,
    "section_specs": [
     {
      "id": "s1",
@@ -15460,7 +15460,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0273,
-   "seconds": 0.043,
+   "seconds": 0.044,
    "section_specs": [
     {
      "id": "s1",
@@ -15627,7 +15627,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0328,
-   "seconds": 0.048,
+   "seconds": 0.053,
    "section_specs": [
     {
      "id": "s1",
@@ -15842,7 +15842,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0279,
-   "seconds": 0.044,
+   "seconds": 0.043,
    "section_specs": [
     {
      "id": "s1",
@@ -16009,7 +16009,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0288,
-   "seconds": 0.04,
+   "seconds": 0.044,
    "section_specs": [
     {
      "id": "s1",
@@ -16335,7 +16335,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0295,
-   "seconds": 0.039,
+   "seconds": 0.043,
    "section_specs": [
     {
      "id": "s1",
@@ -16494,7 +16494,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0277,
-   "seconds": 0.042,
+   "seconds": 0.046,
    "section_specs": [
     {
      "id": "s1",
@@ -16661,7 +16661,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0284,
-   "seconds": 0.04,
+   "seconds": 0.043,
    "section_specs": [
     {
      "id": "s1",
@@ -16828,7 +16828,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0301,
-   "seconds": 0.041,
+   "seconds": 0.042,
    "section_specs": [
     {
      "id": "s1",
@@ -16995,7 +16995,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0296,
-   "seconds": 0.041,
+   "seconds": 0.042,
    "section_specs": [
     {
      "id": "s1",
@@ -17162,7 +17162,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0323,
-   "seconds": 0.046,
+   "seconds": 0.044,
    "section_specs": [
     {
      "id": "s1",
@@ -17360,7 +17360,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0334,
-   "seconds": 0.041,
+   "seconds": 0.038,
    "section_specs": [
     {
      "id": "s1",
@@ -17842,7 +17842,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0312,
-   "seconds": 0.037,
+   "seconds": 0.036,
    "section_specs": [
     {
      "id": "s1",
@@ -18126,7 +18126,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0318,
-   "seconds": 0.038,
+   "seconds": 0.035,
    "section_specs": [
     {
      "id": "s1",
@@ -18268,7 +18268,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0365,
-   "seconds": 0.035,
+   "seconds": 0.034,
    "section_specs": [
     {
      "id": "s1",
@@ -18410,7 +18410,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0414,
-   "seconds": 0.036,
+   "seconds": 0.034,
    "section_specs": [
     {
      "id": "s1",
@@ -18576,7 +18576,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0344,
-   "seconds": 0.035,
+   "seconds": 0.034,
    "section_specs": [
     {
      "id": "s1",
@@ -18718,7 +18718,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0401,
-   "seconds": 0.034,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -18868,7 +18868,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0386,
-   "seconds": 0.035,
+   "seconds": 0.034,
    "section_specs": [
     {
      "id": "s1",
@@ -19168,7 +19168,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0397,
-   "seconds": 0.034,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -19318,7 +19318,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0392,
-   "seconds": 0.032,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -19460,7 +19460,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0423,
-   "seconds": 0.031,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -19610,7 +19610,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0443,
-   "seconds": 0.031,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -19752,7 +19752,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0447,
-   "seconds": 0.032,
+   "seconds": 0.031,
    "section_specs": [
     {
      "id": "s1",
@@ -20068,7 +20068,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1213,
-   "seconds": 0.018,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -20374,7 +20374,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1414,
-   "seconds": 0.017,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -20531,7 +20531,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2084,
-   "seconds": 0.019,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "s1",
@@ -20744,7 +20744,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1386,
-   "seconds": 0.022,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -20892,7 +20892,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1435,
-   "seconds": 0.016,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -21041,7 +21041,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1696,
-   "seconds": 0.016,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -21166,7 +21166,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2047,
-   "seconds": 0.017,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -21298,7 +21298,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1826,
-   "seconds": 0.012,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -21781,7 +21781,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0712,
-   "seconds": 0.019,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -21897,7 +21897,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0741,
-   "seconds": 0.019,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -22145,7 +22145,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0863,
-   "seconds": 0.018,
+   "seconds": 0.025,
    "section_specs": [
     {
      "id": "s1",
@@ -22277,7 +22277,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1146,
-   "seconds": 0.016,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -22409,7 +22409,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1252,
-   "seconds": 0.016,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -22557,7 +22557,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1177,
-   "seconds": 0.011,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -22641,7 +22641,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1398,
-   "seconds": 0.015,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -23038,7 +23038,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1877,
-   "seconds": 0.012,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",

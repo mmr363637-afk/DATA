@@ -797,6 +797,33 @@ def build_section_element(sec_id: str, title: str, number: int, body_el, imp: di
 # ---------------------------------------------------------------------------
 # ۷) تبدیل کامل یک درسنامه
 # ---------------------------------------------------------------------------
+
+def fix_internal_anchors(doc, specs) -> int:
+    """لینک‌های داخلی قدیمی را به بخش‌های تازه وصل می‌کند و لنگرهای مرده را به متن ساده بدل می‌کند."""
+    ids = {el.get("id") for el in doc.xpath("//*[@id]") if el.get("id")}
+    by_title = {}
+    for sp in specs:
+        by_title[clean_text(sp["title"])] = sp["id"]
+    fixed = 0
+    for a in list(doc.xpath('//a[starts-with(@href,"#")]')):
+        target = (a.get("href") or "")[1:]
+        if not target or target in ids:
+            continue
+        label = clean_text(a.text_content())
+        sid = by_title.get(label)
+        if sid:
+            a.set("href", "#" + sid)
+            fixed += 1
+            continue
+        a.attrib.pop("href", None)
+        cls = (a.get("class") or "").split()
+        if "anchor-plain" not in cls:
+            cls.append("anchor-plain")
+        a.set("class", " ".join(cls))
+        fixed += 1
+    return fixed
+
+
 def transform(src_path: str, subject: dict, lesson: dict, base: str) -> dict:
     with open(src_path, encoding="utf-8") as fh:
         source = fh.read()
@@ -954,6 +981,8 @@ def transform(src_path: str, subject: dict, lesson: dict, base: str) -> dict:
         for child in list(a):
             target.append(child)
         slot.append(sec_el)
+
+    fix_internal_anchors(new_doc, section_specs)
 
     out = etree.tostring(new_doc, method="html", encoding="unicode", doctype="<!DOCTYPE html>")
     with open(src_path, "w", encoding="utf-8") as fh:
