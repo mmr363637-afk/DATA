@@ -6,6 +6,7 @@
 """
 from __future__ import annotations
 
+import os
 from html import escape
 
 from . import art
@@ -14,6 +15,13 @@ from .data import (IMPORTANCE_LABEL, IMPORTANCE_LABEL_FA, QBANK_PARTS, SUBJECTS,
 
 BRAND = "کتابخانهٔ مدیکال"
 DISCLAIMER = "محتوای آموزشی است و جایگزین قضاوت بالینی نیست."
+AUTHOR = "مهدی محمدرحیمی"
+ASSET_V = "?v=5"
+
+# اپلیکیشن برنامه‌ریز (اپ وب) — همان‌جایی که دکمهٔ «درسنامه» به این کتابخانه می‌آید.
+# با متغیر محیطی MEDX_APP_URL هم می‌شود آدرس را عوض کرد.
+APP_URL = os.environ.get("MEDX_APP_URL", "https://mmr363637-afk.github.io/planner/")
+APP_LABEL = "اپلیکیشن برنامه‌ریز"
 
 
 def ico(name: str, size: int = 16, cls: str = "uicon") -> str:
@@ -43,20 +51,31 @@ def svar(s: dict) -> str:
 def head(title: str, description: str, base: str, subject: dict | None = None,
          extra_css: tuple = (), theme: str | None = None) -> str:
     theme = theme or ("hsl(%d %d%% 42%%)" % (subject["hue"], subject["chroma"]) if subject else "#26324f")
-    css = ['<link rel="stylesheet" href="%sassets/theme/medx-core.css">' % base]
+    css = ['<link rel="stylesheet" href="%sassets/theme/medx-core.css%s">' % (base, ASSET_V)]
     for name in extra_css:
-        css.append('<link rel="stylesheet" href="%sassets/theme/%s">' % (base, name))
+        css.append('<link rel="stylesheet" href="%sassets/theme/%s%s">' % (base, name, ASSET_V))
     return f"""<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(description)}">
 <meta name="theme-color" content="{theme}">
 <meta name="color-scheme" content="light">
+<meta name="author" content="{AUTHOR}">
+<meta name="creator" content="{AUTHOR}">
+<meta property="article:author" content="{AUTHOR}">
 <link rel="manifest" href="{base}manifest.json">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232e3a5f'/%3E%3Cpath d='M6 17h4l2-5 3 11 3-8 2 2h6' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preload" href="{base}assets/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{base}assets/fonts/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
 {chr(10).join(css)}"""
+
+
+def app_link(cls: str = "mx-appbtn", label: str = APP_LABEL, size: int = 15,
+             ico_name: str = "grid") -> str:
+    """دکمهٔ بازگشت به اپ وب؛ همان دکمه‌ای که در اپ به کتابخانه می‌آید."""
+    return (f'<a class="{cls}" href="{APP_URL}" target="_blank" rel="noopener" '
+            f'aria-label="{label}" title="{label}">'
+            f'{ico(ico_name, size)}<span>{label}</span></a>')
 
 
 def brand(href: str, sub: str = "درسنامه‌های بورد و دستیاری") -> str:
@@ -75,6 +94,7 @@ def topbar(base: str, sub: str = "درسنامه‌های بورد و دستیا
       <a href="{base}index.html#subjects">درس‌ها</a>
       <a href="{base}qbank/index.html">بانک سؤال</a>
       <a href="{base}index.html#progress">پیشرفت من</a>
+      <a href="{APP_URL}" target="_blank" rel="noopener">اپلیکیشن ↗</a>
     </nav>"""
     cls = "mx-top mx-top--light" if light else "mx-top"
     return f"""<header class="{cls}">
@@ -86,6 +106,7 @@ def topbar(base: str, sub: str = "درسنامه‌های بورد و دستیا
       {ico('search', 15)}
       <input type="search" {search_attrs} aria-label="جست‌وجو">
     </div>
+    {app_link()}
     {right_extra}
   </div>
   <div class="mx-top__progress" aria-hidden="true"><i></i></div>
@@ -98,7 +119,9 @@ def footer(base: str, subject: dict | None = None) -> str:
   <div class="wrap mx-foot__in">
     <span class="mx-foot__brand">{ico('chart', 16)} {BRAND}</span>
     {ctx}
+    <span class="mx-foot__author">نویسنده: <b>{AUTHOR}</b></span>
     <span>{DISCLAIMER}</span>
+    {app_link("mx-foot__app", size=14, ico_name="grid")}
     <a href="{base}index.html">خانه</a>
   </div>
 </footer>"""
@@ -306,7 +329,7 @@ def portal_page(lessons_by_subject: dict, totals: dict, base: str = "") -> str:
 </main>
 
 {footer(base)}
-<script src="{base}assets/theme/medx-core.js" defer></script>"""
+<script src="{base}assets/theme/medx-core.js{ASSET_V}" defer></script>"""
 
     title = f"{BRAND} — درسنامه‌های بورد و دستیاری"
     desc = (f"{fa(totals['lessons'])} درسنامهٔ فارسی برای آمادگی بورد و دستیاری در "
@@ -450,7 +473,7 @@ def subject_page(subject: dict, lessons: list[dict], metrics: dict, base: str = 
 </main>
 
 {footer(base, subject)}
-<script src="{base}assets/theme/medx-core.js" defer></script>"""
+<script src="{base}assets/theme/medx-core.js{ASSET_V}" defer></script>"""
 
     title = f"{subject['name']} — {BRAND}"
     desc = f"{fa(metrics['count'])} درسنامهٔ {subject['name']} برای بورد و دستیاری، {human_hours(metrics['minutes'])} مطالعه."
@@ -654,7 +677,7 @@ def lesson_shell(subject: dict, lesson: dict, sections: list[dict], base: str,
 <section class="lesson-hero">
   <div class="wrap lesson-hero__in">
     <div>
-      <div class="hero-meta">{''.join(hero_meta)}{imp_chip}</div>
+      <div class="hero-meta">{''.join(hero_meta)}{imp_chip}<span class="hm hm--author">{ico('user', 13)}<b>{AUTHOR}</b></span></div>
       <h1>{escape(title)}</h1>
       <p class="lesson-hero__lede">درسنامهٔ {escape(subject['name'])} برای آمادگی بورد و دستیاری.
         {human_minutes(lesson['minutes'])} مطالعهٔ برآوردی؛ می‌توانی بخش‌ها را علامت بزنی، هایلایت کنی و آزمون پایان درس را بدهی.</p>
@@ -690,9 +713,9 @@ def lesson_shell(subject: dict, lesson: dict, sections: list[dict], base: str,
 
 {sheets_lesson()}
 
-<script src="{base}assets/theme/medx-core.js" defer></script>
-<script src="{base}assets/theme/medx-reader.js" defer></script>
-<script src="{base}assets/theme/medx-exam.js" defer></script>"""
+<script src="{base}assets/theme/medx-core.js{ASSET_V}" defer></script>
+<script src="{base}assets/theme/medx-reader.js{ASSET_V}" defer></script>
+<script src="{base}assets/theme/medx-exam.js{ASSET_V}" defer></script>"""
 
     desc = (f"{title} — درسنامهٔ {subject['name']} برای بورد و دستیاری؛ "
             f"{human_minutes(lesson['minutes'])} مطالعه، {fa(lesson.get('flashcards', 0))} فلش‌کارت.")
@@ -700,6 +723,8 @@ def lesson_shell(subject: dict, lesson: dict, sections: list[dict], base: str,
     jsonld = (f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"LearningResource",'
               f'"name":"{title}","inLanguage":"fa-IR","about":"{subject["name"]}",'
               f'"educationalLevel":"پزشکی — بورد و دستیاری","timeRequired":"PT{int(lesson["minutes"])}M",'
+              f'"author":{{"@type":"Person","name":"{AUTHOR}"}},'
+              f'"creator":{{"@type":"Person","name":"{AUTHOR}"}},'
               f'"isPartOf":{{"@type":"CollectionPage","name":"{BRAND}"}}}}</script>')
 
     head_html = head(f"{title} | {subject['name']} — {BRAND}", desc, base, subject,

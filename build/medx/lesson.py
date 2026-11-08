@@ -54,11 +54,58 @@ def strip_emoji(text: str) -> str:
     return EMOJI_RE.sub("", text or "").strip()
 
 
+
+# ---------------------------------------------------------------------------
+# SVG در مسیر lxml: نام صفت‌های camelCase (viewBox، preserveAspectRatio …)
+# با پارسر HTML به حروف کوچک تبدیل می‌شوند و آیکون‌ها بدون viewBox مقیاس
+# نمی‌گیرند. اینجا فقط داخل تگ <svg> اصلاح می‌شوند.
+# ---------------------------------------------------------------------------
+_SVG_ATTR_FIX = {
+    "viewbox": "viewBox",
+    "preserveaspectratio": "preserveAspectRatio",
+    "gradientunits": "gradientUnits",
+    "gradienttransform": "gradientTransform",
+    "patternunits": "patternUnits",
+    "patterncontentunits": "patternContentUnits",
+    "patterntransform": "patternTransform",
+    "clippathunits": "clipPathUnits",
+    "filterunits": "filterUnits",
+    "markerwidth": "markerWidth",
+    "markerheight": "markerHeight",
+    "markerunits": "markerUnits",
+    "refx": "refX",
+    "refy": "refY",
+    "stddeviation": "stdDeviation",
+    "textlength": "textLength",
+    "lengthadjust": "lengthAdjust",
+    "startoffset": "startOffset",
+    "basefrequency": "baseFrequency",
+    "numoctaves": "numOctaves",
+    "spreadmethod": "spreadMethod",
+    "xchannelselector": "xChannelSelector",
+    "ychannelselector": "yChannelSelector",
+}
+
+
+def fix_svg_attrs(markup: str) -> str:
+    """صفت‌های camelCase داخل تگ‌های svg را به شکل درست SVG برمی‌گرداند."""
+    if "<svg" not in markup:
+        return markup
+
+    def _rep(m):
+        tag = m.group(0)
+        for low, right in _SVG_ATTR_FIX.items():
+            tag = tag.replace(f" {low}=", f" {right}=")
+        return tag
+
+    return re.sub(r"<svg\b[^>]*>", _rep, markup)
+
+
 def inner_html(el) -> str:
     parts = [el.text or ""]
     for child in el:
         parts.append(etree.tostring(child, method="html", encoding="unicode"))
-    return "".join(parts)
+    return fix_svg_attrs("".join(parts))
 
 
 def fragment(markup: str):
@@ -984,7 +1031,8 @@ def transform(src_path: str, subject: dict, lesson: dict, base: str) -> dict:
 
     fix_internal_anchors(new_doc, section_specs)
 
-    out = etree.tostring(new_doc, method="html", encoding="unicode", doctype="<!DOCTYPE html>")
+    out = fix_svg_attrs(etree.tostring(new_doc, method="html", encoding="unicode",
+                                       doctype="<!DOCTYPE html>"))
     with open(src_path, "w", encoding="utf-8") as fh:
         fh.write(out)
 
