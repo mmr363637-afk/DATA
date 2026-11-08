@@ -643,3 +643,27 @@ body{overflow-x:clip}
   .qband__act{flex-wrap:wrap}
   .resume__acts{flex-wrap:wrap}
 }
+
+/* ---------- 18. دکمهٔ بازگشت به اپ وب ---------- */
+.mx-appbtn{
+  display:inline-flex;align-items:center;gap:6px;flex:0 0 auto;height:34px;
+  padding:0 12px;border-radius:999px;border:1px solid rgba(255,255,255,.30);
+  background:rgba(255,255,255,.10);color:#fff;text-decoration:none;
+  font-size:.76rem;font-weight:700;line-height:1;white-space:nowrap;
+}
+.mx-appbtn svg{flex:0 0 auto;opacity:.9}
+.mx-appbtn:hover,.mx-appbtn:focus-visible{background:rgba(255,255,255,.22);color:#fff;text-decoration:none}
+.mx-top--light .mx-appbtn{border-color:var(--line);background:var(--surface-3);color:var(--ink-2)}
+.mx-top--light .mx-appbtn:hover,.mx-top--light .mx-appbtn:focus-visible{background:var(--b-50);color:var(--b-700)}
+.mx-foot__app{
+  display:inline-flex;align-items:center;gap:5px;font-size:.8rem;font-weight:800;
+  color:var(--b-700);text-decoration:none;
+}
+.mx-foot__app svg{opacity:.85}
+.mx-foot__app:hover{text-decoration:underline}
+.mx-top__nav a[target]{opacity:.92}
+@media(max-width:700px){
+  .mx-appbtn{height:32px;padding:0 10px}
+  .mx-appbtn span{display:none}
+  .mx-foot__app span{display:inline}
+}

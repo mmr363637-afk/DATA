@@ -44,6 +44,8 @@ def load_all():
     return cfg, subs, parts
 
 
+APP_URL = "https://mmr363637-afk.github.io/planner/"  # اپ وب (برنامه‌ریز)
+
 FONTS = """@font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
@@ -59,6 +61,7 @@ HEADER = """<header class="site-header">
       <span class="sep">/</span>
       <span class="crumb-now">{now}</span>
     </nav>
+    <a class="btn btn--ghost" href="{app}" target="_blank" rel="noopener" title="اپلیکیشن برنامه‌ریز">↩ اپلیکیشن برنامه‌ریز</a>
     <a class="btn btn--ghost" href="{ar}index.html">همهٔ درس‌ها</a>
   </div>
 </header>"""
@@ -99,7 +102,7 @@ def build_part(p) -> None:
         for k, v in sorted(diff.items(), key=lambda kv: -kv[1])
     )
     body = f"""<div style="--h:{h};--c:{c}%">
-{HEADER.format(ar="../", now=esc(p['title']))}
+{HEADER.format(ar="../", app=APP_URL, now=esc(p['title']))}
 <main class="wrap" style="padding-bottom:56px">
   <section class="qb-hero">
     <h1>{esc(p['title'])}</h1>
@@ -257,7 +260,7 @@ def build_index(parts) -> None:
         <a class="btn btn--ghost" href="{p['part']}-standalone.html" title="همه‌چیز درون یک فایل؛ آفلاین و قابل ارسال">تک‌فایلی</a>
       </div>
     </article>""")
-    body = f"""{HEADER.format(ar='../', now='فهرست').replace('../qbank/index.html', 'index.html')}
+    body = f"""{HEADER.format(ar='../', app=APP_URL, now='فهرست').replace('../qbank/index.html', 'index.html')}
 <main style="padding-bottom:60px">
   <div class="wrap">
   <section class="qb-hero">

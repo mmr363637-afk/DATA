@@ -6,6 +6,7 @@
 """
 from __future__ import annotations
 
+import os
 from html import escape
 
 from . import art
@@ -15,7 +16,12 @@ from .data import (IMPORTANCE_LABEL, IMPORTANCE_LABEL_FA, QBANK_PARTS, SUBJECTS,
 BRAND = "کتابخانهٔ مدیکال"
 DISCLAIMER = "محتوای آموزشی است و جایگزین قضاوت بالینی نیست."
 AUTHOR = "مهدی محمدرحیمی"
-ASSET_V = "?v=4"
+ASSET_V = "?v=5"
+
+# اپلیکیشن برنامه‌ریز (اپ وب) — همان‌جایی که دکمهٔ «درسنامه» به این کتابخانه می‌آید.
+# با متغیر محیطی MEDX_APP_URL هم می‌شود آدرس را عوض کرد.
+APP_URL = os.environ.get("MEDX_APP_URL", "https://mmr363637-afk.github.io/planner/")
+APP_LABEL = "اپلیکیشن برنامه‌ریز"
 
 
 def ico(name: str, size: int = 16, cls: str = "uicon") -> str:
@@ -64,6 +70,14 @@ def head(title: str, description: str, base: str, subject: dict | None = None,
 {chr(10).join(css)}"""
 
 
+def app_link(cls: str = "mx-appbtn", label: str = APP_LABEL, size: int = 15,
+             ico_name: str = "grid") -> str:
+    """دکمهٔ بازگشت به اپ وب؛ همان دکمه‌ای که در اپ به کتابخانه می‌آید."""
+    return (f'<a class="{cls}" href="{APP_URL}" target="_blank" rel="noopener" '
+            f'aria-label="{label}" title="{label}">'
+            f'{ico(ico_name, size)}<span>{label}</span></a>')
+
+
 def brand(href: str, sub: str = "درسنامه‌های بورد و دستیاری") -> str:
     return f"""<a class="brand" href="{href}">
   <span class="brand__mark" aria-hidden="true">{ico('chart', 20)}</span>
@@ -80,6 +94,7 @@ def topbar(base: str, sub: str = "درسنامه‌های بورد و دستیا
       <a href="{base}index.html#subjects">درس‌ها</a>
       <a href="{base}qbank/index.html">بانک سؤال</a>
       <a href="{base}index.html#progress">پیشرفت من</a>
+      <a href="{APP_URL}" target="_blank" rel="noopener">اپلیکیشن ↗</a>
     </nav>"""
     cls = "mx-top mx-top--light" if light else "mx-top"
     return f"""<header class="{cls}">
@@ -91,6 +106,7 @@ def topbar(base: str, sub: str = "درسنامه‌های بورد و دستیا
       {ico('search', 15)}
       <input type="search" {search_attrs} aria-label="جست‌وجو">
     </div>
+    {app_link()}
     {right_extra}
   </div>
   <div class="mx-top__progress" aria-hidden="true"><i></i></div>
@@ -105,6 +121,7 @@ def footer(base: str, subject: dict | None = None) -> str:
     {ctx}
     <span class="mx-foot__author">نویسنده: <b>{AUTHOR}</b></span>
     <span>{DISCLAIMER}</span>
+    {app_link("mx-foot__app", size=14, ico_name="grid")}
     <a href="{base}index.html">خانه</a>
   </div>
 </footer>"""
