@@ -1,0 +1,181 @@
+{
+ "$comment": "پالت واحد درس‌ها — هر درس یک hue دارد و کل رنگ‌های صفحه از همین عدد ساخته می‌شود. برای تغییر رنگ یک درس فقط عدد hue را عوض کن و build را دوباره اجرا کن.",
+ "version": 1,
+ "subjects": [
+  {
+   "key": "cardio",
+   "name": "قلب و عروق",
+   "nameEn": "Cardiology",
+   "icon": "🫀",
+   "hue": 224,
+   "chroma": 72,
+   "note": "سورمه‌ای روشن",
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ]
+  },
+  {
+   "key": "pulmo",
+   "name": "تنفس",
+   "nameEn": "Pulmonology",
+   "icon": "🫁",
+   "hue": 197,
+   "chroma": 74,
+   "note": "آبی آسمانی",
+   "appSubjectKeys": [
+    "pulmonology-harrison"
+   ]
+  },
+  {
+   "key": "nephro",
+   "name": "کلیه و الکترولیت",
+   "nameEn": "Nephrology",
+   "icon": "💧",
+   "hue": 172,
+   "chroma": 68,
+   "note": "فیروزه‌ای",
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ]
+  },
+  {
+   "key": "gi",
+   "name": "گوارش و کبد",
+   "nameEn": "Gastroenterology",
+   "icon": "🥣",
+   "hue": 38,
+   "chroma": 78,
+   "note": "کهربایی",
+   "appSubjectKeys": [
+    "gastroenterology-harrison"
+   ]
+  },
+  {
+   "key": "endo",
+   "name": "غدد",
+   "nameEn": "Endocrinology",
+   "icon": "🧬",
+   "hue": 270,
+   "chroma": 66,
+   "note": "بنفش",
+   "appSubjectKeys": [
+    "endocrinology-harrison"
+   ]
+  },
+  {
+   "key": "heme",
+   "name": "خون و آنکولوژی",
+   "nameEn": "Hematology & Oncology",
+   "icon": "🩸",
+   "hue": 354,
+   "chroma": 74,
+   "note": "قرمز یاقوتی",
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ]
+  },
+  {
+   "key": "rheum",
+   "name": "روماتولوژی",
+   "nameEn": "Rheumatology",
+   "icon": "🦴",
+   "hue": 92,
+   "chroma": 58,
+   "note": "زیتونی",
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ]
+  },
+  {
+   "key": "surgery",
+   "name": "جراحی",
+   "nameEn": "Surgery",
+   "icon": "🔪",
+   "hue": 240,
+   "chroma": 46,
+   "note": "آبی ناوی",
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "key": "obgyn",
+   "name": "زنان و زایمان",
+   "nameEn": "OB/GYN",
+   "icon": "🤰",
+   "hue": 330,
+   "chroma": 64,
+   "note": "سرخابی",
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ]
+  },
+  {
+   "key": "peds",
+   "name": "اطفال",
+   "nameEn": "Pediatrics",
+   "icon": "🧸",
+   "hue": 145,
+   "chroma": 62,
+   "note": "سبز",
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ]
+  },
+  {
+   "key": "imaging",
+   "name": "پزشکی هسته‌ای و تصویربرداری",
+   "nameEn": "Nuclear Medicine & Imaging",
+   "icon": "🩻",
+   "hue": 218,
+   "chroma": 14,
+   "note": "فولادی/خاکستری — رنگی که با محتوای تصویربرداری تداخل نکند",
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ]
+  },
+  {
+   "key": "neuro",
+   "name": "مغز و اعصاب",
+   "nameEn": "Neurology",
+   "icon": "🧠",
+   "hue": 292,
+   "chroma": 60,
+   "note": "ارجوانی-نیلی",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "key": "psych",
+   "name": "روان‌پزشکی",
+   "nameEn": "Psychiatry",
+   "icon": "🧩",
+   "hue": 312,
+   "chroma": 52,
+   "note": "بنفش صورتی",
+   "appSubjectKeys": [
+    "psychiatry-dahrfar"
+   ]
+  },
+  {
+   "key": "id",
+   "name": "عفونی",
+   "nameEn": "Infectious Disease",
+   "icon": "🦠",
+   "hue": 62,
+   "chroma": 62,
+   "note": "رزرو",
+   "appSubjectKeys": [
+    "infectious-harrison"
+   ]
+  }
+ ]
+}

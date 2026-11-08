@@ -1,0 +1,138 @@
+[
+ {
+  "part": "women",
+  "subject": "obgyn",
+  "title": "زنان و زایمان — بکمن",
+  "count": 200,
+  "chapters": 38,
+  "chFrom": 1,
+  "chTo": 38,
+  "withPearl": 200,
+  "withWrong": 200,
+  "diff": {
+   "خیلی دشوار": 22,
+   "دشوار": 64,
+   "آسان": 31,
+   "متوسط": 83
+  }
+ },
+ {
+  "part": "cardio",
+  "subject": "cardio",
+  "title": "قلب و عروق — هریسون",
+  "count": 200,
+  "chapters": 52,
+  "chFrom": 243,
+  "chTo": 294,
+  "withPearl": 200,
+  "withWrong": 200,
+  "diff": {
+   "خیلی دشوار": 31,
+   "دشوار": 57,
+   "آسان": 42,
+   "متوسط": 70
+  }
+ },
+ {
+  "part": "rad-1",
+  "subject": "imaging",
+  "title": "رادیولوژی — فصول ۱ تا ۱۰",
+  "count": 60,
+  "chapters": 10,
+  "chFrom": 1,
+  "chTo": 10,
+  "withPearl": 60,
+  "withWrong": 60,
+  "diff": {
+   "خیلی دشوار": 11,
+   "دشوار": 20,
+   "آسان": 6,
+   "متوسط": 23
+  }
+ },
+ {
+  "part": "rad-2",
+  "subject": "imaging",
+  "title": "رادیولوژی — فصول ۱۱ تا ۲۰",
+  "count": 60,
+  "chapters": 10,
+  "chFrom": 11,
+  "chTo": 20,
+  "withPearl": 60,
+  "withWrong": 60,
+  "diff": {
+   "خیلی دشوار": 8,
+   "دشوار": 19,
+   "آسان": 10,
+   "متوسط": 23
+  }
+ },
+ {
+  "part": "rad-3",
+  "subject": "imaging",
+  "title": "رادیولوژی — فصول ۲۱ تا ۲۹",
+  "count": 60,
+  "chapters": 9,
+  "chFrom": 21,
+  "chTo": 29,
+  "withPearl": 60,
+  "withWrong": 60,
+  "diff": {
+   "خیلی دشوار": 7,
+   "دشوار": 20,
+   "آسان": 6,
+   "متوسط": 27
+  }
+ },
+ {
+  "part": "sur-1",
+  "subject": "surgery",
+  "title": "جراحی عمومی — لارنس (فصول ۱ تا ۱۰)",
+  "count": 70,
+  "chapters": 10,
+  "chFrom": 1,
+  "chTo": 10,
+  "withPearl": 70,
+  "withWrong": 70,
+  "diff": {
+   "خیلی دشوار": 11,
+   "دشوار": 23,
+   "آسان": 10,
+   "متوسط": 26
+  }
+ },
+ {
+  "part": "sur-2",
+  "subject": "surgery",
+  "title": "جراحی عمومی — لارنس (فصول ۱۱ تا ۲۰)",
+  "count": 70,
+  "chapters": 10,
+  "chFrom": 11,
+  "chTo": 20,
+  "withPearl": 70,
+  "withWrong": 70,
+  "diff": {
+   "خیلی دشوار": 12,
+   "دشوار": 21,
+   "آسان": 12,
+   "متوسط": 25
+  }
+ },
+ {
+  "part": "sur-3",
+  "subject": "surgery",
+  "title": "جراحی عمومی — لارنس (فصول ۲۱ تا ۳۰)",
+  "count": 70,
+  "chapters": 10,
+  "chFrom": 21,
+  "chTo": 30,
+  "withPearl": 70,
+  "withWrong": 70,
+  "diff": {
+   "خیلی دشوار": 9,
+   "دشوار": 23,
+   "آسان": 13,
+   "متوسط": 25
+  }
+ }
+]
