@@ -1,275 +1,393 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" style="--h:354;--c:74%">
+<html lang="fa" dir="rtl" style="--h:6;--c:70;--a:348;--b-50:hsl(6 38.5% 97.5%);--b-100:hsl(6 70% 95%);--b-200:hsl(6 70% 90%);--b-300:hsl(6 70% 80%);--b-400:hsl(6 70% 67%);--b-500:hsl(6 70% 56%);--b-600:hsl(6 70% 46%);--b-700:hsl(6 70% 38%);--b-800:hsl(6 70% 29%);--b-900:hsl(6 59.5% 19%);--b-glow:hsl(6 70% 50% / 0.22);--b-wash:hsl(6 70% 50% / 0.075);--a-500:hsl(348 70% 58%);--a-700:hsl(348 63% 38%)">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>خون و آنکولوژی — کتابخانهٔ مدیکال</title>
-<meta name="description" content="۱۴ درسنامهٔ خون و آنکولوژی برای بورد و دستیاری.">
-<meta name="theme-color" content="hsl(354 74% 46%)">
-<link rel="stylesheet" href="../assets/theme/base.css">
-<link rel="stylesheet" href="../assets/theme/library.css">
-<style>
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Black.woff2") format("woff2");font-weight:900;font-display:swap}
-</style>
+<meta name="description" content="۱۴ درسنامهٔ خون و آنکولوژی برای بورد و دستیاری، ۳ ساعت مطالعه.">
+<meta name="theme-color" content="hsl(6 70% 42%)">
+<meta name="color-scheme" content="light">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232e3a5f'/%3E%3Cpath d='M6 17h4l2-5 3 11 3-8 2 2h6' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" href="../assets/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/theme/medx-core.css">
 </head>
-<body class="lib-page">
-
-<header class="site-header">
-  <div class="wrap site-header__bar">
+<body class="dashboard">
+<a class="skip-link" href="#lessons">رفتن به فهرست درسنامه‌ها</a>
+<header class="mx-top">
+  <div class="wrap mx-top__bar">
     <a class="brand" href="../index.html">
-      <span class="brand__mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg>
-      </span>
-      <span class="brand__text"><b>کتابخانهٔ مدیکال</b><small>درسنامه‌های بورد</small></span>
-    </a>
-    <div class="hdr-search search-box">
-      <input id="lib-search" type="search" placeholder="جست‌وجو در خون و آنکولوژی…" aria-label="جست‌وجو">
+  <span class="brand__mark" aria-hidden="true"><svg class="uicon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg></span>
+  <span class="brand__text"><b>کتابخانهٔ مدیکال</b><small>درسنامه‌های بورد و دستیاری</small></span>
+</a>
+    
+    <span class="mx-top__spacer"></span>
+    <div class="mx-search">
+      <svg class="uicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-filter-search placeholder="جست‌وجو در درسنامه‌های این درس…" aria-label="جست‌وجو">
     </div>
-    <a class="btn btn--ghost" href="../index.html">همهٔ درس‌ها</a>
+    <a class="iconbtn" href="../index.html" title="همهٔ درس‌ها" aria-label="همهٔ درس‌ها"><svg class="uicon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg></a>
   </div>
+  <div class="mx-top__progress" aria-hidden="true"><i></i></div>
 </header>
 
-<section class="lib-hero lib-hero--subject">
-  <div class="wrap">
-    <div class="lib-hero__top">
-      <span class="pill pill--icon"><svg class="sicon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg>خون و آنکولوژی</span>
-      <span class="pill pill--ghost ltr">Hematology &amp; Oncology</span>
+<section class="subj-hero" style="--h:6;--c:70;--a:348;--b-50:hsl(6 38.5% 97.5%);--b-100:hsl(6 70% 95%);--b-200:hsl(6 70% 90%);--b-300:hsl(6 70% 80%);--b-400:hsl(6 70% 67%);--b-500:hsl(6 70% 56%);--b-600:hsl(6 70% 46%);--b-700:hsl(6 70% 38%);--b-800:hsl(6 70% 29%);--b-900:hsl(6 59.5% 19%);--b-glow:hsl(6 70% 50% / 0.22);--b-wash:hsl(6 70% 50% / 0.075);--a-500:hsl(348 70% 58%);--a-700:hsl(348 63% 38%)">
+  <div class="wrap subj-hero__in">
+    <div>
+      <nav class="crumbs" aria-label="مسیر">
+        <a href="../index.html"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg> کتابخانه</a>
+        <span class="sep">/</span>
+        <span>خون و آنکولوژی</span>
+      </nav>
+      <h1>خون و آنکولوژی</h1>
+      <div class="subj-hero__en">Hematology &amp; Oncology</div>
+      <p class="subj-hero__lede">کم‌خونی، انعقاد، بدخیمی‌های خون و شیمی‌درمانی · ۱۴ درسنامه،
+        ۳ ساعت مطالعهٔ برآوردی.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+        <a class="btn btn--brand btn--sm" href="#lessons"><svg class="uicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2 2 0 0 1 6 3.5h13v14H6a2 2 0 0 0-2 2Z"/><path d="M4 19.5a2 2 0 0 1 2-2h13v3H6a2 2 0 0 1-2-1Z"/></svg> فهرست درسنامه‌ها</a>
+        <button class="btn btn--ghost btn--sm" type="button" data-continue-subject><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.8v14.4L20 12Z"/></svg> ادامهٔ مطالعه</button>
+      </div>
     </div>
-    <h1>خون و آنکولوژی</h1>
-    <p class="lib-hero__lede">۱۴ درسنامه · حدود ۳ ساعت مطالعه · همه با یک هویت رنگی</p>
+    <div class="subj-hero__art"><svg class="art art--subject" viewBox="0 0 320 220" role="img" aria-label="خون و آنکولوژی" preserveAspectRatio="xMidYMid slice">
+
+  <defs>
+    <linearGradient id="bgshheme" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(6 70% 96%)"/>
+      <stop offset=".55" stop-color="hsl(6 70% 92%)"/>
+      <stop offset="1" stop-color="hsl(6 70% 86%)"/>
+    </linearGradient>
+    <linearGradient id="organFillshheme" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(6 70% 96%)"/>
+      <stop offset=".6" stop-color="hsl(6 70% 92%)"/>
+      <stop offset="1" stop-color="hsl(6 70% 86%)"/>
+    </linearGradient>
+    <linearGradient id="metalFillshheme" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset=".5" stop-color="hsl(6 70% 86%)"/>
+      <stop offset="1" stop-color="hsl(6 70% 30%)" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="glowshheme" cx=".5" cy=".45" r=".6">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridshheme" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="hsl(6 70% 46%)" stroke-opacity=".13" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgshheme)"/>
+  <rect width="320" height="220" fill="url(#gridshheme)"/>
+  <circle cx="256" cy="30" r="86" fill="hsl(6 70% 46%)" opacity=".10"/>
+  <circle cx="44" cy="196" r="96" fill="hsl(6 70% 46%)" opacity=".08"/>
+  <g opacity=".5" stroke="hsl(6 70% 46%)" stroke-width="1.4" fill="none">
+    <circle cx="160" cy="112" r="84" stroke-dasharray="2 9"/>
+    <circle cx="160" cy="112" r="64" opacity=".6"/>
+  </g>
+  <g transform="translate(160 112) rotate(9)">
+    <g transform="translate(-100 -100)"><g transform="translate(100 100)"><g transform="translate(-40 -22) rotate(-14)"><ellipse rx="30" ry="17" fill="url(#organFill)" stroke="hsl(6 70% 46%)" stroke-width="2.2"/><ellipse rx="16.5" ry="8.5" fill="hsl(6 70% 96%)" opacity=".85"/></g><g transform="translate(26 -34) rotate(12)"><ellipse rx="26" ry="15" fill="url(#organFill)" stroke="hsl(6 70% 46%)" stroke-width="2.2"/><ellipse rx="14.3" ry="7.5" fill="hsl(6 70% 96%)" opacity=".85"/></g><g transform="translate(-4 26) rotate(-6)"><ellipse rx="28" ry="16" fill="url(#organFill)" stroke="hsl(6 70% 46%)" stroke-width="2.2"/><ellipse rx="15.4" ry="8.0" fill="hsl(6 70% 96%)" opacity=".85"/></g><path d="M-88 -64c22 10 38 26 46 46" fill="none" stroke="hsl(6 70% 86%)" stroke-width="2" stroke-dasharray="4 6" opacity=".7"/><path d="M58 62c-16-6-28-18-34-32" fill="none" stroke="hsl(6 70% 86%)" stroke-width="2" stroke-dasharray="4 6" opacity=".7"/></g></g>
+  </g>
+  <ellipse cx="160" cy="112" rx="120" ry="70" fill="url(#glowshheme)" opacity=".55"/>
+</svg></div>
   </div>
 </section>
 
-<main class="wrap lib-main">
-  <div class="lib-block__head">
-    <h2>درسنامه‌ها</h2>
-    <span class="muted" id="lib-count">۱۴ مورد</span>
+<main class="wrap" id="lessons" style="padding-bottom:20px">
+  <div class="metric-row"><div class="metric"><b>۱۴</b><span>درسنامه</span></div><div class="metric"><b>۳ ساعت</b><span>زمان کل مطالعه</span></div><div class="metric"><b>۱۷۹</b><span>فلش‌کارت</span></div><div class="metric"><b>۶۶</b><span>جدول</span></div><div class="metric"><b>۳۰</b><span>سؤال اختصاصی</span></div><div class="metric metric--progress" data-subj-progress="heme">
+      <b data-subj-pct>شروع نشده</b><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg> پیشرفت درس</span>
+      <div class="bar bar--thin" aria-hidden="true"><i></i></div>
+    </div></div>
+
+  <div class="toolrow">
+    <div class="mx-search" style="order:0">
+      <svg class="uicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-filter-search placeholder="جست‌وجوی نام درسنامه…" aria-label="جست‌وجو در درسنامه‌ها">
+    </div>
+    <div class="chips" role="group" aria-label="فیلتر وضعیت">
+      <button class="chipbtn" type="button" data-filter="all" aria-pressed="true">همه</button>
+      <button class="chipbtn" type="button" data-filter="new" aria-pressed="false">نخوانده</button>
+      <button class="chipbtn" type="button" data-filter="started" aria-pressed="false">در حال مطالعه</button>
+      <button class="chipbtn" type="button" data-filter="done" aria-pressed="false">خوانده‌شده</button>
+      <button class="chipbtn" type="button" data-filter="high" aria-pressed="false"><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg> High Yield</button>
+      <button class="chipbtn" type="button" data-filter="star" aria-pressed="false"><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg> ستاره‌دار</button>
+    </div>
+    <span class="mx-top__spacer"></span>
+    <select class="select" data-filter-sort aria-label="ترتیب نمایش">
+      <option value="default">ترتیب پیشنهادی</option>
+      <option value="minutes">کوتاه‌ترین اول</option>
+      <option value="minutes-desc">بلندترین اول</option>
+      <option value="title">بر اساس نام</option>
+      <option value="progress">بیشترین پیشرفت</option>
+    </select>
+    <span class="pill pill--line" data-filter-count>۱۴ درسنامه</span>
   </div>
-  <div class="lesson-grid" id="lesson-grid">
-<a class="lesson-card" href="../heme/aplastic-anemia.html"
-   data-title="آنمی آپلاستیک" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">آنمی آپلاستیک</span>
-    <span class="lesson-card__meta">
-      <span>۹ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۱۲ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/ida.html"
-   data-title="آنمی فقر آهن (IDA)" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">آنمی فقر آهن (IDA)</span>
-    <span class="lesson-card__meta">
-      <span>۶ دقیقه</span>
-      <span>۹ بخش</span>
-      <span class="lc-badge">۱۲ فلش‌کارت</span><span class="lc-badge">۳ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/megaloblastic-anemia.html"
-   data-title="آنمی مگالوبلاستیک" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">آنمی مگالوبلاستیک</span>
-    <span class="lesson-card__meta">
-      <span>۱۷ دقیقه</span>
-      <span>۱۰ بخش</span>
-      <span class="lc-badge">۳۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/hemolytic-anemia.html"
-   data-title="آنمی همولیتیک" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">آنمی همولیتیک</span>
-    <span class="lesson-card__meta">
-      <span>۷ دقیقه</span>
-      <span>۹ بخش</span>
-      <span class="lc-badge">۸ فلش‌کارت</span><span class="lc-badge">۵ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/coagulopathies.html"
-   data-title="اختلالات انعقادی" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">اختلالات انعقادی</span>
-    <span class="lesson-card__meta">
-      <span>۱۲ دقیقه</span>
-      <span>۱۱ بخش</span>
-      <span class="lc-badge">۱۵ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/thrombotic-disorders.html"
-   data-title="اختلالات ترومبوتیک" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">اختلالات ترومبوتیک</span>
-    <span class="lesson-card__meta">
-      <span>۱۱ دقیقه</span>
-      <span>۷ بخش</span>
-      <span class="lc-badge">۱۲ فلش‌کارت</span><span class="lc-badge">۵ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/thalassemia.html"
-   data-title="تالاسمی" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">تالاسمی</span>
-    <span class="lesson-card__meta">
-      <span>۱۱ دقیقه</span>
-      <span>۹ بخش</span>
-      <span class="lc-badge">۱۲ فلش‌کارت</span><span class="lc-badge">۹ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/blood-transfusion.html"
-   data-title="ترنسفیوژن خون" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">ترنسفیوژن خون</span>
-    <span class="lesson-card__meta">
-      <span>۱۰ دقیقه</span>
-      <span>۸ بخش</span>
-      <span class="lc-badge">۱۳ فلش‌کارت</span><span class="lc-badge">۳ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/approach-to-anemia.html"
-   data-title="رویکرد به آنمی" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">رویکرد به آنمی</span>
-    <span class="lesson-card__meta">
-      <span>۸ دقیقه</span>
-      <span>۱۰ بخش</span>
-      <span class="lc-badge">۱۰ فلش‌کارت</span><span class="lc-badge">۷ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/cell-biology-and-principles-of-cancer-therapy.html"
-   data-title="فوق‌تخصصی زیست‌شناسی سلولی و اصول سرطان‌درمانی" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">فوق‌تخصصی زیست‌شناسی سلولی و اصول سرطان‌درمانی</span>
-    <span class="lesson-card__meta">
-      <span>۷۶ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/lymphomas.html"
-   data-title="لنفوم‌ها" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">لنفوم‌ها</span>
-    <span class="lesson-card__meta">
-      <span>۱۱ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۱۶ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/aml.html"
-   data-title="لوسمی میلوئید حاد (AML)" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">لوسمی میلوئید حاد (AML)</span>
-    <span class="lesson-card__meta">
-      <span>۹ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۱۶ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/mds.html"
-   data-title="نشانگان میلودیسپلاستیک (MDS)" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">نشانگان میلودیسپلاستیک (MDS)</span>
-    <span class="lesson-card__meta">
-      <span>۹ دقیقه</span>
-      <span>۱۱ بخش</span>
-      <span class="lc-badge">۱۲ فلش‌کارت</span><span class="lc-badge">۷ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../heme/sickle-cell-anemia.html"
-   data-title="کم‌خونی داسی‌شکل" data-subject="heme"
-   style="--h:354;--c:74%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">خون و آنکولوژی</span>
-    <span class="lesson-card__title">کم‌خونی داسی‌شکل</span>
-    <span class="lesson-card__meta">
-      <span>۸ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۱۲ فلش‌کارت</span><span class="lc-badge">۳ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
+
+  <div class="lgrid" data-lesson-grid>
+    <div class="lcard" data-lesson-card data-id="heme/cell-biology-and-principles-of-cancer-therapy"
+     data-title="فوق‌تخصصی زیست‌شناسی سلولی و اصول سرطان‌درمانی" data-secs="14"
+     data-mins="76" data-importance="high" data-order="1"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
   </div>
-  <p class="lib-empty" id="lib-empty" hidden>چیزی پیدا نشد.</p>
+  <h3><a href="../heme/cell-biology-and-principles-of-cancer-therapy.html" style="color:inherit;text-decoration:none">فوق‌تخصصی زیست‌شناسی سلولی و اصول سرطان‌درمانی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/cell-biology-and-principles-of-cancer-therapy.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/megaloblastic-anemia"
+     data-title="آنمی مگالوبلاستیک" data-secs="10"
+     data-mins="17" data-importance="supp" data-order="2"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳ بخش پربازده"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/megaloblastic-anemia.html" style="color:inherit;text-decoration:none">آنمی مگالوبلاستیک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/megaloblastic-anemia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/coagulopathies"
+     data-title="اختلالات انعقادی" data-secs="11"
+     data-mins="12" data-importance="supp" data-order="3"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱ بخش پربازده · ۱۵ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/coagulopathies.html" style="color:inherit;text-decoration:none">اختلالات انعقادی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۵ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/coagulopathies.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/thrombotic-disorders"
+     data-title="اختلالات ترومبوتیک" data-secs="7"
+     data-mins="11" data-importance="supp" data-order="4"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۴</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱۲ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/thrombotic-disorders.html" style="color:inherit;text-decoration:none">اختلالات ترومبوتیک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۲ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۵ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/thrombotic-disorders.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/thalassemia"
+     data-title="تالاسمی" data-secs="9"
+     data-mins="11" data-importance="supp" data-order="5"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۵</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱ بخش پربازده · ۱۲ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/thalassemia.html" style="color:inherit;text-decoration:none">تالاسمی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۲ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۹ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/thalassemia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/lymphomas"
+     data-title="لنفوم‌ها" data-secs="12"
+     data-mins="11" data-importance="supp" data-order="6"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۶</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱۶ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/lymphomas.html" style="color:inherit;text-decoration:none">لنفوم‌ها</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۶ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/lymphomas.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/blood-transfusion"
+     data-title="ترنسفیوژن خون" data-secs="8"
+     data-mins="10" data-importance="high" data-order="7"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۷</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۵ بخش پربازده · ۴۰ کادر High-Yield · ۱۳ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/blood-transfusion.html" style="color:inherit;text-decoration:none">ترنسفیوژن خون</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۰ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۳ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۳ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/blood-transfusion.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/aplastic-anemia"
+     data-title="آنمی آپلاستیک" data-secs="15"
+     data-mins="9" data-importance="supp" data-order="8"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۸</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱ بخش پربازده · ۱۱ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/aplastic-anemia.html" style="color:inherit;text-decoration:none">آنمی آپلاستیک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۱ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/aplastic-anemia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/aml"
+     data-title="لوسمی میلوئید حاد (AML)" data-secs="12"
+     data-mins="9" data-importance="medium" data-order="9"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۹</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/aml.html" style="color:inherit;text-decoration:none">لوسمی میلوئید حاد (AML)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۶ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/aml.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/mds"
+     data-title="نشانگان میلودیسپلاستیک (MDS)" data-secs="11"
+     data-mins="9" data-importance="supp" data-order="10"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۰</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱۲ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/mds.html" style="color:inherit;text-decoration:none">نشانگان میلودیسپلاستیک (MDS)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۲ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۷ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/mds.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/approach-to-anemia"
+     data-title="رویکرد به آنمی" data-secs="10"
+     data-mins="8" data-importance="supp" data-order="11"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۱</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/approach-to-anemia.html" style="color:inherit;text-decoration:none">رویکرد به آنمی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۷ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/approach-to-anemia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/sickle-cell-anemia"
+     data-title="کم‌خونی داسی‌شکل" data-secs="12"
+     data-mins="8" data-importance="supp" data-order="12"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۲</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳ بخش پربازده · ۱۲ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/sickle-cell-anemia.html" style="color:inherit;text-decoration:none">کم‌خونی داسی‌شکل</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۲ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۳ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/sickle-cell-anemia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/hemolytic-anemia"
+     data-title="آنمی همولیتیک" data-secs="9"
+     data-mins="7" data-importance="supp" data-order="13"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۳</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳ بخش پربازده · ۸ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/hemolytic-anemia.html" style="color:inherit;text-decoration:none">آنمی همولیتیک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۸ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۵ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/hemolytic-anemia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="heme/ida"
+     data-title="آنمی فقر آهن (IDA)" data-secs="9"
+     data-mins="6" data-importance="supp" data-order="14"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۴</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱ بخش پربازده · ۱۲ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../heme/ida.html" style="color:inherit;text-decoration:none">آنمی فقر آهن (IDA)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۲ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۳ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../heme/ida.html">بازکردن</a>
+  </div>
+</div>
+    <p class="empty-state" data-empty hidden>درسنامه‌ای با این مشخصات پیدا نشد.</p>
+  </div>
+
+  
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span><svg class="sicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c3.3 4 5.5 7 5.5 9.8A5.5 5.5 0 0 1 12 18.8a5.5 5.5 0 0 1-5.5-5.5C6.5 10.5 8.7 7.5 12 3.5Z"/><path d="M12 11v3.6M10.2 12.8h3.6"/></svg> خون و آنکولوژی — کتابخانهٔ مدیکال</span>
-    <a href="../index.html">همهٔ درس‌ها</a>
+<footer class="mx-foot">
+  <div class="wrap mx-foot__in">
+    <span class="mx-foot__brand"><svg class="uicon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg> کتابخانهٔ مدیکال</span>
+    <span class="pill pill--line">خون و آنکولوژی</span>
+    <span>محتوای آموزشی است و جایگزین قضاوت بالینی نیست.</span>
+    <a href="../index.html">خانه</a>
   </div>
 </footer>
-<script src="../assets/theme/library.js" defer></script>
+<script src="../assets/theme/medx-core.js" defer></script>
 </body>
 </html>

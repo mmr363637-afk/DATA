@@ -1,665 +1,878 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" style="--h:224;--c:72%">
+<html lang="fa" dir="rtl" style="--h:351;--c:74;--a:12;--b-50:hsl(351 40.7% 97.5%);--b-100:hsl(351 74% 95%);--b-200:hsl(351 74% 90%);--b-300:hsl(351 74% 80%);--b-400:hsl(351 74% 67%);--b-500:hsl(351 74% 56%);--b-600:hsl(351 74% 46%);--b-700:hsl(351 74% 38%);--b-800:hsl(351 74% 29%);--b-900:hsl(351 62.9% 19%);--b-glow:hsl(351 74% 50% / 0.22);--b-wash:hsl(351 74% 50% / 0.075);--a-500:hsl(12 74% 58%);--a-700:hsl(12 66.6% 38%)">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>قلب و عروق — کتابخانهٔ مدیکال</title>
-<meta name="description" content="۴۰ درسنامهٔ قلب و عروق برای بورد و دستیاری.">
-<meta name="theme-color" content="hsl(224 72% 46%)">
-<link rel="stylesheet" href="../assets/theme/base.css">
-<link rel="stylesheet" href="../assets/theme/library.css">
-<style>
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Black.woff2") format("woff2");font-weight:900;font-display:swap}
-</style>
+<meta name="description" content="۴۰ درسنامهٔ قلب و عروق برای بورد و دستیاری، ۳۰ ساعت مطالعه.">
+<meta name="theme-color" content="hsl(351 74% 42%)">
+<meta name="color-scheme" content="light">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232e3a5f'/%3E%3Cpath d='M6 17h4l2-5 3 11 3-8 2 2h6' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" href="../assets/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/theme/medx-core.css">
 </head>
-<body class="lib-page">
-
-<header class="site-header">
-  <div class="wrap site-header__bar">
+<body class="dashboard">
+<a class="skip-link" href="#lessons">رفتن به فهرست درسنامه‌ها</a>
+<header class="mx-top">
+  <div class="wrap mx-top__bar">
     <a class="brand" href="../index.html">
-      <span class="brand__mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg>
-      </span>
-      <span class="brand__text"><b>کتابخانهٔ مدیکال</b><small>درسنامه‌های بورد</small></span>
-    </a>
-    <div class="hdr-search search-box">
-      <input id="lib-search" type="search" placeholder="جست‌وجو در قلب و عروق…" aria-label="جست‌وجو">
+  <span class="brand__mark" aria-hidden="true"><svg class="uicon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg></span>
+  <span class="brand__text"><b>کتابخانهٔ مدیکال</b><small>درسنامه‌های بورد و دستیاری</small></span>
+</a>
+    
+    <span class="mx-top__spacer"></span>
+    <div class="mx-search">
+      <svg class="uicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-filter-search placeholder="جست‌وجو در درسنامه‌های این درس…" aria-label="جست‌وجو">
     </div>
-    <a class="btn btn--ghost" href="../index.html">همهٔ درس‌ها</a>
+    <a class="iconbtn" href="../index.html" title="همهٔ درس‌ها" aria-label="همهٔ درس‌ها"><svg class="uicon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg></a>
   </div>
+  <div class="mx-top__progress" aria-hidden="true"><i></i></div>
 </header>
 
-<section class="lib-hero lib-hero--subject">
-  <div class="wrap">
-    <div class="lib-hero__top">
-      <span class="pill pill--icon"><svg class="sicon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg>قلب و عروق</span>
-      <span class="pill pill--ghost ltr">Cardiology</span>
+<section class="subj-hero" style="--h:351;--c:74;--a:12;--b-50:hsl(351 40.7% 97.5%);--b-100:hsl(351 74% 95%);--b-200:hsl(351 74% 90%);--b-300:hsl(351 74% 80%);--b-400:hsl(351 74% 67%);--b-500:hsl(351 74% 56%);--b-600:hsl(351 74% 46%);--b-700:hsl(351 74% 38%);--b-800:hsl(351 74% 29%);--b-900:hsl(351 62.9% 19%);--b-glow:hsl(351 74% 50% / 0.22);--b-wash:hsl(351 74% 50% / 0.075);--a-500:hsl(12 74% 58%);--a-700:hsl(12 66.6% 38%)">
+  <div class="wrap subj-hero__in">
+    <div>
+      <nav class="crumbs" aria-label="مسیر">
+        <a href="../index.html"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg> کتابخانه</a>
+        <span class="sep">/</span>
+        <span>قلب و عروق</span>
+      </nav>
+      <h1>قلب و عروق</h1>
+      <div class="subj-hero__en">Cardiology</div>
+      <p class="subj-hero__lede">آریتمی، دریچه، نارسایی قلبی و بیماری عروق کرونر · ۴۰ درسنامه،
+        ۳۰ ساعت مطالعهٔ برآوردی.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+        <a class="btn btn--brand btn--sm" href="#lessons"><svg class="uicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2 2 0 0 1 6 3.5h13v14H6a2 2 0 0 0-2 2Z"/><path d="M4 19.5a2 2 0 0 1 2-2h13v3H6a2 2 0 0 1-2-1Z"/></svg> فهرست درسنامه‌ها</a>
+        <button class="btn btn--ghost btn--sm" type="button" data-continue-subject><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.8v14.4L20 12Z"/></svg> ادامهٔ مطالعه</button>
+      </div>
     </div>
-    <h1>قلب و عروق</h1>
-    <p class="lib-hero__lede">۴۰ درسنامه · حدود ۳۰ ساعت مطالعه · همه با یک هویت رنگی</p>
+    <div class="subj-hero__art"><svg class="art art--subject" viewBox="0 0 320 220" role="img" aria-label="قلب و عروق" preserveAspectRatio="xMidYMid slice">
+
+  <defs>
+    <linearGradient id="bgshcardio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(351 74% 96%)"/>
+      <stop offset=".55" stop-color="hsl(351 74% 92%)"/>
+      <stop offset="1" stop-color="hsl(351 74% 86%)"/>
+    </linearGradient>
+    <linearGradient id="organFillshcardio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(351 74% 96%)"/>
+      <stop offset=".6" stop-color="hsl(351 74% 92%)"/>
+      <stop offset="1" stop-color="hsl(351 74% 86%)"/>
+    </linearGradient>
+    <linearGradient id="metalFillshcardio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset=".5" stop-color="hsl(351 74% 86%)"/>
+      <stop offset="1" stop-color="hsl(351 74% 30%)" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="glowshcardio" cx=".5" cy=".45" r=".6">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridshcardio" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="hsl(351 74% 46%)" stroke-opacity=".13" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgshcardio)"/>
+  <rect width="320" height="220" fill="url(#gridshcardio)"/>
+  <circle cx="256" cy="30" r="86" fill="hsl(351 74% 46%)" opacity=".10"/>
+  <circle cx="44" cy="196" r="96" fill="hsl(351 74% 46%)" opacity=".08"/>
+  <g opacity=".5" stroke="hsl(351 74% 46%)" stroke-width="1.4" fill="none">
+    <circle cx="160" cy="112" r="84" stroke-dasharray="2 9"/>
+    <circle cx="160" cy="112" r="64" opacity=".6"/>
+  </g>
+  <g transform="translate(160 112) rotate(-4)">
+    <g transform="translate(-100 -100)">
+  <g transform="translate(100 96) scale(1.05)">
+    <path d="M-6 -46c-14-16-44-12-44 16 0 26 30 40 50 58 20-18 50-32 50-58 0-28-30-32-44-16-4 4-8 4-12 0Z"
+          fill="url(#organFill)" stroke="hsl(351 74% 46%)" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M-6 -46v-18c0-8 6-14 14-14h10" fill="none" stroke="hsl(351 74% 46%)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M6 -46v-16" fill="none" stroke="hsl(351 74% 86%)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-30 -14c8 16 26 22 44 12" fill="none" stroke="hsl(351 74% 86%)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-26 6c10 10 26 12 38 4" fill="none" stroke="hsl(351 74% 86%)" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M-74 44h22l8-16 10 30 8-18 8 4h22" fill="none" stroke="hsl(351 74% 30%)" stroke-width="2.4"
+          stroke-linecap="round" stroke-linejoin="round" opacity=".7"/>
+  </g></g>
+  </g>
+  <ellipse cx="160" cy="112" rx="120" ry="70" fill="url(#glowshcardio)" opacity=".55"/>
+</svg></div>
   </div>
 </section>
 
-<main class="wrap lib-main">
-  <div class="lib-block__head">
-    <h2>درسنامه‌ها</h2>
-    <span class="muted" id="lib-count">۴۰ مورد</span>
+<main class="wrap" id="lessons" style="padding-bottom:20px">
+  <div class="metric-row"><div class="metric"><b>۴۰</b><span>درسنامه</span></div><div class="metric"><b>۳۰ ساعت</b><span>زمان کل مطالعه</span></div><div class="metric"><b>۷۷۹</b><span>فلش‌کارت</span></div><div class="metric"><b>۱۷۳</b><span>جدول</span></div><div class="metric"><b>۹۶۰</b><span>سؤال اختصاصی</span></div><div class="metric metric--progress" data-subj-progress="cardio">
+      <b data-subj-pct>شروع نشده</b><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg> پیشرفت درس</span>
+      <div class="bar bar--thin" aria-hidden="true"><i></i></div>
+    </div></div>
+
+  <div class="toolrow">
+    <div class="mx-search" style="order:0">
+      <svg class="uicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-filter-search placeholder="جست‌وجوی نام درسنامه…" aria-label="جست‌وجو در درسنامه‌ها">
+    </div>
+    <div class="chips" role="group" aria-label="فیلتر وضعیت">
+      <button class="chipbtn" type="button" data-filter="all" aria-pressed="true">همه</button>
+      <button class="chipbtn" type="button" data-filter="new" aria-pressed="false">نخوانده</button>
+      <button class="chipbtn" type="button" data-filter="started" aria-pressed="false">در حال مطالعه</button>
+      <button class="chipbtn" type="button" data-filter="done" aria-pressed="false">خوانده‌شده</button>
+      <button class="chipbtn" type="button" data-filter="high" aria-pressed="false"><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg> High Yield</button>
+      <button class="chipbtn" type="button" data-filter="star" aria-pressed="false"><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg> ستاره‌دار</button>
+    </div>
+    <span class="mx-top__spacer"></span>
+    <select class="select" data-filter-sort aria-label="ترتیب نمایش">
+      <option value="default">ترتیب پیشنهادی</option>
+      <option value="minutes">کوتاه‌ترین اول</option>
+      <option value="minutes-desc">بلندترین اول</option>
+      <option value="title">بر اساس نام</option>
+      <option value="progress">بیشترین پیشرفت</option>
+    </select>
+    <span class="pill pill--line" data-filter-count>۴۰ درسنامه</span>
   </div>
-  <div class="lesson-grid" id="lesson-grid">
-<a class="lesson-card" href="../cardio/premature-ventricular-contractions-nonsustained-ventricular-tachycardi.html"
-   data-title="آریتمی‌های بطنی تحت حاد و خوش‌خیم: PVC، NSVT و AIVR" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">آریتمی‌های بطنی تحت حاد و خوش‌خیم: PVC، NSVT و AIVR</span>
-    <span class="lesson-card__meta">
-      <span>۴۸ دقیقه</span>
-      <span>۱۸ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۱۰ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/aortic-stenosis.html"
-   data-title="آستنوز آئورت (Aortic Stenosis)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">آستنوز آئورت (Aortic Stenosis)</span>
-    <span class="lesson-card__meta">
-      <span>۵۸ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/amyloidosis-and-other-restrictive-cardiomyopathies.html"
-   data-title="آمیلوئیدوز و کاردیومیوپاتی‌های تحدیدی (Restrictive)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">آمیلوئیدوز و کاردیومیوپاتی‌های تحدیدی (Restrictive)</span>
-    <span class="lesson-card__meta">
-      <span>۴۰ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۸ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/electrocardiography.html"
-   data-title="الکتراکاردیوگرافی" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">الکتراکاردیوگرافی</span>
-    <span class="lesson-card__meta">
-      <span>۳۶ دقیقه</span>
-      <span>۱۰ بخش</span>
-      <span class="lc-badge">۳۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/principles-of-clinical-cardiac-electrophysiology.html"
-   data-title="الکتروفیزیولوژی بالینی قلب" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">الکتروفیزیولوژی بالینی قلب</span>
-    <span class="lesson-card__meta">
-      <span>۴۱ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۳۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/epidemiology-of-cardiovascular-disease.html"
-   data-title="اپیدمیولوژی بیماری‌های قلبی عروقی" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">اپیدمیولوژی بیماری‌های قلبی عروقی</span>
-    <span class="lesson-card__meta">
-      <span>۴۷ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/the-bradyarrhythmias-disorders-of-the-atrioventricular-node.html"
-   data-title="برادی‌آریتمی‌ها: اختلالات هدایت گره دهلیزی-بطنی (AV Node)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">برادی‌آریتمی‌ها: اختلالات هدایت گره دهلیزی-بطنی (AV Node)</span>
-    <span class="lesson-card__meta">
-      <span>۴۶ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۴۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/the-bradyarrhythmias-disorders-of-the-sa-node.html"
-   data-title="برادی‌آریتمی‌ها: اختلالات گره سینوسی" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">برادی‌آریتمی‌ها: اختلالات گره سینوسی</span>
-    <span class="lesson-card__meta">
-      <span>۴۲ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۴۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/mixed-valvular-disease.html"
-   data-title="بیماری‌های دریچه‌ای متعدد و مشترک" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">بیماری‌های دریچه‌ای متعدد و مشترک</span>
-    <span class="lesson-card__meta">
-      <span>۵۷ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/congenital-heart-disease-in-the-adult.html"
-   data-title="بیماری‌های مادرزادی قلب در بزرگسالان (ACHD)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">بیماری‌های مادرزادی قلب در بزرگسالان (ACHD)</span>
-    <span class="lesson-card__meta">
-      <span>۲۹ دقیقه</span>
-      <span>۱۹ بخش</span>
-      <span class="lc-badge">۲۱ فلش‌کارت</span><span class="lc-badge">۳ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/cyanotic-congenital-heart-disease.html"
-   data-title="بیماری‌های مادرزادی قلبی سیانوتیک" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">بیماری‌های مادرزادی قلبی سیانوتیک</span>
-    <span class="lesson-card__meta">
-      <span>۱۲ دقیقه</span>
-      <span>۶ بخش</span>
-      <span class="lc-badge">۱۲ فلش‌کارت</span><span class="lc-badge">۱ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/acyanotic-congenital-heart-disease.html"
-   data-title="بیماری‌های مادرزادی قلبی غیرسیانوتیک" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">بیماری‌های مادرزادی قلبی غیرسیانوتیک</span>
-    <span class="lesson-card__meta">
-      <span>۱۲ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۱۶ فلش‌کارت</span><span class="lc-badge">۱ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/pericardial-diseases.html"
-   data-title="بیماری‌های پریکارد (Pericardial Diseases)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">بیماری‌های پریکارد (Pericardial Diseases)</span>
-    <span class="lesson-card__meta">
-      <span>۲۱ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۲۱ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/cardiac-trauma.html"
-   data-title="تروماهای قلبی (Cardiac Trauma)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">تروماهای قلبی (Cardiac Trauma)</span>
-    <span class="lesson-card__meta">
-      <span>۲۶ دقیقه</span>
-      <span>۱۹ بخش</span>
-      <span class="lc-badge">۲۵ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/mitral-stenosis.html"
-   data-title="تنگی دریچه میترال (Mitral Stenosis)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">تنگی دریچه میترال (Mitral Stenosis)</span>
-    <span class="lesson-card__meta">
-      <span>۵۴ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/atrial-myxoma-and-other-cardiac-tumors.html"
-   data-title="تومورهای قلبی و میکسومای دهلیزی (Cardiac Tumors &amp; Atrial Myxoma)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">تومورهای قلبی و میکسومای دهلیزی (Cardiac Tumors &amp; Atrial Myxoma)</span>
-    <span class="lesson-card__meta">
-      <span>۲۶ دقیقه</span>
-      <span>۱۸ بخش</span>
-      <span class="lc-badge">۲۵ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/atrial-fibrillation.html"
-   data-title="جامع و اَبَرداشبورد آموزشی فیبریلاسیون دهلیزی (AF)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">جامع و اَبَرداشبورد آموزشی فیبریلاسیون دهلیزی (AF)</span>
-    <span class="lesson-card__meta">
-      <span>۵۱ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/approach-to-supraventricular-arrhythmias.html"
-   data-title="رویکرد به آریتمی‌های فوق‌بطنی (SVA)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">رویکرد به آریتمی‌های فوق‌بطنی (SVA)</span>
-    <span class="lesson-card__meta">
-      <span>۴۹ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۴۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/sustained-ventricular-tachycardia.html"
-   data-title="رویکرد تخصصی به تاکی‌کاردی بطنی مداوم (Sustained VT)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">رویکرد تخصصی به تاکی‌کاردی بطنی مداوم (Sustained VT)</span>
-    <span class="lesson-card__meta">
-      <span>۵۹ دقیقه</span>
-      <span>۱۹ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۱۰ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/polymorphic-ventricular-tachycardia-and-ventricular-fibrillation.html"
-   data-title="رویکرد تخصصی به تاکی‌کاردی بطنی پلی‌مورفیک و فیبریلاسیون بطنی" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">رویکرد تخصصی به تاکی‌کاردی بطنی پلی‌مورفیک و فیبریلاسیون بطنی</span>
-    <span class="lesson-card__meta">
-      <span>۵۹ دقیقه</span>
-      <span>۱۹ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۱۰ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/ventricular-arrhythmias.html"
-   data-title="رویکرد جامع به آریتمی‌های بطنی" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">رویکرد جامع به آریتمی‌های بطنی</span>
-    <span class="lesson-card__meta">
-      <span>۵۰ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۵۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/physiologic-and-nonphysiologic-sinus-rhythm.html"
-   data-title="ریتم سینوسی فیزیولوژیک و غیرفیزیولوژیک" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">ریتم سینوسی فیزیولوژیک و غیرفیزیولوژیک</span>
-    <span class="lesson-card__meta">
-      <span>۴۸ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۴۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/basic-biology-of-the-cardiovascular-system.html"
-   data-title="زیست‌شناسی پایه سیستم قلبی-عروقی" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">زیست‌شناسی پایه سیستم قلبی-عروقی</span>
-    <span class="lesson-card__meta">
-      <span>۸۱ دقیقه</span>
-      <span>۲۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۱۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/noninvasive-cardiac-imaging.html"
-   data-title="سامانه جامع تصویربرداری غیرتهاجمی قلب" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">سامانه جامع تصویربرداری غیرتهاجمی قلب</span>
-    <span class="lesson-card__meta">
-      <span>۴۲ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۳۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/classification-of-cardiomyopathy.html"
-   data-title="طبقه‌بندی کاردیومیوپاتی‌ها" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">طبقه‌بندی کاردیومیوپاتی‌ها</span>
-    <span class="lesson-card__meta">
-      <span>۴۶ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/electrical-storm-and-incessant-ventricular-tachycardia.html"
-   data-title="طوفان الکتریکی و تاکی‌کاردی بطنی مداوم" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">طوفان الکتریکی و تاکی‌کاردی بطنی مداوم</span>
-    <span class="lesson-card__meta">
-      <span>۴۱ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/atrial-flutter.html"
-   data-title="فلوتر دهلیزی و آریتمی‌های ماکرو‌ری‌انترانت" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">فلوتر دهلیزی و آریتمی‌های ماکرو‌ری‌انترانت</span>
-    <span class="lesson-card__meta">
-      <span>۴۵ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/focal-atrial-tachycardia.html"
-   data-title="فوق تخصصی تاکی‌کاردی دهلیزی کانونی (Focal Atrial Tachycardia)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">فوق تخصصی تاکی‌کاردی دهلیزی کانونی (Focal Atrial Tachycardia)</span>
-    <span class="lesson-card__meta">
-      <span>۴۳ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/paroxysmal-supraventricular-tachycardias.html"
-   data-title="فوق تخصصی تاکی‌کاردی‌های فوق بطنی حمله‌ای (PSVT)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">فوق تخصصی تاکی‌کاردی‌های فوق بطنی حمله‌ای (PSVT)</span>
-    <span class="lesson-card__meta">
-      <span>۴۶ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/acute-and-chronic-myocarditis.html"
-   data-title="مایوکاردیت حاد و مزمن" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">مایوکاردیت حاد و مزمن</span>
-    <span class="lesson-card__meta">
-      <span>۳۸ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۱۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/pulmonic-valve-disease.html"
-   data-title="مدیریت تخصصی و آمادگی آزمون بورد: بیماری‌های دریچه ریوی (PS &amp; PR)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">مدیریت تخصصی و آمادگی آزمون بورد: بیماری‌های دریچه ریوی (PS &amp; PR)</span>
-    <span class="lesson-card__meta">
-      <span>۵۲ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/heart-failure-management.html"
-   data-title="مدیریت جامع نارسایی قلب" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">مدیریت جامع نارسایی قلب</span>
-    <span class="lesson-card__meta">
-      <span>۴۳ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/tricuspid-valve-disease.html"
-   data-title="مدیریت جامع و آمادگی آزمون بورد: بیماری‌های دریچه تریکاسپید (TS &amp; TR)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">مدیریت جامع و آمادگی آزمون بورد: بیماری‌های دریچه تریکاسپید (TS &amp; TR)</span>
-    <span class="lesson-card__meta">
-      <span>۵۵ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/mitral-valve-prolapse.html"
-   data-title="مدیریت جامع و آمادگی آزمون بورد: پرولاپس دریچه میترال (MVP)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">مدیریت جامع و آمادگی آزمون بورد: پرولاپس دریچه میترال (MVP)</span>
-    <span class="lesson-card__meta">
-      <span>۵۶ دقیقه</span>
-      <span>۱۸ بخش</span>
-      <span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/aortic-regurgitation.html"
-   data-title="نارسایی دریچه آئورت (Aortic Regurgitation)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">نارسایی دریچه آئورت (Aortic Regurgitation)</span>
-    <span class="lesson-card__meta">
-      <span>۵۷ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/mitral-regurgitation.html"
-   data-title="نارسایی دریچه میترال (Mitral Regurgitation)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">نارسایی دریچه میترال (Mitral Regurgitation)</span>
-    <span class="lesson-card__meta">
-      <span>۵۶ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/heart-failure-pathophysiology-and-diagnosis.html"
-   data-title="نارسایی قلب" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">نارسایی قلب</span>
-    <span class="lesson-card__meta">
-      <span>۴۲ دقیقه</span>
-      <span>۱۳ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/cardiac-transplantation-and-prolonged-assisted-circulation.html"
-   data-title="پیوند قلب و گردش خون کمکی طولانی‌مدت (MCS)" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">پیوند قلب و گردش خون کمکی طولانی‌مدت (MCS)</span>
-    <span class="lesson-card__meta">
-      <span>۴۲ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۸ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/genetic-cardiomyopathies.html"
-   data-title="کاردیومیوپاتی‌های ژنتیکی" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">کاردیومیوپاتی‌های ژنتیکی</span>
-    <span class="lesson-card__meta">
-      <span>۴۵ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../cardio/cardiac-catheterization.html"
-   data-title="کتتریزاسیون قلبی و آنژیوگرافی کرونر" data-subject="cardio"
-   style="--h:224;--c:72%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">قلب و عروق</span>
-    <span class="lesson-card__title">کتتریزاسیون قلبی و آنژیوگرافی کرونر</span>
-    <span class="lesson-card__meta">
-      <span>۴۱ دقیقه</span>
-      <span>۱۲ بخش</span>
-      <span class="lc-badge">۳۰ فلش‌کارت</span><span class="lc-badge">۲ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
+
+  <div class="lgrid" data-lesson-grid>
+    <div class="lcard" data-lesson-card data-id="cardio/basic-biology-of-the-cardiovascular-system"
+     data-title="زیست‌شناسی پایه سیستم قلبی-عروقی" data-secs="24"
+     data-mins="81" data-importance="high" data-order="1"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
   </div>
-  <p class="lib-empty" id="lib-empty" hidden>چیزی پیدا نشد.</p>
+  <h3><a href="../cardio/basic-biology-of-the-cardiovascular-system.html" style="color:inherit;text-decoration:none">زیست‌شناسی پایه سیستم قلبی-عروقی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۲۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/basic-biology-of-the-cardiovascular-system.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/sustained-ventricular-tachycardia"
+     data-title="رویکرد تخصصی به تاکی‌کاردی بطنی مداوم (Sustained VT)" data-secs="19"
+     data-mins="59" data-importance="high" data-order="2"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/sustained-ventricular-tachycardia.html" style="color:inherit;text-decoration:none">رویکرد تخصصی به تاکی‌کاردی بطنی مداوم (Sustained VT)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱۰ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/sustained-ventricular-tachycardia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/polymorphic-ventricular-tachycardia-and-ventricular-fibrillation"
+     data-title="رویکرد تخصصی به تاکی‌کاردی بطنی پلی‌مورفیک و فیبریلاسیون بطنی" data-secs="19"
+     data-mins="59" data-importance="high" data-order="3"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۹ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/polymorphic-ventricular-tachycardia-and-ventricular-fibrillation.html" style="color:inherit;text-decoration:none">رویکرد تخصصی به تاکی‌کاردی بطنی پلی‌مورفیک و فیبریلاسیون بطنی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱۰ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/polymorphic-ventricular-tachycardia-and-ventricular-fibrillation.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/aortic-stenosis"
+     data-title="آستنوز آئورت (Aortic Stenosis)" data-secs="14"
+     data-mins="58" data-importance="high" data-order="4"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۴</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۲۴ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/aortic-stenosis.html" style="color:inherit;text-decoration:none">آستنوز آئورت (Aortic Stenosis)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/aortic-stenosis.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/mixed-valvular-disease"
+     data-title="بیماری‌های دریچه‌ای متعدد و مشترک" data-secs="16"
+     data-mins="57" data-importance="high" data-order="5"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۵</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۶ بخش پربازده · ۳۰ سؤال"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/mixed-valvular-disease.html" style="color:inherit;text-decoration:none">بیماری‌های دریچه‌ای متعدد و مشترک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/mixed-valvular-disease.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/aortic-regurgitation"
+     data-title="نارسایی دریچه آئورت (Aortic Regurgitation)" data-secs="15"
+     data-mins="57" data-importance="high" data-order="6"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۶</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۱۴ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/aortic-regurgitation.html" style="color:inherit;text-decoration:none">نارسایی دریچه آئورت (Aortic Regurgitation)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/aortic-regurgitation.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/mitral-valve-prolapse"
+     data-title="مدیریت جامع و آمادگی آزمون بورد: پرولاپس دریچه میترال (MVP)" data-secs="18"
+     data-mins="56" data-importance="high" data-order="7"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۷</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۹ بخش پربازده · ۳۰ سؤال"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/mitral-valve-prolapse.html" style="color:inherit;text-decoration:none">مدیریت جامع و آمادگی آزمون بورد: پرولاپس دریچه میترال (MVP)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/mitral-valve-prolapse.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/mitral-regurgitation"
+     data-title="نارسایی دریچه میترال (Mitral Regurgitation)" data-secs="15"
+     data-mins="56" data-importance="high" data-order="8"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۸</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۱۴ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/mitral-regurgitation.html" style="color:inherit;text-decoration:none">نارسایی دریچه میترال (Mitral Regurgitation)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/mitral-regurgitation.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/tricuspid-valve-disease"
+     data-title="مدیریت جامع و آمادگی آزمون بورد: بیماری‌های دریچه تریکاسپید (TS &amp; TR)" data-secs="16"
+     data-mins="55" data-importance="high" data-order="9"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۹</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/tricuspid-valve-disease.html" style="color:inherit;text-decoration:none">مدیریت جامع و آمادگی آزمون بورد: بیماری‌های دریچه تریکاسپید (TS &amp; TR)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۵ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/tricuspid-valve-disease.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/mitral-stenosis"
+     data-title="تنگی دریچه میترال (Mitral Stenosis)" data-secs="15"
+     data-mins="54" data-importance="high" data-order="10"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۰</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۱۲ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/mitral-stenosis.html" style="color:inherit;text-decoration:none">تنگی دریچه میترال (Mitral Stenosis)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۴ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/mitral-stenosis.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/pulmonic-valve-disease"
+     data-title="مدیریت تخصصی و آمادگی آزمون بورد: بیماری‌های دریچه ریوی (PS &amp; PR)" data-secs="16"
+     data-mins="52" data-importance="high" data-order="11"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/pulmonic-valve-disease.html" style="color:inherit;text-decoration:none">مدیریت تخصصی و آمادگی آزمون بورد: بیماری‌های دریچه ریوی (PS &amp; PR)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/pulmonic-valve-disease.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/atrial-fibrillation"
+     data-title="جامع و اَبَرداشبورد آموزشی فیبریلاسیون دهلیزی (AF)" data-secs="14"
+     data-mins="51" data-importance="high" data-order="12"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۲</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۱۲ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/atrial-fibrillation.html" style="color:inherit;text-decoration:none">جامع و اَبَرداشبورد آموزشی فیبریلاسیون دهلیزی (AF)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/atrial-fibrillation.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/ventricular-arrhythmias"
+     data-title="رویکرد جامع به آریتمی‌های بطنی" data-secs="15"
+     data-mins="50" data-importance="high" data-order="13"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۳</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۲۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/ventricular-arrhythmias.html" style="color:inherit;text-decoration:none">رویکرد جامع به آریتمی‌های بطنی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۵۰ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۲۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/ventricular-arrhythmias.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/approach-to-supraventricular-arrhythmias"
+     data-title="رویکرد به آریتمی‌های فوق‌بطنی (SVA)" data-secs="14"
+     data-mins="49" data-importance="medium" data-order="14"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۴</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/approach-to-supraventricular-arrhythmias.html" style="color:inherit;text-decoration:none">رویکرد به آریتمی‌های فوق‌بطنی (SVA)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/approach-to-supraventricular-arrhythmias.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/premature-ventricular-contractions-nonsustained-ventricular-tachycardi"
+     data-title="آریتمی‌های بطنی تحت حاد و خوش‌خیم: PVC، NSVT و AIVR" data-secs="18"
+     data-mins="48" data-importance="high" data-order="15"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۵</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/premature-ventricular-contractions-nonsustained-ventricular-tachycardi.html" style="color:inherit;text-decoration:none">آریتمی‌های بطنی تحت حاد و خوش‌خیم: PVC، NSVT و AIVR</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱۰ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/premature-ventricular-contractions-nonsustained-ventricular-tachycardi.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/physiologic-and-nonphysiologic-sinus-rhythm"
+     data-title="ریتم سینوسی فیزیولوژیک و غیرفیزیولوژیک" data-secs="14"
+     data-mins="48" data-importance="medium" data-order="16"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۶</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/physiologic-and-nonphysiologic-sinus-rhythm.html" style="color:inherit;text-decoration:none">ریتم سینوسی فیزیولوژیک و غیرفیزیولوژیک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/physiologic-and-nonphysiologic-sinus-rhythm.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/epidemiology-of-cardiovascular-disease"
+     data-title="اپیدمیولوژی بیماری‌های قلبی عروقی" data-secs="15"
+     data-mins="47" data-importance="high" data-order="17"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۷</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۹ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/epidemiology-of-cardiovascular-disease.html" style="color:inherit;text-decoration:none">اپیدمیولوژی بیماری‌های قلبی عروقی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/epidemiology-of-cardiovascular-disease.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/the-bradyarrhythmias-disorders-of-the-atrioventricular-node"
+     data-title="برادی‌آریتمی‌ها: اختلالات هدایت گره دهلیزی-بطنی (AV Node)" data-secs="14"
+     data-mins="46" data-importance="medium" data-order="18"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۸</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/the-bradyarrhythmias-disorders-of-the-atrioventricular-node.html" style="color:inherit;text-decoration:none">برادی‌آریتمی‌ها: اختلالات هدایت گره دهلیزی-بطنی (AV Node)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/the-bradyarrhythmias-disorders-of-the-atrioventricular-node.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/classification-of-cardiomyopathy"
+     data-title="طبقه‌بندی کاردیومیوپاتی‌ها" data-secs="14"
+     data-mins="46" data-importance="supp" data-order="19"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۹</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/classification-of-cardiomyopathy.html" style="color:inherit;text-decoration:none">طبقه‌بندی کاردیومیوپاتی‌ها</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/classification-of-cardiomyopathy.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/paroxysmal-supraventricular-tachycardias"
+     data-title="فوق تخصصی تاکی‌کاردی‌های فوق بطنی حمله‌ای (PSVT)" data-secs="14"
+     data-mins="46" data-importance="high" data-order="20"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۰</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۱۲ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/paroxysmal-supraventricular-tachycardias.html" style="color:inherit;text-decoration:none">فوق تخصصی تاکی‌کاردی‌های فوق بطنی حمله‌ای (PSVT)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/paroxysmal-supraventricular-tachycardias.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/atrial-flutter"
+     data-title="فلوتر دهلیزی و آریتمی‌های ماکرو‌ری‌انترانت" data-secs="14"
+     data-mins="45" data-importance="high" data-order="21"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۱۴ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/atrial-flutter.html" style="color:inherit;text-decoration:none">فلوتر دهلیزی و آریتمی‌های ماکرو‌ری‌انترانت</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۵ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/atrial-flutter.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/genetic-cardiomyopathies"
+     data-title="کاردیومیوپاتی‌های ژنتیکی" data-secs="14"
+     data-mins="45" data-importance="supp" data-order="22"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۲</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/genetic-cardiomyopathies.html" style="color:inherit;text-decoration:none">کاردیومیوپاتی‌های ژنتیکی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۵ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/genetic-cardiomyopathies.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/focal-atrial-tachycardia"
+     data-title="فوق تخصصی تاکی‌کاردی دهلیزی کانونی (Focal Atrial Tachycardia)" data-secs="15"
+     data-mins="43" data-importance="high" data-order="23"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۳</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/focal-atrial-tachycardia.html" style="color:inherit;text-decoration:none">فوق تخصصی تاکی‌کاردی دهلیزی کانونی (Focal Atrial Tachycardia)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۳ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/focal-atrial-tachycardia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/heart-failure-management"
+     data-title="مدیریت جامع نارسایی قلب" data-secs="12"
+     data-mins="43" data-importance="supp" data-order="24"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۴</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/heart-failure-management.html" style="color:inherit;text-decoration:none">مدیریت جامع نارسایی قلب</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۳ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/heart-failure-management.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/the-bradyarrhythmias-disorders-of-the-sa-node"
+     data-title="برادی‌آریتمی‌ها: اختلالات گره سینوسی" data-secs="12"
+     data-mins="42" data-importance="high" data-order="25"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۵</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۶ بخش پربازده · ۳۰ سؤال · ۱۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/the-bradyarrhythmias-disorders-of-the-sa-node.html" style="color:inherit;text-decoration:none">برادی‌آریتمی‌ها: اختلالات گره سینوسی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/the-bradyarrhythmias-disorders-of-the-sa-node.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/noninvasive-cardiac-imaging"
+     data-title="سامانه جامع تصویربرداری غیرتهاجمی قلب" data-secs="12"
+     data-mins="42" data-importance="high" data-order="26"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۶</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۶ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/noninvasive-cardiac-imaging.html" style="color:inherit;text-decoration:none">سامانه جامع تصویربرداری غیرتهاجمی قلب</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/noninvasive-cardiac-imaging.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/heart-failure-pathophysiology-and-diagnosis"
+     data-title="نارسایی قلب" data-secs="13"
+     data-mins="42" data-importance="supp" data-order="27"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۷</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/heart-failure-pathophysiology-and-diagnosis.html" style="color:inherit;text-decoration:none">نارسایی قلب</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/heart-failure-pathophysiology-and-diagnosis.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/cardiac-transplantation-and-prolonged-assisted-circulation"
+     data-title="پیوند قلب و گردش خون کمکی طولانی‌مدت (MCS)" data-secs="17"
+     data-mins="42" data-importance="high" data-order="28"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۸</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۸ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/cardiac-transplantation-and-prolonged-assisted-circulation.html" style="color:inherit;text-decoration:none">پیوند قلب و گردش خون کمکی طولانی‌مدت (MCS)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۸ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/cardiac-transplantation-and-prolonged-assisted-circulation.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/principles-of-clinical-cardiac-electrophysiology"
+     data-title="الکتروفیزیولوژی بالینی قلب" data-secs="12"
+     data-mins="41" data-importance="medium" data-order="29"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۹</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/principles-of-clinical-cardiac-electrophysiology.html" style="color:inherit;text-decoration:none">الکتروفیزیولوژی بالینی قلب</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/principles-of-clinical-cardiac-electrophysiology.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/electrical-storm-and-incessant-ventricular-tachycardia"
+     data-title="طوفان الکتریکی و تاکی‌کاردی بطنی مداوم" data-secs="12"
+     data-mins="41" data-importance="supp" data-order="30"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۰</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/electrical-storm-and-incessant-ventricular-tachycardia.html" style="color:inherit;text-decoration:none">طوفان الکتریکی و تاکی‌کاردی بطنی مداوم</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/electrical-storm-and-incessant-ventricular-tachycardia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/cardiac-catheterization"
+     data-title="کتتریزاسیون قلبی و آنژیوگرافی کرونر" data-secs="12"
+     data-mins="41" data-importance="high" data-order="31"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۶ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/cardiac-catheterization.html" style="color:inherit;text-decoration:none">کتتریزاسیون قلبی و آنژیوگرافی کرونر</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/cardiac-catheterization.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/amyloidosis-and-other-restrictive-cardiomyopathies"
+     data-title="آمیلوئیدوز و کاردیومیوپاتی‌های تحدیدی (Restrictive)" data-secs="17"
+     data-mins="40" data-importance="high" data-order="32"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۲</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۸ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/amyloidosis-and-other-restrictive-cardiomyopathies.html" style="color:inherit;text-decoration:none">آمیلوئیدوز و کاردیومیوپاتی‌های تحدیدی (Restrictive)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۴۰ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۸ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/amyloidosis-and-other-restrictive-cardiomyopathies.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/acute-and-chronic-myocarditis"
+     data-title="مایوکاردیت حاد و مزمن" data-secs="16"
+     data-mins="38" data-importance="high" data-order="33"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۳</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۱۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/acute-and-chronic-myocarditis.html" style="color:inherit;text-decoration:none">مایوکاردیت حاد و مزمن</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۳۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/acute-and-chronic-myocarditis.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/electrocardiography"
+     data-title="الکتراکاردیوگرافی" data-secs="10"
+     data-mins="36" data-importance="medium" data-order="34"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۴</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/electrocardiography.html" style="color:inherit;text-decoration:none">الکتراکاردیوگرافی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۳۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/electrocardiography.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/congenital-heart-disease-in-the-adult"
+     data-title="بیماری‌های مادرزادی قلب در بزرگسالان (ACHD)" data-secs="19"
+     data-mins="29" data-importance="medium" data-order="35"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۵</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/congenital-heart-disease-in-the-adult.html" style="color:inherit;text-decoration:none">بیماری‌های مادرزادی قلب در بزرگسالان (ACHD)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۲۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۱۵ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۶ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۳ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/congenital-heart-disease-in-the-adult.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/cardiac-trauma"
+     data-title="تروماهای قلبی (Cardiac Trauma)" data-secs="19"
+     data-mins="26" data-importance="high" data-order="36"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۶</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۱۵ سؤال"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/cardiac-trauma.html" style="color:inherit;text-decoration:none">تروماهای قلبی (Cardiac Trauma)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۲۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۱۵ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/cardiac-trauma.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/atrial-myxoma-and-other-cardiac-tumors"
+     data-title="تومورهای قلبی و میکسومای دهلیزی (Cardiac Tumors &amp; Atrial Myxoma)" data-secs="18"
+     data-mins="26" data-importance="high" data-order="37"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۷</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۱۵ سؤال"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/atrial-myxoma-and-other-cardiac-tumors.html" style="color:inherit;text-decoration:none">تومورهای قلبی و میکسومای دهلیزی (Cardiac Tumors &amp; Atrial Myxoma)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۲۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۱۵ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/atrial-myxoma-and-other-cardiac-tumors.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/pericardial-diseases"
+     data-title="بیماری‌های پریکارد (Pericardial Diseases)" data-secs="16"
+     data-mins="21" data-importance="medium" data-order="38"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۸</span>
+    <span class="tag tag--medium importance">متوسط</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/pericardial-diseases.html" style="color:inherit;text-decoration:none">بیماری‌های پریکارد (Pericardial Diseases)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۲۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۱۵ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۲ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/pericardial-diseases.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/cyanotic-congenital-heart-disease"
+     data-title="بیماری‌های مادرزادی قلبی سیانوتیک" data-secs="6"
+     data-mins="12" data-importance="supp" data-order="39"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۹</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱۱ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/cyanotic-congenital-heart-disease.html" style="color:inherit;text-decoration:none">بیماری‌های مادرزادی قلبی سیانوتیک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۱ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/cyanotic-congenital-heart-disease.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="cardio/acyanotic-congenital-heart-disease"
+     data-title="بیماری‌های مادرزادی قلبی غیرسیانوتیک" data-secs="14"
+     data-mins="12" data-importance="supp" data-order="40"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۴۰</span>
+    <span class="tag tag--supp importance" title="مبنای اهمیت: ۱۶ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 8.5 4.5L12 12 3.5 7.5Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg>تکمیلی</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../cardio/acyanotic-congenital-heart-disease.html" style="color:inherit;text-decoration:none">بیماری‌های مادرزادی قلبی غیرسیانوتیک</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۱۶ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../cardio/acyanotic-congenital-heart-disease.html">بازکردن</a>
+  </div>
+</div>
+    <p class="empty-state" data-empty hidden>درسنامه‌ای با این مشخصات پیدا نشد.</p>
+  </div>
+
+  <section style="margin-top:6px">
+  <div class="sec-title"><div><span class="eyebrow">آزمون</span><h2>بانک سؤال این درس</h2>
+  <p>آزمون‌های فصل‌به‌فصل با پاسخ تشریحی؛ مستقل از درسنامه‌ها.</p></div></div>
+  <div class="card card--pad" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <a class="btn btn--ghost btn--sm" href="../qbank/cardio.html">قلب و عروق — هریسون · ۲۰۰</a>
+    <a class="btn btn--brand btn--sm" href="../qbank/index.html" style="margin-inline-start:auto">همهٔ آزمون‌ها</a>
+  </div>
+</section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span><svg class="sicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.3 4.9 13.2a4.6 4.6 0 0 1 6.5-6.5l.6.6.6-.6a4.6 4.6 0 0 1 6.5 6.5Z"/><path d="M6.6 12h2.2l1.3-2.1 1.6 3.6 1.4-2.2h2.3"/></svg> قلب و عروق — کتابخانهٔ مدیکال</span>
-    <a href="../index.html">همهٔ درس‌ها</a>
+<footer class="mx-foot">
+  <div class="wrap mx-foot__in">
+    <span class="mx-foot__brand"><svg class="uicon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg> کتابخانهٔ مدیکال</span>
+    <span class="pill pill--line">قلب و عروق</span>
+    <span>محتوای آموزشی است و جایگزین قضاوت بالینی نیست.</span>
+    <a href="../index.html">خانه</a>
   </div>
 </footer>
-<script src="../assets/theme/library.js" defer></script>
+<script src="../assets/theme/medx-core.js" defer></script>
 </body>
 </html>
