@@ -713,3 +713,58 @@ body.focus-mode .focus-exit{display:inline-flex}
 .rail-close{display:none;margin-inline-start:auto;border:1px solid var(--line);background:var(--surface-3);color:var(--ink-3);border-radius:9px;width:28px;height:28px;place-items:center;cursor:pointer}
 .rail-backdrop{position:fixed;inset:0;background:rgba(9,14,26,.4);z-index:99;opacity:0;pointer-events:none;transition:opacity .2s}
 .rail-backdrop.is-on{opacity:1;pointer-events:auto}
+
+/* ---------- 17. گوشی: آزمون و ابزارها ---------- */
+@media(max-width:620px){
+  .sec__tools{flex-wrap:wrap}
+  .qx__nav .qx__progress{width:100%;order:9;margin-top:2px}
+  .qx__nav .spacer{display:none}
+  .qx__nav .btn{flex:1 1 auto;justify-content:center}
+  .qx__solhead{flex-wrap:wrap}
+  .qx__keychip{white-space:normal}
+  .fx-toolbar{flex-wrap:wrap;gap:6px}
+  .fx-toolbar .fx-hint{margin-inline-start:0;order:3;flex:1 1 100%}
+  .tocstrip__in{padding-inline:15px}
+  .lesson-hero__in{gap:16px}
+}
+@media(max-width:420px){
+  .qx__opt{font-size:.82rem;padding:8px 9px}
+  .qdot{width:24px;height:24px}
+  .qx__nav{padding:9px 10px;gap:6px}
+  .qx__nav .btn{font-size:.72rem;padding:7px 9px}
+  .studybar__in{padding-inline:12px}
+}
+
+/* ---------- 18. گوشی: نوار ابزار و فهرست بدون بُرش ---------- */
+@media(max-width:700px){
+  .studybar{position:static}
+  .studybar__in{flex-wrap:wrap;overflow:visible;padding-block:8px;row-gap:6px}
+  .sbtn{padding:6px 9px;font-size:.72rem}
+  .sbtn svg{width:14px;height:14px}
+  .studybar__spacer{display:none}
+  .tocstrip__in{
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+    mask-image:linear-gradient(to left,transparent 0,#000 18px,#000 calc(100% - 18px),transparent 100%);
+  }
+  .tocs{scroll-snap-align:start}
+  .tocstrip{position:sticky;top:var(--top-h);z-index:30}
+  .lesson-hero{padding-block:4px}
+}
+
+/* ---------- 19. جزئیات موبایل ---------- */
+.qx__txt{min-width:0;overflow-wrap:anywhere}
+.qx__solbody,.qx__stem{overflow-wrap:anywhere}
+@media(max-width:700px){
+  body.reader{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+  .to-top{bottom:calc(14px + env(safe-area-inset-bottom))}
+  .rail{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+  .tbl-wrap::before{
+    content:"برای دیدن کامل جدول، افقی بکشید";
+    display:block;position:sticky;inset-inline-start:0;top:0;z-index:3;
+    font-size:.66rem;font-weight:700;color:var(--ink-3);background:var(--surface-2);
+    border-bottom:1px solid var(--line-2);padding:3px 8px;
+  }
+  .sec__body table{min-width:0}
+  .sec__body .tbl-wrap table{min-width:520px}
+}

@@ -598,3 +598,48 @@ sub,sup{font-size:.72em;line-height:0}
   .toolrow{top:56px;padding-top:8px}
   .qband__parts{gap:5px}
 }
+
+/* ---------- 16. بهینه‌سازی گوشی: جلوگیری از بُرش افقی ---------- */
+html,body{max-width:100%}
+body{overflow-x:clip}
+@supports not (overflow-x:clip){body{overflow-x:hidden}}
+.wrap{padding-inline:max(var(--gutter),env(safe-area-inset-left),env(safe-area-inset-right))}
+.mx-top__bar,.mx-top__bar>*{min-width:0}
+.mx-search,.mx-search input{min-width:0}
+.mx-foot__author{font-size:.78rem;color:var(--ink-2)}
+.mx-foot__author b{color:var(--ink);font-weight:800}
+.hero-meta .hm--author{background:rgba(255,255,255,.16)}
+
+@media(max-width:700px){
+  :root{--gutter:15px}
+  .mx-top__bar{gap:8px}
+  .brand__mark{width:32px;height:32px;border-radius:10px}
+  .brand__text{max-width:118px}
+  .brand__text b{font-size:.84rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mx-search{flex:1 1 40px}
+  .mx-search input{height:34px;font-size:.78rem;padding-inline-start:30px}
+  .mx-search svg{inset-inline-start:9px}
+  .hero h1{font-size:1.32rem;line-height:1.55}
+  .hero__lede,.subj-hero p{font-size:.86rem}
+  .metric-row{grid-template-columns:1fr 1fr}
+  .metric b{font-size:1.02rem}
+  .scard__foot{flex-wrap:wrap;gap:6px}
+  .lgrid{grid-template-columns:1fr}
+  .mx-foot__in{justify-content:flex-start}
+}
+@media(max-width:400px){
+  .metric-row{grid-template-columns:1fr}
+  .hero-meta .hm{font-size:.68rem;padding:3px 8px}
+  .brand__text{max-width:96px}
+}
+
+/* ---------- 17. گوشی: هیروی پورتال و کارت‌ها ---------- */
+@media(max-width:700px){
+  .orbit{overflow:hidden}
+  .hero__in{padding-block:20px 24px}
+  .hero__stats{gap:8px}
+  .hero__stats .hs{padding:9px 10px}
+  .pgrid{gap:12px}
+  .qband__act{flex-wrap:wrap}
+  .resume__acts{flex-wrap:wrap}
+}
