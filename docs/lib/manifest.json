@@ -1,0 +1,2883 @@
+{
+ "version": 1,
+ "schema": "med-library/1",
+ "updatedAt": "2026-11-08",
+ "basePath": "",
+ "index": "index.html",
+ "counts": {
+  "subjects": 8,
+  "lessons": 156,
+  "minutes": 8279
+ },
+ "subjects": [
+  {
+   "key": "cardio",
+   "name": "قلب و عروق",
+   "nameEn": "Cardiology",
+   "icon": "🫀",
+   "hue": 224,
+   "chroma": 72,
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "page": "subject/cardio.html",
+   "count": 40,
+   "minutes": 1782
+  },
+  {
+   "key": "nephro",
+   "name": "کلیه و الکترولیت",
+   "nameEn": "Nephrology",
+   "icon": "💧",
+   "hue": 172,
+   "chroma": 68,
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ],
+   "page": "subject/nephro.html",
+   "count": 6,
+   "minutes": 58
+  },
+  {
+   "key": "heme",
+   "name": "خون و آنکولوژی",
+   "nameEn": "Hematology & Oncology",
+   "icon": "🩸",
+   "hue": 354,
+   "chroma": 74,
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "page": "subject/heme.html",
+   "count": 14,
+   "minutes": 204
+  },
+  {
+   "key": "rheum",
+   "name": "روماتولوژی",
+   "nameEn": "Rheumatology",
+   "icon": "🦴",
+   "hue": 92,
+   "chroma": 58,
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "page": "subject/rheum.html",
+   "count": 11,
+   "minutes": 204
+  },
+  {
+   "key": "surgery",
+   "name": "جراحی",
+   "nameEn": "Surgery",
+   "icon": "🔪",
+   "hue": 240,
+   "chroma": 46,
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "page": "subject/surgery.html",
+   "count": 29,
+   "minutes": 2734
+  },
+  {
+   "key": "obgyn",
+   "name": "زنان و زایمان",
+   "nameEn": "OB/GYN",
+   "icon": "🤰",
+   "hue": 330,
+   "chroma": 64,
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "page": "subject/obgyn.html",
+   "count": 31,
+   "minutes": 2824
+  },
+  {
+   "key": "peds",
+   "name": "اطفال",
+   "nameEn": "Pediatrics",
+   "icon": "🧸",
+   "hue": 145,
+   "chroma": 62,
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "page": "subject/peds.html",
+   "count": 13,
+   "minutes": 240
+  },
+  {
+   "key": "imaging",
+   "name": "پزشکی هسته‌ای و تصویربرداری",
+   "nameEn": "Nuclear Medicine & Imaging",
+   "icon": "🩻",
+   "hue": 218,
+   "chroma": 14,
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "page": "subject/imaging.html",
+   "count": 12,
+   "minutes": 233
+  }
+ ],
+ "lessons": [
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/premature-ventricular-contractions-nonsustained-ventricular-tachycardi",
+   "subject": "cardio",
+   "title": "آریتمی‌های بطنی تحت حاد و خوش‌خیم: PVC، NSVT و AIVR",
+   "path": "cardio/premature-ventricular-contractions-nonsustained-ventricular-tachycardi.html",
+   "sections": 18,
+   "words": 9146,
+   "minutes": 48,
+   "flashcards": 60,
+   "tables": 10,
+   "mcq": 30,
+   "source": "Premature_Ventricular_Contractions,_Nonsustained_Ventricular_Tachycardia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/aortic-stenosis",
+   "subject": "cardio",
+   "title": "آستنوز آئورت (Aortic Stenosis)",
+   "path": "cardio/aortic-stenosis.html",
+   "sections": 14,
+   "words": 10937,
+   "minutes": 58,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 30,
+   "source": "Aortic Stenosis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/amyloidosis-and-other-restrictive-cardiomyopathies",
+   "subject": "cardio",
+   "title": "آمیلوئیدوز و کاردیومیوپاتی‌های تحدیدی (Restrictive)",
+   "path": "cardio/amyloidosis-and-other-restrictive-cardiomyopathies.html",
+   "sections": 17,
+   "words": 7605,
+   "minutes": 40,
+   "flashcards": 8,
+   "tables": 2,
+   "mcq": 30,
+   "source": "Amyloidosis and Other Restrictive Cardiomyopathies.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/electrocardiography",
+   "subject": "cardio",
+   "title": "الکتراکاردیوگرافی",
+   "path": "cardio/electrocardiography.html",
+   "sections": 10,
+   "words": 6831,
+   "minutes": 36,
+   "flashcards": 30,
+   "tables": 2,
+   "mcq": 62,
+   "source": "Electrocardiography.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/principles-of-clinical-cardiac-electrophysiology",
+   "subject": "cardio",
+   "title": "الکتروفیزیولوژی بالینی قلب",
+   "path": "cardio/principles-of-clinical-cardiac-electrophysiology.html",
+   "sections": 12,
+   "words": 7745,
+   "minutes": 41,
+   "flashcards": 30,
+   "tables": 2,
+   "mcq": 62,
+   "source": "Principles of Clinical Cardiac Electrophysiology.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/epidemiology-of-cardiovascular-disease",
+   "subject": "cardio",
+   "title": "اپیدمیولوژی بیماری‌های قلبی عروقی",
+   "path": "cardio/epidemiology-of-cardiovascular-disease.html",
+   "sections": 15,
+   "words": 8957,
+   "minutes": 47,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 30,
+   "source": "Epidemiology of Cardiovascular Disease.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/the-bradyarrhythmias-disorders-of-the-atrioventricular-node",
+   "subject": "cardio",
+   "title": "برادی‌آریتمی‌ها: اختلالات هدایت گره دهلیزی-بطنی (AV Node)",
+   "path": "cardio/the-bradyarrhythmias-disorders-of-the-atrioventricular-node.html",
+   "sections": 14,
+   "words": 8688,
+   "minutes": 46,
+   "flashcards": 40,
+   "tables": 2,
+   "mcq": 0,
+   "source": "The Bradyarrhythmias Disorders of the Atrioventricular Node.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/the-bradyarrhythmias-disorders-of-the-sa-node",
+   "subject": "cardio",
+   "title": "برادی‌آریتمی‌ها: اختلالات گره سینوسی",
+   "path": "cardio/the-bradyarrhythmias-disorders-of-the-sa-node.html",
+   "sections": 12,
+   "words": 8025,
+   "minutes": 42,
+   "flashcards": 40,
+   "tables": 2,
+   "mcq": 30,
+   "source": "The Bradyarrhythmias Disorders of the SA Node.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/mixed-valvular-disease",
+   "subject": "cardio",
+   "title": "بیماری‌های دریچه‌ای متعدد و مشترک",
+   "path": "cardio/mixed-valvular-disease.html",
+   "sections": 16,
+   "words": 10830,
+   "minutes": 57,
+   "flashcards": 0,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Multiple and Mixed Valvular Heart Diseas.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/congenital-heart-disease-in-the-adult",
+   "subject": "cardio",
+   "title": "بیماری‌های مادرزادی قلب در بزرگسالان (ACHD)",
+   "path": "cardio/congenital-heart-disease-in-the-adult.html",
+   "sections": 19,
+   "words": 5432,
+   "minutes": 29,
+   "flashcards": 21,
+   "tables": 3,
+   "mcq": 16,
+   "source": "Congenital Heart Disease in the Adult.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/cyanotic-congenital-heart-disease",
+   "subject": "cardio",
+   "title": "بیماری‌های مادرزادی قلبی سیانوتیک",
+   "path": "cardio/cyanotic-congenital-heart-disease.html",
+   "sections": 6,
+   "words": 2196,
+   "minutes": 12,
+   "flashcards": 12,
+   "tables": 1,
+   "mcq": 0,
+   "source": "Cyanotic Congenital Heart Disease.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/acyanotic-congenital-heart-disease",
+   "subject": "cardio",
+   "title": "بیماری‌های مادرزادی قلبی غیرسیانوتیک",
+   "path": "cardio/acyanotic-congenital-heart-disease.html",
+   "sections": 14,
+   "words": 2195,
+   "minutes": 12,
+   "flashcards": 16,
+   "tables": 1,
+   "mcq": 0,
+   "source": "Acyanotic Congenital Heart Disease.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/pericardial-diseases",
+   "subject": "cardio",
+   "title": "بیماری‌های پریکارد (Pericardial Diseases)",
+   "path": "cardio/pericardial-diseases.html",
+   "sections": 16,
+   "words": 4064,
+   "minutes": 21,
+   "flashcards": 21,
+   "tables": 2,
+   "mcq": 16,
+   "source": "Pericardial Diseases.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/cardiac-trauma",
+   "subject": "cardio",
+   "title": "تروماهای قلبی (Cardiac Trauma)",
+   "path": "cardio/cardiac-trauma.html",
+   "sections": 19,
+   "words": 4917,
+   "minutes": 26,
+   "flashcards": 25,
+   "tables": 2,
+   "mcq": 16,
+   "source": "Cardiac Trauma.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/mitral-stenosis",
+   "subject": "cardio",
+   "title": "تنگی دریچه میترال (Mitral Stenosis)",
+   "path": "cardio/mitral-stenosis.html",
+   "sections": 15,
+   "words": 10296,
+   "minutes": 54,
+   "flashcards": 60,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Mitral Stenosis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/atrial-myxoma-and-other-cardiac-tumors",
+   "subject": "cardio",
+   "title": "تومورهای قلبی و میکسومای دهلیزی (Cardiac Tumors & Atrial Myxoma)",
+   "path": "cardio/atrial-myxoma-and-other-cardiac-tumors.html",
+   "sections": 18,
+   "words": 4952,
+   "minutes": 26,
+   "flashcards": 25,
+   "tables": 2,
+   "mcq": 16,
+   "source": "Atrial Myxoma and Other Cardiac Tumors.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/atrial-fibrillation",
+   "subject": "cardio",
+   "title": "جامع و اَبَرداشبورد آموزشی فیبریلاسیون دهلیزی (AF)",
+   "path": "cardio/atrial-fibrillation.html",
+   "sections": 14,
+   "words": 9692,
+   "minutes": 51,
+   "flashcards": 60,
+   "tables": 2,
+   "mcq": 30,
+   "source": "Atrial Fibrillation.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/approach-to-supraventricular-arrhythmias",
+   "subject": "cardio",
+   "title": "رویکرد به آریتمی‌های فوق‌بطنی (SVA)",
+   "path": "cardio/approach-to-supraventricular-arrhythmias.html",
+   "sections": 14,
+   "words": 9337,
+   "minutes": 49,
+   "flashcards": 40,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Approach to Supraventricular Arrhythmias.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/sustained-ventricular-tachycardia",
+   "subject": "cardio",
+   "title": "رویکرد تخصصی به تاکی‌کاردی بطنی مداوم (Sustained VT)",
+   "path": "cardio/sustained-ventricular-tachycardia.html",
+   "sections": 19,
+   "words": 11204,
+   "minutes": 59,
+   "flashcards": 60,
+   "tables": 10,
+   "mcq": 0,
+   "source": "Sustained Ventricular Tachycardia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/polymorphic-ventricular-tachycardia-and-ventricular-fibrillation",
+   "subject": "cardio",
+   "title": "رویکرد تخصصی به تاکی‌کاردی بطنی پلی‌مورفیک و فیبریلاسیون بطنی",
+   "path": "cardio/polymorphic-ventricular-tachycardia-and-ventricular-fibrillation.html",
+   "sections": 19,
+   "words": 11120,
+   "minutes": 59,
+   "flashcards": 60,
+   "tables": 10,
+   "mcq": 0,
+   "source": "Polymorphic_Ventricular_Tachycardia_and_Ventricular_Fibrillation.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/ventricular-arrhythmias",
+   "subject": "cardio",
+   "title": "رویکرد جامع به آریتمی‌های بطنی",
+   "path": "cardio/ventricular-arrhythmias.html",
+   "sections": 15,
+   "words": 9546,
+   "minutes": 50,
+   "flashcards": 50,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Ventricular Arrhythmias.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/physiologic-and-nonphysiologic-sinus-rhythm",
+   "subject": "cardio",
+   "title": "ریتم سینوسی فیزیولوژیک و غیرفیزیولوژیک",
+   "path": "cardio/physiologic-and-nonphysiologic-sinus-rhythm.html",
+   "sections": 14,
+   "words": 9091,
+   "minutes": 48,
+   "flashcards": 40,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Physiologic and Nonphysiologic Sinus Rhythm.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/basic-biology-of-the-cardiovascular-system",
+   "subject": "cardio",
+   "title": "زیست‌شناسی پایه سیستم قلبی-عروقی",
+   "path": "cardio/basic-biology-of-the-cardiovascular-system.html",
+   "sections": 24,
+   "words": 15410,
+   "minutes": 81,
+   "flashcards": 60,
+   "tables": 14,
+   "mcq": 30,
+   "source": "Basic Biology of the Cardiovascular System.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/noninvasive-cardiac-imaging",
+   "subject": "cardio",
+   "title": "سامانه جامع تصویربرداری غیرتهاجمی قلب",
+   "path": "cardio/noninvasive-cardiac-imaging.html",
+   "sections": 12,
+   "words": 7983,
+   "minutes": 42,
+   "flashcards": 30,
+   "tables": 2,
+   "mcq": 62,
+   "source": "Noninvasive Cardiac Imaging,.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/classification-of-cardiomyopathy",
+   "subject": "cardio",
+   "title": "طبقه‌بندی کاردیومیوپاتی‌ها",
+   "path": "cardio/classification-of-cardiomyopathy.html",
+   "sections": 14,
+   "words": 8774,
+   "minutes": 46,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Classification of Cardiomyopathy.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/electrical-storm-and-incessant-ventricular-tachycardia",
+   "subject": "cardio",
+   "title": "طوفان الکتریکی و تاکی‌کاردی بطنی مداوم",
+   "path": "cardio/electrical-storm-and-incessant-ventricular-tachycardia.html",
+   "sections": 12,
+   "words": 7847,
+   "minutes": 41,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 30,
+   "source": "Electrical Storm and Incessant Ventricular Tachycardia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/atrial-flutter",
+   "subject": "cardio",
+   "title": "فلوتر دهلیزی و آریتمی‌های ماکرو‌ری‌انترانت",
+   "path": "cardio/atrial-flutter.html",
+   "sections": 14,
+   "words": 8517,
+   "minutes": 45,
+   "flashcards": 60,
+   "tables": 2,
+   "mcq": 30,
+   "source": "Common Atrial Flutter and.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/focal-atrial-tachycardia",
+   "subject": "cardio",
+   "title": "فوق تخصصی تاکی‌کاردی دهلیزی کانونی (Focal Atrial Tachycardia)",
+   "path": "cardio/focal-atrial-tachycardia.html",
+   "sections": 15,
+   "words": 8095,
+   "minutes": 43,
+   "flashcards": 60,
+   "tables": 2,
+   "mcq": 30,
+   "source": "Focal Atrial Tachycardia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/paroxysmal-supraventricular-tachycardias",
+   "subject": "cardio",
+   "title": "فوق تخصصی تاکی‌کاردی‌های فوق بطنی حمله‌ای (PSVT)",
+   "path": "cardio/paroxysmal-supraventricular-tachycardias.html",
+   "sections": 14,
+   "words": 8759,
+   "minutes": 46,
+   "flashcards": 60,
+   "tables": 2,
+   "mcq": 30,
+   "source": "Paroxysmal Supraventricular Tachycardias.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/acute-and-chronic-myocarditis",
+   "subject": "cardio",
+   "title": "مایوکاردیت حاد و مزمن",
+   "path": "cardio/acute-and-chronic-myocarditis.html",
+   "sections": 16,
+   "words": 7129,
+   "minutes": 38,
+   "flashcards": 10,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Acute and Chronic Myocarditis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/pulmonic-valve-disease",
+   "subject": "cardio",
+   "title": "مدیریت تخصصی و آمادگی آزمون بورد: بیماری‌های دریچه ریوی (PS & PR)",
+   "path": "cardio/pulmonic-valve-disease.html",
+   "sections": 16,
+   "words": 9806,
+   "minutes": 52,
+   "flashcards": 0,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Pulmonic Valve Disease.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/heart-failure-management",
+   "subject": "cardio",
+   "title": "مدیریت جامع نارسایی قلب",
+   "path": "cardio/heart-failure-management.html",
+   "sections": 12,
+   "words": 8194,
+   "minutes": 43,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 30,
+   "source": "Heart Failure Management.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/tricuspid-valve-disease",
+   "subject": "cardio",
+   "title": "مدیریت جامع و آمادگی آزمون بورد: بیماری‌های دریچه تریکاسپید (TS & TR)",
+   "path": "cardio/tricuspid-valve-disease.html",
+   "sections": 16,
+   "words": 10488,
+   "minutes": 55,
+   "flashcards": 0,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Tricuspid Valve Disease.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/mitral-valve-prolapse",
+   "subject": "cardio",
+   "title": "مدیریت جامع و آمادگی آزمون بورد: پرولاپس دریچه میترال (MVP)",
+   "path": "cardio/mitral-valve-prolapse.html",
+   "sections": 18,
+   "words": 10581,
+   "minutes": 56,
+   "flashcards": 0,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Mitral Valve Prolapse.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/aortic-regurgitation",
+   "subject": "cardio",
+   "title": "نارسایی دریچه آئورت (Aortic Regurgitation)",
+   "path": "cardio/aortic-regurgitation.html",
+   "sections": 15,
+   "words": 10893,
+   "minutes": 57,
+   "flashcards": 60,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Aortic Regurgitation.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/mitral-regurgitation",
+   "subject": "cardio",
+   "title": "نارسایی دریچه میترال (Mitral Regurgitation)",
+   "path": "cardio/mitral-regurgitation.html",
+   "sections": 15,
+   "words": 10656,
+   "minutes": 56,
+   "flashcards": 60,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Mitral Regurgitation.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/heart-failure-pathophysiology-and-diagnosis",
+   "subject": "cardio",
+   "title": "نارسایی قلب",
+   "path": "cardio/heart-failure-pathophysiology-and-diagnosis.html",
+   "sections": 13,
+   "words": 7971,
+   "minutes": 42,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Heart Failure Pathophysiology and Diagnosis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/cardiac-transplantation-and-prolonged-assisted-circulation",
+   "subject": "cardio",
+   "title": "پیوند قلب و گردش خون کمکی طولانی‌مدت (MCS)",
+   "path": "cardio/cardiac-transplantation-and-prolonged-assisted-circulation.html",
+   "sections": 17,
+   "words": 7905,
+   "minutes": 42,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Cardiac Transplantation and Prolonged Assisted Circulation.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/genetic-cardiomyopathies",
+   "subject": "cardio",
+   "title": "کاردیومیوپاتی‌های ژنتیکی",
+   "path": "cardio/genetic-cardiomyopathies.html",
+   "sections": 14,
+   "words": 8587,
+   "minutes": 45,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Genetic Cardiomyopathies.html"
+  },
+  {
+   "appSubjectKeys": [
+    "cardiology-nematpour",
+    "internal-cecil"
+   ],
+   "id": "cardio/cardiac-catheterization",
+   "subject": "cardio",
+   "title": "کتتریزاسیون قلبی و آنژیوگرافی کرونر",
+   "path": "cardio/cardiac-catheterization.html",
+   "sections": 12,
+   "words": 7859,
+   "minutes": 41,
+   "flashcards": 30,
+   "tables": 2,
+   "mcq": 62,
+   "source": "Diagnostic Cardiac Catheterization and Coronary.html"
+  },
+  {
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ],
+   "id": "nephro/aki",
+   "subject": "nephro",
+   "title": "آسیب حاد کلیوی (AKI)",
+   "path": "nephro/aki.html",
+   "sections": 10,
+   "words": 1564,
+   "minutes": 8,
+   "flashcards": 12,
+   "tables": 1,
+   "mcq": 0,
+   "source": "AKI.html"
+  },
+  {
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ],
+   "id": "nephro/sodium-disorders",
+   "subject": "nephro",
+   "title": "اختلالات سدیم — هیپوناترمی و هیپرناترمی",
+   "path": "nephro/sodium-disorders.html",
+   "sections": 6,
+   "words": 1416,
+   "minutes": 7,
+   "flashcards": 12,
+   "tables": 5,
+   "mcq": 0,
+   "source": "اختلالات سدیم.html"
+  },
+  {
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ],
+   "id": "nephro/potassium-disorders",
+   "subject": "nephro",
+   "title": "اختلالات پتاسیم — هیپوکالمی و هیپرکالمی",
+   "path": "nephro/potassium-disorders.html",
+   "sections": 14,
+   "words": 2070,
+   "minutes": 11,
+   "flashcards": 12,
+   "tables": 3,
+   "mcq": 0,
+   "source": "اختلالات پتاسیم.html"
+  },
+  {
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ],
+   "id": "nephro/calcium-disorders",
+   "subject": "nephro",
+   "title": "اختلالات کلسیم — هیپرکلسمی و هیپوکلسمی",
+   "path": "nephro/calcium-disorders.html",
+   "sections": 13,
+   "words": 1687,
+   "minutes": 9,
+   "flashcards": 12,
+   "tables": 1,
+   "mcq": 0,
+   "source": "اختلالات کلسیم.html"
+  },
+  {
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ],
+   "id": "nephro/ckd",
+   "subject": "nephro",
+   "title": "بیماری مزمن کلیه (CKD)",
+   "path": "nephro/ckd.html",
+   "sections": 16,
+   "words": 1931,
+   "minutes": 10,
+   "flashcards": 15,
+   "tables": 2,
+   "mcq": 0,
+   "source": "CKD.html"
+  },
+  {
+   "appSubjectKeys": [
+    "nephrology-harrison"
+   ],
+   "id": "nephro/glumerulonephritis",
+   "subject": "nephro",
+   "title": "گلومرولونفریت",
+   "path": "nephro/glumerulonephritis.html",
+   "sections": 8,
+   "words": 2448,
+   "minutes": 13,
+   "flashcards": 16,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Glumerulonephritis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/aplastic-anemia",
+   "subject": "heme",
+   "title": "آنمی آپلاستیک",
+   "path": "heme/aplastic-anemia.html",
+   "sections": 15,
+   "words": 1719,
+   "minutes": 9,
+   "flashcards": 12,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Aplastic Anemia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/ida",
+   "subject": "heme",
+   "title": "آنمی فقر آهن (IDA)",
+   "path": "heme/ida.html",
+   "sections": 9,
+   "words": 1214,
+   "minutes": 6,
+   "flashcards": 12,
+   "tables": 3,
+   "mcq": 0,
+   "source": "IDA.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/megaloblastic-anemia",
+   "subject": "heme",
+   "title": "آنمی مگالوبلاستیک",
+   "path": "heme/megaloblastic-anemia.html",
+   "sections": 10,
+   "words": 3261,
+   "minutes": 17,
+   "flashcards": 30,
+   "tables": 4,
+   "mcq": 0,
+   "source": "Megaloblastic Anemia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/hemolytic-anemia",
+   "subject": "heme",
+   "title": "آنمی همولیتیک",
+   "path": "heme/hemolytic-anemia.html",
+   "sections": 9,
+   "words": 1296,
+   "minutes": 7,
+   "flashcards": 8,
+   "tables": 5,
+   "mcq": 0,
+   "source": "Hemolytic Anemia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/coagulopathies",
+   "subject": "heme",
+   "title": "اختلالات انعقادی",
+   "path": "heme/coagulopathies.html",
+   "sections": 11,
+   "words": 2328,
+   "minutes": 12,
+   "flashcards": 15,
+   "tables": 4,
+   "mcq": 0,
+   "source": "Coagulopathies.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/thrombotic-disorders",
+   "subject": "heme",
+   "title": "اختلالات ترومبوتیک",
+   "path": "heme/thrombotic-disorders.html",
+   "sections": 7,
+   "words": 2063,
+   "minutes": 11,
+   "flashcards": 12,
+   "tables": 5,
+   "mcq": 0,
+   "source": "Thrombotic Disorders.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/thalassemia",
+   "subject": "heme",
+   "title": "تالاسمی",
+   "path": "heme/thalassemia.html",
+   "sections": 9,
+   "words": 2042,
+   "minutes": 11,
+   "flashcards": 12,
+   "tables": 9,
+   "mcq": 0,
+   "source": "Thalassemia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/blood-transfusion",
+   "subject": "heme",
+   "title": "ترنسفیوژن خون",
+   "path": "heme/blood-transfusion.html",
+   "sections": 8,
+   "words": 1929,
+   "minutes": 10,
+   "flashcards": 13,
+   "tables": 3,
+   "mcq": 0,
+   "source": "Blood Transfusion.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/approach-to-anemia",
+   "subject": "heme",
+   "title": "رویکرد به آنمی",
+   "path": "heme/approach-to-anemia.html",
+   "sections": 10,
+   "words": 1446,
+   "minutes": 8,
+   "flashcards": 10,
+   "tables": 7,
+   "mcq": 0,
+   "source": "Approach to Anemia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/cell-biology-and-principles-of-cancer-therapy",
+   "subject": "heme",
+   "title": "فوق‌تخصصی زیست‌شناسی سلولی و اصول سرطان‌درمانی",
+   "path": "heme/cell-biology-and-principles-of-cancer-therapy.html",
+   "sections": 14,
+   "words": 14463,
+   "minutes": 76,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Cell Biology and Principles of Cancer Therapy.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/lymphomas",
+   "subject": "heme",
+   "title": "لنفوم‌ها",
+   "path": "heme/lymphomas.html",
+   "sections": 12,
+   "words": 2172,
+   "minutes": 11,
+   "flashcards": 16,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Lymphomas.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/aml",
+   "subject": "heme",
+   "title": "لوسمی میلوئید حاد (AML)",
+   "path": "heme/aml.html",
+   "sections": 12,
+   "words": 1710,
+   "minutes": 9,
+   "flashcards": 16,
+   "tables": 6,
+   "mcq": 0,
+   "source": "AML.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/mds",
+   "subject": "heme",
+   "title": "نشانگان میلودیسپلاستیک (MDS)",
+   "path": "heme/mds.html",
+   "sections": 11,
+   "words": 1688,
+   "minutes": 9,
+   "flashcards": 12,
+   "tables": 7,
+   "mcq": 0,
+   "source": "MDS.html"
+  },
+  {
+   "appSubjectKeys": [
+    "hematology-harrison",
+    "pathology-robbins"
+   ],
+   "id": "heme/sickle-cell-anemia",
+   "subject": "heme",
+   "title": "کم‌خونی داسی‌شکل",
+   "path": "heme/sickle-cell-anemia.html",
+   "sections": 12,
+   "words": 1583,
+   "minutes": 8,
+   "flashcards": 12,
+   "tables": 3,
+   "mcq": 0,
+   "source": "Sickle Cell Anemia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/crystal-arthropathy",
+   "subject": "rheum",
+   "title": "آرتروپاتی کریستالی",
+   "path": "rheum/crystal-arthropathy.html",
+   "sections": 18,
+   "words": 3032,
+   "minutes": 16,
+   "flashcards": 20,
+   "tables": 4,
+   "mcq": 0,
+   "source": "Crystal Arthropathy.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/rheumatoid-arthritis",
+   "subject": "rheum",
+   "title": "آرتریت روماتوئید",
+   "path": "rheum/rheumatoid-arthritis.html",
+   "sections": 12,
+   "words": 5685,
+   "minutes": 30,
+   "flashcards": 52,
+   "tables": 10,
+   "mcq": 0,
+   "source": "Rheumatoid Arthritis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/osteoarthritis",
+   "subject": "rheum",
+   "title": "استئوآرتریت",
+   "path": "rheum/osteoarthritis.html",
+   "sections": 16,
+   "words": 2834,
+   "minutes": 15,
+   "flashcards": 22,
+   "tables": 3,
+   "mcq": 0,
+   "source": "Osteoarthritis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/osteoporosis",
+   "subject": "rheum",
+   "title": "استئوپروز",
+   "path": "rheum/osteoporosis.html",
+   "sections": 17,
+   "words": 3180,
+   "minutes": 17,
+   "flashcards": 26,
+   "tables": 9,
+   "mcq": 0,
+   "source": "Osteoporosis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/spondyloarthritis",
+   "subject": "rheum",
+   "title": "اسپوندیلوآرتریت",
+   "path": "rheum/spondyloarthritis.html",
+   "sections": 16,
+   "words": 3881,
+   "minutes": 20,
+   "flashcards": 22,
+   "tables": 9,
+   "mcq": 0,
+   "source": "Spondyloarthritis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/scleroderma",
+   "subject": "rheum",
+   "title": "اسکلرودرمی",
+   "path": "rheum/scleroderma.html",
+   "sections": 10,
+   "words": 2604,
+   "minutes": 14,
+   "flashcards": 20,
+   "tables": 7,
+   "mcq": 0,
+   "source": "Scleroderma.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/periarticular-disease",
+   "subject": "rheum",
+   "title": "بیماری‌های پری‌آرتیکولار",
+   "path": "rheum/periarticular-disease.html",
+   "sections": 12,
+   "words": 3356,
+   "minutes": 18,
+   "flashcards": 22,
+   "tables": 6,
+   "mcq": 0,
+   "source": "Periarticular Disease .html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/bone-arthritis-imaging",
+   "subject": "rheum",
+   "title": "تصویربرداری اسکلت و آرتریت‌ها",
+   "path": "rheum/bone-arthritis-imaging.html",
+   "sections": 11,
+   "words": 4624,
+   "minutes": 24,
+   "flashcards": 0,
+   "tables": 4,
+   "mcq": 0,
+   "source": "CHAPTER 22 Bone with voice.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/rheumatology-history",
+   "subject": "rheum",
+   "title": "شرح حال و معاینه در روماتولوژی",
+   "path": "rheum/rheumatology-history.html",
+   "sections": 15,
+   "words": 3553,
+   "minutes": 19,
+   "flashcards": 27,
+   "tables": 0,
+   "mcq": 0,
+   "source": "شرح حال روماتولوژی.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/sle",
+   "subject": "rheum",
+   "title": "لوپوس اریتماتوز سیستمیک (SLE)",
+   "path": "rheum/sle.html",
+   "sections": 13,
+   "words": 2204,
+   "minutes": 12,
+   "flashcards": 16,
+   "tables": 3,
+   "mcq": 0,
+   "source": "SLE.html"
+  },
+  {
+   "appSubjectKeys": [
+    "rheumatology-harrison"
+   ],
+   "id": "rheum/vasculitis",
+   "subject": "rheum",
+   "title": "واسکولیت",
+   "path": "rheum/vasculitis.html",
+   "sections": 20,
+   "words": 3575,
+   "minutes": 19,
+   "flashcards": 23,
+   "tables": 5,
+   "mcq": 0,
+   "source": "Vasculitis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/gastrointestinal-renal-and-surgical-complications",
+   "subject": "surgery",
+   "title": "تخصصی عوارض گوارشی، کلیوی و جراحی در بارداری",
+   "path": "surgery/gastrointestinal-renal-and-surgical-complications.html",
+   "sections": 17,
+   "words": 21109,
+   "minutes": 111,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Gastrointestinal, Renal, and Surgical Complications.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/01-perioperative-care",
+   "subject": "surgery",
+   "title": "فصل ۱ — ارزیابی و مراقبت پیرامون عمل",
+   "path": "surgery/01-perioperative-care.html",
+   "sections": 18,
+   "words": 17244,
+   "minutes": 91,
+   "flashcards": 70,
+   "tables": 12,
+   "mcq": 30,
+   "source": "01_perioperative_care.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/10-abdominal-wall-hernia",
+   "subject": "surgery",
+   "title": "فصل ۱۰ — دیوارهٔ شکم و فتق",
+   "path": "surgery/10-abdominal-wall-hernia.html",
+   "sections": 18,
+   "words": 16222,
+   "minutes": 85,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "10_abdominal_wall_and_hernia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/11-esophagus",
+   "subject": "surgery",
+   "title": "فصل ۱۱ — مری",
+   "path": "surgery/11-esophagus.html",
+   "sections": 18,
+   "words": 16944,
+   "minutes": 89,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "11_esophagus.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/12-stomach-duodenum",
+   "subject": "surgery",
+   "title": "فصل ۱۲ — معده و دوازدهه",
+   "path": "surgery/12-stomach-duodenum.html",
+   "sections": 18,
+   "words": 17706,
+   "minutes": 93,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "12_stomach_duodenum.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/13-small-intestine-appendix",
+   "subject": "surgery",
+   "title": "فصل ۱۳ — رودهٔ کوچک و آپاندیس",
+   "path": "surgery/13-small-intestine-appendix.html",
+   "sections": 18,
+   "words": 17410,
+   "minutes": 92,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "13_small_intestine_appendix.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/14-colon-rectum-anus",
+   "subject": "surgery",
+   "title": "فصل ۱۴ — کولون، رکتوم و مقعد",
+   "path": "surgery/14-colon-rectum-anus.html",
+   "sections": 18,
+   "words": 17894,
+   "minutes": 94,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "14_colon_rectum_anus.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/15-biliary-tract",
+   "subject": "surgery",
+   "title": "فصل ۱۵ — مجاری صفراوی",
+   "path": "surgery/15-biliary-tract.html",
+   "sections": 18,
+   "words": 17420,
+   "minutes": 92,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "15_biliary_tract.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/16-pancreas",
+   "subject": "surgery",
+   "title": "فصل ۱۶ — پانکراس",
+   "path": "surgery/16-pancreas.html",
+   "sections": 18,
+   "words": 17914,
+   "minutes": 94,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "16_pancreas.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/17-breast",
+   "subject": "surgery",
+   "title": "فصل ۱۷ — پستان",
+   "path": "surgery/17-breast.html",
+   "sections": 18,
+   "words": 18110,
+   "minutes": 95,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "17_breast.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/18-surgical-endocrinology",
+   "subject": "surgery",
+   "title": "فصل ۱۸ — غدد جراحی",
+   "path": "surgery/18-surgical-endocrinology.html",
+   "sections": 18,
+   "words": 16172,
+   "minutes": 85,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "18_surgical_endocrinology.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/19-liver-spleen",
+   "subject": "surgery",
+   "title": "فصل ۱۹ — کبد و طحال",
+   "path": "surgery/19-liver-spleen.html",
+   "sections": 18,
+   "words": 15874,
+   "minutes": 84,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "19_liver_spleen.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/02-fluids-electrolytes-nutrition",
+   "subject": "surgery",
+   "title": "فصل ۲ — مایعات، الکترولیت و تغذیه",
+   "path": "surgery/02-fluids-electrolytes-nutrition.html",
+   "sections": 18,
+   "words": 16380,
+   "minutes": 86,
+   "flashcards": 70,
+   "tables": 12,
+   "mcq": 30,
+   "source": "02_fluids_electrolytes_nutrition.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/20-transplantation",
+   "subject": "surgery",
+   "title": "فصل ۲۰ — پیوند",
+   "path": "surgery/20-transplantation.html",
+   "sections": 18,
+   "words": 15728,
+   "minutes": 83,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "20_transplantation.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/21-pediatric-surgery",
+   "subject": "surgery",
+   "title": "فصل ۲۱ — جراحی اطفال",
+   "path": "surgery/21-pediatric-surgery.html",
+   "sections": 18,
+   "words": 19726,
+   "minutes": 104,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "21_pediatric_surgery.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/22-plastic-surgery-skin",
+   "subject": "surgery",
+   "title": "فصل ۲۲ — جراحی پلاستیک، پوست، صورت و دست",
+   "path": "surgery/22-plastic-surgery-skin.html",
+   "sections": 18,
+   "words": 18906,
+   "minutes": 100,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "22_plastic_surgery_skin_face_hand.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/23-cardiothoracic-surgery",
+   "subject": "surgery",
+   "title": "فصل ۲۳ — جراحی قلب و توراکس",
+   "path": "surgery/23-cardiothoracic-surgery.html",
+   "sections": 18,
+   "words": 18858,
+   "minutes": 99,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "23_cardiothoracic_surgery.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/24-vascular-system",
+   "subject": "surgery",
+   "title": "فصل ۲۴ — سیستم عروقی",
+   "path": "surgery/24-vascular-system.html",
+   "sections": 18,
+   "words": 22000,
+   "minutes": 116,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "24_vascular_system.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/25-otolaryngology-head-neck",
+   "subject": "surgery",
+   "title": "فصل ۲۵ — گوش، حلق و بینی و سر و گردن",
+   "path": "surgery/25-otolaryngology-head-neck.html",
+   "sections": 18,
+   "words": 20700,
+   "minutes": 109,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "25_otolaryngology_head_neck.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/26-orthopedic-surgery",
+   "subject": "surgery",
+   "title": "فصل ۲۶ — جراحی ارتوپدی",
+   "path": "surgery/26-orthopedic-surgery.html",
+   "sections": 18,
+   "words": 22218,
+   "minutes": 117,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "26_orthopedic_surgery.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/27-urology-genitourinary",
+   "subject": "surgery",
+   "title": "فصل ۲۷ — اورولوژی و سیستم ادراری-تناسلی",
+   "path": "surgery/27-urology-genitourinary.html",
+   "sections": 18,
+   "words": 22136,
+   "minutes": 117,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "27_urology_genitourinary.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/28-neurosurgery",
+   "subject": "surgery",
+   "title": "فصل ۲۸ — جراحی مغز و اعصاب",
+   "path": "surgery/28-neurosurgery.html",
+   "sections": 18,
+   "words": 21462,
+   "minutes": 113,
+   "flashcards": 70,
+   "tables": 4,
+   "mcq": 30,
+   "source": "28_neurosurgery_nervous_system.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/03-surgical-bleeding",
+   "subject": "surgery",
+   "title": "فصل ۳ — خونریزی جراحی و انعقاد",
+   "path": "surgery/03-surgical-bleeding.html",
+   "sections": 18,
+   "words": 15298,
+   "minutes": 81,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "03_surgical_bleeding.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/04-surgical-shock",
+   "subject": "surgery",
+   "title": "فصل ۴ — شوک جراحی",
+   "path": "surgery/04-surgical-shock.html",
+   "sections": 18,
+   "words": 14762,
+   "minutes": 78,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "04_surgical_shock.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/05-wounds-and-healing",
+   "subject": "surgery",
+   "title": "فصل ۵ — زخم و ترمیم",
+   "path": "surgery/05-wounds-and-healing.html",
+   "sections": 18,
+   "words": 14247,
+   "minutes": 75,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "05_wounds_and_healing.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/06-surgical-infection",
+   "subject": "surgery",
+   "title": "فصل ۶ — عفونت جراحی",
+   "path": "surgery/06-surgical-infection.html",
+   "sections": 18,
+   "words": 15908,
+   "minutes": 84,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "06_surgical_infection.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/07-trauma",
+   "subject": "surgery",
+   "title": "فصل ۷ — تروما",
+   "path": "surgery/07-trauma.html",
+   "sections": 18,
+   "words": 16308,
+   "minutes": 86,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "07_trauma.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/08-burns",
+   "subject": "surgery",
+   "title": "فصل ۸ — سوختگی",
+   "path": "surgery/08-burns.html",
+   "sections": 18,
+   "words": 16472,
+   "minutes": 87,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "08_burns.html"
+  },
+  {
+   "appSubjectKeys": [
+    "surgery-lawrence",
+    "urology-simforoush",
+    "orthopedics-alamiharandi",
+    "ent-goldenberg",
+    "ophthalmology-javadi"
+   ],
+   "id": "surgery/09-surgical-critical-care",
+   "subject": "surgery",
+   "title": "فصل ۹ — مراقبت‌های ویژهٔ جراحی",
+   "path": "surgery/09-surgical-critical-care.html",
+   "sections": 18,
+   "words": 17872,
+   "minutes": 94,
+   "flashcards": 70,
+   "tables": 8,
+   "mcq": 30,
+   "source": "09_surgical_critical_care.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/fetal-growth-abnormalities",
+   "subject": "obgyn",
+   "title": "اختلالات رشد جنین: FGR و ماکروزومی",
+   "path": "obgyn/fetal-growth-abnormalities.html",
+   "sections": 16,
+   "words": 16828,
+   "minutes": 89,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Fetal Growth Abnormalities.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/interpartum-care",
+   "subject": "obgyn",
+   "title": "تخصصی مراقبت‌های زایمان",
+   "path": "obgyn/interpartum-care.html",
+   "sections": 23,
+   "words": 20473,
+   "minutes": 108,
+   "flashcards": 60,
+   "tables": 10,
+   "mcq": 62,
+   "source": "Interpartum Care.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/endocrine-disorders",
+   "subject": "obgyn",
+   "title": "جامع اختلالات غدد درون‌ریز در بارداری",
+   "path": "obgyn/endocrine-disorders.html",
+   "sections": 17,
+   "words": 22390,
+   "minutes": 118,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Endocrine Disorders.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/post-term-pregnancy",
+   "subject": "obgyn",
+   "title": "جامع بارداری پست‌ترم",
+   "path": "obgyn/post-term-pregnancy.html",
+   "sections": 17,
+   "words": 20356,
+   "minutes": 107,
+   "flashcards": 60,
+   "tables": 10,
+   "mcq": 30,
+   "source": "Post-term Pregnancy.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/multifetal-gestation",
+   "subject": "obgyn",
+   "title": "جامع بارداری‌های چندقلویی",
+   "path": "obgyn/multifetal-gestation.html",
+   "sections": 21,
+   "words": 18138,
+   "minutes": 95,
+   "flashcards": 60,
+   "tables": 10,
+   "mcq": 30,
+   "source": "Multifetal Gestation.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/ectopic-pregnancy-and-abortion",
+   "subject": "obgyn",
+   "title": "جامع حاملگی خارج رحمی و سقط",
+   "path": "obgyn/ectopic-pregnancy-and-abortion.html",
+   "sections": 17,
+   "words": 21069,
+   "minutes": 111,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Ectopic Pregnancy and Abortion.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/postpartum-hemorrhage",
+   "subject": "obgyn",
+   "title": "جامع خونریزی پس از زایمان (PPH)",
+   "path": "obgyn/postpartum-hemorrhage.html",
+   "sections": 17,
+   "words": 17820,
+   "minutes": 94,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Postpartum Hemorrhage.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/puberty",
+   "subject": "obgyn",
+   "title": "جامع و فوق‌تخصصی بلوغ (Puberty)",
+   "path": "obgyn/puberty.html",
+   "sections": 14,
+   "words": 16028,
+   "minutes": 84,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 62,
+   "source": "Puberty.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/preterm-labor",
+   "subject": "obgyn",
+   "title": "جامع و فوق‌تخصصی زایمان زودرس (Preterm Labor)",
+   "path": "obgyn/preterm-labor.html",
+   "sections": 16,
+   "words": 17211,
+   "minutes": 91,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Preterm Labor.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/reproductive-cycles",
+   "subject": "obgyn",
+   "title": "جامع و فوق‌تخصصی سیکل‌های تولیدمثل (Reproductive Cycles)",
+   "path": "obgyn/reproductive-cycles.html",
+   "sections": 14,
+   "words": 11983,
+   "minutes": 63,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Reproductive Cycles.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/postpartum-care",
+   "subject": "obgyn",
+   "title": "جامع و فوق‌تخصصی مراقبت‌های پس از زایمان (Puerperium)",
+   "path": "obgyn/postpartum-care.html",
+   "sections": 17,
+   "words": 14824,
+   "minutes": 78,
+   "flashcards": 60,
+   "tables": 4,
+   "mcq": 30,
+   "source": "Postpartum Care.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/hirsutism-and-virilization",
+   "subject": "obgyn",
+   "title": "جامع و فوق‌تخصصی هیرسوتیسم و ویریلیزاسیون",
+   "path": "obgyn/hirsutism-and-virilization.html",
+   "sections": 14,
+   "words": 14649,
+   "minutes": 77,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Hirsutism and Virilization.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/third-trimester-bleeding",
+   "subject": "obgyn",
+   "title": "خونریزی سه ماهه سوم بارداری",
+   "path": "obgyn/third-trimester-bleeding.html",
+   "sections": 16,
+   "words": 20066,
+   "minutes": 106,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 30,
+   "source": "Third-Trimester Bleeding.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/abnormal-labor",
+   "subject": "obgyn",
+   "title": "دپارتمان فوق‌تخصصی طب مادر و جنین",
+   "path": "obgyn/abnormal-labor.html",
+   "sections": 16,
+   "words": 20081,
+   "minutes": 106,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 30,
+   "source": "Abnormal Labor.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/amenorrhea-and-abnormal-uterine-bleeding",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی آمنوره و خونریزی‌های غیرطبیعی رحم (AUB)",
+   "path": "obgyn/amenorrhea-and-abnormal-uterine-bleeding.html",
+   "sections": 14,
+   "words": 16839,
+   "minutes": 89,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Amenorrhea and Abnormal Uterine Bleeding.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/endometriosis",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی اندومتریوز (Endometriosis)",
+   "path": "obgyn/endometriosis.html",
+   "sections": 17,
+   "words": 20107,
+   "minutes": 106,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Endometriosis.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/ovarian-and-adnexal-disease",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی بیماری‌ها و نئوپلازی‌های تخمدان و ادنکس",
+   "path": "obgyn/ovarian-and-adnexal-disease.html",
+   "sections": 15,
+   "words": 13913,
+   "minutes": 73,
+   "flashcards": 60,
+   "tables": 4,
+   "mcq": 62,
+   "source": "Ovarian and Adnexal Disease.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/vulvar-and-vaginal-disease-and-neoplasia",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی بیماری‌ها و نئوپلازی‌های ولور و واژن",
+   "path": "obgyn/vulvar-and-vaginal-disease-and-neoplasia.html",
+   "sections": 15,
+   "words": 13094,
+   "minutes": 69,
+   "flashcards": 60,
+   "tables": 4,
+   "mcq": 62,
+   "source": "Vulvar and Vaginal Disease and Neoplasia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/gestational-trophoblastic-neoplasia",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی بیماری‌های تروفوبلاستیک بارداری (GTD/GTN)",
+   "path": "obgyn/gestational-trophoblastic-neoplasia.html",
+   "sections": 14,
+   "words": 12283,
+   "minutes": 65,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Gestational Trophoblastic Neoplasia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/cardiovascular-and-respiratory-disorders",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی بیماری‌های قلبی-عروقی و ریوی در بارداری",
+   "path": "obgyn/cardiovascular-and-respiratory-disorders.html",
+   "sections": 17,
+   "words": 21286,
+   "minutes": 112,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 30,
+   "source": "Cardiovascular and Respiratory Disorders.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/sexual-assault-and-domestic-violence",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی تجاوز جنسی و خشونت خانگی",
+   "path": "obgyn/sexual-assault-and-domestic-violence.html",
+   "sections": 17,
+   "words": 20386,
+   "minutes": 107,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Sexual Assault and Domestic Violence.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/dysmenorrhea-and-chronic-pelvic-pain",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی دیسمنوره و درد مزمن لگنی",
+   "path": "obgyn/dysmenorrhea-and-chronic-pelvic-pain.html",
+   "sections": 17,
+   "words": 19995,
+   "minutes": 105,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Dysmenorrhea and Chronic Pelvic Pain.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/cancer-of-the-uterine-corpus",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی سرطان جسم رحم",
+   "path": "obgyn/cancer-of-the-uterine-corpus.html",
+   "sections": 15,
+   "words": 13339,
+   "minutes": 70,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Cancer of the Uterine Corpus.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/premenstrual-syndrome-and-premenstrual-dysphoric-disorder",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی سندرم پیش از قاعدگی (PMS) و اختلال ملال پیش از قاعدگی (PMDD)",
+   "path": "obgyn/premenstrual-syndrome-and-premenstrual-dysphoric-disorder.html",
+   "sections": 15,
+   "words": 13995,
+   "minutes": 74,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Premenstrual Syndrome and Premenstrual Dysphoric Disorder.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/hematologic-and-immunologic-complications",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی عوارض خون‌شناسی و ایمونولوژیک در بارداری",
+   "path": "obgyn/hematologic-and-immunologic-complications.html",
+   "sections": 17,
+   "words": 21580,
+   "minutes": 114,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Hematologic and Immunologic Complications.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/uterine-leiomyoma-and-neoplasia",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی لیومیوم و نئوپلازی‌های رحم",
+   "path": "obgyn/uterine-leiomyoma-and-neoplasia.html",
+   "sections": 14,
+   "words": 13395,
+   "minutes": 70,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Uterine Leiomyoma and Neoplasia.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/cervical-neoplasia-and-carcinoma",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی نئوپلازی و کارسینوم دهانه رحم",
+   "path": "obgyn/cervical-neoplasia-and-carcinoma.html",
+   "sections": 14,
+   "words": 15002,
+   "minutes": 79,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 62,
+   "source": "Cervical Neoplasia and Carcinoma.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/infertility",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی ناباروری (Infertility)",
+   "path": "obgyn/infertility.html",
+   "sections": 14,
+   "words": 16255,
+   "minutes": 86,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Infertility.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/human-sexuality",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی پاسخ جنسی و اختلالات عملکرد جنسی در زنان",
+   "path": "obgyn/human-sexuality.html",
+   "sections": 17,
+   "words": 19344,
+   "minutes": 102,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Human Sexuality.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/menopause",
+   "subject": "obgyn",
+   "title": "فوق‌تخصصی یائسگی (Menopause)",
+   "path": "obgyn/menopause.html",
+   "sections": 15,
+   "words": 14007,
+   "minutes": 74,
+   "flashcards": 60,
+   "tables": 6,
+   "mcq": 62,
+   "source": "Menopause.html"
+  },
+  {
+   "appSubjectKeys": [
+    "gynecology-beckmann"
+   ],
+   "id": "obgyn/premature-rupture-of-membranes",
+   "subject": "obgyn",
+   "title": "پاره شدن زودرس پرده‌های جنینی (PROM/PPROM)",
+   "path": "obgyn/premature-rupture-of-membranes.html",
+   "sections": 17,
+   "words": 19426,
+   "minutes": 102,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Premature Rupture of Membranes.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/rds-neonatal",
+   "subject": "peds",
+   "title": "RDS در نوزادان و اطفال",
+   "path": "peds/rds-neonatal.html",
+   "sections": 13,
+   "words": 1774,
+   "minutes": 9,
+   "flashcards": 12,
+   "tables": 4,
+   "mcq": 0,
+   "source": "RDS Neonatal.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/otitis-media-in-pediatric",
+   "subject": "peds",
+   "title": "اوتیت مدیا در اطفال",
+   "path": "peds/otitis-media-in-pediatric.html",
+   "sections": 12,
+   "words": 2013,
+   "minutes": 11,
+   "flashcards": 15,
+   "tables": 5,
+   "mcq": 0,
+   "source": "Otitis Media in Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/celiac-disease-in-pediatric",
+   "subject": "peds",
+   "title": "بیماری سلیاک در اطفال",
+   "path": "peds/celiac-disease-in-pediatric.html",
+   "sections": 14,
+   "words": 3088,
+   "minutes": 16,
+   "flashcards": 24,
+   "tables": 3,
+   "mcq": 0,
+   "source": "Celiac Disease in Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/seizures-in-pediatrics",
+   "subject": "peds",
+   "title": "تشنج در اطفال",
+   "path": "peds/seizures-in-pediatrics.html",
+   "sections": 16,
+   "words": 3008,
+   "minutes": 16,
+   "flashcards": 14,
+   "tables": 3,
+   "mcq": 0,
+   "source": "Seizures in Pediatrics.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/diabetes-and-dka-pediatric",
+   "subject": "peds",
+   "title": "دیابت و DKA در اطفال",
+   "path": "peds/diabetes-and-dka-pediatric.html",
+   "sections": 11,
+   "words": 1755,
+   "minutes": 9,
+   "flashcards": 12,
+   "tables": 3,
+   "mcq": 0,
+   "source": "Diabetes and DKA Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/jaundice-pediatric",
+   "subject": "peds",
+   "title": "زردی نوزادان و کودکان",
+   "path": "peds/jaundice-pediatric.html",
+   "sections": 15,
+   "words": 2332,
+   "minutes": 12,
+   "flashcards": 10,
+   "tables": 3,
+   "mcq": 0,
+   "source": "Jaundice Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/nephrotic-syndrome-pediatric",
+   "subject": "peds",
+   "title": "سندرم نفروتیک در کودکان",
+   "path": "peds/nephrotic-syndrome-pediatric.html",
+   "sections": 10,
+   "words": 1795,
+   "minutes": 9,
+   "flashcards": 12,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Nephrotic Syndrome Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/nephritic-syndrome-pediatric",
+   "subject": "peds",
+   "title": "سندرم نفریتیک در کودکان",
+   "path": "peds/nephritic-syndrome-pediatric.html",
+   "sections": 10,
+   "words": 1615,
+   "minutes": 8,
+   "flashcards": 12,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Nephritic Syndrome Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/uti",
+   "subject": "peds",
+   "title": "عفونت ادراری در اطفال",
+   "path": "peds/uti.html",
+   "sections": 23,
+   "words": 2465,
+   "minutes": 13,
+   "flashcards": 16,
+   "tables": 4,
+   "mcq": 0,
+   "source": "UTI in Pediatric .html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/immediate-care-of-newborn",
+   "subject": "peds",
+   "title": "مراقبت‌های فوری نوزاد پس از تولد",
+   "path": "peds/immediate-care-of-newborn.html",
+   "sections": 18,
+   "words": 18629,
+   "minutes": 98,
+   "flashcards": 60,
+   "tables": 8,
+   "mcq": 30,
+   "source": "Immediate Care of Newborn.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/pneumonia-in-pediatric",
+   "subject": "peds",
+   "title": "پنومونی در اطفال",
+   "path": "peds/pneumonia-in-pediatric.html",
+   "sections": 15,
+   "words": 1768,
+   "minutes": 9,
+   "flashcards": 12,
+   "tables": 1,
+   "mcq": 0,
+   "source": "Pneumonia in Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/croup",
+   "subject": "peds",
+   "title": "کروپ در اطفال",
+   "path": "peds/croup.html",
+   "sections": 15,
+   "words": 2387,
+   "minutes": 13,
+   "flashcards": 16,
+   "tables": 8,
+   "mcq": 0,
+   "source": "Croup in Pediatric .html"
+  },
+  {
+   "appSubjectKeys": [
+    "pediatrics-nelson"
+   ],
+   "id": "peds/gastroenteritis-pediatric",
+   "subject": "peds",
+   "title": "گاستروانتریت در اطفال",
+   "path": "peds/gastroenteritis-pediatric.html",
+   "sections": 17,
+   "words": 3170,
+   "minutes": 17,
+   "flashcards": 16,
+   "tables": 4,
+   "mcq": 0,
+   "source": "Gastroenteritis Pediatric.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/cxr-normal-anatomy",
+   "subject": "imaging",
+   "title": "آناتومی نرمال ریه در رادیوگرافی قفسه سینه (CXR)",
+   "path": "imaging/cxr-normal-anatomy.html",
+   "sections": 13,
+   "words": 3635,
+   "minutes": 19,
+   "flashcards": 0,
+   "tables": 16,
+   "mcq": 0,
+   "source": "normal anatomy cxr.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/nuclear-pulmonary-vq",
+   "subject": "imaging",
+   "title": "اسکن V/Q و آمبولی ریه",
+   "path": "imaging/nuclear-pulmonary-vq.html",
+   "sections": 12,
+   "words": 2306,
+   "minutes": 12,
+   "flashcards": 0,
+   "tables": 10,
+   "mcq": 0,
+   "source": "The Pulmonary System.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/nuclear-thyroid-parathyroid",
+   "subject": "imaging",
+   "title": "تیروئید، I-131 و اسکن پاراتیروئید",
+   "path": "imaging/nuclear-thyroid-parathyroid.html",
+   "sections": 15,
+   "words": 3365,
+   "minutes": 18,
+   "flashcards": 0,
+   "tables": 14,
+   "mcq": 0,
+   "source": "Thyroid1.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/radiology-intracranial-pathology",
+   "subject": "imaging",
+   "title": "رادیولوژی پاتولوژی‌های درون‌جمجمه‌ای",
+   "path": "imaging/radiology-intracranial-pathology.html",
+   "sections": 11,
+   "words": 6200,
+   "minutes": 33,
+   "flashcards": 0,
+   "tables": 6,
+   "mcq": 0,
+   "source": "chapter27.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/radiology-pediatric",
+   "subject": "imaging",
+   "title": "رادیولوژی کودکان",
+   "path": "imaging/radiology-pediatric.html",
+   "sections": 12,
+   "words": 6286,
+   "minutes": 33,
+   "flashcards": 0,
+   "tables": 6,
+   "mcq": 0,
+   "source": "chapter28.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/cns-molecular-imaging",
+   "subject": "imaging",
+   "title": "سیستم عصبی مرکزی",
+   "path": "imaging/cns-molecular-imaging.html",
+   "sections": 13,
+   "words": 4522,
+   "minutes": 24,
+   "flashcards": 0,
+   "tables": 12,
+   "mcq": 0,
+   "source": "Central Nervous System.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/airspace-vs-interstitial-lung",
+   "subject": "imaging",
+   "title": "فضای هوایی در برابر بیماری بینابینی ریه",
+   "path": "imaging/airspace-vs-interstitial-lung.html",
+   "sections": 14,
+   "words": 2904,
+   "minutes": 15,
+   "flashcards": 0,
+   "tables": 10,
+   "mcq": 0,
+   "source": "Recognizing airspace versus interstitial lung disease.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/nuclear-cardiology",
+   "subject": "imaging",
+   "title": "قلب و عروق هسته‌ای",
+   "path": "imaging/nuclear-cardiology.html",
+   "sections": 10,
+   "words": 2166,
+   "minutes": 11,
+   "flashcards": 0,
+   "tables": 6,
+   "mcq": 0,
+   "source": "nuc cardiac.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/nuclear-oncology",
+   "subject": "imaging",
+   "title": "پزشکی هسته‌ای در آنکولوژی",
+   "path": "imaging/nuclear-oncology.html",
+   "sections": 13,
+   "words": 2646,
+   "minutes": 14,
+   "flashcards": 0,
+   "tables": 8,
+   "mcq": 0,
+   "source": "Oncology.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/nuclear-urinary-tract",
+   "subject": "imaging",
+   "title": "پزشکی هسته‌ای مجاری ادراری",
+   "path": "imaging/nuclear-urinary-tract.html",
+   "sections": 10,
+   "words": 2198,
+   "minutes": 12,
+   "flashcards": 0,
+   "tables": 5,
+   "mcq": 0,
+   "source": "Urinary Tract.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/nuclear-medicine-introduction",
+   "subject": "imaging",
+   "title": "پزشکی هسته‌ای و تصویربرداری مولکولی — مقدمه",
+   "path": "imaging/nuclear-medicine-introduction.html",
+   "sections": 12,
+   "words": 4765,
+   "minutes": 25,
+   "flashcards": 0,
+   "tables": 8,
+   "mcq": 0,
+   "source": "Intoduction.html"
+  },
+  {
+   "appSubjectKeys": [
+    "radiology-herring",
+    "medical-physics"
+   ],
+   "id": "imaging/nuclear-hepatic-biliary",
+   "subject": "imaging",
+   "title": "پزشکی هسته‌ای کبد و مجاری صفراوی",
+   "path": "imaging/nuclear-hepatic-biliary.html",
+   "sections": 7,
+   "words": 3298,
+   "minutes": 17,
+   "flashcards": 0,
+   "tables": 2,
+   "mcq": 0,
+   "source": "Hepatic.html"
+  }
+ ],
+ "qbank": {
+  "index": "qbank/index.html",
+  "total": 790,
+  "parts": [
+   {
+    "part": "women",
+    "subject": "obgyn",
+    "title": "زنان و زایمان — بکمن",
+    "count": 200,
+    "page": "qbank/women.html",
+    "standalone": "qbank/women-standalone.html"
+   },
+   {
+    "part": "cardio",
+    "subject": "cardio",
+    "title": "قلب و عروق — هریسون",
+    "count": 200,
+    "page": "qbank/cardio.html",
+    "standalone": "qbank/cardio-standalone.html"
+   },
+   {
+    "part": "rad-1",
+    "subject": "imaging",
+    "title": "رادیولوژی — فصول ۱ تا ۱۰",
+    "count": 60,
+    "page": "qbank/rad-1.html",
+    "standalone": "qbank/rad-1-standalone.html"
+   },
+   {
+    "part": "rad-2",
+    "subject": "imaging",
+    "title": "رادیولوژی — فصول ۱۱ تا ۲۰",
+    "count": 60,
+    "page": "qbank/rad-2.html",
+    "standalone": "qbank/rad-2-standalone.html"
+   },
+   {
+    "part": "rad-3",
+    "subject": "imaging",
+    "title": "رادیولوژی — فصول ۲۱ تا ۲۹",
+    "count": 60,
+    "page": "qbank/rad-3.html",
+    "standalone": "qbank/rad-3-standalone.html"
+   },
+   {
+    "part": "sur-1",
+    "subject": "surgery",
+    "title": "جراحی عمومی — لارنس (فصول ۱ تا ۱۰)",
+    "count": 70,
+    "page": "qbank/sur-1.html",
+    "standalone": "qbank/sur-1-standalone.html"
+   },
+   {
+    "part": "sur-2",
+    "subject": "surgery",
+    "title": "جراحی عمومی — لارنس (فصول ۱۱ تا ۲۰)",
+    "count": 70,
+    "page": "qbank/sur-2.html",
+    "standalone": "qbank/sur-2-standalone.html"
+   },
+   {
+    "part": "sur-3",
+    "subject": "surgery",
+    "title": "جراحی عمومی — لارنس (فصول ۲۱ تا ۳۰)",
+    "count": 70,
+    "page": "qbank/sur-3.html",
+    "standalone": "qbank/sur-3-standalone.html"
+   }
+  ]
+ }
+}

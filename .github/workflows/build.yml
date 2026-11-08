@@ -1,0 +1,86 @@
+name: build-library
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: بررسی وجود raw_src/ (نگهبان)
+        id: gate
+        run: |
+          # ⚠ نگهبان: raw_src/ متن منبع اصلی است و پابلیک نمی‌شود.
+          # اگر نباشد، build.py صفر درس می‌سازد و content/ را پاک می‌کند؛
+          # در نتیجه docs/lib/ (خروجی منتشرشده) نابود می‌شد. پس اینجا متوقف می‌شویم
+          # و نسخهٔ کامیت‌شدهٔ docs/lib/ دست‌نخورده می‌ماند.
+          n=$(find raw_src -maxdepth 1 -type f -iname '*.html' 2>/dev/null | wc -l)
+          echo "raw_html=$n" >> "$GITHUB_OUTPUT"
+          if [ "$n" -eq 0 ]; then
+            echo "should_build=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::raw_src/ خالی یا ناموجود است — بازسازی انجام نشد. نسخهٔ کامیت‌شدهٔ docs/lib/ همچنان منتشر است."
+          else
+            echo "should_build=true" >> "$GITHUB_OUTPUT"
+            echo "raw_src/ آماده است: $n فایل HTML"
+          fi
+
+      - name: نصب وابستگی‌ها
+        if: steps.gate.outputs.should_build == 'true'
+        run: pip install beautifulsoup4 lxml
+
+      - name: ساخت نقشهٔ فایل‌ها → درس
+        if: steps.gate.outputs.should_build == 'true'
+        run: python3 build/make_map.py
+
+      - name: ساخت درسنامه‌ها
+        if: steps.gate.outputs.should_build == 'true'
+        run: python3 build/build.py
+
+      - name: نرمال‌سازی بانک سؤال
+        if: steps.gate.outputs.should_build == 'true'
+        run: python3 build/qb_normalize.py
+
+      - name: ساخت خانه + صفحهٔ درس‌ها + manifest
+        if: steps.gate.outputs.should_build == 'true'
+        run: python3 build/gen_library.py
+
+      - name: ساخت صفحات بانک سؤال
+        if: steps.gate.outputs.should_build == 'true'
+        run: python3 build/qb_build.py
+
+      - name: انتشار خروجی روی GitHub Pages (پوشهٔ docs/)
+        if: steps.gate.outputs.should_build == 'true'
+        run: |
+          # نگهبان دوم: اگر build خروجی نداد، به docs/lib/ دست نزن.
+          built=$(find content -mindepth 2 -name '*.html' | wc -l)
+          if [ "$built" -eq 0 ]; then
+            echo "::error::content/ خالی است — انتشار متوقف شد تا کتابخانهٔ منتشرشده پاک نشود."
+            exit 1
+          fi
+          echo "$built صفحهٔ درس ساخته شد."
+          rm -rf docs/lib docs/assets
+          mkdir -p docs/lib
+          cp -r content/. docs/lib/
+          # درسنامه‌ها از ../../assets ارجاع می‌دهند، پس assets در ریشهٔ سایت هم لازم است.
+          cp -r content/assets docs/assets
+          touch docs/.nojekyll
+
+      - name: کامیت خروجی
+        if: steps.gate.outputs.should_build == 'true'
+        run: |
+          git config user.name  "med-library-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add docs build/subjects.map.json build/report.json
+          git commit -m "build: بازسازی درسنامه‌ها" || echo "تغییری نبود"
+          git push

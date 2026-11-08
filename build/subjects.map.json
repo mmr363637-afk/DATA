@@ -1,0 +1,1410 @@
+{
+ "version": 1,
+ "count": 156,
+ "files": [
+  {
+   "src": "01_perioperative_care.html",
+   "slug": "01-perioperative-care",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱ — ارزیابی و مراقبت پیرامون عمل",
+   "titleIsCurated": true
+  },
+  {
+   "src": "02_fluids_electrolytes_nutrition.html",
+   "slug": "02-fluids-electrolytes-nutrition",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲ — مایعات، الکترولیت و تغذیه",
+   "titleIsCurated": true
+  },
+  {
+   "src": "03_surgical_bleeding.html",
+   "slug": "03-surgical-bleeding",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۳ — خونریزی جراحی و انعقاد",
+   "titleIsCurated": true
+  },
+  {
+   "src": "04_surgical_shock.html",
+   "slug": "04-surgical-shock",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۴ — شوک جراحی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "05_wounds_and_healing.html",
+   "slug": "05-wounds-and-healing",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۵ — زخم و ترمیم",
+   "titleIsCurated": true
+  },
+  {
+   "src": "06_surgical_infection.html",
+   "slug": "06-surgical-infection",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۶ — عفونت جراحی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "07_trauma.html",
+   "slug": "07-trauma",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۷ — تروما",
+   "titleIsCurated": true
+  },
+  {
+   "src": "08_burns.html",
+   "slug": "08-burns",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۸ — سوختگی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "09_surgical_critical_care.html",
+   "slug": "09-surgical-critical-care",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۹ — مراقبت‌های ویژهٔ جراحی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "10_abdominal_wall_and_hernia.html",
+   "slug": "10-abdominal-wall-hernia",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۰ — دیوارهٔ شکم و فتق",
+   "titleIsCurated": true
+  },
+  {
+   "src": "11_esophagus.html",
+   "slug": "11-esophagus",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۱ — مری",
+   "titleIsCurated": true
+  },
+  {
+   "src": "12_stomach_duodenum.html",
+   "slug": "12-stomach-duodenum",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۲ — معده و دوازدهه",
+   "titleIsCurated": true
+  },
+  {
+   "src": "13_small_intestine_appendix.html",
+   "slug": "13-small-intestine-appendix",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۳ — رودهٔ کوچک و آپاندیس",
+   "titleIsCurated": true
+  },
+  {
+   "src": "14_colon_rectum_anus.html",
+   "slug": "14-colon-rectum-anus",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۴ — کولون، رکتوم و مقعد",
+   "titleIsCurated": true
+  },
+  {
+   "src": "15_biliary_tract.html",
+   "slug": "15-biliary-tract",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۵ — مجاری صفراوی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "16_pancreas.html",
+   "slug": "16-pancreas",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۶ — پانکراس",
+   "titleIsCurated": true
+  },
+  {
+   "src": "17_breast.html",
+   "slug": "17-breast",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۷ — پستان",
+   "titleIsCurated": true
+  },
+  {
+   "src": "18_surgical_endocrinology.html",
+   "slug": "18-surgical-endocrinology",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۸ — غدد جراحی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "19_liver_spleen.html",
+   "slug": "19-liver-spleen",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۱۹ — کبد و طحال",
+   "titleIsCurated": true
+  },
+  {
+   "src": "20_transplantation.html",
+   "slug": "20-transplantation",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۰ — پیوند",
+   "titleIsCurated": true
+  },
+  {
+   "src": "21_pediatric_surgery.html",
+   "slug": "21-pediatric-surgery",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۱ — جراحی اطفال",
+   "titleIsCurated": true
+  },
+  {
+   "src": "22_plastic_surgery_skin_face_hand.html",
+   "slug": "22-plastic-surgery-skin",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۲ — جراحی پلاستیک، پوست، صورت و دست",
+   "titleIsCurated": true
+  },
+  {
+   "src": "23_cardiothoracic_surgery.html",
+   "slug": "23-cardiothoracic-surgery",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۳ — جراحی قلب و توراکس",
+   "titleIsCurated": true
+  },
+  {
+   "src": "24_vascular_system.html",
+   "slug": "24-vascular-system",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۴ — سیستم عروقی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "25_otolaryngology_head_neck.html",
+   "slug": "25-otolaryngology-head-neck",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۵ — گوش، حلق و بینی و سر و گردن",
+   "titleIsCurated": true
+  },
+  {
+   "src": "26_orthopedic_surgery.html",
+   "slug": "26-orthopedic-surgery",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۶ — جراحی ارتوپدی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "27_urology_genitourinary.html",
+   "slug": "27-urology-genitourinary",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۷ — اورولوژی و سیستم ادراری-تناسلی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "28_neurosurgery_nervous_system.html",
+   "slug": "28-neurosurgery",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فصل ۲۸ — جراحی مغز و اعصاب",
+   "titleIsCurated": true
+  },
+  {
+   "src": "AKI.html",
+   "slug": "aki",
+   "subject": "nephro",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "آسیب حاد کلیوی (AKI)",
+   "titleIsCurated": true
+  },
+  {
+   "src": "AML.html",
+   "slug": "aml",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "لوسمی میلوئید حاد (AML)",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Abnormal Labor.html",
+   "slug": "abnormal-labor",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Abnormal Labor",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Acute and Chronic Myocarditis.html",
+   "slug": "acute-and-chronic-myocarditis",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Acute and Chronic Myocarditis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Acyanotic Congenital Heart Disease.html",
+   "slug": "acyanotic-congenital-heart-disease",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Acyanotic Congenital Heart Disease",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Amenorrhea and Abnormal Uterine Bleeding.html",
+   "slug": "amenorrhea-and-abnormal-uterine-bleeding",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Amenorrhea and Abnormal Uterine Bleeding",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Amyloidosis and Other Restrictive Cardiomyopathies.html",
+   "slug": "amyloidosis-and-other-restrictive-cardiomyopathies",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Amyloidosis and Other Restrictive Cardiomyopathies",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Aortic Regurgitation.html",
+   "slug": "aortic-regurgitation",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Aortic Regurgitation",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Aortic Stenosis.html",
+   "slug": "aortic-stenosis",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Aortic Stenosis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Aplastic Anemia.html",
+   "slug": "aplastic-anemia",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Aplastic Anemia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Approach to Anemia.html",
+   "slug": "approach-to-anemia",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Approach to Anemia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Approach to Supraventricular Arrhythmias.html",
+   "slug": "approach-to-supraventricular-arrhythmias",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Approach to Supraventricular Arrhythmias",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Atrial Fibrillation.html",
+   "slug": "atrial-fibrillation",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Atrial Fibrillation",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Atrial Myxoma and Other Cardiac Tumors.html",
+   "slug": "atrial-myxoma-and-other-cardiac-tumors",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Atrial Myxoma and Other Cardiac Tumors",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Basic Biology of the Cardiovascular System.html",
+   "slug": "basic-biology-of-the-cardiovascular-system",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Basic Biology of the Cardiovascular System",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Blood Transfusion.html",
+   "slug": "blood-transfusion",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Blood Transfusion",
+   "titleIsCurated": false
+  },
+  {
+   "src": "CHAPTER 22 Bone with voice.html",
+   "slug": "bone-arthritis-imaging",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "تصویربرداری اسکلت و آرتریت‌ها",
+   "titleIsCurated": true
+  },
+  {
+   "src": "CKD.html",
+   "slug": "ckd",
+   "subject": "nephro",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "بیماری مزمن کلیه (CKD)",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Cancer of the Uterine Corpus.html",
+   "slug": "cancer-of-the-uterine-corpus",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Cancer of the Uterine Corpus",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Cardiac Transplantation and Prolonged Assisted Circulation.html",
+   "slug": "cardiac-transplantation-and-prolonged-assisted-circulation",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Cardiac Transplantation and Prolonged Assisted Circulation",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Cardiac Trauma.html",
+   "slug": "cardiac-trauma",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Cardiac Trauma",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Cardiovascular and Respiratory Disorders.html",
+   "slug": "cardiovascular-and-respiratory-disorders",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Cardiovascular and Respiratory Disorders",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Celiac Disease in Pediatric.html",
+   "slug": "celiac-disease-in-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Celiac Disease in Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Cell Biology and Principles of Cancer Therapy.html",
+   "slug": "cell-biology-and-principles-of-cancer-therapy",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Cell Biology and Principles of Cancer Therapy",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Central Nervous System.html",
+   "slug": "cns-molecular-imaging",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Central Nervous System",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Cervical Neoplasia and Carcinoma.html",
+   "slug": "cervical-neoplasia-and-carcinoma",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Cervical Neoplasia and Carcinoma",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Classification of Cardiomyopathy.html",
+   "slug": "classification-of-cardiomyopathy",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Classification of Cardiomyopathy",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Coagulopathies.html",
+   "slug": "coagulopathies",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Coagulopathies",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Common Atrial Flutter and.html",
+   "slug": "atrial-flutter",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فلوتر دهلیزی و آریتمی‌های ماکرو‌ری‌انترانت",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Congenital Heart Disease in the Adult.html",
+   "slug": "congenital-heart-disease-in-the-adult",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Congenital Heart Disease in the Adult",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Croup in Pediatric .html",
+   "slug": "croup",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Croup in Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Crystal Arthropathy.html",
+   "slug": "crystal-arthropathy",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Crystal Arthropathy",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Cyanotic Congenital Heart Disease.html",
+   "slug": "cyanotic-congenital-heart-disease",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Cyanotic Congenital Heart Disease",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Diabetes and DKA Pediatric.html",
+   "slug": "diabetes-and-dka-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Diabetes and DKA Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Diagnostic Cardiac Catheterization and Coronary.html",
+   "slug": "cardiac-catheterization",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "کتتریزاسیون قلبی و آنژیوگرافی کرونر",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Dysmenorrhea and Chronic Pelvic Pain.html",
+   "slug": "dysmenorrhea-and-chronic-pelvic-pain",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Dysmenorrhea and Chronic Pelvic Pain",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Ectopic Pregnancy and Abortion.html",
+   "slug": "ectopic-pregnancy-and-abortion",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Ectopic Pregnancy and Abortion",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Electrical Storm and Incessant Ventricular Tachycardia.html",
+   "slug": "electrical-storm-and-incessant-ventricular-tachycardia",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Electrical Storm and Incessant Ventricular Tachycardia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Electrocardiography.html",
+   "slug": "electrocardiography",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Electrocardiography",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Endocrine Disorders.html",
+   "slug": "endocrine-disorders",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Endocrine Disorders",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Endometriosis.html",
+   "slug": "endometriosis",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Endometriosis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Epidemiology of Cardiovascular Disease.html",
+   "slug": "epidemiology-of-cardiovascular-disease",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Epidemiology of Cardiovascular Disease",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Fetal Growth Abnormalities.html",
+   "slug": "fetal-growth-abnormalities",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Fetal Growth Abnormalities",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Focal Atrial Tachycardia.html",
+   "slug": "focal-atrial-tachycardia",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Focal Atrial Tachycardia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Gastroenteritis Pediatric.html",
+   "slug": "gastroenteritis-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Gastroenteritis Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Gastrointestinal, Renal, and Surgical Complications.html",
+   "slug": "gastrointestinal-renal-and-surgical-complications",
+   "subject": "surgery",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Gastrointestinal, Renal, and Surgical Complications",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Genetic Cardiomyopathies.html",
+   "slug": "genetic-cardiomyopathies",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Genetic Cardiomyopathies",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Gestational Trophoblastic Neoplasia.html",
+   "slug": "gestational-trophoblastic-neoplasia",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Gestational Trophoblastic Neoplasia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Glumerulonephritis.html",
+   "slug": "glumerulonephritis",
+   "subject": "nephro",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "گلومرولونفریت",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Heart Failure Management.html",
+   "slug": "heart-failure-management",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Heart Failure Management",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Heart Failure Pathophysiology and Diagnosis.html",
+   "slug": "heart-failure-pathophysiology-and-diagnosis",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Heart Failure Pathophysiology and Diagnosis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Hematologic and Immunologic Complications.html",
+   "slug": "hematologic-and-immunologic-complications",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Hematologic and Immunologic Complications",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Hemolytic Anemia.html",
+   "slug": "hemolytic-anemia",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Hemolytic Anemia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Hepatic.html",
+   "slug": "nuclear-hepatic-biliary",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "پزشکی هسته‌ای کبد و مجاری صفراوی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Hirsutism and Virilization.html",
+   "slug": "hirsutism-and-virilization",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Hirsutism and Virilization",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Human Sexuality.html",
+   "slug": "human-sexuality",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Human Sexuality",
+   "titleIsCurated": false
+  },
+  {
+   "src": "IDA.html",
+   "slug": "ida",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "آنمی فقر آهن (IDA)",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Immediate Care of Newborn.html",
+   "slug": "immediate-care-of-newborn",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Immediate Care of Newborn",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Infertility.html",
+   "slug": "infertility",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Infertility",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Interpartum Care.html",
+   "slug": "interpartum-care",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Interpartum Care",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Intoduction.html",
+   "slug": "nuclear-medicine-introduction",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "پزشکی هسته‌ای و تصویربرداری مولکولی — مقدمه",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Jaundice Pediatric.html",
+   "slug": "jaundice-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Jaundice Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Lymphomas.html",
+   "slug": "lymphomas",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Lymphomas",
+   "titleIsCurated": false
+  },
+  {
+   "src": "MDS.html",
+   "slug": "mds",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "نشانگان میلودیسپلاستیک (MDS)",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Megaloblastic Anemia.html",
+   "slug": "megaloblastic-anemia",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Megaloblastic Anemia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Menopause.html",
+   "slug": "menopause",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Menopause",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Mitral Regurgitation.html",
+   "slug": "mitral-regurgitation",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Mitral Regurgitation",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Mitral Stenosis.html",
+   "slug": "mitral-stenosis",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Mitral Stenosis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Mitral Valve Prolapse.html",
+   "slug": "mitral-valve-prolapse",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Mitral Valve Prolapse",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Multifetal Gestation.html",
+   "slug": "multifetal-gestation",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Multifetal Gestation",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Multiple and Mixed Valvular Heart Diseas.html",
+   "slug": "mixed-valvular-disease",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "بیماری‌های دریچه‌ای متعدد و مشترک",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Nephritic Syndrome Pediatric.html",
+   "slug": "nephritic-syndrome-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Nephritic Syndrome Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Nephrotic Syndrome Pediatric.html",
+   "slug": "nephrotic-syndrome-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Nephrotic Syndrome Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Noninvasive Cardiac Imaging,.html",
+   "slug": "noninvasive-cardiac-imaging",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Noninvasive Cardiac Imaging,",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Oncology.html",
+   "slug": "nuclear-oncology",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Oncology",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Osteoarthritis.html",
+   "slug": "osteoarthritis",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Osteoarthritis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Osteoporosis.html",
+   "slug": "osteoporosis",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Osteoporosis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Otitis Media in Pediatric.html",
+   "slug": "otitis-media-in-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Otitis Media in Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Ovarian and Adnexal Disease.html",
+   "slug": "ovarian-and-adnexal-disease",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Ovarian and Adnexal Disease",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Paroxysmal Supraventricular Tachycardias.html",
+   "slug": "paroxysmal-supraventricular-tachycardias",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Paroxysmal Supraventricular Tachycardias",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Periarticular Disease .html",
+   "slug": "periarticular-disease",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Periarticular Disease",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Pericardial Diseases.html",
+   "slug": "pericardial-diseases",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Pericardial Diseases",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Physiologic and Nonphysiologic Sinus Rhythm.html",
+   "slug": "physiologic-and-nonphysiologic-sinus-rhythm",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Physiologic and Nonphysiologic Sinus Rhythm",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Pneumonia in Pediatric.html",
+   "slug": "pneumonia-in-pediatric",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Pneumonia in Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Polymorphic_Ventricular_Tachycardia_and_Ventricular_Fibrillation.html",
+   "slug": "polymorphic-ventricular-tachycardia-and-ventricular-fibrillation",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Polymorphic_Ventricular_Tachycardia_and_Ventricular_Fibrillation",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Post-term Pregnancy.html",
+   "slug": "post-term-pregnancy",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Post-term Pregnancy",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Postpartum Care.html",
+   "slug": "postpartum-care",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Postpartum Care",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Postpartum Hemorrhage.html",
+   "slug": "postpartum-hemorrhage",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Postpartum Hemorrhage",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Premature Rupture of Membranes.html",
+   "slug": "premature-rupture-of-membranes",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Premature Rupture of Membranes",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Premature_Ventricular_Contractions,_Nonsustained_Ventricular_Tachycardia.html",
+   "slug": "premature-ventricular-contractions-nonsustained-ventricular-tachycardi",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Premature_Ventricular_Contractions,_Nonsustained_Ventricular_Tachycardia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Premenstrual Syndrome and Premenstrual Dysphoric Disorder.html",
+   "slug": "premenstrual-syndrome-and-premenstrual-dysphoric-disorder",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Premenstrual Syndrome and Premenstrual Dysphoric Disorder",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Preterm Labor.html",
+   "slug": "preterm-labor",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Preterm Labor",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Principles of Clinical Cardiac Electrophysiology.html",
+   "slug": "principles-of-clinical-cardiac-electrophysiology",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Principles of Clinical Cardiac Electrophysiology",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Puberty.html",
+   "slug": "puberty",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Puberty",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Pulmonic Valve Disease.html",
+   "slug": "pulmonic-valve-disease",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Pulmonic Valve Disease",
+   "titleIsCurated": false
+  },
+  {
+   "src": "RDS Neonatal.html",
+   "slug": "rds-neonatal",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "RDS Neonatal",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Recognizing airspace versus interstitial lung disease.html",
+   "slug": "airspace-vs-interstitial-lung",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "فضای هوایی در برابر بیماری بینابینی ریه",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Reproductive Cycles.html",
+   "slug": "reproductive-cycles",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Reproductive Cycles",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Rheumatoid Arthritis.html",
+   "slug": "rheumatoid-arthritis",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Rheumatoid Arthritis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "SLE.html",
+   "slug": "sle",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "لوپوس اریتماتوز سیستمیک (SLE)",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Scleroderma.html",
+   "slug": "scleroderma",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Scleroderma",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Seizures in Pediatrics.html",
+   "slug": "seizures-in-pediatrics",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Seizures in Pediatrics",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Sexual Assault and Domestic Violence.html",
+   "slug": "sexual-assault-and-domestic-violence",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Sexual Assault and Domestic Violence",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Sickle Cell Anemia.html",
+   "slug": "sickle-cell-anemia",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Sickle Cell Anemia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Spondyloarthritis.html",
+   "slug": "spondyloarthritis",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Spondyloarthritis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Sustained Ventricular Tachycardia.html",
+   "slug": "sustained-ventricular-tachycardia",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Sustained Ventricular Tachycardia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Thalassemia.html",
+   "slug": "thalassemia",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Thalassemia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "The Bradyarrhythmias Disorders of the Atrioventricular Node.html",
+   "slug": "the-bradyarrhythmias-disorders-of-the-atrioventricular-node",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "The Bradyarrhythmias Disorders of the Atrioventricular Node",
+   "titleIsCurated": false
+  },
+  {
+   "src": "The Bradyarrhythmias Disorders of the SA Node.html",
+   "slug": "the-bradyarrhythmias-disorders-of-the-sa-node",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "The Bradyarrhythmias Disorders of the SA Node",
+   "titleIsCurated": false
+  },
+  {
+   "src": "The Pulmonary System.html",
+   "slug": "nuclear-pulmonary-vq",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "اسکن V/Q و آمبولی ریه",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Third-Trimester Bleeding.html",
+   "slug": "third-trimester-bleeding",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Third-Trimester Bleeding",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Thrombotic Disorders.html",
+   "slug": "thrombotic-disorders",
+   "subject": "heme",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Thrombotic Disorders",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Thyroid1.html",
+   "slug": "nuclear-thyroid-parathyroid",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "تیروئید، I-131 و اسکن پاراتیروئید",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Tricuspid Valve Disease.html",
+   "slug": "tricuspid-valve-disease",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Tricuspid Valve Disease",
+   "titleIsCurated": false
+  },
+  {
+   "src": "UTI in Pediatric .html",
+   "slug": "uti",
+   "subject": "peds",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "UTI in Pediatric",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Urinary Tract.html",
+   "slug": "nuclear-urinary-tract",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "پزشکی هسته‌ای مجاری ادراری",
+   "titleIsCurated": true
+  },
+  {
+   "src": "Uterine Leiomyoma and Neoplasia.html",
+   "slug": "uterine-leiomyoma-and-neoplasia",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Uterine Leiomyoma and Neoplasia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Vasculitis.html",
+   "slug": "vasculitis",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Vasculitis",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Ventricular Arrhythmias.html",
+   "slug": "ventricular-arrhythmias",
+   "subject": "cardio",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Ventricular Arrhythmias",
+   "titleIsCurated": false
+  },
+  {
+   "src": "Vulvar and Vaginal Disease and Neoplasia.html",
+   "slug": "vulvar-and-vaginal-disease-and-neoplasia",
+   "subject": "obgyn",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "Vulvar and Vaginal Disease and Neoplasia",
+   "titleIsCurated": false
+  },
+  {
+   "src": "chapter27.html",
+   "slug": "radiology-intracranial-pathology",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "رادیولوژی پاتولوژی‌های درون‌جمجمه‌ای",
+   "titleIsCurated": true
+  },
+  {
+   "src": "chapter28.html",
+   "slug": "radiology-pediatric",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "رادیولوژی کودکان",
+   "titleIsCurated": true
+  },
+  {
+   "src": "normal anatomy cxr.html",
+   "slug": "cxr-normal-anatomy",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "normal anatomy cxr",
+   "titleIsCurated": false
+  },
+  {
+   "src": "nuc cardiac.html",
+   "slug": "nuclear-cardiology",
+   "subject": "imaging",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "قلب و عروق هسته‌ای",
+   "titleIsCurated": true
+  },
+  {
+   "src": "اختلالات سدیم.html",
+   "slug": "sodium-disorders",
+   "subject": "nephro",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "اختلالات سدیم — هیپوناترمی و هیپرناترمی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "اختلالات پتاسیم.html",
+   "slug": "potassium-disorders",
+   "subject": "nephro",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "اختلالات پتاسیم — هیپوکالمی و هیپرکالمی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "اختلالات کلسیم.html",
+   "slug": "calcium-disorders",
+   "subject": "nephro",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "اختلالات کلسیم — هیپرکلسمی و هیپوکلسمی",
+   "titleIsCurated": true
+  },
+  {
+   "src": "شرح حال روماتولوژی.html",
+   "slug": "rheumatology-history",
+   "subject": "rheum",
+   "subjectConfidence": "high",
+   "needsReview": false,
+   "title": "شرح حال و معاینه در روماتولوژی",
+   "titleIsCurated": true
+  }
+ ]
+}
