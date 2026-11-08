@@ -1,530 +1,716 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" style="--h:330;--c:64%">
+<html lang="fa" dir="rtl" style="--h:328;--c:62;--a:300;--b-50:hsl(328 34.1% 97.5%);--b-100:hsl(328 62% 95%);--b-200:hsl(328 62% 90%);--b-300:hsl(328 62% 80%);--b-400:hsl(328 62% 67%);--b-500:hsl(328 62% 56%);--b-600:hsl(328 62% 46%);--b-700:hsl(328 62% 38%);--b-800:hsl(328 62% 29%);--b-900:hsl(328 52.7% 19%);--b-glow:hsl(328 62% 50% / 0.22);--b-wash:hsl(328 62% 50% / 0.075);--a-500:hsl(300 62% 58%);--a-700:hsl(300 55.8% 38%)">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>زنان و زایمان — کتابخانهٔ مدیکال</title>
-<meta name="description" content="۳۱ درسنامهٔ زنان و زایمان برای بورد و دستیاری.">
-<meta name="theme-color" content="hsl(330 64% 46%)">
-<link rel="stylesheet" href="../assets/theme/base.css">
-<link rel="stylesheet" href="../assets/theme/library.css">
-<style>
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-ExtraBold.woff2") format("woff2");font-weight:800;font-display:swap}
-@font-face{font-family:"Vazirmatn";src:url("../assets/fonts/Vazirmatn-Black.woff2") format("woff2");font-weight:900;font-display:swap}
-</style>
+<meta name="description" content="۳۱ درسنامهٔ زنان و زایمان برای بورد و دستیاری، ۴۷ ساعت مطالعه.">
+<meta name="theme-color" content="hsl(328 62% 42%)">
+<meta name="color-scheme" content="light">
+<link rel="manifest" href="../manifest.json">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232e3a5f'/%3E%3Cpath d='M6 17h4l2-5 3 11 3-8 2 2h6' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preload" href="../assets/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/theme/medx-core.css">
 </head>
-<body class="lib-page">
-
-<header class="site-header">
-  <div class="wrap site-header__bar">
+<body class="dashboard">
+<a class="skip-link" href="#lessons">رفتن به فهرست درسنامه‌ها</a>
+<header class="mx-top">
+  <div class="wrap mx-top__bar">
     <a class="brand" href="../index.html">
-      <span class="brand__mark" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg>
-      </span>
-      <span class="brand__text"><b>کتابخانهٔ مدیکال</b><small>درسنامه‌های بورد</small></span>
-    </a>
-    <div class="hdr-search search-box">
-      <input id="lib-search" type="search" placeholder="جست‌وجو در زنان و زایمان…" aria-label="جست‌وجو">
+  <span class="brand__mark" aria-hidden="true"><svg class="uicon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg></span>
+  <span class="brand__text"><b>کتابخانهٔ مدیکال</b><small>درسنامه‌های بورد و دستیاری</small></span>
+</a>
+    
+    <span class="mx-top__spacer"></span>
+    <div class="mx-search">
+      <svg class="uicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-filter-search placeholder="جست‌وجو در درسنامه‌های این درس…" aria-label="جست‌وجو">
     </div>
-    <a class="btn btn--ghost" href="../index.html">همهٔ درس‌ها</a>
+    <a class="iconbtn" href="../index.html" title="همهٔ درس‌ها" aria-label="همهٔ درس‌ها"><svg class="uicon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg></a>
   </div>
+  <div class="mx-top__progress" aria-hidden="true"><i></i></div>
 </header>
 
-<section class="lib-hero lib-hero--subject">
-  <div class="wrap">
-    <div class="lib-hero__top">
-      <span class="pill pill--icon"><svg class="sicon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg>زنان و زایمان</span>
-      <span class="pill pill--ghost ltr">OB/GYN</span>
+<section class="subj-hero" style="--h:328;--c:62;--a:300;--b-50:hsl(328 34.1% 97.5%);--b-100:hsl(328 62% 95%);--b-200:hsl(328 62% 90%);--b-300:hsl(328 62% 80%);--b-400:hsl(328 62% 67%);--b-500:hsl(328 62% 56%);--b-600:hsl(328 62% 46%);--b-700:hsl(328 62% 38%);--b-800:hsl(328 62% 29%);--b-900:hsl(328 52.7% 19%);--b-glow:hsl(328 62% 50% / 0.22);--b-wash:hsl(328 62% 50% / 0.075);--a-500:hsl(300 62% 58%);--a-700:hsl(300 55.8% 38%)">
+  <div class="wrap subj-hero__in">
+    <div>
+      <nav class="crumbs" aria-label="مسیر">
+        <a href="../index.html"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg> کتابخانه</a>
+        <span class="sep">/</span>
+        <span>زنان و زایمان</span>
+      </nav>
+      <h1>زنان و زایمان</h1>
+      <div class="subj-hero__en">OB/GYN</div>
+      <p class="subj-hero__lede">بارداری، زایمان، ژنیکولوژی و نازایی · ۳۱ درسنامه،
+        ۴۷ ساعت مطالعهٔ برآوردی.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+        <a class="btn btn--brand btn--sm" href="#lessons"><svg class="uicon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2 2 0 0 1 6 3.5h13v14H6a2 2 0 0 0-2 2Z"/><path d="M4 19.5a2 2 0 0 1 2-2h13v3H6a2 2 0 0 1-2-1Z"/></svg> فهرست درسنامه‌ها</a>
+        <button class="btn btn--ghost btn--sm" type="button" data-continue-subject><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.8v14.4L20 12Z"/></svg> ادامهٔ مطالعه</button>
+      </div>
     </div>
-    <h1>زنان و زایمان</h1>
-    <p class="lib-hero__lede">۳۱ درسنامه · حدود ۴۷ ساعت مطالعه · همه با یک هویت رنگی</p>
+    <div class="subj-hero__art"><svg class="art art--subject" viewBox="0 0 320 220" role="img" aria-label="زنان و زایمان" preserveAspectRatio="xMidYMid slice">
+
+  <defs>
+    <linearGradient id="bgshobgyn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(328 62% 96%)"/>
+      <stop offset=".55" stop-color="hsl(328 62% 92%)"/>
+      <stop offset="1" stop-color="hsl(328 62% 86%)"/>
+    </linearGradient>
+    <linearGradient id="organFillshobgyn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="hsl(328 62% 96%)"/>
+      <stop offset=".6" stop-color="hsl(328 62% 92%)"/>
+      <stop offset="1" stop-color="hsl(328 62% 86%)"/>
+    </linearGradient>
+    <linearGradient id="metalFillshobgyn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset=".5" stop-color="hsl(328 62% 86%)"/>
+      <stop offset="1" stop-color="hsl(328 62% 30%)" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="glowshobgyn" cx=".5" cy=".45" r=".6">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridshobgyn" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="hsl(328 62% 46%)" stroke-opacity=".13" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="220" fill="url(#bgshobgyn)"/>
+  <rect width="320" height="220" fill="url(#gridshobgyn)"/>
+  <circle cx="256" cy="30" r="86" fill="hsl(328 62% 46%)" opacity=".10"/>
+  <circle cx="44" cy="196" r="96" fill="hsl(328 62% 46%)" opacity=".08"/>
+  <g opacity=".5" stroke="hsl(328 62% 46%)" stroke-width="1.4" fill="none">
+    <circle cx="160" cy="112" r="84" stroke-dasharray="2 9"/>
+    <circle cx="160" cy="112" r="64" opacity=".6"/>
+  </g>
+  <g transform="translate(160 112) rotate(-5)">
+    <g transform="translate(-100 -100)">
+  <g transform="translate(100 92)">
+    <path d="M0 52v-40" stroke="hsl(328 62% 46%)" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M-12 -24c0-14 5-24 12-24s12 10 12 24c0 11-5 18-12 24-7-6-12-13-12-24Z"
+          fill="url(#organFill)" stroke="hsl(328 62% 46%)" stroke-width="2.4"/>
+    <path d="M-12 -24c-20 0-34 11-34 26 0 15 14 28 34 28h24c20 0 34-13 34-28 0-15-14-26-34-26"
+          fill="none" stroke="hsl(328 62% 46%)" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="-64" cy="-2" r="11" fill="hsl(328 62% 92%)" stroke="hsl(328 62% 46%)" stroke-width="2"/>
+    <circle cx="64" cy="-2" r="11" fill="hsl(328 62% 92%)" stroke="hsl(328 62% 46%)" stroke-width="2"/>
+    <path d="M0 52c0 18 10 28 26 30" stroke="hsl(328 62% 86%)" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g></g>
+  </g>
+  <ellipse cx="160" cy="112" rx="120" ry="70" fill="url(#glowshobgyn)" opacity=".55"/>
+</svg></div>
   </div>
 </section>
 
-<main class="wrap lib-main">
-  <div class="lib-block__head">
-    <h2>درسنامه‌ها</h2>
-    <span class="muted" id="lib-count">۳۱ مورد</span>
+<main class="wrap" id="lessons" style="padding-bottom:20px">
+  <div class="metric-row"><div class="metric"><b>۳۱</b><span>درسنامه</span></div><div class="metric"><b>۴۷ ساعت</b><span>زمان کل مطالعه</span></div><div class="metric"><b>۹۶۰</b><span>فلش‌کارت</span></div><div class="metric"><b>۲۱۶</b><span>جدول</span></div><div class="metric"><b>۹۳۰</b><span>سؤال اختصاصی</span></div><div class="metric metric--progress" data-subj-progress="obgyn">
+      <b data-subj-pct>شروع نشده</b><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg> پیشرفت درس</span>
+      <div class="bar bar--thin" aria-hidden="true"><i></i></div>
+    </div></div>
+
+  <div class="toolrow">
+    <div class="mx-search" style="order:0">
+      <svg class="uicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" data-filter-search placeholder="جست‌وجوی نام درسنامه…" aria-label="جست‌وجو در درسنامه‌ها">
+    </div>
+    <div class="chips" role="group" aria-label="فیلتر وضعیت">
+      <button class="chipbtn" type="button" data-filter="all" aria-pressed="true">همه</button>
+      <button class="chipbtn" type="button" data-filter="new" aria-pressed="false">نخوانده</button>
+      <button class="chipbtn" type="button" data-filter="started" aria-pressed="false">در حال مطالعه</button>
+      <button class="chipbtn" type="button" data-filter="done" aria-pressed="false">خوانده‌شده</button>
+      <button class="chipbtn" type="button" data-filter="high" aria-pressed="false"><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg> High Yield</button>
+      <button class="chipbtn" type="button" data-filter="star" aria-pressed="false"><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg> ستاره‌دار</button>
+    </div>
+    <span class="mx-top__spacer"></span>
+    <select class="select" data-filter-sort aria-label="ترتیب نمایش">
+      <option value="default">ترتیب پیشنهادی</option>
+      <option value="minutes">کوتاه‌ترین اول</option>
+      <option value="minutes-desc">بلندترین اول</option>
+      <option value="title">بر اساس نام</option>
+      <option value="progress">بیشترین پیشرفت</option>
+    </select>
+    <span class="pill pill--line" data-filter-count>۳۱ درسنامه</span>
   </div>
-  <div class="lesson-grid" id="lesson-grid">
-<a class="lesson-card" href="../obgyn/fetal-growth-abnormalities.html"
-   data-title="اختلالات رشد جنین: FGR و ماکروزومی" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">اختلالات رشد جنین: FGR و ماکروزومی</span>
-    <span class="lesson-card__meta">
-      <span>۸۹ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/interpartum-care.html"
-   data-title="تخصصی مراقبت‌های زایمان" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">تخصصی مراقبت‌های زایمان</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۸ دقیقه</span>
-      <span>۲۳ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۱۰ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/endocrine-disorders.html"
-   data-title="جامع اختلالات غدد درون‌ریز در بارداری" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع اختلالات غدد درون‌ریز در بارداری</span>
-    <span class="lesson-card__meta">
-      <span>۱۱۸ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/post-term-pregnancy.html"
-   data-title="جامع بارداری پست‌ترم" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع بارداری پست‌ترم</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۷ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۱۰ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/multifetal-gestation.html"
-   data-title="جامع بارداری‌های چندقلویی" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع بارداری‌های چندقلویی</span>
-    <span class="lesson-card__meta">
-      <span>۹۵ دقیقه</span>
-      <span>۲۱ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۱۰ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/ectopic-pregnancy-and-abortion.html"
-   data-title="جامع حاملگی خارج رحمی و سقط" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع حاملگی خارج رحمی و سقط</span>
-    <span class="lesson-card__meta">
-      <span>۱۱۱ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/postpartum-hemorrhage.html"
-   data-title="جامع خونریزی پس از زایمان (PPH)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع خونریزی پس از زایمان (PPH)</span>
-    <span class="lesson-card__meta">
-      <span>۹۴ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/puberty.html"
-   data-title="جامع و فوق‌تخصصی بلوغ (Puberty)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع و فوق‌تخصصی بلوغ (Puberty)</span>
-    <span class="lesson-card__meta">
-      <span>۸۴ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/preterm-labor.html"
-   data-title="جامع و فوق‌تخصصی زایمان زودرس (Preterm Labor)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع و فوق‌تخصصی زایمان زودرس (Preterm Labor)</span>
-    <span class="lesson-card__meta">
-      <span>۹۱ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/reproductive-cycles.html"
-   data-title="جامع و فوق‌تخصصی سیکل‌های تولیدمثل (Reproductive Cycles)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع و فوق‌تخصصی سیکل‌های تولیدمثل (Reproductive Cycles)</span>
-    <span class="lesson-card__meta">
-      <span>۶۳ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/postpartum-care.html"
-   data-title="جامع و فوق‌تخصصی مراقبت‌های پس از زایمان (Puerperium)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع و فوق‌تخصصی مراقبت‌های پس از زایمان (Puerperium)</span>
-    <span class="lesson-card__meta">
-      <span>۷۸ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/hirsutism-and-virilization.html"
-   data-title="جامع و فوق‌تخصصی هیرسوتیسم و ویریلیزاسیون" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">جامع و فوق‌تخصصی هیرسوتیسم و ویریلیزاسیون</span>
-    <span class="lesson-card__meta">
-      <span>۷۷ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/third-trimester-bleeding.html"
-   data-title="خونریزی سه ماهه سوم بارداری" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">خونریزی سه ماهه سوم بارداری</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۶ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/abnormal-labor.html"
-   data-title="دپارتمان فوق‌تخصصی طب مادر و جنین" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">دپارتمان فوق‌تخصصی طب مادر و جنین</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۶ دقیقه</span>
-      <span>۱۶ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/amenorrhea-and-abnormal-uterine-bleeding.html"
-   data-title="فوق‌تخصصی آمنوره و خونریزی‌های غیرطبیعی رحم (AUB)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی آمنوره و خونریزی‌های غیرطبیعی رحم (AUB)</span>
-    <span class="lesson-card__meta">
-      <span>۸۹ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/endometriosis.html"
-   data-title="فوق‌تخصصی اندومتریوز (Endometriosis)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی اندومتریوز (Endometriosis)</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۶ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/ovarian-and-adnexal-disease.html"
-   data-title="فوق‌تخصصی بیماری‌ها و نئوپلازی‌های تخمدان و ادنکس" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی بیماری‌ها و نئوپلازی‌های تخمدان و ادنکس</span>
-    <span class="lesson-card__meta">
-      <span>۷۳ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/vulvar-and-vaginal-disease-and-neoplasia.html"
-   data-title="فوق‌تخصصی بیماری‌ها و نئوپلازی‌های ولور و واژن" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی بیماری‌ها و نئوپلازی‌های ولور و واژن</span>
-    <span class="lesson-card__meta">
-      <span>۶۹ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۴ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/gestational-trophoblastic-neoplasia.html"
-   data-title="فوق‌تخصصی بیماری‌های تروفوبلاستیک بارداری (GTD/GTN)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی بیماری‌های تروفوبلاستیک بارداری (GTD/GTN)</span>
-    <span class="lesson-card__meta">
-      <span>۶۵ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/cardiovascular-and-respiratory-disorders.html"
-   data-title="فوق‌تخصصی بیماری‌های قلبی-عروقی و ریوی در بارداری" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی بیماری‌های قلبی-عروقی و ریوی در بارداری</span>
-    <span class="lesson-card__meta">
-      <span>۱۱۲ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/sexual-assault-and-domestic-violence.html"
-   data-title="فوق‌تخصصی تجاوز جنسی و خشونت خانگی" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی تجاوز جنسی و خشونت خانگی</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۷ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/dysmenorrhea-and-chronic-pelvic-pain.html"
-   data-title="فوق‌تخصصی دیسمنوره و درد مزمن لگنی" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی دیسمنوره و درد مزمن لگنی</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۵ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/cancer-of-the-uterine-corpus.html"
-   data-title="فوق‌تخصصی سرطان جسم رحم" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی سرطان جسم رحم</span>
-    <span class="lesson-card__meta">
-      <span>۷۰ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/premenstrual-syndrome-and-premenstrual-dysphoric-disorder.html"
-   data-title="فوق‌تخصصی سندرم پیش از قاعدگی (PMS) و اختلال ملال پیش از قاعدگی (PMDD)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی سندرم پیش از قاعدگی (PMS) و اختلال ملال پیش از قاعدگی (PMDD)</span>
-    <span class="lesson-card__meta">
-      <span>۷۴ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/hematologic-and-immunologic-complications.html"
-   data-title="فوق‌تخصصی عوارض خون‌شناسی و ایمونولوژیک در بارداری" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی عوارض خون‌شناسی و ایمونولوژیک در بارداری</span>
-    <span class="lesson-card__meta">
-      <span>۱۱۴ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/uterine-leiomyoma-and-neoplasia.html"
-   data-title="فوق‌تخصصی لیومیوم و نئوپلازی‌های رحم" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی لیومیوم و نئوپلازی‌های رحم</span>
-    <span class="lesson-card__meta">
-      <span>۷۰ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/cervical-neoplasia-and-carcinoma.html"
-   data-title="فوق‌تخصصی نئوپلازی و کارسینوم دهانه رحم" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی نئوپلازی و کارسینوم دهانه رحم</span>
-    <span class="lesson-card__meta">
-      <span>۷۹ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/infertility.html"
-   data-title="فوق‌تخصصی ناباروری (Infertility)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی ناباروری (Infertility)</span>
-    <span class="lesson-card__meta">
-      <span>۸۶ دقیقه</span>
-      <span>۱۴ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/human-sexuality.html"
-   data-title="فوق‌تخصصی پاسخ جنسی و اختلالات عملکرد جنسی در زنان" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی پاسخ جنسی و اختلالات عملکرد جنسی در زنان</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۲ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/menopause.html"
-   data-title="فوق‌تخصصی یائسگی (Menopause)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">فوق‌تخصصی یائسگی (Menopause)</span>
-    <span class="lesson-card__meta">
-      <span>۷۴ دقیقه</span>
-      <span>۱۵ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۶ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
-<a class="lesson-card" href="../obgyn/premature-rupture-of-membranes.html"
-   data-title="پاره شدن زودرس پرده‌های جنینی (PROM/PPROM)" data-subject="obgyn"
-   style="--h:330;--c:64%">
-  <span class="lesson-card__icon" aria-hidden="true"><svg class="sicon" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg></span>
-  <span class="lesson-card__body">
-    <span class="lesson-card__sub">زنان و زایمان</span>
-    <span class="lesson-card__title">پاره شدن زودرس پرده‌های جنینی (PROM/PPROM)</span>
-    <span class="lesson-card__meta">
-      <span>۱۰۲ دقیقه</span>
-      <span>۱۷ بخش</span>
-      <span class="lc-badge">۶۰ فلش‌کارت</span><span class="lc-badge">۸ جدول</span>
-    </span>
-  </span>
-  <span class="lesson-card__go" aria-hidden="true">←</span>
-</a>
+
+  <div class="lgrid" data-lesson-grid>
+    <div class="lcard" data-lesson-card data-id="obgyn/endocrine-disorders"
+     data-title="جامع اختلالات غدد درون‌ریز در بارداری" data-secs="17"
+     data-mins="118" data-importance="high" data-order="1"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
   </div>
-  <p class="lib-empty" id="lib-empty" hidden>چیزی پیدا نشد.</p>
+  <h3><a href="../obgyn/endocrine-disorders.html" style="color:inherit;text-decoration:none">جامع اختلالات غدد درون‌ریز در بارداری</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۵۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/endocrine-disorders.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/hematologic-and-immunologic-complications"
+     data-title="فوق‌تخصصی عوارض خون‌شناسی و ایمونولوژیک در بارداری" data-secs="17"
+     data-mins="114" data-importance="high" data-order="2"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/hematologic-and-immunologic-complications.html" style="color:inherit;text-decoration:none">فوق‌تخصصی عوارض خون‌شناسی و ایمونولوژیک در بارداری</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۵۴ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/hematologic-and-immunologic-complications.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/cardiovascular-and-respiratory-disorders"
+     data-title="فوق‌تخصصی بیماری‌های قلبی-عروقی و ریوی در بارداری" data-secs="17"
+     data-mins="112" data-importance="high" data-order="3"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/cardiovascular-and-respiratory-disorders.html" style="color:inherit;text-decoration:none">فوق‌تخصصی بیماری‌های قلبی-عروقی و ریوی در بارداری</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۵۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/cardiovascular-and-respiratory-disorders.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/ectopic-pregnancy-and-abortion"
+     data-title="جامع حاملگی خارج رحمی و سقط" data-secs="17"
+     data-mins="111" data-importance="high" data-order="4"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۴</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۸ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/ectopic-pregnancy-and-abortion.html" style="color:inherit;text-decoration:none">جامع حاملگی خارج رحمی و سقط</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۵۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/ectopic-pregnancy-and-abortion.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/interpartum-care"
+     data-title="تخصصی مراقبت‌های زایمان" data-secs="23"
+     data-mins="108" data-importance="high" data-order="5"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۵</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۳ بخش پربازده · ۲۸ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/interpartum-care.html" style="color:inherit;text-decoration:none">تخصصی مراقبت‌های زایمان</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱۰ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/interpartum-care.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/post-term-pregnancy"
+     data-title="جامع بارداری پست‌ترم" data-secs="17"
+     data-mins="107" data-importance="high" data-order="6"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۶</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/post-term-pregnancy.html" style="color:inherit;text-decoration:none">جامع بارداری پست‌ترم</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱۰ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/post-term-pregnancy.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/sexual-assault-and-domestic-violence"
+     data-title="فوق‌تخصصی تجاوز جنسی و خشونت خانگی" data-secs="17"
+     data-mins="107" data-importance="high" data-order="7"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۷</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/sexual-assault-and-domestic-violence.html" style="color:inherit;text-decoration:none">فوق‌تخصصی تجاوز جنسی و خشونت خانگی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/sexual-assault-and-domestic-violence.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/third-trimester-bleeding"
+     data-title="خونریزی سه ماهه سوم بارداری" data-secs="16"
+     data-mins="106" data-importance="high" data-order="8"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۸</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۴ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/third-trimester-bleeding.html" style="color:inherit;text-decoration:none">خونریزی سه ماهه سوم بارداری</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/third-trimester-bleeding.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/abnormal-labor"
+     data-title="دپارتمان فوق‌تخصصی طب مادر و جنین" data-secs="16"
+     data-mins="106" data-importance="high" data-order="9"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۹</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۵ بخش پربازده · ۱۴ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/abnormal-labor.html" style="color:inherit;text-decoration:none">دپارتمان فوق‌تخصصی طب مادر و جنین</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/abnormal-labor.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/endometriosis"
+     data-title="فوق‌تخصصی اندومتریوز (Endometriosis)" data-secs="17"
+     data-mins="106" data-importance="high" data-order="10"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۰</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/endometriosis.html" style="color:inherit;text-decoration:none">فوق‌تخصصی اندومتریوز (Endometriosis)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/endometriosis.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/dysmenorrhea-and-chronic-pelvic-pain"
+     data-title="فوق‌تخصصی دیسمنوره و درد مزمن لگنی" data-secs="17"
+     data-mins="105" data-importance="high" data-order="11"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/dysmenorrhea-and-chronic-pelvic-pain.html" style="color:inherit;text-decoration:none">فوق‌تخصصی دیسمنوره و درد مزمن لگنی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۵ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/dysmenorrhea-and-chronic-pelvic-pain.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/human-sexuality"
+     data-title="فوق‌تخصصی پاسخ جنسی و اختلالات عملکرد جنسی در زنان" data-secs="17"
+     data-mins="102" data-importance="high" data-order="12"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۲</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/human-sexuality.html" style="color:inherit;text-decoration:none">فوق‌تخصصی پاسخ جنسی و اختلالات عملکرد جنسی در زنان</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/human-sexuality.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/premature-rupture-of-membranes"
+     data-title="پاره شدن زودرس پرده‌های جنینی (PROM/PPROM)" data-secs="17"
+     data-mins="102" data-importance="high" data-order="13"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۳</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۱۶ کادر High-Yield · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/premature-rupture-of-membranes.html" style="color:inherit;text-decoration:none">پاره شدن زودرس پرده‌های جنینی (PROM/PPROM)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۴۲ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/premature-rupture-of-membranes.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/multifetal-gestation"
+     data-title="جامع بارداری‌های چندقلویی" data-secs="21"
+     data-mins="95" data-importance="high" data-order="14"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۴</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۲۶ کادر High-Yield · ۳۰ سؤال · ۶۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/multifetal-gestation.html" style="color:inherit;text-decoration:none">جامع بارداری‌های چندقلویی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۳۵ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۶۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۱۰ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/multifetal-gestation.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/postpartum-hemorrhage"
+     data-title="جامع خونریزی پس از زایمان (PPH)" data-secs="17"
+     data-mins="94" data-importance="high" data-order="15"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۵</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/postpartum-hemorrhage.html" style="color:inherit;text-decoration:none">جامع خونریزی پس از زایمان (PPH)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۳۴ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/postpartum-hemorrhage.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/preterm-labor"
+     data-title="جامع و فوق‌تخصصی زایمان زودرس (Preterm Labor)" data-secs="16"
+     data-mins="91" data-importance="high" data-order="16"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۶</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۱۰ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/preterm-labor.html" style="color:inherit;text-decoration:none">جامع و فوق‌تخصصی زایمان زودرس (Preterm Labor)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۳۱ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/preterm-labor.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/fetal-growth-abnormalities"
+     data-title="اختلالات رشد جنین: FGR و ماکروزومی" data-secs="16"
+     data-mins="89" data-importance="high" data-order="17"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۷</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۹ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/fetal-growth-abnormalities.html" style="color:inherit;text-decoration:none">اختلالات رشد جنین: FGR و ماکروزومی</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۲۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/fetal-growth-abnormalities.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/amenorrhea-and-abnormal-uterine-bleeding"
+     data-title="فوق‌تخصصی آمنوره و خونریزی‌های غیرطبیعی رحم (AUB)" data-secs="14"
+     data-mins="89" data-importance="high" data-order="18"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۸</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/amenorrhea-and-abnormal-uterine-bleeding.html" style="color:inherit;text-decoration:none">فوق‌تخصصی آمنوره و خونریزی‌های غیرطبیعی رحم (AUB)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۲۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/amenorrhea-and-abnormal-uterine-bleeding.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/infertility"
+     data-title="فوق‌تخصصی ناباروری (Infertility)" data-secs="14"
+     data-mins="86" data-importance="high" data-order="19"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۱۹</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/infertility.html" style="color:inherit;text-decoration:none">فوق‌تخصصی ناباروری (Infertility)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۲۶ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/infertility.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/puberty"
+     data-title="جامع و فوق‌تخصصی بلوغ (Puberty)" data-secs="14"
+     data-mins="84" data-importance="high" data-order="20"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۰</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/puberty.html" style="color:inherit;text-decoration:none">جامع و فوق‌تخصصی بلوغ (Puberty)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۲۴ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/puberty.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/cervical-neoplasia-and-carcinoma"
+     data-title="فوق‌تخصصی نئوپلازی و کارسینوم دهانه رحم" data-secs="14"
+     data-mins="79" data-importance="high" data-order="21"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/cervical-neoplasia-and-carcinoma.html" style="color:inherit;text-decoration:none">فوق‌تخصصی نئوپلازی و کارسینوم دهانه رحم</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۸ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/cervical-neoplasia-and-carcinoma.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/postpartum-care"
+     data-title="جامع و فوق‌تخصصی مراقبت‌های پس از زایمان (Puerperium)" data-secs="17"
+     data-mins="78" data-importance="high" data-order="22"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۲</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/postpartum-care.html" style="color:inherit;text-decoration:none">جامع و فوق‌تخصصی مراقبت‌های پس از زایمان (Puerperium)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۸ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/postpartum-care.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/hirsutism-and-virilization"
+     data-title="جامع و فوق‌تخصصی هیرسوتیسم و ویریلیزاسیون" data-secs="14"
+     data-mins="77" data-importance="high" data-order="23"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۳</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/hirsutism-and-virilization.html" style="color:inherit;text-decoration:none">جامع و فوق‌تخصصی هیرسوتیسم و ویریلیزاسیون</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۷ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/hirsutism-and-virilization.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/premenstrual-syndrome-and-premenstrual-dysphoric-disorder"
+     data-title="فوق‌تخصصی سندرم پیش از قاعدگی (PMS) و اختلال ملال پیش از قاعدگی (PMDD)" data-secs="15"
+     data-mins="74" data-importance="high" data-order="24"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۴</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/premenstrual-syndrome-and-premenstrual-dysphoric-disorder.html" style="color:inherit;text-decoration:none">فوق‌تخصصی سندرم پیش از قاعدگی (PMS) و اختلال ملال پیش از قاعدگی (PMDD)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۴ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/premenstrual-syndrome-and-premenstrual-dysphoric-disorder.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/menopause"
+     data-title="فوق‌تخصصی یائسگی (Menopause)" data-secs="15"
+     data-mins="74" data-importance="high" data-order="25"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۵</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/menopause.html" style="color:inherit;text-decoration:none">فوق‌تخصصی یائسگی (Menopause)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۴ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/menopause.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/ovarian-and-adnexal-disease"
+     data-title="فوق‌تخصصی بیماری‌ها و نئوپلازی‌های تخمدان و ادنکس" data-secs="15"
+     data-mins="73" data-importance="high" data-order="26"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۶</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۸ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/ovarian-and-adnexal-disease.html" style="color:inherit;text-decoration:none">فوق‌تخصصی بیماری‌ها و نئوپلازی‌های تخمدان و ادنکس</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۳ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/ovarian-and-adnexal-disease.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/cancer-of-the-uterine-corpus"
+     data-title="فوق‌تخصصی سرطان جسم رحم" data-secs="15"
+     data-mins="70" data-importance="high" data-order="27"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۷</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/cancer-of-the-uterine-corpus.html" style="color:inherit;text-decoration:none">فوق‌تخصصی سرطان جسم رحم</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۰ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/cancer-of-the-uterine-corpus.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/uterine-leiomyoma-and-neoplasia"
+     data-title="فوق‌تخصصی لیومیوم و نئوپلازی‌های رحم" data-secs="14"
+     data-mins="70" data-importance="high" data-order="28"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۸</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/uterine-leiomyoma-and-neoplasia.html" style="color:inherit;text-decoration:none">فوق‌تخصصی لیومیوم و نئوپلازی‌های رحم</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۱۰ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/uterine-leiomyoma-and-neoplasia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/vulvar-and-vaginal-disease-and-neoplasia"
+     data-title="فوق‌تخصصی بیماری‌ها و نئوپلازی‌های ولور و واژن" data-secs="15"
+     data-mins="69" data-importance="high" data-order="29"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۲۹</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/vulvar-and-vaginal-disease-and-neoplasia.html" style="color:inherit;text-decoration:none">فوق‌تخصصی بیماری‌ها و نئوپلازی‌های ولور و واژن</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۹ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۴ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/vulvar-and-vaginal-disease-and-neoplasia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/gestational-trophoblastic-neoplasia"
+     data-title="فوق‌تخصصی بیماری‌های تروفوبلاستیک بارداری (GTD/GTN)" data-secs="14"
+     data-mins="65" data-importance="high" data-order="30"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۰</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/gestational-trophoblastic-neoplasia.html" style="color:inherit;text-decoration:none">فوق‌تخصصی بیماری‌های تروفوبلاستیک بارداری (GTD/GTN)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت و ۵ دقیقه</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/gestational-trophoblastic-neoplasia.html">بازکردن</a>
+  </div>
+</div>
+<div class="lcard" data-lesson-card data-id="obgyn/reproductive-cycles"
+     data-title="جامع و فوق‌تخصصی سیکل‌های تولیدمثل (Reproductive Cycles)" data-secs="14"
+     data-mins="63" data-importance="high" data-order="31"
+     data-starred="">
+  <div class="lcard__top">
+    <span class="lcard__no">۳۱</span>
+    <span class="tag tag--high importance" title="مبنای اهمیت: ۷ بخش پربازده · ۳۰ سؤال · ۳۰ فلش‌کارت"><svg class="uicon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5c4 4 6 6.6 6 9.6a6 6 0 0 1-12 0c0-3 2-5.6 6-9.6Z"/><path d="M12 12c1.6 1.6 2.4 2.7 2.4 3.9a2.4 2.4 0 0 1-4.8 0c0-1.2.8-2.3 2.4-3.9Z"/></svg>High Yield</span>
+    <span class="lcard__status is-new" data-status></span>
+  </div>
+  <h3><a href="../obgyn/reproductive-cycles.html" style="color:inherit;text-decoration:none">جامع و فوق‌تخصصی سیکل‌های تولیدمثل (Reproductive Cycles)</a></h3>
+  <div class="lcard__meta"><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>۱ ساعت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 9.2a3.1 3.1 0 1 1 4.6 2.8c-.9.5-1.6 1.2-1.6 2.2v.6"/><circle cx="12" cy="18.4" r="1.1"/><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></svg>۳۰ سؤال</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="12" height="15" rx="2.5"/><path d="M7 3.5h11.5A2.5 2.5 0 0 1 21 6v11.5"/></svg>۳۰ فلش‌کارت</span><span><svg class="uicon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M9.5 9.5V19.5M15 9.5V19.5"/></svg>۶ جدول</span></div>
+  <div class="lcard__foot">
+    <div class="bar" aria-hidden="true"><i></i></div>
+    <span class="lcard__pct" data-pct>—</span>
+    <span class="lcard__star" aria-hidden="true" title="ستاره‌دار"><svg class="uicon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.6 2.6 5.4 5.9.8-4.3 4.1 1.1 5.9L12 17.1l-5.3 2.7 1.1-5.9-4.3-4.1 5.9-.8Z"/></svg></span>
+    <a class="btn btn--ghost btn--sm" href="../obgyn/reproductive-cycles.html">بازکردن</a>
+  </div>
+</div>
+    <p class="empty-state" data-empty hidden>درسنامه‌ای با این مشخصات پیدا نشد.</p>
+  </div>
+
+  <section style="margin-top:6px">
+  <div class="sec-title"><div><span class="eyebrow">آزمون</span><h2>بانک سؤال این درس</h2>
+  <p>آزمون‌های فصل‌به‌فصل با پاسخ تشریحی؛ مستقل از درسنامه‌ها.</p></div></div>
+  <div class="card card--pad" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <a class="btn btn--ghost btn--sm" href="../qbank/women.html">زنان و زایمان — بکمن · ۲۰۰</a>
+    <a class="btn btn--brand btn--sm" href="../qbank/index.html" style="margin-inline-start:auto">همهٔ آزمون‌ها</a>
+  </div>
+</section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span><svg class="sicon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.4v-4.7"/><path d="M9.2 8.6C9.2 6.3 10.4 4.4 12 4.4s2.8 1.9 2.8 4.2c0 1.7-.7 3-1.8 4"/><path d="M9.2 8.6c-2 0-3.4 1.4-3.4 3.2 0 2 1.6 3.9 4 3.9h4.4c2.4 0 4-1.9 4-3.9 0-1.8-1.4-3.2-3.4-3.2"/></svg> زنان و زایمان — کتابخانهٔ مدیکال</span>
-    <a href="../index.html">همهٔ درس‌ها</a>
+<footer class="mx-foot">
+  <div class="wrap mx-foot__in">
+    <span class="mx-foot__brand"><svg class="uicon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4"/><path d="M4 20h16"/><rect x="7.5" y="12" width="3" height="5" rx="1"/><rect x="13" y="8.5" width="3" height="8.5" rx="1"/></svg> کتابخانهٔ مدیکال</span>
+    <span class="pill pill--line">زنان و زایمان</span>
+    <span>محتوای آموزشی است و جایگزین قضاوت بالینی نیست.</span>
+    <a href="../index.html">خانه</a>
   </div>
 </footer>
-<script src="../assets/theme/library.js" defer></script>
+<script src="../assets/theme/medx-core.js" defer></script>
 </body>
 </html>

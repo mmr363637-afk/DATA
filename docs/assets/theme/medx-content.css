@@ -1,0 +1,439 @@
+/* ==========================================================================
+   MedX Library — Content layer
+   لایهٔ سازگاری «محتوای قدیمی»: کلاس‌های موروثی درسنامه‌ها (کارت، فلوچارت،
+   تایم‌لاین، یادسپار، شبکه‌ها…) با زبان بصری تازه بازطراحی می‌شوند.
+   فقط داخل .sec__body اثر دارد تا هرگز به پوسته و ابزارهای مطالعه دست نزند.
+   ========================================================================== */
+
+/* ---------- 1. پوسته‌های موروثی: بدون جعبه‌های تودرتو ---------- */
+.sec__body .section-inner,
+.sec__body .section-wrapper,
+.sec__body .section-card,
+.sec__body .section-content,
+.sec__body .section-shell,
+.sec__body .shell,
+.sec__body .module,
+.sec__body .tint,
+.sec__body .wrapper,
+.sec__body .content{display:block;background:none;border:0;border-radius:0;padding:0;box-shadow:none;max-width:none}
+.sec__body .section-card,
+.sec__body .module,
+.sec__body .shell{
+  background:linear-gradient(180deg,#fff,var(--surface-2));
+  border:1px solid var(--line);border-radius:var(--r-md);
+  padding:14px 16px;box-shadow:var(--sh-1);margin:1em 0;
+}
+.sec__body .mb-4{margin-bottom:1rem}
+
+/* سرِ بخش‌های موروثی */
+.sec__body .section-top,
+.sec__body .section-head,
+.sec__body .section-header,
+.sec__body .section-heading,
+.sec__body .section-title-wrapper,
+.sec__body .section-title-wrap{
+  display:flex;align-items:center;gap:10px;margin:0 0 .6em;flex-wrap:wrap;
+}
+.sec__body .section-title,
+.sec__body .section-heading h3,
+.sec__body .section-head h3{
+  font-size:1.02em;font-weight:800;color:var(--ink);margin:0;line-height:1.6;
+}
+.sec__body .section-sub,
+.sec__body .section-subtitle{font-size:.84em;color:var(--ink-3);font-weight:600;margin:.1em 0 .8em}
+.sec__body .section-ico,
+.sec__body .section-icon,
+.sec__body .card-icon{
+  width:34px;height:34px;flex:0 0 auto;display:inline-grid;place-items:center;
+  border-radius:11px;background:linear-gradient(160deg,var(--b-100),var(--b-50));
+  border:1px solid var(--b-200);color:var(--b-700);font-size:1rem;
+  box-shadow:0 6px 14px -10px hsl(var(--h) var(--c) 40% / .8);
+}
+.sec__body .section-ico svg,.sec__body .section-icon svg,.sec__body .card-icon svg{width:18px;height:18px}
+.sec__body .eyebrow{
+  display:inline-block;font-size:.66em;font-weight:800;letter-spacing:.9px;text-transform:uppercase;
+  color:var(--b-700);background:var(--b-50);border:1px solid var(--b-200);border-radius:99px;
+  padding:2px 9px;line-height:1.7;
+}
+.sec__body .num,.sec__body .section-number,.sec__body .section-anchor{
+  font-size:.7em;font-weight:800;color:#fff;background:var(--b-600);
+  border-radius:8px;padding:1px 8px;font-variant-numeric:tabular-nums;line-height:1.9;
+  display:inline-block;min-width:26px;text-align:center;
+}
+.sec__body .intro{
+  font-size:.95em;color:var(--ink-2);border-inline-start:3px solid var(--b-300);
+  background:linear-gradient(90deg,var(--b-50),transparent);
+  padding:.55em .8em;border-radius:0 var(--r-sm) var(--r-sm) 0;margin:0 0 1em;
+}
+
+/* ---------- 2. کادرهای معنایی موروثی ---------- */
+.sec__body .callout,
+.sec__body .visual-box,
+.sec__body .highlight-box,
+.sec__body .gold-box,
+.sec__body .review-box,
+.sec__body .must-know-box,
+.sec__body .high-yield-box,
+.sec__body .box-clinical,
+.sec__body .alert-box,
+.sec__body .exam-tip,
+.sec__body .key-point,
+.sec__body .trap-box,
+.sec__body .exam-trap-box,
+.sec__body .red-flag-box,
+.sec__body .gold-standard-box,
+.sec__body .rapid-card,
+.sec__body .info-card,
+.sec__body .v-box,
+.sec__body .v-box-system,
+.sec__body .vm-box,
+.sec__body .edu-box{
+  --k-bg:var(--s-info-bg); --k-line:var(--s-info-line); --k-ink:var(--s-info);
+  position:relative;margin:1.05em 0;padding:14px 16px 12px;border-radius:var(--r-md);
+  background:linear-gradient(180deg,#fff,var(--k-bg));border:1px solid var(--k-line);
+  box-shadow:var(--sh-1);color:var(--ink-2);overflow:hidden;
+}
+.sec__body .callout::before,
+.sec__body .visual-box::before,
+.sec__body .highlight-box::before,
+.sec__body .gold-box::before,
+.sec__body .review-box::before,
+.sec__body .must-know-box::before,
+.sec__body .high-yield-box::before,
+.sec__body .box-clinical::before,
+.sec__body .alert-box::before,
+.sec__body .exam-tip::before,
+.sec__body .key-point::before,
+.sec__body .trap-box::before,
+.sec__body .exam-trap-box::before,
+.sec__body .red-flag-box::before,
+.sec__body .gold-standard-box::before,
+.sec__body .rapid-card::before,
+.sec__body .info-card::before,
+.sec__body .v-box::before,
+.sec__body .v-box-system::before,
+.sec__body .vm-box::before,
+.sec__body .edu-box::before{
+  content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:4px;background:var(--k-ink);opacity:.85;
+}
+.sec__body .trap-box,
+.sec__body .exam-trap-box,
+.sec__body .vm-trap,
+.sec__body .alert-box,
+.sec__body .red-flag-box{--k-bg:var(--s-danger-bg);--k-line:var(--s-danger-line);--k-ink:var(--s-danger)}
+.sec__body .gold-box,
+.sec__body .gold-standard-box,
+.sec__body .high-yield-box,
+.sec__body .must-know-box,
+.sec__body .key-point,
+.sec__body .review-box,
+.sec__body .vm-gold,
+.sec__body .vm-pearl{--k-bg:var(--s-warn-bg);--k-line:var(--s-warn-line);--k-ink:var(--s-warn)}
+.sec__body .box-clinical,
+.sec__body .exam-tip{--k-bg:var(--s-ok-bg);--k-line:var(--s-ok-line);--k-ink:var(--s-ok)}
+.sec__body .v-box-system,
+.sec__body .vm-box,
+.sec__body .rapid-card{--k-bg:var(--s-special-bg);--k-line:var(--s-special-line);--k-ink:var(--s-special)}
+.sec__body .v-box-title,
+.sec__body .vm-box-title,
+.sec__body .visual-box-title,
+.sec__body .v-box-system-title,
+.sec__body .callout-title,
+.sec__body .info-card-header,
+.sec__body .mnemonic-title{
+  display:flex;align-items:center;gap:7px;font-weight:800;color:var(--k-ink,var(--b-800));
+  font-size:.94em;margin:0 0 .45em;line-height:1.65;
+}
+.sec__body .callout>*:last-child,
+.sec__body .visual-box>*:last-child,
+.sec__body .trap-box>*:last-child,
+.sec__body .info-card>*:last-child,
+.sec__body .edu-box>*:last-child{margin-bottom:0}
+
+/* ---------- 3. فلوچارت و الگوریتم ---------- */
+.sec__body .algo-container,
+.sec__body .algo-box,
+.sec__body .algo-flow,
+.sec__body .flowchart,
+.sec__body .flowbox,
+.sec__body .chain{
+  margin:1.15em 0;padding:15px 16px;border-radius:var(--r-md);
+  background:
+    radial-gradient(420px 180px at 100% 0%,var(--b-wash),transparent 70%),
+    linear-gradient(180deg,#fff,var(--b-50));
+  border:1px solid var(--b-200);box-shadow:var(--sh-1);
+  display:flex;flex-direction:column;gap:9px;align-items:stretch;
+}
+.sec__body .algo-title{
+  font-weight:800;color:var(--b-800);font-size:.92em;text-align:center;margin:0 0 4px;
+}
+.sec__body .algo-node,
+.sec__body .flowchart-node,
+.sec__body .algo-branch-path,
+.sec__body .branch-label,
+.sec__body .flow-node-step,
+.sec__body .node{
+  background:#fff;border:1.5px solid var(--b-200);border-radius:12px;
+  padding:9px 13px;font-size:.9em;line-height:1.85;color:var(--ink-2);
+  box-shadow:0 6px 16px -14px rgba(15,23,42,.5);position:relative;
+}
+.sec__body .algo-node--decision,
+.sec__body .algo-node.decision,
+.sec__body .warning-node{border-color:var(--s-warn-line);background:linear-gradient(180deg,#fff,var(--s-warn-bg))}
+.sec__body .danger-node{border-color:var(--s-danger-line);background:linear-gradient(180deg,#fff,var(--s-danger-bg))}
+.sec__body .success-node{border-color:var(--s-ok-line);background:linear-gradient(180deg,#fff,var(--s-ok-bg))}
+.sec__body .info-node{border-color:var(--s-info-line);background:linear-gradient(180deg,#fff,var(--s-info-bg))}
+.sec__body .algo-arrow,
+.sec__body .flow-arrow,
+.sec__body .down{
+  text-align:center;color:var(--b-400);font-size:.9em;line-height:1.1;font-weight:700;
+}
+.sec__body .algo-arrow::after{content:"↓"}
+.sec__body .algo-arrow:has(svg)::after{content:""}
+.sec__body .down::after{content:"↓"}
+.sec__body .flow-split,
+.sec__body .algo-branches,
+.sec__body .algo-branch-wrapper{
+  display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+}
+.sec__body .branch-label{
+  font-size:.7em;font-weight:800;color:var(--b-700);background:var(--b-50);
+  border-radius:8px;padding:1px 8px;display:inline-block;
+}
+
+/* ---------- 4. تایم‌لاین ---------- */
+.sec__body .timeline-container,
+.sec__body .timeline{position:relative;margin:1.1em 0;padding-inline-start:20px}
+.sec__body .timeline-container::before,
+.sec__body .timeline::before{
+  content:"";position:absolute;inset-inline-start:5px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--b-300),var(--b-100));border-radius:2px;
+}
+.sec__body .timeline-item,
+.sec__body .timeline-card{position:relative;margin:0 0 12px;padding:10px 13px;border-radius:var(--r-sm);
+  background:var(--surface);border:1px solid var(--line);box-shadow:var(--sh-1)}
+.sec__body .timeline-item::before{
+  content:"";position:absolute;inset-inline-start:-20px;top:14px;width:10px;height:10px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--b-400);box-shadow:0 0 0 3px var(--b-50);
+}
+.sec__body .timeline-time{
+  display:inline-block;font-size:.68em;font-weight:800;color:var(--b-700);background:var(--b-50);
+  border:1px solid var(--b-200);border-radius:99px;padding:1px 9px;margin-bottom:3px;
+  font-variant-numeric:tabular-nums;
+}
+.sec__body .timeline-title{font-weight:800;color:var(--ink);font-size:.94em;margin:0 0 2px}
+.sec__body .timeline-content{font-size:.88em;color:var(--ink-2)}
+.sec__body .timeline-content p:last-child{margin-bottom:0}
+
+/* ---------- 5. یادسپار (Mnemonic) ---------- */
+.sec__body .mnemonic,.sec__body .mnemonic-item{
+  display:flex;align-items:flex-start;gap:10px;margin:.55em 0;
+}
+.sec__body .mnemonic{
+  display:block;background:linear-gradient(180deg,#fff,var(--s-special-bg));
+  border:1px solid var(--s-special-line);border-radius:var(--r-md);padding:13px 15px;
+}
+.sec__body .mnemonic-letter-box{
+  flex:0 0 auto;width:34px;height:34px;display:grid;place-items:center;border-radius:10px;
+  font-weight:800;font-size:.95em;color:#fff;background:linear-gradient(160deg,var(--s-special),var(--b-600));
+  box-shadow:0 8px 16px -12px var(--s-special);
+}
+.sec__body .mnemonic-item>div{min-width:0}
+
+/* ---------- 6. شبکه‌ها، کارت‌های آماری و داشبوردی ---------- */
+.sec__body [class*="grid-"],
+.sec__body .dashboard-grid,
+.sec__body .grid-dashboard,
+.sec__body .stat-grid,
+.sec__body .cards-grid,
+.sec__body .flash-grid{
+  display:grid;gap:12px;margin:1em 0;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+}
+.sec__body .grid-5,.sec__body .grid-6,.sec__body .grid-8{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.sec__body .g-cell,.sec__body .wg-cell{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:10px 12px;text-align:center;font-weight:700;color:var(--ink-2);font-size:.86em;
+  box-shadow:var(--sh-1);min-width:0;
+}
+.sec__body .g-header{
+  background:linear-gradient(180deg,var(--b-100),var(--b-50));color:var(--b-900);
+  font-weight:800;border-color:var(--b-200);
+}
+.sec__body .dashboard-card,
+.sec__body .num-card,
+.sec__body .number-card,
+.sec__body .number-box,
+.sec__body .obj-card,
+.sec__body .anchor-card,
+.sec__body .lesson-card,
+.sec__body .v-card,
+.sec__body .widget-item,
+.sec__body .mini-card,
+.sec__body .card{
+  position:relative;background:linear-gradient(170deg,#fff,var(--b-50));
+  border:1px solid var(--b-200);border-radius:var(--r-md);padding:12px 14px;
+  box-shadow:var(--sh-1);overflow:hidden;min-width:0;margin:.6em 0;
+}
+.sec__body .dashboard-card::after,
+.sec__body .number-card::after,
+.sec__body .num-card::after{
+  content:"";position:absolute;inset-inline:0;bottom:0;height:3px;
+  background:linear-gradient(90deg,var(--b-400),var(--a-500));opacity:.5;
+}
+.sec__body .dashboard-card-title,
+.sec__body .card-header,
+.sec__body .num-card-title,
+.sec__body .mini-card-title,
+.sec__body .card-title{
+  font-weight:800;color:var(--b-800);font-size:.9em;margin:0 0 3px;
+  display:flex;align-items:center;gap:6px;
+}
+.sec__body .num-card-desc,
+.sec__body .card-desc,
+.sec__body .mini-card-body,
+.sec__body .value,
+.sec__body .number{
+  font-size:.86em;color:var(--ink-2);line-height:1.8;
+}
+.sec__body .value b,.sec__body .number b,
+.sec__body .num-card .value,.sec__body .number-card .value{
+  font-size:1.25em;font-weight:800;color:var(--b-800);font-variant-numeric:tabular-nums;
+}
+.sec__body .highyield-num,.sec__body .hyd-num,.sec__body .c-yield{
+  display:inline-block;background:var(--s-warn-bg);border:1px solid var(--s-warn-line);
+  color:var(--s-warn);border-radius:7px;padding:0 7px;font-weight:800;
+  font-variant-numeric:tabular-nums;font-size:.92em;
+}
+.sec__body .danger-stat{color:var(--s-danger);font-weight:800}
+.sec__body .success-stat{color:var(--s-ok);font-weight:800}
+.sec__body .warning-stat{color:var(--s-warn);font-weight:800}
+
+/* ---------- 7. فهرست‌ها و نشانه‌های متنی ---------- */
+.sec__body .check-list,
+.sec__body .custom-list,
+.sec__body .styled-list,
+.sec__body .custom-bullets,
+.sec__body .takeaway-list{list-style:none;padding-inline-start:0;margin:.6em 0}
+.sec__body .check-list>li,
+.sec__body .custom-list>li,
+.sec__body .styled-list>li,
+.sec__body .custom-bullets>li{
+  position:relative;padding-inline-start:1.5em;margin-bottom:.4em;line-height:1.95;
+}
+.sec__body .check-list>li::before{
+  content:"✓";position:absolute;inset-inline-start:.15em;top:0;color:var(--s-ok);font-weight:800;
+}
+.sec__body .custom-list>li::before,
+.sec__body .styled-list>li::before,
+.sec__body .custom-bullets>li::before{
+  content:"◆";position:absolute;inset-inline-start:.25em;top:.15em;color:var(--b-400);font-size:.68em;
+}
+.sec__body .hl{
+  background:linear-gradient(180deg,transparent 58%,hsl(45 95% 78% /.75) 58%);
+  padding:0 1px;border-radius:2px;
+}
+.sec__body .keyword,
+.sec__body .term-en,
+.sec__body .drug,
+.sec__body .source-tag,
+.sec__body .badge-danger,
+.sec__body .badge-warning,
+.sec__body .badge-success,
+.sec__body .badge-purple,
+.sec__body .tag-red,
+.sec__body .tag-gold{
+  display:inline-block;font-size:.78em;font-weight:800;border-radius:7px;padding:0 7px;
+  border:1px solid var(--b-200);background:var(--b-50);color:var(--b-700);line-height:1.9;
+  margin-inline-end:3px;
+}
+.sec__body .term-en,.sec__body .keyword{direction:ltr;unicode-bidi:isolate;font-family:inherit}
+.sec__body .badge-danger,.sec__body .tag-red{
+  background:var(--s-danger-bg);border-color:var(--s-danger-line);color:var(--s-danger);
+}
+.sec__body .badge-warning,.sec__body .tag-gold{
+  background:var(--s-warn-bg);border-color:var(--s-warn-line);color:var(--s-warn);
+}
+.sec__body .badge-success{background:var(--s-ok-bg);border-color:var(--s-ok-line);color:var(--s-ok)}
+.sec__body .badge-purple{background:var(--s-special-bg);border-color:var(--s-special-line);color:var(--s-special)}
+.sec__body .red-flag,.sec__body .text-danger{color:var(--s-danger);font-weight:800}
+.sec__body .bold,.sec__body .text-bold,.sec__body .bold-point,.sec__body .strong{font-weight:800;color:var(--ink)}
+.sec__body .gold-standard{color:var(--s-warn);font-weight:800}
+
+/* ---------- 8. پرسش‌های تشریحی باقی‌مانده (بدون گزینه) ---------- */
+.sec__body .orphan-answer{
+  margin:.8em 0;border:1px solid var(--line);border-radius:var(--r-sm);
+  background:var(--surface-2);overflow:hidden;
+}
+.sec__body .orphan-answer>summary{
+  cursor:pointer;padding:9px 13px;font-weight:700;font-size:.86em;color:var(--b-700);
+  background:linear-gradient(180deg,#fff,var(--b-50));list-style:none;
+}
+.sec__body .orphan-answer>summary::-webkit-details-marker{display:none}
+.sec__body .orphan-answer>summary::before{content:"▸ ";color:var(--b-400)}
+.sec__body .orphan-answer[open]>summary::before{content:"▾ "}
+.sec__body .mcq-explanation,
+.sec__body .explanation-content,
+.sec__body .explanation-section,
+.sec__body .mcq-explanation-text,
+.sec__body .mcq-explanation-content,
+.sec__body .mcq-explanation-body,
+.sec__body .option-review,
+.sec__body .refline,
+.sec__body .explain{padding:0}
+.sec__body .mcq-explanation,
+.sec__body .explanation-content,
+.sec__body .explanation-section,
+.sec__body .explain{
+  margin:.7em 0;padding:12px 14px;border-radius:var(--r-sm);
+  background:linear-gradient(180deg,#fff,var(--s-info-bg));border:1px solid var(--s-info-line);
+  font-size:.9em;
+}
+.sec__body .correct-answer-banner,
+.sec__body .correct-banner{
+  margin:.7em 0;padding:10px 14px;border-radius:var(--r-sm);font-weight:800;
+  background:linear-gradient(180deg,#fff,var(--s-ok-bg));border:1px solid var(--s-ok-line);
+  color:var(--s-ok);
+}
+.sec__body .option-item,
+.sec__body .option-circle,
+.sec__body .mcq-option-item{
+  display:block;border:1px solid var(--line);border-radius:10px;padding:7px 11px;
+  margin:.35em 0;background:#fff;font-size:.9em;
+}
+.sec__body .mcq-clinical-vignette,
+.sec__body .mcq-options-group,
+.sec__body .mcq-widget-wrapper{margin:.6em 0}
+
+/* ---------- 9. فلش‌کارت‌های موروثی باقی‌مانده ---------- */
+.sec__body .flashcard-grid,
+.sec__body .flashcard-section,
+.sec__body .flashcards{display:grid;gap:10px;margin:1em 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.sec__body details.flashcard,
+.sec__body .details-flashcard{
+  border:1px solid var(--b-200);border-radius:var(--r-md);background:#fff;
+  box-shadow:var(--sh-1);overflow:hidden;
+}
+.sec__body details.flashcard>summary{
+  cursor:pointer;padding:11px 13px;font-weight:700;font-size:.88em;color:var(--b-800);
+  background:linear-gradient(180deg,#fff,var(--b-50));list-style:none;
+}
+.sec__body details.flashcard>summary::-webkit-details-marker{display:none}
+.sec__body .flash-answer,.sec__body .details-content{padding:11px 13px;font-size:.88em;color:var(--ink-2)}
+.sec__body .flash-answer>*:last-child{margin-bottom:0}
+
+/* ---------- 10. موبایل ---------- */
+@media (max-width:640px){
+  .sec__body [class*="grid-"],
+  .sec__body .flashcard-grid,
+  .sec__body .flow-split,
+  .sec__body .algo-branches{grid-template-columns:1fr}
+  .sec__body .algo-container,.sec__body .flowbox,.sec__body .chain{padding:12px}
+  .sec__body .timeline-container{padding-inline-start:16px}
+  .sec__body .timeline-item::before{inset-inline-start:-16px}
+}
+
+/* ---------- 11. پاک‌سازی نشانه‌های تزئینی قدیمی ---------- */
+.sec__body .emoji,
+.sec__body .deco-emoji{display:none}
+.sec__body a.anchor-plain{color:inherit;text-decoration:none;cursor:default}
