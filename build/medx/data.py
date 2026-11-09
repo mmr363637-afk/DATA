@@ -66,6 +66,12 @@ SUBJECTS = [
         "soon": False,
     },
     {
+        "key": "ophthalmology", "name": "چشم‌پزشکی", "nameEn": "Ophthalmology", "icon": "ophthalmology",
+        "motif": "eye", "hue": 187, "chroma": 62, "accent": 164,
+        "tagline": "از آناتومی و معاینه تا گلوکوم و اورژانس‌های چشمی",
+        "soon": False,
+    },
+    {
         "key": "pulmo", "name": "تنفس", "nameEn": "Pulmonology", "icon": "pulmo",
         "motif": "lung", "hue": 196, "chroma": 62, "accent": 214,
         "tagline": "آسم، COPD، عفونت ریوی و اختلالات تنفسی",
@@ -132,6 +138,7 @@ ICONS = {
           '<circle cx="10.6" cy="11.2" r=".9"/><circle cx="13.6" cy="12.8" r=".9"/>',
     "surgery": '<path d="M4.5 19.5 14 10"/><path d="M13 9 18.6 3.4a1.4 1.4 0 0 1 2 2L15 11"/><path d="M11.4 11.6 8.6 8.8"/><circle cx="6.4" cy="17.6" r="2.2"/>',
     "misc": '<path d="M6 4.5h8.5L18 8v11.5H6Z"/><path d="M14 4.5V8h4"/><path d="M9 12h6M9 15.5h4"/>',
+    "ophthalmology": '<path d="M2.5 12S6.4 6.2 12 6.2 21.5 12 21.5 12 17.6 17.8 12 17.8 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.4"/><path d="M12 9.2h.01M9.4 11.2h.01"/>',
 }
 
 # آیکون‌های رابط کاربری (بدون ایموجی)
@@ -188,6 +195,7 @@ QBANK_PARTS = [
     {"file": "rad-1", "title": "رادیولوژی ۱", "subject": "imaging", "count": 60, "chapters": 10},
     {"file": "rad-2", "title": "رادیولوژی ۲", "subject": "imaging", "count": 60, "chapters": 10},
     {"file": "rad-3", "title": "رادیولوژی ۳", "subject": "imaging", "count": 60, "chapters": 9},
+    {"file": "eye", "title": "چشم‌پزشکی — جوادی", "subject": "ophthalmology", "count": 200, "chapters": 23},
 ]
 
 

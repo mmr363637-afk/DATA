@@ -134,6 +134,19 @@ def _motif(motif: str, p: dict, seed: int = 0) -> str:
     <circle cx="52" cy="-26" r="6" fill="{soft}"/>
   </g>"""
 
+    if motif == "eye":
+        return f"""
+  <g transform="translate(100 100)">
+    <path d="M-72 0C-46-36-22-50 0-50C22-50 46-36 72 0C46 36 22 50 0 50C-22 50-46 36-72 0Z"
+          fill="url(#organFill)" stroke="{base}" stroke-width="2.6" stroke-linejoin="round"/>
+    <circle r="27" fill="{fill}" stroke="{base}" stroke-width="2.4"/>
+    <circle r="12" fill="{deep}" stroke="{base}" stroke-width="2"/>
+    <circle cx="-7" cy="-7" r="3.6" fill="#ffffff" opacity=".92"/>
+    <path d="M-40-33C-18-43 18-43 40-33" fill="none" stroke="{soft}" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+    <path d="M-50 37C-18 48 18 48 50 37" fill="none" stroke="{soft}" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 5" opacity=".75"/>
+    <path d="M58-46 72-58M44-54 52-70" stroke="{deep}" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+  </g>"""
+
     if motif == "kidney":
         return f"""
   <g transform="translate(100 100)">

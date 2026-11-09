@@ -90,6 +90,17 @@ def sync_docs():
 
 
 # ---------------------------------------------------------------------------
+# صفحات چشم‌پزشکی از قبل آماده و خودبسنده‌اند (فونت و استایل درون همان فایل)؛
+# بازنویسی‌شان با تبدیل استاندارد، طراحی‌شان را خراب می‌کند. برایشان تطبیق ردی می‌شود
+# و آمار همان مقادیر manifest باقی می‌ماند.
+PREBUILT_PREFIXES = ("ophthalmology/",)
+
+
+def prebuilt_importance() -> dict:
+    return {"level": "medium", "score": 0.0,
+            "reasons": [], "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"}
+
+
 def build(only: str | None = None, do_sync: bool = True, verify_only: bool = False):
     started = time.time()
     manifest = data.load_manifest(CONTENT)
@@ -108,7 +119,7 @@ def build(only: str | None = None, do_sync: bool = True, verify_only: bool = Fal
             continue
         # ترتیب پیشنهادی: chapter-numbered first, then by minutes desc, then title
         def sort_key(row):
-            m = re.match(r"^(\d+)", os.path.basename(row["path"]))
+            m = re.search(r"(\d+)(?=[^/]*\.html$)", os.path.basename(row["path"]))
             return (0, int(m.group(1))) if m else (1, -row.get("minutes", 0))
         rows_sorted = sorted(rows, key=sort_key)
 
@@ -116,6 +127,19 @@ def build(only: str | None = None, do_sync: bool = True, verify_only: bool = Fal
             path = os.path.join(CONTENT, row["path"])
             if not os.path.exists(path):
                 problems.append(f"فایل نیست: {row['path']}")
+                continue
+            if any(row["path"].startswith(p) for p in PREBUILT_PREFIXES):
+                print(f"  ↷ {row['id']:<58} صفحه از پیش ساخته است — بدون تغییر")
+                report.append({
+                    "id": row["id"], "subject": key, "path": row["path"], "title": row["title"],
+                    "minutes": row.get("minutes", 0), "sections": row.get("sections", 0),
+                    "words": row.get("words", 0), "messages": 0,
+                    "mcq": row.get("mcq", 0), "flashcards": row.get("flashcards", 0),
+                    "tables": row.get("tables", 0), "importance": prebuilt_importance(),
+                    "missing_chunks": 0, "coverage": 1.0, "missing_samples": [],
+                    "text_ratio": 1.0, "seconds": 0.0,
+                    "section_specs": [], "prebuilt": True,
+                })
                 continue
             if verify_only:
                 continue
@@ -175,7 +199,7 @@ def build(only: str | None = None, do_sync: bool = True, verify_only: bool = Fal
 
     def order(rows):
         def k(row):
-            m = re.match(r"^(\d+)", os.path.basename(row["path"]))
+            m = re.search(r"(\d+)(?=[^/]*\.html$)", os.path.basename(row["path"]))
             return (0, int(m.group(1))) if m else (1, -row["minutes"])
         return sorted(rows, key=k)
 

@@ -64,7 +64,7 @@ for u in \
 done
 ```
 و بررسی کن که `manifest.json` این اعداد را داشته باشد:
-`counts.lessons = 156`، `counts.subjects = 8`، `qbank.total = 790`، `qbank.parts` دقیقاً ۸ عضو،
+`counts.lessons = 179`، `counts.subjects = 9`، `qbank.total = 990`، `qbank.parts` دقیقاً ۹ عضو،
 و `subjects[].key` شامل `surgery` و `heme` باشد (و `onco` **نباشد**).
 
 > ⚠️ اگر `base.css` مقدار ۴۰۴ داد، یعنی پوشهٔ `assets` در `lib/` کپی نشده —
@@ -104,7 +104,7 @@ done
 ## معیار پذیرش
 - [ ] `.../lib/index.html` باز می‌شود و ۸ کارت درس + ۶ کارت «به‌زودی» دارد
 - [ ] `.../lib/surgery/23-cardiothoracic-surgery.html` با رنگ ناوی و فونت وزیرمتن باز می‌شود
-- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 790`)
+- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 990`)
 - [ ] `.../lib/qbank/index.html` ۸ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
 - [ ] یک آزمون در مرورگر باز می‌شود، با کلیک روی گزینه بازخورد («چرا؟»، «چرا بقیه غلط‌اند»، «نکتهٔ کلیدی») ظاهر می‌شود
 - [ ] نسخهٔ تک‌فایلی (`.../qbank/sur-1-standalone.html`) بدون اینترنت هم کار می‌کند

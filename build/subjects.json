@@ -100,8 +100,7 @@
     "surgery-lawrence",
     "urology-simforoush",
     "orthopedics-alamiharandi",
-    "ent-goldenberg",
-    "ophthalmology-javadi"
+    "ent-goldenberg"
    ]
   },
   {
@@ -175,6 +174,18 @@
    "note": "رزرو",
    "appSubjectKeys": [
     "infectious-harrison"
+   ]
+  },
+  {
+   "key": "ophthalmology",
+   "name": "چشم‌پزشکی",
+   "nameEn": "Ophthalmology",
+   "icon": "👁️",
+   "hue": 187,
+   "chroma": 60,
+   "note": "فیروزه‌ای (هم‌خوان با #087f8c)",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
    ]
   }
  ]

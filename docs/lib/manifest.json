@@ -1,13 +1,13 @@
 {
  "version": 1,
  "schema": "med-library/1",
- "updatedAt": "2026-11-08",
+ "updatedAt": "2026-11-09",
  "basePath": "",
  "index": "index.html",
  "counts": {
-  "subjects": 8,
-  "lessons": 156,
-  "minutes": 8279
+  "subjects": 9,
+  "lessons": 179,
+  "minutes": 9244
  },
  "subjects": [
   {
@@ -38,6 +38,20 @@
    "page": "subject/nephro.html",
    "count": 6,
    "minutes": 58
+  },
+  {
+   "key": "ophthalmology",
+   "name": "چشم‌پزشکی",
+   "nameEn": "Ophthalmology",
+   "icon": "👁️",
+   "hue": 187,
+   "chroma": 62,
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ],
+   "page": "subject/ophthalmology.html",
+   "count": 23,
+   "minutes": 965
   },
   {
    "key": "heme",
@@ -79,8 +93,7 @@
     "surgery-lawrence",
     "urology-simforoush",
     "orthopedics-alamiharandi",
-    "ent-goldenberg",
-    "ophthalmology-javadi"
+    "ent-goldenberg"
    ],
    "page": "subject/surgery.html",
    "count": 29,
@@ -2808,11 +2821,379 @@
    "tables": 2,
    "mcq": 0,
    "source": "Hepatic.html"
+  },
+  {
+   "id": "ophthalmology/chapter-01",
+   "subject": "ophthalmology",
+   "title": "آناتومی",
+   "path": "ophthalmology/chapter-01.html",
+   "sections": 4,
+   "words": 3390,
+   "minutes": 30,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 1",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-02",
+   "subject": "ophthalmology",
+   "title": "نحوهٔ گرفتن شرح‌حال در چشم‌پزشکی",
+   "path": "ophthalmology/chapter-02.html",
+   "sections": 4,
+   "words": 4038,
+   "minutes": 30,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 2",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-03",
+   "subject": "ophthalmology",
+   "title": "شکایت‌های اصلی بیمار چشمی",
+   "path": "ophthalmology/chapter-03.html",
+   "sections": 4,
+   "words": 4134,
+   "minutes": 35,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 3",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-04",
+   "subject": "ophthalmology",
+   "title": "نحوهٔ معاینهٔ چشم",
+   "path": "ophthalmology/chapter-04.html",
+   "sections": 4,
+   "words": 3763,
+   "minutes": 35,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 4",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-05",
+   "subject": "ophthalmology",
+   "title": "داروهای رایج چشم‌پزشکی",
+   "path": "ophthalmology/chapter-05.html",
+   "sections": 4,
+   "words": 4258,
+   "minutes": 40,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 5",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-06",
+   "subject": "ophthalmology",
+   "title": "بیماری‌های پلک",
+   "path": "ophthalmology/chapter-06.html",
+   "sections": 4,
+   "words": 3722,
+   "minutes": 40,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 6",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-07",
+   "subject": "ophthalmology",
+   "title": "بیماری‌های دستگاه اشکی",
+   "path": "ophthalmology/chapter-07.html",
+   "sections": 4,
+   "words": 3636,
+   "minutes": 35,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 7",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-08",
+   "subject": "ophthalmology",
+   "title": "بیماری‌های ملتحمه",
+   "path": "ophthalmology/chapter-08.html",
+   "sections": 4,
+   "words": 3768,
+   "minutes": 45,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 8",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-09",
+   "subject": "ophthalmology",
+   "title": "بیماری‌های قرنیه",
+   "path": "ophthalmology/chapter-09.html",
+   "sections": 4,
+   "words": 3597,
+   "minutes": 50,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 9",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-11",
+   "subject": "ophthalmology",
+   "title": "عیوب انکساری چشم",
+   "path": "ophthalmology/chapter-11.html",
+   "sections": 4,
+   "words": 3508,
+   "minutes": 40,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 11",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-12",
+   "subject": "ophthalmology",
+   "title": "لنزهای تماسی و عوارض آن‌ها",
+   "path": "ophthalmology/chapter-12.html",
+   "sections": 4,
+   "words": 3603,
+   "minutes": 30,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 12",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-13",
+   "subject": "ophthalmology",
+   "title": "جراحی‌های عیوب انکساری",
+   "path": "ophthalmology/chapter-13.html",
+   "sections": 4,
+   "words": 3645,
+   "minutes": 40,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 13",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-14",
+   "subject": "ophthalmology",
+   "title": "بیماری‌های صلبیه",
+   "path": "ophthalmology/chapter-14.html",
+   "sections": 4,
+   "words": 3673,
+   "minutes": 35,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 14",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-15",
+   "subject": "ophthalmology",
+   "title": "عدسی و بیماری‌های آن",
+   "path": "ophthalmology/chapter-15.html",
+   "sections": 4,
+   "words": 3837,
+   "minutes": 45,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 15",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-16",
+   "subject": "ophthalmology",
+   "title": "گلوکوم",
+   "path": "ophthalmology/chapter-16.html",
+   "sections": 4,
+   "words": 4209,
+   "minutes": 55,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 16",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-17",
+   "subject": "ophthalmology",
+   "title": "استرابیسم و حرکات چشم",
+   "path": "ophthalmology/chapter-17.html",
+   "sections": 4,
+   "words": 3665,
+   "minutes": 45,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 17",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-18",
+   "subject": "ophthalmology",
+   "title": "آمبلیوپی",
+   "path": "ophthalmology/chapter-18.html",
+   "sections": 4,
+   "words": 3819,
+   "minutes": 40,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 18",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-21",
+   "subject": "ophthalmology",
+   "title": "زجاجیه و بیماری‌های آن",
+   "path": "ophthalmology/chapter-21.html",
+   "sections": 4,
+   "words": 3657,
+   "minutes": 35,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 21",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-22",
+   "subject": "ophthalmology",
+   "title": "بیماری‌های شبکیه",
+   "path": "ophthalmology/chapter-22.html",
+   "sections": 4,
+   "words": 3591,
+   "minutes": 55,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 22",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-26",
+   "subject": "ophthalmology",
+   "title": "تظاهرات چشمی بیماری‌های سیستمیک",
+   "path": "ophthalmology/chapter-26.html",
+   "sections": 4,
+   "words": 3887,
+   "minutes": 60,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 26",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-27",
+   "subject": "ophthalmology",
+   "title": "اورژانس‌های چشم‌پزشکی",
+   "path": "ophthalmology/chapter-27.html",
+   "sections": 4,
+   "words": 4118,
+   "minutes": 60,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 27",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-28",
+   "subject": "ophthalmology",
+   "title": "پیشگیری از نابینایی",
+   "path": "ophthalmology/chapter-28.html",
+   "sections": 4,
+   "words": 4404,
+   "minutes": 40,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 28",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
+  },
+  {
+   "id": "ophthalmology/chapter-29",
+   "subject": "ophthalmology",
+   "title": "شیوع و علل نابینایی و کم‌بینایی",
+   "path": "ophthalmology/chapter-29.html",
+   "sections": 4,
+   "words": 5028,
+   "minutes": 45,
+   "flashcards": 8,
+   "tables": 4,
+   "mcq": 15,
+   "source": "چشم‌پزشکی عمومی (جوادی، فیضی، نجدی) — ویراست ۲، ۱۳۹۷ · فصل 29",
+   "appSubjectKeys": [
+    "ophthalmology-javadi"
+   ]
   }
  ],
  "qbank": {
   "index": "qbank/index.html",
-  "total": 790,
+  "total": 990,
   "parts": [
    {
     "part": "women",
@@ -2877,6 +3258,14 @@
     "count": 70,
     "page": "qbank/sur-3.html",
     "standalone": "qbank/sur-3-standalone.html"
+   },
+   {
+    "part": "eye",
+    "subject": "ophthalmology",
+    "title": "چشم‌پزشکی عمومی — جوادی",
+    "count": 200,
+    "page": "qbank/eye.html",
+    "standalone": "qbank/eye-standalone.html"
    }
   ]
  }

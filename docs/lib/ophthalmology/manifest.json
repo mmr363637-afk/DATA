@@ -1,0 +1,444 @@
+{
+  "schema": "med-library/1",
+  "updatedAt": "2026-11-08",
+  "book": {
+    "title": "چشم‌پزشکی عمومی",
+    "authors": [
+      "محمدعلی جوادی",
+      "سپهر فیضی",
+      "دانیال نجدی"
+    ],
+    "publisher": "فرهنگ فردا",
+    "edition": 2,
+    "editionYear": 1397,
+    "isbn": "9789648017915",
+    "totalChapters": 29,
+    "excludedChapters": [
+      10,
+      19,
+      20,
+      23,
+      24,
+      25
+    ]
+  },
+  "lessonCount": 23,
+  "quizBankPolicy": "lesson-local-only; do not merge into planner qbank",
+  "progressStorageKey": "medx.ophthalmology.progress.v1",
+  "lessons": [
+    {
+      "id": "ophthalmology-javadi-chapter-01",
+      "bookChapterNumber": 1,
+      "title": "آناتومی",
+      "titleEn": "Ocular Anatomy",
+      "path": "ophthalmology/chapter-01.html",
+      "estimatedStudyMinutes": 30,
+      "minutes": 30,
+      "order": 1,
+      "publicationStatus": "draft",
+      "sourcePages": "۱–۱۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-02",
+      "bookChapterNumber": 2,
+      "title": "نحوهٔ گرفتن شرح‌حال در چشم‌پزشکی",
+      "titleEn": "Ophthalmic History Taking",
+      "path": "ophthalmology/chapter-02.html",
+      "estimatedStudyMinutes": 30,
+      "minutes": 30,
+      "order": 2,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۱–۱۴",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-03",
+      "bookChapterNumber": 3,
+      "title": "شکایت‌های اصلی بیمار چشمی",
+      "titleEn": "Common Ophthalmic Complaints",
+      "path": "ophthalmology/chapter-03.html",
+      "estimatedStudyMinutes": 35,
+      "minutes": 35,
+      "order": 3,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۵–۲۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-04",
+      "bookChapterNumber": 4,
+      "title": "نحوهٔ معاینهٔ چشم",
+      "titleEn": "Ocular Examination",
+      "path": "ophthalmology/chapter-04.html",
+      "estimatedStudyMinutes": 35,
+      "minutes": 35,
+      "order": 4,
+      "publicationStatus": "draft",
+      "sourcePages": "۲۱–۲۸",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-05",
+      "bookChapterNumber": 5,
+      "title": "داروهای رایج چشم‌پزشکی",
+      "titleEn": "Common Ophthalmic Drugs",
+      "path": "ophthalmology/chapter-05.html",
+      "estimatedStudyMinutes": 40,
+      "minutes": 40,
+      "order": 5,
+      "publicationStatus": "draft",
+      "sourcePages": "۲۹–۳۸",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-06",
+      "bookChapterNumber": 6,
+      "title": "بیماری‌های پلک",
+      "titleEn": "Eyelid Disorders",
+      "path": "ophthalmology/chapter-06.html",
+      "estimatedStudyMinutes": 40,
+      "minutes": 40,
+      "order": 6,
+      "publicationStatus": "draft",
+      "sourcePages": "۳۹–۵۲",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-07",
+      "bookChapterNumber": 7,
+      "title": "بیماری‌های دستگاه اشکی",
+      "titleEn": "Lacrimal System Disorders",
+      "path": "ophthalmology/chapter-07.html",
+      "estimatedStudyMinutes": 35,
+      "minutes": 35,
+      "order": 7,
+      "publicationStatus": "draft",
+      "sourcePages": "۵۳–۶۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-08",
+      "bookChapterNumber": 8,
+      "title": "بیماری‌های ملتحمه",
+      "titleEn": "Conjunctival Disorders",
+      "path": "ophthalmology/chapter-08.html",
+      "estimatedStudyMinutes": 45,
+      "minutes": 45,
+      "order": 8,
+      "publicationStatus": "draft",
+      "sourcePages": "۶۱–۷۶",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-09",
+      "bookChapterNumber": 9,
+      "title": "بیماری‌های قرنیه",
+      "titleEn": "Corneal Disorders",
+      "path": "ophthalmology/chapter-09.html",
+      "estimatedStudyMinutes": 50,
+      "minutes": 50,
+      "order": 9,
+      "publicationStatus": "draft",
+      "sourcePages": "۷۷–۹۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-11",
+      "bookChapterNumber": 11,
+      "title": "عیوب انکساری چشم",
+      "titleEn": "Refractive Errors",
+      "path": "ophthalmology/chapter-11.html",
+      "estimatedStudyMinutes": 40,
+      "minutes": 40,
+      "order": 11,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۰۱–۱۰۸",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-12",
+      "bookChapterNumber": 12,
+      "title": "لنزهای تماسی و عوارض آن‌ها",
+      "titleEn": "Contact Lenses and Complications",
+      "path": "ophthalmology/chapter-12.html",
+      "estimatedStudyMinutes": 30,
+      "minutes": 30,
+      "order": 12,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۰۹–۱۱۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-13",
+      "bookChapterNumber": 13,
+      "title": "جراحی‌های عیوب انکساری",
+      "titleEn": "Refractive Surgery",
+      "path": "ophthalmology/chapter-13.html",
+      "estimatedStudyMinutes": 40,
+      "minutes": 40,
+      "order": 13,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۱۱–۱۱۴",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-14",
+      "bookChapterNumber": 14,
+      "title": "بیماری‌های صلبیه",
+      "titleEn": "Scleral Disorders",
+      "path": "ophthalmology/chapter-14.html",
+      "estimatedStudyMinutes": 35,
+      "minutes": 35,
+      "order": 14,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۱۵–۱۲۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-15",
+      "bookChapterNumber": 15,
+      "title": "عدسی و بیماری‌های آن",
+      "titleEn": "The Lens and Its Disorders",
+      "path": "ophthalmology/chapter-15.html",
+      "estimatedStudyMinutes": 45,
+      "minutes": 45,
+      "order": 15,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۲۱–۱۲۶",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-16",
+      "bookChapterNumber": 16,
+      "title": "گلوکوم",
+      "titleEn": "Glaucoma",
+      "path": "ophthalmology/chapter-16.html",
+      "estimatedStudyMinutes": 55,
+      "minutes": 55,
+      "order": 16,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۲۷–۱۳۶",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-17",
+      "bookChapterNumber": 17,
+      "title": "استرابیسم و حرکات چشم",
+      "titleEn": "Strabismus and Ocular Motility",
+      "path": "ophthalmology/chapter-17.html",
+      "estimatedStudyMinutes": 45,
+      "minutes": 45,
+      "order": 17,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۳۷–۱۴۶",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-18",
+      "bookChapterNumber": 18,
+      "title": "آمبلیوپی",
+      "titleEn": "Amblyopia",
+      "path": "ophthalmology/chapter-18.html",
+      "estimatedStudyMinutes": 40,
+      "minutes": 40,
+      "order": 18,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۴۷–۱۵۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-21",
+      "bookChapterNumber": 21,
+      "title": "زجاجیه و بیماری‌های آن",
+      "titleEn": "The Vitreous and Its Disorders",
+      "path": "ophthalmology/chapter-21.html",
+      "estimatedStudyMinutes": 35,
+      "minutes": 35,
+      "order": 21,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۷۵–۱۷۸",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-22",
+      "bookChapterNumber": 22,
+      "title": "بیماری‌های شبکیه",
+      "titleEn": "Retinal Disorders",
+      "path": "ophthalmology/chapter-22.html",
+      "estimatedStudyMinutes": 55,
+      "minutes": 55,
+      "order": 22,
+      "publicationStatus": "draft",
+      "sourcePages": "۱۷۹–۱۸۸",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-26",
+      "bookChapterNumber": 26,
+      "title": "تظاهرات چشمی بیماری‌های سیستمیک",
+      "titleEn": "Ocular Manifestations of Systemic Diseases",
+      "path": "ophthalmology/chapter-26.html",
+      "estimatedStudyMinutes": 60,
+      "minutes": 60,
+      "order": 26,
+      "publicationStatus": "draft",
+      "sourcePages": "۲۰۵–۲۲۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-27",
+      "bookChapterNumber": 27,
+      "title": "اورژانس‌های چشم‌پزشکی",
+      "titleEn": "Ophthalmic Emergencies",
+      "path": "ophthalmology/chapter-27.html",
+      "estimatedStudyMinutes": 60,
+      "minutes": 60,
+      "order": 27,
+      "publicationStatus": "draft",
+      "sourcePages": "۲۲۱–۲۳۸",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-28",
+      "bookChapterNumber": 28,
+      "title": "پیشگیری از نابینایی",
+      "titleEn": "Prevention of Blindness",
+      "path": "ophthalmology/chapter-28.html",
+      "estimatedStudyMinutes": 40,
+      "minutes": 40,
+      "order": 28,
+      "publicationStatus": "draft",
+      "sourcePages": "۲۳۹–۲۴۴",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    },
+    {
+      "id": "ophthalmology-javadi-chapter-29",
+      "bookChapterNumber": 29,
+      "title": "شیوع و علل نابینایی و کم‌بینایی",
+      "titleEn": "Prevalence and Causes of Blindness and Visual Impairment",
+      "path": "ophthalmology/chapter-29.html",
+      "estimatedStudyMinutes": 45,
+      "minutes": 45,
+      "order": 29,
+      "publicationStatus": "draft",
+      "sourcePages": "۲۴۵–۲۵۰",
+      "sections": 4,
+      "flashcards": 8,
+      "mcq": 15,
+      "appSubjectKeys": [
+        "ophthalmology-javadi"
+      ]
+    }
+  ]
+}
