@@ -47,6 +47,50 @@ def load_all():
 
 APP_URL = os.environ.get("MEDX_APP_URL", "https://mmr363637-afk.github.io/planner/")  # اپ وب (برنامه‌ریز)
 AUTHOR = "مهدی محمدرحیمی"  # پانویس نسخه‌های تک‌فایلی
+DARK_THEME = "#0c151d"  # theme-color حالت تیره (هم‌خانوادهٔ پالت روشن)
+
+# بهینه‌سازی «اپ/گوشی» برای بخش چشم‌پزشکی (eye):
+#  - قفل سرریز افقی + شکستن کلمات بلند + ناحیهٔ ایمن (safe-area) روی نوار بالا
+#  - حالت تیرهٔ کامل با ترجیح سیستم/اپ (prefers-color-scheme: dark)؛
+#    توکن‌های base.css بازنویسی می‌شوند و به همهٔ اجزای بانک سؤال سرایت می‌کند.
+EYE_OPTIMIZE_CSS = """/* ===== چشم‌پزشکی — بهینه‌سازی اپ/گوشی (eye-app-optimize) ===== */
+html,body{max-width:100%;overflow-x:clip}
+@supports not (overflow:clip){html,body{overflow-x:hidden}}
+body{overflow-wrap:anywhere;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.site-header{padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme: dark){
+:root{
+color-scheme:dark;
+--brand-50:hsl(var(--h) var(--c) 12%);--brand-100:hsl(var(--h) var(--c) 16%);--brand-200:hsl(var(--h) var(--c) 22%);--brand-300:hsl(var(--h) var(--c) 30%);--brand-400:hsl(var(--h) var(--c) 45%);--brand-500:hsl(var(--h) var(--c) 55%);--brand-600:hsl(var(--h) var(--c) 42%);--brand-700:hsl(var(--h) var(--c) 70%);--brand-800:hsl(var(--h) var(--c) 82%);--brand-900:hsl(var(--h) var(--c) 92%);
+--brand-ink:hsl(var(--h) calc(var(--c) * 0.9) 88%);
+--ok:hsl(158 55% 62%);--ok-bg:hsl(158 45% 13%);
+--warn:hsl(38 85% 65%);--warn-bg:hsl(33 45% 14%);
+--danger:hsl(354 72% 72%);--danger-bg:hsl(354 45% 16%);
+--info:hsl(211 82% 71%);--info-bg:hsl(211 45% 16%);
+--gold:hsl(43 88% 62%);--gold-bg:hsl(43 45% 14%);
+--bg:#0c151d;--bg-soft:#101a23;--surface:#131f2a;--surface-2:#16232f;--surface-3:#1c2b38;
+--line:#26343f;--line-soft:#1f2c37;--ink:#e7f1f6;--ink-2:#c3d2db;--ink-3:#9db1c0;--ink-4:#71869a;--on-brand:#ffffff;
+--sh-1:0 1px 2px rgba(0,0,0,.45),0 1px 3px rgba(0,0,0,.35);
+--sh-2:0 4px 14px rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.35);
+--sh-3:0 14px 36px rgba(0,0,0,.55);
+--sh-brand:0 10px 28px hsl(var(--h) var(--c) 45% / .3);
+--focus:0 0 0 3px hsl(var(--h) var(--c) 55% / .4);
+}
+body{background:var(--bg)}
+.site-header{background:rgba(12,21,29,.88)}
+.qb-toolbar{background:rgba(15,24,33,.92);border-bottom-color:var(--line)}
+.pill--ghost{background:hsl(210 25% 16% / .7)}
+.qb-stem{box-shadow:var(--sh-1)}
+.qb-opt:hover:not(:disabled){background:var(--brand-100)}
+.qb-chip{color:var(--brand-800)}
+.site-footer{color:var(--ink-3)}
+.site-footer a{color:var(--brand-700)}
+::selection{background:hsl(var(--h) var(--c) 45% / .35)}
+}"""
+
+def eye_optimize_css(part: str) -> str:
+    """لایهٔ بهینه‌سازی فقط برای بخش چشم‌پزشکی؛ بقیهٔ بخش‌ها دست‌نخورده می‌مانند."""
+    return EYE_OPTIMIZE_CSS if part == "eye" else ""
 
 FONTS = """@font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
@@ -69,7 +113,13 @@ HEADER = """<header class="site-header">
 </header>"""
 
 
-def page(title, desc, theme, ar, body, style_extra="", scripts="") -> str:
+def page(title, desc, theme, ar, body, style_extra="", scripts="", theme_dark=None) -> str:
+    if theme_dark:
+        theme_meta = (f'<meta name="theme-color" media="(prefers-color-scheme: light)" content="{theme}">\n'
+                      f'<meta name="theme-color" media="(prefers-color-scheme: dark)" content="{theme_dark}">\n'
+                      f'<meta name="color-scheme" content="light dark">')
+    else:
+        theme_meta = f'<meta name="theme-color" content="{theme}">'
     return f"""<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -77,7 +127,7 @@ def page(title, desc, theme, ar, body, style_extra="", scripts="") -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="theme-color" content="{theme}">
+{theme_meta}
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="{ar}assets/theme/base.css">
 <link rel="stylesheet" href="{ar}assets/theme/library.css">
@@ -157,6 +207,8 @@ def build_part(p) -> None:
         desc=f"{fa(p['count'])} سؤال چهارگزینه‌ای {p['title']} با پاسخ تشریحی.",
         theme=theme, ar="../", body=body,
         scripts=scripts,
+        style_extra=eye_optimize_css(p["part"]),
+        theme_dark=DARK_THEME if p["part"] == "eye" else None,
     )
     # صفت‌ها را روی <body> تزریق کن (ساده‌تر و مطمئن‌تر از JS)
     html = html.replace("<body>", f'<body data-qb-part="{p["part"]}" data-qb-data="data/{p["part"]}.json">', 1)
@@ -182,7 +234,7 @@ def build_standalone(p) -> None:
     css = "\n".join(
         (ROOT / "assets" / "theme" / n).read_text(encoding="utf-8")
         for n in ("base.css", "library.css", "qbank.css")
-    )
+    ) + eye_optimize_css(p["part"])
     js = (ROOT / "assets" / "theme" / "qbank.js").read_text(encoding="utf-8")
     data = json.dumps(p["data"], ensure_ascii=False)
     theme = f"hsl({h} {c}% 46%)"
@@ -219,13 +271,19 @@ def build_standalone(p) -> None:
   <div id="qb-app" aria-live="polite"></div>
 </div>
 </div>"""
+    if p["part"] == "eye":
+        theme_meta = (f'<meta name="theme-color" media="(prefers-color-scheme: light)" content="{theme}">\n'
+                      f'<meta name="theme-color" media="(prefers-color-scheme: dark)" content="{DARK_THEME}">\n'
+                      f'<meta name="color-scheme" content="light dark">')
+    else:
+        theme_meta = f'<meta name="theme-color" content="{theme}">'
     html = f"""<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{esc(p['title'])} — نسخهٔ تک‌فایلی</title>
-<meta name="theme-color" content="{theme}">
+{theme_meta}
 <style>
 {chr(10).join(faces)}
 {css}
@@ -237,8 +295,8 @@ def build_standalone(p) -> None:
 <script>
 {js.replace('fetch(DATA, { cache: "no-cache" })', 'Promise.resolve({ ok: true, json: function () { return window.__QB__; } })')}
 </script>
-<footer style="max-width:100%;margin:28px auto 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;line-height:1.9;color:#5a6577;border-top:1px solid #e6e9f0">نویسنده: <strong style="color:#22314f">{AUTHOR}</strong></footer>
-<style>html,body{{max-width:100%;overflow-x:hidden}}body{{overflow-wrap:anywhere}}img,svg,table{{max-width:100%}}table{{height:auto}}pre,code{{overflow-x:auto}}</style>
+<footer class="qb-solo-foot">نویسنده: <strong>{AUTHOR}</strong></footer>
+<style>html,body{{max-width:100%;overflow-x:hidden}}body{{overflow-wrap:anywhere}}img,svg,table{{max-width:100%}}table{{height:auto}}pre,code{{overflow-x:auto}}.qb-solo-foot{{max-width:100%;margin:28px auto 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;line-height:1.9;color:var(--ink-3);border-top:1px solid var(--line)}}.qb-solo-foot strong{{color:var(--ink-2)}}</style>
 </body>
 </html>
 """
