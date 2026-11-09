@@ -3,13 +3,14 @@
 """ساخت صفحات بانک سؤال از qbank/data/*.json
 
 خروجی‌ها:
-  content/qbank/index.html          فهرست ۸ بخش + آمار
+  content/qbank/index.html          فهرست ۹ بخش + آمار
   content/qbank/<part>.html         آزمون یک بخش (داده از JSON کنارش)
   content/qbank/<part>-standalone.html   همان آزمون، همه‌چیز درون فایل (آفلاین/ارسال به دیگران)
 
 اجرا: python3 build/qb_build.py
 """
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -27,8 +28,8 @@ def esc(s) -> str:
     return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-ORDER = ["obgyn", "cardio", "imaging", "surgery"]
-PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3"]
+ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology"]
+PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye"]
 
 
 def load_all():
@@ -44,7 +45,8 @@ def load_all():
     return cfg, subs, parts
 
 
-APP_URL = "https://mmr363637-afk.github.io/planner/"  # اپ وب (برنامه‌ریز)
+APP_URL = os.environ.get("MEDX_APP_URL", "https://mmr363637-afk.github.io/planner/")  # اپ وب (برنامه‌ریز)
+AUTHOR = "مهدی محمدرحیمی"  # پانویس نسخه‌های تک‌فایلی
 
 FONTS = """@font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
@@ -61,7 +63,7 @@ HEADER = """<header class="site-header">
       <span class="sep">/</span>
       <span class="crumb-now">{now}</span>
     </nav>
-    <a class="btn btn--ghost" href="{app}" target="_blank" rel="noopener" title="اپلیکیشن برنامه‌ریز">↩ اپلیکیشن برنامه‌ریز</a>
+    <a class="btn btn--ghost qb-applink" href="{app}" target="_blank" rel="noopener" title="اپلیکیشن برنامه‌ریز">↩ اپلیکیشن برنامه‌ریز</a>
     <a class="btn btn--ghost" href="{ar}index.html">همهٔ درس‌ها</a>
   </div>
 </header>"""
@@ -186,6 +188,7 @@ def build_standalone(p) -> None:
     theme = f"hsl({h} {c}% 46%)"
     body = f"""<div style="--h:{h};--c:{c}%">
 <div class="wrap" style="padding-block:18px 60px">
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><a class="pill pill--icon qb-applink" href="{APP_URL}" target="_blank" rel="noopener">↩ اپلیکیشن برنامه‌ریز</a></div>
   <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
     <span class="pill pill--icon">{esc(p['subjectName'])}</span>
     <span class="pill pill--ghost">{fa(p['count'])} سؤال</span>
@@ -234,6 +237,8 @@ def build_standalone(p) -> None:
 <script>
 {js.replace('fetch(DATA, { cache: "no-cache" })', 'Promise.resolve({ ok: true, json: function () { return window.__QB__; } })')}
 </script>
+<footer style="max-width:100%;margin:28px auto 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;line-height:1.9;color:#5a6577;border-top:1px solid #e6e9f0">نویسنده: <strong style="color:#22314f">{AUTHOR}</strong></footer>
+<style>html,body{{max-width:100%;overflow-x:hidden}}body{{overflow-wrap:anywhere}}img,svg,table{{max-width:100%}}table{{height:auto}}pre,code{{overflow-x:auto}}</style>
 </body>
 </html>
 """

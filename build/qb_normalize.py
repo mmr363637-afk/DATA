@@ -35,9 +35,12 @@ BUNDLES = [
     ("surgery", "sur-1", "جراحی عمومی — لارنس (فصول ۱ تا ۱۰)", ["surgery-qb-1.json"]),
     ("surgery", "sur-2", "جراحی عمومی — لارنس (فصول ۱۱ تا ۲۰)", ["surgery-qb-2.json"]),
     ("surgery", "sur-3", "جراحی عمومی — لارنس (فصول ۲۱ تا ۳۰)", ["surgery-qb-3.json"]),
+    ("ophthalmology", "eye", "چشم‌پزشکی عمومی — جوادی", ["chashm.json"]),
 ]
 
-DIFF = {"easy": "آسان", "medium": "متوسط", "hard": "دشوار", "very hard": "خیلی دشوار"}
+DIFF = {"easy": "آسان", "medium": "متوسط", "hard": "دشوار", "very hard": "خیلی دشوار", "veryhard": "خیلی دشوار",
+        "آسان": "آسان", "متوسط": "متوسط", "سخت": "دشوار", "دشوار": "دشوار",
+        "بسیار سخت": "خیلی دشوار", "خیلی دشوار": "خیلی دشوار"}
 LETTER_RE = re.compile(r"^[A-D][\)\.\-]\s*")
 
 
@@ -93,7 +96,33 @@ def norm_whywrong(q, nopt: int) -> dict:
     return out
 
 
+def adapt_chashm(q: dict) -> dict:
+    """طرح بانک سؤال چشم‌پزشکی (chashm.html) → طرح عمومی normalize().
+
+    فیلدهای اصلی نگاشت می‌شوند؛ بقیه (نوع سؤال، رفرنس، difficultyFa، …)
+    در انتها به‌عنوان متا به خروجی اضافه می‌شوند تا چیزی از داده گم نشود.
+    """
+    out = dict(q)
+    if "answer" in out and "correct" not in out:
+        out["correct"] = out["answer"]
+        out["explanation"] = out.get("correctExplanation") or out.get("explanation")
+        out["pearl"] = out.get("clinicalPearl") or out.get("pearl")
+        out["trap"] = out.get("examTrap") or out.get("trap")
+        rat = out.get("optionRationales")
+        if isinstance(rat, list):
+            out["whyWrong"] = rat  # هم‌تراز با گزینه‌ها؛ جای گزینهٔ درست بعداً حذف می‌شود
+    if "difficultyFa" in out and out.get("difficulty") in (None, ""):
+        out["difficulty"] = out["difficultyFa"]
+    return out
+
+
+# متاهایی که در طرح کتابخانه جایی ندارند ولی نباید از داده حذف شوند
+META_KEEP = ("questionType", "questionTypeLabel", "coverageIndex", "topicIndex",
+             "difficultyFa", "referenceBook", "edition", "referencePages")
+
+
 def normalize(q, subject, src, part) -> dict | None:
+    q = adapt_chashm(q)
     opts = [clean(o) for o in (q.get("options") or [])]
     if len(opts) < 2:
         return None
@@ -123,6 +152,7 @@ def normalize(q, subject, src, part) -> dict | None:
         "pearl": clean(q.get("pearl")),
         "trap": clean(q.get("trap")),
         "highYield": clean(q.get("highYield")),
+        **{k: q[k] for k in META_KEEP if q.get(k) not in (None, "")},
     }
 
 
@@ -165,6 +195,17 @@ def main():
         report.append(stat)
         total += len(items)
         print(f"{part:8s} {len(items):4d} سؤال · {len(chs):3d} فصل · {title}")
+    # اگر فایل‌های خام بخشی از قبل در مخزن نیستند (پاک شده‌اند)، ورودی قبلی
+    # qbank/data/ همان بخش در _parts.json حفظ می‌شود تا آمار آن از دست نرود.
+    parts_path = OUT / "_parts.json"
+    if parts_path.exists():
+        try:
+            old = json.loads(parts_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            old = []
+        rebuilt = {r["part"] for r in report}
+        merged = [r for r in old if r.get("part") not in rebuilt]  # ترتیب قبلی حفظ شود
+        report = merged + report
     (OUT / "_parts.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"جمع: {total} سؤال در {len(report)} بخش")
 
