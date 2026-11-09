@@ -113,15 +113,16 @@ HEADER = """<header class="site-header">
 </header>"""
 
 
-def page(title, desc, theme, ar, body, style_extra="", scripts="", theme_dark=None) -> str:
+def page(title, desc, theme, ar, body, style_extra="", scripts="", theme_dark=None, root_style="") -> str:
     if theme_dark:
         theme_meta = (f'<meta name="theme-color" media="(prefers-color-scheme: light)" content="{theme}">\n'
                       f'<meta name="theme-color" media="(prefers-color-scheme: dark)" content="{theme_dark}">\n'
                       f'<meta name="color-scheme" content="light dark">')
     else:
         theme_meta = f'<meta name="theme-color" content="{theme}">'
+    html_style = f' style="{root_style}"' if root_style else ""
     return f"""<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl"{html_style}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -153,8 +154,7 @@ def build_part(p) -> None:
         f'<span class="qb-stat">{esc(k)} <b>{fa(v)}</b></span>'
         for k, v in sorted(diff.items(), key=lambda kv: -kv[1])
     )
-    body = f"""<div style="--h:{h};--c:{c}%">
-{HEADER.format(ar="../", app=APP_URL, now=esc(p['title']))}
+    body = f"""{HEADER.format(ar="../", app=APP_URL, now=esc(p['title']))}
 <main class="wrap" style="padding-bottom:56px">
   <section class="qb-hero">
     <h1>{esc(p['title'])}</h1>
@@ -197,7 +197,7 @@ def build_part(p) -> None:
   <div class="wrap"><span>{esc(p['title'])} — بانک سؤال کتابخانهٔ مدیکال</span>
   <a href="../index.html">همهٔ درس‌ها</a></div>
 </footer>
-</div>"""
+"""
     scripts = ('<script src="../assets/theme/qbank.js" defer></script>\n'
                f'<script>document.body.dataset.qbPart="{p["part"]}";document.body.dataset.qbData="../qbank/data/{p["part"]}.json";</script>')
     # data attribute باید قبل از اجرای qbank.js ست شود؛ به‌جای آن مستقیم روی body می‌گذاریم
@@ -209,6 +209,7 @@ def build_part(p) -> None:
         scripts=scripts,
         style_extra=eye_optimize_css(p["part"]),
         theme_dark=DARK_THEME if p["part"] == "eye" else None,
+        root_style=f"--h:{h};--c:{c}%",
     )
     # صفت‌ها را روی <body> تزریق کن (ساده‌تر و مطمئن‌تر از JS)
     html = html.replace("<body>", f'<body data-qb-part="{p["part"]}" data-qb-data="data/{p["part"]}.json">', 1)
@@ -238,8 +239,7 @@ def build_standalone(p) -> None:
     js = (ROOT / "assets" / "theme" / "qbank.js").read_text(encoding="utf-8")
     data = json.dumps(p["data"], ensure_ascii=False)
     theme = f"hsl({h} {c}% 46%)"
-    body = f"""<div style="--h:{h};--c:{c}%">
-<div class="wrap" style="padding-block:18px 60px">
+    body = f"""<div class="wrap" style="padding-block:18px 60px">
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><a class="pill pill--icon qb-applink" href="{APP_URL}" target="_blank" rel="noopener">↩ اپلیکیشن برنامه‌ریز</a></div>
   <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
     <span class="pill pill--icon">{esc(p['subjectName'])}</span>
@@ -269,7 +269,6 @@ def build_standalone(p) -> None:
     </div>
   </div>
   <div id="qb-app" aria-live="polite"></div>
-</div>
 </div>"""
     if p["part"] == "eye":
         theme_meta = (f'<meta name="theme-color" media="(prefers-color-scheme: light)" content="{theme}">\n'
@@ -278,7 +277,7 @@ def build_standalone(p) -> None:
     else:
         theme_meta = f'<meta name="theme-color" content="{theme}">'
     html = f"""<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" style="--h:{h};--c:{c}%">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">

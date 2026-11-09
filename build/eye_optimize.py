@@ -46,34 +46,50 @@ th,td{overflow-wrap:anywhere}
 /* کنتراست — حالت روشن (WCAG AA) */
 .fc-hint{color:#546a78}
 .source-list,.question-top,.progress-box small{color:#52667a}
+/* ===== یکدست‌سازی هویت چشم‌پزشکی — h=187 (برند) + ۱۶۴ (اکسانت) ===== */
+:root{
+--brand:hsl(187 62% 33%);
+--brand2:hsl(164 55% 40%);
+--deep:hsl(187 58% 18%);
+}
+.hero{background:radial-gradient(circle at 82% 10%,rgba(255,255,255,.16),transparent 25%),linear-gradient(130deg,hsl(187 62% 22%),hsl(187 62% 33%) 58%,hsl(168 55% 36%))}
+.section-number{background:hsl(187 42% 92%);color:hsl(187 62% 31%)}
+thead th{background:hsl(187 42% 93%);color:hsl(187 62% 27%)}
+.flashcard{border-color:hsl(187 30% 83%)}
+.progress-box{background:hsl(187 42% 96%)}
+.toc a:hover,.toc a:focus{background:hsl(187 40% 93%);color:hsl(187 62% 31%)}
+.callout.pearl{border-color:hsl(164 55% 42%);background:hsl(164 42% 95%)}
+.callout.pearl strong{color:hsl(164 52% 27%)}
 /* ===== حالت تیره (ترجیح سیستم/اپ) ===== */
 @media (prefers-color-scheme: dark){
-:root{color-scheme:dark;--ink:#e7f1f6;--muted:#a7bcc9;--line:#26343f;--paper:#0c151d;--card:#131f2a;--brand:#35b3a8;--brand2:#49d3c2;--deep:#f0f6fa;--gold:#efc568;--rose:#d98497;--green:#49c98b;--shadow:0 16px 44px rgba(0,0,0,.5)}
+:root{color-scheme:dark;--ink:#e7f1f6;--muted:#a7bcc9;--line:#26343f;--paper:#0c151d;--card:#131f2a;--brand:hsl(183 52% 50%);--brand2:hsl(164 50% 55%);--deep:#f0f6fa;--gold:#efc568;--rose:#d98497;--green:#49c98b;--shadow:0 16px 44px rgba(0,0,0,.5)}
 body{background:var(--paper)}
 .topbar{background:rgba(15,24,33,.92);border-bottom-color:var(--line)}
 .topbar a.pill{background:#182634;border-color:var(--line);color:#dbe7ee}
 .brand small{color:var(--muted)}
 .toc a{color:var(--muted)}
-.toc a:hover,.toc a:focus{background:#16303a;color:#5fd3c7}
+.toc a:hover,.toc a:focus{background:#16303a;color:#6fd6c6}
 .side-title,.section-head h2,.lead,p,li,h1,h2,h3{color:inherit}
 .lead{color:#c6d5de}
 .progress-box{background:#15232f;border:1px solid var(--line)}
 .progress-meter{background:#22313f}
-.section-number{background:#16303a;color:#5fd3c7}
+.section-number{background:#16303a;color:#6fd6c6}
 .goals li{background:#16232f;color:#dbe7ee}
 .callout{background:#13262c;border-color:var(--brand2)}
 .callout.warn{background:#292312;border-color:#efc568}
 .callout.danger{background:#2a1619;border-color:#d98497}
-.callout.pearl{background:#1d1d31;border-color:#a9acee}
+.callout.pearl{background:#14231e;border-color:hsl(164 50% 50%)}
+.callout.pearl strong{color:#7ce3c5}
 .callout strong{color:#f0f6fa}
 .table-scroll{border-color:var(--line)}
 table{background:var(--card)}
-th{background:#16303a;color:#7fd9cd}
+thead th{background:#16303a;color:#6fd6c6}
+th{background:#16303a;color:#6fd6c6}
 td{border-bottom-color:var(--line)}
 tbody tr:nth-child(even){background:#101b25}
 .steps li{background:#141f2a;border-color:var(--line)}
 .mini{background:#141f2a;border-color:var(--line)}
-.flashcard{background:linear-gradient(145deg,#182635,#141f2a);border-color:#23343f;color:var(--ink)}
+.flashcard{background:linear-gradient(145deg,#182635,#141f2a);border-color:#21343b;color:var(--ink)}
 .fc-answer{color:#bccdd7;border-top-color:var(--line)}
 .fc-question{color:#e7f1f6}
 .fc-hint{color:#8aa0af}
@@ -83,44 +99,41 @@ tbody tr:nth-child(even){background:#101b25}
 .question h3{color:#e7f1f6}
 .choice{background:#141f2a;border-color:var(--line);color:var(--ink)}
 .choice:hover{border-color:var(--brand2);background:#16232e}
-.choice-letter{background:#16303a;color:#5fd3c7}
+.choice-letter{background:#16303a;color:#6fd6c6}
 .choice.correct{background:#123020;border-color:#2f7d52}
 .choice.incorrect{background:#301a16;border-color:#8a4a42}
 .feedback{background:#141f2a;border:1px solid var(--line)}
 .feedback summary{color:#b3c4cf}
 .feedback ul{color:#d7e3ea}
 .source-list,.question-top,.progress-box small{color:#9db1c0}
-.source-list a{color:#5fd3c7}
+.source-list a{color:#6fd6c6}
 .skip:focus{background:#182634;color:#e7f1f6}
 .meta-chip{background:rgba(3,20,28,.35);color:#eafcff}
 .hero p{color:rgba(234,252,255,.92)}
+.hero{background:radial-gradient(circle at 82% 10%,rgba(255,255,255,.1),transparent 25%),linear-gradient(130deg,hsl(187 62% 15%),hsl(187 60% 24%) 58%,hsl(168 50% 27%))}
 .footer{color:var(--muted)}
 }
 </style>"""
 
-META_OLD = '<meta name="theme-color" content="#087f8c">'
-META_NEW = ('<meta name="theme-color" media="(prefers-color-scheme: light)" content="#087f8c">\n'
-            '<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c151d">')
-SCHEME_OLD = '<meta name="color-scheme" content="light">'
-SCHEME_NEW = '<meta name="color-scheme" content="light dark">'
+THEME_META = ('<meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(187 62% 42%)">\n'
+              '<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c151d">')
+SCHEME_META = '<meta name="color-scheme" content="light dark">'
+THEME_RE = re.compile(r'<meta name="theme-color"[^>]*>\s*')
+SCHEME_RE = re.compile(r'<meta name="color-scheme"[^>]*>\s*')
 OVERLAY_RE = re.compile(r'<style id="medx-app-optimize">.*?</style>\s*', re.S)
 
 
 def patch(html: str) -> tuple[str, list[str]]:
     notes: list[str] = []
     html = OVERLAY_RE.sub("", html)  # جایگزینی سالم هنگام اجرای دوباره
-    if META_OLD in html:
-        html = html.replace(META_OLD, META_NEW, 1)
-        notes.append("theme-color→light/dark")
-    elif 'name="theme-color"' not in html:
-        html = html.replace("</head>", META_NEW + "\n</head>", 1)
-        notes.append("theme-color افزوده شد")
-    if SCHEME_OLD in html:
-        html = html.replace(SCHEME_OLD, SCHEME_NEW, 1)
-        notes.append("color-scheme→light dark")
-    elif 'name="color-scheme"' not in html:
-        html = html.replace("</head>", SCHEME_NEW + "\n</head>", 1)
-        notes.append("color-scheme افزوده شد")
+    if THEME_RE.search(html):
+        html = THEME_RE.sub("", html)
+        notes.append("theme-color بازنویسی شد")
+    html = html.replace("</head>", THEME_META + "\n</head>", 1)
+    if SCHEME_RE.search(html):
+        html = SCHEME_RE.sub("", html)
+    html = html.replace("</head>", SCHEME_META + "\n</head>", 1)
+    notes.append("color-scheme→light dark")
     if "</head>" not in html:
         raise RuntimeError("تگ </head> یافت نشد")
     html = html.replace("</head>", OVERLAY + "\n</head>", 1)
