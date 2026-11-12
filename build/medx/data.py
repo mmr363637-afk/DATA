@@ -108,10 +108,10 @@ SUBJECTS = [
         "soon": True,
     },
     {
-        "key": "id", "name": "عفونی", "nameEn": "Infectious Disease", "icon": "id",
-        "motif": "microbe", "hue": 168, "chroma": 50, "accent": 192,
-        "tagline": "عفونت‌های باکتریال، ویروسی و آنتی‌بیوتیک‌ها",
-        "soon": True,
+        "key": "infectious", "name": "عفونی", "nameEn": "Infectious Diseases", "icon": "id",
+        "motif": "microbe", "hue": 168, "chroma": 62, "accent": 194,
+        "tagline": "سندرم‌های عفونی، پاتوژن‌ها و درمان ضدمیکروبی بر پایهٔ بخش ۵ هریسون ۲۰۲۵ و ۳ مصوبهٔ ۱۴۰۳ کمیتهٔ کشوری سل",
+        "soon": False,
     },
 ]
 
@@ -204,6 +204,7 @@ QBANK_PARTS = [
     {"file": "rad-3", "title": "رادیولوژی ۳", "subject": "imaging", "count": 60, "chapters": 9},
     {"file": "eye", "title": "چشم‌پزشکی — جوادی", "subject": "ophthalmology", "count": 200, "chapters": 23},
     {"file": "ortho", "title": "ارتوپدی — اعلمی هرندی", "subject": "orthopedics", "count": 200, "chapters": 20},
+    {"file": "inf", "title": "عفونی — هاریسون ۲۰۲۵", "subject": "infectious", "count": 200, "chapters": 44},
 ]
 
 

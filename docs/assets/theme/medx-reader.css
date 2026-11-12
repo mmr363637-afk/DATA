@@ -768,3 +768,23 @@ body.focus-mode .focus-exit{display:inline-flex}
   .sec__body table{min-width:0}
   .sec__body .tbl-wrap table{min-width:520px}
 }
+
+/* ---------- دکمهٔ شناور نشانه‌ها (فقط وقتی صفحه دکمه‌ای ندارد ساخته می‌شود) ---------- */
+.marks-fab {
+  position: fixed; inset-block-end: calc(18px + env(safe-area-inset-bottom, 0px));
+  inset-inline-start: 16px; z-index: 60;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 11px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line, #dbe4e1);
+  background: var(--surface, #fff); color: var(--ink-2, #334155);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, .16);
+  font-family: inherit; font-size: .78rem; font-weight: 700;
+}
+.marks-fab:hover { color: var(--brand-700, #1d4ed8); border-color: var(--brand-300, #93c5fd); }
+.marks-fab__badge {
+  min-width: 19px; height: 19px; padding: 0 5px; border-radius: 999px;
+  display: inline-grid; place-items: center;
+  background: var(--brand-600, #2563eb); color: #fff;
+  font-size: .68rem; font-variant-numeric: tabular-nums;
+}
+.marks-fab__badge[hidden] { display: none; }

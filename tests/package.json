@@ -1,0 +1,13 @@
+{
+  "name": "medx-library-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "راستی‌آزمایی لایهٔ هایلایت/نشانه‌ها و ممیزی سراسری کتابخانهٔ مدیکال",
+  "scripts": {
+    "test": "node test-marks.js",
+    "audit": "python3 audit-library.py"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.0"
+  }
+}

@@ -66,29 +66,57 @@ m = json.load(open('content/manifest.json'))
 q = m['qbank']
 keys = [s['key'] for s in m['subjects']]
 checks = [
-    ('counts.lessons == 199',  m['counts']['lessons'] == 199),
-    ('counts.subjects == 10',  m['counts']['subjects'] == 10),
-    ('qbank.total == 1190',    q['total'] == 1190),
-    ('len(qbank.parts) == 10', len(q['parts']) == 10),
+    ('counts.lessons == 246',  m['counts']['lessons'] == 246),
+    ('counts.subjects == 11',  m['counts']['subjects'] == 11),
+    ('qbank.total == 1390',    q['total'] == 1390),
+    ('len(qbank.parts) == 11', len(q['parts']) == 11),
     ('جمع بخش‌ها == total',      sum(p['count'] for p in q['parts']) == q['total']),
     ('surgery در کلیدها',        'surgery' in keys),
     ('heme در کلیدها',           'heme' in keys),
     ('ophthalmology در کلیدها',  'ophthalmology' in keys),
     ('orthopedics در کلیدها',    'orthopedics' in keys),
+    ('infectious در کلیدها',     'infectious' in keys),
     ('onco در کلیدها نباشد',     'onco' not in keys),
+    ('کلید رزرو id نباشد',       'id' not in keys),
     ('docs/lib/manifest.json', pathlib.Path('docs/lib/manifest.json').is_file()),
     ('docs/lib/assets/theme/base.css', pathlib.Path('docs/lib/assets/theme/base.css').is_file()),
     ('docs/lib/assets/theme/qbank.js', pathlib.Path('docs/lib/assets/theme/qbank.js').is_file()),
+    ('docs/lib/assets/theme/marks-lite.js', pathlib.Path('docs/lib/assets/theme/marks-lite.js').is_file()),
+    ('docs/lib/assets/theme/marks-lite.css', pathlib.Path('docs/lib/assets/theme/marks-lite.css').is_file()),
+    ('docs/assets/theme/marks-lite.js', pathlib.Path('docs/assets/theme/marks-lite.js').is_file()),
     ('docs/assets/theme/base.css', pathlib.Path('docs/assets/theme/base.css').is_file()),
     ('docs/assets/theme/qbank.js', pathlib.Path('docs/assets/theme/qbank.js').is_file()),
     ('docs/lib/qbank/data/sur-1.json', pathlib.Path('docs/lib/qbank/data/sur-1.json').is_file()),
     ('docs/lib/qbank/data/ortho.json', pathlib.Path('docs/lib/qbank/data/ortho.json').is_file()),
+    ('docs/lib/qbank/data/inf.json', pathlib.Path('docs/lib/qbank/data/inf.json').is_file()),
     ('docs/lib/orthopedics/chapter-01.html', pathlib.Path('docs/lib/orthopedics/chapter-01.html').is_file()),
     ('docs/lib/ophthalmology/chapter-01.html', pathlib.Path('docs/lib/ophthalmology/chapter-01.html').is_file()),
+    ('docs/lib/infectious/183-tuberculosis.html', pathlib.Path('docs/lib/infectious/183-tuberculosis.html').is_file()),
+    ('docs/lib/subject/infectious-exam.html', pathlib.Path('docs/lib/subject/infectious-exam.html').is_file()),
     ('docs/.nojekyll', pathlib.Path('docs/.nojekyll').is_file()),
     ('raw_src منتشر نشده', not pathlib.Path('raw_src').exists()),
     ('qbank/raw منتشر نشده', not pathlib.Path('qbank/raw').exists()),
 ]
+
+# ---- هایلایت و اعتبار نویسنده در همهٔ صفحه‌های منتشرشده ----
+import re
+AUTHOR = 'مهدی محمدرحیمی'
+no_credit, no_mark = [], []
+for f in sorted(pathlib.Path('docs/lib').rglob('*.html')):
+    t = f.read_text(encoding='utf-8', errors='replace')
+    if not (re.search(r'نویسنده\s*[:：]', t) and AUTHOR in t) and not re.search(r'name="author"[^>]*' + AUTHOR, t):
+        no_credit.append(str(f))
+    has_reader = 'medx-reader.js' in t
+    has_lite = 'marks-lite' in t
+    has_text = bool(re.search(r'class="sec__body"|class="sec-body"|data-bank|qx__q|questionStem', t))
+    if has_text and not (has_reader or has_lite):
+        no_mark.append(str(f))
+checks += [
+    (f'اعتبار نویسنده در همهٔ docs/lib ({len(no_credit)} جاافتاده)', not no_credit),
+    (f'هایلایت در همهٔ صفحه‌های متنی ({len(no_mark)} جاافتاده)', not no_mark),
+]
+for extra in (no_credit + no_mark)[:6]:
+    print('    · ' + extra)
 bad = [n for n, ok in checks if not ok]
 for n, ok in checks:
     print(('  ✓ ' if ok else '  ✗ ') + n)
@@ -103,7 +131,7 @@ git init -q -b main 2>/dev/null || git checkout -q -b main
 git config user.name  >/dev/null 2>&1 || git config user.name  "${GIT_AUTHOR_NAME:-mmr363637-afk}"
 git config user.email >/dev/null 2>&1 || git config user.email "${GIT_AUTHOR_EMAIL:-mmr363637-afk@users.noreply.github.com}"
 git add -A
-git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۱۹۹ درسنامه، ۱۰ بخش آزمون، ۱٬۱۹۰ سؤال"
+git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۲۴۶ درسنامه، ۱۱ بخش آزمون، ۱٬۳۹۰ سؤال"
 echo "   $(git rev-list --count HEAD) کامیت، $(git ls-tree -r --name-only HEAD | wc -l) فایل"
 
 cat <<'EOF'

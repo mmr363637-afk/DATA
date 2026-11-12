@@ -30,7 +30,8 @@ gh repo create mmr363637-afk/med-library --public \
 ```
 med-library/
 ├─ content/          ← خروجی آمادهٔ انتشار (index.html, manifest.json, assets/, <subject>/, qbank/)
-├─ build/            ← اسکریپت‌های ساخت (subjects.json, make_map.py, build.py, gen_library.py, icons.py, qb_normalize.py, qb_build.py)
+├─ build/            ← اسکریپت‌های ساخت (subjects.json, make_map.py, build.py, gen_library.py, icons.py, qb_normalize.py, qb_build.py, inject_marks_credit.py, sync_docs.py)
+├─ tests/            ← ممیزی و راستی‌آزمایی (audit-library.py، test-marks.js با jsdom)
 ├─ qbank/            ← فایل‌های خام آزمون (raw/) + نسخهٔ نرمال‌شده (data/)
 ├─ assets/           ← منبع CSS/فونت/JS
 ├─ docs/             ← پیش‌نمایش‌ها و ‎.github ‎workflow
@@ -64,8 +65,8 @@ for u in \
 done
 ```
 و بررسی کن که `manifest.json` این اعداد را داشته باشد:
-`counts.lessons = 199`، `counts.subjects = 10`، `qbank.total = 1190`، `qbank.parts` دقیقاً ۱۰ عضو،
-و `subjects[].key` شامل `surgery` و `heme` باشد (و `onco` **نباشد**).
+`counts.lessons = 246`، `counts.subjects = 11`، `qbank.total = 1390`، `qbank.parts` دقیقاً ۱۱ عضو،
+و `subjects[].key` شامل `surgery`، `heme` و `infectious` باشد (و `onco` یا `id` **نباشد**).
 
 > ⚠️ اگر `base.css` مقدار ۴۰۴ داد، یعنی پوشهٔ `assets` در `lib/` کپی نشده —
 > مطمئن شو `content/assets/` هم منتقل شده است.
@@ -102,10 +103,10 @@ done
 - ✅ اگر دسترسی `gh` نداری، بگو و از API استفاده کن؛ حدس نزن.
 
 ## معیار پذیرش
-- [ ] `.../lib/index.html` باز می‌شود و ۱۰ کارت درس + ۶ کارت «به‌زودی» دارد
+- [ ] `.../lib/index.html` باز می‌شود و ۱۱ کارت درس + ۵ کارت «به‌زودی» دارد
 - [ ] `.../lib/surgery/23-cardiothoracic-surgery.html` با رنگ ناوی و فونت وزیرمتن باز می‌شود
-- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 1190`)
-- [ ] `.../lib/qbank/index.html` ۱۰ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
+- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 1390`)
+- [ ] `.../lib/qbank/index.html` ۱۱ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
 - [ ] یک آزمون در مرورگر باز می‌شود، با کلیک روی گزینه بازخورد («چرا؟»، «چرا بقیه غلط‌اند»، «نکتهٔ کلیدی») ظاهر می‌شود
 - [ ] نسخهٔ تک‌فایلی (`.../qbank/sur-1-standalone.html`) بدون اینترنت هم کار می‌کند
 - [ ] PR اتصال در `planner` باز است
@@ -145,6 +146,9 @@ done
    python3 build/qb_normalize.py
    python3 build/qb_build.py
    python3 build/medx_build.py --portal-only
+   python3 build/inject_marks_credit.py   # هایلایت + اعتبار نویسندهٔ صفحه‌های پیش‌ساخته (idempotent)
+   python3 build/sync_docs.py             # همگام‌سازی تم و docs/lib
+   python3 tests/audit-library.py         # ممیزی ۲۸۵ فایل: هایلایت + نویسنده
 
 ۴) بررسی‌ها (همه باید درست باشند، وگرنه متوقف شو و گزارش بده):
    - جمع سؤال‌های چاپ‌شده = تعداد سؤال‌های استخراج‌شده از فایل (هیچ سؤالی نباید دور ریخته شود)

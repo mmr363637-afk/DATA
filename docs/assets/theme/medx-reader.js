@@ -1045,11 +1045,77 @@
     });
   }
 
+  /* ------------------------------------------------ UI ساختنی (اختیاری) */
+  /* بعضی درسنامه‌های پیش‌ساخته (مثل عفونی) medx-reader.js را بارگذاری می‌کنند ولی
+     شیت‌های «نشانه‌ها» و «هایلایت با یادداشت» و دکمهٔ نشانه‌ها را در HTML خود ندارند؛
+     در نتیجه موتور هایلایت کار می‌کند ولی یادداشت و پنل نشانه‌ها در دسترس نیست.
+     اینجا هر سه فقط در صورت نبود ساخته می‌شوند — صفحه‌های کامل، دست‌نخورده می‌مانند. */
+  function ensureMarksUI() {
+    if (!$('#sheet-marks')) {
+      var ms = doc.createElement('div');
+      ms.className = 'sheet';
+      ms.id = 'sheet-marks';
+      ms.hidden = true;
+      ms.innerHTML =
+        '<div class="sheet__backdrop" data-sheet-close></div>' +
+        '<div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-marks-t">' +
+          '<div class="sheet__head"><h2 id="sheet-marks-t">' + ICON.note + '<span>نشانه‌های من</span></h2>' +
+          '<button class="sheet__close" type="button" data-sheet-close aria-label="بستن">' + ICON.close + '</button></div>' +
+          '<div class="sheet__body">' +
+            '<p class="muted" style="font-size:.76rem;margin:0">هایلایت با انتخاب متن ساخته می‌شود؛ نشانک و ستاره از نوار بالای هر بخش.</p>' +
+            '<div data-marks-list></div>' +
+          '</div>' +
+        '</div>';
+      doc.body.appendChild(ms);
+    }
+
+    if (!$('#sheet-hlnote')) {
+      var hs = doc.createElement('div');
+      hs.className = 'sheet';
+      hs.id = 'sheet-hlnote';
+      hs.hidden = true;
+      var dots = [['y', 'زرد'], ['g', 'سبز'], ['b', 'آبی'], ['p', 'صورتی'], ['o', 'نارنجی']].map(function (c, i) {
+        return '<button class="selbar__dot" type="button" data-hlnote-color="' + c[0] + '" aria-pressed="' +
+          (i === 0 ? 'true' : 'false') + '" title="' + c[1] + '"></button>';
+      }).join('');
+      hs.innerHTML =
+        '<div class="sheet__backdrop" data-sheet-close></div>' +
+        '<div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheet-hlnote-t">' +
+          '<div class="sheet__head"><h2 id="sheet-hlnote-t">' + ICON.note + '<span>هایلایت با یادداشت</span></h2>' +
+          '<button class="sheet__close" type="button" data-sheet-close aria-label="بستن">' + ICON.close + '</button></div>' +
+          '<div class="sheet__body">' +
+            '<div class="setrow"><span class="setrow__label">رنگ هایلایت</span>' +
+            '<span class="setrow__ctrl" style="gap:6px">' + dots + '</span></div>' +
+            '<textarea data-hl-note rows="4" placeholder="یادداشت خودت را برای این بخش از متن بنویس…" ' +
+              'style="width:100%;border:1px solid var(--line);border-radius:10px;padding:9px 11px;' +
+              'font-family:inherit;font-size:.86rem;line-height:1.9;resize:vertical"></textarea>' +
+            '<div style="display:flex;gap:8px;justify-content:flex-end">' +
+              '<button class="btn btn--ghost btn--sm" type="button" data-sheet-close>انصراف</button>' +
+              '<button class="btn btn--brand btn--sm" type="button" data-hlnote-save>ذخیرهٔ هایلایت</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+      doc.body.appendChild(hs);
+    }
+
+    if (!$('[data-open-marks]')) {
+      var fab = doc.createElement('button');
+      fab.className = 'marks-fab';
+      fab.type = 'button';
+      fab.setAttribute('data-open-marks', '');
+      fab.title = 'نشانه‌ها (هایلایت، یادداشت، نشانک)';
+      fab.setAttribute('aria-label', 'نشانه‌ها');
+      fab.innerHTML = ICON.note + '<span class="marks-fab__badge" data-marks-badge hidden>۰</span>';
+      doc.body.appendChild(fab);
+    }
+  }
+
   function boot() {
     L = MedX.lessonState(lessonId);
     M = MedX.marksFor(lessonId);
     if (!L.total) L.total = totalSecs || sections.length;
     saveVisit();
+    ensureMarksUI();
     initSections();
     restoreHighlights();
     applySettings();

@@ -164,13 +164,13 @@
    ]
   },
   {
-   "key": "id",
+   "key": "infectious",
    "name": "عفونی",
-   "nameEn": "Infectious Disease",
+   "nameEn": "Infectious Diseases",
    "icon": "🦠",
-   "hue": 62,
+   "hue": 168,
    "chroma": 62,
-   "note": "رزرو",
+   "note": "فیروزه‌ای زمردی (۴۴ فصل رسمی هریسون ۲۰۲۵ + ۳ مصوبهٔ ۱۴۰۳ کمیتهٔ کشوری سل)",
    "appSubjectKeys": [
     "infectious-harrison"
    ]
