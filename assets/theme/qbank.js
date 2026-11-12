@@ -133,6 +133,77 @@
     });
   }
 
+  /* ---------- تصویر سؤال ---------- */
+  /* دادهٔ تصویر در JSON بخش می‌تواند object باشد ({src, alt, credit, source, w, h})
+     یا فقط یک رشتهٔ src. src می‌تواند data URI درون‌خطی باشد (آفلاین کار می‌کند). */
+  function imageOf(im) {
+    if (!im) return null;
+    if (typeof im === "string") im = { src: im };
+    if (!im || typeof im !== "object") return null;
+    if (typeof im.src !== "string" || !im.src) return null;
+    return im;
+  }
+
+  function figure(im) {
+    im = imageOf(im);
+    if (!im) return null;
+    var fig = el("figure", "qb-figure");
+    var img = document.createElement("img");
+    img.src = im.src;
+    img.alt = im.alt || "تصویر سؤال";
+    img.setAttribute("loading", "lazy");
+    img.setAttribute("decoding", "async");
+    if (im.w > 0) img.width = im.w;
+    if (im.h > 0) img.height = im.h;
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.title = "برای بزرگ‌نمایی کلیک کن";
+    img.addEventListener("click", function () { openZoom(im); });
+    img.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openZoom(im); }
+    });
+    img.addEventListener("error", function () { fig.classList.add("qb-figure--broken"); });
+    fig.appendChild(img);
+
+    var cap = [];
+    if (im.alt) cap.push(esc(im.alt));
+    if (im.credit) cap.push('<span class="qb-figure__credit">' + esc(im.credit) + "</span>");
+    if (cap.length) fig.appendChild(el("figcaption", null, cap.join(" — ")));
+    if (im.source) {
+      var a = el("a", "qb-figure__src", "منبع تصویر ↗");
+      a.href = im.source;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      fig.appendChild(a);
+    }
+    return fig;
+  }
+
+  /* بزرگ‌نمایی: لایهٔ تمام‌صفحه که با کلیک یا Esc بسته می‌شود */
+  var zoomLayer = null;
+  function closeZoom() {
+    if (!zoomLayer) return;
+    zoomLayer.remove();
+    zoomLayer = null;
+    document.documentElement.classList.remove("qb-zoom-open");
+  }
+  function openZoom(im) {
+    closeZoom();
+    zoomLayer = el("div", "qb-zoom");
+    zoomLayer.setAttribute("role", "dialog");
+    zoomLayer.setAttribute("aria-modal", "true");
+    zoomLayer.setAttribute("aria-label", im.alt || "تصویر سؤال");
+    var big = document.createElement("img");
+    big.src = im.src;
+    big.alt = im.alt || "";
+    zoomLayer.appendChild(big);
+    if (im.credit) zoomLayer.appendChild(el("span", "qb-zoom__credit", esc(im.credit)));
+    zoomLayer.appendChild(el("span", "qb-zoom__hint", "برای بستن کلیک کن یا Esc بزن"));
+    zoomLayer.addEventListener("click", closeZoom);
+    document.body.appendChild(zoomLayer);
+    document.documentElement.classList.add("qb-zoom-open");
+  }
+
   /* ---------- یک سؤال ---------- */
   function render() {
     root.innerHTML = "";
@@ -162,6 +233,10 @@
     var card = el("div", "qb-stem");
     card.appendChild(el("p", null, esc(q.stem)));
     root.appendChild(card);
+
+    /* تصویر سؤال (بانک‌های تصویردار، مثل ارتوپدی) */
+    var fig = figure(q.image);
+    if (fig) root.appendChild(fig);
 
     /* گزینه‌ها */
     var wrap = el("div", "qb-options");
@@ -273,6 +348,8 @@
 
   /* کلیدهای میان‌بر */
   document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { closeZoom(); return; }
+    if (zoomLayer) return;                 // وقتی لایهٔ بزرگ‌نمایی باز است، ناوبری قفل است
     if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
     if (e.key === "ArrowLeft" && state.i < state.list.length - 1) { state.i++; render(); }
     if (e.key === "ArrowRight" && state.i > 0) { state.i--; render(); }

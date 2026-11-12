@@ -3,9 +3,11 @@
 """ساخت صفحات بانک سؤال از qbank/data/*.json
 
 خروجی‌ها:
-  content/qbank/index.html          فهرست ۹ بخش + آمار
+  content/qbank/index.html          فهرست بخش‌ها + آمار
   content/qbank/<part>.html         آزمون یک بخش (داده از JSON کنارش)
   content/qbank/<part>-standalone.html   همان آزمون، همه‌چیز درون فایل (آفلاین/ارسال به دیگران)
+  content/qbank/data/<part>.json    دادهٔ همان بخش (برای صفحهٔ غیر تک‌فایلی)
+  content/manifest.json             بخش qbank (total + parts) هم‌خط می‌شود
 
 اجرا: python3 build/qb_build.py
 """
@@ -28,8 +30,8 @@ def esc(s) -> str:
     return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology"]
-PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye"]
+ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology", "orthopedics"]
+PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye", "ortho"]
 
 
 def load_all():
@@ -49,11 +51,11 @@ APP_URL = os.environ.get("MEDX_APP_URL", "https://mmr363637-afk.github.io/planne
 AUTHOR = "مهدی محمدرحیمی"  # پانویس نسخه‌های تک‌فایلی
 DARK_THEME = "#0c151d"  # theme-color حالت تیره (هم‌خانوادهٔ پالت روشن)
 
-# بهینه‌سازی «اپ/گوشی» برای بخش چشم‌پزشکی (eye):
+# بهینه‌سازی «اپ/گوشی» برای بخش‌های تک‌فایلی‌مأخذ (eye و ortho):
 #  - قفل سرریز افقی + شکستن کلمات بلند + ناحیهٔ ایمن (safe-area) روی نوار بالا
 #  - حالت تیرهٔ کامل با ترجیح سیستم/اپ (prefers-color-scheme: dark)؛
 #    توکن‌های base.css بازنویسی می‌شوند و به همهٔ اجزای بانک سؤال سرایت می‌کند.
-EYE_OPTIMIZE_CSS = """/* ===== چشم‌پزشکی — بهینه‌سازی اپ/گوشی (eye-app-optimize) ===== */
+APP_OPTIMIZE_CSS = """/* ===== بهینه‌سازی اپ/گوشی بخش‌های تصویردار/تیره (app-optimize: eye, ortho) ===== */
 html,body{max-width:100%;overflow-x:clip}
 @supports not (overflow:clip){html,body{overflow-x:hidden}}
 body{overflow-wrap:anywhere;-webkit-text-size-adjust:100%;text-size-adjust:100%}
@@ -88,9 +90,18 @@ body{background:var(--bg)}
 ::selection{background:hsl(var(--h) var(--c) 45% / .35)}
 }"""
 
-def eye_optimize_css(part: str) -> str:
-    """لایهٔ بهینه‌سازی فقط برای بخش چشم‌پزشکی؛ بقیهٔ بخش‌ها دست‌نخورده می‌مانند."""
-    return EYE_OPTIMIZE_CSS if part == "eye" else ""
+# بخش‌هایی که لایهٔ بهینه‌سازی اپ/گوشی + حالت تیره می‌گیرند (مأخذشان تک‌فایل تیره است)
+APP_OPTIMIZED_PARTS = ("eye", "ortho")
+
+
+def app_optimize_css(part: str) -> str:
+    """لایهٔ بهینه‌سازی برای بخش‌های APP_OPTIMIZED_PARTS؛ بقیه دست‌نخورده می‌مانند."""
+    return APP_OPTIMIZE_CSS if part in APP_OPTIMIZED_PARTS else ""
+
+
+def is_dark_part(part: str) -> bool:
+    """آیا این بخش theme-color دو حالته (روشن/تیره) بگیرد؟"""
+    return part in APP_OPTIMIZED_PARTS
 
 FONTS = """@font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Vazirmatn";src:url("__AR__assets/fonts/Vazirmatn-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
@@ -154,6 +165,8 @@ def build_part(p) -> None:
         f'<span class="qb-stat">{esc(k)} <b>{fa(v)}</b></span>'
         for k, v in sorted(diff.items(), key=lambda kv: -kv[1])
     )
+    img_pill = (f'\n      <span class="pill pill--ghost">{fa(p["withImage"])} سؤال تصویردار</span>'
+                if p.get("withImage") else "")
     body = f"""{HEADER.format(ar="../", app=APP_URL, now=esc(p['title']))}
 <main class="wrap" style="padding-bottom:56px">
   <section class="qb-hero">
@@ -162,7 +175,7 @@ def build_part(p) -> None:
     <div class="qb-hero__meta">
       <span class="pill pill--icon">{esc(p['subjectName'])}</span>
       <span class="pill pill--ghost">{fa(p['chapters'])} فصل</span>
-      <span class="pill pill--ghost">{fa(p['withPearl'])} نکتهٔ کلیدی</span>
+      <span class="pill pill--ghost">{fa(p['withPearl'])} نکتهٔ کلیدی</span>{img_pill}
       <span class="pill pill--ghost">ذخیرهٔ خودکار پیشرفت</span>
     </div>
     <div class="qb-stats qb-stats--end" data-qb-stats></div>
@@ -207,8 +220,8 @@ def build_part(p) -> None:
         desc=f"{fa(p['count'])} سؤال چهارگزینه‌ای {p['title']} با پاسخ تشریحی.",
         theme=theme, ar="../", body=body,
         scripts=scripts,
-        style_extra=eye_optimize_css(p["part"]),
-        theme_dark=DARK_THEME if p["part"] == "eye" else None,
+        style_extra=app_optimize_css(p["part"]),
+        theme_dark=DARK_THEME if is_dark_part(p["part"]) else None,
         root_style=f"--h:{h};--c:{c}%",
     )
     # صفت‌ها را روی <body> تزریق کن (ساده‌تر و مطمئن‌تر از JS)
@@ -235,7 +248,7 @@ def build_standalone(p) -> None:
     css = "\n".join(
         (ROOT / "assets" / "theme" / n).read_text(encoding="utf-8")
         for n in ("base.css", "library.css", "qbank.css")
-    ) + eye_optimize_css(p["part"])
+    ) + app_optimize_css(p["part"])
     js = (ROOT / "assets" / "theme" / "qbank.js").read_text(encoding="utf-8")
     data = json.dumps(p["data"], ensure_ascii=False)
     theme = f"hsl({h} {c}% 46%)"
@@ -270,7 +283,7 @@ def build_standalone(p) -> None:
   </div>
   <div id="qb-app" aria-live="polite"></div>
 </div>"""
-    if p["part"] == "eye":
+    if is_dark_part(p["part"]):
         theme_meta = (f'<meta name="theme-color" media="(prefers-color-scheme: light)" content="{theme}">\n'
                       f'<meta name="theme-color" media="(prefers-color-scheme: dark)" content="{DARK_THEME}">\n'
                       f'<meta name="color-scheme" content="light dark">')
@@ -310,13 +323,14 @@ def build_index(parts) -> None:
     cards = []
     for p in parts:
         h, c = p["hue"], p["chroma"]
+        img_note = f" · {fa(p['withImage'])} سؤال تصویردار" if p.get("withImage") else ""
         cards.append(f"""    <article class="qb-card" style="--h:{h};--c:{c}%">
       <div class="qb-card__top">
         <span class="qb-card__subj">{esc(p['subjectName'])}</span>
         <span class="qb-card__n">{fa(p['count'])} سؤال</span>
       </div>
       <h3>{esc(p['title'])}</h3>
-      <p class="qb-card__meta">{fa(p['chapters'])} فصل · {fa(p['withPearl'])} نکتهٔ کلیدی · {fa(p['withWrong'])} تحلیل گزینهٔ نادرست</p>
+      <p class="qb-card__meta">{fa(p['chapters'])} فصل · {fa(p['withPearl'])} نکتهٔ کلیدی · {fa(p['withWrong'])} تحلیل گزینهٔ نادرست{img_note}</p>
       <div class="qb-card__acts">
         <a class="btn btn--brand" href="{p['part']}.html">شروع آزمون</a>
         <a class="btn btn--ghost" href="{p['part']}-standalone.html" title="همه‌چیز درون یک فایل؛ آفلاین و قابل ارسال">تک‌فایلی</a>
@@ -366,6 +380,35 @@ def build_index(parts) -> None:
     (OUT / "index.html").write_text(html, encoding="utf-8")
 
 
+def sync_manifest(parts) -> None:
+    """بخش qbank در content/manifest.json را با آمار تازهٔ بخش‌ها هم‌خط می‌کند.
+
+    manifest قرارداد اتصال به اپ planner است (integration/lessonLinks.ts)؛ اگر
+    بخشی اضافه/کم شود و این به‌روز نشود، اپ آمار کهنه می‌بیند. بقیهٔ manifest
+    (درس‌ها، درس‌نامه‌ها، updatedAt جز این) دست‌نخورده می‌ماند.
+    """
+    import datetime
+    mf = ROOT / "content" / "manifest.json"
+    if not mf.exists():
+        return
+    try:
+        m = json.loads(mf.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        print(f"!! manifest.json خوانده نشد ({exc}) — بخش qbank هم‌خط نشد", file=sys.stderr)
+        return
+    qb = m.setdefault("qbank", {})
+    qb["index"] = "qbank/index.html"
+    qb["total"] = sum(p["count"] for p in parts)
+    qb["parts"] = [
+        {"part": p["part"], "subject": p["subject"], "title": p["title"], "count": p["count"],
+         "page": f"qbank/{p['part']}.html", "standalone": f"qbank/{p['part']}-standalone.html"}
+        for p in parts
+    ]
+    m["updatedAt"] = datetime.date.today().isoformat()
+    mf.write_text(json.dumps(m, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"manifest.json → qbank.total={qb['total']} در {len(qb['parts'])} بخش")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "data").mkdir(exist_ok=True)
@@ -377,6 +420,7 @@ def main():
         raw = (DATA / f"{p['part']}.json")
         (OUT / "data" / raw.name).write_text(raw.read_text(encoding="utf-8"), encoding="utf-8")
     build_index(parts)
+    sync_manifest(parts)
     total = sum(p["count"] for p in parts)
     print(f"بانک سؤال: {len(parts)} بخش · {total} سؤال · index + {len(parts)} صفحه + {len(parts)} تک‌فایلی")
 

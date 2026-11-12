@@ -64,7 +64,7 @@ for u in \
 done
 ```
 و بررسی کن که `manifest.json` این اعداد را داشته باشد:
-`counts.lessons = 179`، `counts.subjects = 9`، `qbank.total = 990`، `qbank.parts` دقیقاً ۹ عضو،
+`counts.lessons = 199`، `counts.subjects = 10`، `qbank.total = 1190`، `qbank.parts` دقیقاً ۱۰ عضو،
 و `subjects[].key` شامل `surgery` و `heme` باشد (و `onco` **نباشد**).
 
 > ⚠️ اگر `base.css` مقدار ۴۰۴ داد، یعنی پوشهٔ `assets` در `lib/` کپی نشده —
@@ -102,10 +102,10 @@ done
 - ✅ اگر دسترسی `gh` نداری، بگو و از API استفاده کن؛ حدس نزن.
 
 ## معیار پذیرش
-- [ ] `.../lib/index.html` باز می‌شود و ۸ کارت درس + ۶ کارت «به‌زودی» دارد
+- [ ] `.../lib/index.html` باز می‌شود و ۱۰ کارت درس + ۶ کارت «به‌زودی» دارد
 - [ ] `.../lib/surgery/23-cardiothoracic-surgery.html` با رنگ ناوی و فونت وزیرمتن باز می‌شود
-- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 990`)
-- [ ] `.../lib/qbank/index.html` ۸ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
+- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 1190`)
+- [ ] `.../lib/qbank/index.html` ۱۰ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
 - [ ] یک آزمون در مرورگر باز می‌شود، با کلیک روی گزینه بازخورد («چرا؟»، «چرا بقیه غلط‌اند»، «نکتهٔ کلیدی») ظاهر می‌شود
 - [ ] نسخهٔ تک‌فایلی (`.../qbank/sur-1-standalone.html`) بدون اینترنت هم کار می‌کند
 - [ ] PR اتصال در `planner` باز است
@@ -143,8 +143,8 @@ done
 
 ۳) اجرا کن:
    python3 build/qb_normalize.py
-   python3 build/gen_library.py
    python3 build/qb_build.py
+   python3 build/medx_build.py --portal-only
 
 ۴) بررسی‌ها (همه باید درست باشند، وگرنه متوقف شو و گزارش بده):
    - جمع سؤال‌های چاپ‌شده = تعداد سؤال‌های استخراج‌شده از فایل (هیچ سؤالی نباید دور ریخته شود)

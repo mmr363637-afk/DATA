@@ -99,7 +99,6 @@
    "appSubjectKeys": [
     "surgery-lawrence",
     "urology-simforoush",
-    "orthopedics-alamiharandi",
     "ent-goldenberg"
    ]
   },
@@ -186,6 +185,18 @@
    "note": "فیروزه‌ای (هم‌خوان با #087f8c)",
    "appSubjectKeys": [
     "ophthalmology-javadi"
+   ]
+  },
+  {
+   "key": "orthopedics",
+   "name": "ارتوپدی",
+   "nameEn": "Orthopedics",
+   "icon": "🦴",
+   "hue": 16,
+   "chroma": 62,
+   "note": "آجری (هم‌خوان با --h:16 درسنامه‌ها)",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
    ]
   }
  ]

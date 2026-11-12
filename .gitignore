@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# فایل‌های خام (منبع خصوصی): هیچ‌وقت منتشر نمی‌شوند — فقط content/ و docs/lib/
+raw_src/
+qbank/raw/

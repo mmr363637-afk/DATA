@@ -72,6 +72,12 @@ SUBJECTS = [
         "soon": False,
     },
     {
+        "key": "orthopedics", "name": "ارتوپدی", "nameEn": "Orthopedics", "icon": "orthopedics",
+        "motif": "bone", "hue": 16, "chroma": 62, "accent": 36,
+        "tagline": "شکستگی‌ها، دررفتگی‌ها، ارتوپدی کودکان، عفونت و تومور استخوان",
+        "soon": False,
+    },
+    {
         "key": "pulmo", "name": "تنفس", "nameEn": "Pulmonology", "icon": "pulmo",
         "motif": "lung", "hue": 196, "chroma": 62, "accent": 214,
         "tagline": "آسم، COPD، عفونت ریوی و اختلالات تنفسی",
@@ -139,6 +145,7 @@ ICONS = {
     "surgery": '<path d="M4.5 19.5 14 10"/><path d="M13 9 18.6 3.4a1.4 1.4 0 0 1 2 2L15 11"/><path d="M11.4 11.6 8.6 8.8"/><circle cx="6.4" cy="17.6" r="2.2"/>',
     "misc": '<path d="M6 4.5h8.5L18 8v11.5H6Z"/><path d="M14 4.5V8h4"/><path d="M9 12h6M9 15.5h4"/>',
     "ophthalmology": '<path d="M2.5 12S6.4 6.2 12 6.2 21.5 12 21.5 12 17.6 17.8 12 17.8 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.4"/><path d="M12 9.2h.01M9.4 11.2h.01"/>',
+    "orthopedics": '<path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/>',
 }
 
 # آیکون‌های رابط کاربری (بدون ایموجی)
@@ -196,6 +203,7 @@ QBANK_PARTS = [
     {"file": "rad-2", "title": "رادیولوژی ۲", "subject": "imaging", "count": 60, "chapters": 10},
     {"file": "rad-3", "title": "رادیولوژی ۳", "subject": "imaging", "count": 60, "chapters": 9},
     {"file": "eye", "title": "چشم‌پزشکی — جوادی", "subject": "ophthalmology", "count": 200, "chapters": 23},
+    {"file": "ortho", "title": "ارتوپدی — اعلمی هرندی", "subject": "orthopedics", "count": 200, "chapters": 20},
 ]
 
 

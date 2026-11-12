@@ -66,20 +66,28 @@ m = json.load(open('content/manifest.json'))
 q = m['qbank']
 keys = [s['key'] for s in m['subjects']]
 checks = [
-    ('counts.lessons == 156',  m['counts']['lessons'] == 156),
-    ('counts.subjects == 8',   m['counts']['subjects'] == 8),
-    ('qbank.total == 790',     q['total'] == 790),
-    ('len(qbank.parts) == 8',  len(q['parts']) == 8),
+    ('counts.lessons == 199',  m['counts']['lessons'] == 199),
+    ('counts.subjects == 10',  m['counts']['subjects'] == 10),
+    ('qbank.total == 1190',    q['total'] == 1190),
+    ('len(qbank.parts) == 10', len(q['parts']) == 10),
     ('جمع بخش‌ها == total',      sum(p['count'] for p in q['parts']) == q['total']),
     ('surgery در کلیدها',        'surgery' in keys),
     ('heme در کلیدها',           'heme' in keys),
+    ('ophthalmology در کلیدها',  'ophthalmology' in keys),
+    ('orthopedics در کلیدها',    'orthopedics' in keys),
     ('onco در کلیدها نباشد',     'onco' not in keys),
     ('docs/lib/manifest.json', pathlib.Path('docs/lib/manifest.json').is_file()),
     ('docs/lib/assets/theme/base.css', pathlib.Path('docs/lib/assets/theme/base.css').is_file()),
+    ('docs/lib/assets/theme/qbank.js', pathlib.Path('docs/lib/assets/theme/qbank.js').is_file()),
     ('docs/assets/theme/base.css', pathlib.Path('docs/assets/theme/base.css').is_file()),
+    ('docs/assets/theme/qbank.js', pathlib.Path('docs/assets/theme/qbank.js').is_file()),
     ('docs/lib/qbank/data/sur-1.json', pathlib.Path('docs/lib/qbank/data/sur-1.json').is_file()),
+    ('docs/lib/qbank/data/ortho.json', pathlib.Path('docs/lib/qbank/data/ortho.json').is_file()),
+    ('docs/lib/orthopedics/chapter-01.html', pathlib.Path('docs/lib/orthopedics/chapter-01.html').is_file()),
+    ('docs/lib/ophthalmology/chapter-01.html', pathlib.Path('docs/lib/ophthalmology/chapter-01.html').is_file()),
     ('docs/.nojekyll', pathlib.Path('docs/.nojekyll').is_file()),
     ('raw_src منتشر نشده', not pathlib.Path('raw_src').exists()),
+    ('qbank/raw منتشر نشده', not pathlib.Path('qbank/raw').exists()),
 ]
 bad = [n for n, ok in checks if not ok]
 for n, ok in checks:
@@ -95,7 +103,7 @@ git init -q -b main 2>/dev/null || git checkout -q -b main
 git config user.name  >/dev/null 2>&1 || git config user.name  "${GIT_AUTHOR_NAME:-mmr363637-afk}"
 git config user.email >/dev/null 2>&1 || git config user.email "${GIT_AUTHOR_EMAIL:-mmr363637-afk@users.noreply.github.com}"
 git add -A
-git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۱۵۶ درسنامه، ۸ بخش، ۷۹۰ سؤال"
+git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۱۹۹ درسنامه، ۱۰ بخش آزمون، ۱٬۱۹۰ سؤال"
 echo "   $(git rev-list --count HEAD) کامیت، $(git ls-tree -r --name-only HEAD | wc -l) فایل"
 
 cat <<'EOF'
