@@ -48,7 +48,11 @@ def load_all():
 
 
 APP_URL = os.environ.get("MEDX_APP_URL", "https://mmr363637-afk.github.io/planner/")  # اپ وب (برنامه‌ریز)
-AUTHOR = "مهدی محمدرحیمی"  # پانویس نسخه‌های تک‌فایلی
+AUTHOR = "مهدی محمدرحیمی"  # پانویس همهٔ صفحه‌های بانک سؤال
+
+# لایهٔ هایلایت خودبسنده (marks-lite) — در نسخه‌های تک‌فایلی درون فایل می‌آید
+MARKS_CSS = (ROOT / "assets" / "theme" / "marks-lite.css").read_text(encoding="utf-8")
+MARKS_JS = (ROOT / "assets" / "theme" / "marks-lite.js").read_text(encoding="utf-8")
 DARK_THEME = "#0c151d"  # theme-color حالت تیره (هم‌خانوادهٔ پالت روشن)
 
 # بهینه‌سازی «اپ/گوشی» برای بخش‌های تک‌فایلی‌مأخذ (eye و ortho):
@@ -124,7 +128,8 @@ HEADER = """<header class="site-header">
 </header>"""
 
 
-def page(title, desc, theme, ar, body, style_extra="", scripts="", theme_dark=None, root_style="") -> str:
+def page(title, desc, theme, ar, body, style_extra="", scripts="", theme_dark=None, root_style="",
+         marks=None) -> str:
     if theme_dark:
         theme_meta = (f'<meta name="theme-color" media="(prefers-color-scheme: light)" content="{theme}">\n'
                       f'<meta name="theme-color" media="(prefers-color-scheme: dark)" content="{theme_dark}">\n'
@@ -132,6 +137,17 @@ def page(title, desc, theme, ar, body, style_extra="", scripts="", theme_dark=No
     else:
         theme_meta = f'<meta name="theme-color" content="{theme}">'
     html_style = f' style="{root_style}"' if root_style else ""
+    author_meta = f'<meta name="author" content="{AUTHOR}">'
+    if marks:
+        marks_meta = "".join(
+            f' data-marks-{k}="{v}"' for k, v in
+            (("key", marks.get("key", "qbank")), ("scope", marks.get("scope", "#qb-app")),
+             ("roots", marks.get("roots", "#qb-app")), ("label", marks.get("label", "نشانه‌ها")))
+        )
+        marks_head = f'\n<link rel="stylesheet" href="{{ar}}assets/theme/marks-lite.css">'
+        marks_script = f'\n<script src="{{ar}}assets/theme/marks-lite.js" defer></script>'
+    else:
+        marks_meta, marks_head, marks_script = "", "", ""
     return f"""<!DOCTYPE html>
 <html lang="fa" dir="rtl"{html_style}>
 <head>
@@ -141,17 +157,18 @@ def page(title, desc, theme, ar, body, style_extra="", scripts="", theme_dark=No
 <meta name="description" content="{desc}">
 {theme_meta}
 <meta name="robots" content="noindex">
+{author_meta}
 <link rel="stylesheet" href="{ar}assets/theme/base.css">
 <link rel="stylesheet" href="{ar}assets/theme/library.css">
-<link rel="stylesheet" href="{ar}assets/theme/qbank.css">
+<link rel="stylesheet" href="{ar}assets/theme/qbank.css">{marks_head}
 <style>
 {FONTS.replace("__AR__", ar)}
 {style_extra}
 </style>
 </head>
-<body>
+<body{marks_meta}>
 {body}
-{scripts}
+{scripts}{marks_script}
 </body>
 </html>
 """
@@ -208,6 +225,7 @@ def build_part(p) -> None:
 </main>
 <footer class="site-footer">
   <div class="wrap"><span>{esc(p['title'])} — بانک سؤال کتابخانهٔ مدیکال</span>
+  <span>نویسنده: <b>{AUTHOR}</b></span>
   <a href="../index.html">همهٔ درس‌ها</a></div>
 </footer>
 """
@@ -223,9 +241,13 @@ def build_part(p) -> None:
         style_extra=app_optimize_css(p["part"]),
         theme_dark=DARK_THEME if is_dark_part(p["part"]) else None,
         root_style=f"--h:{h};--c:{c}%",
+        marks={"key": f"qb-{p['part']}", "scope": "#qb-app", "roots": "#qb-app", "label": "نشانه‌ها"},
     )
     # صفت‌ها را روی <body> تزریق کن (ساده‌تر و مطمئن‌تر از JS)
-    html = html.replace("<body>", f'<body data-qb-part="{p["part"]}" data-qb-data="data/{p["part"]}.json">', 1)
+    if "\n<body>" in html:  # فقط وقتی marks-lite صفات را روی body نگذاشته باشد
+        html = html.replace("\n<body>", f'<body data-qb-part="{p["part"]}" data-qb-data="data/{p["part"]}.json">', 1)
+    else:
+        html = html.replace("\n<body ", f'\n<body data-qb-part="{p["part"]}" data-qb-data="data/{p["part"]}.json" ', 1)
     html = html.replace('<script>document.body.dataset.qbPart="sur-1";document.body.dataset.qbData="../qbank/data/sur-1.json";</script>', "")
     html = html.replace(f'<script>document.body.dataset.qbPart="{p["part"]}";document.body.dataset.qbData="../qbank/data/{p["part"]}.json";</script>', "")
     (OUT / f"{p['part']}.html").write_text(html, encoding="utf-8")
@@ -295,20 +317,23 @@ def build_standalone(p) -> None:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{esc(p['title'])} — نسخهٔ تک‌فایلی</title>
+<meta name="author" content="{AUTHOR}">
 {theme_meta}
 <style>
 {chr(10).join(faces)}
 {css}
 </style>
+<style>{MARKS_CSS}</style>
 </head>
-<body data-qb-part="{p['part']}-solo">
+<body data-qb-part="{p['part']}-solo" data-marks-key="qb-{p['part']}-solo" data-marks-scope="#qb-app" data-marks-roots="#qb-app" data-marks-label="نشانه‌ها">
 {body}
 <script>window.__QB__ = {data};</script>
 <script>
 {js.replace('fetch(DATA, { cache: "no-cache" })', 'Promise.resolve({ ok: true, json: function () { return window.__QB__; } })')}
 </script>
-<footer class="qb-solo-foot">نویسنده: <strong>{AUTHOR}</strong></footer>
-<style>html,body{{max-width:100%;overflow-x:hidden}}body{{overflow-wrap:anywhere}}img,svg,table{{max-width:100%}}table{{height:auto}}pre,code{{overflow-x:auto}}.qb-solo-foot{{max-width:100%;margin:28px auto 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;line-height:1.9;color:var(--ink-3);border-top:1px solid var(--line)}}.qb-solo-foot strong{{color:var(--ink-2)}}</style>
+<script>{MARKS_JS}</script>
+<footer class="qb-solo-foot">نویسنده: <strong>{AUTHOR}</strong><br><span class="qb-solo-src">{esc(p['title'])} — بانک سؤال کتابخانهٔ مدیکال</span></footer>
+<style>html,body{{max-width:100%;overflow-x:hidden}}body{{overflow-wrap:anywhere}}img,svg,table{{max-width:100%}}table{{height:auto}}pre,code{{overflow-x:auto}}.qb-solo-foot{{max-width:100%;margin:28px auto 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;line-height:1.9;color:var(--ink-3);border-top:1px solid var(--line)}}.qb-solo-foot strong{{color:var(--ink-2)}}.qb-solo-src{{display:block;font-size:.74rem;color:var(--ink-3)}}</style>
 </body>
 </html>
 """
@@ -355,7 +380,9 @@ def build_index(parts) -> None:
   </div>
 </main>
 <footer class="site-footer">
-  <div class="wrap"><span>بانک سؤال — کتابخانهٔ مدیکال</span><a href="../index.html">همهٔ درس‌ها</a></div>
+  <div class="wrap"><span>بانک سؤال — کتابخانهٔ مدیکال</span>
+  <span>نویسنده: <b>{AUTHOR}</b></span>
+  <a href="../index.html">همهٔ درس‌ها</a></div>
 </footer>"""
     extra = """
 .qb-grid{display:grid;gap:16px;grid-template-columns:1fr}
@@ -376,6 +403,7 @@ def build_index(parts) -> None:
         title="بانک سؤال — کتابخانهٔ مدیکال",
         desc=f"{fa(total)} سؤال چهارگزینه‌ای پزشکی با پاسخ تشریحی.",
         theme="hsl(224 72% 46%)", ar="../", body=body, style_extra=extra,
+        marks={"key": "qb-index", "scope": "main", "roots": "main", "label": "نشانه‌ها"},
     )
     (OUT / "index.html").write_text(html, encoding="utf-8")
 

@@ -37,7 +37,8 @@ THEME_FILES = ("medx-core.css", "medx-content.css", "medx-reader.css", "medx-cor
 # پوستهٔ کتابخانه و موتور بانک سؤال: صفحه‌های qbank این‌ها را مستقیم از
 # ../assets/theme/ می‌خوانند، پس باید همیشه با assets/ همگام باشند (اختیاری =
 # اگر فایل نباشد خطا نمی‌دهیم).
-THEME_OPTIONAL = ("base.css", "library.css", "library.js", "viewer.js", "qbank.css", "qbank.js")
+THEME_OPTIONAL = ("base.css", "library.css", "library.js", "viewer.js", "qbank.css", "qbank.js",
+                  "marks-lite.css", "marks-lite.js")
 
 
 # ---------------------------------------------------------------------------

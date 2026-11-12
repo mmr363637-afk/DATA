@@ -30,7 +30,8 @@ gh repo create mmr363637-afk/med-library --public \
 ```
 med-library/
 ├─ content/          ← خروجی آمادهٔ انتشار (index.html, manifest.json, assets/, <subject>/, qbank/)
-├─ build/            ← اسکریپت‌های ساخت (subjects.json, make_map.py, build.py, gen_library.py, icons.py, qb_normalize.py, qb_build.py)
+├─ build/            ← اسکریپت‌های ساخت (subjects.json, make_map.py, build.py, gen_library.py, icons.py, qb_normalize.py, qb_build.py, inject_marks_credit.py, sync_docs.py)
+├─ tests/            ← ممیزی و راستی‌آزمایی (audit-library.py، test-marks.js با jsdom)
 ├─ qbank/            ← فایل‌های خام آزمون (raw/) + نسخهٔ نرمال‌شده (data/)
 ├─ assets/           ← منبع CSS/فونت/JS
 ├─ docs/             ← پیش‌نمایش‌ها و ‎.github ‎workflow
@@ -145,6 +146,9 @@ done
    python3 build/qb_normalize.py
    python3 build/qb_build.py
    python3 build/medx_build.py --portal-only
+   python3 build/inject_marks_credit.py   # هایلایت + اعتبار نویسندهٔ صفحه‌های پیش‌ساخته (idempotent)
+   python3 build/sync_docs.py             # همگام‌سازی تم و docs/lib
+   python3 tests/audit-library.py         # ممیزی ۲۸۵ فایل: هایلایت + نویسنده
 
 ۴) بررسی‌ها (همه باید درست باشند، وگرنه متوقف شو و گزارش بده):
    - جمع سؤال‌های چاپ‌شده = تعداد سؤال‌های استخراج‌شده از فایل (هیچ سؤالی نباید دور ریخته شود)

@@ -94,6 +94,8 @@ PR فقط برای `src/lib/lessonLinks.ts` در `planner` می‌دهد → گ�
 ```bash
 python3 build/make_map.py && python3 build/build.py
 python3 build/qb_build.py && python3 build/medx_build.py --portal-only
+python3 build/inject_marks_credit.py && python3 build/sync_docs.py
+python3 tests/audit-library.py          # باید بگوید: ✓ هیچ صفحه‌ای جا نمانده
 ```
 (برای افزودن بانک سؤال جدید: `qb_normalize.py` → `qb_build.py` → `medx_build.py --portal-only`؛
 `gen_library.py` پوستهٔ قدیمی را می‌سازد و manifest را از گزارش قدیمی بازنویسی می‌کند — اجرایش نکن.)
@@ -101,6 +103,9 @@ python3 build/qb_build.py && python3 build/medx_build.py --portal-only
 ---
 
 ## چیزهایی که لازم نیست نگرانشان باشی
+- ✅ هایلایت — در هر ۲۸۵ صفحه هست (۱۵۶ کامل، ۴۷ با لایهٔ خودکار موتور، ۷۰ با marks-lite)؛
+      ممیزی خودکار: `python3 tests/audit-library.py`.
+- ✅ اعتبار نویسنده — در همهٔ صفحه‌ها `meta` + پانویس دیداری «نویسنده: مهدی محمدرحیمی» با ذکر منبع.
 - ✅ فونت، آیکون، CSS — همه محلی. اینترنت قطع باشد هم درست است.
 - ✅ اندازهٔ متن — ۱۰۰٪ حفظ شده (نسبت واژه‌ها ۱٫۰۰ در همهٔ ۱۵۶ فایل بازطراحی‌شده).
 - ✅ موبایل و RTL — تست‌شده در ۳۹۰ و ۱۳۰۰ پیکسل.

@@ -225,6 +225,8 @@
       '<span class="qb-chip qb-chip--alt">' + esc(q.difficulty) + "</span>" +
       (q.bloom ? '<span class="qb-chip qb-chip--alt">' + esc(q.bloom) + "</span>" : "")
     ));
+    // کلید سند برای لایهٔ هایلایت (marks-lite): هر سؤال یک سند جداست
+    if (root.setAttribute) root.setAttribute("data-marks-doc", key);
     root.appendChild(head);
 
     root.appendChild(el("div", "qb-chapter-name", esc(q.chapterTitle)));

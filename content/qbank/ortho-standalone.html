@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ارتوپدی و شکستگی‌ها — اعلمی هرندی — نسخهٔ تک‌فایلی</title>
+<meta name="author" content="مهدی محمدرحیمی">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(16 62% 46%)">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0c151d">
 <meta name="color-scheme" content="light dark">
@@ -1277,8 +1278,163 @@ body{background:var(--bg)}
 ::selection{background:hsl(var(--h) var(--c) 45% / .35)}
 }
 </style>
+<style>/* ==========================================================================
+   marks-lite.css — ظاهر هایلایت/نشانه‌ها برای صفحه‌های بدون medx-reader
+   رنگ‌ها از متغیرهای صفحه می‌آیند (var(…, fallback)) تا روی هر پوسته‌ای بخواند.
+   ========================================================================== */
+
+/* ---------- خودِ هایلایت ---------- */
+mark.ml-hl {
+  background: rgba(250, 204, 21, .42);
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, .07);
+}
+mark.ml-hl[data-c="y"] { background: rgba(250, 204, 21, .42); }
+mark.ml-hl[data-c="g"] { background: rgba(134, 239, 172, .42); }
+mark.ml-hl[data-c="b"] { background: rgba(147, 197, 253, .46); }
+mark.ml-hl[data-c="p"] { background: rgba(249, 168, 212, .46); }
+mark.ml-hl[data-c="o"] { background: rgba(253, 186, 116, .48); }
+mark.ml-hl.is-flash {
+  outline: 2px solid var(--brand-600, #2563eb);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+html[data-theme="dark"] mark.ml-hl { background: rgba(250, 204, 21, .26); color: inherit; }
+html[data-theme="dark"] mark.ml-hl[data-c="g"] { background: rgba(74, 222, 128, .24); }
+html[data-theme="dark"] mark.ml-hl[data-c="b"] { background: rgba(96, 165, 250, .26); }
+html[data-theme="dark"] mark.ml-hl[data-c="p"] { background: rgba(244, 114, 182, .26); }
+html[data-theme="dark"] mark.ml-hl[data-c="o"] { background: rgba(251, 146, 60, .26); }
+
+/* ---------- نوار انتخاب ---------- */
+.ml-selbar {
+  position: absolute; z-index: 90; top: 0; left: 0;
+  display: none; align-items: center; gap: 7px;
+  padding: 7px 10px; border-radius: 999px;
+  border: 1px solid var(--line, #dbe4e1);
+  background: var(--surface, #fff);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, .22);
+}
+.ml-selbar.is-on { display: flex; }
+.ml-selbar__dot {
+  width: 20px; height: 20px; padding: 0; border-radius: 50%;
+  border: 1.5px solid rgba(15, 23, 42, .22); cursor: pointer;
+  background: rgba(250, 204, 21, .9);
+}
+.ml-selbar__dot[data-c="g"] { background: rgba(134, 239, 172, .95); }
+.ml-selbar__dot[data-c="b"] { background: rgba(147, 197, 253, .95); }
+.ml-selbar__dot[data-c="p"] { background: rgba(249, 168, 212, .95); }
+.ml-selbar__dot[data-c="o"] { background: rgba(253, 186, 116, .95); }
+.ml-selbar__dot:hover { transform: scale(1.13); }
+.ml-selbar__sep { width: 1px; height: 18px; background: var(--line, #dbe4e1); }
+.ml-selbar__btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 9px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line, #dbe4e1); background: transparent;
+  color: var(--ink-2, #334155); font-family: inherit; font-size: .72rem; font-weight: 700;
+}
+.ml-selbar__btn:hover { color: #dc2626; border-color: #fca5a5; background: rgba(254, 226, 226, .55); }
+.ml-selbar__btn[hidden] { display: none; }
+
+/* ---------- دکمهٔ شناور ---------- */
+.ml-fab {
+  position: fixed; inset-block-end: calc(16px + env(safe-area-inset-bottom, 0px));
+  inset-inline-start: 14px; z-index: 45; /* زیر اورلی‌های تمام‌صفحهٔ خودِ صفحه */
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 13px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line, #dbe4e1);
+  background: var(--surface, #fff); color: var(--ink-2, #334155);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .18);
+  font-family: inherit; font-size: .76rem; font-weight: 700; line-height: 1;
+}
+.ml-fab:hover { color: var(--brand-700, #1d4ed8); border-color: var(--brand-300, #93c5fd); }
+.ml-fab__n {
+  min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px;
+  display: inline-grid; place-items: center;
+  background: var(--brand-600, #2563eb); color: #fff;
+  font-size: .66rem; font-variant-numeric: tabular-nums;
+}
+.ml-fab__n[hidden] { display: none; }
+
+/* ---------- پنل ---------- */
+.ml-panel {
+  position: fixed; inset-block-end: calc(58px + env(safe-area-inset-bottom, 0px));
+  inset-inline-start: 14px; z-index: 70;
+  width: min(360px, calc(100vw - 28px));
+  max-height: min(62vh, 460px); display: flex; flex-direction: column;
+  border: 1px solid var(--line, #dbe4e1); border-radius: 16px; overflow: hidden;
+  background: var(--surface, #fff);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, .28);
+}
+.ml-panel[hidden] { display: none; }
+.ml-panel__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 11px 13px; border-bottom: 1px solid var(--line, #e2e8f0);
+  font-size: .8rem;
+}
+.ml-panel__x {
+  display: inline-grid; place-items: center; width: 26px; height: 26px;
+  border-radius: 8px; cursor: pointer; border: 1px solid var(--line, #e2e8f0);
+  background: transparent; color: var(--ink-3, #64748b);
+}
+.ml-panel__x:hover { color: #dc2626; border-color: #fca5a5; }
+.ml-panel__body { padding: 9px; overflow-y: auto; }
+.ml-empty {
+  margin: 6px 4px; font-size: .74rem; line-height: 1.9;
+  color: var(--ink-3, #64748b);
+}
+.ml-item {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 7px 8px; border-radius: 10px;
+}
+.ml-item:hover { background: rgba(148, 163, 184, .12); }
+.ml-item__c {
+  flex: none; width: 11px; height: 11px; margin-top: 5px; border-radius: 50%;
+  border: 1px solid rgba(15, 23, 42, .18); background: rgba(250, 204, 21, .95);
+}
+.ml-item__c[data-c="g"] { background: rgba(134, 239, 172, .95); }
+.ml-item__c[data-c="b"] { background: rgba(147, 197, 253, .95); }
+.ml-item__c[data-c="p"] { background: rgba(249, 168, 212, .95); }
+.ml-item__c[data-c="o"] { background: rgba(253, 186, 116, .95); }
+.ml-item__t {
+  flex: 1; min-width: 0; font-size: .74rem; line-height: 1.75;
+  color: var(--ink-2, #334155);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.ml-item__acts { flex: none; display: inline-flex; gap: 4px; }
+.ml-item__acts button {
+  display: inline-grid; place-items: center; width: 25px; height: 25px;
+  border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--line, #e2e8f0); background: transparent;
+  color: var(--ink-3, #64748b);
+}
+.ml-item__acts button:hover { color: var(--brand-700, #1d4ed8); border-color: var(--brand-300, #93c5fd); }
+.ml-item__acts button.danger:hover { color: #dc2626; border-color: #fca5a5; }
+
+/* ---------- توست ---------- */
+.ml-toast {
+  position: fixed; inset-inline: 0; inset-block-end: calc(74px + env(safe-area-inset-bottom, 0px));
+  z-index: 95; margin: 0 auto; width: max-content; max-width: calc(100vw - 32px);
+  padding: 9px 14px; border-radius: 999px;
+  background: rgba(15, 23, 42, .92); color: #fff;
+  font-size: .74rem; font-weight: 600; text-align: center;
+  opacity: 0; transform: translateY(6px); transition: opacity .18s, transform .18s;
+  pointer-events: none;
+}
+.ml-toast.is-on { opacity: 1; transform: none; }
+
+/* ---------- چاپ: هایلایت‌ها چاپ نمی‌شوند ---------- */
+@media print {
+  .ml-selbar, .ml-fab, .ml-panel, .ml-toast { display: none !important; }
+}
+
+@media (max-width: 560px) {
+  .ml-panel { inset-inline: 14px; width: auto; }
+}
+</style>
 </head>
-<body data-qb-part="ortho-solo">
+<body data-qb-part="ortho-solo" data-marks-key="qb-ortho-solo" data-marks-scope="#qb-app" data-marks-roots="#qb-app" data-marks-label="نشانه‌ها">
 <div class="wrap" style="padding-block:18px 60px">
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><a class="pill pill--icon qb-applink" href="https://mmr363637-afk.github.io/planner/" target="_blank" rel="noopener">↩ اپلیکیشن برنامه‌ریز</a></div>
   <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
@@ -1539,6 +1695,8 @@ body{background:var(--bg)}
       '<span class="qb-chip qb-chip--alt">' + esc(q.difficulty) + "</span>" +
       (q.bloom ? '<span class="qb-chip qb-chip--alt">' + esc(q.bloom) + "</span>" : "")
     ));
+    // کلید سند برای لایهٔ هایلایت (marks-lite): هر سؤال یک سند جداست
+    if (root.setAttribute) root.setAttribute("data-marks-doc", key);
     root.appendChild(head);
 
     root.appendChild(el("div", "qb-chapter-name", esc(q.chapterTitle)));
@@ -1675,7 +1833,450 @@ body{background:var(--bg)}
 })();
 
 </script>
-<footer class="qb-solo-foot">نویسنده: <strong>مهدی محمدرحیمی</strong></footer>
-<style>html,body{max-width:100%;overflow-x:hidden}body{overflow-wrap:anywhere}img,svg,table{max-width:100%}table{height:auto}pre,code{overflow-x:auto}.qb-solo-foot{max-width:100%;margin:28px auto 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;line-height:1.9;color:var(--ink-3);border-top:1px solid var(--line)}.qb-solo-foot strong{color:var(--ink-2)}</style>
+<script>/* ==========================================================================
+   marks-lite — هایلایت متن برای صفحه‌هایی که موتور medx-reader را ندارند
+   --------------------------------------------------------------------------
+   خودبسنده و بدون هیچ وابستگی (بدون MedX، بدون کتابخانه). برای درسنامه‌های
+   پیش‌ساختهٔ خودبسنده (چشم‌پزشکی)، صفحه‌های بانک سؤال و بانک آزمون طراحی شده.
+
+   پیکربندی از روی <body>:
+     data-marks-key    کلید localStorage (پیش‌فرض: از data-lesson-id یا مسیر صفحه)
+     data-marks-scope  سلکتور ریشه‌های هایلایت‌شدنی (پیش‌فرض: "main, .content, body")
+     data-marks-roots  سلکتور هر ریشهٔ هایلایت داخل scope (پیش‌فرض: ".ml-root")
+     data-marks-label  عنوان دکمهٔ شناور (پیش‌فرض: «نشانه‌ها»)
+
+   آنچه می‌سازد:
+     • نوار هایلایت روی انتخاب متن (۵ رنگ + حذف)
+     • دکمهٔ شناور «نشانه‌ها» + پنل فهرست هایلایت‌ها (پرش و حذف)
+     • بازیابی هایلایت‌ها پس از بارگذاری و پس از هر تغییر DOM
+       (بانک سؤال با هر سؤال DOM را از نو می‌سازد؛ کلید سند از
+        data-marks-doc روی کانتینر خوانده می‌شود)
+
+   قرارداد ذخیره:  ml-marks/<key>  →  { v:1, hl:[{d,r,s,e,c,q,at}] }
+     d = کلید سند (data-marks-doc یا "")، r = کلید ریشه، s/e = آفست متنی
+   ========================================================================== */
+(function (win, doc) {
+  "use strict";
+
+  var body = doc.body;
+  if (!body || body.getAttribute("data-marks-lite") === "off") return;
+  if (win.__marksLiteLoaded) return;
+  win.__marksLiteLoaded = true;
+
+  var COLORS = [["y", "زرد"], ["g", "سبز"], ["b", "آبی"], ["p", "صورتی"], ["o", "نارنجی"]];
+  var SCOPE = body.getAttribute("data-marks-scope") || "main, .content, body";
+  var ROOTS = body.getAttribute("data-marks-roots") || ".ml-root";
+  var LABEL = body.getAttribute("data-marks-label") || "نشانه‌ها";
+  var KEY = body.getAttribute("data-marks-key") ||
+    body.getAttribute("data-lesson-id") ||
+    body.getAttribute("data-lesson") ||
+    (win.location.pathname.split("/").pop() || "page");
+  var STORE = "ml-marks/" + KEY;
+
+  var ICON_NOTE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 5.5A2 2 0 0 1 6.5 3.5h7L20 10v8.5a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2Z"/><path d="M13 3.5V10h6.5"/><path d="M8 14h6M8 17h4"/></svg>';
+  var ICON_CLOSE = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>';
+  var ICON_JUMP = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>';
+  var ICON_TRASH = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9.5 7V4.5h5V7"/><path d="M6.5 7l1 13h9l1-13"/></svg>';
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+
+  function fa(n) { return String(n).replace(/\d/g, function (d) { return FA[+d]; }); }
+  function $(sel, root) { return (root || doc).querySelector(sel); }
+  function $$(sel, root) { return [].slice.call((root || doc).querySelectorAll(sel)); }
+
+  /* ------------------------------------------------------------ ذخیره‌سازی */
+  var DB = { v: 1, hl: [] };
+  function load() {
+    try {
+      var raw = win.localStorage.getItem(STORE);
+      if (!raw) return;
+      var d = JSON.parse(raw);
+      if (d && Array.isArray(d.hl)) DB = d;
+    } catch (e) { /* localStorage خاموش یا خراب */ }
+  }
+  function save() {
+    try { win.localStorage.setItem(STORE, JSON.stringify(DB)); } catch (e) { /* پر یا خاموش */ }
+  }
+
+  /* --------------------------------------------------------------- ریشه‌ها */
+  function scopeEl() {
+    var s = $(SCOPE);
+    return s || body;
+  }
+  function docKey() {
+    var host = scopeEl();
+    var v = host.getAttribute && host.getAttribute("data-marks-doc");
+    if (!v && host.querySelector) {
+      // بعضی صفحه‌ها کلید سند را روی کانتینر سؤال می‌گذارند، نه روی خودِ scope
+      var inner = host.querySelector("[data-marks-doc]");
+      if (inner) v = inner.getAttribute("data-marks-doc");
+    }
+    return v || "";
+  }
+  function rootList() {
+    var host = scopeEl();
+    var list = $$(ROOTS, host);
+    if (!list.length && host.matches && host.matches(ROOTS)) list = [host];
+    // اگر هیچ ریشهٔ نشانه‌گذاری‌شده‌ای نبود، خودِ scope یک ریشه حساب می‌شود
+    if (!list.length) list = [host];
+    return list;
+  }
+  function rootKey(root, i) {
+    return root.getAttribute("data-marks-id") || root.id || ("r" + i);
+  }
+
+  /* --------------------------------------------------------- متن و آفست‌ها */
+  function textNodes(root) {
+    var out = [];
+    var walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (!n.nodeValue) return NodeFilter.FILTER_REJECT;
+        var p = n.parentNode;
+        while (p && p !== root) {
+          var tag = p.nodeName.toLowerCase();
+          if (tag === "script" || tag === "style" || tag === "noscript") return NodeFilter.FILTER_REJECT;
+          p = p.parentNode;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var n;
+    while ((n = walker.nextNode())) out.push(n);
+    return out;
+  }
+  function offsetIn(root, node, off) {
+    var total = 0, nodes = textNodes(root);
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i] === node) return total + off;
+      total += nodes[i].nodeValue.length;
+    }
+    return total;
+  }
+  function wrapOffsets(root, start, end, color) {
+    var nodes = textNodes(root), acc = 0, targets = [];
+    for (var i = 0; i < nodes.length; i++) {
+      var len = nodes[i].nodeValue.length;
+      var s = acc, e = acc + len;
+      if (e > start && s < end) targets.push({ node: nodes[i], from: Math.max(0, start - s), to: Math.min(len, end - s) });
+      acc = e;
+    }
+    targets.reverse().forEach(function (t) {
+      try {
+        var r = doc.createRange();
+        r.setStart(t.node, t.from);
+        r.setEnd(t.node, t.to);
+        var mark = doc.createElement("mark");
+        mark.className = "ml-hl";
+        mark.setAttribute("data-c", color);
+        r.surroundContents(mark);
+      } catch (e) { /* گره‌های غیرمتنی رد می‌شوند */ }
+    });
+  }
+  function unwrap(root) {
+    $$("mark.ml-hl", root).forEach(function (m) {
+      var parent = m.parentNode;
+      while (m.firstChild) parent.insertBefore(m.firstChild, m);
+      parent.removeChild(m);
+      parent.normalize();
+    });
+  }
+
+  /* ------------------------------------------------------------- رندر مجدد */
+  var mo = null;
+  function restore() {
+    var dk = docKey();
+    var roots = rootList();
+    roots.forEach(function (root, i) {
+      var rk = rootKey(root, i);
+      var recs = DB.hl.filter(function (h) { return (h.d || "") === dk && h.r === rk; });
+      // ریشهٔ بدون نشانه و بدون mark: کاری ندارد (صفحه‌هایی با صدها ریشه، مثل بانک آزمون)
+      if (!recs.length && !$("mark.ml-hl", root)) return;
+      unwrap(root);
+      var len = recs.length ? textNodes(root).map(function (n) { return n.nodeValue; }).join("").length : 0;
+      recs
+        .sort(function (a, b) { return a.s - b.s; })
+        .forEach(function (h) {
+          if (h.s >= len) return;
+          wrapOffsets(root, h.s, Math.min(h.e, len), h.c);
+        });
+    });
+    // شمارهٔ پرش روی خودِ markها؛ پنل از همین برای «رفتن به هایلایت» استفاده می‌کند
+    $$("mark.ml-hl").forEach(function (m, i) { m.setAttribute("data-ml-i", i); });
+    renderPanel();
+    // خودِ restore DOM را تغییر می‌دهد؛ رکوردهایش را دور می‌ریزیم تا حلقهٔ بی‌پایان نسازد
+    if (mo && mo.takeRecords) mo.takeRecords();
+  }
+
+  /* ------------------------------------------------------------ نوار انتخاب */
+  var selbar = null, pending = null;
+  function buildSelbar() {
+    if (selbar) return;
+    selbar = doc.createElement("div");
+    selbar.className = "ml-selbar";
+    selbar.setAttribute("role", "toolbar");
+    selbar.setAttribute("aria-label", "هایلایت متن");
+    selbar.innerHTML = COLORS.map(function (c) {
+      return '<button type="button" class="ml-selbar__dot" data-c="' + c[0] + '" title="هایلایت ' + c[1] + '" aria-label="هایلایت ' + c[1] + '"></button>';
+    }).join("") +
+      '<span class="ml-selbar__sep"></span>' +
+      '<button type="button" class="ml-selbar__btn" data-ml-remove title="حذف هایلایت">' + ICON_TRASH + "<span>حذف</span></button>";
+    body.appendChild(selbar);
+    selbar.addEventListener("mousedown", function (e) { e.preventDefault(); });
+    selbar.addEventListener("click", function (e) {
+      var dot = e.target.closest("[data-c]");
+      if (dot) { commit(dot.getAttribute("data-c")); return; }
+      if (e.target.closest("[data-ml-remove]")) { removeSelected(); }
+    });
+  }
+  function hideSelbar() {
+    if (!selbar) return;
+    selbar.classList.remove("is-on");
+    pending = null;
+  }
+  function showSelbar(rect, hasHits) {
+    if (!selbar) return;
+    selbar.classList.add("is-on");
+    var sw = selbar.offsetWidth || 220;
+    var x = rect.left + rect.width / 2 + win.pageXOffset;
+    var y = rect.top + win.pageYOffset;
+    selbar.style.left = Math.max(8, Math.min(x - sw / 2, win.pageXOffset + doc.documentElement.clientWidth - sw - 8)) + "px";
+    var top = y - (selbar.offsetHeight || 40) - 10;
+    if (top < win.pageYOffset + 70) top = y + rect.height + 12;
+    selbar.style.top = top + "px";
+    var rem = $("[data-ml-remove]", selbar);
+    if (rem) rem.hidden = !hasHits;
+  }
+  function selectionInfo() {
+    var sel = win.getSelection();
+    if (!sel || sel.isCollapsed || !sel.rangeCount) return null;
+    var range = sel.getRangeAt(0);
+    var roots = rootList();
+    var host = null, idx = -1;
+    for (var i = 0; i < roots.length; i++) {
+      if (roots[i].contains(range.startContainer) && roots[i].contains(range.endContainer)) { host = roots[i]; idx = i; break; }
+    }
+    if (!host) return null;
+    var text = sel.toString();
+    if (!text || text.trim().length < 2) return null;
+    var start = offsetIn(host, range.startContainer, range.startOffset);
+    var end = offsetIn(host, range.endContainer, range.endOffset);
+    if (end <= start) return null;
+    var rect = null;
+    try { rect = range.getBoundingClientRect(); } catch (e) { rect = null; }
+    if (!rect || (!rect.width && !rect.height)) {
+      try { rect = range.getClientRects()[0] || rect; } catch (e2) { rect = null; }
+    }
+    if (!rect) return null;
+    return { range: range, root: host, r: rootKey(host, idx), s: start, e: end, text: text, rect: rect };
+  }
+  function commit(color) {
+    if (!pending) return;
+    var rec = { d: docKey(), r: pending.r, s: pending.s, e: pending.e, c: color, q: pending.text.replace(/\s+/g, " ").trim().slice(0, 220), at: Date.now() };
+    if (!rec.q) return;
+    DB.hl.push(rec);
+    save();
+    try { win.getSelection().removeAllRanges(); } catch (e) { /* noop */ }
+    hideSelbar();
+    restore();
+    toast("هایلایت ذخیره شد");
+  }
+  function removeSelected() {
+    if (!pending) return;
+    var dk = docKey();
+    var touched = $$("mark.ml-hl", pending.root).filter(function (m) {
+      try { return pending.range.intersectsNode(m); } catch (e) { return false; }
+    });
+    if (!touched.length) return;
+    // حذف رکوردهایی که با محدودهٔ انتخاب‌شده هم‌پوشانی دارند
+    DB.hl = DB.hl.filter(function (h) {
+      if ((h.d || "") !== dk || h.r !== pending.r) return true;
+      return !(h.s < pending.e && h.e > pending.s);
+    });
+    save();
+    try { win.getSelection().removeAllRanges(); } catch (e) { /* noop */ }
+    hideSelbar();
+    restore();
+    toast("هایلایت حذف شد");
+  }
+  function removeAt(rec) {
+    DB.hl = DB.hl.filter(function (h) { return h !== rec; });
+    save(); restore(); toast("هایلایت حذف شد");
+  }
+
+  /* ------------------------------------------------------- دکمه و پنل شناور */
+  var fab = null, panel = null;
+  function buildFab() {
+    if (fab) return;
+    fab = doc.createElement("button");
+    fab.type = "button";
+    fab.className = "ml-fab";
+    fab.title = LABEL;
+    fab.setAttribute("aria-label", LABEL);
+    fab.innerHTML = ICON_NOTE + "<span>" + LABEL + '</span><b class="ml-fab__n" hidden>۰</b>';
+    body.appendChild(fab);
+    fab.addEventListener("click", function () { togglePanel(); });
+
+    panel = doc.createElement("div");
+    panel.className = "ml-panel";
+    panel.hidden = true;
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", LABEL);
+    panel.innerHTML =
+      '<div class="ml-panel__head"><b>' + LABEL + '</b>' +
+      '<button type="button" class="ml-panel__x" data-ml-close aria-label="بستن">' + ICON_CLOSE + "</button></div>" +
+      '<div class="ml-panel__body" data-ml-list></div>';
+    body.appendChild(panel);
+    panel.addEventListener("click", function (e) {
+      if (e.target.closest("[data-ml-close]")) { togglePanel(false); return; }
+      var del = e.target.closest("[data-ml-del]");
+      if (del) {
+        var i = +del.getAttribute("data-ml-del");
+        var dk = docKey();
+        var rec = DB.hl.filter(function (h) { return (h.d || "") === dk; })[i];
+        if (rec) removeAt(rec);
+        return;
+      }
+      var jump = e.target.closest("[data-ml-jump]");
+      if (jump) {
+        var mark = $('mark.ml-hl[data-ml-i="' + jump.getAttribute("data-ml-jump") + '"]');
+        if (mark) {
+          mark.scrollIntoView({ behavior: "smooth", block: "center" });
+          mark.classList.add("is-flash");
+          setTimeout(function () { mark.classList.remove("is-flash"); }, 1400);
+        }
+      }
+    });
+  }
+  function togglePanel(force) {
+    if (!panel) return;
+    var on = force == null ? panel.hidden : force;
+    panel.hidden = !on;
+    if (fab) fab.setAttribute("aria-expanded", on ? "true" : "false");
+    if (on) renderPanel();
+  }
+  function renderPanel() {
+    if (!fab) return;
+    var dk = docKey();
+    var mine = DB.hl.filter(function (h) { return (h.d || "") === dk; });
+    var badge = $(".ml-fab__n", fab);
+    if (badge) { badge.textContent = fa(mine.length); badge.hidden = mine.length === 0; }
+    if (!panel) return;
+    var host = $("[data-ml-list]", panel);
+    if (!host) return;
+    host.innerHTML = "";
+    if (!mine.length) {
+      var p = doc.createElement("p");
+      p.className = "ml-empty";
+      p.textContent = "هنوز هایلایتی ثبت نشده. متنی را انتخاب کن تا نوار رنگ‌ها ظاهر شود.";
+      host.appendChild(p);
+      return;
+    }
+    var marks = $$("mark.ml-hl");
+    mine.slice().sort(function (a, b) { return b.at - a.at; }).forEach(function (rec) {
+      var row = doc.createElement("div");
+      row.className = "ml-item";
+      // اولین mark هم‌رنگ با همان متن → هدف پرش
+      var target = -1;
+      for (var i = 0; i < marks.length; i++) {
+        if (marks[i].getAttribute("data-c") === rec.c &&
+            (marks[i].textContent || "").replace(/\s+/g, " ").trim() === (rec.q || "").trim()) {
+          target = +marks[i].getAttribute("data-ml-i");
+          break;
+        }
+      }
+      row.innerHTML =
+        '<span class="ml-item__c" data-c="' + rec.c + '"></span>' +
+        '<span class="ml-item__t"></span>' +
+        '<span class="ml-item__acts">' +
+          (target > -1 ? '<button type="button" data-ml-jump="' + target + '" title="رفتن به هایلایت">' + ICON_JUMP + "</button>" : "") +
+          '<button type="button" class="danger" data-ml-del="' + mine.indexOf(rec) + '" title="حذف">' + ICON_TRASH + "</button>" +
+        "</span>";
+      $(".ml-item__t", row).textContent = rec.q || "…";
+      host.appendChild(row);
+    });
+  }
+
+  /* ------------------------------------------------------------------- توست */
+  var toastEl = null, toastTimer = null;
+  function toast(msg) {
+    if (!toastEl) {
+      toastEl = doc.createElement("div");
+      toastEl.className = "ml-toast";
+      toastEl.setAttribute("role", "status");
+      toastEl.setAttribute("aria-live", "polite");
+      body.appendChild(toastEl);
+    }
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove("is-on"); }, 2200);
+  }
+
+  /* --------------------------------------------------------------- راه‌اندازی */
+  function init() {
+    load();
+    buildSelbar();
+    buildFab();
+    restore();
+
+    doc.addEventListener("mouseup", function (e) {
+      if (selbar && selbar.contains(e.target)) return;
+      setTimeout(function () {
+        var info = selectionInfo();
+        if (!info) { hideSelbar(); return; }
+        pending = info;
+        var hits = $$("mark.ml-hl", info.root).filter(function (m) {
+          try { return info.range.intersectsNode(m); } catch (err) { return false; }
+        });
+        showSelbar(info.rect, hits.length > 0);
+      }, 12);
+    });
+    doc.addEventListener("touchend", function (e) {
+      if (selbar && selbar.contains(e.target)) return;
+      setTimeout(function () {
+        var info = selectionInfo();
+        if (!info) return;
+        pending = info;
+        showSelbar(info.rect, false);
+      }, 180);
+    }, { passive: true });
+    doc.addEventListener("mousedown", function (e) {
+      if (selbar && !selbar.contains(e.target)) hideSelbar();
+    });
+    doc.addEventListener("scroll", function () {
+      if (selbar && selbar.classList.contains("is-on")) hideSelbar();
+    }, { passive: true });
+    doc.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { hideSelbar(); togglePanel(false); }
+    });
+
+    // بانک سؤال و صفحه‌های پویا: پس از هر تغییر DOM، هایلایت‌ها برگردانده می‌شوند
+    if (win.MutationObserver) {
+      var queued = false;
+      mo = new MutationObserver(function () {
+        if (queued) return;
+        queued = true;
+        setTimeout(function () { queued = false; restore(); }, 60);
+      });
+      mo.observe(scopeEl(), {
+        childList: true, subtree: true, characterData: true,
+        // تغییر کلید سند (سؤال بعدی/قبلی) باید پنل و شمارنده را تازه کند
+        attributes: true, attributeFilter: ["data-marks-doc"],
+      });
+    }
+  }
+
+  win.MarksLite = {
+    restore: restore,
+    refresh: function () { load(); restore(); },
+    count: function () { return DB.hl.filter(function (h) { return (h.d || "") === docKey(); }).length; },
+    openPanel: function () { togglePanel(true); }
+  };
+
+  if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", init);
+  else init();
+})(window, document);
+</script>
+<footer class="qb-solo-foot">نویسنده: <strong>مهدی محمدرحیمی</strong><br><span class="qb-solo-src">ارتوپدی و شکستگی‌ها — اعلمی هرندی — بانک سؤال کتابخانهٔ مدیکال</span></footer>
+<style>html,body{max-width:100%;overflow-x:hidden}body{overflow-wrap:anywhere}img,svg,table{max-width:100%}table{height:auto}pre,code{overflow-x:auto}.qb-solo-foot{max-width:100%;margin:28px auto 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom));text-align:center;font-size:.82rem;line-height:1.9;color:var(--ink-3);border-top:1px solid var(--line)}.qb-solo-foot strong{color:var(--ink-2)}.qb-solo-src{display:block;font-size:.74rem;color:var(--ink-3)}</style>
 </body>
 </html>

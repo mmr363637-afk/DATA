@@ -81,6 +81,9 @@ checks = [
     ('docs/lib/manifest.json', pathlib.Path('docs/lib/manifest.json').is_file()),
     ('docs/lib/assets/theme/base.css', pathlib.Path('docs/lib/assets/theme/base.css').is_file()),
     ('docs/lib/assets/theme/qbank.js', pathlib.Path('docs/lib/assets/theme/qbank.js').is_file()),
+    ('docs/lib/assets/theme/marks-lite.js', pathlib.Path('docs/lib/assets/theme/marks-lite.js').is_file()),
+    ('docs/lib/assets/theme/marks-lite.css', pathlib.Path('docs/lib/assets/theme/marks-lite.css').is_file()),
+    ('docs/assets/theme/marks-lite.js', pathlib.Path('docs/assets/theme/marks-lite.js').is_file()),
     ('docs/assets/theme/base.css', pathlib.Path('docs/assets/theme/base.css').is_file()),
     ('docs/assets/theme/qbank.js', pathlib.Path('docs/assets/theme/qbank.js').is_file()),
     ('docs/lib/qbank/data/sur-1.json', pathlib.Path('docs/lib/qbank/data/sur-1.json').is_file()),
@@ -94,6 +97,26 @@ checks = [
     ('raw_src منتشر نشده', not pathlib.Path('raw_src').exists()),
     ('qbank/raw منتشر نشده', not pathlib.Path('qbank/raw').exists()),
 ]
+
+# ---- هایلایت و اعتبار نویسنده در همهٔ صفحه‌های منتشرشده ----
+import re
+AUTHOR = 'مهدی محمدرحیمی'
+no_credit, no_mark = [], []
+for f in sorted(pathlib.Path('docs/lib').rglob('*.html')):
+    t = f.read_text(encoding='utf-8', errors='replace')
+    if not (re.search(r'نویسنده\s*[:：]', t) and AUTHOR in t) and not re.search(r'name="author"[^>]*' + AUTHOR, t):
+        no_credit.append(str(f))
+    has_reader = 'medx-reader.js' in t
+    has_lite = 'marks-lite' in t
+    has_text = bool(re.search(r'class="sec__body"|class="sec-body"|data-bank|qx__q|questionStem', t))
+    if has_text and not (has_reader or has_lite):
+        no_mark.append(str(f))
+checks += [
+    (f'اعتبار نویسنده در همهٔ docs/lib ({len(no_credit)} جاافتاده)', not no_credit),
+    (f'هایلایت در همهٔ صفحه‌های متنی ({len(no_mark)} جاافتاده)', not no_mark),
+]
+for extra in (no_credit + no_mark)[:6]:
+    print('    · ' + extra)
 bad = [n for n, ok in checks if not ok]
 for n, ok in checks:
     print(('  ✓ ' if ok else '  ✗ ') + n)

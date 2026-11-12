@@ -5,3 +5,7 @@ __pycache__/
 # فایل‌های خام (منبع خصوصی): هیچ‌وقت منتشر نمی‌شوند — فقط content/ و docs/lib/
 raw_src/
 qbank/raw/
+
+# وابستگی‌های تست (tests/) — فقط کد تست در گیت می‌ماند
+node_modules/
+package-lock.json
