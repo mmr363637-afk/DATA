@@ -8,7 +8,8 @@
 ```
 content/                     ← سایت منتشرشده (خودبسنده)
   index.html                 ← صفحهٔ اصلی (پورتال)
-  subject/<key>.html         ← داشبورد هر درس (۱۰ درس فعال + ۶ درس «به‌زودی»)
+  subject/<key>.html         ← داشبورد هر درس (۱۱ درس فعال + ۵ درس «به‌زودی»)
+  subject/infectious-exam.html ← بانک آزمون ۷۰۵ سؤالی درون‌درسی عفونی (صفحهٔ جدا)
   <subject>/<slug>.html      ← ۱۵۶ درسنامهٔ بازطراحی‌شده
   ophthalmology/chapter-NN.html ← ۲۳ فصل چشم‌پزشکی (صفحهٔ پیش‌ساخته و خودبسنده)
   orthopedics/chapter-NN.html ← ۲۰ فصل ارتوپدی (صفحهٔ پیش‌ساخته و خودبسنده)
@@ -174,3 +175,40 @@ python3 build/medx_build.py --verify-only   # فقط بازرسی
   `content/qbank/ortho-standalone.html` ~۲٫۰ مگابایت است (فونت + CSS + JS + ۲۰۰ سؤال با تصویر).
 - **اتصال به اپ**: `integration/lessonLinks.ts` تغییر نکرد — کاملاً manifestمحور است و
   `appSubjectKeys: ["orthopedics-alamiharandi"]` را از `manifest.json` می‌خواند.
+
+## ۱۴. افزودن عفونی (۲۰۲۶-۱۱)
+
+- **۴۷ درسنامهٔ عفونی** به‌صورت صفحهٔ پیش‌ساخته و خودبسنده در `content/infectious/`:
+  ۴۴ فصل رسمی بخش ۵ «بیماری‌های عفونی» هاریسون ۲۰۲۵ (ویراست ۲۲، فصل‌های ۱۲۴ تا ۳۱۵)
+  + ۳ مصوبهٔ ۱۴۰۳ کمیتهٔ کشوری سل (`tb-1403-treatment`، `tb-1403-latent-tb`،
+  `tb-1403-diagnosis-algorithms`). شناسنامهٔ منبع در `content/infectious/manifest.json`
+  با `quizBankPolicy: "lesson-local-only"` و `examBankPage: "subject/infectious-exam.html"`.
+  هر درسنامه ۱۵ MCQ، فلش‌کارت، جدول و الگوریتم دارد و لینک برگشت به درسنامهٔ خودش را
+  در بانک آزمون می‌گیرد.
+- `build/medx_build.py` مسیر `infectious/` را هم به `PREBUILT_PREFIXES` افزود؛
+  کلید درس در `build/subjects.json` و `build/medx/data.py` از `id` (رزرو، hue ۶۲، «به‌زودی»)
+  به **`infectious`** (hue ۱۶۸، chroma ۶۲، accent ۱۹۴، `soon: False`) تغییر کرد.
+  آیکون همان `id` در `build/icons.py` و موتیف `microbe` در `art.py` است.
+- **بانک آزمون درون‌درسی** (`content/subject/infectious-exam.html`): همهٔ ۷۰۵ MCQ درسنامه‌های
+  عفونی در یک صفحهٔ خودبسنده با ۴۹ چیپ فیلتر فصل، جست‌وجو، ترتیب تصادفی، نوار پیشرفت و
+  ذخیرهٔ محلی (`medx.infectious.exam.v1`)؛ فقط به `assets/theme/medx-core.js` موجود نیاز دارد
+  و منطقش درون همان فایل است (اسکریپت inline، بدون دادهٔ بیرونی).
+- `build/medx/html.py`: ثابت تازهٔ `SUBJECT_EXAM_BANK` (کلید درس → صفحهٔ بانک آزمون درون‌درسی).
+  پیش‌تر این کارت با `elif` نوشته شده بود و به‌محض اینکه عفونی بخش qbank می‌گرفت،
+  بانک آزمون ۷۰۵ سؤالی از صفحهٔ درس ناپدید می‌شد؛ حالا دو کارت **افزودنی** ساخته می‌شوند:
+  بانک آزمون درون‌درسی + «بانک سؤال این درس» (بخش‌های `QBANK_PARTS`). دکمهٔ هیرو
+  (`exam_btn`) هم از همان ثابت می‌آید، پس برای درس‌های دیگر خروجی بایت‌به‌بایت همان است.
+- **بانک سؤال عفونی** (`ofuni.html` «آفونی» ← بخش `inf`): ۲۰۰ سؤال تألیفی مطابق ۴۴ فصل
+  مصوب هاریسون ۲۰۲۵، استخراج‌شده با `build/qb_extract.py ofuni.html` → `qbank/raw/ofuni.json`
+  و نرمال‌شده در `qbank/data/inf.json` (همان نگاشت `answer→correct`،
+  `correctExplanation→explanation`، `optionRationales→whyWrong`، `clinicalPearl→pearl`،
+  `examTrap→trap`؛ سطح‌ها: ۳۰ آسان / ۷۰ متوسط / ۷۰ دشوار / ۳۰ خیلی دشوار).
+  این بخش **تصویر ندارد** (۰ از ۲۰۰) و **لایهٔ تیره نمی‌گیرد** چون مأخذش روشن است —
+  `APP_OPTIMIZED_PARTS` همان `("eye", "ortho")` ماند.
+- فصل‌های بانک `inf` دقیقاً همان ۴۴ فصل درسنامه‌های هاریسون است (۳ مصوبهٔ سل سؤال تألیفی
+  ندارند و در `content/infectious/manifest.json` با `chapter` ۴۰۱–۴۰۳ مشخص‌اند).
+- **جمع بانک سؤال: ۱٬۳۹۰ سؤال در ۱۱ بخش** و ۱۱ نسخهٔ تک‌فایلی آفلاین
+  (`inf-standalone.html` ~۱٫۱ مگابایت). پورتال: ۲۴۶ درسنامه · ۱۱ درس · ۳۰۹ ساعت ·
+  ۶٬۴۴۸ فلش‌کارت · ۱٬۵۱۳ جدول · ۴٬۱۷۰ MCQ.
+- **اتصال به اپ**: `integration/lessonLinks.ts` تغییر نکرد؛ `appSubjectKeys: ["infectious-harrison"]`
+  از `manifest.json` خوانده می‌شود و ۴۷ درسنامهٔ عفونی به مبحث‌های همان کلید در planner وصل می‌شوند.

@@ -103,7 +103,7 @@ def sync_docs():
 # صفحات چشم‌پزشکی و ارتوپدی از قبل آماده و خودبسنده‌اند (فونت و استایل درون همان فایل)؛
 # بازنویسی‌شان با تبدیل استاندارد، طراحی‌شان را خراب می‌کند. برایشان تطبیق ردی می‌شود
 # و آمار همان مقادیر manifest باقی می‌ماند.
-PREBUILT_PREFIXES = ("ophthalmology/", "orthopedics/")
+PREBUILT_PREFIXES = ("ophthalmology/", "orthopedics/", "infectious/")
 
 
 def prebuilt_importance() -> dict:

@@ -377,6 +377,19 @@ def lesson_card(lesson: dict, subject: dict, idx: int, base: str = "../") -> str
 </div>"""
 
 
+# بانک آزمون درون‌درسی بعضی درس‌ها: همهٔ MCQهای خودِ درسنامه‌ها در یک صفحهٔ جدا.
+# این با بخش‌های qbank کتابخانه (سؤال‌های تألیفیِ کتاب‌محور) فرق دارد و هر دو
+# باید در صفحهٔ درس دیده شوند؛ `page` نسبت به پوشهٔ subject/ است.
+SUBJECT_EXAM_BANK = {
+    "infectious": {
+        "page": "infectious-exam.html",
+        "eyebrow": "آزمون موضوعی",
+        "heading": "بانک آزمون {n} سؤالی عفونی",
+        "lede": "تمام {n} پرسش چهارگزینه‌ای درسنامه‌های عفونی در یک صفحه، با فیلتر فصل، "
+                "جست‌وجو، ترتیب تصادفی و پاسخ تشریحی.",
+    },
+}
+
 IMP_FA = {"high": "High Yield", "medium": "متوسط", "supp": "تکمیلی"}
 ICON_FLAME = art.uicon("flame", 11, "uicon")
 ICON_LAYERS = art.uicon("layers", 11, "uicon")
@@ -385,10 +398,21 @@ ICON_LAYERS = art.uicon("layers", 11, "uicon")
 def subject_page(subject: dict, lessons: list[dict], metrics: dict, base: str = "../") -> str:
     cards = "\n".join(lesson_card(l, subject, i + 1, base) for i, l in enumerate(lessons))
     qparts = [p for p in QBANK_PARTS if p["subject"] == subject["key"]]
+    exam_bank = SUBJECT_EXAM_BANK.get(subject["key"])
+    n_mcq = fa(metrics["mcq"])
     qblock = ""
+    if exam_bank:
+        qblock += f"""<section style="margin-top:6px">
+  <div class="sec-title"><div><span class="eyebrow">{exam_bank['eyebrow']}</span><h2>{exam_bank['heading'].format(n=n_mcq)}</h2>
+  <p>{exam_bank['lede'].format(n=n_mcq)}</p></div></div>
+  <div class="card card--pad" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <a class="btn btn--brand btn--sm" href="{exam_bank['page']}">{ico('quiz', 14)} ورود به بانک آزمون ({n_mcq} سؤال)</a>
+    <a class="btn btn--ghost btn--sm" href="{base}qbank/index.html" style="margin-inline-start:auto">همهٔ آزمون‌های کتابخانه</a>
+  </div>
+</section>"""
     if qparts:
         links = "".join(f'<a class="btn btn--ghost btn--sm" href="{base}qbank/{p["file"]}.html">{escape(p["title"])} · {fa(p["count"])}</a>' for p in qparts)
-        qblock = f"""<section style="margin-top:6px">
+        qblock += f"""<section style="margin-top:6px">
   <div class="sec-title"><div><span class="eyebrow">آزمون</span><h2>بانک سؤال این درس</h2>
   <p>آزمون‌های فصل‌به‌فصل با پاسخ تشریحی؛ مستقل از درسنامه‌ها.</p></div></div>
   <div class="card card--pad" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
@@ -396,6 +420,8 @@ def subject_page(subject: dict, lessons: list[dict], metrics: dict, base: str = 
     <a class="btn btn--brand btn--sm" href="{base}qbank/index.html" style="margin-inline-start:auto">همهٔ آزمون‌ها</a>
   </div>
 </section>"""
+    exam_btn = (f'<a class="btn btn--ghost btn--sm" href="{exam_bank["page"]}">{ico("quiz", 13)} بانک آزمون ({n_mcq} سؤال)</a>'
+                if exam_bank else "")
 
     stats = [
         (fa(metrics["count"]), "درسنامه"),
@@ -431,6 +457,7 @@ def subject_page(subject: dict, lessons: list[dict], metrics: dict, base: str = 
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
         <a class="btn btn--brand btn--sm" href="#lessons">{ico('book', 14)} فهرست درسنامه‌ها</a>
         <button class="btn btn--ghost btn--sm" type="button" data-continue-subject>{ico('play', 13)} ادامهٔ مطالعه</button>
+        {exam_btn}
       </div>
     </div>
     <div class="subj-hero__art">{art.subject_plate(subject, "subject", uid="sh" + subject['key'])}</div>

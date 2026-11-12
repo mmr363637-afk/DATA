@@ -30,8 +30,8 @@ def esc(s) -> str:
     return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology", "orthopedics"]
-PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye", "ortho"]
+ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology", "orthopedics", "infectious"]
+PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye", "ortho", "inf"]
 
 
 def load_all():

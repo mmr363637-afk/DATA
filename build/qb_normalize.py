@@ -7,10 +7,10 @@
   • exam-jame-premium2.json    -> ch, chTitle, diff, wrongExps[3] (بدون ایندکس)
   • radiology-qb-*.json        -> ch, chTitle, difficulty, coverage, whyWrong{idx:text}
   • surgery-qb-*.json          -> chapter, chTitle, difficulty, whyWrong[4] (ایندکس‌دار، جای خالی "")
-  • chashm.json / ortho.json   -> answer, correctExplanation, optionRationales[4],
+  • chashm/ortho/ofuni.json    -> answer, correctExplanation, optionRationales[4],
                                   clinicalPearl, examTrap, highYield (بانک‌های تک‌فایلی)
                                   ortho.json علاوه بر این image{src,alt,credit,source,w,h}
-                                  و referenceSection دارد (۴۲ سؤال تصویردار).
+                                  و referenceSection دارد (۴۲ سؤال ارتوپدی تصویردار).
 
 خروجی یک طرح واحد:
   { id, subject, src, part, chapter, chapterTitle, topic, subtopic,
@@ -41,6 +41,7 @@ BUNDLES = [
     ("surgery", "sur-3", "جراحی عمومی — لارنس (فصول ۲۱ تا ۳۰)", ["surgery-qb-3.json"]),
     ("ophthalmology", "eye", "چشم‌پزشکی عمومی — جوادی", ["chashm.json"]),
     ("orthopedics", "ortho", "ارتوپدی و شکستگی‌ها — اعلمی هرندی", ["ortho.json"]),
+    ("infectious", "inf", "بیماری‌های عفونی — هاریسون ۲۰۲۵", ["ofuni.json"]),
 ]
 
 DIFF = {"easy": "آسان", "medium": "متوسط", "hard": "دشوار", "very hard": "خیلی دشوار", "veryhard": "خیلی دشوار",
