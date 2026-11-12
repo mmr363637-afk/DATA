@@ -8,9 +8,10 @@
 ```
 content/                     ← سایت منتشرشده (خودبسنده)
   index.html                 ← صفحهٔ اصلی (پورتال)
-  subject/<key>.html         ← داشبورد هر درس (۹ درس فعال + ۶ درس «به‌زودی»)
+  subject/<key>.html         ← داشبورد هر درس (۱۰ درس فعال + ۶ درس «به‌زودی»)
   <subject>/<slug>.html      ← ۱۵۶ درسنامهٔ بازطراحی‌شده
   ophthalmology/chapter-NN.html ← ۲۳ فصل چشم‌پزشکی (صفحهٔ پیش‌ساخته و خودبسنده)
+  orthopedics/chapter-NN.html ← ۲۰ فصل ارتوپدی (صفحهٔ پیش‌ساخته و خودبسنده)
   qbank/                     ← بانک سؤال مستقل (+ بخش چشم‌پزشکی)
   assets/theme/              ← medx-core.css|js، medx-content.css، medx-reader.css|js، medx-exam.js
   assets/fonts/              ← وزیرمتن (۵ وزن، محلی)
@@ -122,3 +123,54 @@ python3 build/medx_build.py --verify-only   # فقط بازرسی
   قبلی همان بخش در `_parts.json` حفظ می‌شود (تا این اجرا محتوای قبلی را پاک نکند).
 - `build/qb_build.py` پچ‌های دستیِ قبلی را در خود دارد (کلاس `qb-applink`، پیل لینک اپ در
   تک‌فایلی، پانویس نویسنده و قفل سرریز افقی) تا خروجی بازتولیدشده با نسخهٔ منتشرشده یکی بماند.
+
+## ۱۲. افزودن ارتوپدی (۲۰۲۶-۱۱)
+
+- **۲۰ فصل ارتوپدی** (کتاب «درسنامه ارتوپدی و شکستگی‌ها»، اعلمی هرندی و همکاران، ویرایش ۶، ۱۳۹۷؛
+  فصل‌های ۱، ۳ تا ۱۵، ۱۷، ۱۸ و ۲۰ تا ۲۳) به‌صورت **صفحهٔ پیش‌ساخته و خودبسنده**
+  (`content/orthopedics/chapter-*.html`) اضافه شدند. فصل‌های ۲، ۱۶ و ۱۹ در این مجموعه نیستند
+  و فصل ۱۳ تا صفحهٔ ۲۷۶ کتاب پوشش داده شده است (`content/orthopedics/manifest.json`).
+- هر فصل: درسنامه، الگوریتم‌های تعاملی، کیس بالینی، اطلس تصویری (تصاویر Wikimedia Commons با
+  ذکر پدیدآور و مجوز)، جدول، فلش‌کارت و ۱۵ سؤال چهارگزینه‌ای درون‌درس؛ پیشرفت در
+  `localStorage` با کلید `medx.orthopedics.progress.v1` ذخیره می‌شود.
+- `build/medx_build.py` مسیر `orthopedics/` را هم بدون تبدیل عبور می‌دهد (`PREBUILT_PREFIXES`)؛
+  `build/medx/data.py` و `art.py` درس `orthopedics` (رنگ ۱۶، موتیف `bone`) را دارند.
+- **manifest**: درس `orthopedics` (۱۰ درس؛ ۱۹۹ درسنامه؛ ۱۱٬۱۲۴ دقیقه). کلید اپ
+  `orthopedics-alamiharandi` (که پیش‌تر موقتاً زیر «جراحی» بود) به خودِ ارتوپدی سپرده شد.
+  MCQهای درون‌درس جزو بانک سؤال اپ نیستند (بانک سؤال ارتوپدی در بند ۱۳ جداگانه اضافه شد).
+
+## ۱۳. بانک سؤال ارتوپدی + پشتیبانی تصویر در موتور آزمون (۲۰۲۶-۱۱)
+
+- **`ortho.html` ← بخش `ortho`**: آرایهٔ ۲۰۰ سؤال از `<script id="questionData">` همان فایل
+  استخراج و در `qbank/raw/ortho.json` گذاشته شد (این استخراج حالا اسکریپت دارد:
+  `build/qb_extract.py <file>.html` با `--check` برای بازتولید بدون نوشتن؛ خروجی‌اش قطعی است و
+  `qbank/raw/chashm.json` قبلی را هم بایت‌به‌بایت بازتولید می‌کند)؛ `build/qb_normalize.py` با همان نگاشتِ
+  بانک چشم (`answer→correct`، `correctExplanation→explanation`، `optionRationales→whyWrong`،
+  `clinicalPearl→pearl`، `examTrap→trap`) آن را به `qbank/data/ortho.json` تبدیل می‌کند.
+  فصل‌هایش (۱، ۳–۱۵، ۱۷، ۱۸، ۲۰–۲۳) دقیقاً همان ۲۰ فصل درسنامهٔ ارتوپدی است.
+  `referenceSection` به فهرست متاهای حفظ‌شدنی (`META_KEEP`) اضافه شد.
+- **تصویر سؤال**: ۴۲ سؤال ارتوپدی تصویر دارند (`image{src, alt, credit, source, w, h}` با
+  `src` به‌صورت `data:image/jpeg;base64` درون‌خطی، ~۱٫۴ مگابایت در کل). موتور آزمون تا پیش از
+  این هیچ پشتیبانی تصویری نداشت؛ حالا `qbank.js` تابع‌های `imageOf/figure/openZoom` را دارد و
+  `qbank.css` کلاس‌های `.qb-figure` و `.qb-zoom` را. تصویر زیر صورت سؤال رندر می‌شود با
+  زیرنویس + اعتبارنامه + پیوند منبع، با `loading="lazy"`، `width/height` طبیعی (بدون پرش
+  چیدمان)، دسترسی‌پذیر با کیبورد (`tabindex`/`role="button"`/Enter) و بزرگ‌نمایی تمام‌صفحه
+  که با کلیک یا `Esc` بسته می‌شود (وقتی باز است، ناوبری با کلیدها قفل است). اگر `src`
+  بارگذاری نشود، کلاس `qb-figure--broken` پیام جایگزین نشان می‌دهد. بخش‌های بدون تصویر
+  (۹ بخش دیگر) خروجی‌شان بایت‌به‌بایت دست‌نخورده ماند.
+- **لایهٔ اپ/گوشی و حالت تیره** که فقط برای `eye` بود، عمومی شد: `APP_OPTIMIZED_PARTS = ("eye", "ortho")`
+  با `app_optimize_css()` و `is_dark_part()` (مأخذ هر دو بخش یک فایل تیرهٔ موبایلی است).
+- **`QBANK_PARTS`** در `build/medx/data.py` سطر `ortho` را گرفت؛ در نتیجه پورتال
+  «۱٬۱۹۰ سؤال در ۱۰ آزمون» و داشبورد درس ارتوپدی کارت «بانک سؤال این درس» را نشان می‌دهد.
+- **`build/qb_build.py`** حالا `sync_manifest()` دارد: بخش `qbank` در `content/manifest.json`
+  (`total` + فهرست `parts` + `updatedAt`) از `qbank/data/_parts.json` هم‌خط می‌شود تا آمار
+  منتشرشده با صفحه‌های آزمون نخوابد. `withImage` هم به آمار هر بخش اضافه شد.
+- **`build/medx_build.py --portal-only`**: حالت تازه برای بازسازی پورتال + داشبورد درس‌ها +
+  همگام‌سازی `docs/lib` بدون بازنویسی ۱۵۶ درسنامه (آمار هر درس از `build/medx-report.json`
+  قبلی خوانده می‌شود و گزارش دست‌نخورده می‌ماند). همچنین `sync_assets()` اکنون
+  `base.css/library.css/library.js/viewer.js/qbank.css/qbank.js` را هم به `content/assets/theme/`
+  همگام می‌کند (پیش‌تر فقط فایل‌های `medx-*` کپی می‌شدند و qbank.css/js کهنه می‌ماند).
+- **جمع بانک سؤال: ۱٬۱۹۰ سؤال در ۱۰ بخش** (۹۹۰ + ۲۰۰) و هر ۱۰ بخش نسخهٔ تک‌فایلی آفلاین دارند؛
+  `content/qbank/ortho-standalone.html` ~۲٫۰ مگابایت است (فونت + CSS + JS + ۲۰۰ سؤال با تصویر).
+- **اتصال به اپ**: `integration/lessonLinks.ts` تغییر نکرد — کاملاً manifestمحور است و
+  `appSubjectKeys: ["orthopedics-alamiharandi"]` را از `manifest.json` می‌خواند.

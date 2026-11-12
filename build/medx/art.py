@@ -147,6 +147,18 @@ def _motif(motif: str, p: dict, seed: int = 0) -> str:
     <path d="M58-46 72-58M44-54 52-70" stroke="{deep}" stroke-width="2" stroke-linecap="round" opacity=".6"/>
   </g>"""
 
+    if motif == "bone":
+        return f"""
+  <g transform="translate(100 100) rotate(-38)">
+    <path d="M-46-11C-52-24-70-24-73-11C-84-10-86 6-76 9C-76 22-58 26-50 13C-44 11-40 11-34 11H34C40 11 44 11 50 13C58 26 76 22 76 9C86 6 84-10 73-11C70-24 52-24 46-11C42-11 38-11 34-11H-34C-38-11-42-11-46-11Z"
+          fill="url(#organFill)" stroke="{base}" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M-30-4H30" fill="none" stroke="{soft}" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="3 6" opacity=".9"/>
+    <path d="M-6-11 2 0-4 11" fill="none" stroke="{deep}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="-22" y="16" width="44" height="9" rx="4.5" fill="{fill}" stroke="{base}" stroke-width="2"/>
+    <circle cx="-13" cy="20.5" r="1.8" fill="{deep}"/><circle cx="0" cy="20.5" r="1.8" fill="{deep}"/><circle cx="13" cy="20.5" r="1.8" fill="{deep}"/>
+    <circle cx="-62" cy="-40" r="5" fill="{soft}"/><circle cx="60" cy="42" r="5" fill="{soft}"/>
+  </g>"""
+
     if motif == "kidney":
         return f"""
   <g transform="translate(100 100)">

@@ -7,12 +7,16 @@
   • exam-jame-premium2.json    -> ch, chTitle, diff, wrongExps[3] (بدون ایندکس)
   • radiology-qb-*.json        -> ch, chTitle, difficulty, coverage, whyWrong{idx:text}
   • surgery-qb-*.json          -> chapter, chTitle, difficulty, whyWrong[4] (ایندکس‌دار، جای خالی "")
+  • chashm.json / ortho.json   -> answer, correctExplanation, optionRationales[4],
+                                  clinicalPearl, examTrap, highYield (بانک‌های تک‌فایلی)
+                                  ortho.json علاوه بر این image{src,alt,credit,source,w,h}
+                                  و referenceSection دارد (۴۲ سؤال تصویردار).
 
 خروجی یک طرح واحد:
   { id, subject, src, part, chapter, chapterTitle, topic, subtopic,
     difficulty, bloom, stem, options[4], correct, explanation,
     whyWrong{} (کلید = شمارهٔ گزینهٔ غلط، فقط برای گزینه‌های غلط),
-    pearl, trap, highYield }
+    pearl, trap, highYield, image? (فقط اگر سؤال تصویر داشته باشد) }
 
 اجرا: python3 build/qb_normalize.py
 """
@@ -36,6 +40,7 @@ BUNDLES = [
     ("surgery", "sur-2", "جراحی عمومی — لارنس (فصول ۱۱ تا ۲۰)", ["surgery-qb-2.json"]),
     ("surgery", "sur-3", "جراحی عمومی — لارنس (فصول ۲۱ تا ۳۰)", ["surgery-qb-3.json"]),
     ("ophthalmology", "eye", "چشم‌پزشکی عمومی — جوادی", ["chashm.json"]),
+    ("orthopedics", "ortho", "ارتوپدی و شکستگی‌ها — اعلمی هرندی", ["ortho.json"]),
 ]
 
 DIFF = {"easy": "آسان", "medium": "متوسط", "hard": "دشوار", "very hard": "خیلی دشوار", "veryhard": "خیلی دشوار",
@@ -97,7 +102,7 @@ def norm_whywrong(q, nopt: int) -> dict:
 
 
 def adapt_chashm(q: dict) -> dict:
-    """طرح بانک سؤال چشم‌پزشکی (chashm.html) → طرح عمومی normalize().
+    """طرح بانک‌های تک‌فایلی (chashm.html و ortho.html) → طرح عمومی normalize().
 
     فیلدهای اصلی نگاشت می‌شوند؛ بقیه (نوع سؤال، رفرنس، difficultyFa، …)
     در انتها به‌عنوان متا به خروجی اضافه می‌شوند تا چیزی از داده گم نشود.
@@ -118,7 +123,37 @@ def adapt_chashm(q: dict) -> dict:
 
 # متاهایی که در طرح کتابخانه جایی ندارند ولی نباید از داده حذف شوند
 META_KEEP = ("questionType", "questionTypeLabel", "coverageIndex", "topicIndex",
-             "difficultyFa", "referenceBook", "edition", "referencePages")
+             "difficultyFa", "referenceBook", "edition", "referencePages",
+             "referenceSection")
+
+
+def norm_image(q) -> dict | None:
+    """تصویر سؤال (در raw فقط ortho.json دارد) → dict تمیز یا None.
+
+    `src` می‌تواند data URI (JPEG base64 درون‌خطی) یا نشانی فایل باشد؛
+    دست‌نخورده نگه داشته می‌شود چون موتور آزمون همان را در <img> می‌گذارد.
+    بقیهٔ فیلدها (alt/credit/source/w/h) برای زیرنویس و اعتبارنامهٔ تصویرند.
+    """
+    im = q.get("image")
+    if not im:
+        return None
+    if isinstance(im, str):
+        im = {"src": im}
+    if not isinstance(im, dict):
+        return None
+    src = str(im.get("src") or "").strip()
+    if not src:
+        return None
+    out = {"src": src}
+    for k in ("alt", "credit", "source"):
+        v = clean(im.get(k))
+        if v:
+            out[k] = v
+    for k in ("w", "h"):
+        v = im.get(k)
+        if isinstance(v, (int, float)) and v > 0:
+            out[k] = int(v)
+    return out
 
 
 def normalize(q, subject, src, part) -> dict | None:
@@ -134,6 +169,7 @@ def normalize(q, subject, src, part) -> dict | None:
         return None
     if not clean(q.get("stem")):
         return None
+    image = norm_image(q)
     return {
         "subject": subject,
         "src": src,
@@ -152,6 +188,7 @@ def normalize(q, subject, src, part) -> dict | None:
         "pearl": clean(q.get("pearl")),
         "trap": clean(q.get("trap")),
         "highYield": clean(q.get("highYield")),
+        **({"image": image} if image else {}),
         **{k: q[k] for k in META_KEEP if q.get(k) not in (None, "")},
     }
 
@@ -190,6 +227,7 @@ def main():
             "chTo": chs[-1] if chs else None,
             "withPearl": sum(1 for i in items if i["pearl"]),
             "withWrong": sum(1 for i in items if len(i["whyWrong"]) >= 2),
+            "withImage": sum(1 for i in items if i.get("image")),
             "diff": {d: sum(1 for i in items if i["difficulty"] == d) for d in set(i["difficulty"] for i in items)},
         }
         report.append(stat)

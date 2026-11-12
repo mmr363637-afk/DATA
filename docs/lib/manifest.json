@@ -1,13 +1,13 @@
 {
  "version": 1,
  "schema": "med-library/1",
- "updatedAt": "2026-11-09",
+ "updatedAt": "2026-11-12",
  "basePath": "",
  "index": "index.html",
  "counts": {
-  "subjects": 9,
-  "lessons": 179,
-  "minutes": 9244
+  "subjects": 10,
+  "lessons": 199,
+  "minutes": 11124
  },
  "subjects": [
   {
@@ -92,7 +92,6 @@
    "appSubjectKeys": [
     "surgery-lawrence",
     "urology-simforoush",
-    "orthopedics-alamiharandi",
     "ent-goldenberg"
    ],
    "page": "subject/surgery.html",
@@ -141,6 +140,20 @@
    "page": "subject/imaging.html",
    "count": 12,
    "minutes": 233
+  },
+  {
+   "key": "orthopedics",
+   "name": "ارتوپدی",
+   "nameEn": "Orthopedics",
+   "icon": "🦴",
+   "hue": 16,
+   "chroma": 62,
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ],
+   "page": "subject/orthopedics.html",
+   "count": 20,
+   "minutes": 1880
   }
  ],
  "lessons": [
@@ -3189,11 +3202,331 @@
    "appSubjectKeys": [
     "ophthalmology-javadi"
    ]
+  },
+  {
+   "id": "orthopedics/chapter-01",
+   "subject": "orthopedics",
+   "title": "کلیات",
+   "path": "orthopedics/chapter-01.html",
+   "sections": 23,
+   "words": 10271,
+   "minutes": 90,
+   "flashcards": 29,
+   "tables": 16,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 1",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-03",
+   "subject": "orthopedics",
+   "title": "عوارض ناشی از شکستگی‌ها و دررفتگی‌ها",
+   "path": "orthopedics/chapter-03.html",
+   "sections": 24,
+   "words": 12950,
+   "minutes": 110,
+   "flashcards": 28,
+   "tables": 11,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 3",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-04",
+   "subject": "orthopedics",
+   "title": "شکستگی‌ها و آسیب‌های ستون فقرات",
+   "path": "orthopedics/chapter-04.html",
+   "sections": 23,
+   "words": 9025,
+   "minutes": 85,
+   "flashcards": 28,
+   "tables": 10,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 4",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-05",
+   "subject": "orthopedics",
+   "title": "شکستگی‌ها و دررفتگی‌های اندام بالایی",
+   "path": "orthopedics/chapter-05.html",
+   "sections": 26,
+   "words": 11534,
+   "minutes": 100,
+   "flashcards": 35,
+   "tables": 16,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 5",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-06",
+   "subject": "orthopedics",
+   "title": "شکستگی‌ها و دررفتگی‌های لگن خاصره و قفسهٔ سینه",
+   "path": "orthopedics/chapter-06.html",
+   "sections": 24,
+   "words": 8404,
+   "minutes": 80,
+   "flashcards": 30,
+   "tables": 13,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 6",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-07",
+   "subject": "orthopedics",
+   "title": "شکستگی‌ها و دررفتگی‌های اندام پایینی",
+   "path": "orthopedics/chapter-07.html",
+   "sections": 28,
+   "words": 12739,
+   "minutes": 110,
+   "flashcards": 36,
+   "tables": 14,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 7",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-08",
+   "subject": "orthopedics",
+   "title": "ستون فقرات و بیماری‌های آن",
+   "path": "orthopedics/chapter-08.html",
+   "sections": 28,
+   "words": 14344,
+   "minutes": 120,
+   "flashcards": 42,
+   "tables": 19,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 8",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-09",
+   "subject": "orthopedics",
+   "title": "شانه و بیماری‌های آن",
+   "path": "orthopedics/chapter-09.html",
+   "sections": 19,
+   "words": 9200,
+   "minutes": 85,
+   "flashcards": 36,
+   "tables": 10,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 9",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-10",
+   "subject": "orthopedics",
+   "title": "آرنج و بیماری‌های آن",
+   "path": "orthopedics/chapter-10.html",
+   "sections": 19,
+   "words": 6879,
+   "minutes": 70,
+   "flashcards": 33,
+   "tables": 6,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 10",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-11",
+   "subject": "orthopedics",
+   "title": "مچ دست و بیماری‌های آن",
+   "path": "orthopedics/chapter-11.html",
+   "sections": 20,
+   "words": 7633,
+   "minutes": 75,
+   "flashcards": 34,
+   "tables": 8,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 11",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-12",
+   "subject": "orthopedics",
+   "title": "بیماری‌های دست",
+   "path": "orthopedics/chapter-12.html",
+   "sections": 20,
+   "words": 8676,
+   "minutes": 85,
+   "flashcards": 36,
+   "tables": 11,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 12",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-13",
+   "subject": "orthopedics",
+   "title": "بیماری‌های مفصل ران",
+   "path": "orthopedics/chapter-13.html",
+   "sections": 19,
+   "words": 7031,
+   "minutes": 75,
+   "flashcards": 36,
+   "tables": 15,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 13",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-14",
+   "subject": "orthopedics",
+   "title": "زانو و بیماری‌های آن",
+   "path": "orthopedics/chapter-14.html",
+   "sections": 25,
+   "words": 11697,
+   "minutes": 100,
+   "flashcards": 42,
+   "tables": 16,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 14",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-15",
+   "subject": "orthopedics",
+   "title": "پا، مچ پا و بیماری‌های آنها",
+   "path": "orthopedics/chapter-15.html",
+   "sections": 22,
+   "words": 9509,
+   "minutes": 85,
+   "flashcards": 42,
+   "tables": 11,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 15",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-17",
+   "subject": "orthopedics",
+   "title": "ارتوپدی کودکان",
+   "path": "orthopedics/chapter-17.html",
+   "sections": 49,
+   "words": 21731,
+   "minutes": 160,
+   "flashcards": 46,
+   "tables": 27,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 17",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-18",
+   "subject": "orthopedics",
+   "title": "بیماری‌های مفصلی",
+   "path": "orthopedics/chapter-18.html",
+   "sections": 22,
+   "words": 10785,
+   "minutes": 90,
+   "flashcards": 47,
+   "tables": 16,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 18",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-20",
+   "subject": "orthopedics",
+   "title": "بیماری‌های متابولیک استخوان",
+   "path": "orthopedics/chapter-20.html",
+   "sections": 22,
+   "words": 9314,
+   "minutes": 85,
+   "flashcards": 44,
+   "tables": 12,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 20",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-21",
+   "subject": "orthopedics",
+   "title": "عفونت‌های استخوان و مفاصل",
+   "path": "orthopedics/chapter-21.html",
+   "sections": 27,
+   "words": 12333,
+   "minutes": 100,
+   "flashcards": 46,
+   "tables": 23,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 21",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-22",
+   "subject": "orthopedics",
+   "title": "تومورهای استخوان و نسج نرم اندام‌ها",
+   "path": "orthopedics/chapter-22.html",
+   "sections": 27,
+   "words": 11170,
+   "minutes": 95,
+   "flashcards": 47,
+   "tables": 22,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 22",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "id": "orthopedics/chapter-23",
+   "subject": "orthopedics",
+   "title": "قطع اندام",
+   "path": "orthopedics/chapter-23.html",
+   "sections": 20,
+   "words": 8572,
+   "minutes": 80,
+   "flashcards": 46,
+   "tables": 11,
+   "mcq": 15,
+   "source": "درسنامه ارتوپدی و شکستگی‌ها (اعلمی هرندی و همکاران) — ویرایش ششم، ۱۳۹۷ · فصل 23",
+   "appSubjectKeys": [
+    "orthopedics-alamiharandi"
+   ]
   }
  ],
  "qbank": {
   "index": "qbank/index.html",
-  "total": 990,
+  "total": 1190,
   "parts": [
    {
     "part": "women",
@@ -3266,6 +3599,14 @@
     "count": 200,
     "page": "qbank/eye.html",
     "standalone": "qbank/eye-standalone.html"
+   },
+   {
+    "part": "ortho",
+    "subject": "orthopedics",
+    "title": "ارتوپدی و شکستگی‌ها — اعلمی هرندی",
+    "count": 200,
+    "page": "qbank/ortho.html",
+    "standalone": "qbank/ortho-standalone.html"
    }
   ]
  }

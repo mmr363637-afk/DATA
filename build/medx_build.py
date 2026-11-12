@@ -6,6 +6,7 @@
     python3 build/medx_build.py                # بازسازی کامل + همگام‌سازی docs/lib
     python3 build/medx_build.py --no-sync      # فقط content/
     python3 build/medx_build.py --only cardio  # فقط یک درس
+    python3 build/medx_build.py --portal-only  # فقط پورتال/داشبوردها (درسنامه‌ها دست‌نخورده)
     python3 build/medx_build.py --verify-only  # فقط بازرسی محتوا
 
 وابستگی: lxml
@@ -33,6 +34,10 @@ DOCS = os.path.join(ROOT, "docs")
 ASSETS = os.path.join(ROOT, "assets")
 THEME_FILES = ("medx-core.css", "medx-content.css", "medx-reader.css", "medx-core.js",
                "medx-reader.js", "medx-exam.js")
+# پوستهٔ کتابخانه و موتور بانک سؤال: صفحه‌های qbank این‌ها را مستقیم از
+# ../assets/theme/ می‌خوانند، پس باید همیشه با assets/ همگام باشند (اختیاری =
+# اگر فایل نباشد خطا نمی‌دهیم).
+THEME_OPTIONAL = ("base.css", "library.css", "library.js", "viewer.js", "qbank.css", "qbank.js")
 
 
 # ---------------------------------------------------------------------------
@@ -66,6 +71,11 @@ def sync_assets():
         if not os.path.exists(src):
             raise SystemExit(f"فایل تم پیدا نشد: {src}")
         shutil.copy2(src, os.path.join(dst_dirs[0], name))
+    for name in THEME_OPTIONAL:
+        src = os.path.join(ASSETS, "theme", name)
+        dst = os.path.join(dst_dirs[0], name)
+        if os.path.exists(src) and (not os.path.exists(dst) or not filecmp.cmp(src, dst, shallow=False)):
+            shutil.copy2(src, dst)
     # فونت‌ها از قبل موجودند؛ در صورت نبود کپی می‌شوند
     fonts_src = os.path.join(ASSETS, "fonts")
     fonts_dst = os.path.join(CONTENT, "assets", "fonts")
@@ -90,10 +100,10 @@ def sync_docs():
 
 
 # ---------------------------------------------------------------------------
-# صفحات چشم‌پزشکی از قبل آماده و خودبسنده‌اند (فونت و استایل درون همان فایل)؛
+# صفحات چشم‌پزشکی و ارتوپدی از قبل آماده و خودبسنده‌اند (فونت و استایل درون همان فایل)؛
 # بازنویسی‌شان با تبدیل استاندارد، طراحی‌شان را خراب می‌کند. برایشان تطبیق ردی می‌شود
 # و آمار همان مقادیر manifest باقی می‌ماند.
-PREBUILT_PREFIXES = ("ophthalmology/",)
+PREBUILT_PREFIXES = ("ophthalmology/", "orthopedics/")
 
 
 def prebuilt_importance() -> dict:
@@ -101,7 +111,8 @@ def prebuilt_importance() -> dict:
             "reasons": [], "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"}
 
 
-def build(only: str | None = None, do_sync: bool = True, verify_only: bool = False):
+def build(only: str | None = None, do_sync: bool = True, verify_only: bool = False,
+          portal_only: bool = False):
     started = time.time()
     manifest = data.load_manifest(CONTENT)
     lessons = manifest["lessons"]
@@ -110,7 +121,17 @@ def build(only: str | None = None, do_sync: bool = True, verify_only: bool = Fal
         by_subject.setdefault(item["subject"], []).append(item)
 
     report, problems = [], []
-    for key, rows in by_subject.items():
+    report_path = os.path.join(ROOT, "build", "medx-report.json")
+    if portal_only:
+        # فقط پورتال و داشبورد درس‌ها بازسازی می‌شوند؛ آمار هر درسنامه از
+        # گزارش قبلی (build/medx-report.json) خوانده می‌شود تا درسنامه‌ها و
+        # گزارش دست‌نخورده بمانند.
+        if os.path.exists(report_path):
+            report = read_json(report_path).get("lessons", [])
+        print("حالت --portal-only: درسنامه‌ها بازسازی نشدند؛ "
+              f"پورتال/داشبوردها از manifest + {len(report)} ردیف گزارش قبلی ساخته می‌شوند.")
+    subjects_to_build = {} if portal_only else by_subject
+    for key, rows in subjects_to_build.items():
         subject = data.SUBJECT_BY_KEY.get(key)
         if subject is None:
             print(f"! درس ناشناخته: {key}")
@@ -240,15 +261,17 @@ def build(only: str | None = None, do_sync: bool = True, verify_only: bool = Fal
     print(f"✓ {len(lessons_by_subject)} صفحهٔ درس ساخته شد")
 
     # ---- گزارش ----
-    report_path = os.path.join(ROOT, "build", "medx-report.json")
-    with open(report_path, "w", encoding="utf-8") as fh:
-        json.dump({
-            "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-            "totals": totals,
-            "problems": problems,
-            "lessons": report,
-        }, fh, ensure_ascii=False, indent=1)
-    print(f"✓ گزارش: build/medx-report.json ({len(report)} درسنامه)")
+    if portal_only:
+        print("↷ گزارش build/medx-report.json دست‌نخورده ماند (حالت --portal-only)")
+    else:
+        with open(report_path, "w", encoding="utf-8") as fh:
+            json.dump({
+                "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                "totals": totals,
+                "problems": problems,
+                "lessons": report,
+            }, fh, ensure_ascii=False, indent=1)
+        print(f"✓ گزارش: build/medx-report.json ({len(report)} درسنامه)")
 
     sync_assets()
     if do_sync:
@@ -269,8 +292,11 @@ def main():
     ap.add_argument("--only", help="فقط یک درس (کلید درس) یا all")
     ap.add_argument("--no-sync", action="store_true", help="همگام‌سازی docs انجام نشود")
     ap.add_argument("--verify-only", action="store_true", help="فقط بازرسی")
+    ap.add_argument("--portal-only", action="store_true",
+                    help="فقط پورتال + داشبورد درس‌ها + همگام‌سازی (بدون بازنویسی درسنامه‌ها)")
     args = ap.parse_args()
-    build(only=args.only, do_sync=not args.no_sync, verify_only=args.verify_only)
+    build(only=args.only, do_sync=not args.no_sync, verify_only=args.verify_only,
+          portal_only=args.portal_only)
 
 
 if __name__ == "__main__":

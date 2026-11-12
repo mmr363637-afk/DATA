@@ -1,13 +1,13 @@
 {
- "generatedAt": "2026-11-09T17:54:11Z",
+ "generatedAt": "2026-11-11T20:18:45Z",
  "totals": {
-  "lessons": 179,
-  "subjects": 9,
-  "minutes": 9244,
-  "flashcards": 3777,
-  "mcq": 3165,
-  "tables": 946,
-  "sections": 2418
+  "lessons": 199,
+  "subjects": 10,
+  "minutes": 11124,
+  "flashcards": 4540,
+  "mcq": 3465,
+  "tables": 1233,
+  "sections": 2905
  },
  "problems": [],
  "lessons": [
@@ -37,7 +37,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0435,
-   "seconds": 0.042,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -259,7 +259,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0571,
-   "seconds": 0.033,
+   "seconds": 0.024,
    "section_specs": [
     {
      "id": "s1",
@@ -441,7 +441,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0604,
-   "seconds": 0.033,
+   "seconds": 0.024,
    "section_specs": [
     {
      "id": "s1",
@@ -624,7 +624,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0512,
-   "seconds": 0.029,
+   "seconds": 0.024,
    "section_specs": [
     {
      "id": "s1",
@@ -765,7 +765,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0548,
-   "seconds": 0.026,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "overview",
@@ -924,7 +924,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0533,
-   "seconds": 0.03,
+   "seconds": 0.024,
    "section_specs": [
     {
      "id": "s1",
@@ -1073,7 +1073,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0589,
-   "seconds": 0.026,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "overview",
@@ -1248,7 +1248,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.055,
-   "seconds": 0.04,
+   "seconds": 0.023,
    "section_specs": [
     {
      "id": "s1",
@@ -1397,7 +1397,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0585,
-   "seconds": 0.025,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "overview",
@@ -1556,7 +1556,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0562,
-   "seconds": 0.03,
+   "seconds": 0.024,
    "section_specs": [
     {
      "id": "s1",
@@ -1705,7 +1705,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0639,
-   "seconds": 0.024,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "overview",
@@ -1864,7 +1864,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0584,
-   "seconds": 0.029,
+   "seconds": 0.02,
    "section_specs": [
     {
      "id": "s1",
@@ -2005,7 +2005,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.058,
-   "seconds": 0.025,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -2154,7 +2154,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0572,
-   "seconds": 0.022,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -2296,7 +2296,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0661,
-   "seconds": 0.03,
+   "seconds": 0.023,
    "section_specs": [
     {
      "id": "s1",
@@ -2469,7 +2469,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0586,
-   "seconds": 0.021,
+   "seconds": 0.016,
    "section_specs": [
     {
      "id": "s1",
@@ -2611,7 +2611,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0612,
-   "seconds": 0.028,
+   "seconds": 0.02,
    "section_specs": [
     {
      "id": "s1",
@@ -2760,7 +2760,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0616,
-   "seconds": 0.021,
+   "seconds": 0.016,
    "section_specs": [
     {
      "id": "s1",
@@ -2901,7 +2901,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0363,
-   "seconds": 0.027,
+   "seconds": 0.02,
    "section_specs": [
     {
      "id": "s1",
@@ -3044,7 +3044,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.065,
-   "seconds": 0.027,
+   "seconds": 0.02,
    "section_specs": [
     {
      "id": "s1",
@@ -3187,7 +3187,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0649,
-   "seconds": 0.025,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -3328,7 +3328,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0378,
-   "seconds": 0.026,
+   "seconds": 0.02,
    "section_specs": [
     {
      "id": "s1",
@@ -3471,7 +3471,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0729,
-   "seconds": 0.025,
+   "seconds": 0.02,
    "section_specs": [
     {
      "id": "s1",
@@ -3620,7 +3620,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0391,
-   "seconds": 0.024,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -3746,7 +3746,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0608,
-   "seconds": 0.023,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -3872,7 +3872,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0597,
-   "seconds": 0.025,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -3997,7 +3997,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0396,
-   "seconds": 0.024,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -4131,7 +4131,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0711,
-   "seconds": 0.025,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -4297,7 +4297,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0637,
-   "seconds": 0.025,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -4422,7 +4422,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0421,
-   "seconds": 0.025,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -4548,7 +4548,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0625,
-   "seconds": 0.025,
+   "seconds": 0.018,
    "section_specs": [
     {
      "id": "s1",
@@ -4674,7 +4674,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0701,
-   "seconds": 0.026,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -4840,7 +4840,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.074,
-   "seconds": 0.024,
+   "seconds": 0.019,
    "section_specs": [
     {
      "id": "s1",
@@ -4998,7 +4998,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.065,
-   "seconds": 0.021,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -5108,7 +5108,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1137,
-   "seconds": 0.02,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -5289,7 +5289,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.127,
-   "seconds": 0.019,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -5470,7 +5470,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1231,
-   "seconds": 0.02,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -5643,7 +5643,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1353,
-   "seconds": 0.017,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -5799,7 +5799,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1597,
-   "seconds": 0.011,
+   "seconds": 0.008,
    "section_specs": [
     {
      "id": "s1",
@@ -5875,7 +5875,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1726,
-   "seconds": 0.014,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -6015,7 +6015,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.142,
-   "seconds": 0.013,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -6109,7 +6109,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1974,
-   "seconds": 0.015,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -6250,7 +6250,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2241,
-   "seconds": 0.016,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -6406,7 +6406,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2028,
-   "seconds": 0.014,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -6539,7 +6539,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2383,
-   "seconds": 0.013,
+   "seconds": 0.009,
    "section_specs": [
     {
      "id": "s1",
@@ -6648,7 +6648,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2626,
-   "seconds": 0.011,
+   "seconds": 0.008,
    "section_specs": [
     {
      "id": "s1",
@@ -6726,7 +6726,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0376,
-   "seconds": 0.038,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -6866,7 +6866,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1052,
-   "seconds": 0.015,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -6975,7 +6975,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1635,
-   "seconds": 0.014,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -7176,7 +7176,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1804,
-   "seconds": 0.014,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -7276,7 +7276,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1597,
-   "seconds": 0.016,
+   "seconds": 0.012,
    "section_specs": [
     {
      "id": "s1",
@@ -7402,7 +7402,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1742,
-   "seconds": 0.013,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -7495,7 +7495,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2152,
-   "seconds": 0.014,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -7644,7 +7644,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2505,
-   "seconds": 0.014,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -7768,7 +7768,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2165,
-   "seconds": 0.017,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -7884,7 +7884,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2499,
-   "seconds": 0.013,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -7993,7 +7993,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2268,
-   "seconds": 0.013,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -8118,7 +8118,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2591,
-   "seconds": 0.015,
+   "seconds": 0.009,
    "section_specs": [
     {
      "id": "s1",
@@ -8219,7 +8219,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.3033,
-   "seconds": 0.012,
+   "seconds": 0.009,
    "section_specs": [
     {
      "id": "s1",
@@ -8321,7 +8321,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0858,
-   "seconds": 0.028,
+   "seconds": 0.021,
    "section_specs": [
     {
      "id": "s1",
@@ -8445,7 +8445,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0923,
-   "seconds": 0.016,
+   "seconds": 0.012,
    "section_specs": [
     {
      "id": "s1",
@@ -8562,7 +8562,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1086,
-   "seconds": 0.021,
+   "seconds": 0.016,
    "section_specs": [
     {
      "id": "s1",
@@ -8720,7 +8720,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1273,
-   "seconds": 0.023,
+   "seconds": 0.017,
    "section_specs": [
     {
      "id": "s1",
@@ -8868,7 +8868,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1011,
-   "seconds": 0.022,
+   "seconds": 0.016,
    "section_specs": [
     {
      "id": "s1",
@@ -9057,7 +9057,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1263,
-   "seconds": 0.019,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -9182,7 +9182,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1286,
-   "seconds": 0.02,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -9347,7 +9347,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.14,
-   "seconds": 0.02,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -9519,7 +9519,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.107,
-   "seconds": 0.02,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -9676,7 +9676,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1417,
-   "seconds": 0.017,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -9785,7 +9785,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1558,
-   "seconds": 0.017,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -9919,7 +9919,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0296,
-   "seconds": 0.04,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -10093,7 +10093,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0299,
-   "seconds": 0.048,
+   "seconds": 0.037,
    "section_specs": [
     {
      "id": "s1",
@@ -10267,7 +10267,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0336,
-   "seconds": 0.035,
+   "seconds": 0.031,
    "section_specs": [
     {
      "id": "s1",
@@ -10441,7 +10441,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0337,
-   "seconds": 0.034,
+   "seconds": 0.029,
    "section_specs": [
     {
      "id": "s1",
@@ -10615,7 +10615,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0361,
-   "seconds": 0.054,
+   "seconds": 0.029,
    "section_specs": [
     {
      "id": "s1",
@@ -10789,7 +10789,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0331,
-   "seconds": 0.036,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -10963,7 +10963,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0314,
-   "seconds": 0.036,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -11137,7 +11137,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0318,
-   "seconds": 0.036,
+   "seconds": 0.031,
    "section_specs": [
     {
      "id": "s1",
@@ -11311,7 +11311,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.03,
-   "seconds": 0.037,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -11485,7 +11485,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0322,
-   "seconds": 0.034,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -11659,7 +11659,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0304,
-   "seconds": 0.037,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -11833,7 +11833,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0327,
-   "seconds": 0.039,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -12007,7 +12007,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0318,
-   "seconds": 0.036,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -12181,7 +12181,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0299,
-   "seconds": 0.038,
+   "seconds": 0.031,
    "section_specs": [
     {
      "id": "s1",
@@ -12355,7 +12355,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.03,
-   "seconds": 0.041,
+   "seconds": 0.035,
    "section_specs": [
     {
      "id": "s1",
@@ -12529,7 +12529,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0276,
-   "seconds": 0.038,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -12703,7 +12703,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0269,
-   "seconds": 0.037,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -12877,7 +12877,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0303,
-   "seconds": 0.037,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -13051,7 +13051,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0308,
-   "seconds": 0.036,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -13225,7 +13225,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0299,
-   "seconds": 0.036,
+   "seconds": 0.029,
    "section_specs": [
     {
      "id": "s1",
@@ -13399,7 +13399,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0245,
-   "seconds": 0.041,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -13573,7 +13573,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0255,
-   "seconds": 0.039,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -13747,7 +13747,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0258,
-   "seconds": 0.039,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -13921,7 +13921,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0231,
-   "seconds": 0.038,
+   "seconds": 0.037,
    "section_specs": [
     {
      "id": "s1",
@@ -14095,7 +14095,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0241,
-   "seconds": 0.038,
+   "seconds": 0.036,
    "section_specs": [
     {
      "id": "s1",
@@ -14269,7 +14269,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0233,
-   "seconds": 0.039,
+   "seconds": 0.038,
    "section_specs": [
     {
      "id": "s1",
@@ -14443,7 +14443,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.023,
-   "seconds": 0.041,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -14617,7 +14617,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0242,
-   "seconds": 0.041,
+   "seconds": 0.037,
    "section_specs": [
     {
      "id": "s1",
@@ -14792,7 +14792,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0293,
-   "seconds": 0.038,
+   "seconds": 0.037,
    "section_specs": [
     {
      "id": "s1",
@@ -14959,7 +14959,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0279,
-   "seconds": 0.04,
+   "seconds": 0.035,
    "section_specs": [
     {
      "id": "s1",
@@ -15126,7 +15126,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0288,
-   "seconds": 0.043,
+   "seconds": 0.036,
    "section_specs": [
     {
      "id": "s1",
@@ -15293,7 +15293,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0295,
-   "seconds": 0.049,
+   "seconds": 0.036,
    "section_specs": [
     {
      "id": "s1",
@@ -15460,7 +15460,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0288,
-   "seconds": 0.051,
+   "seconds": 0.034,
    "section_specs": [
     {
      "id": "s1",
@@ -15627,7 +15627,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0344,
-   "seconds": 0.053,
+   "seconds": 0.052,
    "section_specs": [
     {
      "id": "s1",
@@ -15842,7 +15842,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0295,
-   "seconds": 0.044,
+   "seconds": 0.04,
    "section_specs": [
     {
      "id": "s1",
@@ -16009,7 +16009,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0304,
-   "seconds": 0.043,
+   "seconds": 0.038,
    "section_specs": [
     {
      "id": "s1",
@@ -16176,7 +16176,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0294,
-   "seconds": 0.043,
+   "seconds": 0.042,
    "section_specs": [
     {
      "id": "s1",
@@ -16335,7 +16335,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0311,
-   "seconds": 0.044,
+   "seconds": 0.041,
    "section_specs": [
     {
      "id": "s1",
@@ -16494,7 +16494,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0292,
-   "seconds": 0.044,
+   "seconds": 0.04,
    "section_specs": [
     {
      "id": "s1",
@@ -16661,7 +16661,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0299,
-   "seconds": 0.044,
+   "seconds": 0.041,
    "section_specs": [
     {
      "id": "s1",
@@ -16828,7 +16828,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0317,
-   "seconds": 0.042,
+   "seconds": 0.039,
    "section_specs": [
     {
      "id": "s1",
@@ -16995,7 +16995,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0313,
-   "seconds": 0.043,
+   "seconds": 0.033,
    "section_specs": [
     {
      "id": "s1",
@@ -17162,7 +17162,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0339,
-   "seconds": 0.047,
+   "seconds": 0.036,
    "section_specs": [
     {
      "id": "s1",
@@ -17360,7 +17360,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0352,
-   "seconds": 0.039,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -17526,7 +17526,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0365,
-   "seconds": 0.037,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -17684,7 +17684,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0382,
-   "seconds": 0.036,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -17842,7 +17842,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0331,
-   "seconds": 0.036,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -17984,7 +17984,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0335,
-   "seconds": 0.034,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -18126,7 +18126,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0338,
-   "seconds": 0.037,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -18268,7 +18268,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0387,
-   "seconds": 0.034,
+   "seconds": 0.026,
    "section_specs": [
     {
      "id": "s1",
@@ -18410,7 +18410,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0436,
-   "seconds": 0.035,
+   "seconds": 0.031,
    "section_specs": [
     {
      "id": "s1",
@@ -18576,7 +18576,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0365,
-   "seconds": 0.035,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -18718,7 +18718,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0423,
-   "seconds": 0.034,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -18868,7 +18868,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0409,
-   "seconds": 0.037,
+   "seconds": 0.038,
    "section_specs": [
     {
      "id": "s1",
@@ -19018,7 +19018,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0424,
-   "seconds": 0.033,
+   "seconds": 0.027,
    "section_specs": [
     {
      "id": "s1",
@@ -19168,7 +19168,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.042,
-   "seconds": 0.032,
+   "seconds": 0.03,
    "section_specs": [
     {
      "id": "s1",
@@ -19318,7 +19318,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0415,
-   "seconds": 0.034,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -19460,7 +19460,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0447,
-   "seconds": 0.035,
+   "seconds": 0.028,
    "section_specs": [
     {
      "id": "s1",
@@ -19610,7 +19610,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0469,
-   "seconds": 0.03,
+   "seconds": 0.026,
    "section_specs": [
     {
      "id": "s1",
@@ -19752,7 +19752,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0473,
-   "seconds": 0.031,
+   "seconds": 0.025,
    "section_specs": [
     {
      "id": "s1",
@@ -19895,7 +19895,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0366,
-   "seconds": 0.053,
+   "seconds": 0.032,
    "section_specs": [
     {
      "id": "s1",
@@ -20068,7 +20068,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1318,
-   "seconds": 0.02,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -20233,7 +20233,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1337,
-   "seconds": 0.018,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -20374,7 +20374,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1516,
-   "seconds": 0.018,
+   "seconds": 0.015,
    "section_specs": [
     {
      "id": "s1",
@@ -20531,7 +20531,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2212,
-   "seconds": 0.021,
+   "seconds": 0.016,
    "section_specs": [
     {
      "id": "s1",
@@ -20744,7 +20744,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1522,
-   "seconds": 0.019,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -20892,7 +20892,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.157,
-   "seconds": 0.017,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -21041,7 +21041,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1859,
-   "seconds": 0.015,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -21166,7 +21166,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2236,
-   "seconds": 0.014,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -21298,7 +21298,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2018,
-   "seconds": 0.013,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -21415,7 +21415,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2117,
-   "seconds": 0.013,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -21524,7 +21524,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2085,
-   "seconds": 0.015,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -21673,7 +21673,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2247,
-   "seconds": 0.013,
+   "seconds": 0.01,
    "section_specs": [
     {
      "id": "s1",
@@ -21781,7 +21781,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0762,
-   "seconds": 0.019,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -21897,7 +21897,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.079,
-   "seconds": 0.018,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -22021,7 +22021,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0957,
-   "seconds": 0.017,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -22145,7 +22145,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.0932,
-   "seconds": 0.018,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -22277,7 +22277,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1235,
-   "seconds": 0.02,
+   "seconds": 0.014,
    "section_specs": [
     {
      "id": "s1",
@@ -22409,7 +22409,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1343,
-   "seconds": 0.017,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -22557,7 +22557,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1271,
-   "seconds": 0.012,
+   "seconds": 0.009,
    "section_specs": [
     {
      "id": "s1",
@@ -22641,7 +22641,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.15,
-   "seconds": 0.016,
+   "seconds": 0.013,
    "section_specs": [
     {
      "id": "s1",
@@ -22781,7 +22781,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.1529,
-   "seconds": 0.015,
+   "seconds": 0.012,
    "section_specs": [
     {
      "id": "s1",
@@ -22913,7 +22913,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.183,
-   "seconds": 0.014,
+   "seconds": 0.011,
    "section_specs": [
     {
      "id": "s1",
@@ -23038,7 +23038,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2012,
-   "seconds": 0.012,
+   "seconds": 0.009,
    "section_specs": [
     {
      "id": "s1",
@@ -23147,7 +23147,7 @@
    "coverage": 1.0,
    "missing_samples": [],
    "text_ratio": 1.2011,
-   "seconds": 0.011,
+   "seconds": 0.009,
    "section_specs": [
     {
      "id": "s1",
@@ -23815,6 +23815,526 @@
    "mcq": 15,
    "flashcards": 8,
    "tables": 4,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-01",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-01.html",
+   "title": "کلیات",
+   "minutes": 90,
+   "sections": 23,
+   "words": 10271,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 29,
+   "tables": 16,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-03",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-03.html",
+   "title": "عوارض ناشی از شکستگی‌ها و دررفتگی‌ها",
+   "minutes": 110,
+   "sections": 24,
+   "words": 12950,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 28,
+   "tables": 11,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-04",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-04.html",
+   "title": "شکستگی‌ها و آسیب‌های ستون فقرات",
+   "minutes": 85,
+   "sections": 23,
+   "words": 9025,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 28,
+   "tables": 10,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-05",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-05.html",
+   "title": "شکستگی‌ها و دررفتگی‌های اندام بالایی",
+   "minutes": 100,
+   "sections": 26,
+   "words": 11534,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 35,
+   "tables": 16,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-06",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-06.html",
+   "title": "شکستگی‌ها و دررفتگی‌های لگن خاصره و قفسهٔ سینه",
+   "minutes": 80,
+   "sections": 24,
+   "words": 8404,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 30,
+   "tables": 13,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-07",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-07.html",
+   "title": "شکستگی‌ها و دررفتگی‌های اندام پایینی",
+   "minutes": 110,
+   "sections": 28,
+   "words": 12739,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 36,
+   "tables": 14,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-08",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-08.html",
+   "title": "ستون فقرات و بیماری‌های آن",
+   "minutes": 120,
+   "sections": 28,
+   "words": 14344,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 42,
+   "tables": 19,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-09",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-09.html",
+   "title": "شانه و بیماری‌های آن",
+   "minutes": 85,
+   "sections": 19,
+   "words": 9200,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 36,
+   "tables": 10,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-10",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-10.html",
+   "title": "آرنج و بیماری‌های آن",
+   "minutes": 70,
+   "sections": 19,
+   "words": 6879,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 33,
+   "tables": 6,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-11",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-11.html",
+   "title": "مچ دست و بیماری‌های آن",
+   "minutes": 75,
+   "sections": 20,
+   "words": 7633,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 34,
+   "tables": 8,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-12",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-12.html",
+   "title": "بیماری‌های دست",
+   "minutes": 85,
+   "sections": 20,
+   "words": 8676,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 36,
+   "tables": 11,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-13",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-13.html",
+   "title": "بیماری‌های مفصل ران",
+   "minutes": 75,
+   "sections": 19,
+   "words": 7031,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 36,
+   "tables": 15,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-14",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-14.html",
+   "title": "زانو و بیماری‌های آن",
+   "minutes": 100,
+   "sections": 25,
+   "words": 11697,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 42,
+   "tables": 16,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-15",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-15.html",
+   "title": "پا، مچ پا و بیماری‌های آنها",
+   "minutes": 85,
+   "sections": 22,
+   "words": 9509,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 42,
+   "tables": 11,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-17",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-17.html",
+   "title": "ارتوپدی کودکان",
+   "minutes": 160,
+   "sections": 49,
+   "words": 21731,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 46,
+   "tables": 27,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-18",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-18.html",
+   "title": "بیماری‌های مفصلی",
+   "minutes": 90,
+   "sections": 22,
+   "words": 10785,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 47,
+   "tables": 16,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-20",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-20.html",
+   "title": "بیماری‌های متابولیک استخوان",
+   "minutes": 85,
+   "sections": 22,
+   "words": 9314,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 44,
+   "tables": 12,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-21",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-21.html",
+   "title": "عفونت‌های استخوان و مفاصل",
+   "minutes": 100,
+   "sections": 27,
+   "words": 12333,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 46,
+   "tables": 23,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-22",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-22.html",
+   "title": "تومورهای استخوان و نسج نرم اندام‌ها",
+   "minutes": 95,
+   "sections": 27,
+   "words": 11170,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 47,
+   "tables": 22,
+   "importance": {
+    "level": "medium",
+    "score": 0.0,
+    "reasons": [],
+    "basis": "صفحهٔ پیش‌ساخته (بدون تبدیل)"
+   },
+   "missing_chunks": 0,
+   "coverage": 1.0,
+   "missing_samples": [],
+   "text_ratio": 1.0,
+   "seconds": 0.0,
+   "section_specs": [],
+   "prebuilt": true
+  },
+  {
+   "id": "orthopedics/chapter-23",
+   "subject": "orthopedics",
+   "path": "orthopedics/chapter-23.html",
+   "title": "قطع اندام",
+   "minutes": 80,
+   "sections": 20,
+   "words": 8572,
+   "messages": 0,
+   "mcq": 15,
+   "flashcards": 46,
+   "tables": 11,
    "importance": {
     "level": "medium",
     "score": 0.0,
