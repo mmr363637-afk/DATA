@@ -27,28 +27,72 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "qbank" / "raw"
 
-# اسکریپت داده در chashm.html و ortho.html یکی است
+# چهار شکل داده در بانک‌های تک‌فایلی دیده شده است:
+#   ۱) <script type="application/json" id="questionData"> […] </script>   chashm/ortho/ofuni
+#   ۲) <script id="bank-data" type="application/json"> {"meta":…,"questions":[…]}   ENT
+#   ۳) window.__QB__ = {"subject":…,"questions":[…]}                       urology
+#   ۴) هر <script type="application/json"> دیگری که dict با کلید questions باشد
 DATA_SCRIPT = re.compile(
     r'<script[^>]*type="application/json"[^>]*id="questionData"[^>]*>(.*?)</script>',
     re.S,
 )
+ANY_JSON_SCRIPT = re.compile(
+    r'<script[^>]*type="application/json"[^>]*>(.*?)</script>',
+    re.S,
+)
+QB_INLINE = re.compile(r"window\.__QB__\s*=\s*", re.S)
 
 
 def extract(html_path: Path) -> list[dict]:
+    """آرایهٔ سؤال‌ها را از بانک تک‌فایلی بیرون می‌کشد (هر چهار شکل بالا)."""
     text = html_path.read_text(encoding="utf-8")
+
+    def from_payload(payload, label: str) -> list[dict]:
+        if isinstance(payload, dict):
+            qs = payload.get("questions")
+            if isinstance(qs, list) and qs:
+                meta = {k: v for k, v in payload.items() if k != "questions"}
+                if meta:
+                    print(f"  meta ({label}): " + ", ".join(
+                        f"{k}={v}" for k, v in list(meta.items())[:4]
+                        if not isinstance(v, (dict, list))
+                    )[:160])
+                return qs
+            return []
+        if isinstance(payload, list):
+            return payload
+        return []
+
     m = DATA_SCRIPT.search(text)
-    if not m:
-        raise SystemExit(f"!! در {html_path.name} اسکریپت questionData پیدا نشد")
-    data = json.loads(m.group(1))
-    if not isinstance(data, list) or not data:
-        raise SystemExit(f"!! دادهٔ {html_path.name} آرایهٔ غیرخالی نیست")
-    return data
+    if m:
+        data = from_payload(json.loads(m.group(1)), "questionData")
+        if data:
+            return data
+
+    m = QB_INLINE.search(text)
+    if m:
+        payload, _ = json.JSONDecoder().raw_decode(text[m.end():].lstrip())
+        data = from_payload(payload, "window.__QB__")
+        if data:
+            return data
+
+    for m in ANY_JSON_SCRIPT.finditer(text):
+        try:
+            payload = json.loads(m.group(1))
+        except json.JSONDecodeError:
+            continue
+        data = from_payload(payload, "application/json")
+        if data:
+            return data
+
+    raise SystemExit(f"!! در {html_path.name} دادهٔ سؤال پیدا نشد "
+                     "(questionData / bank-data / window.__QB__)")
 
 
 def report(data: list[dict], name: str) -> list[str]:
     """چند بررسی سبک تا دادهٔ خراب بی‌سروصدا وارد خط لوله نشود."""
     problems = []
-    chapters = Counter(str(q.get("chapter")) for q in data)
+    chapters = Counter(str(q.get("chapter", q.get("chapterOrder"))) for q in data)
     with_image = sum(1 for q in data if q.get("image"))
     for i, q in enumerate(data):
         opts = q.get("options") or []
@@ -57,10 +101,20 @@ def report(data: list[dict], name: str) -> list[str]:
             problems.append(f"سؤال #{i + 1}: {len(opts)} گزینه")
         if not isinstance(ans, int) or not 0 <= ans < len(opts):
             problems.append(f"سؤال #{i + 1}: پاسخ نامعتبر ({ans!r})")
-        if not str(q.get("stem") or "").strip():
+        if not str(q.get("stem") or q.get("question") or "").strip():
             problems.append(f"سؤال #{i + 1}: صورت خالی")
     print(f"{name}: {len(data)} سؤال · {len(chapters)} فصل · {with_image} سؤال تصویردار")
-    print("  فصل‌ها: " + "، ".join(f"{k}({v})" for k, v in sorted(chapters.items(), key=lambda kv: int(kv[0]) if kv[0].isdigit() else 999)))
+    def ch_key(kv):
+        k = kv[0]
+        try:
+            return (0, float(k))
+        except ValueError:
+            return (1, 0.0)
+    shown = sorted(chapters.items(), key=ch_key)
+    label = "، ".join(f"{k}({v})" for k, v in shown[:14])
+    if len(shown) > 14:
+        label += f" … +{len(shown) - 14} مورد دیگر"
+    print("  فصل‌ها: " + label)
     if problems:
         print("  ⚠ " + f"{len(problems)} ایراد: " + "; ".join(problems[:6]))
     return problems

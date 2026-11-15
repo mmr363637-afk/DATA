@@ -128,7 +128,18 @@ tbody tr:nth-child(even){background:#101b25}
   <span>نویسنده: <b>مهدی محمدرحیمی</b></span>
   <span class="ml-credit__src">منبع محتوا: چشم‌پزشکی عمومی جوادی — ویراست دوم ۱۳۹۷</span>
   <span class="ml-credit__note">محتوای آموزشی است و جایگزین قضاوت بالینی نیست.</span>
-</div></div><footer class="footer">چشم‌پزشکی عمومی جوادی · ویراست دوم ۱۳۹۷ · زمان واقعی مطالعه در فضای ذخیره‌سازی هم‌مبدأِ برنامه‌ریز ثبت می‌شود.</footer><script>
+</div></div><!--ml-nav-->
+<style>/* نوار پیوند کتابخانه (تزریق‌شده توسط build/inject_marks_credit.py) */
+.ml-nav{max-width:min(900px,calc(100vw - 28px));margin:22px auto 0;display:flex;gap:8px;flex-wrap:wrap;
+  justify-content:center;padding:0 14px;font-size:.8rem}
+.ml-nav a{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;
+  border:1px solid var(--line,#dbe3ec);background:var(--surface,#fff);color:var(--ink-2,#3b4a5a);
+  text-decoration:none;font-weight:700;line-height:1.4;transition:.16s}
+.ml-nav a:hover{border-color:var(--brand-400,#7aa7d8);color:var(--brand-600,#1d4ed8);background:var(--brand-50,#f2f7fd)}
+.ml-nav a:focus-visible{outline:2px solid var(--brand-500,#2563eb);outline-offset:2px}
+@media print{.ml-nav{display:none}}</style>
+<nav class="ml-nav" aria-label="پیوندهای کتابخانه"><a href="../index.html">کتابخانهٔ مدیکال</a><a href="../subject/ophthalmology.html">داشبورد چشم‌پزشکی</a><a href="../qbank/eye.html">بانک ۲۰۰ سؤالی چشم‌پزشکی</a></nav>
+<footer class="footer">چشم‌پزشکی عمومی جوادی · ویراست دوم ۱۳۹۷ · زمان واقعی مطالعه در فضای ذخیره‌سازی هم‌مبدأِ برنامه‌ریز ثبت می‌شود.</footer><script>
 (()=>{'use strict';
 const lesson=document.body.dataset.lessonId, chapter=Number(document.body.dataset.chapter), STORE='medx.ophthalmology.progress.v1';
 const read=()=>{try{return JSON.parse(localStorage.getItem(STORE)||'{}')}catch{return {}}};

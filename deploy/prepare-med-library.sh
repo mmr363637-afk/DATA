@@ -6,7 +6,7 @@
 #  ورودی: آرشیو med-library.zip (یا پوشهٔ بازشدهٔ آن)
 #  خروجی: مخزن آمادهٔ push با پوشهٔ docs/ منتشرشونده
 #
-# 用法:  bash prepare-med-library.sh /path/to/med-library.zip
+# کاربرد: bash prepare-med-library.sh /path/to/med-library.zip
 #  یا:    bash prepare-med-library.sh /path/to/med-library
 # ============================================================================
 set -euo pipefail
@@ -66,16 +66,21 @@ m = json.load(open('content/manifest.json'))
 q = m['qbank']
 keys = [s['key'] for s in m['subjects']]
 checks = [
-    ('counts.lessons == 246',  m['counts']['lessons'] == 246),
-    ('counts.subjects == 11',  m['counts']['subjects'] == 11),
-    ('qbank.total == 1390',    q['total'] == 1390),
-    ('len(qbank.parts) == 11', len(q['parts']) == 11),
+    ('counts.lessons == 306',  m['counts']['lessons'] == 306),
+    ('counts.subjects == 13',  m['counts']['subjects'] == 13),
+    ('qbank.total == 1790',    q['total'] == 1790),
+    ('len(qbank.parts) == 13', len(q['parts']) == 13),
     ('جمع بخش‌ها == total',      sum(p['count'] for p in q['parts']) == q['total']),
     ('surgery در کلیدها',        'surgery' in keys),
     ('heme در کلیدها',           'heme' in keys),
     ('ophthalmology در کلیدها',  'ophthalmology' in keys),
     ('orthopedics در کلیدها',    'orthopedics' in keys),
     ('infectious در کلیدها',     'infectious' in keys),
+    ('urology در کلیدها',        'urology' in keys),
+    ('ent در کلیدها',            'ent' in keys),
+    ('کلید اپ اورولوژی زیر جراحی نباشد',
+     not any('urology-simforoush' in (x.get('appSubjectKeys') or [])
+             for x in m['subjects'] if x['key'] != 'urology')),
     ('onco در کلیدها نباشد',     'onco' not in keys),
     ('کلید رزرو id نباشد',       'id' not in keys),
     ('docs/lib/manifest.json', pathlib.Path('docs/lib/manifest.json').is_file()),
@@ -89,13 +94,25 @@ checks = [
     ('docs/lib/qbank/data/sur-1.json', pathlib.Path('docs/lib/qbank/data/sur-1.json').is_file()),
     ('docs/lib/qbank/data/ortho.json', pathlib.Path('docs/lib/qbank/data/ortho.json').is_file()),
     ('docs/lib/qbank/data/inf.json', pathlib.Path('docs/lib/qbank/data/inf.json').is_file()),
+    ('docs/lib/qbank/data/uro.json', pathlib.Path('docs/lib/qbank/data/uro.json').is_file()),
+    ('docs/lib/qbank/data/ent.json', pathlib.Path('docs/lib/qbank/data/ent.json').is_file()),
     ('docs/lib/orthopedics/chapter-01.html', pathlib.Path('docs/lib/orthopedics/chapter-01.html').is_file()),
     ('docs/lib/ophthalmology/chapter-01.html', pathlib.Path('docs/lib/ophthalmology/chapter-01.html').is_file()),
     ('docs/lib/infectious/183-tuberculosis.html', pathlib.Path('docs/lib/infectious/183-tuberculosis.html').is_file()),
     ('docs/lib/subject/infectious-exam.html', pathlib.Path('docs/lib/subject/infectious-exam.html').is_file()),
+    ('docs/lib/subject/urology.html', pathlib.Path('docs/lib/subject/urology.html').is_file()),
+    ('docs/lib/subject/ent.html', pathlib.Path('docs/lib/subject/ent.html').is_file()),
+    ('docs/lib/urology/chapter-01.html', pathlib.Path('docs/lib/urology/chapter-01.html').is_file()),
+    ('docs/lib/urology/chapter-47.html', pathlib.Path('docs/lib/urology/chapter-47.html').is_file()),
+    ('docs/lib/urology/manifest.json', pathlib.Path('docs/lib/urology/manifest.json').is_file()),
+    ('docs/lib/ent/manifest.json', pathlib.Path('docs/lib/ent/manifest.json').is_file()),
+    ('docs/lib/ent/32-appendix-c-ent-emergencies.html',
+     pathlib.Path('docs/lib/ent/32-appendix-c-ent-emergencies.html').is_file()),
     ('docs/.nojekyll', pathlib.Path('docs/.nojekyll').is_file()),
     ('raw_src منتشر نشده', not pathlib.Path('raw_src').exists()),
-    ('qbank/raw منتشر نشده', not pathlib.Path('qbank/raw').exists()),
+    # qbank/raw ورودی محلیِ git-ignore است (با qb_extract.py از بانک تک‌فایلی ساخته
+    # می‌شود و در مخزن نمی‌ماند)؛ مهم این است که داخل درخت انتشار نرود.
+    ('qbank/raw منتشر نشده', not pathlib.Path('docs/lib/qbank/raw').exists()),
 ]
 
 # ---- هایلایت و اعتبار نویسنده در همهٔ صفحه‌های منتشرشده ----
@@ -108,7 +125,8 @@ for f in sorted(pathlib.Path('docs/lib').rglob('*.html')):
         no_credit.append(str(f))
     has_reader = 'medx-reader.js' in t
     has_lite = 'marks-lite' in t
-    has_text = bool(re.search(r'class="sec__body"|class="sec-body"|data-bank|qx__q|questionStem', t))
+    has_text = bool(re.search(r'class="sec__body"|class="sec-body"|class="content-section"'
+                              r'|data-bank|qx__q|questionStem', t))
     if has_text and not (has_reader or has_lite):
         no_mark.append(str(f))
 checks += [
@@ -131,7 +149,7 @@ git init -q -b main 2>/dev/null || git checkout -q -b main
 git config user.name  >/dev/null 2>&1 || git config user.name  "${GIT_AUTHOR_NAME:-mmr363637-afk}"
 git config user.email >/dev/null 2>&1 || git config user.email "${GIT_AUTHOR_EMAIL:-mmr363637-afk@users.noreply.github.com}"
 git add -A
-git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۲۴۶ درسنامه، ۱۱ بخش آزمون، ۱٬۳۹۰ سؤال"
+git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۳۰۶ درسنامه، ۱۳ بخش آزمون، ۱٬۷۹۰ سؤال"
 echo "   $(git rev-list --count HEAD) کامیت، $(git ls-tree -r --name-only HEAD | wc -l) فایل"
 
 cat <<'EOF'

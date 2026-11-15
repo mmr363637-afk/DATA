@@ -99,7 +99,11 @@ def collect() -> list[dict]:
             "highlightExtra": extra,
             "author": credit,
             # صفحه‌هایی که متن درس/سؤال ندارند (داشبورد/فهرست) به هایلایت نیاز ندارند
-            "needsHighlight": bool(re.search(r'class="sec__body"|class="sec-body"|data-bank|qx__q|questionStem|questionArea', text)),
+            # sec__body/sec-body → درسنامه‌های بازسازی‌شده و ارتوپدی/اورولوژی
+            # content-section   → درسنامه‌های ENT (موتور بومی، بخش‌های data-track)
+            "needsHighlight": bool(re.search(
+                r'class="sec__body"|class="sec-body"|class="content-section"'
+                r'|data-bank|qx__q|questionStem|questionArea', text)),
         })
     return rows
 

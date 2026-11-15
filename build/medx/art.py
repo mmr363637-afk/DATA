@@ -239,6 +239,40 @@ def _motif(motif: str, p: dict, seed: int = 0) -> str:
     <circle cx="14" cy="-34" r="3.6" fill="{base}"/>
   </g>"""
 
+    if motif == "tract":
+        # دو کلیه + دو حالب + مثانه + مجرا (اورولوژی)
+        kidney = ('<path d="M8-58c26 0 44 26 44 58s-18 58-48 58c-17 0-28-14-28-32 0-16 8-26 8-42'
+                  ' 0-13-5-21-5-29 0-12 11-13 29-13Z" fill="url(#organFill)" stroke="{b}" stroke-width="4.2"/>')
+        return f"""
+  <g transform="translate(100 92) scale(.94)">
+    <g transform="translate(-40 -50) scale(.6)">{kidney.format(b=base)}</g>
+    <g transform="translate(40 -50) scale(-.6 .6)">{kidney.format(b=base)}</g>
+    <path d="M-22 -4c-8 20-11 34-6 46" fill="none" stroke="{deep}" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M22 -4c8 20 11 34 6 46" fill="none" stroke="{deep}" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M0 34c24 0 40 14 40 30 0 12-16 20-40 20s-40-8-40-20c0-16 16-30 40-30Z"
+          fill="url(#organFill)" stroke="{base}" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M-16 58c8 6 24 6 32 0" fill="none" stroke="{soft}" stroke-width="2" stroke-linecap="round" opacity=".85"/>
+    <path d="M0 84v12" stroke="{deep}" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="-72" cy="-58" r="4.5" fill="{base}" opacity=".5"/>
+    <circle cx="74" cy="-46" r="3.5" fill="{base}" opacity=".4"/>
+  </g>"""
+
+    if motif == "ear":
+        # لالهٔ گوش + مارپیچ داخلی + موج‌های صوتی (گوش، حلق و بینی)
+        return f"""
+  <g transform="translate(104 100) scale(.94)">
+    <path d="M14-72C-20-72-46-46-46-10c0 34 16 62 40 78 12 8 28 0 28-14 0-14-10-20-10-32
+             0-10 8-18 20-18 16 0 28-14 28-34 0-28-22-50-46-50Z"
+          fill="url(#organFill)" stroke="{base}" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M4-44c-16 4-25 18-23 34 2 15 11 25 21 31" fill="none" stroke="{base}" stroke-width="2.2"
+          stroke-linecap="round" opacity=".85"/>
+    <circle cx="24" cy="14" r="10" fill="{fill}" stroke="{base}" stroke-width="2.2"/>
+    <circle cx="24" cy="14" r="3.4" fill="{deep}" opacity=".75"/>
+    <path d="M-64-32c-11 14-15 30-12 46" fill="none" stroke="{soft}" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M-82-44c-15 20-20 42-16 62" fill="none" stroke="{soft}" stroke-width="2" stroke-linecap="round"
+          stroke-dasharray="4 6" opacity=".8"/>
+  </g>"""
+
     if motif == "microbe":
         return f"""
   <g transform="translate(100 100)">
