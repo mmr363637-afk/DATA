@@ -1,8 +1,14 @@
 /* راستی‌آزمایی لایهٔ هایلایت/نشانه‌ها در jsdom
+   ۰) درسنامهٔ کامل (قلب) — لایهٔ خودکار نباید UI تکراری بسازد
    ۱) درسنامهٔ عفونی (medx-reader.js + ensureMarksUI)
    ۲) درسنامهٔ چشم‌پزشکی (خودبسنده + marks-lite)
    ۳) بانک آزمون ۷۰۵ سؤالی عفونی (marks-lite + کلید سند پویا)
-   ۴) صفحهٔ بخش بانک سؤال (qbank.js + marks-lite + data-marks-doc) */
+   ۴) صفحهٔ بخش بانک سؤال (qbank.js + marks-lite + data-marks-doc)
+   ۵) بانک ریشهٔ خودبسنده (marks-lite درون‌خطی)
+   ۶) درسنامهٔ ارتوپدی (marks-lite + «علامت‌گذاری فصل» بومی)
+   ۷) درسنامهٔ ENT (marks-lite + موتور بومی درسنامهٔ ENT)
+   ۸) درسنامهٔ اورولوژی (marks-lite + هایلایت بومی .mk)
+   ۹) بخش‌های تازهٔ بانک سؤال (uro و ent) */
 const fs = require("fs");
 const path = require("path");
 const { JSDOM, VirtualConsole } = require("jsdom");
@@ -316,13 +322,13 @@ async function testExamBank() {
 }
 
 /* ==================== ۴) صفحهٔ بخش بانک سؤال (qbank.js) ==================== */
-async function testQbankPart() {
-  console.log("\n[۴] content/qbank/inf.html — qbank.js + marks-lite");
-  const file = path.join(ROOT, "content/qbank/inf.html");
+async function qbankPartChecks(part, group) {
+  console.log("\n[" + group + "] content/qbank/" + part + ".html — qbank.js + marks-lite");
+  const file = path.join(ROOT, "content/qbank/" + part + ".html");
   let html = fs.readFileSync(file, "utf8");
   ok(/نویسنده: <b>مهدی محمدرحیمی<\/b>/.test(html), "اعتبار نویسنده در پانویس هست");
-  ok(/data-marks-key="qb-inf"/.test(html), "کلید marks روی body هست");
-  const data = JSON.parse(fs.readFileSync(path.join(ROOT, "qbank/data/inf.json"), "utf8"));
+  ok(new RegExp('data-marks-key="qb-' + part + '"').test(html), "کلید marks روی body هست");
+  const data = JSON.parse(fs.readFileSync(path.join(ROOT, "qbank/data/" + part + ".json"), "utf8"));
   html = externalizeScripts(html, src => {
     const n = src.split("/").pop().split("?")[0];
     const p = path.join(ROOT, "assets/theme", n);
@@ -337,6 +343,12 @@ async function testQbankPart() {
   ok(!!app && app.querySelector(".qb-stem"), "qbank.js سؤال را رندر کرد");
   ok(app.getAttribute("data-marks-doc") === data[0].id + "|" + data[0].part,
     "کلید سند = شناسهٔ سؤال (" + app.getAttribute("data-marks-doc") + ")");
+  ok(data.length === 200, "دویست سؤال در دادهٔ بخش (" + data.length + ")");
+  ok(data.every(q => (q.chapterTitle || "").trim().length > 0),
+    "عنوان فصل هر سؤال پر است");
+  ok(data.every(q => Array.isArray(q.options) && q.options.length === 4 &&
+    Number.isInteger(q.correct) && q.correct >= 0 && q.correct < 4),
+    "همهٔ سؤال‌ها چهار گزینه و پاسخ معتبر دارند");
   ok(!!win.MarksLite, "MarksLite بالا آمده");
   const sel = fakeSelection(win);
   const node = firstTextNode(app.querySelector(".qb-stem"));
@@ -347,7 +359,7 @@ async function testQbankPart() {
   doc.querySelector('.ml-selbar__dot[data-c="o"]').dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
   await sleep(80);
   ok(app.querySelectorAll("mark.ml-hl").length >= 1, "هایلایت در صورت سؤال ساخته شد");
-  const key = "ml-marks/qb-inf";
+  const key = "ml-marks/qb-" + part;
   ok(JSON.parse(win.localStorage.getItem(key)).hl[0].d === data[0].id + "|" + data[0].part, "با کلید سند ذخیره شد");
   // سؤال بعدی (qbank.js با تیر راست/چپ یا دکمه جابه‌جا می‌شود)
   const nextBtn = [...doc.querySelectorAll("button")].find(b => /بعدی|next/i.test(b.textContent + b.className));
@@ -358,6 +370,8 @@ async function testQbankPart() {
   ok(app.querySelectorAll("mark.ml-hl").length === 0, "هایلایت سؤال قبل در سؤال بعد دیده نمی‌شود");
   if (errors.length) console.log("  (خطاهای jsdom: " + errors.slice(0, 3).join(" | ").slice(0, 240) + ")");
 }
+
+async function testQbankPart() { await qbankPartChecks("inf", "۴"); }
 
 /* ========= ۶) درسنامهٔ ارتوپدی: marks-lite + «علامت‌گذاری فصل» بومی ========= */
 async function testOrthopedics() {
@@ -426,6 +440,113 @@ async function testRootBank() {
   if (errors.length) console.log("  (خطاهای jsdom: " + errors.slice(0, 3).join(" | ").slice(0, 240) + ")");
 }
 
+/* ====== ۷) درسنامهٔ ENT: marks-lite کنار موتور بومی (بخش/آزمون/فلش‌کارت) ====== */
+async function testEnt() {
+  console.log("\n[۷] content/ent/01-…-hematology.html — موتور بومی ENT + marks-lite");
+  const slug = "01-1-0-to-1-2-patient-approach-imaging-hematology";
+  const file = path.join(ROOT, "content/ent/" + slug + ".html");
+  let html = fs.readFileSync(file, "utf8");
+  ok(/marks-lite\.js/.test(html) && /marks-lite\.css/.test(html), "لایهٔ marks-lite لینک شده");
+  ok(/data-marks-key="ent\/.+"/.test(html), "کلید marks = شناسهٔ کتابخانه‌ای درس");
+  ok(/data-marks-roots="\.content-section:not\(#flashcards\)"/.test(html),
+    "بخش فلش‌کارت از ریشه‌های هایلایت بیرون است (متنش با هر ورق عوض می‌شود)");
+  ok(/<footer class="footer">[^<]*نویسنده: مهدی محمدرحیمی/.test(html),
+    "پانویس بومی با «نویسنده:» و منبع کامل شد");
+  const nav = html.match(/<nav class="ml-nav"[^>]*>([\s\S]*?)<\/nav>/);
+  ok(!!nav && (nav[1].match(/<a /g) || []).length === 3, "نوار پیوند کتابخانه (۳ پیوند) افزوده شد");
+  ok(!!nav && /\.\.\/subject\/ent\.html/.test(nav[1]), "پیوند داشبورد ENT درست است");
+
+  html = addMarksLiteInline(html);
+  const { win, doc, errors } = await boot(html, { wait: 500 });
+  ok(!!win.MarksLite, "MarksLite بالا آمده");
+  ok(doc.querySelectorAll(".content-section[data-track]").length >= 4,
+    "بخش‌های درس پیدا شد (" + doc.querySelectorAll(".content-section[data-track]").length + ")");
+  ok(doc.querySelectorAll("#quiz-root .quiz-q").length === 15, "آزمون بومی ۱۵ سؤالی رندر شد");
+  ok(/\d+ \/ \d+/.test(doc.getElementById("flash-count").textContent),
+    "فلش‌کارت بومی رندر شد (" + doc.getElementById("flash-count").textContent + ")");
+
+  // هایلایت رنگی marks-lite روی متن درس
+  const sel = fakeSelection(win);
+  const node = firstTextNode(doc.querySelector(".content-section[data-track] p"));
+  const picked = selectText(win, sel, node, 5, 45);
+  ok(picked.length > 20, "متنی برای هایلایت انتخاب شد: «" + picked.slice(0, 26) + "…»");
+  mouseup(win);
+  await sleep(80);
+  ok(doc.querySelector(".ml-selbar").classList.contains("is-on"), "نوار رنگ‌ها باز شد");
+  doc.querySelector('.ml-selbar__dot[data-c="g"]').dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
+  await sleep(80);
+  ok(doc.querySelectorAll("mark.ml-hl").length >= 1, "هایلایت سبز ساخته شد");
+  const store = JSON.parse(win.localStorage.getItem("ml-marks/ent/" + slug));
+  ok(store && store.hl.length === 1 && store.hl[0].r !== "flashcards",
+    "در کلید ml-marks/ent/" + slug.slice(0, 12) + "… ذخیره شد (ریشه: " + (store && store.hl[0].r) + ")");
+
+  // موتور بومی: نشان‌گذاری بخش باید جدا از marks-lite کار کند و ذخیره شود
+  const bm = doc.querySelector("[data-bookmark]");
+  ok(!!bm, "دکمهٔ «نشان‌گذاری بخش» بومی سر جایش است");
+  bm.dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
+  await sleep(60);
+  const native = win.localStorage.getItem("entlesson:ent-goldenberg-01");
+  ok(!!native && /bookmarks/.test(native), "وضعیت بومی در entlesson:ent-goldenberg-01 ذخیره شد");
+  ok(doc.querySelectorAll("mark.ml-hl").length >= 1, "هایلایت marks-lite با کلیک بومی پاک نشد");
+  ok(lsKeys(win).some(k => k.startsWith("ml-marks/")) && lsKeys(win).some(k => k.startsWith("entlesson:")),
+    "دو لایه کلیدهای ذخیره‌سازی جدا دارند");
+  if (errors.length) console.log("  (خطاهای jsdom: " + errors.slice(0, 3).join(" | ").slice(0, 240) + ")");
+}
+
+/* ====== ۸) درسنامهٔ اورولوژی: marks-lite + هایلایت بومی (.mk / hl-mode) ====== */
+async function testUrology() {
+  console.log("\n[۸] content/urology/chapter-01.html — همزیستی marks-lite با هایلایت بومی");
+  const file = path.join(ROOT, "content/urology/chapter-01.html");
+  let html = fs.readFileSync(file, "utf8");
+  ok(/marks-lite\.js/.test(html) && /marks-lite\.css/.test(html), "لایهٔ marks-lite لینک شده");
+  ok(/data-marks-key="urology\/chapter-01"/.test(html), "کلید marks = urology/chapter-01");
+  ok(/data-marks-roots="\.sec-body"/.test(html), "فقط بدنهٔ بخش‌ها انتخاب‌پذیر است");
+  ok(/<footer class="foot">[^<]*نویسنده: مهدی محمدرحیمی/.test(html),
+    "پانویس بومی منبع + «نویسنده:» دارد (بلوک اعتبار دوم لازم نبود)");
+  ok(!/<!--ml-credit-->/.test(html), "بلوک اعتبار تکراری تزریق نشد");
+  ok(/href="\.\.\/subject\/urology\.html"/.test(html) && /href="\.\.\/index\.html"/.test(html),
+    "کرامب درسنامه به داشبورد و فهرست کتابخانه وصل است");
+
+  html = addMarksLiteInline(html);
+  const { win, doc, errors } = await boot(html, { wait: 600 });
+  ok(!!win.MarksLite, "MarksLite بالا آمده");
+  ok(doc.querySelectorAll(".sec-body").length > 5,
+    "بدنهٔ بخش‌ها پیدا شد (" + doc.querySelectorAll(".sec-body").length + ")");
+
+  const sel = fakeSelection(win);
+  const node = firstTextNode(doc.querySelector(".sec-body"));
+  selectText(win, sel, node, 6, 46);
+  mouseup(win);
+  await sleep(80);
+  ok(doc.querySelector(".ml-selbar").classList.contains("is-on"), "نوار رنگ‌ها باز شد");
+  doc.querySelector('.ml-selbar__dot[data-c="y"]').dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
+  await sleep(80);
+  ok(doc.querySelectorAll('mark.ml-hl[data-c="y"]').length >= 1, "هایلایت زرد ساخته شد");
+  const store = JSON.parse(win.localStorage.getItem("ml-marks/urology/chapter-01"));
+  ok(store && store.hl.length === 1, "در کلید ml-marks/urology/chapter-01 ذخیره شد");
+
+  // سازوکار بومی صفحه (data-hl → body.hl-mode + .mk)
+  const hlBtn = doc.querySelector("[data-hl]");
+  ok(!!hlBtn, "دکمهٔ «علامت‌گذاری» بومی صفحه سر جایش است");
+  hlBtn.dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
+  await sleep(50);
+  ok(doc.body.classList.contains("hl-mode"), "حالت علامت‌گذاری بومی فعال شد");
+  const target = doc.querySelector(".sec-body p") || doc.querySelector(".sec-body li");
+  target.dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
+  await sleep(60);
+  ok(doc.querySelectorAll(".mk").length >= 1, "علامت‌گذاری بومی (.mk) کار کرد");
+  const native = JSON.parse(win.localStorage.getItem("medx.urology.progress.v1") || "{}");
+  ok(!!native && JSON.stringify(native).includes("hl"), "وضعیت بومی هم ذخیره شد (جدا از marks-lite)");
+  ok(doc.querySelectorAll("mark.ml-hl").length >= 1, "هایلایت marks-lite با کلیک بومی پاک نشد");
+  if (errors.length) console.log("  (خطاهای jsdom: " + errors.slice(0, 3).join(" | ").slice(0, 240) + ")");
+}
+
+/* ============ ۹) بخش‌های تازهٔ بانک سؤال: اورولوژی و ENT ============ */
+async function testNewQbankParts() {
+  await qbankPartChecks("uro", "۹");
+  await qbankPartChecks("ent", "۹");
+}
+
 (async () => {
   await testFullReaderUnchanged();
   await testInfectious();
@@ -433,6 +554,9 @@ async function testRootBank() {
   await testQbankPart();
   await testRootBank();
   await testOrthopedics();
+  await testEnt();
+  await testUrology();
+  await testNewQbankParts();
   await testExamBank();
   console.log("\n" + (failures ? "✗ " + failures + " مورد ناموفق" : "✓ همهٔ راستی‌آزمایی‌ها پاس شدند"));
   process.exit(failures ? 1 : 0);

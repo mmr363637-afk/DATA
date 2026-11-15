@@ -97,9 +97,7 @@
    "chroma": 46,
    "note": "آبی ناوی",
    "appSubjectKeys": [
-    "surgery-lawrence",
-    "urology-simforoush",
-    "ent-goldenberg"
+    "surgery-lawrence"
    ]
   },
   {
@@ -197,6 +195,30 @@
    "note": "آجری (هم‌خوان با --h:16 درسنامه‌ها)",
    "appSubjectKeys": [
     "orthopedics-alamiharandi"
+   ]
+  },
+  {
+   "key": "urology",
+   "name": "اورولوژی",
+   "nameEn": "Urology",
+   "icon": "🫘",
+   "hue": 44,
+   "chroma": 72,
+   "note": "کهربایی/طلایی در کتابخانه (درسنامه‌های پیش‌ساخته آسمانی --h:201 خودشان را دارند) — ۲۸ فصل از ۵۰ فصل کتاب؛ فصل ۴۸ و ۵۰ در PDF منبع صفحه نداشتند",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "key": "ent",
+   "name": "گوش، حلق و بینی",
+   "nameEn": "Otolaryngology (ENT)",
+   "icon": "👂",
+   "hue": 272,
+   "chroma": 58,
+   "note": "بنفش نیلی (اگر neuro با hue 266 فعال شد، hue آن را عوض کن — این درسنامه‌ها زودتر این رنگ را گرفته‌اند)؛ ۳۲ درسنامهٔ موضوعی بر پایهٔ هندبوک اتولارینگولوژی",
+   "appSubjectKeys": [
+    "ent-goldenberg"
    ]
   }
  ]

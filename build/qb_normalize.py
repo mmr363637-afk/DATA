@@ -11,6 +11,13 @@
                                   clinicalPearl, examTrap, highYield (بانک‌های تک‌فایلی)
                                   ortho.json علاوه بر این image{src,alt,credit,source,w,h}
                                   و referenceSection دارد (۴۲ سؤال ارتوپدی تصویردار).
+  • ent.json                   -> question, answer, why[4], pearl, type/typeLabel,
+                                  difficulty/difficultyLabel, chapter="3.1.2" (رشتهٔ
+                                  بخش کتاب)، sectionLabel، chapterTitle انگلیسی،
+                                  sourceId/sourcePage/reference (هندبوک اتولارینگولوژی)
+  • uro.json                   -> از قبل هم‌طرح کتابخانه است (stem/correct/whyWrong{}/
+                                  pearl/trap/highYield/topic/subtopic/chapter عددی) و
+                                  فقط pages → referencePages نگاشت می‌شود.
 
 خروجی یک طرح واحد:
   { id, subject, src, part, chapter, chapterTitle, topic, subtopic,
@@ -42,11 +49,13 @@ BUNDLES = [
     ("ophthalmology", "eye", "چشم‌پزشکی عمومی — جوادی", ["chashm.json"]),
     ("orthopedics", "ortho", "ارتوپدی و شکستگی‌ها — اعلمی هرندی", ["ortho.json"]),
     ("infectious", "inf", "بیماری‌های عفونی — هاریسون ۲۰۲۵", ["ofuni.json"]),
+    ("ent", "ent", "گوش، حلق و بینی — هندبوک اتولارینگولوژی", ["ent.json"]),
+    ("urology", "uro", "اورولوژی — سیم‌فروش ۱۴۰۲", ["uro.json"]),
 ]
 
 DIFF = {"easy": "آسان", "medium": "متوسط", "hard": "دشوار", "very hard": "خیلی دشوار", "veryhard": "خیلی دشوار",
         "آسان": "آسان", "متوسط": "متوسط", "سخت": "دشوار", "دشوار": "دشوار",
-        "بسیار سخت": "خیلی دشوار", "خیلی دشوار": "خیلی دشوار"}
+        "بسیار سخت": "خیلی دشوار", "خیلی دشوار": "خیلی دشوار", "بسیار دشوار": "خیلی دشوار"}
 LETTER_RE = re.compile(r"^[A-D][\)\.\-]\s*")
 
 
@@ -122,10 +131,75 @@ def adapt_chashm(q: dict) -> dict:
     return out
 
 
+# بخش‌های اصلی هندبوک اتولارینگولوژی (Goldenberg & Goldstein, 2e) — شمارهٔ
+# بخش در داده به شکل «3.1.2» است؛ برای فیلتر فصل، فقط شمارهٔ بخش اصلی نگه
+# داشته می‌شود و عنوان فارسی از همین جدول می‌آید.
+ENT_SECTIONS = {
+    1: "رویکرد به بیمار، تصویربرداری، هماتولوژی و خواب",
+    2: "ارزیابی پیش‌عمل، راه هوایی و بیهوشی",
+    3: "گوش، شنوایی و تعادل (اتولوژی)",
+    4: "بینی و سینوس‌های پارانازال (راینولوژی)",
+    5: "حنجره، صدا، بلع و رفلاکس",
+    6: "گردن، توده‌های گردنی و سرطان‌های سر و گردن",
+    7: "تیروئید و غدد درون‌ریز گردن",
+    8: "اتولارینگولوژی کودکان",
+    9: "ترومای صورت و اعصاب جمجمه‌ای",
+}
+ENT_SOURCE = ("Handbook of Otolaryngology: Head and Neck Surgery — "
+              "Goldenberg & Goldstein، ویراست دوم ۲۰۱۸ (Thieme)")
+
+
+def adapt_ent(q: dict) -> dict:
+    """طرح بانک ENT (question/answer/why/chapter="3.1.2") → طرح عمومی normalize()."""
+    if "question" not in q:
+        return q
+    out = dict(q)
+    out["stem"] = clean(q.get("question"))
+    if "correct" not in out:
+        out["correct"] = q.get("answer")
+    why = q.get("why")
+    if isinstance(why, list):
+        out["whyWrong"] = why  # هم‌تراز با گزینه‌ها؛ جای گزینهٔ درست بعداً حذف می‌شود
+    out["difficulty"] = clean(q.get("difficultyLabel")) or clean(q.get("difficulty"))
+    out["questionType"] = clean(q.get("type"))
+    out["questionTypeLabel"] = clean(q.get("typeLabel"))
+
+    label = clean(q.get("chapter") or q.get("sourceSection") or "")
+    head = label.split(".")[0]
+    try:
+        major = int(head)
+    except ValueError:
+        major = 0
+    out["chapter"] = major
+    out["chapterTitle"] = ENT_SECTIONS.get(major, "ضمیمه‌ها و مرورهای پایه")
+    # برچسب ریزِ بخش («۳٫۱٫۱ · افت شنوایی ناگهانی») به‌جای topic می‌نشیند تا در
+    # داده قابل جست‌وجو بماند؛ عنوان انگلیسی بخش هم در subtopic و متا حفظ می‌شود.
+    out["topic"] = clean(q.get("sectionLabel")) or label
+    out["subtopic"] = clean(q.get("sourceTitle")) or clean(q.get("chapterTitle"))
+    out["referenceSection"] = clean(q.get("sectionLabel")) or label
+    out["referenceBook"] = ENT_SOURCE
+    if q.get("sourcePage") not in (None, ""):
+        out["referencePages"] = str(q.get("sourcePage"))
+    out.pop("question", None)
+    out.pop("answer", None)
+    out.pop("why", None)
+    out.pop("searchText", None)   # از روی بقیهٔ فیلدها ساخته می‌شد؛ تکراری است
+    return out
+
+
+def adapt_uro(q: dict) -> dict:
+    """بانک اورولوژی از قبل هم‌طرح است؛ فقط نام چند فیلد را هم‌سان می‌کند."""
+    if "pages" in q and not q.get("referencePages"):
+        q = dict(q)
+        q["referencePages"] = clean(q.get("pages"))
+    return q
+
+
 # متاهایی که در طرح کتابخانه جایی ندارند ولی نباید از داده حذف شوند
 META_KEEP = ("questionType", "questionTypeLabel", "coverageIndex", "topicIndex",
              "difficultyFa", "referenceBook", "edition", "referencePages",
-             "referenceSection")
+             "referenceSection", "sourceId", "sourcePage", "sourceTitle",
+             "sectionLabel", "reference", "answerLetter", "custom")
 
 
 def norm_image(q) -> dict | None:
@@ -158,6 +232,8 @@ def norm_image(q) -> dict | None:
 
 
 def normalize(q, subject, src, part) -> dict | None:
+    q = adapt_ent(q)
+    q = adapt_uro(q)
     q = adapt_chashm(q)
     opts = [clean(o) for o in (q.get("options") or [])]
     if len(opts) < 2:

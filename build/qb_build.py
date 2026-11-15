@@ -30,8 +30,10 @@ def esc(s) -> str:
     return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
 
 
-ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology", "orthopedics", "infectious"]
-PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye", "ortho", "inf"]
+ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology", "orthopedics", "infectious",
+         "urology", "ent"]
+PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye", "ortho",
+              "inf", "uro", "ent"]
 
 
 def load_all():
@@ -432,8 +434,10 @@ def sync_manifest(parts) -> None:
          "page": f"qbank/{p['part']}.html", "standalone": f"qbank/{p['part']}-standalone.html"}
         for p in parts
     ]
-    m["updatedAt"] = datetime.date.today().isoformat()
-    mf.write_text(json.dumps(m, ensure_ascii=False, indent=1), encoding="utf-8")
+    # همان تاریخِ build/sync_family.py تا مهر هر دو یکی باشد (MEDX_BUILD_DATE)
+    m["updatedAt"] = os.environ.get("MEDX_BUILD_DATE") or datetime.date.today().isoformat()
+    # «\n» پایانی: همان قرارداد build/sync_family.py تا --check هر دو پاک بماند
+    mf.write_text(json.dumps(m, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"manifest.json → qbank.total={qb['total']} در {len(qb['parts'])} بخش")
 
 

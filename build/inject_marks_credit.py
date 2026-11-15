@@ -18,6 +18,8 @@
   ۴) صفات data-marks-* روی <body> (کلید/محدوده/ریشه‌ها)
   ۵) کلید سند پویا برای بانک‌هایی که هر بار یک سؤال را از نو رندر می‌کنند
      (renderQuestion → data-marks-doc)
+  ۶) نوار پیوند کتابخانه (ml-nav) برای درسنامه‌هایی که هیچ راه برگشتی به
+     فهرست/داشبورد ندارند (ENT و چشم‌پزشکی)
 
 اجرا:
     python3 build/inject_marks_credit.py            # content/** + سه بانک ریشه
@@ -99,6 +101,10 @@ def insert_credit(text: str, block: str, where: str = "before_body_end") -> tupl
         i = text.rfind("</main>")
         if i != -1:
             return text[: i + len("</main>")] + "\n" + block + text[i + len("</main>"):], True
+    if where == "before_footer":
+        i = text.rfind("<footer")
+        if i != -1:
+            return text[:i] + block + "\n" + text[i:], True
     tail = text.rstrip()
     i = tail.rfind("</body>")
     if i == -1:
@@ -122,6 +128,53 @@ def add_assets_linked(text: str, ar: str) -> tuple[str, bool]:
             text = text[: m.start()] + f'<script src="{ar}assets/theme/marks-lite.js" defer></script>\n' + text[m.start():]
             changed = True
     return text, changed
+
+
+# ---------------------------------------------------------------------------
+# نوار پیوند کتابخانه (برای درسنامه‌های خودبسنده‌ای که راه برگشت ندارند)
+# ---------------------------------------------------------------------------
+NAV_TAG = "<!--ml-nav-->"
+NAV_CSS = """
+/* نوار پیوند کتابخانه (تزریق‌شده توسط build/inject_marks_credit.py) */
+.ml-nav{max-width:min(900px,calc(100vw - 28px));margin:22px auto 0;display:flex;gap:8px;flex-wrap:wrap;
+  justify-content:center;padding:0 14px;font-size:.8rem}
+.ml-nav a{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;
+  border:1px solid var(--line,#dbe3ec);background:var(--surface,#fff);color:var(--ink-2,#3b4a5a);
+  text-decoration:none;font-weight:700;line-height:1.4;transition:.16s}
+.ml-nav a:hover{border-color:var(--brand-400,#7aa7d8);color:var(--brand-600,#1d4ed8);background:var(--brand-50,#f2f7fd)}
+.ml-nav a:focus-visible{outline:2px solid var(--brand-500,#2563eb);outline-offset:2px}
+@media print{.ml-nav{display:none}}
+"""
+
+
+def nav_html(links: list[tuple[str, str]]) -> str:
+    items = "".join(f'<a href="{href}">{label}</a>' for href, label in links)
+    return (f'{NAV_TAG}\n<style>{NAV_CSS.strip()}</style>\n'
+            f'<nav class="ml-nav" aria-label="پیوندهای کتابخانه">{items}</nav>')
+
+
+def insert_nav(text: str, links: list[tuple[str, str]]) -> tuple[str, bool]:
+    """نوار پیوند را پیش از پانویس درج می‌کند (idempotent با نشانهٔ ml-nav)."""
+    if NAV_TAG in text:
+        return text, False
+    block = nav_html(links)
+    i = text.rfind("<footer")
+    if i == -1:
+        i = text.rfind("</body>")
+    if i == -1:
+        return text, False
+    return text[:i] + block + "\n" + text[i:], True
+
+
+def set_footer_text(text: str, new_inner: str, cls: str = "footer") -> tuple[str, bool]:
+    """متن پانویس بومی صفحه را با متن یکدست کتابخانه عوض می‌کند (idempotent)."""
+    m = re.search(r'(<footer class="%s">)(.*?)(</footer>)' % re.escape(cls), text, re.S)
+    if not m:
+        return text, False
+    current = re.sub(r"\s+", " ", m.group(2)).strip()
+    if current == new_inner:
+        return text, False
+    return text[: m.start(2)] + new_inner + text[m.end(2):], True
 
 
 CSS_TAG = 'id="ml-inline-css"'
@@ -180,10 +233,37 @@ def ortho_files():
     return sorted((CONTENT / "orthopedics").glob("chapter-*.html"))
 
 
+def urology_files():
+    return sorted((CONTENT / "urology").glob("chapter-*.html"))
+
+
+def ent_files():
+    return sorted(f for f in (CONTENT / "ent").glob("*.html") if f.name != "manifest.json")
+
+
 BOOK_OPH = "منبع محتوا: چشم‌پزشکی عمومی جوادی — ویراست دوم ۱۳۹۷"
 BOOK_ORTHO = "منبع محتوا: درسنامهٔ ارتوپدی و شکستگی‌ها — دکتر بهادر اعلمی هرندی و همکاران، ویراست ششم ۱۳۹۷"
 BOOK_INF = "منبع محتوا: اصول طب داخلی هاریسون، ویراست ۲۲ (۲۰۲۵) — ۴۴ فصل"
+BOOK_URO = "منبع محتوا: اورولوژی عمومی — دکتر ناصر سیم‌فروش و همکاران، چاپ ۱۴۰۲"
+BOOK_ENT = ("منبع محتوا: Handbook of Otolaryngology: Head and Neck Surgery — "
+            "Goldenberg & Goldstein، ویراست دوم ۲۰۱۸ (Thieme)")
+# پانویس بومی درسنامهٔ ENT فقط نام نویسنده را داشت؛ با ذکر منبع و شکل «نویسنده:»
+# هم‌سان بقیهٔ خانواده‌ها کامل می‌شود (بدون بلوک اعتبار دوم و تکراری).
+ENT_FOOTER = ("درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery "
+              "(Goldenberg & Goldstein، ویراست دوم، Thieme 2018) · نویسنده: " + AUTHOR)
 NOTE = "محتوای آموزشی است و جایگزین قضاوت بالینی نیست."
+
+# پیوندهای کتابخانه برای درسنامه‌هایی که هیچ راه برگشتی ندارند (مسیرها نسبت به
+# پوشهٔ خانواده‌اند و با ar="../" کامل می‌شوند). ارتوپدی و اورولوژی «کرامب»
+# دارند، پس اینجا نیستند.
+LIB_NAV = {
+    "ophthalmology": [("index.html", "کتابخانهٔ مدیکال"),
+                      ("subject/ophthalmology.html", "داشبورد چشم‌پزشکی"),
+                      ("qbank/eye.html", "بانک ۲۰۰ سؤالی چشم‌پزشکی")],
+    "ent": [("index.html", "کتابخانهٔ مدیکال"),
+            ("subject/ent.html", "داشبورد گوش، حلق و بینی"),
+            ("qbank/ent.html", "بانک ۲۰۰ سؤالی ENT")],
+}
 
 
 def main(check_only: bool = False) -> int:
@@ -193,7 +273,8 @@ def main(check_only: bool = False) -> int:
                source: str = "", note: str = NOTE, where: str = "before_body_end",
                inline: bool = False, ar: str = "../",
                script_patch: tuple[str, str] | None = None,
-               credit: bool = True) -> None:
+               credit: bool = True, nav: list[tuple[str, str]] | None = None,
+               footer_text: str | None = None) -> None:
         text = path.read_text(encoding="utf-8")
         before = text
         acts: list[str] = []
@@ -211,6 +292,13 @@ def main(check_only: bool = False) -> int:
         if credit:
             text, ok = insert_credit(text, credit_html(source, note), where)
             acts.append("credit" if ok else "")
+        if footer_text:
+            text, ok = set_footer_text(text, footer_text)
+            acts.append("footer-credit" if ok else "")
+        if nav:
+            text, ok = insert_nav(text, [(ar + href if not href.startswith(("http", "#")) else href, lbl)
+                                         for href, lbl in nav])
+            acts.append("nav" if ok else "")
         if text != before:
             if not check_only:
                 path.write_text(text, encoding="utf-8")
@@ -224,7 +312,7 @@ def main(check_only: bool = False) -> int:
         lid = re.search(r'data-lesson-id="([^"]+)"', f.read_text(encoding="utf-8"))
         key = lid.group(1) if lid else f"oph-{f.stem}"
         handle(f, key=key, scope="main", roots="main", label="نشانه‌ها",
-               source=BOOK_OPH, where="after_main", ar="../")
+               source=BOOK_OPH, where="after_main", ar="../", nav=LIB_NAV["ophthalmology"])
 
     # --- درسنامه‌های پیش‌ساختهٔ ارتوپدی: هایلایت رنگی + اعتبار نویسنده ----
     for f in ortho_files():
@@ -233,6 +321,23 @@ def main(check_only: bool = False) -> int:
         handle(f, key=key, scope="main", roots=".sec-body", label="نشانه‌ها",
                source=BOOK_ORTHO, where="after_main", ar="../",
                note="هایلایت رنگی با انتخاب متن؛ «علامت‌گذاری فصل» قبلی هم سر جایش است.")
+
+    # --- درسنامه‌های پیش‌ساختهٔ اورولوژی: هایلایت رنگی (پانویس و «نویسنده:» را
+    #     خود صفحه دارد، پس بلوک اعتبار دوم درج نمی‌شود) ----------------------
+    for f in urology_files():
+        lid = re.search(r'data-lesson-id="([^"]+)"', f.read_text(encoding="utf-8"))
+        key = lid.group(1) if lid else f"urology/{f.stem}"
+        handle(f, key=key, scope="main", roots=".sec-body", label="نشانه‌ها",
+               source=BOOK_URO, where="after_main", ar="../", credit=False)
+
+    # --- درسنامه‌های ENT: موتور بومی خودشان را دارند (نشان‌گذاری بخش/فلش‌کارت/
+    #     آزمون) ولی هیچ لایهٔ هایلایت رنگی نداشتند. بخش فلش‌کارت از ریشه‌های
+    #     هایلایت بیرون است چون متنش با هر بار ورق‌خوردن از نو نوشته می‌شود.
+    for f in ent_files():
+        handle(f, key=f"ent/{f.stem}", scope="main",
+               roots=".content-section:not(#flashcards)", label="نشانه‌ها",
+               source=BOOK_ENT, ar="../", credit=False, footer_text=ENT_FOOTER,
+               nav=LIB_NAV["ent"])
 
     # --- بانک آزمون ۷۰۵ سؤالی عفونی ---------------------------------------
     exam = CONTENT / "subject" / "infectious-exam.html"

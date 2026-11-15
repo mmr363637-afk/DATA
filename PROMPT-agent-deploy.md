@@ -30,7 +30,7 @@ gh repo create mmr363637-afk/med-library --public \
 ```
 med-library/
 ├─ content/          ← خروجی آمادهٔ انتشار (index.html, manifest.json, assets/, <subject>/, qbank/)
-├─ build/            ← اسکریپت‌های ساخت (subjects.json, make_map.py, build.py, gen_library.py, icons.py, qb_normalize.py, qb_build.py, inject_marks_credit.py, sync_docs.py)
+├─ build/            ← اسکریپت‌های ساخت (subjects.json, make_map.py, build.py, gen_library.py, icons.py, qb_extract.py, qb_normalize.py, qb_build.py, sync_family.py, inject_marks_credit.py, sync_docs.py, medx_build.py)
 ├─ tests/            ← ممیزی و راستی‌آزمایی (audit-library.py، test-marks.js با jsdom)
 ├─ qbank/            ← فایل‌های خام آزمون (raw/) + نسخهٔ نرمال‌شده (data/)
 ├─ assets/           ← منبع CSS/فونت/JS
@@ -65,8 +65,9 @@ for u in \
 done
 ```
 و بررسی کن که `manifest.json` این اعداد را داشته باشد:
-`counts.lessons = 246`، `counts.subjects = 11`، `qbank.total = 1390`، `qbank.parts` دقیقاً ۱۱ عضو،
-و `subjects[].key` شامل `surgery`، `heme` و `infectious` باشد (و `onco` یا `id` **نباشد**).
+`counts.lessons = 306`، `counts.subjects = 13`، `qbank.total = 1790`، `qbank.parts` دقیقاً ۱۳ عضو،
+و `subjects[].key` شامل `surgery`، `heme`، `infectious`، `urology` و `ent` باشد
+(و `onco` یا `id` **نباشد**).
 
 > ⚠️ اگر `base.css` مقدار ۴۰۴ داد، یعنی پوشهٔ `assets` در `lib/` کپی نشده —
 > مطمئن شو `content/assets/` هم منتقل شده است.
@@ -103,10 +104,12 @@ done
 - ✅ اگر دسترسی `gh` نداری، بگو و از API استفاده کن؛ حدس نزن.
 
 ## معیار پذیرش
-- [ ] `.../lib/index.html` باز می‌شود و ۱۱ کارت درس + ۵ کارت «به‌زودی» دارد
+- [ ] `.../lib/index.html` باز می‌شود و ۱۳ کارت درس + ۵ کارت «به‌زودی» دارد
 - [ ] `.../lib/surgery/23-cardiothoracic-surgery.html` با رنگ ناوی و فونت وزیرمتن باز می‌شود
-- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 1390`)
-- [ ] `.../lib/qbank/index.html` ۱۱ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
+- [ ] `.../lib/urology/chapter-01.html` و `.../lib/ent/01-1-0-to-1-2-patient-approach-imaging-hematology.html`
+      باز می‌شوند، هایلایت رنگی کار می‌کند و نوار پیوند کتابخانه در انتهای صفحه هست
+- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 1790`)
+- [ ] `.../lib/qbank/index.html` ۱۳ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
 - [ ] یک آزمون در مرورگر باز می‌شود، با کلیک روی گزینه بازخورد («چرا؟»، «چرا بقیه غلط‌اند»، «نکتهٔ کلیدی») ظاهر می‌شود
 - [ ] نسخهٔ تک‌فایلی (`.../qbank/sur-1-standalone.html`) بدون اینترنت هم کار می‌کند
 - [ ] PR اتصال در `planner` باز است
@@ -145,10 +148,11 @@ done
 ۳) اجرا کن:
    python3 build/qb_normalize.py
    python3 build/qb_build.py
+   python3 build/sync_family.py           # آمار خانواده‌های پیش‌ساخته → manifest + گزارش
    python3 build/medx_build.py --portal-only
    python3 build/inject_marks_credit.py   # هایلایت + اعتبار نویسندهٔ صفحه‌های پیش‌ساخته (idempotent)
    python3 build/sync_docs.py             # همگام‌سازی تم و docs/lib
-   python3 tests/audit-library.py         # ممیزی ۲۸۵ فایل: هایلایت + نویسنده
+   python3 tests/audit-library.py         # ممیزی همهٔ فایل‌های HTML: هایلایت + نویسنده
 
 ۴) بررسی‌ها (همه باید درست باشند، وگرنه متوقف شو و گزارش بده):
    - جمع سؤال‌های چاپ‌شده = تعداد سؤال‌های استخراج‌شده از فایل (هیچ سؤالی نباید دور ریخته شود)

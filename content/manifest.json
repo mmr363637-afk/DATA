@@ -5,9 +5,9 @@
  "basePath": "",
  "index": "index.html",
  "counts": {
-  "subjects": 11,
-  "lessons": 246,
-  "minutes": 18543
+  "subjects": 13,
+  "lessons": 306,
+  "minutes": 21512
  },
  "subjects": [
   {
@@ -90,9 +90,7 @@
    "hue": 240,
    "chroma": 46,
    "appSubjectKeys": [
-    "surgery-lawrence",
-    "urology-simforoush",
-    "ent-goldenberg"
+    "surgery-lawrence"
    ],
    "page": "subject/surgery.html",
    "count": 29,
@@ -169,6 +167,34 @@
    "count": 47,
    "minutes": 7419,
    "lessons": 47
+  },
+  {
+   "key": "urology",
+   "name": "اورولوژی",
+   "nameEn": "Urology",
+   "icon": "🫘",
+   "hue": 44,
+   "chroma": 72,
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ],
+   "page": "subject/urology.html",
+   "count": 28,
+   "minutes": 2400
+  },
+  {
+   "key": "ent",
+   "name": "گوش، حلق و بینی",
+   "nameEn": "Otolaryngology (ENT)",
+   "icon": "👂",
+   "hue": 272,
+   "chroma": 58,
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ],
+   "page": "subject/ent.html",
+   "count": 32,
+   "minutes": 569
   }
  ],
  "lessons": [
@@ -4101,11 +4127,971 @@
    "tables": 2,
    "mcq": 15,
    "words": 6472
+  },
+  {
+   "id": "urology/chapter-01",
+   "subject": "urology",
+   "title": "اورژانس‌های ارولوژی",
+   "path": "urology/chapter-01.html",
+   "sections": 25,
+   "words": 11447,
+   "minutes": 95,
+   "flashcards": 18,
+   "tables": 4,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 1",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-02",
+   "subject": "urology",
+   "title": "ارزیابی بیماران ارولوژی",
+   "path": "urology/chapter-02.html",
+   "sections": 24,
+   "words": 8625,
+   "minutes": 80,
+   "flashcards": 20,
+   "tables": 4,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 2",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-03",
+   "subject": "urology",
+   "title": "اوروگرافی و سیستویورتروگرافی",
+   "path": "urology/chapter-03.html",
+   "sections": 25,
+   "words": 8386,
+   "minutes": 85,
+   "flashcards": 22,
+   "tables": 5,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 3",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-04",
+   "subject": "urology",
+   "title": "کاربرد سونوگرافی در دستگاه ادراری",
+   "path": "urology/chapter-04.html",
+   "sections": 22,
+   "words": 7073,
+   "minutes": 80,
+   "flashcards": 22,
+   "tables": 4,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 4",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-05",
+   "subject": "urology",
+   "title": "کاربرد CT Scan و MRI در ارولوژی",
+   "path": "urology/chapter-05.html",
+   "sections": 20,
+   "words": 6128,
+   "minutes": 80,
+   "flashcards": 22,
+   "tables": 6,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 5",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-07",
+   "subject": "urology",
+   "title": "عفونت‌های غیراختصاصی ادراری",
+   "path": "urology/chapter-07.html",
+   "sections": 27,
+   "words": 8287,
+   "minutes": 90,
+   "flashcards": 22,
+   "tables": 10,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 7",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-13",
+   "subject": "urology",
+   "title": "اختلالات مجرای ادراری در زنان",
+   "path": "urology/chapter-13.html",
+   "sections": 21,
+   "words": 5212,
+   "minutes": 70,
+   "flashcards": 22,
+   "tables": 5,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 13",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-14",
+   "subject": "urology",
+   "title": "آناتومی کف لگن و بی‌اختیاری استرسی",
+   "path": "urology/chapter-14.html",
+   "sections": 23,
+   "words": 7221,
+   "minutes": 90,
+   "flashcards": 22,
+   "tables": 9,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 14",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-16",
+   "subject": "urology",
+   "title": "مثانه عصبی",
+   "path": "urology/chapter-16.html",
+   "sections": 25,
+   "words": 6933,
+   "minutes": 100,
+   "flashcards": 22,
+   "tables": 12,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 16",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-17",
+   "subject": "urology",
+   "title": "اختلالات کلیه و محل اتصال حالب به لگنچه",
+   "path": "urology/chapter-17.html",
+   "sections": 24,
+   "words": 9053,
+   "minutes": 95,
+   "flashcards": 22,
+   "tables": 7,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 17",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-18",
+   "subject": "urology",
+   "title": "ناهنجاری‌های مادرزادی حالب",
+   "path": "urology/chapter-18.html",
+   "sections": 24,
+   "words": 8354,
+   "minutes": 95,
+   "flashcards": 22,
+   "tables": 8,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 18",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-19",
+   "subject": "urology",
+   "title": "عفونت‌های ادراری در اطفال",
+   "path": "urology/chapter-19.html",
+   "sections": 22,
+   "words": 7124,
+   "minutes": 90,
+   "flashcards": 22,
+   "tables": 9,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 19",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-20",
+   "subject": "urology",
+   "title": "برگشت ادرار از مثانه به حالب (رفلاکس)",
+   "path": "urology/chapter-20.html",
+   "sections": 28,
+   "words": 9138,
+   "minutes": 85,
+   "flashcards": 27,
+   "tables": 9,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 20",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-21",
+   "subject": "urology",
+   "title": "مثانهٔ عصبی و اختلالات ادراری در اطفال",
+   "path": "urology/chapter-21.html",
+   "sections": 28,
+   "words": 9003,
+   "minutes": 80,
+   "flashcards": 28,
+   "tables": 10,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 21",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-22",
+   "subject": "urology",
+   "title": "شب‌ادراری (انورزی)",
+   "path": "urology/chapter-22.html",
+   "sections": 23,
+   "words": 6432,
+   "minutes": 55,
+   "flashcards": 29,
+   "tables": 8,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 22",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-25",
+   "subject": "urology",
+   "title": "آنومالی‌های مادرزادی مثانه",
+   "path": "urology/chapter-25.html",
+   "sections": 23,
+   "words": 6387,
+   "minutes": 50,
+   "flashcards": 29,
+   "tables": 8,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 25",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-28",
+   "subject": "urology",
+   "title": "هیپوسپادیاس",
+   "path": "urology/chapter-28.html",
+   "sections": 21,
+   "words": 5783,
+   "minutes": 60,
+   "flashcards": 29,
+   "tables": 8,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 28",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-30",
+   "subject": "urology",
+   "title": "سنگ‌های ادراری",
+   "path": "urology/chapter-30.html",
+   "sections": 29,
+   "words": 7629,
+   "minutes": 95,
+   "flashcards": 30,
+   "tables": 11,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 30",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-31",
+   "subject": "urology",
+   "title": "درمان‌های مداخله‌ای در سنگ‌های ادراری (۲)",
+   "path": "urology/chapter-31.html",
+   "sections": 21,
+   "words": 5355,
+   "minutes": 80,
+   "flashcards": 30,
+   "tables": 15,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 31",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-32",
+   "subject": "urology",
+   "title": "بزرگی خوش‌خیم پروستات",
+   "path": "urology/chapter-32.html",
+   "sections": 24,
+   "words": 6848,
+   "minutes": 95,
+   "flashcards": 30,
+   "tables": 10,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 32",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-34",
+   "subject": "urology",
+   "title": "سرطان پروستات",
+   "path": "urology/chapter-34.html",
+   "sections": 25,
+   "words": 6587,
+   "minutes": 100,
+   "flashcards": 30,
+   "tables": 9,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 34",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-36",
+   "subject": "urology",
+   "title": "تومور یوروتلیال لگنچه و حالب",
+   "path": "urology/chapter-36.html",
+   "sections": 22,
+   "words": 5144,
+   "minutes": 85,
+   "flashcards": 30,
+   "tables": 8,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 36",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-37",
+   "subject": "urology",
+   "title": "سرطان سطحی مثانه",
+   "path": "urology/chapter-37.html",
+   "sections": 24,
+   "words": 5962,
+   "minutes": 100,
+   "flashcards": 30,
+   "tables": 10,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 37",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-39",
+   "subject": "urology",
+   "title": "سرطان بیضه",
+   "path": "urology/chapter-39.html",
+   "sections": 25,
+   "words": 5870,
+   "minutes": 110,
+   "flashcards": 32,
+   "tables": 14,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 39",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-40",
+   "subject": "urology",
+   "title": "سرطان‌های آلت",
+   "path": "urology/chapter-40.html",
+   "sections": 21,
+   "words": 5118,
+   "minutes": 80,
+   "flashcards": 29,
+   "tables": 6,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 40",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-41",
+   "subject": "urology",
+   "title": "تومورهای سیستم ادراری تناسلی در کودکان",
+   "path": "urology/chapter-41.html",
+   "sections": 22,
+   "words": 5511,
+   "minutes": 85,
+   "flashcards": 30,
+   "tables": 7,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 41",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-45",
+   "subject": "urology",
+   "title": "آدرنال",
+   "path": "urology/chapter-45.html",
+   "sections": 19,
+   "words": 4186,
+   "minutes": 95,
+   "flashcards": 30,
+   "tables": 5,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 45",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "urology/chapter-47",
+   "subject": "urology",
+   "title": "کاربرد روده در ارولوژی",
+   "path": "urology/chapter-47.html",
+   "sections": 21,
+   "words": 4720,
+   "minutes": 95,
+   "flashcards": 30,
+   "tables": 6,
+   "mcq": 15,
+   "source": "اورولوژی عمومی (دکتر ناصر سیم‌فروش و همکاران) — چاپ ۱۴۰۲ · فصل 47",
+   "appSubjectKeys": [
+    "urology-simforoush"
+   ]
+  },
+  {
+   "id": "ent/01-1-0-to-1-2-patient-approach-imaging-hematology",
+   "subject": "ent",
+   "title": "ارزیابی بیمار، تصویربرداری سر و گردن و هماتولوژی",
+   "path": "ent/01-1-0-to-1-2-patient-approach-imaging-hematology.html",
+   "sections": 6,
+   "words": 3969,
+   "minutes": 35,
+   "flashcards": 16,
+   "tables": 7,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 1.0, 1.1, 1.2",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/02-1-3-obstructive-sleep-apnea",
+   "subject": "ent",
+   "title": "آپنهٔ انسدادی خواب",
+   "path": "ent/02-1-3-obstructive-sleep-apnea.html",
+   "sections": 4,
+   "words": 1764,
+   "minutes": 21,
+   "flashcards": 15,
+   "tables": 3,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 1.3",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/03-1-4-to-1-6-oral-tmj-geriatric",
+   "subject": "ent",
+   "title": "ضایعات خوش‌خیم دهان، اختلالات TMJ و اتولارینگولوژی سالمندی",
+   "path": "ent/03-1-4-to-1-6-oral-tmj-geriatric.html",
+   "sections": 6,
+   "words": 3708,
+   "minutes": 32,
+   "flashcards": 18,
+   "tables": 7,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 1.4, 1.5, 1.6",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/04-2-0-to-2-1-preoperative-airway",
+   "subject": "ent",
+   "title": "ارزیابی پیش‌عمل و ارزیابی/مدیریت راه هوایی",
+   "path": "ent/04-2-0-to-2-1-preoperative-airway.html",
+   "sections": 5,
+   "words": 2464,
+   "minutes": 25,
+   "flashcards": 16,
+   "tables": 7,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 2.0, 2.1",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/05-2-2-to-2-4-anesthesia-perioperative",
+   "subject": "ent",
+   "title": "بیهوشی، مایعات و الکترولیت‌ها و مشکلات شایع پس از عمل",
+   "path": "ent/05-2-2-to-2-4-anesthesia-perioperative.html",
+   "sections": 6,
+   "words": 3076,
+   "minutes": 29,
+   "flashcards": 18,
+   "tables": 9,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 2.2, 2.2.1, 2.2.2, 2.2.3, 2.2.4, 2.3, 2.4",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/06-3-0-to-3-1-ear-anatomy-otologic-emergencies",
+   "subject": "ent",
+   "title": "آناتومی گوش و اورژانس‌های Otology",
+   "path": "ent/06-3-0-to-3-1-ear-anatomy-otologic-emergencies.html",
+   "sections": 8,
+   "words": 1975,
+   "minutes": 22,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 3.0, 3.1, 3.1.1, 3.1.2, 3.1.3, 3.1.4",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/07-3-2-otitis-media-cholesteatoma",
+   "subject": "ent",
+   "title": "اوتیت میانی و کلستئاتوم",
+   "path": "ent/07-3-2-otitis-media-cholesteatoma.html",
+   "sections": 7,
+   "words": 1337,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 0,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 3.2, 3.2.1, 3.2.2, 3.2.3, 3.2.4",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/08-3-3-otitis-externa",
+   "subject": "ent",
+   "title": "اوتیت خارجی",
+   "path": "ent/08-3-3-otitis-externa.html",
+   "sections": 5,
+   "words": 861,
+   "minutes": 13,
+   "flashcards": 15,
+   "tables": 0,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 3.3, 3.3.1, 3.3.2",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/09-3-4-to-3-5-audiology-hearing-loss",
+   "subject": "ent",
+   "title": "ادیولوژی و کم‌شنوایی",
+   "path": "ent/09-3-4-to-3-5-audiology-hearing-loss.html",
+   "sections": 7,
+   "words": 1336,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 3.4, 3.4.1, 3.4.2, 3.5, 3.5.1, 3.5.2",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/10-3-6-vertigo-balance",
+   "subject": "ent",
+   "title": "سرگیجه و ارزیابی تعادل",
+   "path": "ent/10-3-6-vertigo-balance.html",
+   "sections": 8,
+   "words": 1338,
+   "minutes": 17,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 3.6, 3.6.1, 3.6.2, 3.6.3, 3.6.4, 3.6.5",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/11-3-7-to-3-9-tinnitus-cpa-sscd",
+   "subject": "ent",
+   "title": "وزوز، تومورهای CPA و SSCD",
+   "path": "ent/11-3-7-to-3-9-tinnitus-cpa-sscd.html",
+   "sections": 6,
+   "words": 1008,
+   "minutes": 14,
+   "flashcards": 15,
+   "tables": 0,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 3.7, 3.8, 3.9",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/12-4-0-nose-paranasal-sinus-anatomy",
+   "subject": "ent",
+   "title": "آناتومی و فیزیولوژی بینی و سینوس‌های پارانازال",
+   "path": "ent/12-4-0-nose-paranasal-sinus-anatomy.html",
+   "sections": 7,
+   "words": 920,
+   "minutes": 12,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 4.0",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/13-4-1-rhinologic-emergencies",
+   "subject": "ent",
+   "title": "اورژانس‌های Rhinology",
+   "path": "ent/13-4-1-rhinologic-emergencies.html",
+   "sections": 8,
+   "words": 1305,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 4.1, 4.1.1, 4.1.2, 4.1.3, 4.1.4, 4.1.5",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/14-4-2-to-4-6-rhinitis-rhinosinusitis-olfaction",
+   "subject": "ent",
+   "title": "رینوسینوزیت، رینیت و اختلالات بویایی/چشایی",
+   "path": "ent/14-4-2-to-4-6-rhinitis-rhinosinusitis-olfaction.html",
+   "sections": 10,
+   "words": 2534,
+   "minutes": 25,
+   "flashcards": 15,
+   "tables": 2,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 4.2, 4.2.1, 4.2.2, 4.3, 4.3.1, 4.3.2, 4.4, 4.5, 4.6",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/15-5-0-to-5-1-upper-aerodigestive-emergencies",
+   "subject": "ent",
+   "title": "آناتومی راه هوایی فوقانی و اورژانس‌های حنجره/مری",
+   "path": "ent/15-5-0-to-5-1-upper-aerodigestive-emergencies.html",
+   "sections": 8,
+   "words": 1718,
+   "minutes": 19,
+   "flashcards": 15,
+   "tables": 2,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 5.0, 5.1, 5.1.1, 5.1.2, 5.1.3, 5.1.4",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/16-5-3-voice-disorders",
+   "subject": "ent",
+   "title": "پاپیلوماتوز حنجره و ضایعات خوش‌خیم چین صوتی",
+   "path": "ent/16-5-3-voice-disorders.html",
+   "sections": 6,
+   "words": 1056,
+   "minutes": 15,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 5.3, 5.3.1, 5.3.2",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/17-5-4-to-5-5-swallowing-reflux",
+   "subject": "ent",
+   "title": "اختلالات بلع، آسپیراسیون و رفلاکس",
+   "path": "ent/17-5-4-to-5-5-swallowing-reflux.html",
+   "sections": 7,
+   "words": 1355,
+   "minutes": 17,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 5.4, 5.4.2, 5.4.3, 5.5",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/18-6-0-to-6-1-neck-anatomy-emergencies",
+   "subject": "ent",
+   "title": "آناتومی گردن و اورژانس‌های گردنی",
+   "path": "ent/18-6-0-to-6-1-neck-anatomy-emergencies.html",
+   "sections": 8,
+   "words": 1507,
+   "minutes": 17,
+   "flashcards": 15,
+   "tables": 2,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 6.0, 6.1, 6.1.1, 6.1.2, 6.1.3, 6.1.4",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/19-6-2-neck-mass-evaluation",
+   "subject": "ent",
+   "title": "رویکرد سیستماتیک به توده‌های گردن",
+   "path": "ent/19-6-2-neck-mass-evaluation.html",
+   "sections": 6,
+   "words": 995,
+   "minutes": 15,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 6.2",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/20-6-3-head-neck-cancer-sinonasal-nasopharyngeal",
+   "subject": "ent",
+   "title": "سرطان‌های سینونازال و نازوفارنکس",
+   "path": "ent/20-6-3-head-neck-cancer-sinonasal-nasopharyngeal.html",
+   "sections": 6,
+   "words": 1232,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 6.3, 6.3.3, 6.3.4",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/21-6-3-oral-oropharyngeal-hpv-cancer",
+   "subject": "ent",
+   "title": "سرطان‌های حفرهٔ دهان، اوروفارنکس و HPV",
+   "path": "ent/21-6-3-oral-oropharyngeal-hpv-cancer.html",
+   "sections": 6,
+   "words": 1161,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 0,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 6.3.5, 6.3.6, 6.3.7",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/22-6-3-laryngeal-otalgia-paragangliomas",
+   "subject": "ent",
+   "title": "سرطان حنجره، گوش‌درد ارجاعی و پاراگانگلیوما",
+   "path": "ent/22-6-3-laryngeal-otalgia-paragangliomas.html",
+   "sections": 7,
+   "words": 1585,
+   "minutes": 17,
+   "flashcards": 15,
+   "tables": 2,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 6.3.10, 6.3.12, 6.3.19",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/23-6-4-salivary-glands",
+   "subject": "ent",
+   "title": "غدد بزاقی: آناتومی، بیماری‌ها و تومورها",
+   "path": "ent/23-6-4-salivary-glands.html",
+   "sections": 7,
+   "words": 1455,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 6.4, 6.4.0, 6.4.1, 6.4.2, 6.4.3",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/24-7-3-to-7-8-thyroid-nodules-cancer",
+   "subject": "ent",
+   "title": "گره‌ها، کیست‌ها و سرطان تیروئید",
+   "path": "ent/24-7-3-to-7-8-thyroid-nodules-cancer.html",
+   "sections": 6,
+   "words": 1162,
+   "minutes": 15,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 7.3, 7.8",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/25-8-1-to-8-7-pediatric-airway",
+   "subject": "ent",
+   "title": "ارزیابی راه هوایی کودکان، لارنگومالاسی، فلج چین‌ها و تنگی ساب‌گلوت",
+   "path": "ent/25-8-1-to-8-7-pediatric-airway.html",
+   "sections": 7,
+   "words": 1494,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 2,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 8.1, 8.2, 8.3, 8.7",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/26-8-10-to-8-12-adenoids-tonsils-hearing",
+   "subject": "ent",
+   "title": "آدنوئید و لوزه‌ها و کم‌شنوایی کودکان",
+   "path": "ent/26-8-10-to-8-12-adenoids-tonsils-hearing.html",
+   "sections": 6,
+   "words": 1120,
+   "minutes": 14,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 8.10, 8.10.1, 8.10.2, 8.12",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/27-8-13-to-8-16-pediatric-neck-masses",
+   "subject": "ent",
+   "title": "توده‌های گردنی و ناهنجاری‌های عروقی کودکان",
+   "path": "ent/27-8-13-to-8-16-pediatric-neck-masses.html",
+   "sections": 7,
+   "words": 1313,
+   "minutes": 15,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 8.13, 8.14, 8.15, 8.16",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/28-8-17-to-8-19-congenital-nasal-orofacial",
+   "subject": "ent",
+   "title": "توده‌های مادرزادی بینی، آترزی کوآن و شکاف لب/کام",
+   "path": "ent/28-8-17-to-8-19-congenital-nasal-orofacial.html",
+   "sections": 6,
+   "words": 1074,
+   "minutes": 14,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 8.17, 8.18, 8.19",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/29-9-1-1-9-2-facial-trauma-paralysis",
+   "subject": "ent",
+   "title": "شکستگی‌های صورت، فلج عصب صورت و بازتوانی",
+   "path": "ent/29-9-1-1-9-2-facial-trauma-paralysis.html",
+   "sections": 7,
+   "words": 1439,
+   "minutes": 16,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های 9.1.1, 9.1.5, 9.1.6, 9.2",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/30-appendix-a-basic-procedures-methods",
+   "subject": "ent",
+   "title": "ضمیمهٔ A — مرور پروسیجرهای پایهٔ ENT",
+   "path": "ent/30-appendix-a-basic-procedures-methods.html",
+   "sections": 10,
+   "words": 1516,
+   "minutes": 15,
+   "flashcards": 15,
+   "tables": 2,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های Appendix A",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/31-appendix-b-cranial-nerves",
+   "subject": "ent",
+   "title": "ضمیمهٔ B — دوازده عصب جمجمه‌ای برای ENT",
+   "path": "ent/31-appendix-b-cranial-nerves.html",
+   "sections": 7,
+   "words": 1075,
+   "minutes": 11,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های Appendix B",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
+  },
+  {
+   "id": "ent/32-appendix-c-ent-emergencies",
+   "subject": "ent",
+   "title": "ضمیمهٔ C — فهرست ارجاعی اورژانس‌های ENT",
+   "path": "ent/32-appendix-c-ent-emergencies.html",
+   "sections": 6,
+   "words": 977,
+   "minutes": 12,
+   "flashcards": 15,
+   "tables": 1,
+   "mcq": 15,
+   "source": "درسنامهٔ ENT — Handbook of Otolaryngology: Head and Neck Surgery (Goldenberg & Goldstein)، ویراست دوم ۲۰۱۸، Thieme · بخش‌های Appendix C",
+   "appSubjectKeys": [
+    "ent-goldenberg"
+   ]
   }
  ],
  "qbank": {
   "index": "qbank/index.html",
-  "total": 1390,
+  "total": 1790,
   "parts": [
    {
     "part": "women",
@@ -4194,6 +5180,22 @@
     "count": 200,
     "page": "qbank/inf.html",
     "standalone": "qbank/inf-standalone.html"
+   },
+   {
+    "part": "uro",
+    "subject": "urology",
+    "title": "اورولوژی — سیم‌فروش ۱۴۰۲",
+    "count": 200,
+    "page": "qbank/uro.html",
+    "standalone": "qbank/uro-standalone.html"
+   },
+   {
+    "part": "ent",
+    "subject": "ent",
+    "title": "گوش، حلق و بینی — هندبوک اتولارینگولوژی",
+    "count": 200,
+    "page": "qbank/ent.html",
+    "standalone": "qbank/ent-standalone.html"
    }
   ]
  }
