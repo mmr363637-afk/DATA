@@ -33,6 +33,11 @@ AUTHOR = "مهدی محمدرحیمی"
 
 ROOT_BANKS = [ROOT / "chashm.html", ROOT / "ortho.html", ROOT / "ofuni.html"]
 
+# ابزارهای خودبسندهٔ بخش «آزمایشگاه تعاملی»: فایل تک‌فایلی مستقل که عمداً
+# هیچ‌یک از قلاب‌های کتابخانه (هایلایت/پانویس نویسنده) را ندارد و نباید
+# دست بخورد. نویسنده در صفحهٔ میزبانِ labs/<key>/index.html ذکر شده است.
+VENDORED = {CONTENT / "labs" / "cardiac" / "simulator.html"}
+
 READER_HOOKS = {
     "marks_sheet": r'id="sheet-marks"',
     "hlnote_sheet": r'id="sheet-hlnote"',
@@ -85,7 +90,8 @@ def author_credit(text: str) -> dict[str, bool]:
 
 
 def collect() -> list[dict]:
-    files = sorted(CONTENT.rglob("*.html")) + [p for p in ROOT_BANKS if p.exists()]
+    files = [f for f in sorted(CONTENT.rglob("*.html")) if f not in VENDORED] \
+        + [p for p in ROOT_BANKS if p.exists()]
     rows = []
     for f in files:
         text = f.read_text(encoding="utf-8", errors="replace")

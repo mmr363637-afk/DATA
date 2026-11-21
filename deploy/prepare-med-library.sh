@@ -38,6 +38,21 @@ echo "── ۳) کپی assets در ریشهٔ سایت (docs/assets) ───�
 #   با این راه هیچ فایل HTML دست نمی‌خورد.
 cp -r content/assets docs/assets
 
+echo "── ۳٫۵) بخش اسکچ‌نوت: بازسازی از زیپ‌های ریشه ───────────"
+# بخش اسکچ‌نوت (content/sketches/) از زیپ‌های ریشه ساخته می‌شود و تصاویرش
+# در content/sketches/img/ است. چون docs/lib با cp -r content/. کپی می‌شود،
+# این بخش خودبه‌خود منتشر می‌شود؛ فقط مطمئن می‌شویم ساخته شده است.
+if [ -f build/build_sketch_library.py ]; then
+  python3 build/build_sketch_library.py
+fi
+[ -d docs/lib/sketches/img ] || { echo "خطا: docs/lib/sketches/img ساخته نشد"; exit 1; }
+
+echo "── ۳٫۶) بخش آزمایشگاه تعاملی ───────────────────────────"
+if [ -f build/build_labs.py ]; then
+  python3 build/build_labs.py
+fi
+[ -f docs/lib/labs/cardiac/simulator.html ] || { echo "خطا: شبیه‌ساز قلب در docs/lib/labs ساخته نشد"; exit 1; }
+
 echo "── ۴) docs/.nojekyll ───────────────────────────────────"
 touch docs/.nojekyll
 

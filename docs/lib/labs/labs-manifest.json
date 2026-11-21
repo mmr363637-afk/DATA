@@ -1,0 +1,12 @@
+{
+ "built": "content/labs",
+ "labs": [
+  {
+   "key": "cardiac",
+   "name": "شبیه‌ساز بالینی قلب",
+   "scenarios": 18,
+   "source": "cardiac-simulator (4).html",
+   "bytes": 4110535
+  }
+ ]
+}
