@@ -47,6 +47,12 @@ if [ -f build/build_sketch_library.py ]; then
 fi
 [ -d docs/lib/sketches/img ] || { echo "خطا: docs/lib/sketches/img ساخته نشد"; exit 1; }
 
+echo "── ۳٫۶) بخش آزمایشگاه تعاملی ───────────────────────────"
+if [ -f build/build_labs.py ]; then
+  python3 build/build_labs.py
+fi
+[ -f docs/lib/labs/cardiac/simulator.html ] || { echo "خطا: شبیه‌ساز قلب در docs/lib/labs ساخته نشد"; exit 1; }
+
 echo "── ۴) docs/.nojekyll ───────────────────────────────────"
 touch docs/.nojekyll
 
