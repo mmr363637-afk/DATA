@@ -1,0 +1,20 @@
+{
+ "built": "content/sketches",
+ "total": 67,
+ "sets": {
+  "orthopedics": {
+   "count": 20,
+   "bytes": 8111241,
+   "pages": [
+    "content/sketches/orthopedics.html"
+   ]
+  },
+  "infectious": {
+   "count": 47,
+   "bytes": 22297182,
+   "pages": [
+    "content/sketches/infectious.html"
+   ]
+  }
+ }
+}
