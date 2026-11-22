@@ -142,7 +142,7 @@ body.sk{--sk-h:var(--h);--sk-c:var(--c);--sk-a:var(--a)}
 <section class="wrap" style="padding-bottom:40px">
   <figure class="sk-item" style="margin:0">
     <button type="button" class="sk-item__btn" data-sk-open aria-label="بزرگ‌نمایی تمام‌صفحه">
-      <img src="img/orthopedics/16-ch18-joint-diseases.png" data-fit="mid/orthopedics/16-ch18-joint-diseases.webp" data-full="img/orthopedics/16-ch18-joint-diseases.png" alt="فصل ۱۸ — بیماری‌های مفصلی" width="4080" height="3645" decoding="async">
+      <img src="img/orthopedics/16-ch18-joint-diseases.png" data-fit="mid/orthopedics/16-ch18-joint-diseases.webp" data-mid-fallback="img/orthopedics/16-ch18-joint-diseases.png" data-full="img/orthopedics/16-ch18-joint-diseases.png" alt="فصل ۱۸ — بیماری‌های مفصلی" width="4080" height="3645" decoding="async">
     </button>
     <figcaption class="sk-item__cap">
       <span class="sk-item__no">✎</span>
@@ -188,6 +188,27 @@ body.sk{--sk-h:var(--h);--sk-c:var(--c);--sk-a:var(--a)}
   var d = document;
   var gallery = d.querySelector('[data-sk-gallery]') || d.querySelector('main');
   if (!gallery) return;
+
+  /* ---- لایهٔ پایداری: اگر نسخهٔ مشتق (thumb/mid) در دسترس نبود،
+         همان PNG اصلی بارگذاری شود تا هیچ‌وقت آیکون شکسته دیده نشود. ---- */
+  function guard(img) {
+    if (img.__guarded) return;
+    img.__guarded = true;
+    img.addEventListener('error', function () {
+      var fb = img.getAttribute('data-fallback') || img.getAttribute('data-full');
+      if (fb && img.src.indexOf(fb) === -1) img.src = fb;
+    });
+  }
+  [].slice.call(d.querySelectorAll('img[data-fallback]')).forEach(guard);
+
+  function guardMid(node) {
+    if (node.__midGuarded) return;
+    node.__midGuarded = true;
+    node.addEventListener('error', function () {
+      var fb = node.getAttribute('data-mid-fallback') || node.getAttribute('data-full');
+      if (fb && node.src.indexOf(fb) === -1) node.src = fb;
+    });
+  }
 
   var items = [].slice.call(gallery.querySelectorAll('.sk-item'));
   var single = !d.querySelector('[data-sk-gallery]');
@@ -245,6 +266,7 @@ body.sk{--sk-h:var(--h);--sk-c:var(--c);--sk-a:var(--a)}
     /* نسخهٔ اصلی (۴۰۸۰px) فقط وقتی لازم است بارگذاری می‌شود که کاربر زوم کند */
     if (zoom > 1.02 && im.getAttribute('data-loaded') !== '1') {
       im.setAttribute('data-loaded', '1');
+      guardMid(im);
       im.src = im.getAttribute('data-full');
     }
     im.style.transform = 'translate(' + px + 'px,' + py + 'px) scale(' + zoom + ')';
@@ -264,6 +286,7 @@ body.sk{--sk-h:var(--h);--sk-c:var(--c);--sk-a:var(--a)}
     im.setAttribute('data-full', img.getAttribute('data-full') || img.src);
     im.setAttribute('data-fit', img.getAttribute('data-fit') || im.getAttribute('data-full'));
     im.setAttribute('data-loaded', '0');
+    guardMid(im);
     im.src = im.getAttribute('data-fit');
     im.alt = img.alt || '';
     if (ttl) {

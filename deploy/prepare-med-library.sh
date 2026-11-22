@@ -53,6 +53,11 @@ if [ -f build/build_labs.py ]; then
 fi
 [ -f docs/lib/labs/cardiac/simulator.html ] || { echo "خطا: شبیه‌ساز قلب در docs/lib/labs ساخته نشد"; exit 1; }
 
+echo "── ۳٫۷) راستی‌آزمایی مشتق‌های اسکچ‌نوت ────────────────────"
+# ⚠ اگر thumb/ و mid/ ساخته نشوند، گالری‌ها روی Pages آیکون شکسته می‌دهند.
+#   این مرحله سخت‌گیرانه است و در صورت نبودِ فایل، انتشار را متوقف می‌کند.
+python3 tests/check-sketch-refs.py || { echo "خطا: مشتق‌های اسکچ‌نوت کامل نیست"; exit 1; }
+
 echo "── ۴) docs/.nojekyll ───────────────────────────────────"
 touch docs/.nojekyll
 

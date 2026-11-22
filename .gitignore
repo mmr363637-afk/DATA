@@ -10,12 +10,10 @@ qbank/raw/
 node_modules/
 package-lock.json
 
-# نسخه‌های مشتق‌شدهٔ اسکچ‌نوت (از PNG اصلی با ImageMagick ساخته می‌شوند،
-# نه در گیت). تصاویر دست‌نخوردهٔ PNG در content/sketches/img/ می‌مانند.
-content/sketches/thumb/
-content/sketches/mid/
-docs/lib/sketches/thumb/
-docs/lib/sketches/mid/
+# نسخه‌های مشتق‌شدهٔ اسکچ‌نوت (thumb ۶۰۰px و mid ۱۶۰۰px) در گیت می‌مانند:
+# GitHub Pages همان docs/lib را سرو می‌کند و اگر این‌ها کامیت نشوند،
+# گالری‌ها آیکون شکسته نشان می‌دهند. ساختشان با build/build_sketch_library.py
+# انجام می‌شود و workflow «sketch-derivatives» تازگی‌شان را تضمین می‌کند.
 
 # پیش‌نمایش محلی (خارج از مخزن)
 .preview/
