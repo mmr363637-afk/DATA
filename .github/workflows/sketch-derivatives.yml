@@ -1,0 +1,67 @@
+name: sketch-derivatives
+
+# نگهبان مشتق‌های اسکچ‌نوت
+# ---------------------------------------------------------------------------
+# گالری‌های اسکچ‌نوت به دو نسخهٔ مشتق ارجاع می‌دهند:
+#   thumb/<set>/<name>.jpg   (بندانگشتی ۶۰۰px، کارت‌ها)
+#   mid/<set>/<name>.webp    (نسخهٔ میانی ۱۶۰۰px، لایت‌باکس)
+# اگر این فایل‌ها منتشر نشوند، GitHub Pages برای هر ارجاع ۴۰۴ می‌دهد و
+# گالری آیکون شکسته نشان می‌دهد (یک‌بار همین اتفاق افتاد).
+#
+# این workflow دو کار می‌کند:
+#   ۱) اگر PNG اصلی تغییر کرده باشد، مشتق‌ها را بازمی‌سازد و کامیت می‌کند.
+#   ۲) اگر مشتق گم‌شده باشد (بدون تغییر منبع)، بازهم می‌سازد.
+# اجرای دستی هم دارد. هیچ فایل دست‌نخورده‌ای را پاک نمی‌کند.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/sketches/img/**'
+      - 'build/build_sketch_library.py'
+      - '.github/workflows/sketch-derivatives.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sketch-derivatives
+  cancel-in-progress: true
+
+jobs:
+  derive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: نصب ImageMagick
+        run: |
+          if ! command -v convert >/dev/null; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick webp
+          fi
+          convert --version | head -2
+
+      - name: ساخت مشتق‌ها (thumb + mid) در هر دو درخت
+        run: python3 build/build_sketch_library.py
+
+      - name: بررسی اینکه هیچ ارجاعی بی‌فایل نمانده
+        run: python3 tests/check-sketch-refs.py
+
+      - name: کامیت مشتق‌ها
+        run: |
+          git config user.name  "med-library-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add content/sketches/thumb content/sketches/mid \
+                  docs/lib/sketches/thumb docs/lib/sketches/mid
+          if git diff --cached --quiet; then
+            echo "::notice::مشتق‌ها به‌روز بودند؛ چیزی برای کامیت نبود."
+          else
+            n=$(git diff --cached --name-only | wc -l)
+            git commit -m "build: بازسازی مشتق‌های اسکچ‌نوت (${n} فایل)"
+            git push
+          fi

@@ -238,6 +238,27 @@ JS = r"""
   var gallery = d.querySelector('[data-sk-gallery]') || d.querySelector('main');
   if (!gallery) return;
 
+  /* ---- لایهٔ پایداری: اگر نسخهٔ مشتق (thumb/mid) در دسترس نبود،
+         همان PNG اصلی بارگذاری شود تا هیچ‌وقت آیکون شکسته دیده نشود. ---- */
+  function guard(img) {
+    if (img.__guarded) return;
+    img.__guarded = true;
+    img.addEventListener('error', function () {
+      var fb = img.getAttribute('data-fallback') || img.getAttribute('data-full');
+      if (fb && img.src.indexOf(fb) === -1) img.src = fb;
+    });
+  }
+  [].slice.call(d.querySelectorAll('img[data-fallback]')).forEach(guard);
+
+  function guardMid(node) {
+    if (node.__midGuarded) return;
+    node.__midGuarded = true;
+    node.addEventListener('error', function () {
+      var fb = node.getAttribute('data-mid-fallback') || node.getAttribute('data-full');
+      if (fb && node.src.indexOf(fb) === -1) node.src = fb;
+    });
+  }
+
   var items = [].slice.call(gallery.querySelectorAll('.sk-item'));
   var single = !d.querySelector('[data-sk-gallery]');
   var chips = [].slice.call(d.querySelectorAll('[data-sk-filter]'));
@@ -276,7 +297,10 @@ JS = r"""
   apply();
 
   /* ---------- لایت‌باکس ---------- */
+  /* صفحهٔ آرشیو (index) لایت‌باکس ندارد و فقط کارت دارد؛ در آن حالت
+     اسکریپت باید همین‌جا تمام شود، نه اینکه روی null خطا بدهد. */
   var lb = d.querySelector('[data-sk-lb]');
+  if (!lb) return;
   var stage = lb.querySelector('[data-sk-stage]');
   var im = lb.querySelector('[data-sk-img]');
   var ttl = lb.querySelector('[data-sk-title]');
@@ -294,6 +318,7 @@ JS = r"""
     /* نسخهٔ اصلی (۴۰۸۰px) فقط وقتی لازم است بارگذاری می‌شود که کاربر زوم کند */
     if (zoom > 1.02 && im.getAttribute('data-loaded') !== '1') {
       im.setAttribute('data-loaded', '1');
+      guardMid(im);
       im.src = im.getAttribute('data-full');
     }
     im.style.transform = 'translate(' + px + 'px,' + py + 'px) scale(' + zoom + ')';
@@ -313,6 +338,7 @@ JS = r"""
     im.setAttribute('data-full', img.getAttribute('data-full') || img.src);
     im.setAttribute('data-fit', img.getAttribute('data-fit') || im.getAttribute('data-full'));
     im.setAttribute('data-loaded', '0');
+    guardMid(im);
     im.src = im.getAttribute('data-fit');
     im.alt = img.alt || '';
     if (ttl) {
@@ -573,6 +599,15 @@ def mid_rel(r: dict) -> str:
     return f"img/{r['key']}/{r['name']}"
 
 
+def fallback_attr(r: dict) -> str:
+    """نشانی پشتیبان: اگر مشتق در دسترس نبود، PNG اصلی بارگذاری شود.
+
+    این لایه عمداً اضافه شده است: اگر روزی بیلد مشتق‌ها اجرا نشود یا فایلی
+    از دست برود، کاربر به‌جای آیکون شکسته همان PNG اصلی را می‌بیند.
+    """
+    return f' data-fallback="img/{r["key"]}/{r["name"]}"'
+
+
 def thumb_rel(r: dict) -> str:
     """مسیر نسبی بندانگشتی برای کارت؛ اگر نبود، تصویر اصلی."""
     if r.get("thumb"):
@@ -589,7 +624,7 @@ def write_pages(records: list[dict], titles) -> None:
             rel_img = f"img/{key}/{r['name']}"
             cards.append(f"""      <figure class="sk-item" data-group="{th['name']}" data-search="{html.escape(search_blob(r, titles))}">
         <button type="button" class="sk-item__btn" aria-label="بزرگ‌نمایی: {html.escape(r['title'])}">
-          <img src="{thumb_rel(r)}" data-fit="{mid_rel(r)}" data-full="{rel_img}" alt="{html.escape(r['kicker'] + ' — ' + r['title'])}" width="{r['w']}" height="{r['h']}" loading="lazy" decoding="async">
+          <img src="{thumb_rel(r)}"{fallback_attr(r)} data-fit="{mid_rel(r)}" data-mid-fallback="{rel_img}" data-full="{rel_img}" alt="{html.escape(r['kicker'] + ' — ' + r['title'])}" width="{r['w']}" height="{r['h']}" loading="lazy" decoding="async">
         </button>
         <figcaption class="sk-item__cap">
           <span class="sk-item__no">{fa(i)}</span>
@@ -603,7 +638,7 @@ def write_pages(records: list[dict], titles) -> None:
         mini = []
         for i, r in enumerate(recs, 1):
             mini.append(f"""      <a class="sk-card" href="{r['name'].replace('.png', '')}.html">
-        <span class="sk-card__thumb"><img src="{thumb_rel(r)}" alt="" width="600" height="450" loading="lazy" decoding="async"><span class="sk-card__badge">{r['kicker']}</span></span>
+        <span class="sk-card__thumb"><img src="{thumb_rel(r)}"{fallback_attr(r)} alt="" width="600" height="450" loading="lazy" decoding="async"><span class="sk-card__badge">{r['kicker']}</span></span>
         <span class="sk-card__body"><span class="sk-card__title">{html.escape(r['title'])}</span>
           <span class="sk-card__foot"><span>{fa(i)} از {fa(len(recs))}</span><span>بزرگ‌نمایی ←</span></span></span>
       </a>""")
@@ -701,7 +736,7 @@ def write_per_image_pages(records: list[dict]) -> None:
 <section class="wrap" style="padding-bottom:40px">
   <figure class="sk-item" style="margin:0">
     <button type="button" class="sk-item__btn" data-sk-open aria-label="بزرگ‌نمایی تمام‌صفحه">
-      <img src="{rel_img}" data-fit="{mid_rel(r)}" data-full="{rel_img}" alt="{html.escape(r['kicker'] + ' — ' + r['title'])}" width="{r['w']}" height="{r['h']}" decoding="async">
+      <img src="{rel_img}" data-fit="{mid_rel(r)}" data-mid-fallback="{rel_img}" data-full="{rel_img}" alt="{html.escape(r['kicker'] + ' — ' + r['title'])}" width="{r['w']}" height="{r['h']}" decoding="async">
     </button>
     <figcaption class="sk-item__cap">
       <span class="sk-item__no">✎</span>
@@ -800,7 +835,7 @@ def mini_cards(recs, key, th) -> list[str]:
     out = []
     for i, r in enumerate(recs, 1):
         out.append(f"""      <a class="sk-card" href="{key}.html#{r['name'][:-4]}">
-        <span class="sk-card__thumb"><img src="{thumb_rel(r)}" alt="" width="600" height="450" loading="lazy" decoding="async"><span class="sk-card__badge">{r['kicker']}</span></span>
+        <span class="sk-card__thumb"><img src="{thumb_rel(r)}"{fallback_attr(r)} alt="" width="600" height="450" loading="lazy" decoding="async"><span class="sk-card__badge">{r['kicker']}</span></span>
         <span class="sk-card__body"><span class="sk-card__title">{html.escape(r['title'])}</span>
           <span class="sk-card__foot"><span>{fa(i)} از {fa(len(recs))}</span><span>گالری ←</span></span></span>
       </a>""")
