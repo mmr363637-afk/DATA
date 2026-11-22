@@ -18,3 +18,5 @@ package-lock.json
 # پیش‌نمایش محلی (خارج از مخزن)
 .preview/
 .preview-server.py
+
+.preview-server.py

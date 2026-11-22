@@ -297,7 +297,10 @@ JS = r"""
   apply();
 
   /* ---------- لایت‌باکس ---------- */
+  /* صفحهٔ آرشیو (index) لایت‌باکس ندارد و فقط کارت دارد؛ در آن حالت
+     اسکریپت باید همین‌جا تمام شود، نه اینکه روی null خطا بدهد. */
   var lb = d.querySelector('[data-sk-lb]');
+  if (!lb) return;
   var stage = lb.querySelector('[data-sk-stage]');
   var im = lb.querySelector('[data-sk-img]');
   var ttl = lb.querySelector('[data-sk-title]');
