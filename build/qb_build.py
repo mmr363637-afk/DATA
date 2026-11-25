@@ -31,9 +31,9 @@ def esc(s) -> str:
 
 
 ORDER = ["obgyn", "cardio", "imaging", "surgery", "ophthalmology", "orthopedics", "infectious",
-         "urology", "ent"]
+         "urology", "ent", "neuro"]
 PART_ORDER = ["women", "cardio", "rad-1", "rad-2", "rad-3", "sur-1", "sur-2", "sur-3", "eye", "ortho",
-              "inf", "uro", "ent"]
+              "inf", "uro", "ent", "neuro"]
 
 
 def load_all():

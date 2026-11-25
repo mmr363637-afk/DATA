@@ -136,24 +136,6 @@
   }
  },
  {
-  "part": "eye",
-  "subject": "ophthalmology",
-  "title": "چشم‌پزشکی عمومی — جوادی",
-  "count": 200,
-  "chapters": 23,
-  "chFrom": 1,
-  "chTo": 29,
-  "withPearl": 200,
-  "withWrong": 200,
-  "withImage": 0,
-  "diff": {
-   "متوسط": 70,
-   "دشوار": 70,
-   "آسان": 30,
-   "خیلی دشوار": 30
-  }
- },
- {
   "part": "ortho",
   "subject": "orthopedics",
   "title": "ارتوپدی و شکستگی‌ها — اعلمی هرندی",
@@ -223,6 +205,42 @@
    "دشوار": 70,
    "آسان": 30,
    "خیلی دشوار": 30
+  }
+ },
+ {
+  "part": "eye",
+  "subject": "ophthalmology",
+  "title": "چشم‌پزشکی عمومی — جوادی",
+  "count": 200,
+  "chapters": 23,
+  "chFrom": 1,
+  "chTo": 29,
+  "withPearl": 200,
+  "withWrong": 200,
+  "withImage": 0,
+  "diff": {
+   "آسان": 30,
+   "خیلی دشوار": 30,
+   "دشوار": 70,
+   "متوسط": 70
+  }
+ },
+ {
+  "part": "neuro",
+  "subject": "neuro",
+  "title": "مغز و اعصاب — نورولوژی بالینی",
+  "count": 200,
+  "chapters": 14,
+  "chFrom": 1,
+  "chTo": 14,
+  "withPearl": 200,
+  "withWrong": 200,
+  "withImage": 0,
+  "diff": {
+   "آسان": 31,
+   "خیلی دشوار": 30,
+   "دشوار": 72,
+   "متوسط": 67
   }
  }
 ]

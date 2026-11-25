@@ -547,6 +547,113 @@ async function testNewQbankParts() {
   await qbankPartChecks("ent", "۹");
 }
 
+/* ===== ۱۰) درسنامهٔ مغز و اعصاب: موتور کتابخانه به‌صورت درون‌خطی، بدون لایهٔ دوم ===== */
+async function testNeurology() {
+  console.log("\n[۱۰] content/neurology/cerebrovascular-diseases.html — خودبسنده با موتور درون‌خطی + نوار پیوند");
+  const file = path.join(ROOT, "content/neurology/cerebrovascular-diseases.html");
+  const html = fs.readFileSync(file, "utf8");
+  ok(!/<script[^>]+src=/.test(html), "هیچ اسکریپت بیرونی ندارد (خودبسنده)");
+  ok(!/<link[^>]+stylesheet/.test(html), "هیچ CSS بیرونی ندارد (خودبسنده)");
+  for (const eng of ["medx-core.js", "medx-reader.js", "medx-exam.js"]) {
+    ok(html.includes(fs.readFileSync(path.join(ROOT, "assets/theme", eng), "utf8")),
+      "موتور " + eng + " عیناً درون صفحه هست");
+  }
+  ok(/id="sheet-marks"/.test(html) && /id="sheet-hlnote"/.test(html),
+    "شیت‌های نشانه‌ها و یادداشت در HTML خودش هست");
+  ok(/نویسنده: <b>مهدی محمدرحیمی<\/b>/.test(html), "اعتبار نویسنده در پانویس هست");
+  ok(/--h:292/.test(html) && /hsl\(292 74% 42%\)/.test(html),
+    "رنگ هویت درس (۲۹۲) در style و theme-color نشست");
+  ok(!/marks-lite/.test(html) && !/ml-credit/.test(html),
+    "لایهٔ دوم (marks-lite یا بلوک اعتبار تکراری) تزریق نشده");
+  ok(!/data-marks-key/.test(html), "کلید marks-lite روی body ننشسته (لایهٔ دوم فعال نیست)");
+  const nav = html.match(/<nav class="ml-nav"[^>]*>([\s\S]*?)<\/nav>/);
+  ok(!!nav, "نوار پیوند کتابخانه (ml-nav) درج شده");
+  const links = nav ? [...nav[1].matchAll(/href="([^"]+)"/g)].map(m => m[1]) : [];
+  ok(links.join(",") === "../index.html,../subject/neuro.html,../qbank/neuro.html",
+    "سه پیوند راه برگشت: خانه، داشبورد درس، بانک ۲۰۰ سؤالی (" + links.join(" | ") + ")");
+  ok((html.match(/class="qx__q"/g) || []).length === 15, "۱۵ سؤال درسنامه‌ای در صفحه هست");
+  ok((html.match(/class="fx__q"/g) || []).length === 5, "۵ فلش‌کارت در صفحه هست");
+  ok(/data-lesson="neurology\/cerebrovascular-diseases"/.test(html), "شناسهٔ درسنامه روی body درست است");
+
+  const { win, doc, errors } = await boot(html, { wait: 700 });
+  ok(doc.querySelectorAll("#sheet-marks").length === 1, "شیت نشانه‌ها دو بار ساخته نشد");
+  ok(doc.querySelectorAll("[data-open-marks]").length > 0, "دکمهٔ «نشانه‌ها» در صفحه هست");
+  ok(doc.querySelectorAll(".ml-fab, .ml-selbar, .marks-fab").length === 0,
+    "FAB یا نوار رنگ تکراری ساخته نشد");
+  ok(doc.querySelectorAll("nav.ml-nav a").length === 3,
+    "نوار پیوند پس از اجرای اسکریپت‌ها سر جایش ماند");
+  const sel = fakeSelection(win);
+  const node = firstTextNode(doc.querySelector(".sec[data-sec-id] .sec__body"));
+  selectText(win, sel, node, 4, 42);
+  mouseup(win);
+  await sleep(80);
+  ok(doc.querySelector(".selbar").classList.contains("is-on"), "نوار هایلایتِ موتور درون‌خطی کار می‌کند");
+  doc.querySelector('.selbar .selbar__dot[data-c="g"]').dispatchEvent(new win.MouseEvent("click", { bubbles: true }));
+  await sleep(90);
+  ok(doc.querySelectorAll("mark.hl").length >= 1, "هایلایت سبز در متن درس ساخته شد");
+  // ذخیرهٔ medx-core.js با تأخیر ۲۶۰ms انجام می‌شود (localStorage آینهٔ IndexedDB است)
+  await sleep(420);
+  const state = JSON.parse(win.localStorage.getItem("medx.state.v1") || "{}");
+  const mine = (state.marks || {})["neurology/cerebrovascular-diseases"];
+  ok(!!mine && (mine.hl || []).length >= 1,
+    "هایلایت با کلید درسنامه در medx.state.v1 ذخیره شد");
+  if (errors.length) console.log("  (خطاهای jsdom: " + errors.slice(0, 3).join(" | ").slice(0, 240) + ")");
+}
+
+/* ============ ۱۱) بخش تازهٔ بانک سؤال: نورولوژی ============ */
+async function testNeuroQbank() { await qbankPartChecks("neuro", "۱۱"); }
+
+/* ====== ۱۲) بستهٔ آزمایشگاه ریه (PulmoLab): دست‌نخورده، مسیر نسبی، اعتبارنامهٔ کامل ====== */
+function testPulmoLab() {
+  console.log("\n[۱۲] content/labs/pulmolab — بستهٔ چندفایلی آفلاین (بدون ویرایش)");
+  const dir = path.join(ROOT, "content/labs/pulmolab");
+  ok(fs.existsSync(path.join(dir, "index.html")), "صفحهٔ ورود برنامه هست");
+  const html = fs.readFileSync(path.join(dir, "index.html"), "utf8");
+  const refs = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(m => m[1])
+    .filter(u => !/^(data:|#|https?:|mailto:)/.test(u));
+  ok(refs.length >= 5 && refs.every(u => !u.startsWith("/")),
+    "همهٔ ارجاع‌های صفحه نسبی‌اند (زیر هر مسیر پایه کار می‌کند)");
+  for (const r of refs) ok(fs.existsSync(path.join(dir, r.split("?")[0])), "ارجاع موجود است: " + r);
+  const offline = fs.readFileSync(path.join(dir, "js/store/offline-manager.js"), "utf8");
+  ok(/serviceWorker\.register\('\.\/sw\.js'/.test(offline) && fs.existsSync(path.join(dir, "sw.js")),
+    "service worker نسبی ثبت می‌شود (js/store/offline-manager.js → ./sw.js)");
+
+  const man = JSON.parse(fs.readFileSync(path.join(dir, "data/manifest.json"), "utf8"));
+  const labsMan = JSON.parse(fs.readFileSync(path.join(ROOT, "content/labs/labs-manifest.json"), "utf8"));
+  const row = labsMan.labs.find(l => l.key === "pulmolab");
+  ok(!!row, "ردیف pulmolab در labs-manifest.json هست");
+  ok(row.type === "modular-pwa" && row.entry === "pulmolab/index.html",
+    "نوع (modular-pwa) و نشانی ورود درست است");
+  ok(JSON.stringify(row.counts) === JSON.stringify(man.counts),
+    "شمارش‌های کتابخانه با manifest خود بسته یکی است");
+  ok(row.files === 122 && row.bytes > 12e6,
+    "بسته کامل بیرون آمده: " + row.files + " فایل، " + Math.round(row.bytes / 1048576) + " مگابایت");
+
+  const cxr = JSON.parse(fs.readFileSync(path.join(dir, "media/cxr/ATTRIBUTION.json"), "utf8"));
+  ok(cxr.length === man.counts.radiographs,
+    "برای هر " + man.counts.radiographs + " رادیوگرافی یک ردیف اعتبارنامه هست (" + cxr.length + ")");
+  ok(cxr.every(r => r.license && r.sourceUrl && r.wikimediaTitle),
+    "هر رادیوگرافی مجوز، نشانی منبع و عنوان ویکی‌مدیا دارد");
+  ok(cxr.every(r => r.licenseUrl || /public domain/i.test(r.license)),
+    "نشانی مجوز هست (جز موارد مالکیت عمومی)");
+  ok(cxr.every(r => fs.existsSync(path.join(dir, "media/cxr", r.file))),
+    "فایل هر رادیوگرافی روی دیسک هست");
+  const aud = JSON.parse(fs.readFileSync(path.join(dir, "media/audio/ATTRIBUTION.json"), "utf8"));
+  ok(aud.length === man.counts.authenticAudioFiles,
+    "برای هر " + man.counts.authenticAudioFiles + " فایل صوتی واقعی اعتبارنامه هست (" + aud.length + ")");
+  ok(aud.every(r => r.license && (r.doi || r.repositoryUrl) && r.diagnosis),
+    "هر صدا مجوز، منبع (DOI/مخزن) و برچسب تشخیص دارد");
+  ok(aud.every(r => fs.existsSync(path.join(dir, r.file))), "فایل هر صدا روی دیسک هست");
+
+  const idx = fs.readFileSync(path.join(ROOT, "content/labs/index.html"), "utf8");
+  ok(/href="pulmolab\/index\.html"/.test(idx), "کارت آزمایشگاه ریه در فهرست آزمایشگاه‌ها هست");
+  ok(/href="\.\.\/labs\/pulmolab\/index\.html"/.test(idx), "نوار ناوبری بخش به آزمایشگاه ریه پیوند می‌دهد");
+  const portal = fs.readFileSync(path.join(ROOT, "content/index.html"), "utf8");
+  ok(/آزمایشگاه تعاملی<\/h2>/.test(portal) && /labs\/pulmolab\/index\.html/.test(portal),
+    "نوار «آزمایشگاه تعاملی» در صفحهٔ خانه به PulmoLab پیوند می‌دهد");
+  ok(/href="labs\/index\.html">آزمایشگاه<\/a>/.test(portal), "پیوند ناوبری آزمایشگاه در صفحهٔ خانه هست");
+}
+
 (async () => {
   await testFullReaderUnchanged();
   await testInfectious();
@@ -557,6 +664,9 @@ async function testNewQbankParts() {
   await testEnt();
   await testUrology();
   await testNewQbankParts();
+  await testNeurology();
+  await testNeuroQbank();
+  testPulmoLab();
   await testExamBank();
   console.log("\n" + (failures ? "✗ " + failures + " مورد ناموفق" : "✓ همهٔ راستی‌آزمایی‌ها پاس شدند"));
   process.exit(failures ? 1 : 0);

@@ -1,0 +1,4283 @@
+[
+  {
+    "id": "cxr-normal-pa",
+    "file": "media/cxr/cxr_normal_pa.jpg",
+    "titleFa": "گرافی طبیعی قفسهٔ سینه (نمای PA)",
+    "titleEn": "Normal Chest Radiograph (PA View)",
+    "category": "normal",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بزرگسال)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی استاندارد خلفی-قدامی (PA) ایستاده از فرد بالغ بدون پاتولوژی حاد قلبی-ریوی (آرشیو CC0 دکتر میکائیل هگستروم).",
+    "findingsFa": [
+      "دم کافی (۹ تا ۱۰ دندهٔ خلفی بالای همی‌دیافراگم راست)",
+      "شفافیت متقارن دو میدان ریوی بدون کانسلیدیشن، توده یا ندول",
+      "تراشه در خط وسط و زاویهٔ کارینا طبیعی",
+      "نسبت کاردیوتوراسیک (CTR) کمتر از ۵۰٪ با حاشیهٔ قلبی مشخص",
+      "زوایای کوستوفرنیک راست و چپ کاملاً تیز؛ حباب گاز معده زیر همی‌دیافراگم چپ"
+    ],
+    "interpretationFa": "گرافی قفسهٔ سینه طبیعی (Normal PA Chest X-ray) — مبنای مقایسه برای ارزیابی سیستماتیک ABCDE.",
+    "annotations": [
+      {
+        "x": 49,
+        "y": 14,
+        "type": "anatomy",
+        "label": "تراشه در خط وسط (Midline Trachea)"
+      },
+      {
+        "x": 55,
+        "y": 32,
+        "type": "anatomy",
+        "label": "قوس آئورت (Aortic Knob)"
+      },
+      {
+        "x": 36,
+        "y": 48,
+        "type": "anatomy",
+        "label": "ناف ریه راست (پایین‌تر از چپ)"
+      },
+      {
+        "x": 64,
+        "y": 43,
+        "type": "anatomy",
+        "label": "ناف ریه چپ"
+      },
+      {
+        "x": 67,
+        "y": 73,
+        "type": "anatomy",
+        "label": "حاشیهٔ چپ قلب (CTR < 0.5)"
+      },
+      {
+        "x": 14,
+        "y": 82,
+        "type": "anatomy",
+        "label": "زاویهٔ کوستوفرنیک راست (تیز و باز)"
+      },
+      {
+        "x": 76,
+        "y": 84,
+        "type": "anatomy",
+        "label": "حباب گاز معده زیر دیافراگم چپ"
+      }
+    ],
+    "relatedDiseaseIds": [],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "گرافی طبیعی قفسهٔ سینه (PA)",
+        "کاردیومگالی همراه با ادم ریوی",
+        "پنومونی لوبار راست",
+        "پنوموتوراکس چپ"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "تمامی شاخص‌های سیستماتیک در محدودهٔ طبیعی هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Normal posteroanterior (PA) chest radiograph (X-ray).jpg",
+      "author": "Mikael Häggström",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Normal_posteroanterior_(PA)_chest_radiograph_(X-ray).jpg",
+      "originalDescription": "Posteroanterior chest radiograph (\"X-ray\") taken of a 21 year old woman who presented with pain on the left side of her thorax after colliding with another player during a soccer game. It shows a normal chest without any signs of injury. Dx and Sin stand for \"right\" and \"left\" respectively.",
+      "dimensions": "1136×1300"
+    },
+    "referenceIds": [
+      "ref-murray-nadel",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "نمای استاندارد PA",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-normal-lat",
+    "file": "media/cxr/cxr_normal_lat.jpg",
+    "titleFa": "گرافی طبیعی قفسهٔ سینه (نمای Lateral)",
+    "titleEn": "Normal Chest Radiograph (Lateral View)",
+    "category": "normal",
+    "projection": "Lateral",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بزرگسال)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی استاندارد نیم‌رخ (Lateral) ایستادهٔ طبیعی جهت بررسی فضای رتروسترنال، رتروکاردیال و زوایای کوستوفرنیک خلفی.",
+    "findingsFa": [
+      "فضای شفاف رتروسترنال باز و طبیعی",
+      "کاهش تدریجی دانسیتهٔ مهره‌های سینه‌ای رو به پایین (Spine Sign طبیعی)",
+      "زوایای کوستوفرنیک خلفی کاملاً تیز",
+      "همی‌دیافراگم راست در کل مسیر و همی‌دیافراگم چپ تا حاشیهٔ قلب قابل ردیابی"
+    ],
+    "interpretationFa": "گرافی نیم‌رخ طبیعی قفسهٔ سینه — حیاتی برای کشف افیوژن‌های کوچک و ضایعات پشت قلب.",
+    "annotations": [
+      {
+        "x": 27,
+        "y": 36,
+        "type": "anatomy",
+        "label": "فضای شفاف رتروسترنال"
+      },
+      {
+        "x": 36,
+        "y": 65,
+        "type": "anatomy",
+        "label": "سایهٔ قلب"
+      },
+      {
+        "x": 64,
+        "y": 54,
+        "type": "anatomy",
+        "label": "فضای شفاف رتروکاردیال"
+      },
+      {
+        "x": 73,
+        "y": 78,
+        "type": "anatomy",
+        "label": "زاویهٔ کوستوفرنیک خلفی (تیز)"
+      }
+    ],
+    "relatedDiseaseIds": [],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "گرافی طبیعی نیم‌رخ (Lateral)",
+        "افیوژن پلور خلفی",
+        "کانسلیدیشن لوب تحتانی",
+        "تودهٔ مدیاستن قدامی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "فضای رتروسترنال و رتروکاردیال شفاف و زوایای خلفی تیز هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Normal lateral chest radiograph (X-ray).jpg",
+      "author": "Mikael Häggström",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Normal_lateral_chest_radiograph_(X-ray).jpg",
+      "originalDescription": "Lateral chest radiograph (\"X-ray\") taken of a 21 year old woman who presented with pain on the left side of her thorax after colliding with another player during a soccer game. It shows a normal chest without any signs of injury.",
+      "dimensions": "938×1300"
+    },
+    "referenceIds": [
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "نمای استاندارد Lateral",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-normal-ap",
+    "file": "media/cxr/cxr_normal_ap.jpg",
+    "titleFa": "گرافی طبیعی قفسهٔ سینه (نمای AP)",
+    "titleEn": "Normal Chest Radiograph (AP View)",
+    "category": "normal",
+    "projection": "AP",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی قدامی-خلفی (AP) بدون پاتولوژی حاد؛ آموزشی جهت درک بزرگ‌نمایی هندسی قلب در نمای AP.",
+    "findingsFa": [
+      "شفافیت طبیعی هر دو میدان ریوی بدون ارتشاح یا پنوموتوراکس",
+      "سایهٔ قلب و مدیاستن در نمای AP به‌علت هندسهٔ تابش ظاهراً کمی پهن‌تر از PA دیده می‌شود",
+      "زوایای کوستوفرنیک باز"
+    ],
+    "interpretationFa": "گرافی قفسهٔ سینه طبیعی در نمای AP — در نمای AP نباید صرفاً با CTR>0.5 تشخیص قطعی کاردیومگالی گذاشت.",
+    "annotations": [
+      {
+        "x": 54,
+        "y": 63,
+        "type": "anatomy",
+        "label": "بزرگ‌نمایی هندسی قلب در نمای AP"
+      },
+      {
+        "x": 27,
+        "y": 46,
+        "type": "anatomy",
+        "label": "میدان ریوی راست شفاف"
+      },
+      {
+        "x": 73,
+        "y": 46,
+        "type": "anatomy",
+        "label": "میدان ریوی چپ شفاف"
+      }
+    ],
+    "relatedDiseaseIds": [],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "گرافی طبیعی در نمای AP",
+        "کاردیومگالی قطعی با ادم ریوی",
+        "آتلکتازی کامل چپ",
+        "هیدروپنوموتوراکس"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "میدان‌های ریوی شفاف‌اند و پهن‌تر دیده شدن نسبی سایهٔ قلب ویژگی تکنیکی نمای AP است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Normal AP.JPG",
+      "author": "James Heilman, MD",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Normal_AP.JPG",
+      "originalDescription": "Normal AP chest xray",
+      "dimensions": "1287×1300"
+    },
+    "referenceIds": [
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "تفاوت نمای AP و PA",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-lobar-pneumonia",
+    "file": "media/cxr/cxr_lobar_pneumonia.jpg",
+    "titleFa": "پنومونی لوبار (کانسلیدیشن متراکم لوبی)",
+    "titleEn": "Lobar Pneumonia",
+    "category": "infectious",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی واقعی پنومونی لوبار (مجموعهٔ CC0 دکتر میکائیل هگستروم) با کانسلیدیشن مشخص آلوئولار.",
+    "findingsFa": [
+      "کدورت متراکم و همگن آلوئولار با حدود مشخص در مجاورت فیشور",
+      "عدم شیفت مدیاستن (حفظ حجم برخلاف آتلکتازی)",
+      "نمای برونکوگرام هوایی (Air bronchogram) در متن پارانشیم کانسلیده‌شده"
+    ],
+    "interpretationFa": "پنومونی لوبار (Lobar Pneumonia) — پاتوژن کلاسیک: Streptococcus pneumoniae.",
+    "annotations": [
+      {
+        "x": 31,
+        "y": 54,
+        "type": "finding",
+        "label": "کانسلیدیشن متراکم لوبی"
+      },
+      {
+        "x": 36,
+        "y": 48,
+        "type": "finding",
+        "label": "ناحیهٔ برونکوگرام هوایی / مرز فیشور"
+      },
+      {
+        "x": 50,
+        "y": 24,
+        "type": "anatomy",
+        "label": "تراشه در خط وسط"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap",
+      "dis-hap-vap"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "پنومونی لوبار (Lobar Pneumonia)",
+        "پنوموتوراکس فشاری",
+        "آتلکتازی کامل ریه",
+        "سارکوئیدوز مرحلهٔ ۱"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کدورت آلوئولار همگن محدود به قلمرو لوبی بدون شیفت مدیاستن و با برونکوگرام هوایی کلاسیک پنومونی لوبار است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:X-ray of lobar pneumonia.jpg",
+      "author": "Mikael Häggström, M.D. Author info - Reusing images- Conflicts of interest:  None\nMikael Häggström, M.D.Consent note: Written informed consent was obtained from",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:X-ray_of_lobar_pneumonia.jpg",
+      "originalDescription": "Chest radiograph of a 67 year old man, showing lobar pneumonia, affecting the right middle lobe. Culture from the nasopharynx only showed Moraxella catarrhalis, which is probably not the pathogen of the lung..",
+      "dimensions": "1280×1018"
+    },
+    "referenceIds": [
+      "ref-idsa-ats-cap-2019",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "کانسلیدیشن لوبار + برونکوگرام هوایی",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-bronchopneumonia",
+    "file": "media/cxr/cxr_bronchopneumonia.jpg",
+    "titleFa": "برونکوپنومونی (نمای PA — آنفلوآنزا + هموفیلوس)",
+    "titleEn": "Bronchopneumonia (PA View)",
+    "category": "infectious",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بزرگسال)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی واقعی PA بیمار مبتلا به عفونت هم‌زمان آنفلوآنزا و Haemophilus influenzae (CC0 دکتر میکائیل هگستروم).",
+    "findingsFa": [
+      "کدورت‌های تکه‌تکه و نامنظم (Patchy multifocal opacities) با توزیع پره‌برونشیال",
+      "درگیری غیرمحدود به یک لوب واحد",
+      "ضخیم‌شدگی جدار برونش‌ها"
+    ],
+    "interpretationFa": "برونکوپنومونی چندکانونی — شایع در سوپرعفونت باکتریال پس از ویروس و HAP.",
+    "annotations": [
+      {
+        "x": 28,
+        "y": 62,
+        "type": "finding",
+        "label": "ارتشاح‌های تکه‌تکه قاعدهٔ راست"
+      },
+      {
+        "x": 70,
+        "y": 64,
+        "type": "finding",
+        "label": "درگیری چندکانونی میانی/تحتانی چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap",
+      "dis-hap-vap"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "برونکوپنومونی چندکانونی",
+        "تودهٔ منفرد ریوی",
+        "پنوموتوراکس ساده",
+        "کاردیومگالی ایزوله"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کدورت‌های تکه‌تکه و چندکانونی در امتداد شاخه‌های برونکیال شاخص برونکوپنومونی هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Chest radiograph in influensa and H influenzae, posteroanterior.jpg",
+      "author": "Mikael Häggström, M.D. Author info - Reusing images- Conflicts of interest:  None\nMikael Häggström, M.D.Consent note: Written informed consent was obtained from",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chest_radiograph_in_influensa_and_H_influenzae,_posteroanterior.jpg",
+      "originalDescription": "Chest radiograph of an 88 year old man, about one week after onset of fever, fatigue and mild coughing. Lab tests detected both Influenza A virus and Haemophilus influenzae. It shows multifocal, patchy consolidation, mainly in the right upper lobe.",
+      "dimensions": "1163×1010"
+    },
+    "referenceIds": [
+      "ref-idsa-ats-cap-2019",
+      "ref-idsa-hap-vap-2016"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "کدورت‌های تکه‌ای دوطرفه",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-bronchopneumonia-lat",
+    "file": "media/cxr/cxr_bronchopneumonia_lat.jpg",
+    "titleFa": "برونکوپنومونی (نمای Lateral — جفت PA)",
+    "titleEn": "Bronchopneumonia (Lateral View)",
+    "category": "infectious",
+    "projection": "Lateral",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بزرگسال)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "نمای نیم‌رخ (Lateral) همان بیمار مبتلا به برونکوپنومونی برای مکان‌یابی دقیق لوبی.",
+    "findingsFa": [
+      "افزایش دانسیته روی مهره‌های سینه‌ای تحتانی (Spine Sign مثبت)",
+      "کدورت‌های پارانشیمی در فضای رتروکاردیال و لوب‌های تحتانی"
+    ],
+    "interpretationFa": "برونکوپنومونی در نمای نیم‌رخ با Spine Sign مثبت.",
+    "annotations": [
+      {
+        "x": 63,
+        "y": 66,
+        "type": "finding",
+        "label": "Spine Sign مثبت (روشن‌تر شدن مهره‌های تحتانی)"
+      },
+      {
+        "x": 54,
+        "y": 64,
+        "type": "finding",
+        "label": "کدورت رتروکاردیال"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap",
+      "dis-hap-vap"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "برونکوپنومونی / پنومونی لوب تحتانی (Lateral)",
+        "نمای نیم‌رخ طبیعی",
+        "تودهٔ مدیاستن قدامی",
+        "پنوموتوراکس قدامی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "سفیدتر شدن مهره‌های سینه‌ای تحتانی (Spine Sign مثبت) نشانهٔ کانسلیدیشن لوب تحتانی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Chest radiograph in influensa and H influenzae, lateral.jpg",
+      "author": "Mikael Häggström, M.D. Author info - Reusing images- Conflicts of interest:  None\nMikael Häggström, M.D.Consent note: Written informed consent was obtained from",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chest_radiograph_in_influensa_and_H_influenzae,_lateral.jpg",
+      "originalDescription": "Chest radiograph of an 88 year old man, about one week after onset of fever, fatigue and mild coughing. Lab tests detected both Influenza A virus and Haemophilus influenzae.",
+      "dimensions": "1001×1127"
+    },
+    "referenceIds": [
+      "ref-idsa-ats-cap-2019",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "مکان‌یابی لوب در نمای لترال",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-interstitial-kerley",
+    "file": "media/cxr/cxr_interstitial_kerley.jpg",
+    "titleFa": "الگوی بینابینی و خطوط کرلی B (احتقان ریوی)",
+    "titleEn": "Interstitial Pattern & Kerley B Lines",
+    "category": "interstitial",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "۸۴ سال",
+      "sex": "زن (F)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی بیمار زن ۸۴ ساله با احتقان قلبی و ادم بینابینی (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "خطوط افقی کوتاه محیطی ۱ تا ۲ سانتی‌متری عمود بر پلور در قواعد (Kerley B Lines)",
+      "برجستگی عروق لوب‌های فوقانی (Cephalization)",
+      "الگوی شبکه‌ای بینابینی و کاردیومگالی همراه"
+    ],
+    "interpretationFa": "الگوی بینابینی سپتال (ادم بینابینی با Kerley B) — نشانهٔ افزایش فشار وریدی ریوی (~18–25 mmHg).",
+    "annotations": [
+      {
+        "x": 18,
+        "y": 72,
+        "type": "finding",
+        "label": "خطوط افقی محیطی کرلی B (راست)"
+      },
+      {
+        "x": 82,
+        "y": 70,
+        "type": "finding",
+        "label": "خطوط کرلی B (چپ)"
+      },
+      {
+        "x": 36,
+        "y": 32,
+        "type": "finding",
+        "label": "برجستگی عروق لوب فوقانی (Cephalization)"
+      },
+      {
+        "x": 62,
+        "y": 68,
+        "type": "finding",
+        "label": "کاردیومگالی همراه"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pulmonary-edema",
+      "dis-ipf",
+      "dis-cor-pulmonale"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "الگوی بینابینی با خطوط کرلی B (احتقان ریوی)",
+        "پنوموتوراکس دوطرفه",
+        "آبسهٔ ریوی",
+        "برونشکتازی ایزوله"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "خطوط Kerley B ناشی از ادم سپتوم‌های بین‌لوبولی و از شاخص‌ترین علائم ادم بینابینی ریوی هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Kerley-B-Linien bei kardialer Stauung 84W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kerley-B-Linien_bei_kardialer_Stauung_84W_-_CR_pa_-_001.jpg",
+      "originalDescription": "Kerley-B-Linien bei kardialer Stauung",
+      "dimensions": "1202×1241"
+    },
+    "referenceIds": [
+      "ref-harrison-21",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "خطوط کرلی B + احتقان بینابینی",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-pulmonary-edema",
+    "file": "media/cxr/cxr_pulmonary_edema.jpg",
+    "titleFa": "ادم ریوی حاد آلوئولار (نمای بال خفاشی)",
+    "titleEn": "Acute Cardiogenic Pulmonary Edema (Bat-Wing)",
+    "category": "parenchymal",
+    "projection": "AP",
+    "patientMeta": {
+      "age": "۶۴ سال",
+      "sex": "زن (F)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی AP واقعی بیمار زن ۶۴ ساله در دکمپانساسیون حاد قلبی با ادم ریوی بال‌خفاشی (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "کدورت‌های آلوئولار متقارن دوطرفه اطراف ناف ریه‌ها با حفظ نسبی محیط (Bat-Wing)",
+      "کاردیومگالی واضح و پهن‌شدگی پدیکل عروقی",
+      "محوشدگی حدود عروق ناف و شواهد افیوژن پلور خفیف"
+    ],
+    "interpretationFa": "ادم ریوی کاردیوژنیک حاد — اورژانس نیازمند اکسیژن/NIV، دیورتیک و وازودیلاتور.",
+    "annotations": [
+      {
+        "x": 32,
+        "y": 50,
+        "type": "finding",
+        "label": "کدورت آلوئولار پره‌هیلار راست (Bat-Wing)"
+      },
+      {
+        "x": 68,
+        "y": 50,
+        "type": "finding",
+        "label": "کدورت آلوئولار پره‌هیلار چپ"
+      },
+      {
+        "x": 52,
+        "y": 72,
+        "type": "finding",
+        "label": "کاردیومگالی واضح"
+      },
+      {
+        "x": 17,
+        "y": 75,
+        "type": "finding",
+        "label": "محوشدگی زاویهٔ کوستوفرنیک راست"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pulmonary-edema",
+      "dis-ards",
+      "dis-cor-pulmonale"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "ادم ریوی کاردیوژنیک حاد (Bat-Wing)",
+        "پنومونی لوبار راست",
+        "سل حفره‌ای قله‌ای",
+        "آمفیزم خالص"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کدورت‌های پره‌هیلار متقارن همراه با کاردیومگالی نمای کلاسیک ادم آلوئولار کاردیوژنیک هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Schmetterlingsoedem bei kardialer Dekompensation 64W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schmetterlingsoedem_bei_kardialer_Dekompensation_64W_-_CR_ap_-_001.jpg",
+      "originalDescription": "Schmetterlingsödem bei kardialer Dekompensation",
+      "dimensions": "1300×1106"
+    },
+    "referenceIds": [
+      "ref-harrison-21",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "الگوی بال‌خفاشی (Bat-Wing)",
+    "isEmergency": true
+  },
+  {
+    "id": "cxr-pleural-effusion",
+    "file": "media/cxr/cxr_pleural_effusion.jpg",
+    "titleFa": "افیوژن پلور حجیم چپ با شیفت مدیاستن",
+    "titleEn": "Massive Left Pleural Effusion with Mediastinal Shift",
+    "category": "pleural",
+    "projection": "AP",
+    "patientMeta": {
+      "age": "۷۷ سال",
+      "sex": "زن (F)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی AP واقعی بیمار زن ۷۷ ساله با افیوژن پلور حجیم چپ و شیفت مدیاستن به راست (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "کدورت سفید همگن (White-out) تقریباً کل همی‌توراکس چپ",
+      "محوشدگی همی‌دیافراگم و حاشیهٔ قلب چپ",
+      "انحراف تراشه و مدیاستن به سمت مقابل (راست) — کلید افتراق از آتلکتازی!"
+    ],
+    "interpretationFa": "افیوژن پلور حجیم چپ — فشار مثبت مایع، مدیاستن را به سمت مقابل هل می‌دهد.",
+    "annotations": [
+      {
+        "x": 72,
+        "y": 56,
+        "type": "finding",
+        "label": "کدورت همگن کل همی‌توراکس چپ"
+      },
+      {
+        "x": 42,
+        "y": 24,
+        "type": "finding",
+        "label": "انحراف تراشه به راست (سمت مقابل)"
+      },
+      {
+        "x": 38,
+        "y": 56,
+        "type": "finding",
+        "label": "شیفت قلب و مدیاستن به راست"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion",
+      "dis-empyema",
+      "dis-lung-cancer"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "افیوژن پلور حجیم چپ (شیفت به مقابل)",
+        "آتلکتازی کامل ریه چپ (شیفت به همان سمت)",
+        "پنومونکتومی چپ",
+        "پنوموتوراکس چپ"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در همی‌توراکس سفید، شیفت مدیاستن به سمت مقابل (هل دادن) نشانهٔ افیوژن حجیم است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Mediastinalshift nach rechts bei grossem Pleuraerguss links 77W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mediastinalshift_nach_rechts_bei_grossem_Pleuraerguss_links_77W_-_CR_ap_-_001.jpg",
+      "originalDescription": "Mediastinalshift nach rechts bei großem Pleuraerguss links: Beachte den Verlauf der Trachea.",
+      "dimensions": "1300×914"
+    },
+    "referenceIds": [
+      "ref-bts-pleural-2023",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "سفیدشدگی همی‌توراکس + شیفت مقابل",
+    "isEmergency": true
+  },
+  {
+    "id": "cxr-pleural-effusion-lat",
+    "file": "media/cxr/cxr_pleural_effusion_lat.jpg",
+    "titleFa": "افیوژن پلور بزرگ در نمای نیم‌رخ (Lateral)",
+    "titleEn": "Large Pleural Effusion (Lateral View)",
+    "category": "pleural",
+    "projection": "Lateral",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی واقعی نمای نیم‌رخ با افیوژن پلور واضح و نمای منیسک (دکتر جیمز هیلمن، CC BY-SA 3.0).",
+    "findingsFa": [
+      "محوشدگی زاویهٔ کوستوفرنیک خلفی و نمای مقعر رو به بالا (Meniscus sign)",
+      "محوشدگی سایهٔ همی‌دیافراگم درگیر"
+    ],
+    "interpretationFa": "افیوژن پلور در نمای نیم‌رخ — حساس‌ترین نمای ساده برای کشف افیوژن‌های کوچک.",
+    "annotations": [
+      {
+        "x": 68,
+        "y": 64,
+        "type": "finding",
+        "label": "نمای مقعر رو به بالا (Meniscus Sign)"
+      },
+      {
+        "x": 62,
+        "y": 80,
+        "type": "finding",
+        "label": "محوشدگی زاویهٔ کوستوفرنیک خلفی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion",
+      "dis-empyema"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "افیوژن پلور در نمای نیم‌رخ",
+        "نمای نیم‌رخ طبیعی",
+        "پنومومدیاستن",
+        "آمفیزم"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "محوشدگی زاویهٔ خلفی همراه با منیسک مقعر مشخصهٔ افیوژن پلور آزاد در نمای نیم‌رخ است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:LargePleuralEffusionLatPlain.png",
+      "author": "James Heilman, MD",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:LargePleuralEffusionLatPlain.png",
+      "originalDescription": "A pleural effusion as seen on lateral upright chest x ray",
+      "dimensions": "910×1057"
+    },
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "محو شدن زاویه کوستوفرنیک خلفی",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-pneumothorax",
+    "file": "media/cxr/cxr_pneumothorax.jpg",
+    "titleFa": "پنوموتوراکس چپ با اثر فشاری",
+    "titleEn": "Left Pneumothorax with Contralateral Shift",
+    "category": "pleural",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "۲۱ سال",
+      "sex": "مرد (M)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی بیمار مرد ۲۱ ساله با پنوموتوراکس بزرگ چپ و شیفت مدیاستن به راست (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "خط ظریف پلور احشایی (Visceral pleural line) در همی‌توراکس چپ",
+      "فضای کاملاً شفاف و فاقد نقوش عروقی در محیط خط پلورال",
+      "کلاپس ریهٔ چپ به سمت ناف و انحراف تراشه و مدیاستن به راست"
+    ],
+    "interpretationFa": "پنوموتوراکس بزرگ چپ با انحراف مدیاستن — در پنوموتوراکس فشاری ناپایدار هرگز منتظر گرافی نمانید!",
+    "annotations": [
+      {
+        "x": 79,
+        "y": 36,
+        "type": "finding",
+        "label": "هوای آزاد پلورال (فاقد نقوش عروقی)"
+      },
+      {
+        "x": 69,
+        "y": 46,
+        "type": "finding",
+        "label": "لبهٔ پلور احشایی (Visceral Pleural Line)"
+      },
+      {
+        "x": 64,
+        "y": 54,
+        "type": "finding",
+        "label": "پارانشیم کلاپس‌شدهٔ ریهٔ چپ"
+      },
+      {
+        "x": 45,
+        "y": 26,
+        "type": "finding",
+        "label": "انحراف تراشه و مدیاستن به راست"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax",
+      "dis-copd"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "پنوموتوراکس چپ با شیفت مدیاستن",
+        "بولای آمفیزمی",
+        "افیوژن پلور چپ",
+        "آتلکتازی لوب فوقانی چپ"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "خط پلور احشایی بدون نقوش ریوی در خارج آن به همراه کلاپس ریه و شیفت مدیاستن تشخیص پنوموتوراکس با جزء فشاری را مسجل می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Maessiger Spannungspneumothorax links 21M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maessiger_Spannungspneumothorax_links_21M_-_CR_pa_-_001.jpg",
+      "originalDescription": "Mäßiger (bzgl. der Spannungskomponente) spontaner Spannungspneumothorax links mit etwas Mediastinalshift nach rechts. Man erkennt gut die kollabierten Lungenlappen.",
+      "dimensions": "1012×1300"
+    },
+    "referenceIds": [
+      "ref-bts-pleural-2023",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "خط پلور احشایی + نبود رگ محیطی",
+    "isEmergency": true
+  },
+  {
+    "id": "cxr-hydropneumothorax",
+    "file": "media/cxr/cxr_hydropneumothorax.jpg",
+    "titleFa": "هیدروپنوموتوراکس (سطح افقی هوا-مایع)",
+    "titleEn": "Hydropneumothorax",
+    "category": "pleural",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی ایستادهٔ واقعی بیمار مبتلا به هیدروپنوموتوراکس (دکتر جیمز هیلمن، CC BY-SA 3.0).",
+    "findingsFa": [
+      "خط کاملاً مستقیم و افقی سطح هوا-مایع بدون منیسک در همی‌توراکس درگیر",
+      "هوای آزاد بدون عروق بالای خط و مایع همگن زیر خط"
+    ],
+    "interpretationFa": "هیدروپنوموتوراکس — علل شایع: فیستول برونکوپلورال، تروما، عارضهٔ توراسنتز یا امپیم گازدار.",
+    "annotations": [
+      {
+        "x": 68,
+        "y": 58,
+        "type": "finding",
+        "label": "خط کاملاً افقی هوا-مایع (بدون منیسک)"
+      },
+      {
+        "x": 70,
+        "y": 38,
+        "type": "finding",
+        "label": "هوای آزاد بالای سطح مایع"
+      },
+      {
+        "x": 68,
+        "y": 74,
+        "type": "finding",
+        "label": "مایع پلورال زیر خط افقی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-hydropneumothorax",
+      "dis-pleural-effusion",
+      "dis-pneumothorax",
+      "dis-empyema"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "هیدروپنوموتوراکس",
+        "افیوژن پلور ساده",
+        "پنومونی لوبار",
+        "کاردیومگالی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "خط صاف و افقی بدون منیسک در فضای پلور نشانهٔ حضور هم‌زمان هوا و مایع است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Hydropneumo.jpg",
+      "author": "James Heilman, MD",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hydropneumo.jpg",
+      "originalDescription": "A hydropneumothorax",
+      "dimensions": "1042×963"
+    },
+    "referenceIds": [
+      "ref-bts-pleural-2023",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "سطح کاملاً افقی هوا-مایع",
+    "isEmergency": true
+  },
+  {
+    "id": "cxr-atelectasis",
+    "file": "media/cxr/cxr_atelectasis.jpg",
+    "titleFa": "آتلکتازی تحت‌کامل ریهٔ چپ (شیفت هم‌جهت)",
+    "titleEn": "Subtotal Left Lung Atelectasis",
+    "category": "parenchymal",
+    "projection": "AP",
+    "patientMeta": {
+      "age": "۶۶ سال",
+      "sex": "مرد (M)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی AP واقعی بیمار مرد ۶۶ ساله با آتلکتازی وسیع ریهٔ چپ (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "کاهش شدید حجم همی‌توراکس چپ همراه با کدورت",
+      "کشیده شدن تراشه، قلب و مدیاستن به سمت درگیر (چپ)",
+      "نزدیک شدن دنده‌های چپ و پرهوایی جبرانی ریهٔ راست"
+    ],
+    "interpretationFa": "آتلکتازی وسیع ریهٔ چپ — علل مهم: کارسینوم برونکوژنیک انسدادی، پلاک موکوسی یا انتوباسیون برونش راست.",
+    "annotations": [
+      {
+        "x": 72,
+        "y": 55,
+        "type": "finding",
+        "label": "کدورت و کاهش حجم همی‌توراکس چپ"
+      },
+      {
+        "x": 55,
+        "y": 24,
+        "type": "finding",
+        "label": "کشیده شدن تراشه به سمت چپ (Ipsilateral)"
+      },
+      {
+        "x": 62,
+        "y": 62,
+        "type": "finding",
+        "label": "شیفت قلب به سمت چپ"
+      },
+      {
+        "x": 28,
+        "y": 46,
+        "type": "finding",
+        "label": "پرهوایی جبرانی ریهٔ راست"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-atelectasis",
+      "dis-lung-cancer"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "آتلکتازی وسیع ریهٔ چپ (شیفت هم‌جهت)",
+        "افیوژن پلور حجیم چپ (شیفت به مقابل)",
+        "پنوموتوراکس چپ",
+        "ادم ریوی دوطرفه"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کدورت همی‌توراکس همراه با کشش تراشه و قلب به همان سمت نشانهٔ کاهش حجم ناشی از آتلکتازی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Subtotale Atelektase der linken Lunge 66M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Subtotale_Atelektase_der_linken_Lunge_66M_-_CR_ap_-_001.jpg",
+      "originalDescription": "Subtotale Atelektase der linken Lunge bei Verlegung durch Schleim mit deutlicher konsekutiver Ausdehnung der rechten Lunge über die Mittellinie nach links.",
+      "dimensions": "1300×1221"
+    },
+    "referenceIds": [
+      "ref-murray-nadel",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "شیفت مدیاستن به همان سمت",
+    "isEmergency": true
+  },
+  {
+    "id": "cxr-cavitary-tb",
+    "file": "media/cxr/cxr_cavitary_tb.jpg",
+    "titleFa": "سل ریوی حفره‌ای فعال (پست‌پرایمری قله‌ای)",
+    "titleEn": "Active Cavitary Post-Primary Pulmonary Tuberculosis",
+    "category": "infectious",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "۲۷ سال",
+      "sex": "مرد (M)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی بیمار مرد ۲۷ ساله با سل ریوی فعال حفره‌ای (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "حفره‌های پارانشیمی و ارتشاح‌های فیبروندولار متراکم در لوب فوقانی راست",
+      "انتشار برونکوژنیک ندولار/تکه‌تکه در ناحیهٔ فوقانی و میانی ریهٔ چپ",
+      "کشیدگی خفیف ناف ریهٔ راست به بالا"
+    ],
+    "interpretationFa": "سل ریوی فعال حفره‌ای — بسیار مسری؛ نیازمند ایزولاسیون هوایی و اسمیر/GeneXpert خلط.",
+    "annotations": [
+      {
+        "x": 31,
+        "y": 32,
+        "type": "finding",
+        "label": "ضایعهٔ حفره‌ای و ارتشاح لوب فوقانی راست"
+      },
+      {
+        "x": 72,
+        "y": 44,
+        "type": "finding",
+        "label": "انتشار برونکوژنیک در ریهٔ چپ"
+      },
+      {
+        "x": 35,
+        "y": 48,
+        "type": "finding",
+        "label": "کشیدگی ناف راست به بالا"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-tb",
+      "dis-lung-abscess",
+      "dis-lung-cancer"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "سل ریوی حفره‌ای فعال (Post-Primary TB)",
+        "سارکوئیدوز مرحلهٔ ۱",
+        "ادم ریوی کاردیوژنیک",
+        "پنوموتوراکس ساده"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "ضایعات حفره‌ای و فیبروندولار در لوب‌های فوقانی همراه با انتشار برونکوژنیک نمای کلاسیک سل ریوی فعال است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Floride kavernisierende Tuberkulose 27M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Floride_kavernisierende_Tuberkulose_27M_-_CR_pa_-_001.jpg",
+      "originalDescription": "Floride, kavernisierende Tuberkulose",
+      "dimensions": "991×1085"
+    },
+    "referenceIds": [
+      "ref-who-tb-2024",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "حفرهٔ قله‌ای ریه (Cavitation)",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-miliary-tb",
+    "file": "media/cxr/cxr_miliary_tb.jpg",
+    "titleFa": "سل ارزنی (Miliary Tuberculosis)",
+    "titleEn": "Miliary Tuberculosis",
+    "category": "infectious",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی واقعی الگوی کلاسیک سل ارزنی ناشی از انتشار هماتوژن (CC BY 4.0).",
+    "findingsFa": [
+      "میکروندول‌های متعدد و یک‌اندازه (۱ تا ۳ میلی‌متر) با توزیع یکنواخت در کل هر دو ریه"
+    ],
+    "interpretationFa": "الگوی ارزنی (Miliary) — افتراق‌ها: سل ارزنی، متاستاز تیروئید/ملانوم/کلیه، قارچ منتشر و سیلیکوز.",
+    "annotations": [
+      {
+        "x": 30,
+        "y": 42,
+        "type": "finding",
+        "label": "میکروندول‌های منتشر ۱–۳ میلی‌متری (راست)"
+      },
+      {
+        "x": 70,
+        "y": 48,
+        "type": "finding",
+        "label": "توزیع یکنواخت ارزنی (چپ)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-tb",
+      "dis-silicosis"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "سل ارزنی (الگوی میکروندولار منتشر)",
+        "پنومونی لوبار",
+        "افیوژن پلور حجیم",
+        "پنوموتوراکس"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "میکروندول‌های یک‌اندازهٔ ۱–۳ میلی‌متری منتشر در کل هر دو ریه شاخص انتشار هماتوژن هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Chest radiograph of miliary tuberculosis 1.jpg",
+      "author": "Benjamín Herreros, Isabel Plaza, Rebeca García, Marta Chichón, Carmen Guerrero and Emilio Pintor",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chest_radiograph_of_miliary_tuberculosis_1.jpg",
+      "originalDescription": "Chest radiograph of miliary tuberculosis, 13 days after onset of fever, chills, and general malaise in a 82-year-old female. It shows bilateral interstitial infiltrates.\nFrom the same case (edit):\n\n\n\t\t\n\t\t\t\n\t\t\tX-ray, 13 days after onset, showing bilateral interstitial infiltrates.\n\t\t\n\t\t\n\t\t\t\n\t\t\tCT, 16 days after onset, showing extensive pulmonary parenchymal involvement consisting of irregular septa",
+      "dimensions": "876×792"
+    },
+    "referenceIds": [
+      "ref-who-tb-2024",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "ارزنی منتشر (Miliary Nodules)",
+    "isEmergency": true
+  },
+  {
+    "id": "cxr-lung-abscess",
+    "file": "media/cxr/cxr_lung_abscess.jpg",
+    "titleFa": "آبسهٔ ریوی و پنومونی نکروزان حفره‌ای",
+    "titleEn": "Lung Abscess & Necrotizing Pneumonia",
+    "category": "infectious",
+    "projection": "AP",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بیمار ICU)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی AP واقعی بیمار بستری با پنومونی نکروزان و آبسهٔ حفره‌ای دیوارهضخیم ریهٔ چپ (Christaras A، CC BY 2.5).",
+    "findingsFa": [
+      "ضایعهٔ حفره‌ای گرد با دیوارهٔ ضخیم در ریهٔ چپ در بستر کانسلیدیشن پارانشیمی",
+      "نمای داخلی حفره با محتوای هوا-مایع/نکروز",
+      "وجود کاتتر مرکزی و لولهٔ تراشه (شدت بیماری)"
+    ],
+    "interpretationFa": "آبسهٔ ریوی در بستر پنومونی نکروزان — نیازمند آنتی‌بیوتیک ضدبی‌هوازی/هوازی و افتراق از امپیم و تومور حفره‌ای.",
+    "annotations": [
+      {
+        "x": 78,
+        "y": 51,
+        "type": "finding",
+        "label": "حفرهٔ آبسهٔ دیوارهضخیم ریهٔ چپ"
+      },
+      {
+        "x": 72,
+        "y": 38,
+        "type": "finding",
+        "label": "کانسلیدیشن پنومونیک پیرامونی"
+      },
+      {
+        "x": 44,
+        "y": 24,
+        "type": "anatomy",
+        "label": "کاتتر وریدی مرکزی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-abscess",
+      "dis-cap",
+      "dis-empyema"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "آبسهٔ ریوی / پنومونی نکروزان حفره‌ای",
+        "هیدروپنوموتوراکس ساده",
+        "کاردیومگالی ایزوله",
+        "آسم برونکیال"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "حفرهٔ گرد دیوارهضخیم درون پارانشیم کانسلیده‌شده نشانهٔ آبسهٔ ریوی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:XR chest - pneumonia with abscess and caverns - d0.jpg",
+      "author": "Christaras A",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:XR_chest_-_pneumonia_with_abscess_and_caverns_-_d0.jpg",
+      "originalDescription": "Chest X-ray posteroanterior view showing bilateral pneumonia with caverns and abscesses. 37 year old male.",
+      "dimensions": "664×604"
+    },
+    "referenceIds": [
+      "ref-harrison-21",
+      "ref-idsa-ats-cap-2019"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "حفره ضخیم‌جدار با سطح هوا-مایع",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-pulmonary-fibrosis",
+    "file": "media/cxr/cxr_pulmonary_fibrosis.jpg",
+    "titleFa": "فیبروز ریوی بینابینی (الگوی رتیکولار قاعده‌ای)",
+    "titleEn": "Pulmonary Fibrosis (Interstitial Reticular Pattern)",
+    "category": "interstitial",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی واقعی بیمار مبتلا به فیبروز ریوی بینابینی (دکتر جیمز هیلمن، CC BY-SA 3.0).",
+    "findingsFa": [
+      "کدورت‌های رتیکولار و رتیکولوندولار خشن دوطرفه با غلبهٔ محیطی و قاعده‌ای",
+      "کاهش حجم ریه‌ها (برخلاف COPD)",
+      "نامنظمی حاشیهٔ قلب و دیافراگم (Shaggy border)؛ HRCT استاندارد طلایی است"
+    ],
+    "interpretationFa": "فیبروز ریوی بینابینی (ILD / Fibrosis) — کاهش حجم ریه همراه با رتیکولاسیون قاعده‌ای.",
+    "annotations": [
+      {
+        "x": 26,
+        "y": 66,
+        "type": "finding",
+        "label": "کدورت‌های رتیکولار خشن قاعدهٔ راست"
+      },
+      {
+        "x": 74,
+        "y": 66,
+        "type": "finding",
+        "label": "رتیکولاسیون محیطی و کاهش حجم قاعدهٔ چپ"
+      },
+      {
+        "x": 40,
+        "y": 60,
+        "type": "finding",
+        "label": "حاشیهٔ قلبی کرک‌دار (Shaggy border)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-ipf",
+      "dis-asbestosis",
+      "dis-hp"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "فیبروز ریوی بینابینی (ILD)",
+        "آمفیزم با پرهوایی شدید",
+        "پنوموتوراکس چپ",
+        "تودهٔ منفرد قله‌ای"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کاهش حجم دوطرفهٔ ریه‌ها همراه با کدورت‌های رتیکولار خشن محیطی-قاعده‌ای شاخص فیبروز بینابینی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:IPF amiodarone.JPG",
+      "author": "James Heilman, MD",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:IPF_amiodarone.JPG",
+      "originalDescription": "Pulmonary fibrosis induced by amiodarone.",
+      "dimensions": "1300×1078"
+    },
+    "referenceIds": [
+      "ref-ats-ipf-2022",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "شبکه‌ای-لانهٔ زنبوری قواعد",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-sarcoidosis",
+    "file": "media/cxr/cxr_sarcoidosis.jpg",
+    "titleFa": "سارکوئیدوز ریوی (لنفادنوپاتی ناف دوطرفه)",
+    "titleEn": "Pulmonary Sarcoidosis (Bilateral Hilar Lymphadenopathy)",
+    "category": "interstitial",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "۵۰ سال",
+      "sex": "مرد (M)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی بیمار مرد ۵۰ ساله با سارکوئیدوز ریوی (Antoniusziekenhuis Nieuwegein، Public Domain).",
+    "findingsFa": [
+      "بزرگی متقارن و لوبولهٔ غدد لنفاوی هر دو ناف ریه (BHL) و پارااتراکئال راست (سه‌گانهٔ گارلند)",
+      "کدورت‌های رتیکولوندولار میانی-فوقانی (مرحلهٔ II اسکدینگ)"
+    ],
+    "interpretationFa": "سارکوئیدوز ریوی مرحلهٔ ۲ (BHL + پارانشیم) — افتراق‌های حیاتی: لنفوم، سل و برلیوز.",
+    "annotations": [
+      {
+        "x": 38,
+        "y": 46,
+        "type": "finding",
+        "label": "لنفادنوپاتی ناف راست"
+      },
+      {
+        "x": 62,
+        "y": 45,
+        "type": "finding",
+        "label": "لنفادنوپاتی ناف چپ"
+      },
+      {
+        "x": 42,
+        "y": 30,
+        "type": "finding",
+        "label": "لنفادنوپاتی پارااتراکئال راست"
+      },
+      {
+        "x": 28,
+        "y": 40,
+        "type": "finding",
+        "label": "درگیری رتیکولوندولار میانی-فوقانی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-sarcoidosis",
+      "dis-tb"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "سارکوئیدوز ریوی (BHL ± درگیری پارانشیمی)",
+        "پنوموتوراکس خودبه‌خودی",
+        "ادم ریوی بال‌خفاشی",
+        "آبسهٔ ریوی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "لنفادنوپاتی ناف دوطرفهٔ متقارن همراه با پارااتراکئال راست نمای کلاسیک سارکوئیدوز است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Pulmonary sarcoidosis in a 50 year old male patient, X-ray thorax image, 2006.jpg",
+      "author": "Antoniusziekenhuis Nieuwegein",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pulmonary_sarcoidosis_in_a_50_year_old_male_patient,_X-ray_thorax_image,_2006.jpg",
+      "originalDescription": "Pulmonary sarcoidosis in a 50 year old male patient, X-ray image, 2006",
+      "dimensions": "716×833"
+    },
+    "referenceIds": [
+      "ref-ats-sarcoid-2020",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "بزرگی دوطرفه ناف ریه",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-lung-mass-cancer",
+    "file": "media/cxr/cxr_lung_mass_cancer.jpg",
+    "titleFa": "کارسینوم ریه (تودهٔ لوب فوقانی راست — SCC)",
+    "titleEn": "Lung Cancer — Right Upper Lobe Squamous Cell Carcinoma",
+    "category": "neoplasm",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "۷۶ سال",
+      "sex": "زن (F)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی بیمار زن ۷۶ ساله با کارسینوم سلول سنگفرشی تاییدشده در لوب فوقانی راست (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "تودهٔ متراکم >۳ سانتی‌متر با حاشیهٔ نامنظم در لوب فوقانی راست در مجاورت ناف/پارااتراکئال",
+      "لزوم CT قفسهٔ سینه با کنتراست، مرحله‌بندی (PET-CT) و نمونه‌برداری بافتی"
+    ],
+    "interpretationFa": "تودهٔ ریوی بدخیم (SCC لوب فوقانی راست) — هر ضایعهٔ >۳ سانتی‌متر تا اثبات خلاف آن بدخیم است.",
+    "annotations": [
+      {
+        "x": 36,
+        "y": 29,
+        "type": "finding",
+        "label": "تودهٔ متراکم لوب فوقانی راست (>۳ سانتی‌متر — SCC)"
+      },
+      {
+        "x": 38,
+        "y": 42,
+        "type": "finding",
+        "label": "مجاورت ناف راست / احتمال درگیری لنفاوی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-cancer",
+      "dis-solitary-nodule",
+      "dis-atelectasis"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "کارسینوم ریه / تودهٔ لوب فوقانی راست",
+        "پنومونی لوب تحتانی",
+        "گرافی طبیعی",
+        "هیدروپنوموتوراکس"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "تودهٔ نامنظم >۳ سانتی‌متر در لوب فوقانی راست در سالمند قویاً مطرح‌کنندهٔ سرطان اولیهٔ ریه است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Plattenepithelkarzinom der Lunge rechter Oberlappen 76W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plattenepithelkarzinom_der_Lunge_rechter_Oberlappen_76W_-_CR_pa_-_001.jpg",
+      "originalDescription": "Plattenepithelkarzinom der Lunge rechter Oberlappen",
+      "dimensions": "1193×1300"
+    },
+    "referenceIds": [
+      "ref-fleischner-2017",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "تودهٔ ریوی با حاشیه نامنظم",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-bronchiectasis",
+    "file": "media/cxr/cxr_bronchiectasis.jpg",
+    "titleFa": "برونشکتازی قاعدهٔ چپ (نمای ریل قطار)",
+    "titleEn": "Left Basal Bronchiectasis",
+    "category": "obstructive",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "۵۱ سال",
+      "sex": "مرد (M)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی بیمار مرد ۵۱ ساله با برونشکتازی قاعدهٔ ریهٔ چپ (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "خطوط موازی ضخیم‌شدهٔ دیوارهٔ برونش‌ها (Tram-track) و سایه‌های حلقه‌ای در لوب تحتانی چپ",
+      "حساسیت محدود گرافی ساده و لزوم HRCT (نمای Signet-Ring) برای تایید"
+    ],
+    "interpretationFa": "برونشکتازی قاعدهٔ چپ — همراهی با سرفهٔ مزمن پرخلط و کلونیزاسیون سودوموناس/هموفیلوس.",
+    "annotations": [
+      {
+        "x": 72,
+        "y": 68,
+        "type": "finding",
+        "label": "نمای Tram-track و حلقه‌ای قاعدهٔ چپ"
+      },
+      {
+        "x": 68,
+        "y": 75,
+        "type": "finding",
+        "label": "ضخیم‌شدگی جدار برونش‌ها و ازدحام عروقی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-bronchiectasis",
+      "dis-cf"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "برونشکتازی قاعدهٔ چپ",
+        "پنوموتوراکس چپ",
+        "لنفادنوپاتی ناف دوطرفه",
+        "سل ارزنی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "خطوط موازی Tram-track و سایه‌های حلقه‌ای در قاعدهٔ چپ نمای برونشکتازی در گرافی ساده هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Bronchiektasen links basal 51M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bronchiektasen_links_basal_51M_-_CR_pa_-_001.jpg",
+      "originalDescription": "Bronchiektasen links basal",
+      "dimensions": "1294×1081"
+    },
+    "referenceIds": [
+      "ref-ers-bronchiectasis",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "خطوط ریل تراموا (Tram-Track)",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-ards",
+    "file": "media/cxr/cxr_ards.jpg",
+    "titleFa": "سندرم دیسترس تنفسی حاد (ARDS شدید)",
+    "titleEn": "Severe Acute Respiratory Distress Syndrome (ARDS)",
+    "category": "critical",
+    "projection": "AP",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بیمار ICU)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی AP واقعی بیمار بدحال با ARDS شدید (دکتر جیمز هیلمن، CC BY-SA 4.0).",
+    "findingsFa": [
+      "کدورت‌های آلوئولار منتشر و متراکم در هر چهار کوادران هر دو ریه",
+      "توزیع گسترده تا محیط ریه بدون کاردیومگالی واضح یا خطوط کرلی B بارز",
+      "تطابق با معیارهای برلین و تعریف جهانی ۲۰۲۴ ARDS"
+    ],
+    "interpretationFa": "ARDS شدید — نیازمند تهویهٔ محافظ ریه (TV 4–8 mL/kg PBW، فشار پلاتو ≤30 و وضعیت دمر).",
+    "annotations": [
+      {
+        "x": 28,
+        "y": 50,
+        "type": "finding",
+        "label": "کدورت آلوئولار منتشر ریهٔ راست"
+      },
+      {
+        "x": 72,
+        "y": 50,
+        "type": "finding",
+        "label": "کدورت آلوئولار منتشر دوطرفه ریهٔ چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-ards",
+      "dis-resp-failure",
+      "dis-pulmonary-edema"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "ARDS (سندرم دیسترس تنفسی حاد)",
+        "پنوموتوراکس یک‌طرفه",
+        "آمفیزم بدون عارضه",
+        "تودهٔ منفرد ریوی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "ارتشاح‌های آلوئولار منتشر دوطرفهٔ حاد بدون توجیه کامل توسط نارسایی قلبی معیار رادیولوژیک ARDS است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:ARDSSevere.png",
+      "author": "James Heilman, MD",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ARDSSevere.png",
+      "originalDescription": "Severe ARDS. Person is intubated with an OG in place.",
+      "dimensions": "790×631"
+    },
+    "referenceIds": [
+      "ref-esicm-ards-2023",
+      "ref-harrison-21"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "سفیدشدگی منتشر دوطرفه بدون کاردیومگالی",
+    "isEmergency": true
+  },
+  {
+    "id": "cxr-cardiomegaly",
+    "file": "media/cxr/cxr_cardiomegaly.jpg",
+    "titleFa": "کاردیومگالی شدید (CTR > 0.5)",
+    "titleEn": "Marked Cardiomegaly",
+    "category": "vascular",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی با بزرگی چشمگیر سایهٔ قلب (SCiardullo، CC BY-SA 3.0).",
+    "findingsFa": [
+      "نسبت کاردیوتوراسیک (CTR) به‌وضوح بیش از ۵۰٪ در نمای PA ایستاده",
+      "گسترش لبهٔ چپ قلب به سمت دیوارهٔ جانبی قفسهٔ سینه"
+    ],
+    "interpretationFa": "کاردیومگالی واضح در نمای PA — افتراق با افیوژن پریکارد از طریق اکوکاردیوگرافی.",
+    "annotations": [
+      {
+        "x": 56,
+        "y": 64,
+        "type": "finding",
+        "label": "بزرگی واضح سایهٔ قلب (CTR > 0.55)"
+      },
+      {
+        "x": 74,
+        "y": 70,
+        "type": "finding",
+        "label": "گسترش لبهٔ چپ قلب"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cor-pulmonale",
+      "dis-pulmonary-edema"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "کاردیومگالی (CTR > 0.5)",
+        "گرافی طبیعی قفسهٔ سینه",
+        "آتلکتازی کامل راست",
+        "پنوموتوراکس چپ"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "CTR بالای ۵۰٪ در نمای ایستادهٔ PA نشانهٔ کاردیومگالی یا افیوژن پریکارد است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Cardiomegalia.JPG",
+      "author": "SCiardullo",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cardiomegalia.JPG",
+      "originalDescription": "Rx digital de tórax PA que muestra un aumento del ICT.",
+      "dimensions": "1038×1300"
+    },
+    "referenceIds": [
+      "ref-harrison-21",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "نسبت قلبی‌سینه‌ای CTR > 0.50",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-copd-exacerbation-ap",
+    "file": "media/cxr/cxr_copd_exacerbation_ap.jpg",
+    "titleFa": "تشدید COPD و پرهوایی ریوی (نمای AP)",
+    "titleEn": "COPD Exacerbation & Hyperinflation (AP View)",
+    "category": "obstructive",
+    "projection": "AP",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بزرگسال)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی AP واقعی بیمار در جریان تشدید حاد COPD (CC0 دکتر میکائیل هگستروم).",
+    "findingsFa": [
+      "پرهوایی دوطرفهٔ ریه‌ها (>۱۰ دندهٔ خلفی)",
+      "مسطح شدن هر دو همی‌دیافراگم",
+      "قلب باریک و عمودی (Tubular heart) و کاهش نقوش عروقی محیطی"
+    ],
+    "interpretationFa": "پرهوایی ریوی COPD/آمفیزم — در تشدید حاد برای رد پنومونی، پنوموتوراکس و CHF گرفته می‌شود.",
+    "annotations": [
+      {
+        "x": 28,
+        "y": 79,
+        "type": "finding",
+        "label": "مسطح شدن همی‌دیافراگم راست"
+      },
+      {
+        "x": 72,
+        "y": 80,
+        "type": "finding",
+        "label": "مسطح شدن همی‌دیافراگم چپ"
+      },
+      {
+        "x": 50,
+        "y": 56,
+        "type": "finding",
+        "label": "سایهٔ قلب باریک و عمودی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-copd",
+      "dis-aatd",
+      "dis-resp-failure"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "پرهوایی ریوی / COPD (آمفیزم)",
+        "فیبروز ریوی با کاهش حجم",
+        "افیوژن پلور حجیم",
+        "ARDS"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "پرهوایی، مسطح شدن دیافراگم‌ها و قلب عمودی باریک نمای کلاسیک COPD/آمفیزم هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:X-ray of COPD exacerbation - anteroposterior view.jpg",
+      "author": "Mikael Häggström, M.D. Author info - Reusing images- Conflicts of interest:  None\nMikael Häggström, M.D.Consent note: Written informed consent was obtained from",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:X-ray_of_COPD_exacerbation_-_anteroposterior_view.jpg",
+      "originalDescription": "Chest X-ray of an 81 year old man with chronic obstructive pulmonary disease (COPD), presenting with acute COPD exacerbation, mainly productive cough. It shows an opacity in the inferior parts of the right upper lobe. A nasopharyngeal swab detected Haemophilus influenzae.",
+      "dimensions": "1300×1200"
+    },
+    "referenceIds": [
+      "ref-gold-2025",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "پرهوایی + دیافراگم مسطح",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-copd-exacerbation-lat",
+    "file": "media/cxr/cxr_copd_exacerbation_lat.jpg",
+    "titleFa": "پرهوایی COPD در نمای نیم‌رخ (Lateral)",
+    "titleEn": "COPD Hyperinflation (Lateral View)",
+    "category": "obstructive",
+    "projection": "Lateral",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع (بزرگسال)",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "نمای نیم‌رخ همان بیمار تشدید COPD (CC0 دکتر میکائیل هگستروم) — بهترین نما برای فضای رتروسترنال.",
+    "findingsFa": [
+      "افزایش چشمگیر فضای شفاف رتروسترنال (>۲٫۵–۳ سانتی‌متر)",
+      "مسطح شدن کامل قوس دیافراگم و قفسهٔ سینهٔ بشکه‌ای"
+    ],
+    "interpretationFa": "پرهوایی شدید COPD در نمای نیم‌رخ.",
+    "annotations": [
+      {
+        "x": 27,
+        "y": 35,
+        "type": "finding",
+        "label": "اتساع فضای شفاف رتروسترنال"
+      },
+      {
+        "x": 48,
+        "y": 78,
+        "type": "finding",
+        "label": "مسطح شدن کامل دیافراگم"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-copd",
+      "dis-aatd"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "پرهوایی COPD در نمای نیم‌رخ",
+        "گرافی نیم‌رخ طبیعی",
+        "افیوژن پلور خلفی",
+        "تودهٔ مدیاستن قدامی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "گشادشدن فضای رتروسترنال و مسطح شدن دیافراگم در نمای نیم‌رخ نشانهٔ اختصاصی پرهوایی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:X-ray of COPD exacerbation - lateral view.jpg",
+      "author": "Mikael Häggström, M.D. Author info - Reusing images- Conflicts of interest:  None\nMikael Häggström, M.D.Consent note: Written informed consent was obtained from",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:X-ray_of_COPD_exacerbation_-_lateral_view.jpg",
+      "originalDescription": "Chest X-ray of an 81 year old man with chronic obstructive pulmonary disease (COPD), presenting with acute COPD exacerbation, mainly productive cough. It shows an opacity in the inferior parts of the right upper lobe. A nasopharyngeal swab detected Haemophilus influenzae.",
+      "dimensions": "1117×1095"
+    },
+    "referenceIds": [
+      "ref-gold-2025",
+      "ref-murray-nadel"
+    ],
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "افزایش فضای هوایی پشت جناغ",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-pneumonia-effusion",
+    "file": "media/cxr/cxr_pneumonia_effusion.jpg",
+    "titleFa": "افیوژن پلور متوسط چپ (محوشدگی زاویه و منیسک)",
+    "titleEn": "Left-Sided Moderate Pleural Effusion",
+    "category": "pleural",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "ثبت‌نشده در آرشیو منبع",
+      "sex": "ثبت‌نشده در آرشیو منبع",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی ایستادهٔ واقعی با افیوژن پلور متوسط چپ و منیسک کلاسیک (Wikimedia Commons، CC BY-SA 2.5).",
+    "findingsFa": [
+      "محوشدگی زاویهٔ کوستوفرنیک و همی‌دیافراگم چپ با کدورت همگن",
+      "حاشیهٔ فوقانی مقعر رو به بالا (Meniscus sign)",
+      "لزوم توراسنتز تشخیصی با سونوگرافی و معیارهای Light در بیمار تب‌دار یا مشکوک به بدخیمی"
+    ],
+    "interpretationFa": "افیوژن پلور متوسط چپ — کلیدی در افتراق پاراپنومونیک ساده، عارضه‌دار/امپیم و بدخیم.",
+    "annotations": [
+      {
+        "x": 74,
+        "y": 72,
+        "type": "finding",
+        "label": "کدورت همگن قاعدهٔ چپ"
+      },
+      {
+        "x": 83,
+        "y": 64,
+        "type": "finding",
+        "label": "منیسک مقعر در دیوارهٔ جانبی"
+      },
+      {
+        "x": 18,
+        "y": 78,
+        "type": "anatomy",
+        "label": "زاویهٔ کوستوفرنیک راست باز (مقایسه)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion",
+      "dis-empyema",
+      "dis-cap",
+      "dis-lung-cancer"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "افیوژن پلور متوسط چپ",
+        "پنوموتوراکس چپ",
+        "گرافی طبیعی",
+        "سل ارزنی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "محوشدگی زاویهٔ کوستوفرنیک با منیسک مقعر نمای کلاسیک افیوژن پلور آزاد در گرافی ایستاده است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Left-sided Pleural Effusion.jpg",
+      "author": "Clinical_Cases: I made the photo myself, licensed under Creative Commons license.",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Left-sided_Pleural_Effusion.jpg",
+      "originalDescription": "Massive Left-Sided Pleural Effusion",
+      "dimensions": "829×705"
+    },
+    "referenceIds": [
+      "ref-bts-pleural-2023",
+      "ref-idsa-ats-cap-2019"
+    ],
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "علامت مینیسکوس (Meniscus Sign)",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-copd-cteph",
+    "file": "media/cxr/cxr_copd_cteph.jpg",
+    "titleFa": "پرفشاری خون ریوی (CTEPH) بر زمینهٔ COPD",
+    "titleEn": "COPD with CTEPH (Pulmonary Hypertension)",
+    "category": "vascular",
+    "projection": "PA",
+    "patientMeta": {
+      "age": "۷۹ سال",
+      "sex": "زن (F)",
+      "note": "اطلاعات دموگرافیک صرفاً مطابق آرشیو اصلی منبع درج شده و هیچ سابقهٔ بیماری ساختگی افزوده نشده است."
+    },
+    "clinicalHistoryFa": "گرافی PA واقعی بیمار زن ۷۹ ساله با هم‌ابتلایی تاییدشدهٔ COPD و CTEPH (Hellerhoff، CC BY-SA 4.0).",
+    "findingsFa": [
+      "اتساع بارز شریان‌های ریوی مرکزی در هر دو ناف ریه",
+      "کاهش ناگهانی قطر عروق محیطی (Peripheral pruning)",
+      "برجستگی تنهٔ شریان ریوی و کاردیومگالی/کرپولمونال بر زمینهٔ پرهوایی COPD"
+    ],
+    "interpretationFa": "پرفشاری خون ریوی (CTEPH) همراه با COPD — نیازمند اکوکاردیوگرافی، اسکن V/Q و کاتتریزاسیون قلب راست.",
+    "annotations": [
+      {
+        "x": 36,
+        "y": 48,
+        "type": "finding",
+        "label": "اتساع شریان ریوی مرکزی راست"
+      },
+      {
+        "x": 63,
+        "y": 42,
+        "type": "finding",
+        "label": "برجستگی شریان ریوی چپ"
+      },
+      {
+        "x": 20,
+        "y": 54,
+        "type": "finding",
+        "label": "هرس‌شدگی عروق محیطی (Pruning)"
+      },
+      {
+        "x": 58,
+        "y": 68,
+        "type": "finding",
+        "label": "کاردیومگالی / کرپولمونال"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-ph",
+      "dis-pe",
+      "dis-copd",
+      "dis-cor-pulmonale"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین تفسیر رادیولوژیک این گرافی قفسهٔ سینه کدام است؟",
+      "options": [
+        "پرفشاری خون ریوی (CTEPH) همراه با COPD",
+        "پنومونی لوبار راست",
+        "پنوموتوراکس",
+        "آتلکتازی کامل چپ"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "اتساع شریان‌های ریوی مرکزی با Pruning محیطی و کرپولمونال نمای کلاسیک پرفشاری خون ریوی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:COPD und CTEPH 79W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:COPD_und_CTEPH_79W_-_CR_pa_-_001.jpg",
+      "originalDescription": "COPD und CTEPH. Deutlich abgeflachte Zwerchfellkuppen beidseits. Prominente zentrale Pulmonalarterien mit Kalibersprung.",
+      "dimensions": "1167×1300"
+    },
+    "referenceIds": [
+      "ref-esc-ers-ph-2022",
+      "ref-gold-2025"
+    ],
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "برجستگی شریان پولمونری مرکزی",
+    "isEmergency": false
+  },
+  {
+    "id": "cxr-mimic-skin-fold",
+    "titleFa": "چین پوستی شبیه‌ساز پنوموتوراکس (تلهٔ ICU)",
+    "titleEn": "Skin Fold Artifact Mimicking Pneumothorax",
+    "category": "normal",
+    "projection": "AP",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "تلهٔ Skin Fold ≠ پنوموتوراکس",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_mimic_skin_fold.jpg",
+    "patientMeta": {
+      "age": "بیمار بستری ICU",
+      "sex": "بزرگسال"
+    },
+    "clinicalHistoryFa": "گرافی پرتابل خوابیده (AP) روتین در بخش مراقبت ویژه؛ خط عمودی در همی‌توراکس ممکن است به اشتباه پنوموتوراکس گزارش شود.",
+    "findingsFa": "خط لبهٔ ضخیم با کاهش تدریجی دانسیته به سمت داخل دیده می‌شود اما عروق ریوی به‌وضوح از خط عبور کرده و تا دیوارهٔ قفسهٔ سینه ادامه دارند (برخلاف خط نازک و تیز پلور احشایی در پنوموتوراکس).",
+    "interpretationFa": "چین پوستی (Skin fold) در گرافی پرتابل AP یکی از خطرناک‌ترین تله‌های اورژانس است؛ گذاشتن اشتباه چست‌تیوب روی ریهٔ سالم عارضهٔ جدی ایجاد می‌کند.",
+    "annotations": [
+      {
+        "x": 76,
+        "y": 48,
+        "type": "anatomy",
+        "label": "خط چین پوستی (ادامهٔ عروق ریوی در خارج خط)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023",
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "چگونه این خط عمودی در گرافی AP خوابیده را از پنوموتوراکس واقعی افتراق می‌دهیم؟",
+      "options": [
+        "عروق ریوی در خارج از خط ادامه دارند و خود خط پهن است (چین پوستی)",
+        "همیشه باید فوراً سوزن دکمپرشن زد",
+        "نبود شیفت مدیاستن پنوموتوراکس را کاملاً رد می‌کند",
+        "این نشانهٔ قطعی افیوژن پلور است"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در چین پوستی (Skin fold)، عروق ریوی از خط عبور می‌کنند و خط ممکن است از حاشیهٔ دنده‌ها فراتر برود؛ برخلاف خط نازک پلور احشایی."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:11-01-Hautfalten Bettlunge - KEIN Pneumothorax.png",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:11-01-Hautfalten_Bettlunge_-_KEIN_Pneumothorax.png",
+      "dimensions": "1100x1056"
+    }
+  },
+  {
+    "id": "cxr-mimic-mastectomy",
+    "titleFa": "پرشفافیت یک‌طرفهٔ ریه پس از ماستکتومی (تلهٔ تشخیصی)",
+    "titleEn": "Unilateral Hyperlucency Following Right Mastectomy",
+    "category": "normal",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "عدم تقارن بافت نرم (ماستکتومی)",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_mimic_mastectomy.jpg",
+    "patientMeta": {
+      "age": "۶۳ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "بیمار ۶۳ ساله با سابقهٔ جراحی ماستکتومی راست جهت پیگیری روتین مراجعه کرده است.",
+    "findingsFa": "همی‌توراکس راست نسبت به سمت چپ تیره‌تر (پُرشفاف‌تر) دیده می‌شود، اما عروق ریوی و خط پلور طبیعی هستند و سایهٔ بافت نرم پستان راست وجود ندارد (پورت وریدی در سمت چپ دیده می‌شود).",
+    "interpretationFa": "پیش از تشخیص پنوموتوراکس، آمبولی ریه (نشانهٔ Westermark) یا سندرم Swyer-James در یک ریهٔ پرشفاف، همیشه سایهٔ پستان‌ها و عضلهٔ پکتورالیس را مقایسه کنید.",
+    "annotations": [
+      {
+        "x": 32,
+        "y": 64,
+        "type": "anatomy",
+        "label": "نبود سایهٔ بافت نرم پستان راست (علت پرشفافیت کاذب)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax",
+      "dis-pe"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "محتمل‌ترین علت پرشفافیت یک‌طرفهٔ همی‌توراکس راست در این گرافی کدام است؟",
+      "options": [
+        "ماستکتومی راست (کاهش ضخامت بافت نرم دیوارهٔ قفسهٔ سینه)",
+        "پنوموتوراکس فشاری راست",
+        "آمبولی وسیع ریه راست",
+        "آتلکتازی کامل چپ"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "نبود سایهٔ پستان راست همراه با عروق ریوی سالم و وجود پورت شیمی‌درمانی سمت چپ، علت پرشفافیت یک‌طرفه را کاملاً توضیح می‌دهد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Einseitige Hypertransparenz Thorax bei Zustand nach Ablatio mammae 63W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Einseitige_Hypertransparenz_Thorax_bei_Zustand_nach_Ablatio_mammae_63W_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x997"
+    }
+  },
+  {
+    "id": "cxr-mimic-nipple-shadow",
+    "titleFa": "سایهٔ نوک پستان شبیه‌ساز ندول ریوی",
+    "titleEn": "Nipple Shadows Mimicking Pulmonary Nodules",
+    "category": "normal",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "شبه-ندول متقارن (Nipple Shadow)",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_mimic_nipple_shadow.jpg",
+    "patientMeta": {
+      "age": "۶۸ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "گرافی PA قفسهٔ سینه در بیمار بدون علامت؛ دو سایهٔ گرد متقارن در نواحی تحتانی ممکن است با ندول متاستاتیک اشتباه شوند.",
+    "findingsFa": "کدورت‌های گرد، کوچک و متقارن در بخش تحتانی-خارجی هر دو میدان ریوی دقیقاً در محل آناتومیک نوک پستان‌ها دیده می‌شود.",
+    "interpretationFa": "تکرار گرافی با مارکر سربی روی نوک پستان یا بررسی تقارن دوطرفه از انجام سی‌تی‌اسکن و بیوپسی غیرضروری پیشگیری می‌کند.",
+    "annotations": [
+      {
+        "x": 27,
+        "y": 72,
+        "type": "anatomy",
+        "label": "سایهٔ نوک پستان راست"
+      },
+      {
+        "x": 73,
+        "y": 72,
+        "type": "anatomy",
+        "label": "سایهٔ نوک پستان چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-solitary-nodule",
+      "dis-lung-cancer"
+    ],
+    "referenceIds": [
+      "ref-fleischner-2017"
+    ],
+    "quiz": {
+      "questionFa": "ساده‌ترین اقدام برای افتراق ندول کاذب نوک پستان از ندول واقعی ریوی چیست؟",
+      "options": [
+        "تکرار گرافی PA با مارکر رادیواپک روی نوک پستان",
+        "شروع فوری شیمی‌درمانی",
+        "لاواژ برونکوآلوئولار فوری",
+        "گذاشتن لولهٔ سینه‌ای"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "قرار دادن مارکر سربی روی نوک پستان در یک نمای PA ساده فوراً ثابت می‌کند کدورت خارج ریوی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Mamillenschatten im Thoraxbild 68W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mamillenschatten_im_Thoraxbild_68W_-_CR_pa_-_001.jpg",
+      "dimensions": "1091x1094"
+    }
+  },
+  {
+    "id": "cxr-variant-pectus-excavatum",
+    "titleFa": "سینهٔ قیفی (پکتوس اکسکاواتوم) — شبیه‌ساز کاردیومگالی و پنومونی RML",
+    "titleEn": "Pectus Excavatum Chest Radiograph",
+    "category": "normal",
+    "projection": "PA",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "محو حاشیهٔ راست قلب بدون پنومونی",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_variant_pectus_excavatum.jpg",
+    "patientMeta": {
+      "age": "جوان",
+      "sex": "بزرگسال"
+    },
+    "clinicalHistoryFa": "بیمار بدون تب و بدون علائم عفونی جهت چکاپ مراجعه کرده؛ حاشیهٔ راست قلب محو شده و قلب به چپ رانده شده است.",
+    "findingsFa": "دنده‌های قدامی شیب تند رو به پایین (شکل V) دارند، قلب به سمت چپ جابه‌جا شده و سایهٔ بافت نرم جناغ فرورفته باعث کدورت کاذب کنار حاشیهٔ راست قلب می‌شود (شبیه پنومونی لوب میانی راست).",
+    "interpretationFa": "نمای لترال به‌راحتی فرورفتگی جناغ را نشان می‌دهد و از تشخیص اشتباه پنومونی RML یا کاردیومگالی جلوگیری می‌کند.",
+    "annotations": [
+      {
+        "x": 45,
+        "y": 62,
+        "type": "anatomy",
+        "label": "محو شدن کاذب حاشیهٔ راست قلب"
+      },
+      {
+        "x": 64,
+        "y": 64,
+        "type": "anatomy",
+        "label": "جابه‌جایی قلب به چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "پکتوس اکسکاواتوم در نمای PA به‌طور کلاسیک کدام پاتولوژی را تقلید می‌کند؟",
+      "options": [
+        "پنومونی لوب میانی راست (محو حاشیهٔ راست قلب) و کاردیومگالی",
+        "پنوموتوراکس قله‌ای",
+        "سل ارزنی",
+        "هیدروپنوموتوراکس"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "فرورفتگی جناغ قلب را به چپ هل می‌دهد و حاشیهٔ راست قلب را محو می‌کند و دقیقاً نشانهٔ سیلوئت لوب میانی راست را تقلید می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Trichterbrust im Roentgenbild des Thorax pa.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trichterbrust_im_Roentgenbild_des_Thorax_pa.jpg",
+      "dimensions": "942x1100"
+    }
+  },
+  {
+    "id": "cxr-cervical-ribs",
+    "titleFa": "دنده‌های گردنی دوطرفه (واریانت آناتومیک C7)",
+    "titleEn": "Bilateral Cervical Ribs (C7 Variant)",
+    "category": "normal",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "دندهٔ اضافی از مهرهٔ C7",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_cervical_ribs.jpg",
+    "patientMeta": {
+      "age": "۳۹ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "بیمار ۳۹ ساله با گزگز و درد اندام فوقانی هنگام بالا بردن دست (شک به سندرم خروجی قفسهٔ سینه).",
+    "findingsFa": "دو دندهٔ فرعی واضح از زوائد عرضی مهرهٔ هفتم گردنی (C7) در هر دو سمت به سمت پایین و خارج امتداد یافته‌اند.",
+    "interpretationFa": "دندهٔ گردنی در حدود ۰٫۵ تا ۱٪ جمعیت وجود دارد و اگرچه اغلب بی‌علامت است، می‌تواند عامل سندرم خروجی قفسهٔ سینه (TOS) باشد.",
+    "annotations": [
+      {
+        "x": 38,
+        "y": 46,
+        "type": "anatomy",
+        "label": "دندهٔ گردنی راست (C7)"
+      },
+      {
+        "x": 62,
+        "y": 46,
+        "type": "anatomy",
+        "label": "دندهٔ گردنی چپ (C7)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-cancer"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "این واریانت آناتومیک استخوانی در مدخل قفسهٔ سینه چیست؟",
+      "options": [
+        "دنده‌های گردنی دوطرفه (Cervical Ribs)",
+        "تومور پانکوست دوطرفه",
+        "شکستگی ترقوه دوطرفه",
+        "پنومومدیاستن"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "زوائد دنده‌ای متصل به مهرهٔ C7 در بالای دندهٔ اول، نمای کلاسیک دندهٔ گردنی دوطرفه است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Halsrippen beidseits 39W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Halsrippen_beidseits_39W_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x658"
+    }
+  },
+  {
+    "id": "cxr-rul-pneumonia",
+    "titleFa": "پنومونی لوبار فوقانی راست با مرز تیز شیار افقی",
+    "titleEn": "Right Upper Lobe Lobar Pneumonia (Minor Fissure)",
+    "category": "infectious",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "مرز تیز Minor Fissure",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_rul_pneumonia.jpg",
+    "patientMeta": {
+      "age": "۸۹ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۸۹ ساله با تب، سرفهٔ خلط‌دار و لرز حاد؛ در سمع قلهٔ راست صدای برونکیال شنیده می‌شود.",
+    "findingsFa": "کانسلیدیشن متراکم و یکنواخت در کل لوب فوقانی راست که در پایین دقیقاً توسط شیار افقی (Minor Fissure) محدود شده و برونکوگرام هوایی در آن دیده می‌شود.",
+    "interpretationFa": "کانسلیدیشن محدود به شیار افقی نمای کتاب‌درسی پنومونی لوبار RUL (به‌ویژه پنوموکوک یا کلبسیلا) است؛ در سالمندان پیگیری پس از درمان برای رد انسداد بدخیم الزامی است.",
+    "annotations": [
+      {
+        "x": 31,
+        "y": 36,
+        "type": "pathology",
+        "label": "کانسلیدیشن لوب فوقانی راست (RUL)"
+      },
+      {
+        "x": 30,
+        "y": 49,
+        "type": "anatomy",
+        "label": "مرز تیز شیار افقی (Minor Fissure)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap",
+      "dis-lung-cancer"
+    ],
+    "referenceIds": [
+      "ref-idsa-ats-cap-2019",
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "کدام ساختار آناتومیک مرز تحتانی کاملاً تیز این کانسلیدیشن را در سمت راست تشکیل داده است؟",
+      "options": [
+        "شیار افقی ریه راست (Horizontal / Minor Fissure)",
+        "قوس دیافراگم راست",
+        "دندهٔ چهارم قدامی",
+        "دیوارهٔ پریکارد"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "لوب فوقانی راست در پایین به شیار افقی (Minor Fissure) ختم می‌شود و در کانسلیدیشن RUL مرزی خط‌کش‌مانند ایجاد می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Lobaerpneumonie rechter Oberlappen 89W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lobaerpneumonie_rechter_Oberlappen_89W_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x1073"
+    }
+  },
+  {
+    "id": "cxr-covid-pneumonia",
+    "titleFa": "پنومونی ویروسی کووید-۱۹ (کدورت‌های محیطی دوطرفه)",
+    "titleEn": "COVID-19 Viral Pneumonia (Bilateral Peripheral Opacities)",
+    "category": "infectious",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "کدورت‌های محیطی و تحتانی دوطرفه",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_covid_pneumonia.jpg",
+    "patientMeta": {
+      "age": "۵۶ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۵۶ ساله با ۷ روز تب، سرفهٔ خشک، میالژی و افت اشباع اکسیژن (SpO2 88%).",
+    "findingsFa": "کدورت‌های متعدد زمینه‌شیشه‌ای/پارانشیمی به‌صورت کلاسیک در مناطق محیطی (ساب‌پلورال) و نواحی میانی-تحتانی هر دو ریه، بدون افیوژن پلور یا کاردیومگالی واضح.",
+    "interpretationFa": "توزیع دوطرفه، محیطی و قاعده‌ای بدون افیوژن پلور، الگوی تیپیک پنومونی ویروسی شدید (COVID-19 / آنفلوآنزا) است و نیازمند پایش دقیق برای جلوگیری از پیشرفت به ARDS می‌باشد.",
+    "annotations": [
+      {
+        "x": 23,
+        "y": 62,
+        "type": "pathology",
+        "label": "کدورت محیطی تحتانی راست"
+      },
+      {
+        "x": 76,
+        "y": 60,
+        "type": "pathology",
+        "label": "کدورت محیطی تحتانی چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap",
+      "dis-ards",
+      "dis-resp-failure"
+    ],
+    "referenceIds": [
+      "ref-esicm-ards-2023",
+      "ref-idsa-ats-cap-2019"
+    ],
+    "quiz": {
+      "questionFa": "الگوی توزیع کدورت‌ها در این گرافی بیشتر مطرح‌کنندهٔ کدام پنومونی است؟",
+      "options": [
+        "پنومونی ویروسی (مانند کووید-۱۹) با درگیری محیطی و تحتانی دوطرفه",
+        "آبسهٔ ریوی منفرد",
+        "پنوموتوراکس خودبه‌خودی",
+        "افیوژن پلور یک‌طرفه"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "توزیع ساب‌پلورال دوطرفه در میدان‌های تحتانی بدون افیوژن پلور الگوی شاخص پنومونی ویروسی کووید-۱۹ است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Covid-19-Pneumonie 56M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Covid-19-Pneumonie_56M_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x957"
+    }
+  },
+  {
+    "id": "cxr-covid-icu-vent",
+    "titleFa": "پنومونی شدید کووید-۱۹ در ICU زیر تهویهٔ مکانیکی",
+    "titleEn": "Severe Ventilated COVID-19 Pneumonia / ARDS in ICU",
+    "category": "infectious",
+    "projection": "AP",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "انفیلتراسیون شدید دوطرفه + ETT",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_covid_icu_vent.jpg",
+    "patientMeta": {
+      "age": "۷۲ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۷۲ ساله انتوبه‌شده در ICU به دلیل نارسایی حاد هیپوکسمیک ناشی از پنومونی ویروسی شدید.",
+    "findingsFa": "کانسلیدیشن‌های گسترده و هم‌رسنده در هر دو میدان ریوی به‌ویژه سمت چپ و قواعد، همراه با لولهٔ تراشه و لیدهای مانیتورینگ ICU.",
+    "interpretationFa": "پیشرفت سریع انفیلتراسیون دوطرفه در بیمار انتوبه با نسبت PaO2/FiO2 پایین، نشانگر ورود به فاز ARDS و ضرورت تهویهٔ محافظت‌کننده از ریه (Low Tidal Volume 6 mL/kg) است.",
+    "annotations": [
+      {
+        "x": 72,
+        "y": 54,
+        "type": "pathology",
+        "label": "کانسلیدیشن شدید چپ (ARDS)"
+      },
+      {
+        "x": 28,
+        "y": 58,
+        "type": "pathology",
+        "label": "درگیری گسترده راست"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-ards",
+      "dis-resp-failure",
+      "dis-hap-vap"
+    ],
+    "referenceIds": [
+      "ref-esicm-ards-2023"
+    ],
+    "quiz": {
+      "questionFa": "استراتژی حیاتی تهویهٔ مکانیکی در این بیمار با الگوی ARDS کدام است؟",
+      "options": [
+        "حجم جاری پایین (6 mL/kg وزن ایده‌آل) + PEEP مناسب",
+        "حجم جاری بالا (12 mL/kg) بدون PEEP",
+        "قطع فوری اکسیژن",
+        "تجویز دیورتیک بدون بررسی همودینامیک"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "تهویهٔ محافظت‌کننده (Lung-protective ventilation) با Vt 4–6 mL/kg PBW و فشار پلاتو ≤30 cmH2O تنها استراتژی ثابت‌شده برای کاهش مرگ‌ومیر ARDS است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Schwere Covid-19-Pneumonie mit Beatmung 72W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schwere_Covid-19-Pneumonie_mit_Beatmung_72W_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x1080"
+    }
+  },
+  {
+    "id": "cxr-legionella-pneumonia",
+    "titleFa": "پنومونی لژیونلا (کانسلیدیشن پیشروندهٔ ریهٔ چپ)",
+    "titleEn": "Legionella Pneumonia (Left Lung Consolidation)",
+    "category": "infectious",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "کانسلیدیشن نامتقارن پیشرونده + هیپوناترمی",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_legionella_pneumonia.jpg",
+    "patientMeta": {
+      "age": "۵۷ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۵۷ ساله با تب ۴۰ درجه، اسهال آبکی، گیجی، هیپوناترمی (Na 127) و عدم پاسخ به آموکسی‌سیلین.",
+    "findingsFa": "کانسلیدیشن گسترده و ناهمگن در میدان میانی و فوقانی ریهٔ چپ که به‌سرعت طی ۴۸ ساعت وسعت یافته است.",
+    "interpretationFa": "پنومونی لژیونلا برخلاف تصور رایج اغلب به‌صورت کانسلیدیشن آلوئولار شدید و پیشرونده تظاهر می‌کند و نیازمند پوشش آنتی‌بیوتیکی داخل‌سلولی (ماکرولید یا فلوروکینولون تنفسی) است.",
+    "annotations": [
+      {
+        "x": 70,
+        "y": 42,
+        "type": "pathology",
+        "label": "کانسلیدیشن گسترده ریه چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap"
+    ],
+    "referenceIds": [
+      "ref-idsa-ats-cap-2019",
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "کدام ترکیب بالینی-رادیولوژیک با این گرافی به نفع پنومونی لژیونلا است؟",
+      "options": [
+        "کانسلیدیشن پیشرونده + تب بالا، اسهال، هیپوناترمی و عدم پاسخ به بتالاکتام تنها",
+        "کدورت متقارن نوک پستان",
+        "شیفت مدیاستن و دق هایپررزونانت",
+        "پرهوایی ساده بدون تب"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "لژیونلا به بتالاکتام‌ها مقاوم است و با علائم گوارشی/عصبی، هیپوناترمی و کانسلیدیشن سریعاً پیشرونده شناخته می‌شود."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Legionellenpneumonie vornehmlich links 57M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Legionellenpneumonie_vornehmlich_links_57M_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x1007"
+    }
+  },
+  {
+    "id": "cxr-mycoplasma-pneumonia",
+    "titleFa": "پنومونی آتیپیک مایکوپلاسما (الگوی بینابینی-رتیکولار)",
+    "titleEn": "Mycoplasma Atypical Pneumonia",
+    "category": "infectious",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "الگوی رتیکولوندولار/پری‌برونشیال",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_mycoplasma_pneumonia.jpg",
+    "patientMeta": {
+      "age": "۳۸ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۳۸ ساله با سرفهٔ خشک مداوم به مدت ۱۰ روز، گلودرد، سردرد و تب خفیف (Walking Pneumonia).",
+    "findingsFa": "افزایش نشانه‌های رتیکولار و پری‌برونشیال همراه با کدورت‌های تکه‌ای خفیف عمدتاً در ناحیهٔ میانی-تحتانی چپ؛ شدت گرافی اغلب بیشتر از یافته‌های خفیف سمع است.",
+    "interpretationFa": "عدم تناسب میان یافته‌های رادیولوژیک قابل‌توجه و حال عمومی نسبتاً خوب بیمار (Walking Pneumonia) نشانهٔ کلاسیک پنومونی مایکوپلاسما است.",
+    "annotations": [
+      {
+        "x": 70,
+        "y": 64,
+        "type": "pathology",
+        "label": "انفیلتراسیون بینابینی-تکه‌ای چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap"
+    ],
+    "referenceIds": [
+      "ref-idsa-ats-cap-2019"
+    ],
+    "quiz": {
+      "questionFa": "کدام آنتی‌بیوتیک در درمان پنومونی مایکوپلاسما کاملاً بی‌اثر است (چون دیوارهٔ سلولی ندارد)؟",
+      "options": [
+        "آموکسی‌سیلین / سفالوسپورین‌ها (بتالاکتام‌ها)",
+        "آزیترومایسین",
+        "داکسی‌سایکلین",
+        "لووفلوکساسین"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "مایکوپلاسما پنومونیه فاقد دیوارهٔ سلولی پپتیدوگلیکان است و بتالاکتام‌ها بر آن اثری ندارند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Mykoplasmenpneumonie links mehr als rechts 38W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mykoplasmenpneumonie_links_mehr_als_rechts_38W_-_CR_pa_-_001.jpg",
+      "dimensions": "1065x1100"
+    }
+  },
+  {
+    "id": "cxr-calcified-tb-granulomas",
+    "titleFa": "گرانولوم‌های کلسیفیه قلهٔ ریه (اثر سل قدیمی / کمپلکس رنکه)",
+    "titleEn": "Calcified Apical Tuberculous Granulomas",
+    "category": "infectious",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "ندول‌های کلسیفیه قله‌ای (سل قدیمی)",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_calcified_tb_granulomas.jpg",
+    "patientMeta": {
+      "age": "۹۰ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۹۰ ساله با سابقهٔ سل ریوی درمان‌شده در جوانی؛ بدون تب، سرفه یا کاهش وزن.",
+    "findingsFa": "چندین ندول بسیار متراکم (کلسیفیه) با حاشیهٔ کاملاً مشخص در قلهٔ ریهٔ راست همراه با ضخامت خفیف پلور قله‌ای، بدون حفره یا کدورت فعال جدید.",
+    "interpretationFa": "کلسیفیکاسیون متراکم نشانهٔ خوش‌خیمی و مزمن بودن (سل بهبودیافته) است، اما در صورت بروز علائم جدید یا نقص ایمنی مقایسه با گرافی‌های قبلی برای رد فعال‌شدن مجدد ضروری است.",
+    "annotations": [
+      {
+        "x": 36,
+        "y": 24,
+        "type": "pathology",
+        "label": "گرانولوم‌های کلسیفیه در قلهٔ راست"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-tb",
+      "dis-solitary-nodule"
+    ],
+    "referenceIds": [
+      "ref-who-tb-2024",
+      "ref-fleischner-2017"
+    ],
+    "quiz": {
+      "questionFa": "وجود کلسیفیکاسیون متراکم و یکنواخت درون ندول‌های قلهٔ ریه معمولاً نشانهٔ چیست؟",
+      "options": [
+        "گرانولوم خوش‌خیم قدیمی (مانند سل بهبودیافته)",
+        "پنومونی باکتریال حاد دیروز",
+        "آمبولی ریه حاد",
+        "ادم ریوی کاردیوژنیک"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کلسیفیکاسیون متراکم و خوش‌حد نشانهٔ کلاسیک گرانولوم‌های قدیمی التیام‌یافته (به‌ویژه سل یا هیستوپلاسموز) است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Verkalkte Granulome der Lungenspitze nach Tuberkulose 90M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Verkalkte_Granulome_der_Lungenspitze_nach_Tuberkulose_90M_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x1097"
+    }
+  },
+  {
+    "id": "cxr-deep-sulcus-ptx",
+    "titleFa": "نشانهٔ شیار عمیق (Deep Sulcus Sign) در پنوموتوراکس خوابیده",
+    "titleEn": "Supine Pneumothorax — Deep Sulcus Sign",
+    "category": "pleural",
+    "projection": "AP",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "🚨 Deep Sulcus Sign (اورژانس ICU)",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_deep_sulcus_ptx.jpg",
+    "patientMeta": {
+      "age": "۸۲ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۸۲ ساله خوابیده در ICU پس از تعبیهٔ کاتتر مرکزی دچار افت ناگهانی SpO2 و تاکی‌کاردی شده است.",
+    "findingsFa": "در وضعیت طاق‌باز هوا به بخش قدامی-تحتانی پلور جمع می‌شود و زاویهٔ کوستوفرنیک چپ را به‌صورت غیرطبیعی عمیق، تیز و بسیار شفاف (تیره) نشان می‌دهد (Deep Sulcus Sign).",
+    "interpretationFa": "در گرافی AP خوابیده، ۵۰٪ پنوموتوراکس‌ها خط پلور قله‌ای کلاسیک ندارند؛ ندیدن Deep Sulcus Sign در بیمار زیر ونتیلاتور به‌سرعت به پنوموتوراکس فشاری مرگبار تبدیل می‌شود!",
+    "annotations": [
+      {
+        "x": 79,
+        "y": 76,
+        "type": "pathology",
+        "label": "زاویهٔ کوستوفرنیک فوق‌العاده عمیق و شفاف (Deep Sulcus)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax",
+      "dis-resp-failure"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023",
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "مهم‌ترین نشانهٔ پنوموتوراکس در بیمار خوابیده (Supine AP) در این گرافی کدام است؟",
+      "options": [
+        "نشانهٔ شیار عمیق و پرشفاف کوستوفرنیک (Deep Sulcus Sign)",
+        "علامت مینیسکوس",
+        "خطوط کرلی B",
+        "بزرگی دوطرفه ناف ریه"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در وضعیت طاق‌باز، هوا در بخش غیروابستهٔ قدامی-تحتانی جمع می‌شود و شیار کوستوفرنیک را به‌شکل تیره و عمیق درمی‌آورد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Deep sulcus sign bei Pneumothorax im Liegen 82M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deep_sulcus_sign_bei_Pneumothorax_im_Liegen_82M_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x1079"
+    }
+  },
+  {
+    "id": "cxr-tension-ptx-severe",
+    "titleFa": "پنوموتوراکس کامل راست با کلاپس ریه",
+    "titleEn": "Large Right Pneumothorax with Lung Collapse",
+    "category": "pleural",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "🚨 خط پلور احشایی + کلاپس کامل راست",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_tension_ptx_severe.jpg",
+    "patientMeta": {
+      "age": "جوان",
+      "sex": "بزرگسال"
+    },
+    "clinicalHistoryFa": "شروع ناگهانی درد شدید پلورتیک راست و تنگی نفس حاد در استراحت؛ دق راست هایپررزونانت و صدای تنفسی محو است.",
+    "findingsFa": "خط بسیار واضح پلور احشایی در سمت راست با جمع‌شدن ریهٔ راست به سمت ناف و فضای کاملاً بی‌رگ و تیرهٔ هوا در تمام نیمهٔ خارجی همی‌توراکس راست.",
+    "interpretationFa": "پنوموتوراکس وسیع با علائم تنفسی نیازمند تخلیهٔ فوری هوا (آسپیراسیون یا لولهٔ سینه‌ای) و در صورت ناپایداری همودینامیک دکمپرشن اورژانسی با سوزن است.",
+    "annotations": [
+      {
+        "x": 36,
+        "y": 44,
+        "type": "pathology",
+        "label": "خط تیز پلور احشایی ریهٔ کلاپس‌شده"
+      },
+      {
+        "x": 22,
+        "y": 42,
+        "type": "pathology",
+        "label": "فضای هوایی بدون عروق ریوی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "quiz": {
+      "questionFa": "یافتهٔ قطعی و تشخیصی پنوموتوراکس در این گرافی کدام است؟",
+      "options": [
+        "خط پلور احشایی با نبود کامل نشانه‌های عروقی ریه در خارج آن",
+        "محو شدن زاویه کوستوفرنیک با علامت مینیسکوس",
+        "کدورت برونکوگرام هوایی",
+        "خطوط ریل تراموا"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "دیدن لبهٔ سفید نازک پلور احشایی همراه با نبود عروق ریوی در محیط آن، استاندارد طلایی تشخیص پنوموتوراکس روی CXR است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:10-01-Pneumothorax.png",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:10-01-Pneumothorax.png",
+      "dimensions": "962x1086"
+    }
+  },
+  {
+    "id": "cxr-pneumothorax-trauma",
+    "titleFa": "پنوموتوراکس تروماتیک راست پس از سقوط",
+    "titleEn": "Traumatic Right Pneumothorax After Fall",
+    "category": "pleural",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "پنوموتوراکس قله‌ای-جانبی تروماتیک",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_pneumothorax_trauma.jpg",
+    "patientMeta": {
+      "age": "۳۰ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۳۰ ساله پس از سقوط و ضربهٔ بلانت به قفسهٔ سینه راست با درد هنگام دم عمیق به اورژانس مراجعه کرده است.",
+    "findingsFa": "حاشیهٔ ظریف پلور احشایی در ناحیهٔ فوقانی-خارجی ریهٔ راست دیده می‌شود و فضای هوایی باریک بدون عروق بین قلهٔ ریه و دنده‌ها قرار گرفته است.",
+    "interpretationFa": "پنوموتوراکس‌های کوچک تروماتیک را باید با زوم و ذره‌بین در قلهٔ ریه جستجو کرد؛ در تروما خطر تبدیل شدن به پنوموتوراکس فشاری (به‌ویژه هنگام بیهوشی یا پرواز) بالاست.",
+    "annotations": [
+      {
+        "x": 25,
+        "y": 24,
+        "type": "pathology",
+        "label": "خط پلور قله‌ای راست (با ذره‌بین ۳× بررسی کنید)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "quiz": {
+      "questionFa": "بهترین محل برای جستجوی پنوموتوراکس کوچک در گرافی ایستاده (PA) کجاست؟",
+      "options": [
+        "قلهٔ ریه‌ها و بخش فوقانی-جانبی قفسهٔ سینه",
+        "زیر قوس دیافراگم",
+        "پشت قلب",
+        "مرکز ناف ریه"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در وضعیت ایستاده هوا به بالاترین نقطهٔ فضای پلور (قلهٔ ریه) صعود می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Pneumothorax rechts nach Sturz 30W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pneumothorax_rechts_nach_Sturz_30W_-_CR_pa_-_001.jpg",
+      "dimensions": "888x1100"
+    }
+  },
+  {
+    "id": "cxr-hemothorax-left",
+    "titleFa": "هموتوراکس وسیع چپ (سفیدشدگی کامل همی‌توراکس)",
+    "titleEn": "Massive Left Hemothorax (Complete White-Out)",
+    "category": "pleural",
+    "projection": "AP",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "🚨 همی‌توراکس سفید + شوک هموراژیک",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_hemothorax_left.jpg",
+    "patientMeta": {
+      "age": "۵۹ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۵۹ ساله پس از ترومای قفسهٔ سینه با افت فشار خون، تاکی‌کاردی، ماتیتهٔ سنگی و محو صداهای تنفسی در سمت چپ.",
+    "findingsFa": "سفیدشدگی همگن تقریباً کامل همی‌توراکس چپ با محو شدن دیافراگم و حاشیهٔ چپ قلب و تمایل به شیفت مدیاستن به راست.",
+    "interpretationFa": "در بیمار ترومایی با سفیدشدگی همی‌توراکس و ناپایداری همودینامیک، تعبیهٔ فوری لولهٔ سینه‌ای قطور (28–32 Fr) و احیای همزمان با خون حیاتی است (تخلیه >1500 mL اولیه اندیکاسیون توراکوتومی اورژانسی است).",
+    "annotations": [
+      {
+        "x": 72,
+        "y": 58,
+        "type": "pathology",
+        "label": "تجمع وسیع خون در فضای پلور چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion",
+      "dis-resp-failure"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "quiz": {
+      "questionFa": "در ترومای قفسهٔ سینه با این گرافی و تخلیهٔ فوری ۱۶۰۰ میلی‌لیتر خون از چست‌تیوب، اقدام حیاتی بعدی چیست؟",
+      "options": [
+        "توراکوتومی اورژانسی (جراحی برای کنترل خونریزی فعال)",
+        "مشاهده و تکرار گرافی ۲۴ ساعت بعد",
+        "شروع دیورتیک وریدی",
+        "خارج کردن فوری چست‌تیوب"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "تخلیهٔ فوری ≥1500 mL خون یا ادامهٔ خونریزی >200 mL/h به مدت ۲–۴ ساعت اندیکاسیون کلاسیک توراکوتومی اورژانسی در هموتوراکس ماسیف است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Haematothorax links 59M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haematothorax_links_59M_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x817"
+    }
+  },
+  {
+    "id": "cxr-supine-effusion-right",
+    "titleFa": "افیوژن پلور راست در وضعیت خوابیده (Veiling Opacity)",
+    "titleEn": "Supine Right Pleural Effusion (Veiling Opacity)",
+    "category": "pleural",
+    "projection": "AP",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "کدورت حجابی همگن در گرافی خوابیده",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_supine_effusion_right.jpg",
+    "patientMeta": {
+      "age": "۸۰ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۸۰ ساله بستری با دیسپنه؛ گرافی پرتابل خوابیده (AP) بدون علامت مینیسکوس کلاسیک گرفته شده است.",
+    "findingsFa": "افزایش یکنواخت دانسیته (کدورت حجابی یا Veiling Opacity) در کل همی‌توراکس راست که عروق ریوی همچنان از پشت آن دیده می‌شوند، همراه با کلاهک مایع قله‌ای (Apical Cap).",
+    "interpretationFa": "در وضعیت طاق‌باز مایع پلور در پشت کل ریه پخش می‌شود و علامت مینیسکوس کلاسیک ندارد؛ تشخیص این الگو از پنومونی گسترده در ICU بسیار حیاتی است.",
+    "annotations": [
+      {
+        "x": 28,
+        "y": 54,
+        "type": "pathology",
+        "label": "کدورت حجابی یکنواخت راست با دید عروق از پشت آن"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "quiz": {
+      "questionFa": "افیوژن پلور در بیمار خوابیده (Supine AP) معمولاً چگونه تظاهر می‌کند؟",
+      "options": [
+        "کدورت یکنواخت حجابی (Veiling Opacity) روی کل همی‌توراکس بدون مینیسکوس کلاسیک",
+        "حفرهٔ ضخیم‌جدار قله‌ای",
+        "خط پلور بدون عروق",
+        "هوای آزاد زیر دیافراگم"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در حالت طاق‌باز، مایع بر اثر جاذبه در فضای خلفی پلور پخش می‌شود و کدورت مه‌آلود یکنواخت با عبور عروق ریوی ایجاد می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Einseitiger Pleuraerguss in der Bettlunge 80M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Einseitiger_Pleuraerguss_in_der_Bettlunge_80M_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x786"
+    }
+  },
+  {
+    "id": "cxr-calcified-fibrothorax",
+    "titleFa": "کلسیفیکاسیون پلور و فیبروتوراکس یک‌طرفه (پس از سل / هموتوراکس)",
+    "titleEn": "Unilateral Calcified Fibrothorax (Pleurosis Calcarea)",
+    "category": "pleural",
+    "projection": "AP",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "پوستهٔ کلسیفیه پلور + کاهش حجم",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_calcified_fibrothorax.jpg",
+    "patientMeta": {
+      "age": "۸۹ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۸۹ ساله با سابقهٔ سل پلورال قدیمی در دهه‌های قبل و تنگی نفس مزمن محدودکننده.",
+    "findingsFa": "پوستهٔ ضخیم و کاملاً کلسیفیه (شبیه زره استخوانی) در اطراف پلور احشایی و جداری ریهٔ چپ همراه با کاهش حجم همی‌توراکس و وجود پیس‌میکر.",
+    "interpretationFa": "فیبروتوراکس کلسیفیه یک‌طرفه عارضهٔ کلاسیک امپیم سلی، هموتوراکس تخلیه‌نشده یا پلوریت قدیمی است و الگوی محدودکنندهٔ شدید در PFT ایجاد می‌کند.",
+    "annotations": [
+      {
+        "x": 68,
+        "y": 52,
+        "type": "pathology",
+        "label": "پوستهٔ ضخیم و کلسیفیه پلور چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-tb",
+      "dis-empyema",
+      "dis-asbestosis"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023",
+      "ref-who-tb-2024"
+    ],
+    "quiz": {
+      "questionFa": "کدام سه علت اصلی ایجادکنندهٔ کلسیفیکاسیون یک‌طرفهٔ پلور (فیبروتوراکس) هستند؟",
+      "options": [
+        "سل پلورال قدیمی، امپیم باکتریال و هموتوراکس قدیمی",
+        "آسم، COPD و برونشیت حاد",
+        "آمبولی ریه، ARDS و پنوموتوراکس",
+        "مایکوپلاسما، لژیونلا و کووید-۱۹"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کلسیفیکاسیون یک‌طرفهٔ پلور به دنبال امپیم (به‌ویژه سلی) یا هموتوراکس است، درحالی‌که کلسیفیکاسیون دوطرفهٔ دیافراگماتیک بیشتر نشانهٔ مواجهه با آزبست است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Einseitige Pleurosis calcarea nach Tuberkulose 89W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Einseitige_Pleurosis_calcarea_nach_Tuberkulose_89W_-_CR_ap_-_001.jpg",
+      "dimensions": "1088x1100"
+    }
+  },
+  {
+    "id": "cxr-lul-atelectasis",
+    "titleFa": "آتلکتازی لوب فوقانی چپ (نشانهٔ هلال هوایی Luftsichel)",
+    "titleEn": "Left Upper Lobe Atelectasis (Luftsichel Sign)",
+    "category": "parenchymal",
+    "projection": "PA",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "نشانهٔ Luftsichel + کدورت حجابی چپ",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_lul_atelectasis.jpg",
+    "patientMeta": {
+      "age": "بزرگسال سیگاری",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "بیمار سیگاری با سرفهٔ مزمن و کاهش وزن؛ کاهش صداهای تنفسی در ناحیهٔ فوقانی چپ.",
+    "findingsFa": "کدورت حجابی در همی‌توراکس چپ با بیشترین تراکم در بالا و محو شدن حاشیهٔ فوقانی قلب، بالا رفتن ناف چپ و هلال باریک هوا بین قوس آئورت و لوب کلاپس‌شده (Luftsichel Sign — ناشی از پرهوایی جبرانی سگمان فوقانی LLL).",
+    "interpretationFa": "آتلکتازی لوبار در فرد سیگاری تا اثبات خلاف آن ناشی از کارسینوم برونکوژنیک انسدادی است و اندیکاسیون قطعی CT و برونکوسکوپی دارد.",
+    "annotations": [
+      {
+        "x": 66,
+        "y": 36,
+        "type": "pathology",
+        "label": "کدورت لوب فوقانی چپ کلاپس‌شده"
+      },
+      {
+        "x": 57,
+        "y": 29,
+        "type": "pathology",
+        "label": "هلال هوایی کنار آئورت (Luftsichel)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-atelectasis",
+      "dis-lung-cancer"
+    ],
+    "referenceIds": [
+      "ref-murray-nadel",
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "هلال هوایی شفاف اطراف قوس آئورت (Luftsichel Sign) مشخصهٔ کدام کلاپس لوبار است؟",
+      "options": [
+        "آتلکتازی لوب فوقانی چپ (LUL Collapse)",
+        "آتلکتازی لوب میانی راست",
+        "افیوژن پلور راست",
+        "پنوموتوراکس چپ"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در کلاپس قدامی LUL، سگمان فوقانی لوب تحتانی چپ به بالا کشیده می‌شود و یک هلال هوایی (Luftsichel) دور قوس آئورت ایجاد می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Oberlappenatelektase links pa.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oberlappenatelektase_links_pa.jpg",
+      "dimensions": "1040x960"
+    }
+  },
+  {
+    "id": "cxr-bilateral-ll-atelectasis",
+    "titleFa": "آتلکتازی لوب‌های تحتانی دوطرفه (نشانه‌های مثلثی خلف قلب)",
+    "titleEn": "Bilateral Lower Lobe Atelectasis",
+    "category": "parenchymal",
+    "projection": "PA",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "کدورت مثلثی پاراسپاینال دوطرفه",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_bilateral_ll_atelectasis.jpg",
+    "patientMeta": {
+      "age": "بزرگسال پس از جراحی",
+      "sex": "بزرگسال"
+    },
+    "clinicalHistoryFa": "بیمار پس از جراحی شکم با تب خفیف، تنفس سطحی و کاهش صدای تنفسی در هر دو قاعدهٔ خلفی.",
+    "findingsFa": "دو کدورت مثلثی متراکم در نواحی تحتانی-داخلی (پشت قلب در چپ و کنار ستون فقرات در راست) همراه با نزول ناف‌های ریوی و بالا رفتن دیافراگم.",
+    "interpretationFa": "کلاپس لوب تحتانی چپ در پشت سایهٔ قلب مخفی می‌شود (نشانهٔ Sail behind the heart)؛ استفاده از پنجرهٔ Mediastinum و ذره‌بین PACS آن را به‌وضوح آشکار می‌کند.",
+    "annotations": [
+      {
+        "x": 40,
+        "y": 72,
+        "type": "pathology",
+        "label": "کلاپس مثلثی لوب تحتانی راست"
+      },
+      {
+        "x": 58,
+        "y": 72,
+        "type": "pathology",
+        "label": "کلاپس خلف قلبی لوب تحتانی چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-atelectasis"
+    ],
+    "referenceIds": [
+      "ref-murray-nadel"
+    ],
+    "quiz": {
+      "questionFa": "کلاپس لوب تحتانی چپ در نمای PA اغلب کجا مخفی می‌شود؟",
+      "options": [
+        "به‌صورت یک مثلث متراکم پشت سایهٔ قلب (Retrocardiac)",
+        "در قلهٔ ریهٔ راست",
+        "در فضای ساب‌دیافراگماتیک",
+        "در گردن"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "لوب تحتانی چپ به سمت عقب و داخل جمع می‌شود و یک سایهٔ مثلثی پشت قلب (Sail Sign) می‌سازد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Thorax mit bds Unterlappen-Atelektase.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thorax_mit_bds_Unterlappen-Atelektase.jpg",
+      "dimensions": "1081x1100"
+    }
+  },
+  {
+    "id": "cxr-edema-cardiogenic-shock",
+    "titleFa": "ادم ریوی حاد شدید در شوک کاردیوژنیک",
+    "titleEn": "Severe Acute Pulmonary Edema in Cardiogenic Shock",
+    "category": "parenchymal",
+    "projection": "AP",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "🚨 ادم آلوئولار حاد + کاردیومگالی + CVC",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_edema_cardiogenic_shock.jpg",
+    "patientMeta": {
+      "age": "۷۲ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۷۲ ساله پس از انفارکتوس وسیع میوکارد با تنگی نفس شدید، ارتوپنه، خلط کف‌آلود صورتی و کراکل منتشر دوطرفه.",
+    "findingsFa": "کاردیومگالی واضح، کدورت‌های وسیع آلوئولار پری‌هیلار و تحتانی دوطرفه، محو شدن عروق ناف ریه و وجود خطوط مانیتورینگ و کاتتر ICU.",
+    "interpretationFa": "تلفیق کاردیومگالی + کدورت‌های مرکزی دوطرفه + علائم احتقان، ادم ریوی کاردیوژنیک اورژانسی است (اکسیژن/NIV، دیورتیک لوپ و مدیریت همودینامیک شوک).",
+    "annotations": [
+      {
+        "x": 34,
+        "y": 54,
+        "type": "pathology",
+        "label": "ادم آلوئولار پری‌هیلار راست"
+      },
+      {
+        "x": 68,
+        "y": 54,
+        "type": "pathology",
+        "label": "ادم آلوئولار شدید چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pulmonary-edema",
+      "dis-resp-failure"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "درمان حمایتی تنفسی غیرتهاجمی بسیار مؤثر در ادم ریوی حاد کاردیوژنیک چیست؟",
+      "options": [
+        "تهویهٔ فشار مثبت غیرتهاجمی (CPAP / BiPAP) برای کاهش پیش‌بار و باز کردن آلوئول‌ها",
+        "تزریق سریع ۳ لیتر نرمال‌سالین",
+        "تجویز بتابلاکر وریدی با دوز بالا در شوک",
+        "انتظار ۲۴ ساعته بدون اکسیژن"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "CPAP/BiPAP فشار داخل قفسهٔ سینه را بالا می‌برد، پیش‌بار و پس‌بار بطن چپ را می‌کاهد و نیاز به انتوباسیون را شدیداً کاهش می‌دهد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Lungenoedem bei kardiogenem Schock 72W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lungenoedem_bei_kardiogenem_Schock_72W_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x1089"
+    }
+  },
+  {
+    "id": "cxr-aspiration-lll-atelectasis",
+    "titleFa": "آتلکتازی لوب تحتانی چپ به دنبال آسپیراسیون در کودک",
+    "titleEn": "Left Lower Lobe Atelectasis After Aspiration",
+    "category": "parenchymal",
+    "projection": "AP",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "کدورت خلف قلبی + جابه‌جایی قلب به چپ",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_aspiration_lll_atelectasis.jpg",
+    "patientMeta": {
+      "age": "۱۲ ماهه",
+      "sex": "پسر"
+    },
+    "clinicalHistoryFa": "کودک ۱۲ ماهه با سابقهٔ سرفهٔ ناگهانی و خفگی حین خوردن غذا؛ اکنون دیسترس تنفسی و کاهش صدای قاعدهٔ چپ دارد.",
+    "findingsFa": "کدورت مثلثی واضح در پشت قلب (لوب تحتانی چپ)، محو شدن نیمهٔ داخلی همی‌دیافراگم چپ و کشیده شدن جزئی مدیاستن به سمت چپ.",
+    "interpretationFa": "آسپیراسیون جسم خارجی یا ترشحات می‌تواند باعث انسداد کامل برونش و کلاپس لوبار شود و در کودکان نیازمند ارزیابی فوری برونکوسکوپی ریجید است.",
+    "annotations": [
+      {
+        "x": 64,
+        "y": 68,
+        "type": "pathology",
+        "label": "آتلکتازی مثلثی لوب تحتانی چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-atelectasis"
+    ],
+    "referenceIds": [
+      "ref-murray-nadel"
+    ],
+    "quiz": {
+      "questionFa": "در کودک با سابقهٔ خفگی حاد و آتلکتازی لوبار یک‌طرفه، اقدام تشخیصی-درمانی طلایی چیست؟",
+      "options": [
+        "برونکوسکوپی ریجید جهت خارج‌سازی جسم خارجی",
+        "آنتی‌بیوتیک خوراکی و ترخیص",
+        "اسپیرومتری ساده",
+        "فقط تجویز شربت سرفه"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "انسداد کامل برونش به دنبال آسپیراسیون جسم خارجی اندیکاسیون برونکوسکوپی اورژانسی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Unterlappenatelektase links nach Aspiration 12monateM - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unterlappenatelektase_links_nach_Aspiration_12monateM_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x841"
+    }
+  },
+  {
+    "id": "cxr-sarcoidosis-bhl",
+    "titleFa": "سارکوئیدوز ریوی مرحله ۱–۲ (لنفادنوپاتی نافی دوطرفه کلاسیک)",
+    "titleEn": "Pulmonary Sarcoidosis — Bilateral Hilar Lymphadenopathy",
+    "category": "interstitial",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "لنفادنوپاتی متقارن ناف ریه (Garland Triad)",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_sarcoidosis_bhl.jpg",
+    "patientMeta": {
+      "age": "۳۴ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۳۴ ساله غیرسیگاری با سرفهٔ خشک، اریتم ندوزوم روی ساق پا و درد مچ پا (سندرم لوفگرن).",
+    "findingsFa": "بزرگی واضح، لبوله و متقارن هر دو ناف ریوی به همراه برجستگی ناحیهٔ پارا-تراکئال راست (سه‌گانهٔ گارلند / 1-2-3 Sign) و درگیری خفیف رتیکولوندولار پارانشیم.",
+    "interpretationFa": "لنفادنوپاتی نافی دوطرفه و متقارن در جوان غیرسیگاری با اریتم ندوزوم تقریباً پاتوگنومونیک سارکوئیدوز (سندرم لوفگرن) است و پیش‌آگهی عالی دارد.",
+    "annotations": [
+      {
+        "x": 41,
+        "y": 46,
+        "type": "pathology",
+        "label": "لنفادنوپاتی ناف راست"
+      },
+      {
+        "x": 60,
+        "y": 46,
+        "type": "pathology",
+        "label": "لنفادنوپاتی ناف چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-sarcoidosis"
+    ],
+    "referenceIds": [
+      "ref-ats-sarcoid-2020"
+    ],
+    "quiz": {
+      "questionFa": "سه‌گانهٔ گارلند (1-2-3 Sign) در سارکوئیدوز شامل بزرگی کدام غدد لنفاوی است؟",
+      "options": [
+        "پاراوترکئال راست + ناف راست + ناف چپ",
+        "زیربغلی دوطرفه + کشاله ران",
+        "فقط ناف چپ یک‌طرفه",
+        "غدد خلف صفاقی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "بزرگی هم‌زمان پارا-تراکئال راست و هر دو ناف ریوی (1-2-3 Sign) کلاسیک‌ترین نمای رادیولوژیک سارکوئیدوز است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Sarkoidose der Lunge 34M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sarkoidose_der_Lunge_34M_-_CR_pa_-_001.jpg",
+      "dimensions": "1042x1100"
+    }
+  },
+  {
+    "id": "cxr-kerley-ab-detail",
+    "titleFa": "نمای بزرگ‌نمایی‌شدهٔ خطوط کرلی A و B در احتقان بینابینی",
+    "titleEn": "Magnified Kerley A and B Lines in Interstitial Congestion",
+    "category": "interstitial",
+    "projection": "AP",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "خطوط افقی محیطی Kerley B + مایل Kerley A",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_kerley_ab_detail.jpg",
+    "patientMeta": {
+      "age": "۸۶ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۸۶ ساله با فیبریلاسیون دهلیزی و نارسایی قلبی احتقانی در مرحلهٔ ادم بینابینی.",
+    "findingsFa": "خطوط کوتاه افقی ۱–۲ سانتی‌متری عمود بر سطح پلور در محیط تحتانی (خطوط کرلی B) همراه با خطوط بلندتر مایل ممتد از ناف به محیط (خطوط کرلی A) ناشی از ادم سپتوم‌های بین‌لوبولی.",
+    "interpretationFa": "تشخیص زودهنگام ادم بینابینی (خطوط کرلی A/B) پیش از پر شدن آلوئول‌ها امکان شروع به‌موقع دیورتیک و پیشگیری از بحران ادم ریوی حاد را می‌دهد.",
+    "annotations": [
+      {
+        "x": 76,
+        "y": 72,
+        "type": "pathology",
+        "label": "خطوط افقی محیطی Kerley B"
+      },
+      {
+        "x": 54,
+        "y": 46,
+        "type": "pathology",
+        "label": "خطوط مایل میانی Kerley A"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pulmonary-edema",
+      "dis-ipf"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "علت پاتوفیزیولوژیک خطوط کرلی B در گرافی قفسهٔ سینه چیست؟",
+      "options": [
+        "ضخیم‌شدن سپتوم‌های بین‌لوبولی محیطی در اثر ادم یا نفوذ لنفاتیک",
+        "شکستگی دنده‌ها",
+        "هوا در فضای پلور",
+        "برونشکتازی کیستیک"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "خطوط کرلی B نشان‌دهندهٔ ضخیم‌شدن سپتوم‌های بین‌لوبولی زیرپلورال (بیشتر در ادم ریوی یا کارسینوماتوز لنفانژیتیک) هستند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Kerley-A und -B - Linien bei Stauung bei Vorhofflimmern 86M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kerley-A_und_-B_-_Linien_bei_Stauung_bei_Vorhofflimmern_86M_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x1099"
+    }
+  },
+  {
+    "id": "cxr-aat-emphysema",
+    "titleFa": "آمفیزم شدید قواعد ریه در کمبود آلفا-۱ آنتی‌تریپسین (AATD)",
+    "titleEn": "Severe Basilar-Predominant Emphysema in Alpha-1 Antitrypsin Deficiency",
+    "category": "obstructive",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "پرهوایی شدید قواعد + قلب باریک قطره‌ای",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_aat_emphysema.jpg",
+    "patientMeta": {
+      "age": "۶۲ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۶۲ ساله با تنگی نفس پیشرونده زودرس و کاهش شدید FEV1/FVC و DLCO؛ سطح سرمی آلفا-۱ آنتی‌تریپسین بسیار پایین است.",
+    "findingsFa": "پرهوایی بسیار شدید هر دو ریه به‌ویژه در مناطق تحتانی (Panacinar Basilar Emphysema)، مسطح و حتی معکوس شدن کامل هر دو قوس دیافراگم، افزایش شدید فضای بین‌دنده‌ای و قلب باریک عمودی.",
+    "interpretationFa": "برخلاف آمفیزم ناشی از سیگار که بیشتر قله‌ها را درگیر می‌کند (Centrilobular)، آمفیزم ناشی از کمبود آلفا-۱ آنتی‌تریپسین کلاسیکاً قواعد ریه را تخریب می‌کند.",
+    "annotations": [
+      {
+        "x": 30,
+        "y": 76,
+        "type": "pathology",
+        "label": "تخریب و پرشفافیت شدید قاعدهٔ راست"
+      },
+      {
+        "x": 50,
+        "y": 82,
+        "type": "pathology",
+        "label": "مسطح‌شدن شدید دیافراگم"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-aatd",
+      "dis-copd"
+    ],
+    "referenceIds": [
+      "ref-gold-2025",
+      "ref-murray-nadel"
+    ],
+    "quiz": {
+      "questionFa": "توزیع آناتومیک کلاسیک آمفیزم در کمبود آلفا-۱ آنتی‌تریپسین (AATD) در مقایسه با آمفیزم سیگاری چیست؟",
+      "options": [
+        "پان-آسینار با غلبهٔ قواعد ریه (Basilar-predominant)",
+        "فقط محدود به قلهٔ راست",
+        "فقط درگیری بینابینی بدون پرهوایی",
+        "کانسلیدیشن لوبار"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "AATD آمفیزم پان-آسینار در لوب‌های تحتانی ایجاد می‌کند، درحالی‌که سیگار معمولاً آمفیزم سانترولوبولار لوب‌های فوقانی می‌دهد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Ausgepraegtes Lungenemphysem bei Alpha-1-Antitrypsin-Mangel 62M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ausgepraegtes_Lungenemphysem_bei_Alpha-1-Antitrypsin-Mangel_62M_-_CR_pa_-_001.jpg",
+      "dimensions": "891x1092"
+    }
+  },
+  {
+    "id": "cxr-foreign-body-valve",
+    "titleFa": "آسپیراسیون جسم خارجی با مکانیسم دریچه یک‌طرفه (پرهوایی راست)",
+    "titleEn": "Pediatric Foreign Body Aspiration with Check-Valve Hyperinflation",
+    "category": "obstructive",
+    "projection": "AP",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "🚨 پرهوایی یک‌طرفه راست + شیفت چپ",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_foreign_body_valve.jpg",
+    "patientMeta": {
+      "age": "۲ ساله",
+      "sex": "پسر"
+    },
+    "clinicalHistoryFa": "کودک ۲ ساله پس از خوردن آجیل ناگهان دچار سرفهٔ شدید و ویزینگ یک‌طرفه در ریهٔ راست شده است.",
+    "findingsFa": "پرهوایی و پرشفافیت واضح ریهٔ راست، کاهش حجم نسبی ریهٔ چپ و شیفت مدیاستن و قلب به سمت چپ (مکانیسم Check-Valve: هوا در دم وارد ریهٔ راست می‌شود اما در بازدم گیر می‌افتد!).",
+    "interpretationFa": "بسیاری از اجسام خارجی (مانند بادام‌زمینی) رادیولوسنت‌اند و در X-ray دیده نمی‌شوند؛ پرهوایی یک‌طرفهٔ ریه با شیفت مدیاستن مهم‌ترین نشانهٔ غیرمستقیم آسپیراسیون در کودک است!",
+    "annotations": [
+      {
+        "x": 30,
+        "y": 54,
+        "type": "pathology",
+        "label": "پرهوایی و احتباس هوای یک‌طرفه در ریه راست"
+      },
+      {
+        "x": 60,
+        "y": 58,
+        "type": "pathology",
+        "label": "شیفت قلب به سمت چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-asthma",
+      "dis-atelectasis"
+    ],
+    "referenceIds": [
+      "ref-murray-nadel"
+    ],
+    "quiz": {
+      "questionFa": "مکانیسم پرشفافیت و بزرگی یک‌طرفهٔ ریهٔ راست در آسپیراسیون بادام‌زمینی در این کودک چیست؟",
+      "options": [
+        "اثر دریچهٔ یک‌طرفه (Check-Valve): ورود هوا در دم و گیر افتادن آن در بازدم",
+        "پنومونی لوبار راست",
+        "مایع پلور چپ",
+        "دندهٔ گردنی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "انسداد نسبی برونش اصلی راست اجازهٔ ورود هوا در دم را می‌دهد اما در بازدم بسته می‌شود و احتباس هوای یک‌طرفه می‌سازد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Fremdkoerperaspiration mit Ventilmechanismus und Ueberblaehung der rechten Lunge 2M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fremdkoerperaspiration_mit_Ventilmechanismus_und_Ueberblaehung_der_rechten_Lunge_2M_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x1012"
+    }
+  },
+  {
+    "id": "cxr-emphysema-coils",
+    "titleFa": "آمفیزم شدید تحت درمان با کویل‌های کاهندهٔ حجم ریه (LVRC)",
+    "titleEn": "Severe Emphysema Treated with Endobronchial Coils",
+    "category": "obstructive",
+    "projection": "PA",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "کویل‌های نیتینول در لوب‌های فوقانی",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_emphysema_coils.jpg",
+    "patientMeta": {
+      "age": "۷۳ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۷۳ ساله با COPD شدید (GOLD 4) و پرهوایی مقاوم که تحت کاهش حجم برونکوسکوپیک ریه قرار گرفته است.",
+    "findingsFa": "پرهوایی شدید و مسطح‌شدن دیافراگم همراه با چند فنر مارپیچی فلزی رادیواپک (کویل‌های نیتینول) در لوب‌های فوقانی هر دو ریه برای جمع‌کردن بافت آمفیزماتوز.",
+    "interpretationFa": "آشنایی با ظاهر وسایل نوین مداخله‌ای ریه (کویل‌ها و دریچه‌های اندوبرونکیال) مانع اشتباه گرفتن آن‌ها با جسم خارجی می‌شود.",
+    "annotations": [
+      {
+        "x": 34,
+        "y": 32,
+        "type": "anatomy",
+        "label": "کویل‌های اندوبرونکیال در لوب فوقانی راست"
+      },
+      {
+        "x": 66,
+        "y": 32,
+        "type": "anatomy",
+        "label": "کویل‌های اندوبرونکیال در چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-copd"
+    ],
+    "referenceIds": [
+      "ref-gold-2025"
+    ],
+    "quiz": {
+      "questionFa": "ساختارهای مارپیچی فلزی دیده‌شده در لوب‌های فوقانی این بیمار COPD چیست؟",
+      "options": [
+        "کویل‌های اندوبرونکیال برای کاهش حجم ریه در آمفیزم شدید",
+        "پیس‌میکر قلبی",
+        "گلولهٔ سربی",
+        "لولهٔ بینی-معدی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کویل‌های نیتینول (Lung Volume Reduction Coils) برای کاهش احتباس هوا در آمفیزم شدید و بهبود الاستیسیته ریه به کار می‌روند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Intrapulmonale Coils zur Behandlung des regionalen Lungenemphysems 73M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Intrapulmonale_Coils_zur_Behandlung_des_regionalen_Lungenemphysems_73M_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x1002"
+    }
+  },
+  {
+    "id": "cxr-adenocarcinoma-lung",
+    "titleFa": "آدنوکارسینوم محیطی ریه (تودهٔ گرد منفرد RUL)",
+    "titleEn": "Peripheral Lung Adenocarcinoma (Solitary Right Upper Lobe Mass)",
+    "category": "neoplasm",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "تودهٔ محیطی >3 cm در RUL",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_adenocarcinoma_lung.jpg",
+    "patientMeta": {
+      "age": "۶۳ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۶۳ ساله با سابقهٔ ۳۵ پاکت-سال سیگار و سرفهٔ مزمن؛ در گرافی روتین تودهٔ منفرد در قلهٔ راست کشف شده است.",
+    "findingsFa": "تودهٔ بافت نرم گرد با قطر بیش از ۳ سانتی‌متر و حاشیهٔ نسبتاً لبوله در ناحیهٔ محیطی لوب فوقانی راست، بدون افیوژن پلور یا لنفادنوپاتی آشکار در گرافی ساده.",
+    "interpretationFa": "ضایعهٔ منفرد >3 cm «تودهٔ ریوی (Mass)» نامیده می‌شود و تا اثبات خلاف آن بدخیم است؛ گام بعدی CT با کنتراست قفسهٔ سینه و شکم فوقانی + PET-CT و بیوپسی بافتی است.",
+    "annotations": [
+      {
+        "x": 27,
+        "y": 31,
+        "type": "pathology",
+        "label": "تودهٔ محیطی آدنوکارسینوم در RUL"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-cancer",
+      "dis-solitary-nodule"
+    ],
+    "referenceIds": [
+      "ref-fleischner-2017",
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "در رادیولوژی قفسهٔ سینه، ضایعهٔ گرد ریوی با قطر بزرگ‌تر از ۳ سانتی‌متر چگونه طبقه‌بندی می‌شود؟",
+      "options": [
+        "تودهٔ ریوی (Lung Mass) — احتمال بالای بدخیمی و نیاز به بررسی بافتی",
+        "ندول خوش‌خیم بدون نیاز به پیگیری",
+        "خط کرلی B",
+        "آتلکتازی خطی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "ضایعات ≤3 cm ندول و ضایعات >3 cm توده (Mass) نام دارند که احتمال بدخیمی بسیار بالایی دارند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Adenokarzinom der Lunge im Roentgenbild 63M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Adenokarzinom_der_Lunge_im_Roentgenbild_63M_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x1006"
+    }
+  },
+  {
+    "id": "cxr-cannonball-metastases",
+    "titleFa": "متاستازهای متعدد توپ‌جنگی (Cannonball Pulmonary Metastases)",
+    "titleEn": "Multiple Bilateral Cannonball Lung Metastases",
+    "category": "neoplasm",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "ندول‌های گرد متعدد دوطرفه (Cannonball)",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_cannonball_metastases.jpg",
+    "patientMeta": {
+      "age": "بزرگسال",
+      "sex": "بزرگسال"
+    },
+    "clinicalHistoryFa": "بیمار با سابقهٔ کارسینوم پانکراس و کاهش وزن پیشرونده و تنگی نفس جدید.",
+    "findingsFa": "ده‌ها ندول و تودهٔ گرد با حاشیهٔ کاملاً مشخص و اندازه‌های متفاوت در هر دو میدان ریوی به‌ویژه نواحی محیطی و تحتانی (الگوی کلاسیک Cannonball Metastases).",
+    "interpretationFa": "انتشار هماتوژن تومورهای خارج‌ریوی (کلیه RCC، کولون، پانکراس، پستان، تیروئید، سارکوم و کوریوکارسینوم) به‌طور کلاسیک ندول‌های متعدد با غلبهٔ قواعد (جریان خون بیشتر) می‌سازد.",
+    "annotations": [
+      {
+        "x": 25,
+        "y": 62,
+        "type": "pathology",
+        "label": "متاستازهای گرد متعدد راست"
+      },
+      {
+        "x": 74,
+        "y": 60,
+        "type": "pathology",
+        "label": "متاستازهای توپ‌جنگی چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-cancer",
+      "dis-solitary-nodule"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "کدام بدخیمی‌ها به‌طور کلاسیک باعث الگوی «متاستازهای توپ‌جنگی (Cannonball)» در ریه می‌شوند؟",
+      "options": [
+        "سرطان کلیه (RCC)، گوارش/پانکراس، کوریوکارسینوم، سارکوم و پستان",
+        "فقط پنومونی پنوموکوکی",
+        "فقط آسم آلرژیک",
+        "کمبود آلفا-۱ آنتی‌تریپسین"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "انتشار خونی بدخیمی‌های جامد مثل RCC، پانکراس/کولورکتال و کوریوکارسینوم، ندول‌های گرد متعدد با حدود مشخص می‌سازد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Lungenmetastasen bei Pankreaskarzinom im Roentgenbild des Thorax 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lungenmetastasen_bei_Pankreaskarzinom_im_Roentgenbild_des_Thorax_001.jpg",
+      "dimensions": "1100x988"
+    }
+  },
+  {
+    "id": "cxr-mesothelioma-right",
+    "titleFa": "مزوتلیومای بدخیم پلور راست (ضخامت ندولار پلور + کاهش حجم)",
+    "titleEn": "Right Malignant Pleural Mesothelioma",
+    "category": "neoplasm",
+    "projection": "PA",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "ضخامت ندولار پلور راست + جمع‌شدگی همی‌توراکس",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_mesothelioma_right.jpg",
+    "patientMeta": {
+      "age": "۷۳ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۷۳ ساله با سابقهٔ ۳۰ سال کار در کشتی‌سازی (مواجهه با آزبست)، درد مداوم دیوارهٔ قفسهٔ سینه و تنگی نفس.",
+    "findingsFa": "ضخامت لبوله و محیطی پلور راست که ریهٔ راست را احاطه کرده، همراه با افیوژن پلور راست و نبود شیفت مدیاستن به سمت مقابل (مدیاستن فیکس‌شده به علت انقباض همی‌توراکس!).",
+    "interpretationFa": "افیوژن پلور حجیم که مدیاستن را به سمت مقابل هل نمی‌دهد («افیوژن با مدیاستن ثابت») نشانهٔ هشداردهندهٔ مزوتلیومای بدخیم یا انسداد برونش توسط سرطان است.",
+    "annotations": [
+      {
+        "x": 22,
+        "y": 54,
+        "type": "pathology",
+        "label": "ضخامت ندولار پلور محیطی راست"
+      },
+      {
+        "x": 30,
+        "y": 72,
+        "type": "pathology",
+        "label": "افیوژن همراه با مدیاستن ثابت"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-asbestosis",
+      "dis-pleural-effusion",
+      "dis-lung-cancer"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "quiz": {
+      "questionFa": "مهم‌ترین عامل خطر شغلی برای ایجاد مزوتلیومای بدخیم پلور چیست؟",
+      "options": [
+        "مواجههٔ قدیمی با الیاف آزبست (با دورهٔ کمون ۲۰ تا ۴۰ سال)",
+        "مصرف کافئین",
+        "ورزش در هوای سرد",
+        "آلرژی فصلی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "آزبستوز و مواجهه با آزبست مهم‌ترین عامل خطر شناخته‌شدهٔ مزوتلیومای بدخیم پلور است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Pleuramesotheliom rechts 73M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pleuramesotheliom_rechts_73M_-_CR_pa_-_001.jpg",
+      "dimensions": "1090x1060"
+    }
+  },
+  {
+    "id": "cxr-hiatal-hernia-mediastinum",
+    "titleFa": "فتق هیاتال حجیم با سطح هوا-مایع خلف قلب (شبیه‌ساز توده/آبسه)",
+    "titleEn": "Large Hiatal Hernia with Retrocardiac Air-Fluid Level",
+    "category": "neoplasm",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "سطح هوا-مایع بزرگ پشت قلب",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_hiatal_hernia_mediastinum.jpg",
+    "patientMeta": {
+      "age": "۷۱ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۷۱ ساله با رفلاکس مزمن و احساس پری پس از غذا؛ بدون تب یا خلط چرکی.",
+    "findingsFa": "تودهٔ گرد بزرگ در خط وسط و پشت سایهٔ قلب با یک سطح کاملاً افقی و واضح هوا-مایع (معدهٔ هرنیه‌شده به داخل مدیاستن خلفی).",
+    "interpretationFa": "فتق هیاتال حجیم شایع‌ترین علت تودهٔ خلف قلبی با سطح هوا-مایع است و نباید با آبسهٔ ریوی یا تومور مدیاستن اشتباه گرفته شود.",
+    "annotations": [
+      {
+        "x": 51,
+        "y": 64,
+        "type": "pathology",
+        "label": "سطح افقی هوا-مایع معده پشت قلب"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-abscess"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "شایع‌ترین علت تودهٔ خلف قلبی با سطح واضح هوا-مایع در فرد سالمند بدون تب کدام است؟",
+      "options": [
+        "فتق هیاتال حجیم (معدهٔ داخل‌سینه‌ای)",
+        "پنوموتوراکس فشاری",
+        "سل ارزنی",
+        "برونشکتازی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "صعود فوندوس/تنهٔ معده از سوراخ مری دیافراگم سایهٔ مدیاستن خلفی با سطح هوا-مایع کلاسیک می‌سازد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Hiatushernie mit Thoraxmagen 71jw - Roe pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hiatushernie_mit_Thoraxmagen_71jw_-_Roe_pa_-_001.jpg",
+      "dimensions": "1100x1032"
+    }
+  },
+  {
+    "id": "cxr-achalasia-mediastinum",
+    "titleFa": "آشالازی پیشرفته (پهن‌شدگی مدیاستن خلفی در راست)",
+    "titleEn": "Achalasia Causing Right Mediastinal Widening",
+    "category": "neoplasm",
+    "projection": "PA",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "لبهٔ محدب موازی مدیاستن راست + نبود حباب معده",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_achalasia_mediastinum.jpg",
+    "patientMeta": {
+      "age": "۵۹ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۵۹ ساله با دیسفاژی طولانی‌مدت به مایعات و جامدات، برگشت غذای هضم‌نشده و سرفه‌های شبانه.",
+    "findingsFa": "پهن‌شدگی مشخص و طولی حاشیهٔ راست مدیاستن (مری به‌شدت متسع و پر از مایع/غذا) و کاهش یا نبود حباب هوای معده در زیر همی‌دیافراگم چپ.",
+    "interpretationFa": "مری متسع در آشالازی یکی از افتراق‌های مهم پهن‌شدگی مدیاستن (در کنار لنفوم، تیموما و آنوریسم آئورت) و عامل مهم پنومونی آسپیراسیون مکرر است.",
+    "annotations": [
+      {
+        "x": 42,
+        "y": 44,
+        "type": "pathology",
+        "label": "حاشیهٔ مری بسیار متسع در سمت راست مدیاستن"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-abscess",
+      "dis-cap"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "کدام عارضهٔ تنفسی در بیماران مبتلا به آشالازی پیشرفته بسیار شایع است؟",
+      "options": [
+        "پنومونی آسپیراسیون مکرر و آبسهٔ ریوی",
+        "پنوموتوراکس خودبه‌خودی",
+        "آمفیزم پان-آسینار",
+        "مزوتلیوما"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "تجمع غذا و بزاق در مری متسع در حالت خوابیده به راه هوایی آسپیره می‌شود و پنومونی آسپیراسیون مزمن می‌دهد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Achalasie im Roentgenbild 59W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Achalasie_im_Roentgenbild_59W_-_CR_pa_-_001.jpg",
+      "dimensions": "977x1100"
+    }
+  },
+  {
+    "id": "cxr-pericardial-effusion-waterbottle",
+    "titleFa": "افیوژن حجیم پریکارد (قلب بطری‌آبی / Water-Bottle Heart)",
+    "titleEn": "Massive Pericardial Effusion (Water-Bottle Heart)",
+    "category": "vascular",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "🚨 قلب بطری‌آبی + میدان‌های ریوی پاک",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_pericardial_effusion_waterbottle.jpg",
+    "patientMeta": {
+      "age": "۷۶ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۷۶ ساله با تنگی نفس پیشرونده، صداهای قلبی خفه، JVP برجسته و ولتاژ پایین QRS در ECG.",
+    "findingsFa": "بزرگی شدید، متقارن و گلابی‌شکل (بطری‌آبی) سایهٔ قلبی با حاشیهٔ کاملاً صاف در حالی که عروق ریوی احتقان شدید ندارند (میدان‌های ریوی نسبتاً پاک‌اند).",
+    "interpretationFa": "کاردیومگالی بسیار بزرگ همراه با ریه‌های نسبتاً پاک نشانهٔ طلایی افیوژن حجیم پریکارد است؛ انجام اکوکاردیوگرافی اورژانسی برای رد تامپوناد قلبی الزامی است!",
+    "annotations": [
+      {
+        "x": 52,
+        "y": 64,
+        "type": "pathology",
+        "label": "سایهٔ قلبی بطری‌آبی (Water-Bottle Sign)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cor-pulmonale",
+      "dis-pulmonary-edema"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "اقدام تشخیصی فوری و قطعی در مواجهه با این نمای قلب بطری‌آبی و افت فشار خون چیست؟",
+      "options": [
+        "اکوکاردیوگرافی بالینی (Bedside Echo) برای ارزیابی افیوژن پریکارد و تامپوناد",
+        "اسپیرومتری",
+        "تجویز برونکودیلاتور و ترخیص",
+        "آزمایش خلط AFB تنها"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "اکوکاردیوگرافی فوری وجود مایع پریکارد و کلاپس دیاستولیک بطن/دهلیز راست (تامپوناد) را تایید و پریکاردیوسنتز را هدایت می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Bocksbeutelform des Herzens - Event Recorder 76M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bocksbeutelform_des_Herzens_-_Event_Recorder_76M_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x1013"
+    }
+  },
+  {
+    "id": "cxr-pericardial-drain",
+    "titleFa": "افیوژن پریکارد همراه با کاتتر تخلیه (پریکاردیوسنتز)",
+    "titleEn": "Pericardial Effusion with Pericardiocentesis Drain",
+    "category": "vascular",
+    "projection": "AP",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "کاردیومگالی کروی + کاتتر پریکارد",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_pericardial_drain.jpg",
+    "patientMeta": {
+      "age": "۴۱ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۴۱ ساله پس از تخلیهٔ اورژانسی تامپوناد قلبی با کاتتر پیگ‌تیل داخل کیسهٔ پریکارد.",
+    "findingsFa": "سایهٔ قلبی کروی بزرگ با کاتتر درناژ داخل فضای پریکارد که از ناحیهٔ ساب‌زیفوئید وارد شده است.",
+    "interpretationFa": "پایش موقعیت کاتتر پریکارد و پیگیری کاهش اندازهٔ سایهٔ قلبی روی گرافی‌های سریالی در CCU ضروری است.",
+    "annotations": [
+      {
+        "x": 56,
+        "y": 66,
+        "type": "pathology",
+        "label": "سایهٔ پریکارد بزرگ با کاتتر تخلیه"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-cor-pulmonale"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "سه‌گانهٔ کلاسیک بک (Beck's Triad) در تامپوناد قلبی حاد شامل کدام موارد است؟",
+      "options": [
+        "افت فشار خون، اتساع وریدهای گردن (JVP↑) و خفه شدن صداهای قلب",
+        "تب، سرفه و هموپتیزی",
+        "ویزینگ، کلابینگ و دیسپنه",
+        "برادی‌کاردی، فشار خون بالا و تنفس نامنظم"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "سه‌گانهٔ بک (هیپوتانسیون، JVP برجسته و صداهای قلبی گنگ) هشدار اورژانسی تامپوناد قلبی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Perikarddrainage bei Perikarderguss unklarer Genese 41W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Perikarddrainage_bei_Perikarderguss_unklarer_Genese_41W_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x955"
+    }
+  },
+  {
+    "id": "cxr-aortic-stenosis-silhouette",
+    "titleFa": "پیکربندی آئورتیک قلب و برجستگی قوس آئورت (تنگی آئورت)",
+    "titleEn": "Aortic Heart Configuration & Prominent Aortic Knob",
+    "category": "vascular",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "برجستگی قوس آئورت + گردشدن نوک بطن چپ",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_aortic_stenosis_silhouette.jpg",
+    "patientMeta": {
+      "age": "۷۵ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۷۵ ساله با تنگی نفس فعالیتی، سنکوپ و سوفل سیستولیک خشن در کانون آئورت با انتشار به کاروتید.",
+    "findingsFa": "گردشدن و کشیدگی قوس تحتانی چپ (هیپرتروفی بطن چپ)، اتساع پس‌ازتنگی آئورت صعودی و قوس آئورت برجسته و کلسیفیه.",
+    "interpretationFa": "در بیماران مسن با تنگی نفس، افتراق علل قلبی-دریچه‌ای (تنگی شدید آئورت) از بیماری‌های اولیهٔ ریه (COPD) با معاینه و CXR حیاتی است.",
+    "annotations": [
+      {
+        "x": 58,
+        "y": 29,
+        "type": "pathology",
+        "label": "قوس آئورت برجسته و کلسیفیه"
+      },
+      {
+        "x": 68,
+        "y": 70,
+        "type": "pathology",
+        "label": "گردشدن قوس بطن چپ (LVH)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pulmonary-edema",
+      "dis-cor-pulmonale"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "کدام یافتهٔ رادیولوژیک نشان‌دهندهٔ فشار مزمن بر بطن چپ و آئورت (مانند تنگی آئورت یا فشار خون) است؟",
+      "options": [
+        "قوس آئورت برجسته/کلسیفیه و گردشدن نوک بطن چپ",
+        "مینیسکوس پلورال",
+        "هلال هوایی زیر دیافراگم",
+        "حفرهٔ قله‌ای"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "پیکربندی آئورتیک قلب با برجستگی قوس آئورت و گردشدن بطن چپ (کفش‌چوبی/Boot-like) مشخص می‌شود."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Aortale Herzkonfiguration bei Aortenstenose 75W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aortale_Herzkonfiguration_bei_Aortenstenose_75W_-_CR_pa_-_001.jpg",
+      "dimensions": "1068x1100"
+    }
+  },
+  {
+    "id": "cxr-aortic-arch-right",
+    "titleFa": "قوس آئورت راست‌طرفه (ناهنجاری عروق بزرگ مدیاستن)",
+    "titleEn": "Right-Sided Aortic Arch",
+    "category": "vascular",
+    "projection": "PA",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "تورفتگی سمت راست تراشه (قوس آئورت راست)",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_aortic_arch_right.jpg",
+    "patientMeta": {
+      "age": "۶۲ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "یافتهٔ اتفاقی روی گرافی PA قفسهٔ سینه؛ تودهٔ مدیاستن فوقانی راست گزارش شده است.",
+    "findingsFa": "نبود قوس آئورت طبیعی در سمت چپ تراشه و وجود یک برجستگی صاف عروقی در سمت راست تراشه که نای را اندکی به چپ می‌راند (قوس آئورت راست‌طرفه).",
+    "interpretationFa": "تشخیص قوس آئورت راست‌طرفه روی CXR از بیوپسی فاجعه‌بار یک ساختار عروقی به اشتباه تومور مدیاستن جلوگیری می‌کند!",
+    "annotations": [
+      {
+        "x": 44,
+        "y": 28,
+        "type": "anatomy",
+        "label": "قوس آئورت در سمت راست تراشه (به‌جای چپ)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-tracheal-stenosis"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "کدام نشانه روی گرافی PA قوس آئورت راست‌طرفه را از تومور پارا-تراکئال راست افتراق می‌دهد؟",
+      "options": [
+        "نبود سایهٔ قوس آئورت در سمت چپ و امتداد خط آئورت نزولی در سمت راست ستون فقرات",
+        "وجود سطح هوا-مایع در قاعده",
+        "خطوط کرلی B",
+        "پرهوایی دوطرفه"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "غیبت قوس آئورت در محل طبیعی چپ به همراه تورفتگی صاف روی دیوارهٔ راست نای، تشخیص را مسجل می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Rechts deszendierende Aorta im Thoraxbild 62W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rechts_deszendierende_Aorta_im_Thoraxbild_62W_-_CR_pa_-_001.jpg",
+      "dimensions": "1006x1100"
+    }
+  },
+  {
+    "id": "cxr-pneumoperitoneum",
+    "titleFa": "پنوموپریتوئن — هوای آزاد هلالی زیر دیافراگم (اورژانس جراحی!)",
+    "titleEn": "Pneumoperitoneum — Free Subdiaphragmatic Air",
+    "category": "critical",
+    "projection": "AP",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "🚨 هوای آزاد زیر دیافراگم (سوراخ‌شدگی احشا)",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_pneumoperitoneum.jpg",
+    "patientMeta": {
+      "age": "۷۱ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۷۱ ساله با درد ناگهانی و شدید شکم، گاردینگ و تاکی‌کاردی؛ گرافی ایستادهٔ قفسهٔ سینه درخواست شده است.",
+    "findingsFa": "هلال‌های بسیار واضح و گستردهٔ هوای آزاد (شفاف و سیاه) دقیقاً زیر هر دو قوس دیافراگم (به‌ویژه بین کبد و همی‌دیافراگم راست) که دیوارهٔ نازک دیافراگم را برجسته کرده‌اند.",
+    "interpretationFa": "پنوموپریتوئن روی CXR ایستاده یک اورژانس حیاتی جراحی (سوراخ‌شدگی زخم پپتیک یا روده) است؛ در بررسی بخش D از چک‌لیست ABCDE هرگز زیر دیافراگم را فراموش نکنید!",
+    "annotations": [
+      {
+        "x": 28,
+        "y": 66,
+        "type": "pathology",
+        "label": "هلال بزرگ هوای آزاد زیر دیافراگم راست"
+      },
+      {
+        "x": 74,
+        "y": 72,
+        "type": "pathology",
+        "label": "هوای آزاد زیر دیافراگم چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-ards"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "هلال هوای آزاد زیر همی‌دیافراگم راست در این بیمار با درد شکم حاد نشانهٔ کدام اورژانس است؟",
+      "options": [
+        "سوراخ‌شدگی احشای توخالی شکم (پنوموپریتوئن) — مشاورهٔ فوری جراحی!",
+        "پنومونی لوب تحتانی راست",
+        "افیوژن پلور ساب‌پولمونیک",
+        "آسم حاد"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "هوای آزاد زیر دیافراگم در غیاب جراحی اخیر شکم، نشانهٔ پرفوراسیون دستگاه گوارش و نیازمند جراحی اورژانسی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Freie Luft bei Sigmaperforation 71W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Freie_Luft_bei_Sigmaperforation_71W_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x1024"
+    }
+  },
+  {
+    "id": "cxr-subcutaneous-emphysema",
+    "titleFa": "آمفیزم شدید زیرجلدی قفسهٔ سینه و گردن + چست‌تیوب",
+    "titleEn": "Extensive Subcutaneous Emphysema with Chest Tube",
+    "category": "critical",
+    "projection": "AP",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "🚨 رگه‌های پرمانند هوا در بافت نرم (Ginkgo Leaf)",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_subcutaneous_emphysema.jpg",
+    "patientMeta": {
+      "age": "۷۶ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۷۶ ساله پس از تعبیهٔ چست‌تیوب برای پنوموتوراکس دچار تورم سریع گردن و صورت و صدای ترق‌تروق (کرپیتاسیون) زیر پوست شده است.",
+    "findingsFa": "خطوط و رگه‌های گستردهٔ هوا درون بافت نرم دیوارهٔ قفسهٔ سینه، زیربغل، عضلات پکتورالیس (طرح برگ جینکگو) و بافت نرم گردن همراه با چست‌تیوب.",
+    "interpretationFa": "آمفیزم زیرجلدی شدید پس از چست‌تیوب هشدار می‌دهد که لولهٔ سینه‌ای مسدود شده، پیچ خورده یا سوراخ جانبی آن بیرون از فضای پلور در بافت نرم قرار گرفته است!",
+    "annotations": [
+      {
+        "x": 14,
+        "y": 34,
+        "type": "pathology",
+        "label": "هوای گسترده در بافت نرم و عضله پکتورالیس راست"
+      },
+      {
+        "x": 86,
+        "y": 36,
+        "type": "pathology",
+        "label": "آمفیزم زیرجلدی چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "quiz": {
+      "questionFa": "در صورت بروز آمفیزم زیرجلدی شدید و پیشرونده پس از گذاشتن چست‌تیوب، اولین بررسی حیاتی کدام است؟",
+      "options": [
+        "بررسی باز بودن چست‌تیوب، ساکشن و اطمینان از داخل‌بودن تمام سوراخ‌های لوله در فضای پلور",
+        "شروع آنتی‌بیوتیک ضدسل",
+        "انجام اسپیرومتری",
+        "مرخص کردن بیمار"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "خارج شدن سوراخ جانبی لوله به بافت نرم یا انسداد لوله باعث نشت پرفشار هوا به زیر پوست می‌شود."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Ausgepraegtes Weichteilemphysem nach Anlage einer Thoraxdrainage bei Pneumothorax 76W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ausgepraegtes_Weichteilemphysem_nach_Anlage_einer_Thoraxdrainage_bei_Pneumothorax_76W_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x890"
+    }
+  },
+  {
+    "id": "cxr-pneumomediastinum-sail",
+    "titleFa": "پنومومدیاستن با نشانهٔ بادبان تیموس (Spinnaker Sail Sign)",
+    "titleEn": "Pneumomediastinum with Thymic Sail Sign",
+    "category": "critical",
+    "projection": "AP",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "🚨 هوا در مدیاستن + بالا رفتن لوب‌های تیموس",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_pneumomediastinum_sail.jpg",
+    "patientMeta": {
+      "age": "نوزاد",
+      "sex": "دختر"
+    },
+    "clinicalHistoryFa": "نوزاد با دیسترس تنفسی زیر فشار مثبت راه هوایی (باروتروما)؛ نوار شفاف هوا در اطراف مدیاستن دیده می‌شود.",
+    "findingsFa": "تجمع هوا در مدیاستن قدامی باعث جدا شدن و بالا رفتن هر دو لوب تیموس از روی قلب شده و شکل بادبان کشتی (Spinnaker / Angel-Wing Sign) ایجاد کرده است.",
+    "interpretationFa": "پنومومدیاستن ناشی از پارگی آلوئولی (اثر مک‌لین / باروتروما، حملهٔ شدید آسم یا استفراغ شدید در سندرم بوئرهاو) است و نیاز به بررسی سریع پارگی مری یا راه هوایی دارد.",
+    "annotations": [
+      {
+        "x": 38,
+        "y": 36,
+        "type": "pathology",
+        "label": "لوب راست تیموس بالارفته توسط هوا"
+      },
+      {
+        "x": 62,
+        "y": 36,
+        "type": "pathology",
+        "label": "لوب چپ تیموس (Spinnaker Sail)"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax",
+      "dis-asthma"
+    ],
+    "referenceIds": [
+      "ref-murray-nadel"
+    ],
+    "quiz": {
+      "questionFa": "مکانیسم کلاسیک پنومومدیاستن در حملهٔ شدید آسم یا تهویهٔ پرفشار (اثر مک‌لین) چیست؟",
+      "options": [
+        "پارگی آلوئول‌ها و حرکت هوا در طول غلاف برونکواسکولار به سمت مدیاستن",
+        "عفونت باکتریال پلور",
+        "لخته شدن خون در شریان ریه",
+        "احتباس مایع در پریکارد"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در اثر مک‌لین (Macklin Effect)، افزایش فشار آلوئولی باعث پارگی آلوئول و نشت هوا در امتداد عروق و برونش‌ها به داخل مدیاستن می‌شود."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Mediastinalemphysem mit Spinacker-Zeichen thymic sail sign 0W - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mediastinalemphysem_mit_Spinacker-Zeichen_thymic_sail_sign_0W_-_CR_ap_-_001.jpg",
+      "dimensions": "975x1100"
+    }
+  },
+  {
+    "id": "cxr-rib-clips-flail-chest",
+    "titleFa": "قفسهٔ سینهٔ شناور (Flail Chest) پس از فیکساسیون دنده‌ها",
+    "titleEn": "Flail Chest / Serial Rib Fractures After Surgical Rib Clipping",
+    "category": "critical",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "شکستگی سریالی دنده‌ها + پلاک‌های تیتانیومی دنده",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_rib_clips_flail_chest.jpg",
+    "patientMeta": {
+      "age": "۶۵ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۶۵ ساله پس از تصادف شدید با شکستگی‌های متعدد دنده‌ای سمت چپ (Flail Chest) و کوفتگی ریوی که تحت تثبیت جراحی دنده‌ها قرار گرفته است.",
+    "findingsFa": "پلاک‌ها و کلیپس‌های فلزی تثبیت دنده در دنده‌های جانبی چپ همراه با کاهش نسبی حجم و تغییرات کوفتگی/افیوژن خفیف قاعدهٔ چپ.",
+    "interpretationFa": "در ترومای دنده‌ای، ارزیابی دقیق کوفتگی ریوی زیرین (Pulmonary Contusion)، کنترل شدید درد برای جلوگیری از آتلکتازی و پایش پنوموهموتوراکس تاخیری کلیدی است.",
+    "annotations": [
+      {
+        "x": 82,
+        "y": 54,
+        "type": "pathology",
+        "label": "پلاک‌های تثبیت شکستگی سریالی دنده‌های چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-atelectasis",
+      "dis-pneumothorax",
+      "dis-resp-failure"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "تعریف بالینی «قفسهٔ سینهٔ شناور (Flail Chest)» و مهم‌ترین علت هیپوکسمی در آن چیست؟",
+      "options": [
+        "شکستگی ≥3 دنده متوالی در ≥2 نقطه + کوفتگی ریوی زیرین (Pulmonary Contusion)",
+        "شکستگی یک دندهٔ ساده",
+        "دندهٔ گردنی دوطرفه",
+        "افیوژن پریکارد"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در Flail Chest حرکت متناقض دیوارهٔ قفسهٔ سینه دیده می‌شود اما علت اصلی هیپوکسمی شدید، کوفتگی پارانشیم ریه در زیر دنده‌های شکسته است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Rippenklammern bei instabilem Thorax bei Rippenserienfraktur 65M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rippenklammern_bei_instabilem_Thorax_bei_Rippenserienfraktur_65M_-_CR_pa_-_001.jpg",
+      "dimensions": "1026x1100"
+    }
+  },
+  {
+    "id": "cxr-ett-right-mainstem",
+    "titleFa": "انتوباسیون اشتباه در برونش اصلی راست + کلاپس کامل ریهٔ چپ",
+    "titleEn": "Right Mainstem Endotracheal Intubation with Complete Left Lung Collapse",
+    "category": "devices",
+    "projection": "AP",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "🚨 اورژانس #۱ ICU: ETT داخل برونش راست!",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_ett_right_mainstem.jpg",
+    "patientMeta": {
+      "age": "۷۹ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۷۹ ساله بلافاصله پس از انتوباسیون اورژانسی دچار افت شدید SpO2، افزایش فشار پیک راه هوایی و محو صدای تنفسی در سمت چپ شده است!",
+    "findingsFa": "نوک لولهٔ تراشه (ETT) از کارینا عبور کرده و وارد برونش اصلی راست شده است؛ در نتیجه ریهٔ چپ کاملاً بی‌هوا و سفید (کلاپس کامل) شده و قلب و تراشه به سمت چپ کشیده شده‌اند!",
+    "interpretationFa": "نوک استاندارد ETT باید ۳ تا ۵ سانتی‌متر بالاتر از کارینا (تقریباً در سطح قوس آئورت / T3–T4) باشد. عقب کشیدن فوری لوله به اندازهٔ ۲–۴ سانتی‌متر جان بیمار را نجات می‌دهد!",
+    "annotations": [
+      {
+        "x": 45,
+        "y": 46,
+        "type": "pathology",
+        "label": "نوک ETT بیش‌ازحد عمیق داخل برونش راست!"
+      },
+      {
+        "x": 74,
+        "y": 54,
+        "type": "pathology",
+        "label": "سفیدشدگی و کلاپس کامل ریه چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-atelectasis",
+      "dis-resp-failure"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "اولین و فوری‌ترین اقدام نجات‌بخش با دیدن این گرافی پس از انتوباسیون چیست؟",
+      "options": [
+        "خالی کردن کاف و عقب کشیدن لولهٔ تراشه ۳ تا ۵ سانتی‌متر به بالای کارینا",
+        "افزایش حجم جاری ونتیلاتور",
+        "گذاشتن چست‌تیوب چپ",
+        "انجام برونکوسکوپی فردا صبح"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "انتوباسیون برونش اصلی راست باعث کلاپس کامل ریهٔ چپ و باروترومای ریهٔ راست می‌شود؛ عقب کشیدن فوری ETT مشکل را ظرف ثانیه‌ها حل می‌کند."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Fehllage Trachealtubus im rechten Hauptbronchus mit Atelektase links 79M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fehllage_Trachealtubus_im_rechten_Hauptbronchus_mit_Atelektase_links_79M_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x882"
+    }
+  },
+  {
+    "id": "cxr-cvc-azygos-malposition",
+    "titleFa": "خطای مسیر کاتتر ورید مرکزی (CVC) داخل ورید آزیگوس",
+    "titleEn": "Central Venous Catheter Malposition in the Azygos Vein",
+    "category": "devices",
+    "projection": "AP",
+    "difficultyFa": "پیشرفته",
+    "clinicalSignFa": "مسیر غیرعادی نوک CVC در قوس آزیگوس",
+    "isEmergency": true,
+    "file": "media/cxr/cxr_cvc_azygos_malposition.jpg",
+    "patientMeta": {
+      "age": "۵۰ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۵۰ ساله پس از تعبیهٔ کاتتر ورید مرکزی (CVC) از سمت چپ جهت تایید موقعیت پیش از تزریق وازوپرسور.",
+    "findingsFa": "نوک کاتتر به‌جای نزول مستقیم به محل اتصال ورید اجوف فوقانی و دهلیز راست (Cavoatrial Junction)، به عقب و داخل قوس ورید آزیگوس پیچیده است.",
+    "interpretationFa": "تزریق داروهای هایپراسمولار یا وازوپرسور در ورید باریک آزیگوس خطر پارگی ورید و هموتوراکس کشنده دارد؛ کاتتر باید پیش از استفاده اصلاح موقعیت شود.",
+    "annotations": [
+      {
+        "x": 46,
+        "y": 42,
+        "type": "pathology",
+        "label": "پیچش غیرطبیعی نوک CVC درون ورید آزیگوس"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "محل آناتومیک ایده‌آل برای قرارگیری نوک کاتتر ورید مرکزی (CVC) کجاست؟",
+      "options": [
+        "محل اتصال ورید اجوف فوقانی به دهلیز راست (Cavoatrial Junction / پایین‌تر از کارینا)",
+        "درون بطن راست",
+        "درون ورید ژوگولار داخلی",
+        "درون ورید آزیگوس"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "نوک CVC باید در SVC تحتانی / محل اتصال به دهلیز راست (حدود ۱–۲ مهره زیر کارینا) قرار گیرد تا خطر آریتمی یا پارگی ورید به حداقل برسد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Fehllage ZVK in Vena azygos 50M - CR ap - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fehllage_ZVK_in_Vena_azygos_50M_-_CR_ap_-_001.jpg",
+      "dimensions": "1100x883"
+    }
+  },
+  {
+    "id": "cxr-port-ijv-malposition",
+    "titleFa": "برگشتن کاتتر پورت شیمی‌درمانی به داخل ورید ژوگولار داخلی",
+    "titleEn": "Port-a-Cath Tip Malposition Flipped into Left Internal Jugular Vein",
+    "category": "devices",
+    "projection": "PA",
+    "difficultyFa": "متوسط",
+    "clinicalSignFa": "صعود اشتباه کاتتر به سمت گردن (IJV)",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_port_ijv_malposition.jpg",
+    "patientMeta": {
+      "age": "۳۶ ساله",
+      "sex": "زن"
+    },
+    "clinicalHistoryFa": "زن ۳۶ ساله پس از تعبیهٔ پورت شیمی‌درمانی سمت چپ؛ گرافی کنترلی برای بررسی مسیر کاتتر انجام شده است.",
+    "findingsFa": "محفظهٔ پورت در زیر ترقوهٔ چپ دیده می‌شود اما لولهٔ کاتتر به‌جای رفتن به سمت پایین (SVC)، به سمت بالا چرخیده و داخل ورید ژوگولار داخلی چپ صعود کرده است.",
+    "interpretationFa": "تزریق داروهای شیمی‌درمانی از طریق کاتتر واردشده به ورید ژوگولار باعث ترومبوز وریدی و آسیب شدید دیواره می‌شود و پیش از شروع درمان باید اصلاح گردد.",
+    "annotations": [
+      {
+        "x": 63,
+        "y": 35,
+        "type": "anatomy",
+        "label": "مخزن پورت شیمی‌درمانی چپ"
+      },
+      {
+        "x": 56,
+        "y": 14,
+        "type": "pathology",
+        "label": "صعود اشتباه نوک کاتتر به ورید ژوگولار چپ"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-lung-cancer"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "خطای دیده‌شده در مسیر این پورت وریدی چیست؟",
+      "options": [
+        "کاتتر به سمت بالا برگشته و وارد ورید ژوگولار داخلی شده است",
+        "کاتتر وارد شریان ریوی شده است",
+        "پنوموتوراکس فشاری ایجاد شده است",
+        "مسیر کاملاً طبیعی و آمادهٔ تزریق است"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "نوک کاتتر پورت به جای نزول به SVC به سمت گردن (IJV چپ) منحرف شده و نیاز به اصلاح قبل از تزریق دارد."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:Portkatheter in V jugularis interna umgeschlagen 36W - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portkatheter_in_V_jugularis_interna_umgeschlagen_36W_-_CR_pa_-_001.jpg",
+      "dimensions": "1100x1027"
+    }
+  },
+  {
+    "id": "cxr-chest-tube-ptx",
+    "titleFa": "لولهٔ سینه‌ای (Chest Tube) در حال تخلیهٔ پنوموتوراکس",
+    "titleEn": "Chest Tube (Thoracostomy) Draining Pneumothorax",
+    "category": "devices",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "خط رادیواپک چست‌تیوب + بازشدن ریه",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_chest_tube_ptx.jpg",
+    "patientMeta": {
+      "age": "بزرگسال",
+      "sex": "بزرگسال"
+    },
+    "clinicalHistoryFa": "گرافی کنترلی پس از تعبیهٔ لولهٔ سینه‌ای (توراکوستومی) برای درمان پنوموتوراکس؛ ارزیابی موقعیت لوله و اتساع مجدد ریه.",
+    "findingsFa": "لولهٔ سینه‌ای با نوار رادیواپک طولی در همی‌توراکس راست دیده می‌شود و ریه تا حد زیادی مجدداً باز شده است (نکتهٔ کلیدی: بررسی کنید قطع‌شدگی نوار رادیواپک که همان سوراخ انتهایی است، داخل دنده‌ها باشد!).",
+    "interpretationFa": "در بررسی هر چست‌تیوب روی CXR باید ۴ نکته چک شود: ۱) جهت (قله برای هوا، قاعده برای مایع)، ۲) داخل‌بودن تمام سوراخ‌های جانبی در فضای پلور، ۳) نبود پیچ‌خوردگی، ۴) میزان بازشدن ریه.",
+    "annotations": [
+      {
+        "x": 27,
+        "y": 64,
+        "type": "anatomy",
+        "label": "مسیر لولهٔ سینه‌ای (Chest Tube) در فضای پلور راست"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax",
+      "dis-pleural-effusion"
+    ],
+    "referenceIds": [
+      "ref-bts-pleural-2023"
+    ],
+    "quiz": {
+      "questionFa": "قطع‌شدگی کوچک در خط سفید (رادیواپک) دیوارهٔ لولهٔ سینه‌ای روی CXR نشان‌دهندهٔ چیست؟",
+      "options": [
+        "محل آخرین سوراخ جانبی (Sentinel Hole) که حتماً باید داخل فضای پلور باشد",
+        "شکستگی لوله",
+        "لختهٔ خون",
+        "دندهٔ اضافی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "قطع‌شدگی نوار رادیواپک نشانگر پروگزیمال‌ترین سوراخ جانبی چست‌تیوب است؛ اگر بیرون از دیوارهٔ دنده‌ها باشد باعث نشت هوا و آمفیزم زیرجلدی می‌شود."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:09-01-Pneumothorax Drainage.png",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:09-01-Pneumothorax_Drainage.png",
+      "dimensions": "1050x936"
+    }
+  },
+  {
+    "id": "cxr-pacemaker-dual",
+    "titleFa": "پیس‌میکر قلبی و الکترود داخل دهلیزی روی گرافی قفسهٔ سینه",
+    "titleEn": "Permanent Cardiac Pacemaker & Intracardiac Lead",
+    "category": "devices",
+    "projection": "PA",
+    "difficultyFa": "پایه",
+    "clinicalSignFa": "ژنراتور زیرترقوه‌ای + الکترود قلبی سالم",
+    "isEmergency": false,
+    "file": "media/cxr/cxr_pacemaker_dual.jpg",
+    "patientMeta": {
+      "age": "۷۴ ساله",
+      "sex": "مرد"
+    },
+    "clinicalHistoryFa": "مرد ۷۴ ساله با سندرم سینوس بیمار؛ گرافی کنترلی پس از کاشت پیس‌میکر دائم جهت رد پنوموتوراکس و تایید موقعیت لید.",
+    "findingsFa": "ژنراتور پالس پیس‌میکر در دیوارهٔ قدامی-فوقانی راست قفسهٔ سینه و سیم لید پیوسته بدون شکستگی یا پیچ‌خوردگی از مسیر ورید ساب‌کلاوین وارد حفرهٔ راست قلب شده است؛ پنوموتوراکس وجود ندارد.",
+    "interpretationFa": "در بررسی CXR بیمار دارای پیس‌میکر/ICD باید تداوم سیم (نبود Lead Fracture)، موقعیت نوک الکترود و نبود پنوموتوراکس/هموتوراکس پس از کاشت بررسی شود.",
+    "annotations": [
+      {
+        "x": 24,
+        "y": 38,
+        "type": "anatomy",
+        "label": "ژنراتور پیس‌میکر"
+      },
+      {
+        "x": 45,
+        "y": 54,
+        "type": "anatomy",
+        "label": "مسیر سالم الکترود داخل‌قلبی"
+      }
+    ],
+    "relatedDiseaseIds": [
+      "dis-pneumothorax"
+    ],
+    "referenceIds": [
+      "ref-harrison-21"
+    ],
+    "quiz": {
+      "questionFa": "مهم‌ترین عارضهٔ فوری ریوی که پس از کاشت پیس‌میکر از طریق ورید ساب‌کلاوین باید روی CXR رد شود چیست؟",
+      "options": [
+        "پنوموتوراکس یا هموتوراکس یاتروژنیک",
+        "سارکوئیدوز",
+        "برونشکتازی",
+        "آمفیزم پان-آسینار"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "پونکسیون ورید ساب‌کلاوین خطر آسیب به قلهٔ پلور و ایجاد پنوموتوراکس/هموتوراکس دارد و CXR پس از پروسیجر الزامی است."
+    },
+    "attribution": {
+      "wikimediaTitle": "File:AAI-Schrittmacher bei Sick-Sinus-Syndrom 74M - CR pa - 001.jpg",
+      "author": "Hellerhoff",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:AAI-Schrittmacher_bei_Sick-Sinus-Syndrom_74M_-_CR_pa_-_001.jpg",
+      "dimensions": "1074x1057"
+    }
+  }
+]

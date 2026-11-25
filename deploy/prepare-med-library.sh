@@ -52,6 +52,13 @@ if [ -f build/build_labs.py ]; then
   python3 build/build_labs.py
 fi
 [ -f docs/lib/labs/cardiac/simulator.html ] || { echo "خطا: شبیه‌ساز قلب در docs/lib/labs ساخته نشد"; exit 1; }
+# بستهٔ PulmoLab باید کامل و بایت‌به‌بایت از زیپ ریشه بیرون آمده باشد؛ build_labs.py
+# خودش --check دارد و فایل جاافتاده/ناهمسان را با کد خروج ۱ گزارش می‌کند.
+python3 build/build_labs.py --check || { echo "خطا: بستهٔ آزمایشگاه ریه کامل نیست"; exit 1; }
+[ -f docs/lib/labs/pulmolab/index.html ] || { echo "خطا: آزمایشگاه ریه در docs/lib/labs ساخته نشد"; exit 1; }
+[ -f docs/lib/labs/pulmolab/data/manifest.json ] || { echo "خطا: manifest بستهٔ ریه ساخته نشد"; exit 1; }
+[ "$(find docs/lib/labs/pulmolab -type f | wc -l)" -eq 122 ] || { echo "خطا: بستهٔ ریه ۱۲۲ فایل نیست"; exit 1; }
+grep -q 'labs/pulmolab/index.html' docs/lib/index.html || { echo "خطا: نوار آزمایشگاه در صفحهٔ خانه به ریه پیوند نمی‌دهد"; exit 1; }
 
 echo "── ۳٫۷) راستی‌آزمایی مشتق‌های اسکچ‌نوت ────────────────────"
 # ⚠ اگر thumb/ و mid/ ساخته نشوند، گالری‌ها روی Pages آیکون شکسته می‌دهند.
@@ -86,10 +93,10 @@ m = json.load(open('content/manifest.json'))
 q = m['qbank']
 keys = [s['key'] for s in m['subjects']]
 checks = [
-    ('counts.lessons == 306',  m['counts']['lessons'] == 306),
-    ('counts.subjects == 13',  m['counts']['subjects'] == 13),
-    ('qbank.total == 1790',    q['total'] == 1790),
-    ('len(qbank.parts) == 13', len(q['parts']) == 13),
+    ('counts.lessons == 320',  m['counts']['lessons'] == 320),
+    ('counts.subjects == 14',  m['counts']['subjects'] == 14),
+    ('qbank.total == 1990',    q['total'] == 1990),
+    ('len(qbank.parts) == 14', len(q['parts']) == 14),
     ('جمع بخش‌ها == total',      sum(p['count'] for p in q['parts']) == q['total']),
     ('surgery در کلیدها',        'surgery' in keys),
     ('heme در کلیدها',           'heme' in keys),
@@ -98,6 +105,7 @@ checks = [
     ('infectious در کلیدها',     'infectious' in keys),
     ('urology در کلیدها',        'urology' in keys),
     ('ent در کلیدها',            'ent' in keys),
+    ('neuro در کلیدها',          'neuro' in keys),
     ('کلید اپ اورولوژی زیر جراحی نباشد',
      not any('urology-simforoush' in (x.get('appSubjectKeys') or [])
              for x in m['subjects'] if x['key'] != 'urology')),
@@ -116,6 +124,8 @@ checks = [
     ('docs/lib/qbank/data/inf.json', pathlib.Path('docs/lib/qbank/data/inf.json').is_file()),
     ('docs/lib/qbank/data/uro.json', pathlib.Path('docs/lib/qbank/data/uro.json').is_file()),
     ('docs/lib/qbank/data/ent.json', pathlib.Path('docs/lib/qbank/data/ent.json').is_file()),
+    ('docs/lib/qbank/data/neuro.json', pathlib.Path('docs/lib/qbank/data/neuro.json').is_file()),
+    ('docs/lib/qbank/neuro-standalone.html', pathlib.Path('docs/lib/qbank/neuro-standalone.html').is_file()),
     ('docs/lib/orthopedics/chapter-01.html', pathlib.Path('docs/lib/orthopedics/chapter-01.html').is_file()),
     ('docs/lib/ophthalmology/chapter-01.html', pathlib.Path('docs/lib/ophthalmology/chapter-01.html').is_file()),
     ('docs/lib/infectious/183-tuberculosis.html', pathlib.Path('docs/lib/infectious/183-tuberculosis.html').is_file()),
@@ -128,6 +138,13 @@ checks = [
     ('docs/lib/ent/manifest.json', pathlib.Path('docs/lib/ent/manifest.json').is_file()),
     ('docs/lib/ent/32-appendix-c-ent-emergencies.html',
      pathlib.Path('docs/lib/ent/32-appendix-c-ent-emergencies.html').is_file()),
+    ('docs/lib/subject/neuro.html', pathlib.Path('docs/lib/subject/neuro.html').is_file()),
+    ('docs/lib/neurology/manifest.json', pathlib.Path('docs/lib/neurology/manifest.json').is_file()),
+    ('docs/lib/neurology/cerebrovascular-diseases.html',
+     pathlib.Path('docs/lib/neurology/cerebrovascular-diseases.html').is_file()),
+    ('docs/lib/labs/pulmolab/index.html', pathlib.Path('docs/lib/labs/pulmolab/index.html').is_file()),
+    ('docs/lib/labs/pulmolab/media/cxr/ATTRIBUTION.json',
+     pathlib.Path('docs/lib/labs/pulmolab/media/cxr/ATTRIBUTION.json').is_file()),
     ('docs/.nojekyll', pathlib.Path('docs/.nojekyll').is_file()),
     ('raw_src منتشر نشده', not pathlib.Path('raw_src').exists()),
     # qbank/raw ورودی محلیِ git-ignore است (با qb_extract.py از بانک تک‌فایلی ساخته
@@ -138,20 +155,34 @@ checks = [
 # ---- هایلایت و اعتبار نویسنده در همهٔ صفحه‌های منتشرشده ----
 import re
 AUTHOR = 'مهدی محمدرحیمی'
+# دو ابزار بخش «آزمایشگاه تعاملی» خودبسنده‌اند و عمداً دست نمی‌خورند (مثل
+# tests/audit-library.py که آن‌ها را VENDORED می‌شناسد). اعتبار نویسندهٔ هر دو در
+# صفحهٔ میزبان docs/lib/labs/index.html و در labs-manifest.json آمده است.
+VENDORED = {'docs/lib/labs/cardiac/simulator.html'}
+VENDORED_DIRS = ('docs/lib/labs/pulmolab/',)
 no_credit, no_mark = [], []
 for f in sorted(pathlib.Path('docs/lib').rglob('*.html')):
+    rel = f.as_posix()
+    if rel in VENDORED or rel.startswith(VENDORED_DIRS):
+        continue
     t = f.read_text(encoding='utf-8', errors='replace')
     if not (re.search(r'نویسنده\s*[:：]', t) and AUTHOR in t) and not re.search(r'name="author"[^>]*' + AUTHOR, t):
         no_credit.append(str(f))
-    has_reader = 'medx-reader.js' in t
+    # موتور خواننده یا با <script src> لینک می‌شود یا (درسنامه‌های مغز و اعصاب)
+    # کامل درون خود فایل است؛ هر دو قبول است.
+    has_reader = bool(re.search(r'<script[^>]+src="[^"]*medx-reader\.js', t)
+                      or re.search(r'function\s+ensureMarksUI\b', t))
     has_lite = 'marks-lite' in t
     has_text = bool(re.search(r'class="sec__body"|class="sec-body"|class="content-section"'
                               r'|data-bank|qx__q|questionStem', t))
     if has_text and not (has_reader or has_lite):
         no_mark.append(str(f))
+host = pathlib.Path('docs/lib/labs/index.html').read_text(encoding='utf-8', errors='replace') \
+    if pathlib.Path('docs/lib/labs/index.html').is_file() else ''
 checks += [
     (f'اعتبار نویسنده در همهٔ docs/lib ({len(no_credit)} جاافتاده)', not no_credit),
     (f'هایلایت در همهٔ صفحه‌های متنی ({len(no_mark)} جاافتاده)', not no_mark),
+    ('اعتبار نویسندهٔ صفحهٔ میزبان آزمایشگاه‌ها', ('نویسنده' in host and AUTHOR in host)),
 ]
 for extra in (no_credit + no_mark)[:6]:
     print('    · ' + extra)
@@ -169,7 +200,7 @@ git init -q -b main 2>/dev/null || git checkout -q -b main
 git config user.name  >/dev/null 2>&1 || git config user.name  "${GIT_AUTHOR_NAME:-mmr363637-afk}"
 git config user.email >/dev/null 2>&1 || git config user.email "${GIT_AUTHOR_EMAIL:-mmr363637-afk@users.noreply.github.com}"
 git add -A
-git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۳۰۶ درسنامه، ۱۳ بخش آزمون، ۱٬۷۹۰ سؤال"
+git commit -q -m "init: کتابخانهٔ درسنامه‌های پزشکی — ۳۲۰ درسنامه، ۱۴ بخش آزمون، ۱٬۹۹۰ سؤال، ۲ آزمایشگاه"
 echo "   $(git rev-list --count HEAD) کامیت، $(git ls-tree -r --name-only HEAD | wc -l) فایل"
 
 cat <<'EOF'

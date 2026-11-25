@@ -65,8 +65,8 @@ for u in \
 done
 ```
 و بررسی کن که `manifest.json` این اعداد را داشته باشد:
-`counts.lessons = 306`، `counts.subjects = 13`، `qbank.total = 1790`، `qbank.parts` دقیقاً ۱۳ عضو،
-و `subjects[].key` شامل `surgery`، `heme`، `infectious`، `urology` و `ent` باشد
+`counts.lessons = 320`، `counts.subjects = 14`، `qbank.total = 1990`، `qbank.parts` دقیقاً ۱۴ عضو،
+و `subjects[].key` شامل `surgery`، `heme`، `infectious`، `urology`، `ent` و `neuro` باشد
 (و `onco` یا `id` **نباشد**).
 
 > ⚠️ اگر `base.css` مقدار ۴۰۴ داد، یعنی پوشهٔ `assets` در `lib/` کپی نشده —
@@ -104,12 +104,16 @@ done
 - ✅ اگر دسترسی `gh` نداری، بگو و از API استفاده کن؛ حدس نزن.
 
 ## معیار پذیرش
-- [ ] `.../lib/index.html` باز می‌شود و ۱۳ کارت درس + ۵ کارت «به‌زودی» دارد
+- [ ] `.../lib/index.html` باز می‌شود و ۱۴ کارت درس + ۴ کارت «به‌زودی» + نوار «آزمایشگاه تعاملی» دارد
 - [ ] `.../lib/surgery/23-cardiothoracic-surgery.html` با رنگ ناوی و فونت وزیرمتن باز می‌شود
 - [ ] `.../lib/urology/chapter-01.html` و `.../lib/ent/01-1-0-to-1-2-patient-approach-imaging-hematology.html`
       باز می‌شوند، هایلایت رنگی کار می‌کند و نوار پیوند کتابخانه در انتهای صفحه هست
-- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 1790`)
-- [ ] `.../lib/qbank/index.html` ۱۳ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
+- [ ] `.../lib/neurology/cerebrovascular-diseases.html` با رنگ ارجوانی (۲۹۲) باز می‌شود، هایلایت و
+      شیت «نشانه‌های من» کار می‌کند و نوار پیوند کتابخانه در انتهای صفحه هست
+- [ ] `.../lib/labs/index.html` دو کارت دارد و `.../lib/labs/pulmolab/index.html` (آزمایشگاه ریه)
+      باز می‌شود — سمع، اطلس رادیولوژی و اسپیرومتری کار می‌کنند
+- [ ] `.../lib/manifest.json` اعداد بالا را دارد (شامل `qbank.total = 1990`)
+- [ ] `.../lib/qbank/index.html` ۱۴ کارت آزمون دارد و شمارش هر کارت با manifest می‌خورد
 - [ ] یک آزمون در مرورگر باز می‌شود، با کلیک روی گزینه بازخورد («چرا؟»، «چرا بقیه غلط‌اند»، «نکتهٔ کلیدی») ظاهر می‌شود
 - [ ] نسخهٔ تک‌فایلی (`.../qbank/sur-1-standalone.html`) بدون اینترنت هم کار می‌کند
 - [ ] PR اتصال در `planner` باز است

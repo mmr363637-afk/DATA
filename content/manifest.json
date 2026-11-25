@@ -5,9 +5,9 @@
  "basePath": "",
  "index": "index.html",
  "counts": {
-  "subjects": 13,
-  "lessons": 306,
-  "minutes": 21512
+  "subjects": 14,
+  "lessons": 320,
+  "minutes": 22451
  },
  "subjects": [
   {
@@ -195,6 +195,20 @@
    "page": "subject/ent.html",
    "count": 32,
    "minutes": 569
+  },
+  {
+   "key": "neuro",
+   "name": "مغز و اعصاب",
+   "nameEn": "Neurology",
+   "icon": "🧠",
+   "hue": 292,
+   "chroma": 74,
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ],
+   "page": "subject/neuro.html",
+   "count": 14,
+   "minutes": 939
   }
  ],
  "lessons": [
@@ -5087,11 +5101,235 @@
    "appSubjectKeys": [
     "ent-goldenberg"
    ]
+  },
+  {
+   "id": "neurology/approach-to-neurologic-diagnosis-and-examination",
+   "subject": "neuro",
+   "title": "شرح حال و معاینه نورولوژیک",
+   "path": "neurology/approach-to-neurologic-diagnosis-and-examination.html",
+   "sections": 12,
+   "words": 8072,
+   "minutes": 82,
+   "flashcards": 5,
+   "tables": 7,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 1",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/diagnostic-tests-in-neurology",
+   "subject": "neuro",
+   "title": "بررسی‌های تشخیصی در نورولوژی",
+   "path": "neurology/diagnostic-tests-in-neurology.html",
+   "sections": 14,
+   "words": 5740,
+   "minutes": 63,
+   "flashcards": 5,
+   "tables": 8,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 2",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/stupor-and-coma",
+   "subject": "neuro",
+   "title": "کما",
+   "path": "neurology/stupor-and-coma.html",
+   "sections": 12,
+   "words": 5500,
+   "minutes": 61,
+   "flashcards": 5,
+   "tables": 10,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 3",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/confusional-states",
+   "subject": "neuro",
+   "title": "حالات گیجی و دلیریوم",
+   "path": "neurology/confusional-states.html",
+   "sections": 15,
+   "words": 6671,
+   "minutes": 70,
+   "flashcards": 5,
+   "tables": 12,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 4",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/dementia-and-cognitive-disorders",
+   "subject": "neuro",
+   "title": "دمانس و اختلالات حافظه",
+   "path": "neurology/dementia-and-cognitive-disorders.html",
+   "sections": 13,
+   "words": 5484,
+   "minutes": 61,
+   "flashcards": 5,
+   "tables": 9,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 5",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/headache-and-facial-pain",
+   "subject": "neuro",
+   "title": "سردرد و درد صورت",
+   "path": "neurology/headache-and-facial-pain.html",
+   "sections": 13,
+   "words": 6333,
+   "minutes": 67,
+   "flashcards": 5,
+   "tables": 10,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 6",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/disorders-of-vision",
+   "subject": "neuro",
+   "title": "اختلالات نوروافتالمولوژی",
+   "path": "neurology/disorders-of-vision.html",
+   "sections": 13,
+   "words": 6592,
+   "minutes": 69,
+   "flashcards": 5,
+   "tables": 16,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 7",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/dizziness-and-ataxia",
+   "subject": "neuro",
+   "title": "اختلالات تعادل",
+   "path": "neurology/dizziness-and-ataxia.html",
+   "sections": 13,
+   "words": 5982,
+   "minutes": 65,
+   "flashcards": 5,
+   "tables": 14,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 8",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/weakness-and-disorders-of-motor-function",
+   "subject": "neuro",
+   "title": "اختلالات حرکتی",
+   "path": "neurology/weakness-and-disorders-of-motor-function.html",
+   "sections": 21,
+   "words": 8497,
+   "minutes": 84,
+   "flashcards": 5,
+   "tables": 24,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 9",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/disorders-of-somatic-sensation",
+   "subject": "neuro",
+   "title": "اختلالات حسی",
+   "path": "neurology/disorders-of-somatic-sensation.html",
+   "sections": 18,
+   "words": 7351,
+   "minutes": 75,
+   "flashcards": 5,
+   "tables": 21,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 10",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/disorders-of-movement",
+   "subject": "neuro",
+   "title": "اختلالات حرکت",
+   "path": "neurology/disorders-of-movement.html",
+   "sections": 18,
+   "words": 5997,
+   "minutes": 65,
+   "flashcards": 5,
+   "tables": 13,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 11",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/seizures-and-syncope",
+   "subject": "neuro",
+   "title": "تشنج و سنکوپ",
+   "path": "neurology/seizures-and-syncope.html",
+   "sections": 16,
+   "words": 5782,
+   "minutes": 63,
+   "flashcards": 5,
+   "tables": 9,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 12",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/cerebrovascular-diseases",
+   "subject": "neuro",
+   "title": "سکته مغزی",
+   "path": "neurology/cerebrovascular-diseases.html",
+   "sections": 15,
+   "words": 5843,
+   "minutes": 63,
+   "flashcards": 5,
+   "tables": 11,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · فصل 13",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
+  },
+  {
+   "id": "neurology/appendix-clinical-examination",
+   "subject": "neuro",
+   "title": "پیوست: معاینه بالینی اعصاب محیطی منفرد",
+   "path": "neurology/appendix-clinical-examination.html",
+   "sections": 13,
+   "words": 4182,
+   "minutes": 51,
+   "flashcards": 5,
+   "tables": 5,
+   "mcq": 15,
+   "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill · پیوست",
+   "appSubjectKeys": [
+    "neurology-aminoff"
+   ]
   }
  ],
  "qbank": {
   "index": "qbank/index.html",
-  "total": 1790,
+  "total": 1990,
   "parts": [
    {
     "part": "women",
@@ -5196,6 +5434,14 @@
     "count": 200,
     "page": "qbank/ent.html",
     "standalone": "qbank/ent-standalone.html"
+   },
+   {
+    "part": "neuro",
+    "subject": "neuro",
+    "title": "مغز و اعصاب — نورولوژی بالینی",
+    "count": 200,
+    "page": "qbank/neuro.html",
+    "standalone": "qbank/neuro-standalone.html"
    }
   ]
  }

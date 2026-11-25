@@ -1,0 +1,140 @@
+[
+  {
+    "id": "ref-harrison-21",
+    "shortTitle": "Harrison's Internal Medicine (21st/22nd Ed.)",
+    "citation": "Loscalzo J, Fauci A, Kasper D, Hauser S, Longo D, Jameson JL, eds. Harrison's Principles of Internal Medicine. 21st ed. McGraw Hill; 2022 (and 22nd ed. updates).",
+    "category": "Textbook"
+  },
+  {
+    "id": "ref-murray-nadel",
+    "shortTitle": "Murray & Nadel's Respiratory Medicine (7th Ed.)",
+    "citation": "Broaddus VC, Ernst JD, King TE Jr, et al., eds. Murray & Nadel's Textbook of Respiratory Medicine. 7th ed. Elsevier; 2022.",
+    "category": "Textbook"
+  },
+  {
+    "id": "ref-gold-2025",
+    "shortTitle": "GOLD COPD Report (2025/2026)",
+    "citation": "Global Initiative for Chronic Obstructive Lung Disease (GOLD). Global Strategy for the Diagnosis, Management, and Prevention of Chronic Obstructive Pulmonary Disease. 2025/2026 Report.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-gina-2025",
+    "shortTitle": "GINA Asthma Report (2025/2026)",
+    "citation": "Global Initiative for Asthma (GINA). Global Strategy for Asthma Management and Prevention. 2025/2026 Update.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-ats-ers-pft-2022",
+    "shortTitle": "ERS/ATS PFT Interpretation Standard (2022)",
+    "citation": "Stanojevic S, Kaminsky DA, Miller MR, et al. ERS/ATS technical standard on interpretive strategies for routine lung function tests. Eur Respir J. 2022;60(1):2101499.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-ats-ers-spiro-2019",
+    "shortTitle": "ATS/ERS Standardization of Spirometry (2019)",
+    "citation": "Graham BL, Steenbruggen I, Miller MR, et al. Standardization of Spirometry 2019 Update. Am J Respir Crit Care Med. 2019;200(8):e70-e88.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-idsa-ats-cap-2019",
+    "shortTitle": "ATS/IDSA CAP Guideline (2019)",
+    "citation": "Metlay JP, Waterer GW, Long AC, et al. Diagnosis and Treatment of Adults with Community-acquired Pneumonia: Official Clinical Practice Guideline of the ATS and IDSA. Am J Respir Crit Care Med. 2019;200(7):e45-e67.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-idsa-hap-vap-2016",
+    "shortTitle": "IDSA/ATS HAP & VAP Guideline (2016)",
+    "citation": "Kalil AC, Metersky ML, Klompas M, et al. Management of Adults With Hospital-acquired and Ventilator-associated Pneumonia: 2016 Clinical Practice Guidelines by IDSA and ATS. Clin Infect Dis. 2016;63(5):e61-e111.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-who-tb-2024",
+    "shortTitle": "WHO Consolidated TB Guidelines (2024/2025)",
+    "citation": "World Health Organization. WHO Consolidated Guidelines on Tuberculosis: Module 3 (Diagnosis) & Module 4 (Treatment). Geneva: WHO; 2024.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-ats-ipf-2022",
+    "shortTitle": "ATS/ERS/JRS/ALAT IPF & PPF Guideline (2022)",
+    "citation": "Raghu G, Remy-Jardin M, Richeldi L, et al. Idiopathic Pulmonary Fibrosis (an Update) and Progressive Pulmonary Fibrosis in Adults. Am J Respir Crit Care Med. 2022;205(9):e18-e47.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-ats-sarcoid-2020",
+    "shortTitle": "ATS Sarcoidosis Guideline (2020)",
+    "citation": "Crouser ED, Maier LA, Wilson KC, et al. Diagnosis and Detection of Sarcoidosis: Official ATS Clinical Practice Guideline. Am J Respir Crit Care Med. 2020;201(8):e26-e51.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-esc-ers-pe-2019",
+    "shortTitle": "ESC/ERS Acute PE Guidelines (2019)",
+    "citation": "Konstantinides SV, Meyer G, Becattini C, et al. 2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism. Eur Heart J. 2020;41(4):543-603.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-esc-ers-ph-2022",
+    "shortTitle": "ESC/ERS Pulmonary Hypertension Guidelines (2022)",
+    "citation": "Humbert M, Kovacs G, Hoeper MM, et al. 2022 ESC/ERS Guidelines for the diagnosis and treatment of pulmonary hypertension. Eur Respir J. 2023;61(1):2200879.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-bts-pleural-2023",
+    "shortTitle": "BTS Pleural Disease Guideline (2023)",
+    "citation": "Roberts ME, Rahman NM, Maskell NA, et al. British Thoracic Society Guideline for pleural disease. Thorax. 2023;78(Suppl 3):s1-s42.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-esicm-ards-2023",
+    "shortTitle": "ESICM ARDS Guidelines & Global Definition (2023/2024)",
+    "citation": "Matthay MA, Arabi Y, Arroliga AC, et al. A New Global Definition of ARDS. Am J Respir Crit Care Med. 2024;209(1):37-47; Grasselli G et al. Intensive Care Med. 2023.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-fleischner-2017",
+    "shortTitle": "Fleischner Society Pulmonary Nodule Guidelines (2017)",
+    "citation": "MacMahon H, Naidich DP, Goo JM, et al. Guidelines for Management of Incidental Pulmonary Nodules Detected on CT Images. Radiology. 2017;284(1):228-243.",
+    "category": "Radiology"
+  },
+  {
+    "id": "ref-bates-exam",
+    "shortTitle": "Bates' Guide to Physical Examination (13th Ed.)",
+    "citation": "Bickley LS, Szilagyi PG, Hoffman RM, Soriano RP. Bates' Guide to Physical Examination and History Taking. 13th ed. Wolters Kluwer; 2021.",
+    "category": "Physical Exam"
+  },
+  {
+    "id": "ref-mcgee-ebd",
+    "shortTitle": "McGee Evidence-Based Physical Diagnosis (5th Ed.)",
+    "citation": "McGee S. Evidence-Based Physical Diagnosis. 5th ed. Elsevier; 2022.",
+    "category": "Physical Exam"
+  },
+  {
+    "id": "ref-aasm-osa",
+    "shortTitle": "AASM Adult OSA Clinical Guideline",
+    "citation": "Kapur VK, Auckley DH, Chowdhuri S, et al. Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea. J Clin Sleep Med. 2017;13(3):479-504.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-ers-bronchiectasis",
+    "shortTitle": "ERS Adult Bronchiectasis Guideline",
+    "citation": "Polverino E, Goeminne PC, McDonnell MJ, et al. ERS guidelines for the management of adult bronchiectasis. Eur Respir J. 2017;50(3):1700629.",
+    "category": "Guideline"
+  },
+  {
+    "id": "ref-kauh-2021",
+    "shortTitle": "KAUH Lung Sound Dataset (CC BY 4.0)",
+    "citation": "Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. A dataset of lung sounds recorded from the chest wall using an electronic stethoscope. Data in Brief. 2021;35:106913.",
+    "category": "Clinical Audio"
+  },
+  {
+    "id": "ref-sprsound-2022",
+    "shortTitle": "SPRSound Respiratory Database (CC BY 4.0)",
+    "citation": "Zhang Q, Qiu J, et al. SPRSound: Open-Source SJTU Paediatric Respiratory Sound Database. IEEE TBioCAS. 2022;16(5):867-881.",
+    "category": "Clinical Audio"
+  },
+  {
+    "id": "ref-bohadana-2014",
+    "shortTitle": "Bohadana et al. Fundamentals of Lung Auscultation (NEJM 2014)",
+    "citation": "Bohadana A, Izbicki G, Kraman SS. Fundamentals of lung auscultation. N Engl J Med. 2014;370(8):744-751.",
+    "category": "Review"
+  }
+]

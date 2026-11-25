@@ -1,0 +1,1268 @@
+{
+  "principles": {
+    "titleFa": "مبانی و محدودیت‌های تشخیصی اسپیرومتری و آزمون‌های عملکرد ریه (PFT)",
+    "distinctions": [
+      {
+        "stage": "۱. غربالگری (Screening) در برابر آزمون هدفمند",
+        "summaryFa": "اسپیرومتری غربالگری همگانی در بزرگسالان کاملاً بی‌علامت توصیه نمی‌شود (USPSTF)؛ اما در افراد دارای علائم تنفسی (تنگی نفس، سرفهٔ مزمن، خس‌خس) یا عوامل خطر قوی (مصرف سیگار >۱۰ پاکت-سال، مواجههٔ شغلی) ابزاری ضروری است."
+      },
+      {
+        "stage": "۲. تفسیر فیزیولوژیک (Physiological Interpretation)",
+        "summaryFa": "اسپیرومتری الگوهای مکانیکی جریان هوا را مشخص می‌کند (انسدادی، مطرح‌کنندهٔ محدودکننده، یا مختلط)، نه تشخیص بافتی یا اتیولوژیک! کاهش FVC با نسبت FEV1/FVC طبیعی تنها «مطرح‌کنندهٔ محدودیت» است و برای اثبات الگوی محدودکنندهٔ واقعی، اندازه‌گیری حجم‌های ریوی و اثبات کاهش TLC زیر حد پایین طبیعی (LLN) الزامی است — زیرا احتباس هوای شدید (Pseudo-restriction) نیز می‌تواند FVC را کاهش دهد."
+      },
+      {
+        "stage": "۳. تشخیص قطعی بالینی (Definitive Diagnosis)",
+        "summaryFa": "تشخیص قطعی نیازمند تلفیق PFT با شرح‌حال، معاینه، تصویربرداری و آزمون‌های تکمیلی است. اسپیرومتری پایه بین حملات آسم می‌تواند کاملاً طبیعی باشد و آسم را رد نمی‌کند؛ همچنین در آمبولی ریه یا پرفشاری خون ریوی، اسپیرومتری و TLC معمولاً طبیعی‌اند و تنها DLCO کاهش می‌یابد."
+      },
+      {
+        "stage": "۴. استاندارد ATS/ERS 2022 در برابر نسبت ثابت GOLD",
+        "summaryFa": "استاندارد ATS/ERS 2022 استفاده از Z-score (LLN = صدک پنجم، Z < -1.645 بر اساس GLI) و پاسخ برونکودیلاتور (>۱۰٪ مقدار پیش‌بینی‌شدهٔ FEV1 یا FVC) را توصیه می‌کند؛ در حالی که GOLD همچنان نسبت ثابت FEV1/FVC پس از برونکودیلاتور <0.70 را برای COPD حفظ کرده است (توجه: نسبت ثابت ۰٫۷۰ در سالمندان می‌تواند بیش‌تشخیصی و در جوانان کم‌تشخیصی ایجاد کند)."
+      }
+    ]
+  },
+  "patterns": [
+    {
+      "id": "pft-normal",
+      "nameFa": "الگوی طبیعی عملکرد ریه (Normal PFT)",
+      "nameEn": "Normal Spirometry, Lung Volumes & DLCO",
+      "patternType": "normal",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بزرگسال سالم ۴۵ ساله (قد ۱۷۵ سانتی‌متر، غیرسیگاری) بدون علائم تنفسی.",
+      "metrics": {
+        "fev1": {
+          "value": 3.82,
+          "pred": 3.75,
+          "pctPred": 102,
+          "zScore": 0.18,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 4.78,
+          "pred": 4.72,
+          "pctPred": 101,
+          "zScore": 0.12,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 80,
+          "lln": 71,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 9.1,
+          "pred": 8.9,
+          "pctPred": 102,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 3.9,
+          "pctPred": 98,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 3,
+        "tlc": {
+          "value": 6.4,
+          "pctPred": 100,
+          "zScore": 0.0,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.62,
+          "pctPred": 96,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 3.25,
+          "pctPred": 99,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 25,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 29.4,
+          "pctPred": 101,
+          "zScore": 0.1,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 100,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 4.78,
+        "pef": 9.1,
+        "concavity": 0.05,
+        "inspPeak": 6.8,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 4.84,
+        "postPef": 9.3,
+        "postConcavity": 0.04
+      },
+      "interpretationFa": "نسبت FEV1/FVC (۸۰٪) بالای LLN و ۰٫۷۰ است. FEV1، FVC، TLC و DLCO همگی در محدودهٔ طبیعی قرار دارند و پاسخ برونکودیلاتور منفی است.",
+      "keyFeaturesFa": [
+        "قلهٔ سریع و تیز PEF",
+        "شاخهٔ نزولی بازدمی تقریباً مستقیم",
+        "FEV1/FVC طبیعی (>LLN)",
+        "TLC، RV و DLCO طبیعی"
+      ],
+      "relatedDiseaseIds": [],
+      "referenceIds": [
+        "ref-ats-ers-pft-2022",
+        "ref-ats-ers-spiro-2019"
+      ]
+    },
+    {
+      "id": "pft-copd-gold2",
+      "nameFa": "الگوی انسدادی غیرقابل‌برگشت با افت DLCO (COPD GOLD 2)",
+      "nameEn": "Moderate Non-Reversible Obstruction (COPD GOLD 2)",
+      "patternType": "obstructive",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۶۲ ساله با ۴۰ پاکت-سال سیگار و تنگی نفس کوششی پیشرونده.",
+      "metrics": {
+        "fev1": {
+          "value": 2.04,
+          "pred": 3.2,
+          "pctPred": 64,
+          "zScore": -2.75,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 3.72,
+          "pred": 4.1,
+          "pctPred": 91,
+          "zScore": -0.7,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 55,
+          "lln": 68,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 5.2,
+          "pred": 8.1,
+          "pctPred": 64,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 0.95,
+          "pctPred": 31,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 4,
+        "tlc": {
+          "value": 6.95,
+          "pctPred": 112,
+          "zScore": 1.1,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 3.23,
+          "pctPred": 145,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 4.4,
+          "pctPred": 128,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 46,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 15.6,
+          "pctPred": 58,
+          "zScore": -2.9,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 61,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 3.72,
+        "pef": 5.2,
+        "concavity": 0.62,
+        "inspPeak": 5.4,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 3.8,
+        "postPef": 5.5,
+        "postConcavity": 0.58
+      },
+      "interpretationFa": "انسداد متوسط غیرقابل‌برگشت (FEV1/FVC = 55%، FEV1 = 64% pred، پاسخ BD = +4%). تقعر بازدمی واضح (Scooping)، افزایش RV (احتباس هوا) و افت DLCO (۵۸٪) نشان‌دهندهٔ جزء آمفیزمی است.",
+      "keyFeaturesFa": [
+        "FEV1/FVC پس از برونکودیلاتور < 0.70 و زیر LLN",
+        "تقعر بازدمی واضح (Scooping)",
+        "پاسخ برونکودیلاتور منفی",
+        "افت DLCO و KCO به نفع تخریب آمفیزمی"
+      ],
+      "relatedDiseaseIds": [
+        "dis-copd",
+        "dis-aatd"
+      ],
+      "referenceIds": [
+        "ref-gold-2025",
+        "ref-ats-ers-pft-2022"
+      ]
+    },
+    {
+      "id": "pft-copd-gold3-airtrap",
+      "nameFa": "الگوی انسدادی شدید با احتباس هوا و پرهوایی (COPD GOLD 3)",
+      "nameEn": "Severe Obstruction with Air Trapping (COPD GOLD 3)",
+      "patternType": "obstructive",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۶۸ ساله با COPD پیشرفته و تشدیدهای مکرر.",
+      "metrics": {
+        "fev1": {
+          "value": 1.18,
+          "pred": 3.02,
+          "pctPred": 39,
+          "zScore": -4.15,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 2.74,
+          "pred": 3.95,
+          "pctPred": 69,
+          "zScore": -2.35,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 43,
+          "lln": 67,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 3.4,
+          "pred": 7.8,
+          "pctPred": 44,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 0.42,
+          "pctPred": 15,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 5,
+        "tlc": {
+          "value": 7.75,
+          "pctPred": 128,
+          "zScore": 2.4,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 5.01,
+          "pctPred": 215,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 5.65,
+          "pctPred": 162,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 65,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 11.2,
+          "pctPred": 44,
+          "zScore": -3.9,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 51,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 2.74,
+        "pef": 3.4,
+        "concavity": 0.84,
+        "inspPeak": 4.2,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 2.86,
+        "postPef": 3.7,
+        "postConcavity": 0.8
+      },
+      "interpretationFa": "انسداد شدید (GOLD 3). نکتهٔ حیاتی: گرچه FVC به ۶۹٪ کاهش یافته، اما TLC = 128% و RV = 215% است؛ بنابراین محدودیت واقعی وجود ندارد و کاهش FVC صرفاً «محدودیت کاذب» (Pseudo-restriction) ناشی از احتباس شدید هواست.",
+      "keyFeaturesFa": [
+        "تقعر عمیق بازدمی (Dog-leg)",
+        "محدودیت کاذب FVC در حضور TLC بالا (۱۲۸٪)",
+        "RV/TLC = 65%",
+        "افت شدید DLCO (۴۴٪)"
+      ],
+      "relatedDiseaseIds": [
+        "dis-copd",
+        "dis-resp-failure",
+        "dis-aatd"
+      ],
+      "referenceIds": [
+        "ref-gold-2025",
+        "ref-ats-ers-pft-2022"
+      ]
+    },
+    {
+      "id": "pft-asthma-reversible",
+      "nameFa": "الگوی انسدادی با پاسخ مثبت برونکودیلاتور (آسم برونکیال)",
+      "nameEn": "Reversible Obstruction (Asthma)",
+      "patternType": "obstructive",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۲۸ ساله با خس‌خس شبانه و سرفهٔ پس از ورزش؛ پیش و پس از ۴۰۰ میکروگرم سالبوتامول.",
+      "metrics": {
+        "fev1": {
+          "value": 2.52,
+          "pred": 3.6,
+          "pctPred": 70,
+          "zScore": -2.4,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 4.08,
+          "pred": 4.35,
+          "pctPred": 94,
+          "zScore": -0.5,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 62,
+          "lln": 73,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 5.8,
+          "pred": 8.4,
+          "pctPred": 69,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 1.65,
+          "pctPred": 44,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 16,
+        "tlc": {
+          "value": 5.65,
+          "pctPred": 101,
+          "zScore": 0.1,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.57,
+          "pctPred": 106,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.9,
+          "pctPred": 102,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 28,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 31.8,
+          "pctPred": 112,
+          "zScore": 0.85,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 114,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 4.08,
+        "pef": 5.8,
+        "concavity": 0.52,
+        "inspPeak": 6.2,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 4.32,
+        "postPef": 7.9,
+        "postConcavity": 0.12
+      },
+      "interpretationFa": "انسداد پایه با پاسخ قوی پس از سالبوتامول (افزایش FEV1 به میزان +۱۶٪ پیش‌بینی‌شده / +۵۸۰ میلی‌لیتر — مثبت در هر دو معیار GINA و ATS/ERS 2022). DLCO طبیعی تا کمی بالا (۱۱۲٪) به افتراق از آمفیزم کمک می‌کند.",
+      "keyFeaturesFa": [
+        "پاسخ قوی برونکودیلاتور (>۱۰٪ pred و >۱۲٪/۲۰۰mL)",
+        "بهبود چشمگیر تقعر در منحنی پس از سالبوتامول",
+        "DLCO طبیعی یا بالا (۱۱۲٪)"
+      ],
+      "relatedDiseaseIds": [
+        "dis-asthma"
+      ],
+      "referenceIds": [
+        "ref-gina-2025",
+        "ref-ats-ers-pft-2022"
+      ]
+    },
+    {
+      "id": "pft-asthma-normal-interictal",
+      "nameFa": "اسپیرومتری طبیعی بین‌حمله‌ای در آسم (محدودیت تشخیصی)",
+      "nameEn": "Normal Interictal Spirometry in Asthma",
+      "patternType": "normal",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۲۴ ساله با سرفهٔ شبانه و تنگی نفس در هوای سرد؛ مراجعه در زمان بی‌علامت.",
+      "metrics": {
+        "fev1": {
+          "value": 3.45,
+          "pred": 3.55,
+          "pctPred": 97,
+          "zScore": -0.25,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 4.28,
+          "pred": 4.3,
+          "pctPred": 100,
+          "zScore": -0.05,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 81,
+          "lln": 74,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 8.2,
+          "pred": 8.4,
+          "pctPred": 98,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 3.4,
+          "pctPred": 90,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 5,
+        "tlc": {
+          "value": 5.5,
+          "pctPred": 99,
+          "zScore": -0.1,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.22,
+          "pctPred": 95,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.72,
+          "pctPred": 98,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 22,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 29.8,
+          "pctPred": 104,
+          "zScore": 0.3,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 105,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 4.28,
+        "pef": 8.2,
+        "concavity": 0.08,
+        "inspPeak": 6.5,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 4.34,
+        "postPef": 8.5,
+        "postConcavity": 0.05
+      },
+      "interpretationFa": "اسپیرومتری پایه بین حملات کاملاً طبیعی است، اما آسم را رد نمی‌کند! گام بعدی: ثبت دوهفته‌ای نوسان PEF (>۱۰٪)، تست تحریک با متاکولین یا تکرار اسپیرومتری هنگام علائم.",
+      "keyFeaturesFa": [
+        "تلهٔ آموزشی: اسپیرومتری طبیعی بین حملات آسم را رد نمی‌کند",
+        "قدم بعدی: متاکولین چلنج یا پایش PEF",
+        "کمک FeNO در التهاب ائوزینوفیلیک"
+      ],
+      "relatedDiseaseIds": [
+        "dis-asthma"
+      ],
+      "referenceIds": [
+        "ref-gina-2025",
+        "ref-ats-ers-pft-2022"
+      ]
+    },
+    {
+      "id": "pft-ild-ipf",
+      "nameFa": "الگوی محدودکنندهٔ پارانشیمی با افت شدید DLCO (IPF)",
+      "nameEn": "Intrinsic Parenchymal Restrictive Pattern (IPF)",
+      "patternType": "restrictive",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۶۶ ساله با تنگی نفس کوششی مزمن، سرفهٔ خشک و کراکل‌های ولکرو دوطرفه.",
+      "metrics": {
+        "fev1": {
+          "value": 2.18,
+          "pred": 3.1,
+          "pctPred": 70,
+          "zScore": -2.45,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 2.48,
+          "pred": 3.98,
+          "pctPred": 62,
+          "zScore": -3.1,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 88,
+          "lln": 68,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 7.6,
+          "pred": 7.9,
+          "pctPred": 96,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 3.35,
+          "pctPred": 106,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 1,
+        "tlc": {
+          "value": 4.02,
+          "pctPred": 64,
+          "zScore": -3.35,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.54,
+          "pctPred": 68,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.25,
+          "pctPred": 66,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 38,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 10.4,
+          "pctPred": 41,
+          "zScore": -4.2,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 64,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 2.48,
+        "pef": 7.6,
+        "concavity": -0.15,
+        "inspPeak": 5.6,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 2.5,
+        "postPef": 7.7,
+        "postConcavity": -0.15
+      },
+      "interpretationFa": "محدودیت حقیقی تاییدشده (TLC = 64%، Z = -3.35)، نسبت FEV1/FVC بالا (۸۸٪) به علت افزایش کشش ارتجاعی بافت فیبروتیک، حلقهٔ باریک و بلند (Witch's Hat) و افت شدید هم‌زمان DLCO (۴۱٪) و KCO (۶۴٪) به نفع درگیری پارانشیمی.",
+      "keyFeaturesFa": [
+        "تایید محدودیت واقعی با TLC زیر LLN",
+        "FEV1/FVC طبیعی یا بالا (۸۸٪)",
+        "حلقهٔ باریک و مرتفع (Witch's Hat)",
+        "افت شدید DLCO و KCO"
+      ],
+      "relatedDiseaseIds": [
+        "dis-ipf",
+        "dis-hp",
+        "dis-asbestosis",
+        "dis-sarcoidosis"
+      ],
+      "referenceIds": [
+        "ref-ats-ipf-2022",
+        "ref-ats-ers-pft-2022"
+      ]
+    },
+    {
+      "id": "pft-extrathoracic-restrictive",
+      "nameFa": "الگوی محدودکنندهٔ خارج‌پارانشیمی با KCO بالا (عصبی-عضلانی / دیوارهٔ سینه)",
+      "nameEn": "Extraparenchymal Restrictive Pattern",
+      "patternType": "restrictive",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۵۲ ساله با کیفواسکولیوز یا ضعف عضلات تنفسی و ارتوپنه.",
+      "metrics": {
+        "fev1": {
+          "value": 2.02,
+          "pred": 3.05,
+          "pctPred": 66,
+          "zScore": -2.7,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 2.45,
+          "pred": 3.78,
+          "pctPred": 65,
+          "zScore": -2.85,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 82,
+          "lln": 70,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 5.4,
+          "pred": 7.6,
+          "pctPred": 71,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 2.6,
+          "pctPred": 85,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 2,
+        "tlc": {
+          "value": 4.1,
+          "pctPred": 68,
+          "zScore": -2.9,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.65,
+          "pctPred": 96,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.4,
+          "pctPred": 78,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 40,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 22.8,
+          "pctPred": 86,
+          "zScore": -0.95,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 124,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 2.45,
+        "pef": 5.4,
+        "concavity": 0.02,
+        "inspPeak": 3.9,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 2.48,
+        "postPef": 5.5,
+        "postConcavity": 0.02
+      },
+      "interpretationFa": "محدودیت حقیقی (TLC = 68%) با DLCO نسبتاً حفظ‌شده (۸۶٪) و KCO بالا (۱۲۴٪)؛ زیرا غشای آلوئولار-مویرگی سالم است و اختلال در پمپ تنفسی یا دیوارهٔ قفسهٔ سینه قرار دارد.",
+      "keyFeaturesFa": [
+        "کاهش TLC و FVC با FEV1/FVC طبیعی",
+        "حفظ DLCO و افزایش KCO (>۱۰۰٪) — کلید افتراق از ILD",
+        "ارزش MIP/MEP و افت >۲۰٪ FVC طاق‌باز"
+      ],
+      "relatedDiseaseIds": [
+        "dis-resp-failure",
+        "dis-pleural-effusion"
+      ],
+      "referenceIds": [
+        "ref-ats-ers-pft-2022",
+        "ref-murray-nadel"
+      ]
+    },
+    {
+      "id": "pft-mixed-copd-chf",
+      "nameFa": "الگوی مختلط انسدادی + محدودکننده (COPD + CHF / CPFE)",
+      "nameEn": "Mixed Obstructive & Restrictive Defect",
+      "patternType": "mixed",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۷۱ ساله با هم‌ابتلایی COPD و نارسایی قلبی مزمن (یا CPFE).",
+      "metrics": {
+        "fev1": {
+          "value": 1.38,
+          "pred": 2.88,
+          "pctPred": 48,
+          "zScore": -3.65,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 2.38,
+          "pred": 3.72,
+          "pctPred": 64,
+          "zScore": -2.95,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 58,
+          "lln": 67,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 4.0,
+          "pred": 7.4,
+          "pctPred": 54,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 0.65,
+          "pctPred": 24,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 6,
+        "tlc": {
+          "value": 4.42,
+          "pctPred": 71,
+          "zScore": -2.45,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 2.04,
+          "pctPred": 88,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.8,
+          "pctPred": 80,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 46,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 10.2,
+          "pctPred": 42,
+          "zScore": -4.1,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 58,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 2.38,
+        "pef": 4.0,
+        "concavity": 0.58,
+        "inspPeak": 4.3,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 2.48,
+        "postPef": 4.3,
+        "postConcavity": 0.54
+      },
+      "interpretationFa": "الگوی مختلط واقعی: هم FEV1/FVC زیر LLN (۵۸٪) و هم TLC زیر LLN (۷۱٪، Z = -2.45). برای افتراق از Pseudo-restriction اندازه‌گیری TLC الزامی است.",
+      "keyFeaturesFa": [
+        "کاهش هم‌زمان FEV1/FVC و TLC زیر LLN",
+        "حلقه هم باریک و هم مقعر در بازدم",
+        "شایع در COPD + CHF، سارکوئیدوز، برونشکتازی و CPFE"
+      ],
+      "relatedDiseaseIds": [
+        "dis-copd",
+        "dis-pulmonary-edema",
+        "dis-sarcoidosis",
+        "dis-bronchiectasis"
+      ],
+      "referenceIds": [
+        "ref-ats-ers-pft-2022",
+        "ref-harrison-21"
+      ]
+    },
+    {
+      "id": "pft-fixed-uao",
+      "nameFa": "انسداد ثابت راه هوایی فوقانی (تنگی تراشه)",
+      "nameEn": "Fixed Upper Airway Obstruction",
+      "patternType": "upper_airway",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۵۴ ساله با سابقهٔ انتوباسیون طولانی و استریدور دوفازی.",
+      "metrics": {
+        "fev1": {
+          "value": 2.3,
+          "pred": 3.4,
+          "pctPred": 68,
+          "zScore": -2.5,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 4.1,
+          "pred": 4.25,
+          "pctPred": 96,
+          "zScore": -0.3,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 56,
+          "lln": 70,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 2.6,
+          "pred": 8.4,
+          "pctPred": 31,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 2.5,
+          "pctPred": 72,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 1,
+        "tlc": {
+          "value": 5.85,
+          "pctPred": 100,
+          "zScore": 0.0,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.75,
+          "pctPred": 99,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 3.05,
+          "pctPred": 100,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 30,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 27.5,
+          "pctPred": 98,
+          "zScore": -0.1,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 98,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 4.1,
+        "pef": 8.0,
+        "concavity": 0.05,
+        "inspPeak": 6.2,
+        "expCap": 2.6,
+        "inspCap": 2.5,
+        "postFvc": 4.12,
+        "postPef": 8.0,
+        "postConcavity": 0.05
+      },
+      "interpretationFa": "تخت‌شدگی جعبه‌ای (Box-like plateau) هم‌زمان هر دو شاخهٔ دمی و بازدمی به علت ضایعهٔ سفت و ثابت تراشه؛ افت شدید PEF نسبت به FEV1 (Empey Index > 8–10).",
+      "keyFeaturesFa": [
+        "پلاتوی جعبه‌ای هم‌زمان در دم و بازدم",
+        "Empey Index > 8–10",
+        "پاسخ منفی به برونکودیلاتور"
+      ],
+      "relatedDiseaseIds": [
+        "dis-tracheal-stenosis",
+        "dis-lung-cancer"
+      ],
+      "referenceIds": [
+        "ref-ats-ers-pft-2022",
+        "ref-murray-nadel"
+      ]
+    },
+    {
+      "id": "pft-variable-extrathoracic",
+      "nameFa": "انسداد متغیر خارج‌قفسه‌سینه‌ای (فلج تار صوتی / VCD)",
+      "nameEn": "Variable Extrathoracic Obstruction",
+      "patternType": "upper_airway",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۳۸ ساله با استریدور دمی پس از تیروئیدکتومی یا با VCD.",
+      "metrics": {
+        "fev1": {
+          "value": 3.12,
+          "pred": 3.3,
+          "pctPred": 95,
+          "zScore": -0.4,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 3.92,
+          "pred": 4.02,
+          "pctPred": 98,
+          "zScore": -0.2,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 80,
+          "lln": 72,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 7.6,
+          "pred": 8.1,
+          "pctPred": 94,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 3.3,
+          "pctPred": 95,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 2,
+        "tlc": {
+          "value": 5.4,
+          "pctPred": 99,
+          "zScore": -0.1,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.48,
+          "pctPred": 97,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.8,
+          "pctPred": 98,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 27,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 27.9,
+          "pctPred": 100,
+          "zScore": 0.0,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 101,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 3.92,
+        "pef": 7.6,
+        "concavity": 0.05,
+        "inspPeak": 6.0,
+        "expCap": null,
+        "inspCap": 2.3,
+        "postFvc": 3.94,
+        "postPef": 7.7,
+        "postConcavity": 0.05
+      },
+      "interpretationFa": "تخت‌شدگی اختصاصی شاخهٔ دمی با شاخهٔ بازدمی طبیعی (FEF50/FIF50 > 1). در دم، فشار منفی داخل تراشهٔ گردنی مجرای متغیر را به داخل می‌کشد.",
+      "keyFeaturesFa": [
+        "تخت‌شدگی شاخهٔ دمی حلقه",
+        "اعداد FEV1 و FVC می‌توانند طبیعی باشند!",
+        "علل: فلج تار صوتی، VCD"
+      ],
+      "relatedDiseaseIds": [
+        "dis-tracheal-stenosis",
+        "dis-asthma"
+      ],
+      "referenceIds": [
+        "ref-ats-ers-pft-2022",
+        "ref-murray-nadel"
+      ]
+    },
+    {
+      "id": "pft-variable-intrathoracic",
+      "nameFa": "انسداد متغیر داخل‌قفسه‌سینه‌ای (تراکئومالاسی / تودهٔ مدیاستن)",
+      "nameEn": "Variable Intrathoracic Obstruction",
+      "patternType": "upper_airway",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۶۰ ساله با تودهٔ پارااتراکئال مدیاستن یا تراکئومالاسی داخل‌قفسه‌سینه‌ای.",
+      "metrics": {
+        "fev1": {
+          "value": 2.28,
+          "pred": 3.25,
+          "pctPred": 70,
+          "zScore": -2.3,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 4.02,
+          "pred": 4.12,
+          "pctPred": 98,
+          "zScore": -0.2,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 57,
+          "lln": 69,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 2.7,
+          "pred": 8.1,
+          "pctPred": 33,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 2.6,
+          "pctPred": 78,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 1,
+        "tlc": {
+          "value": 5.78,
+          "pctPred": 100,
+          "zScore": 0.0,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.76,
+          "pctPred": 101,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.98,
+          "pctPred": 99,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 30,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 26.8,
+          "pctPred": 97,
+          "zScore": -0.2,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 97,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 4.02,
+        "pef": 7.9,
+        "concavity": 0.05,
+        "inspPeak": 5.8,
+        "expCap": 2.7,
+        "inspCap": null,
+        "postFvc": 4.04,
+        "postPef": 7.9,
+        "postConcavity": 0.05
+      },
+      "interpretationFa": "تخت‌شدگی اختصاصی شاخهٔ بازدمی با شاخهٔ دمی طبیعی (FEF50/FIF50 < 1). در بازدم فشار مثبت پلورال تراشهٔ داخل‌قفسه‌سینه‌ای را کلاپس می‌کند.",
+      "keyFeaturesFa": [
+        "پلاتو در شاخهٔ بازدمی بدون تقعر راه‌های هوایی کوچک",
+        "شاخهٔ دمی حفظ‌شده",
+        "علل: تراکئومالاسی، تومور تراشهٔ تحتانی/مدیاستن"
+      ],
+      "relatedDiseaseIds": [
+        "dis-tracheal-stenosis",
+        "dis-lung-cancer"
+      ],
+      "referenceIds": [
+        "ref-ats-ers-pft-2022",
+        "ref-murray-nadel"
+      ]
+    },
+    {
+      "id": "pft-isolated-low-dlco",
+      "nameFa": "کاهش ایزولهٔ DLCO با اسپیرومتری و حجم‌های طبیعی (بیماری عروقی ریه)",
+      "nameEn": "Isolated Reduction in DLCO (PAH / CTEPH)",
+      "patternType": "vascular",
+      "sourceType": "synthetic_educational_model",
+      "clinicalContextFa": "بیمار ۴۹ ساله با تنگی نفس کوششی پیشرونده، CXR تقریباً طبیعی و سابقهٔ DVT قدیمی.",
+      "metrics": {
+        "fev1": {
+          "value": 3.1,
+          "pred": 3.18,
+          "pctPred": 97,
+          "zScore": -0.2,
+          "unit": "L"
+        },
+        "fvc": {
+          "value": 3.92,
+          "pred": 3.98,
+          "pctPred": 98,
+          "zScore": -0.15,
+          "unit": "L"
+        },
+        "fev1Fvc": {
+          "value": 79,
+          "lln": 70,
+          "unit": "%"
+        },
+        "pef": {
+          "value": 7.8,
+          "pred": 7.9,
+          "pctPred": 99,
+          "unit": "L/s"
+        },
+        "fef2575": {
+          "value": 3.1,
+          "pctPred": 93,
+          "unit": "L/s"
+        },
+        "postBdChangePctPred": 2,
+        "tlc": {
+          "value": 5.65,
+          "pctPred": 99,
+          "zScore": -0.1,
+          "unit": "L"
+        },
+        "rv": {
+          "value": 1.73,
+          "pctPred": 100,
+          "unit": "L"
+        },
+        "frc": {
+          "value": 2.95,
+          "pctPred": 99,
+          "unit": "L"
+        },
+        "rvTlc": {
+          "value": 31,
+          "unit": "%"
+        },
+        "dlco": {
+          "value": 13.8,
+          "pctPred": 52,
+          "zScore": -3.4,
+          "unit": "mL/min/mmHg"
+        },
+        "kco": {
+          "value": 54,
+          "unit": "% pred"
+        }
+      },
+      "loopParams": {
+        "fvc": 3.92,
+        "pef": 7.8,
+        "concavity": 0.05,
+        "inspPeak": 6.1,
+        "expCap": null,
+        "inspCap": null,
+        "postFvc": 3.96,
+        "postPef": 7.9,
+        "postConcavity": 0.05
+      },
+      "interpretationFa": "اسپیرومتری و حجم‌ها کاملاً طبیعی‌اند اما DLCO (۵۲٪) و KCO به‌شدت پایین‌اند! علل کلیدی: ۱) PAH/CTEPH، ۲) کم‌خونی (همیشه برای Hb تصحیح شود)، ۳) ILD زودرس، ۴) آمفیزم زودرس، ۵) CPFE.",
+      "keyFeaturesFa": [
+        "اسپیرومتری و TLC طبیعی با افت واضح DLCO و KCO",
+        "الزام تصحیح DLCO برای هموگلوبین",
+        "زنگ خطر برای PAH، CTEPH و اسکلرودرمی"
+      ],
+      "relatedDiseaseIds": [
+        "dis-ph",
+        "dis-pe",
+        "dis-ipf"
+      ],
+      "referenceIds": [
+        "ref-esc-ers-ph-2022",
+        "ref-ats-ers-pft-2022"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pft-ex-1",
+      "patternId": "pft-copd-gold3-airtrap",
+      "vignetteFa": "مرد ۶۸ سالهٔ سیگاری: FEV1 = 39%، FVC = 69%، FEV1/FVC = 43% پس از BD، TLC = 128%، RV = 215% و DLCO = 44%.",
+      "questionFa": "دقیق‌ترین تفسیر فیزیولوژیک چیست؟",
+      "options": [
+        "الگوی مختلط انسدادی و محدودکننده",
+        "انسداد شدید همراه با احتباس هوا و پرهوایی (کاهش FVC محدودیت کاذب است)",
+        "محدودیت خالص پارانشیمی",
+        "انسداد ثابت راه هوایی فوقانی"
+      ],
+      "correctIndex": 1,
+      "explanationFa": "چون TLC بالا (۱۲۸٪) است، محدودیت واقعی وجود ندارد و کاهش FVC ناشی از احتباس شدید هوا (Pseudo-restriction) است."
+    },
+    {
+      "id": "pft-ex-2",
+      "patternId": "pft-extrathoracic-restrictive",
+      "vignetteFa": "بیمار ۵۲ ساله با ارتوپنه: FEV1 = 66%، FVC = 65%، FEV1/FVC = 82%، TLC = 68%، DLCO = 86% و KCO = 124%.",
+      "questionFa": "کدام یافته علت خارج‌پارانشیمی را از ILD افتراق می‌دهد؟",
+      "options": [
+        "کاهش TLC زیر ۸۰٪",
+        "FEV1/FVC بالای ۸۰٪",
+        "حفظ نسبی DLCO همراه با افزایش KCO (>100% pred)",
+        "پاسخ منفی به برونکودیلاتور"
+      ],
+      "correctIndex": 2,
+      "explanationFa": "در محدودیت خارج‌پارانشیمی غشای آلوئولار-مویرگی سالم است لذا KCO طبیعی یا بالا می‌ماند، برخلاف ILD که هر دو کاهش می‌یابند."
+    },
+    {
+      "id": "pft-ex-3",
+      "patternId": "pft-isolated-low-dlco",
+      "vignetteFa": "زن ۴۹ ساله با تنگی نفس کوششی: FEV1 = 97%، FVC = 98%، TLC = 99%، هموگلوبین طبیعی، اما DLCO = 52%.",
+      "questionFa": "کدام تشخیص در صدر ارزیابی تکمیلی است؟",
+      "options": [
+        "آسم خفیف بین‌حمله‌ای",
+        "پرفشاری خون ریوی (PAH یا CTEPH)",
+        "فلج تار صوتی",
+        "برونشیت مزمن ساده"
+      ],
+      "correctIndex": 1,
+      "explanationFa": "کاهش ایزولهٔ DLCO با هموگلوبین طبیعی سرنخ کلاسیک بیماری عروقی ریه (PAH/CTEPH) است."
+    },
+    {
+      "id": "pft-ex-4",
+      "patternId": "pft-variable-extrathoracic",
+      "vignetteFa": "زن ۳۸ ساله با تنگی نفس حاد دوره‌ای مقاوم به سالبوتامول: FEV1 = 95%، FVC = 98%، اما شاخهٔ دمی حلقهٔ جریان-حجم تخت شده است.",
+      "questionFa": "محل و نوع انسداد کدام است؟",
+      "options": [
+        "انسداد متغیر خارج‌قفسه‌سینه‌ای (VCD یا فلج تار صوتی)",
+        "انسداد متغیر داخل‌قفسه‌سینه‌ای",
+        "انسداد راه‌های هوایی کوچک",
+        "محدودیت پارانشیمی"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "در دم، فشار منفی داخل تراشهٔ گردنی بخش متغیر خارج‌قفسه‌سینه‌ای را به داخل می‌کشد و شاخهٔ دمی را تخت می‌کند."
+    },
+    {
+      "id": "pft-ex-5",
+      "patternId": "pft-asthma-reversible",
+      "vignetteFa": "جوان ۲۸ ساله: FEV1 پایه ۷۰٪ و FEV1/FVC = 62%؛ پس از سالبوتامول افزایش +۱۶٪ pred در FEV1 و DLCO = 112%.",
+      "questionFa": "تفسیر دقیق کدام است؟",
+      "options": [
+        "پاسخ برونکودیلاتور منفی (به نفع IPF)",
+        "انسداد برگشت‌پذیر تیپیک آسم؛ DLCO بالا تخریب آمفیزمی را رد می‌کند",
+        "انسداد ثابت تراشه",
+        "خطای تکنیکی"
+      ],
+      "correctIndex": 1,
+      "explanationFa": "افزایش >۱۰٪ pred در FEV1 همراه با DLCO طبیعی/بالا الگوی کلاسیک آسم برونکیال است."
+    },
+    {
+      "id": "pft-ex-6",
+      "patternId": "pft-mixed-copd-chf",
+      "vignetteFa": "بیمار ۷۱ ساله: FEV1/FVC = 58% (<LLN)، FEV1 = 48%، FVC = 64%، TLC = 71% (Z = -2.45) و DLCO = 42%.",
+      "questionFa": "چرا این الگو «مختلط» نامیده می‌شود؟",
+      "options": [
+        "صرفاً به خاطر افت FEV1 و FVC زیر ۸۰٪",
+        "چون هم FEV1/FVC زیر LLN (انسداد) و هم TLC زیر LLN (محدودیت واقعی) است",
+        "به خاطر پاسخ منفی برونکودیلاتور",
+        "به خاطر افت PEF"
+      ],
+      "correctIndex": 1,
+      "explanationFa": "اثبات الگوی مختلط نیازمند اثبات هم‌زمان انسداد (FEV1/FVC < LLN) و محدودیت واقعی (TLC < LLN) است."
+    }
+  ]
+}

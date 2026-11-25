@@ -6,8 +6,10 @@
 هر فایل HTML در content/ و سه بانک ریشه را بررسی می‌کند و گزارش می‌دهد که
 
   ۱) قابلیت هایلایت/نشانه‌گذاری دارد یا نه، و از کدام لایه:
-       full   → medx-reader.js + همهٔ قلاب‌های UI (شیت نشانه‌ها، شیت یادداشت،
-                فهرست، دکمهٔ بازکردن، شمارنده‌ها)
+       full   → موتور خواننده (medx-reader.js، لینکی یا درون‌خطی) + همهٔ قلاب‌های
+                UI (شیت نشانه‌ها، شیت یادداشت، فهرست، دکمهٔ بازکردن، شمارنده‌ها).
+                درسنامه‌های مغز و اعصاب خودبسنده‌اند و همان موتور را درون خود
+                فایل دارند، پس آن‌ها هم full شمرده می‌شوند.
        auto   → medx-reader.js بدون قلاب‌های HTML؛ لایهٔ ensureMarksUI خودِ
                 موتور، شیت‌ها و دکمهٔ شناور را می‌سازد (درسنامه‌های عفونی)
        lite   → marks-lite.js (صفحه‌های خودبسنده/بانک‌ها)
@@ -33,10 +35,18 @@ AUTHOR = "مهدی محمدرحیمی"
 
 ROOT_BANKS = [ROOT / "chashm.html", ROOT / "ortho.html", ROOT / "ofuni.html"]
 
-# ابزارهای خودبسندهٔ بخش «آزمایشگاه تعاملی»: فایل تک‌فایلی مستقل که عمداً
-# هیچ‌یک از قلاب‌های کتابخانه (هایلایت/پانویس نویسنده) را ندارد و نباید
-# دست بخورد. نویسنده در صفحهٔ میزبانِ labs/<key>/index.html ذکر شده است.
+# ابزارهای خودبسندهٔ بخش «آزمایشگاه تعاملی»: بسته‌هایی که عمداً هیچ‌یک از
+# قلاب‌های کتابخانه (هایلایت/پانویس نویسنده) را ندارند و نباید دست بخورند.
+# نویسنده در صفحهٔ میزبانِ labs/index.html و در labs-manifest.json ذکر شده است.
+#   cardiac/simulator.html  فایل تک‌فایلی شبیه‌ساز قلب (۴٫۱ مگابایت، WebGL)
+#   pulmolab/               بستهٔ چندفایلی PulmoLab Studio (manifest و service
+#                           worker خودش را دارد و بایت‌به‌بایت از زیپ می‌آید)
 VENDORED = {CONTENT / "labs" / "cardiac" / "simulator.html"}
+VENDORED_DIRS = {CONTENT / "labs" / "pulmolab"}
+
+
+def is_vendored(path: Path) -> bool:
+    return path in VENDORED or any(d in path.parents for d in VENDORED_DIRS)
 
 READER_HOOKS = {
     "marks_sheet": r'id="sheet-marks"',
@@ -60,8 +70,12 @@ def family(path: Path) -> str:
 
 def highlight_layer(text: str) -> tuple[str, list[str]]:
     missing = [name for name, pat in READER_HOOKS.items() if not re.search(pat, text)]
-    # فقط خودِ موتور (اسکریپت)، نه لینک CSS هم‌نام
-    has_reader = "medx-reader.js" in text
+    # موتور خواننده دو جور در صفحه می‌نشیند: یا با <script src="…medx-reader.js…">
+    # (درسنامه‌های بازسازی‌شده و پیش‌ساخته) یا درون‌خطی و کامل داخل خود فایل
+    # (درسنامه‌های مغز و اعصاب که خودبسنده‌اند). جست‌وجوی سادهٔ رشتهٔ
+    # «medx-reader.js» کافی نیست: آن رشته در متن توضیحیِ خودِ موتور هم می‌آید.
+    has_reader = bool(re.search(r'<script[^>]+src="[^"]*medx-reader\.js[^"]*"', text)
+                      or re.search(r"function\s+ensureMarksUI\b", text))
     has_lite = ("marks-lite.js" in text) or ("__marksLiteLoaded" in text)
     has_own = bool(re.search(r"data-hl\b", text)) and "hl-mode" in text
 
@@ -84,13 +98,15 @@ def highlight_layer(text: str) -> tuple[str, list[str]]:
 
 def author_credit(text: str) -> dict[str, bool]:
     visible = bool(re.search(r"نویسنده\s*[:：]", text))
-    meta = bool(re.search(r'<meta\s+name="author"\s+content="[^"]+"', text))
+    # ترتیب صفت‌ها در <meta> آزاد است (درسنامه‌های مغز و اعصاب: content پیش از name)
+    meta = bool(re.search(r'<meta[^>]+name="author"[^>]+content="[^"]+"', text)
+                or re.search(r'<meta[^>]+content="[^"]+"[^>]+name="author"', text))
     named = AUTHOR in text
     return {"visible": visible, "meta": meta, "named": named, "ok": (visible or meta) and named}
 
 
 def collect() -> list[dict]:
-    files = [f for f in sorted(CONTENT.rglob("*.html")) if f not in VENDORED] \
+    files = [f for f in sorted(CONTENT.rglob("*.html")) if not is_vendored(f)] \
         + [p for p in ROOT_BANKS if p.exists()]
     rows = []
     for f in files:

@@ -4,9 +4,49 @@
   {
    "key": "cardiac",
    "name": "شبیه‌ساز بالینی قلب",
-   "scenarios": 18,
+   "nameEn": "Cardiac Clinical Simulator",
+   "type": "self-contained-html",
+   "theme": {
+    "h": 351,
+    "c": 68,
+    "a": 12
+   },
+   "entry": "cardiac/index.html",
+   "app": "cardiac/simulator.html",
    "source": "cardiac-simulator (4).html",
+   "scenarios": 18,
    "bytes": 4110535
+  },
+  {
+   "key": "pulmolab",
+   "name": "آزمایشگاه تعاملی ریه",
+   "nameEn": "PulmoLab Studio",
+   "type": "modular-pwa",
+   "theme": {
+    "h": 197,
+    "c": 74,
+    "a": 172
+   },
+   "entry": "pulmolab/index.html",
+   "app": "pulmolab/index.html",
+   "source": "PulmoLab-Studio-Offline.zip",
+   "manifest": "pulmolab/data/manifest.json",
+   "files": 122,
+   "bytes": 12380311,
+   "counts": {
+    "references": 23,
+    "sounds": 12,
+    "authenticAudioFiles": 14,
+    "missingAudioSlots": 2,
+    "radiographs": 70,
+    "pftPatterns": 12,
+    "pftExercises": 6,
+    "examModalities": 12,
+    "examExercises": 4,
+    "diseaseCategories": 12,
+    "diseases": 30,
+    "cases": 8
+   }
   }
  ]
 }

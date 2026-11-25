@@ -19,7 +19,12 @@
   ۵) کلید سند پویا برای بانک‌هایی که هر بار یک سؤال را از نو رندر می‌کنند
      (renderQuestion → data-marks-doc)
   ۶) نوار پیوند کتابخانه (ml-nav) برای درسنامه‌هایی که هیچ راه برگشتی به
-     فهرست/داشبورد ندارند (ENT و چشم‌پزشکی)
+     فهرست/داشبورد ندارند (ENT، چشم‌پزشکی و مغز و اعصاب)
+
+درسنامه‌های مغز و اعصاب (content/neurology) موتور خواننده و نشان‌گذاری خودشان
+را درون همان فایل دارند و پانویسشان هم منبع کتاب و «نویسنده:» را نشان می‌دهد؛
+پس برای آن‌ها فقط نوار پیوند درج می‌شود (marks=False) و لایهٔ دومی روی صفحه
+نمی‌نشیند.
 
 اجرا:
     python3 build/inject_marks_credit.py            # content/** + سه بانک ریشه
@@ -64,6 +69,22 @@ def credit_html(source: str = "", note: str = "") -> str:
 
 def style_block(css: str) -> str:
     return f"<style>{css}</style>"
+
+
+DOCTYPE_RUN = re.compile(r"\A(?:\s*<!doctype\s+html\s*>)+\s*", re.I)
+
+
+def normalize_doctype(text: str) -> tuple[str, bool]:
+    """اعلان‌های doctype تکراریِ ابتدای فایل را به یکی کاهش می‌دهد (idempotent).
+
+    بستهٔ مغز و اعصاب با ۵ یا ۷ اعلان پشت‌سرهم تحویل شده بود. مرورگر اعلان‌های
+    اضافه را نادیده می‌گیرد (حالت standards هم می‌ماند)، ولی بقیهٔ کتابخانه یک
+    اعلان دارد و ابزارها (ممیزی، ویرایشگرها، diff) هم همین را انتظار دارند.
+    """
+    m = DOCTYPE_RUN.match(text)
+    if not m or len(re.findall(r"<!doctype\s+html\s*>", m.group(0), re.I)) < 2:
+        return text, False
+    return "<!DOCTYPE html>\n" + text[m.end():], True
 
 
 def with_author_meta(text: str) -> tuple[str, bool]:
@@ -241,6 +262,10 @@ def ent_files():
     return sorted(f for f in (CONTENT / "ent").glob("*.html") if f.name != "manifest.json")
 
 
+def neurology_files():
+    return sorted(f for f in (CONTENT / "neurology").glob("*.html") if f.name != "manifest.json")
+
+
 BOOK_OPH = "منبع محتوا: چشم‌پزشکی عمومی جوادی — ویراست دوم ۱۳۹۷"
 BOOK_ORTHO = "منبع محتوا: درسنامهٔ ارتوپدی و شکستگی‌ها — دکتر بهادر اعلمی هرندی و همکاران، ویراست ششم ۱۳۹۷"
 BOOK_INF = "منبع محتوا: اصول طب داخلی هاریسون، ویراست ۲۲ (۲۰۲۵) — ۴۴ فصل"
@@ -263,38 +288,50 @@ LIB_NAV = {
     "ent": [("index.html", "کتابخانهٔ مدیکال"),
             ("subject/ent.html", "داشبورد گوش، حلق و بینی"),
             ("qbank/ent.html", "بانک ۲۰۰ سؤالی ENT")],
+    "neurology": [("index.html", "کتابخانهٔ مدیکال"),
+                  ("subject/neuro.html", "داشبورد مغز و اعصاب"),
+                  ("qbank/neuro.html", "بانک ۲۰۰ سؤالی نورولوژی")],
 }
 
 
 def main(check_only: bool = False) -> int:
     report: list[str] = []
 
-    def handle(path: Path, *, key: str, scope: str, roots: str, label: str,
+    def handle(path: Path, *, key: str = "", scope: str = "", roots: str = "", label: str = "",
                source: str = "", note: str = NOTE, where: str = "before_body_end",
                inline: bool = False, ar: str = "../",
                script_patch: tuple[str, str] | None = None,
                credit: bool = True, nav: list[tuple[str, str]] | None = None,
-               footer_text: str | None = None) -> None:
+               footer_text: str | None = None, marks: bool = True) -> None:
+        """یک صفحهٔ پیش‌ساخته را به لایهٔ کتابخانه وصل می‌کند (idempotent).
+
+        `marks=False` یعنی صفحه هایلایت و اعتبار نویسنده را خودش دارد (موتور
+        خواننده درون‌خطی) و اینجا فقط `meta` نویسنده و نوار پیوند کتابخانه
+        اضافه می‌شود — بدون marks-lite و بدون بلوک اعتبار دوم.
+        """
         text = path.read_text(encoding="utf-8")
         before = text
         acts: list[str] = []
+        text, ok = normalize_doctype(text)
+        acts.append("doctype" if ok else "")
         text, ok = with_author_meta(text)
         acts.append("meta-author" if ok else "")
-        text, ok = set_body_attrs(text, {
-            "marks-key": key, "marks-scope": scope, "marks-roots": roots, "marks-label": label,
-        })
-        acts.append("body-marks" if ok else "")
-        text, ok = (add_assets_inline(text) if inline else add_assets_linked(text, ar))
-        acts.append(("inline-assets" if inline else "linked-assets") if ok else "")
-        if script_patch:
-            text, ok = patch_script(text, script_patch[0], script_patch[1])
-            acts.append("doc-key" if ok else "")
-        if credit:
-            text, ok = insert_credit(text, credit_html(source, note), where)
-            acts.append("credit" if ok else "")
-        if footer_text:
-            text, ok = set_footer_text(text, footer_text)
-            acts.append("footer-credit" if ok else "")
+        if marks:
+            text, ok = set_body_attrs(text, {
+                "marks-key": key, "marks-scope": scope, "marks-roots": roots, "marks-label": label,
+            })
+            acts.append("body-marks" if ok else "")
+            text, ok = (add_assets_inline(text) if inline else add_assets_linked(text, ar))
+            acts.append(("inline-assets" if inline else "linked-assets") if ok else "")
+            if script_patch:
+                text, ok = patch_script(text, script_patch[0], script_patch[1])
+                acts.append("doc-key" if ok else "")
+            if credit:
+                text, ok = insert_credit(text, credit_html(source, note), where)
+                acts.append("credit" if ok else "")
+            if footer_text:
+                text, ok = set_footer_text(text, footer_text)
+                acts.append("footer-credit" if ok else "")
         if nav:
             text, ok = insert_nav(text, [(ar + href if not href.startswith(("http", "#")) else href, lbl)
                                          for href, lbl in nav])
@@ -338,6 +375,13 @@ def main(check_only: bool = False) -> int:
                roots=".content-section:not(#flashcards)", label="نشانه‌ها",
                source=BOOK_ENT, ar="../", credit=False, footer_text=ENT_FOOTER,
                nav=LIB_NAV["ent"])
+
+    # --- درسنامه‌های مغز و اعصاب: این صفحه‌ها با قالب خود کتابخانه ساخته شده‌اند و
+    #     موتور خواننده (شیت نشانه‌ها، شیت یادداشت، پنج رنگ، FAB) را درون خود فایل
+    #     دارند؛ پانویسشان هم «نویسنده:» و منبع کتاب را دارد. پس لایهٔ دومی
+    #     تزریق نمی‌شود و فقط راه برگشت به کتابخانه اضافه می‌شود.
+    for f in neurology_files():
+        handle(f, marks=False, ar="../", nav=LIB_NAV["neurology"])
 
     # --- بانک آزمون ۷۰۵ سؤالی عفونی ---------------------------------------
     exam = CONTENT / "subject" / "infectious-exam.html"
