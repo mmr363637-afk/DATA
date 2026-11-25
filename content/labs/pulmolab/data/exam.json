@@ -1,0 +1,561 @@
+{
+  "modalities": [
+    {
+      "id": "exam-inspection",
+      "nameFa": "مشاهده (Inspection)",
+      "nameEn": "Thoracic Inspection",
+      "category": "core",
+      "techniqueFa": "ارزیابی بیمار در حالت نشسته با نور مناسب از قدام، خلف و نیم‌رخ: کار تنفس، شکل قفسهٔ سینه، عضلات کمکی (SCM، اسکالن)، رتراکسیون، لب غنچه‌ای، وضعیت سه‌پایه (Tripod)، سیانوز مرکزی و کلابینگ.",
+      "normalFa": "قفسهٔ سینه متقارن (نسبت AP به عرضی ~۰٫۷)، تنفس آرام بدون عضلات کمکی، بدون سیانوز یا کلابینگ.",
+      "abnormalFindings": [
+        {
+          "finding": "قفسهٔ سینهٔ بشکه‌ای (Barrel Chest؛ AP:Transverse ≥ 0.9)",
+          "pathophysiology": "پرهوایی مزمن و کاهش کشش ارتجاعی ریه.",
+          "diseases": [
+            "COPD / آمفیزم شدید"
+          ]
+        },
+        {
+          "finding": "علامت هوور (Hoover's Sign — فرورفتن دنده‌های تحتانی در دم)",
+          "pathophysiology": "مسطح شدن شدید دیافراگم باعث کشیدن حاشیهٔ دنده‌ها به داخل می‌شود (LR+ ≈ 4.2).",
+          "diseases": [
+            "COPD پیشرفته"
+          ]
+        },
+        {
+          "finding": "چماقی شدن انگشتان (Digital Clubbing)",
+          "pathophysiology": "عبور مگاکاریوسیت‌ها از شانت ریوی و آزادسازی PDGF/VEGF (توجه: COPD خالص معمولاً کلابینگ نمی‌دهد!).",
+          "diseases": [
+            "سرطان ریه",
+            "IPF",
+            "برونشکتازی",
+            "CF",
+            "آبسه/امپیم"
+          ]
+        },
+        {
+          "finding": "تنفس لب‌غنچه‌ای (Pursed-Lip Breathing)",
+          "pathophysiology": "ایجاد Auto-PEEP ملایم برای پیشگیری از کلاپس راه‌های هوایی کوچک.",
+          "diseases": [
+            "COPD / آمفیزم"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-rr",
+      "nameFa": "تعداد و الگوی تنفس (Respiratory Rate & Patterns)",
+      "nameEn": "Respiratory Rate & Breathing Patterns",
+      "category": "vitals",
+      "techniqueFa": "شمارش کامل تنفس به مدت ۶۰ ثانیه بدون آگاه کردن مستقیم بیمار (در ادامهٔ لمس نبض) همراه با بررسی عمق و ریتم.",
+      "normalFa": "بزرگسال در استراحت: ۱۲ تا ۲۰ تنفس در دقیقه، منظم و بی‌تلاش.",
+      "abnormalFindings": [
+        {
+          "finding": "تاکی‌پنه (RR > 20–24/min؛ در CURB-65 معیار ≥ 30/min)",
+          "pathophysiology": "حساس‌ترین علامت حیاتی زودرس در دکمپانساسیون تنفسی و سپسیس.",
+          "diseases": [
+            "پنومونی",
+            "PE",
+            "ARDS",
+            "تشدید COPD/آسم",
+            "ادم ریوی"
+          ]
+        },
+        {
+          "finding": "تنفس کوسمال (عمیق و سریع)",
+          "pathophysiology": "جبران تنفسی اسیدوز متابولیک شدید.",
+          "diseases": [
+            "اختلالات اسید-باز"
+          ]
+        },
+        {
+          "finding": "تنفس شین-استوکس (کرشندو-دکرشندو با آپنه)",
+          "pathophysiology": "تأخیر گردش خون یا آسیب دوطرفهٔ نیمکره‌ای.",
+          "diseases": [
+            "نارسایی قلبی شدید",
+            "آپنهٔ مرکزی خواب"
+          ]
+        },
+        {
+          "finding": "تنفس پارادوکس شکمی (Abdominal Paradox)",
+          "pathophysiology": "فرورفتن شکم در دم ناشی از خستگی شدید یا فلج دیافراگم — هشدار قریب‌الوقوع بودن ایست تنفسی!",
+          "diseases": [
+            "نارسایی تنفسی حاد"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-spo2",
+      "nameFa": "اشباع اکسیژن خون شریانی (Pulse Oximetry / SpO2)",
+      "nameEn": "Oxygen Saturation & Pulse Oximetry",
+      "category": "vitals",
+      "techniqueFa": "اندازه‌گیری جذب نور ۶۶۰ و ۹۴۰ نانومتر در بستر نبض‌دار با کنترل کیفیت موج پلتیسموگرافی.",
+      "normalFa": "۹۵٪ تا ۱۰۰٪ در هوای اتاق؛ هدف در COPD و بیماران مستعد احتباس CO2 برابر ۸۸٪ تا ۹۲٪ است!",
+      "abnormalFindings": [
+        {
+          "finding": "هیپوکسمی (SpO2 < 92–94% یا افت ≥۳٪ با فعالیت)",
+          "pathophysiology": "عدم تطابق V/Q، شانت راست‌به‌چپ، اختلال انتشار یا هیپوونتیلاسیون.",
+          "diseases": [
+            "پنومونی",
+            "PE",
+            "ARDS",
+            "IPF",
+            "تشدید COPD"
+          ]
+        },
+        {
+          "finding": "خطای کاذب طبیعی در مسمومیت CO",
+          "pathophysiology": "کربوکسی‌هموگلوبین SpO2 را کاذباً بالا نشان می‌دهد — نیاز به Co-oximetry!",
+          "diseases": [
+            "مسمومیت CO"
+          ]
+        },
+        {
+          "finding": "مت‌هموگلوبینمی (SpO2 ثابت ~۸۵٪)",
+          "pathophysiology": "جذب یکسان دو طول موج بدون پاسخ به اکسیژن ۱۰۰٪.",
+          "diseases": [
+            "مت‌هموگلوبینمی"
+          ]
+        },
+        {
+          "finding": "خطای پرفیوژن پایین و هیپوکسمی نهفته در پوست تیره‌تر",
+          "pathophysiology": "در شک بالینی یا شوک همیشه ABG بگیرید.",
+          "diseases": [
+            "شوک",
+            "نارسایی تنفسی"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-harrison-21",
+        "ref-gold-2025"
+      ]
+    },
+    {
+      "id": "exam-palpation",
+      "nameFa": "لمس قفسهٔ سینه و موقعیت تراشه (Palpation)",
+      "nameEn": "Chest Palpation & Tracheal Position",
+      "category": "core",
+      "techniqueFa": "بررسی موقعیت تراشه در بریدگی فوق‌جناغی، لمس حساسیت موضعی، لنفادنوپاتی سوپراکلاویکولار و آمفیزم زیرجلدی.",
+      "normalFa": "تراشه در خط وسط، بدون درد لمسی، بدون آمفیزم زیرجلدی و بدون لنفادنوپاتی.",
+      "abnormalFindings": [
+        {
+          "finding": "انحراف تراشه به سمت مقابل (Contralateral)",
+          "pathophysiology": "اثر فشاری یا توده‌ای که مدیاستن را هل می‌دهد.",
+          "diseases": [
+            "پنوموتوراکس فشاری",
+            "افیوژن پلور حجیم"
+          ]
+        },
+        {
+          "finding": "انحراف تراشه به همان سمت (Ipsilateral)",
+          "pathophysiology": "کاهش حجم شدید که مدیاستن را به سمت خود می‌کشد.",
+          "diseases": [
+            "آتلکتازی کامل",
+            "فیبروز شدید یک‌طرفه",
+            "پنومونکتومی"
+          ]
+        },
+        {
+          "finding": "آمفیزم زیرجلدی (کریپتاسیون زیر پوست)",
+          "pathophysiology": "نشت هوا به بافت زیرجلدی دیوارهٔ سینه و گردن.",
+          "diseases": [
+            "پنوموتوراکس",
+            "پنومومدیاستن"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-expansion",
+      "nameFa": "اتساع قفسهٔ سینه (Chest Expansion)",
+      "nameEn": "Symmetric Chest Expansion",
+      "category": "core",
+      "techniqueFa": "قرار دادن کف دست‌ها در سطح دندهٔ دهم خلفی با نزدیک کردن شست‌ها در خط وسط و بررسی تقارن دور شدن شست‌ها هنگام دم عمیق (طبیعی ۳–۵ سانتی‌متر).",
+      "normalFa": "حرکت متقارن و یکسان هر دو سمت به میزان ۳ تا ۵ سانتی‌متر.",
+      "abnormalFindings": [
+        {
+          "finding": "کاهش یک‌طرفهٔ اتساع",
+          "pathophysiology": "از دقیق‌ترین نشانه‌های معاینه (LR+ ≈ 8.5 برای افیوژن پلور و LR+ ≈ 4.0 برای پنومونی).",
+          "diseases": [
+            "افیوژن پلور",
+            "پنوموتوراکس",
+            "پنومونی لوبار",
+            "آتلکتازی"
+          ]
+        },
+        {
+          "finding": "کاهش دوطرفهٔ اتساع",
+          "pathophysiology": "پرهوایی شدید یا سفتی دیواره/فیبروز دوطرفه.",
+          "diseases": [
+            "COPD شدید",
+            "IPF پیشرفته"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-tvf",
+      "nameFa": "فرمتوس لمسی صوتی (Tactile Vocal Fremitus)",
+      "nameEn": "Tactile Vocal Fremitus (TVF)",
+      "category": "vocal",
+      "techniqueFa": "قرار دادن لبهٔ اولنار دست روی نواحی متقارن دو سمت قفسهٔ سینه حین تکرار عبارت «چهل و چهار» یا «نود و نه» با صدای بم.",
+      "normalFa": "ارتعاش ملایم و متقارن در هر دو سمت.",
+      "abnormalFindings": [
+        {
+          "finding": "افزایش TVF",
+          "pathophysiology": "کانسلیدیشن آلوئولار همراه با برونش باز هدایت صوتی را افزایش می‌دهد.",
+          "diseases": [
+            "پنومونی لوبار (کانسلیدیشن)"
+          ]
+        },
+        {
+          "finding": "کاهش یا محو شدن TVF",
+          "pathophysiology": "عایق صوتی مایع یا هوا در پلور یا انسداد برونش (LR+ ≈ 5.7 در افیوژن).",
+          "diseases": [
+            "افیوژن پلور",
+            "پنوموتوراکس",
+            "آتلکتازی انسدادی",
+            "آمفیزم"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-percussion",
+      "nameFa": "دق قفسهٔ سینه (Percussion)",
+      "nameEn": "Thoracic Percussion",
+      "category": "core",
+      "techniqueFa": "فشردن انگشت میانی غیرغالب درون فضای بین‌دنده‌ای و ضربهٔ مچی با انگشت میانی غالب به‌صورت نردبانی چپ و راست از قله تا قاعده.",
+      "normalFa": "صدای رزونانت (Resonant) روی بافت پرهوای ریه.",
+      "abnormalFindings": [
+        {
+          "finding": "ماتیته (Dullness) و ماتیتهٔ سنگی (Stony Dullness)",
+          "pathophysiology": "جایگزینی هوا با بافت متراکم یا مایع (Stony dullness: LR+ ≈ 8.7 برای افیوژن پلور).",
+          "diseases": [
+            "افیوژن پلور",
+            "پنومونی لوبار",
+            "آتلکتازی"
+          ]
+        },
+        {
+          "finding": "هایپررزونانس (Hyperresonance)",
+          "pathophysiology": "افزایش بیش از حد هوا (LR+ ≈ 5.1 در COPD).",
+          "diseases": [
+            "پنوموتوراکس (یک‌طرفه)",
+            "COPD / آمفیزم (دوطرفه)"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-auscultation",
+      "nameFa": "سمع ریه (Auscultation)",
+      "nameEn": "Pulmonary Auscultation",
+      "category": "core",
+      "techniqueFa": "سمع با دیافراگم روی پوست عریان هنگام تنفس عمیق با دهان باز به‌صورت مقایسه‌ای قله به قاعده در خلف، جانب و قدام.",
+      "normalFa": "صدای وزیکولار متقارن محیطی، برونکووزیکولار پاراسترنال/بین‌کتفی، بدون صدای اضافی.",
+      "abnormalFindings": [
+        {
+          "finding": "کاهش یا محو صدای تنفسی",
+          "pathophysiology": "کاهش جریان هوا یا مانع انتقال صوت در پلور.",
+          "diseases": [
+            "افیوژن پلور",
+            "پنوموتوراکس",
+            "آتلکتازی انسدادی",
+            "آمفیزم",
+            "Silent Chest در آسم"
+          ]
+        },
+        {
+          "finding": "صدای برونکیال محیطی + صداهای اضافی",
+          "pathophysiology": "آموزش صوتی عملی و سمع کور در آزمایشگاه سمع ریه.",
+          "diseases": [
+            "پنومونی",
+            "IPF",
+            "آسم",
+            "COPD",
+            "برونشکتازی"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bohadana-2014",
+        "ref-bates-exam"
+      ]
+    },
+    {
+      "id": "exam-vocal-resonance",
+      "nameFa": "طنین صوتی در سمع (Vocal Resonance)",
+      "nameEn": "Vocal Resonance",
+      "category": "vocal",
+      "techniqueFa": "سمع با گوشی حین تکرار «چهل و چهار» با صدای معمولی و مقایسهٔ تقارن دو سمت.",
+      "normalFa": "صدای گنگ، خفه و نامفهوم.",
+      "abnormalFindings": [
+        {
+          "finding": "افزایش طنین صوتی",
+          "pathophysiology": "انتقال بدون فیلتر فرکانس‌های گفتار در پارانشیم کانسلیده‌شده.",
+          "diseases": [
+            "پنومونی لوبار",
+            "مرز فوقانی افیوژن پلور"
+          ]
+        },
+        {
+          "finding": "کاهش طنین صوتی",
+          "pathophysiology": "مانع مایع/هوا در پلور یا برونش مسدود.",
+          "diseases": [
+            "افیوژن پلور",
+            "پنوموتوراکس",
+            "آتلکتازی انسدادی"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-egophony",
+      "nameFa": "اگوفونی (Egophony — تبدیل E به A)",
+      "nameEn": "Egophony",
+      "category": "vocal",
+      "techniqueFa": "درخواست تلفظ کشیدهٔ مصوت «ای» (eeeee) حین سمع نواحی مشکوک.",
+      "normalFa": "شنیده شدن همان صدای گنگ «ای».",
+      "abnormalFindings": [
+        {
+          "finding": "تبدیل «ای» به «آ» تودماغی (E-to-A)",
+          "pathophysiology": "عبور انتخابی هارمونیک‌های بالاتر توسط بافت کانسلیده‌شده (LR+ ≈ 4.1 در پنومونی).",
+          "diseases": [
+            "پنومونی لوبار",
+            "مرز فوقانی افیوژن پلور (آتلکتازی فشاری)"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-bronchophony",
+      "nameFa": "برونکوفونی (Bronchophony)",
+      "nameEn": "Bronchophony",
+      "category": "vocal",
+      "techniqueFa": "سمع وضوح و بلندی عبارت «چهل و چهار» با صدای معمولی.",
+      "normalFa": "صدا خفه و هجاها نامفهوم هستند.",
+      "abnormalFindings": [
+        {
+          "finding": "شنیده شدن بلند و کاملاً واضح کلمات",
+          "pathophysiology": "انتقال مستقیم صوت از برونش باز از طریق آلوئول پر از اگزودا (LR+ ≈ 3.3).",
+          "diseases": [
+            "پنومونی لوبار (کانسلیدیشن)"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    },
+    {
+      "id": "exam-pectoriloquy",
+      "nameFa": "پکتوریلوکوی نجوایی (Whispered Pectoriloquy)",
+      "nameEn": "Whispered Pectoriloquy",
+      "category": "vocal",
+      "techniqueFa": "سمع حین نجوای آرام عبارت «یک، دو، سه» توسط بیمار.",
+      "normalFa": "صدای نجوا تقریباً به‌طور کامل فیلتر شده و نامفهوم یا ناشنواست.",
+      "abnormalFindings": [
+        {
+          "finding": "شنیده شدن واضح و تفکیک‌شدهٔ نجوا",
+          "pathophysiology": "هدایت مؤثر فرکانس‌های بالای نجوا از طریق کانسلیدیشن؛ بسیار اختصاصی حتی در کانسلیدیشن‌های کوچک.",
+          "diseases": [
+            "پنومونی لوبار",
+            "حفرهٔ بزرگ متصل به برونش باز"
+          ]
+        }
+      ],
+      "referenceIds": [
+        "ref-bates-exam",
+        "ref-mcgee-ebd"
+      ]
+    }
+  ],
+  "syndromeMatrix": [
+    {
+      "syndromeFa": "ریهٔ طبیعی",
+      "syndromeEn": "Normal Lung",
+      "trachea": "خط وسط",
+      "expansion": "متقارن طبیعی",
+      "tvf": "طبیعی",
+      "percussion": "رزونانت",
+      "breathSounds": "وزیکولار",
+      "adventitious": "ندارد",
+      "vocalSigns": "منفی",
+      "diseaseId": null
+    },
+    {
+      "syndromeFa": "کانسلیدیشن (پنومونی لوبار)",
+      "syndromeEn": "Consolidation",
+      "trachea": "خط وسط",
+      "expansion": "کاهش در سمت درگیر",
+      "tvf": "افزایش‌یافته ↑",
+      "percussion": "مات (Dull)",
+      "breathSounds": "برونکیال",
+      "adventitious": "کراکل",
+      "vocalSigns": "برونکوفونی، اگوفونی و پکتوریلوکوی (+)",
+      "diseaseId": "dis-cap"
+    },
+    {
+      "syndromeFa": "افیوژن پلور (متوسط تا حجیم)",
+      "syndromeEn": "Pleural Effusion",
+      "trachea": "خط وسط یا انحراف به مقابل (حجیم)",
+      "expansion": "کاهش واضح سمت درگیر",
+      "tvf": "کاهش یا محو ↓",
+      "percussion": "ماتیتهٔ سنگی (Stony Dull)",
+      "breathSounds": "کاهش/محو (مرز بالا: برونکیال)",
+      "adventitious": "ندارد (یا مالش پلور)",
+      "vocalSigns": "کاهش روی مایع (اگوفونی در مرز بالا)",
+      "diseaseId": "dis-pleural-effusion"
+    },
+    {
+      "syndromeFa": "پنوموتوراکس",
+      "syndromeEn": "Pneumothorax",
+      "trachea": "خط وسط (فشاری: انحراف به مقابل!)",
+      "expansion": "کاهش سمت درگیر",
+      "tvf": "کاهش یا محو ↓",
+      "percussion": "هایپررزونانت",
+      "breathSounds": "کاهش یا محو",
+      "adventitious": "ندارد",
+      "vocalSigns": "کاهش / منفی",
+      "diseaseId": "dis-pneumothorax"
+    },
+    {
+      "syndromeFa": "آتلکتازی انسدادی (برونش بسته)",
+      "syndromeEn": "Obstructive Atelectasis",
+      "trachea": "انحراف به همان سمت درگیر!",
+      "expansion": "کاهش سمت درگیر",
+      "tvf": "کاهش یا محو ↓",
+      "percussion": "مات (Dull)",
+      "breathSounds": "کاهش یا محو",
+      "adventitious": "ندارد",
+      "vocalSigns": "کاهش / منفی",
+      "diseaseId": "dis-atelectasis"
+    },
+    {
+      "syndromeFa": "COPD / آمفیزم",
+      "syndromeEn": "COPD / Emphysema",
+      "trachea": "خط وسط",
+      "expansion": "کاهش متقارن (علامت هوور)",
+      "tvf": "کاهش دوطرفه",
+      "percussion": "هایپررزونانت دوطرفه",
+      "breathSounds": "وزیکولار ضعیف با بازدم طولانی",
+      "adventitious": "ویزینگ / رونکای / کراکل اوایل دم",
+      "vocalSigns": "کاهش دوطرفه",
+      "diseaseId": "dis-copd"
+    },
+    {
+      "syndromeFa": "فیبروز بینابینی ریه (IPF)",
+      "syndromeEn": "Interstitial Fibrosis",
+      "trachea": "خط وسط",
+      "expansion": "کاهش خفیف دوطرفه",
+      "tvf": "طبیعی تا کمی افزایش",
+      "percussion": "رزونانت",
+      "breathSounds": "وزیکولار / برونکووزیکولار",
+      "adventitious": "کراکل‌های ظریف ولکرو دوطرفه",
+      "vocalSigns": "منفی (کلابینگ شایع!)",
+      "diseaseId": "dis-ipf"
+    },
+    {
+      "syndromeFa": "تشدید حاد آسم",
+      "syndromeEn": "Acute Asthma",
+      "trachea": "خط وسط",
+      "expansion": "کاهش متقارن",
+      "tvf": "طبیعی/کاهش",
+      "percussion": "رزونانت تا هایپررزونانت",
+      "breathSounds": "بازدم طولانی (خطر Silent Chest)",
+      "adventitious": "ویزینگ پلی‌فونیک",
+      "vocalSigns": "منفی",
+      "diseaseId": "dis-asthma"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "exam-ex-1",
+      "scenarioFa": "بیمار ۶۸ ساله: همی‌توراکس راست کاملاً مات، کاهش شدید صدای تنفسی و TVF، و کشیدگی تراشه به سمت راست (هم‌جهت).",
+      "questionFa": "محتمل‌ترین سندرم چیست؟",
+      "options": [
+        "افیوژن پلور حجیم راست",
+        "آتلکتازی کامل انسدادی ریهٔ راست",
+        "پنوموتوراکس فشاری راست",
+        "پنومونی لوبار با برونش باز"
+      ],
+      "correctIndex": 1,
+      "explanationFa": "ماتیته + کاهش صدا/TVF + انحراف تراشه به همان سمت درگیر (کشش ناشی از کاهش حجم) = آتلکتازی انسدادی."
+    },
+    {
+      "id": "exam-ex-2",
+      "scenarioFa": "بیمار ۴۵ ساله با تب و سرفه: در قاعدهٔ راست دق مات، TVF افزایش‌یافته، صدای برونکیال و تبدیل E به A.",
+      "questionFa": "کدام وضعیت پاتوفیزیولوژیک تایید می‌شود؟",
+      "options": [
+        "کانسلیدیشن پارانشیمی همراه با برونش باز (پنومونی لوبار)",
+        "تجمع مایع پلورال آزاد",
+        "پنوموتوراکس ساده",
+        "آمفیزم شدید"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "افزایش TVF + صدای برونکیال + اگوفونی مثبت نیازمند پارانشیم کانسلیده‌شده و برونش باز است."
+    },
+    {
+      "id": "exam-ex-3",
+      "scenarioFa": "مرد ۶۴ ساله با COPD شناخته‌شده در معاینه دچار کلابینگ آشکار انگشتان است.",
+      "questionFa": "مهم‌ترین پیامد بالینی چیست؟",
+      "options": [
+        "یافته‌ای عادی در COPD خالص است",
+        "COPD خالص کلابینگ نمی‌دهد — باید فوراً سرطان ریه، ILD یا برونشکتازی هم‌زمان را بررسی کرد!",
+        "فقط نشانهٔ کم‌خونی است",
+        "آسم را قطعی می‌کند"
+      ],
+      "correctIndex": 1,
+      "explanationFa": "کلابینگ در بیمار COPD پرچم قرمز کلاسیک برای جستجوی کارسینوم ریه، فیبروز ریوی یا برونشکتازی است."
+    },
+    {
+      "id": "exam-ex-4",
+      "scenarioFa": "بیمار ۳۵ ساله پس از آتش‌سوزی فضای بسته با سردرد و تنگی نفس؛ SpO2 روی پالس‌اکسیمتر ۹۹٪ است.",
+      "questionFa": "چرا نباید به این SpO2 اعتماد کرد؟",
+      "options": [
+        "پالس‌اکسیمتر استاندارد کربوکسی‌هموگلوبین را از اکسی‌هموگلوبین افتراق نمی‌دهد؛ نیاز به ABG با Co-oximetry است",
+        "عدد ۹۹٪ نشانهٔ هیپوونتیلاسیون است",
+        "در مسمومیت CO عدد SpO2 همیشه ۸۵٪ است",
+        "پالس‌اکسیمتر فقط وریدی است"
+      ],
+      "correctIndex": 0,
+      "explanationFa": "کربوکسی‌هموگلوبین SpO2 را به‌طور کاذب طبیعی نشان می‌دهد؛ عدد ثابت ۸۵٪ مخصوص مت‌هموگلوبینمی است."
+    }
+  ]
+}

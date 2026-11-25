@@ -27,11 +27,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "qbank" / "raw"
 
-# چهار شکل داده در بانک‌های تک‌فایلی دیده شده است:
+# پنج شکل داده در بانک‌های تک‌فایلی دیده شده است:
 #   ۱) <script type="application/json" id="questionData"> […] </script>   chashm/ortho/ofuni
 #   ۲) <script id="bank-data" type="application/json"> {"meta":…,"questions":[…]}   ENT
 #   ۳) window.__QB__ = {"subject":…,"questions":[…]}                       urology
-#   ۴) هر <script type="application/json"> دیگری که dict با کلید questions باشد
+#   ۴) const BANK = {"meta":…,"questions":[…]}  (انتساب سادهٔ JS)          neurology
+#   ۵) هر <script type="application/json"> دیگری که dict با کلید questions باشد
 DATA_SCRIPT = re.compile(
     r'<script[^>]*type="application/json"[^>]*id="questionData"[^>]*>(.*?)</script>',
     re.S,
@@ -41,10 +42,12 @@ ANY_JSON_SCRIPT = re.compile(
     re.S,
 )
 QB_INLINE = re.compile(r"window\.__QB__\s*=\s*", re.S)
+# انتساب سادهٔ جاوااسکریپت به یک شناسه (const/let/var) — مقدارش JSON است
+JS_ASSIGN = re.compile(r"\b(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*", re.S)
 
 
 def extract(html_path: Path) -> list[dict]:
-    """آرایهٔ سؤال‌ها را از بانک تک‌فایلی بیرون می‌کشد (هر چهار شکل بالا)."""
+    """آرایهٔ سؤال‌ها را از بانک تک‌فایلی بیرون می‌کشد (هر پنج شکل بالا)."""
     text = html_path.read_text(encoding="utf-8")
 
     def from_payload(payload, label: str) -> list[dict]:
@@ -76,6 +79,16 @@ def extract(html_path: Path) -> list[dict]:
         if data:
             return data
 
+    # ۴) انتساب JS با مقدار JSON — با raw_decode تا همان‌جا که JSON است خوانده شود
+    for m in JS_ASSIGN.finditer(text):
+        try:
+            payload, _ = json.JSONDecoder().raw_decode(text[m.end():].lstrip())
+        except (json.JSONDecodeError, ValueError):
+            continue
+        data = from_payload(payload, f"{m.group(1)} =")
+        if data:
+            return data
+
     for m in ANY_JSON_SCRIPT.finditer(text):
         try:
             payload = json.loads(m.group(1))
@@ -86,7 +99,7 @@ def extract(html_path: Path) -> list[dict]:
             return data
 
     raise SystemExit(f"!! در {html_path.name} دادهٔ سؤال پیدا نشد "
-                     "(questionData / bank-data / window.__QB__)")
+                     "(questionData / bank-data / window.__QB__ / const BANK = …)")
 
 
 def report(data: list[dict], name: str) -> list[str]:
@@ -97,10 +110,17 @@ def report(data: list[dict], name: str) -> list[str]:
     for i, q in enumerate(data):
         opts = q.get("options") or []
         ans = q.get("answer", q.get("correct"))
-        if len(opts) != 4:
-            problems.append(f"سؤال #{i + 1}: {len(opts)} گزینه")
-        if not isinstance(ans, int) or not 0 <= ans < len(opts):
-            problems.append(f"سؤال #{i + 1}: پاسخ نامعتبر ({ans!r})")
+        if isinstance(opts, dict):
+            # بانک نورولوژی: گزینه‌ها {"A": …, "D": …} و پاسخ حرفی است
+            if len(opts) != 4:
+                problems.append(f"سؤال #{i + 1}: {len(opts)} گزینه")
+            if not isinstance(ans, str) or ans.strip()[:1].upper() not in opts:
+                problems.append(f"سؤال #{i + 1}: پاسخ نامعتبر ({ans!r})")
+        else:
+            if len(opts) != 4:
+                problems.append(f"سؤال #{i + 1}: {len(opts)} گزینه")
+            if not isinstance(ans, int) or not 0 <= ans < len(opts):
+                problems.append(f"سؤال #{i + 1}: پاسخ نامعتبر ({ans!r})")
         if not str(q.get("stem") or q.get("question") or "").strip():
             problems.append(f"سؤال #{i + 1}: صورت خالی")
     print(f"{name}: {len(data)} سؤال · {len(chapters)} فصل · {with_image} سؤال تصویردار")

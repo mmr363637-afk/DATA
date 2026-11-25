@@ -97,9 +97,13 @@ SUBJECTS = [
     },
     {
         "key": "neuro", "name": "مغز و اعصاب", "nameEn": "Neurology", "icon": "neuro",
-        "motif": "brain", "hue": 266, "chroma": 56, "accent": 294,
-        "tagline": "سکته، صرع، MS و بیماری‌های عصبی",
-        "soon": True,
+        # hue/chroma/accent دقیقاً همان‌هایی است که ۱۴ درسنامهٔ پیش‌ساختهٔ این درس
+        # در style="--h:…;--c:…;--a:…" خود دارند (بستهٔ تحویلی ۳۵۱ بود که به ۲۹۲
+        # منتقل شد تا با خون/آنکولوژی ۳۵۴ و ENT ۲۷۲ برخورد نکند).
+        "motif": "brain", "hue": 292, "chroma": 74, "accent": 12,
+        "tagline": ("از شرح حال و معاینهٔ نورولوژیک تا کما، دمانس، سردرد، تشنج، سکته و "
+                    "اختلالات حرکتی و حسی — بر پایهٔ نورولوژی بالینی (ویراست ۱۱، ۲۰۲۱)"),
+        "soon": False,
     },
     {
         "key": "psych", "name": "روان‌پزشکی", "nameEn": "Psychiatry", "icon": "psych",
@@ -227,6 +231,7 @@ QBANK_PARTS = [
     {"file": "inf", "title": "عفونی — هاریسون ۲۰۲۵", "subject": "infectious", "count": 200, "chapters": 44},
     {"file": "uro", "title": "اورولوژی — سیم‌فروش ۱۴۰۲", "subject": "urology", "count": 200, "chapters": 28},
     {"file": "ent", "title": "گوش، حلق و بینی — هندبوک اتولارینگولوژی", "subject": "ent", "count": 200, "chapters": 9},
+    {"file": "neuro", "title": "مغز و اعصاب — نورولوژی بالینی", "subject": "neuro", "count": 200, "chapters": 14},
 ]
 
 

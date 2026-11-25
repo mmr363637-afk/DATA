@@ -51,6 +51,7 @@ BUNDLES = [
     ("infectious", "inf", "بیماری‌های عفونی — هاریسون ۲۰۲۵", ["ofuni.json"]),
     ("ent", "ent", "گوش، حلق و بینی — هندبوک اتولارینگولوژی", ["ent.json"]),
     ("urology", "uro", "اورولوژی — سیم‌فروش ۱۴۰۲", ["uro.json"]),
+    ("neuro", "neuro", "مغز و اعصاب — نورولوژی بالینی", ["neuro.json"]),
 ]
 
 DIFF = {"easy": "آسان", "medium": "متوسط", "hard": "دشوار", "very hard": "خیلی دشوار", "veryhard": "خیلی دشوار",
@@ -187,6 +188,96 @@ def adapt_ent(q: dict) -> dict:
     return out
 
 
+# فصل‌های کتاب نورولوژی بالینی (Greenberg, Aminoff & Simon، ویراست ۱۱) — همان
+# عنوان‌های فارسیِ ۱۴ درسنامهٔ این درس، تا فصل‌های بانک و درسنامه یکی باشند.
+# برای فصل ۹ و ۱۱ نام انگلیسی هم آمده چون عنوان فارسی‌شان («اختلالات حرکتی» و
+# «اختلالات حرکت») در چیپ‌های فیلتر به‌سختی از هم تشخیص داده می‌شود.
+NEURO_CHAPTERS = {
+    1: "شرح حال و معاینهٔ نورولوژیک",
+    2: "بررسی‌های تشخیصی در نورولوژی",
+    3: "کما",
+    4: "حالات گیجی و دلیریوم",
+    5: "دمانس و اختلالات حافظه",
+    6: "سردرد و درد صورت",
+    7: "اختلالات نوروافتالمولوژی",
+    8: "اختلالات تعادل",
+    9: "اختلالات حرکتی (Motor Disorders)",
+    10: "اختلالات حسی",
+    11: "اختلالات حرکت (Movement Disorders)",
+    12: "تشنج و سنکوپ",
+    13: "سکتهٔ مغزی",
+    14: "پیوست: معاینهٔ اعصاب محیطی منفرد",
+}
+NEURO_SOURCE = ("Clinical Neurology, 11th edition (2021) — "
+                "Greenberg, Aminoff & Simon (McGraw Hill)")
+# نوع سؤال در این بانک (basic/vignette/recall/dtm) → همان چهار نوع رایج کتابخانه
+NEURO_TYPES = {
+    "basic": ("basic", "علوم پایه"),
+    "recall": ("recall", "یادآوری پربازده"),
+    "vignette": ("clinical", "شرح حال بالینی"),
+    "dtm": ("management", "تشخیص و مدیریت"),
+}
+_FA_DIGITS = str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹")
+
+
+def adapt_neuro(q: dict) -> dict:
+    """طرح بانک نورولوژی (`const BANK`) → طرح عمومی normalize().
+
+    تفاوت‌های این بانک با بقیه:
+      • گزینه‌ها dict حرفی {"A": …, "D": …} و پاسخ حرف است (نه ایندکس)؛
+      • explanation یک dict است: {"correct": …, "options": {"A": …}}؛
+      • فصل به شکل «9. Motor Disorders» است و شمارهٔ فصل در chapter_no
+        (برای پیوست null)؛
+      • difficulty انگلیسی است و صفحه یک عدد تنها.
+
+    تصویرها عمداً منتقل نمی‌شوند: منبعِ خودِ داده برای هر ۷ تصویر نوشته
+    «مجموعهٔ تصاویر مرجع پروژه — مجوز بازنشر مستقل تأیید نشده است»، پس فقط نام
+    فایل به‌عنوان متا (imageOmitted) می‌ماند. صورت این ۷ سؤال شرح حال کامل دارد
+    و بدون تصویر هم پاسخ‌دادنی است (پیش از انتشار بررسی شد).
+    """
+    if not isinstance(q.get("options"), dict) or "answer" not in q:
+        return q
+    out = dict(q)
+    letters = [k for k in ("A", "B", "C", "D") if k in q["options"]]
+    out["options"] = [clean(q["options"][k]) for k in letters]
+    ans = clean(q.get("answer")).upper()[:1]
+    out["correct"] = letters.index(ans) if ans in letters else None
+
+    exp = q.get("explanation")
+    if isinstance(exp, dict):
+        out["explanation"] = clean(exp.get("correct"))
+        wrong = exp.get("options")
+        if isinstance(wrong, dict):
+            out["whyWrong"] = {str(i): clean(wrong[k])
+                               for i, k in enumerate(letters) if k in wrong and clean(wrong[k])}
+
+    ch = q.get("chapter_no")
+    ch = int(ch) if isinstance(ch, (int, float)) and ch else 14   # پیوست شماره ندارد
+    out["chapter"] = ch
+    out["chapterTitle"] = NEURO_CHAPTERS.get(ch, "")
+    out["referenceSection"] = clean(q.get("section")) or clean(q.get("chapter"))
+    out["referenceBook"] = NEURO_SOURCE
+    if q.get("page") not in (None, ""):
+        out["referencePages"] = str(q["page"]).translate(_FA_DIGITS)
+
+    t = clean(q.get("type")).lower()
+    if t in NEURO_TYPES:
+        out["questionType"], out["questionTypeLabel"] = NEURO_TYPES[t]
+        out["sourceType"] = t
+    if clean(q.get("high_yield")):
+        out["highYield"] = clean(q["high_yield"])
+
+    img = q.get("image")
+    if isinstance(img, dict) and clean(img.get("file")):
+        out["imageOmitted"] = clean(img["file"])
+    out.pop("image", None)
+
+    out["sourceId"] = clean(q.get("id"))     # شناسهٔ اصلی بانک (NEU-109)
+    for k in ("id", "answer", "high_yield", "chapter_no", "n"):
+        out.pop(k, None)
+    return out
+
+
 def adapt_uro(q: dict) -> dict:
     """بانک اورولوژی از قبل هم‌طرح است؛ فقط نام چند فیلد را هم‌سان می‌کند."""
     if "pages" in q and not q.get("referencePages"):
@@ -199,7 +290,8 @@ def adapt_uro(q: dict) -> dict:
 META_KEEP = ("questionType", "questionTypeLabel", "coverageIndex", "topicIndex",
              "difficultyFa", "referenceBook", "edition", "referencePages",
              "referenceSection", "sourceId", "sourcePage", "sourceTitle",
-             "sectionLabel", "reference", "answerLetter", "custom")
+             "sectionLabel", "reference", "answerLetter", "custom",
+             "sourceType", "imageOmitted")
 
 
 def norm_image(q) -> dict | None:
@@ -232,6 +324,7 @@ def norm_image(q) -> dict | None:
 
 
 def normalize(q, subject, src, part) -> dict | None:
+    q = adapt_neuro(q)
     q = adapt_ent(q)
     q = adapt_uro(q)
     q = adapt_chashm(q)

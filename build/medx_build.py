@@ -105,7 +105,8 @@ def sync_docs():
 # بازنویسی‌شان با تبدیل استاندارد، طراحی‌شان را خراب می‌کند. برایشان تطبیق ردی می‌شود
 # و آمار همان مقادیر manifest باقی می‌ماند (آمار را build/sync_family.py از خود
 # صفحه‌ها می‌خواند و هم‌خط می‌کند).
-PREBUILT_PREFIXES = ("ophthalmology/", "orthopedics/", "infectious/", "urology/", "ent/")
+PREBUILT_PREFIXES = ("ophthalmology/", "orthopedics/", "infectious/", "urology/", "ent/",
+                     "neurology/")
 
 
 def prebuilt_importance() -> dict:

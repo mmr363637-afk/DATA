@@ -143,8 +143,8 @@
    "nameEn": "Neurology",
    "icon": "🧠",
    "hue": 292,
-   "chroma": 60,
-   "note": "ارجوانی-نیلی",
+   "chroma": 74,
+   "note": "ارجوانی-نیلی؛ hue/chroma/accent هم‌رنگ ۱۴ درسنامهٔ پیش‌ساختهٔ نورولوژی (بستهٔ تحویلی hue 351 بود که به 292 منتقل شد تا با خون 354 و ENT 272 برخورد نکند)",
    "appSubjectKeys": [
     "neurology-aminoff"
    ]

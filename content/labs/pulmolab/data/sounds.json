@@ -1,0 +1,880 @@
+[
+  {
+    "id": "snd-vesicular",
+    "nameFa": "صدای تنفسی وزیکولار (طبیعی محیطی)",
+    "nameEn": "Vesicular Breath Sounds",
+    "category": "normal",
+    "categoryFa": "صداهای تنفسی طبیعی",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/vesicular_normal.wav",
+        "labelFa": "بزرگسال سالم — لوب تحتانی راست خلفی",
+        "clinicalContext": "ضبط بالینی واقعی با گوشی الکترونیک ۳M Littmann 3200 در حالت Extended Range از فرد سالم ۲۷ ساله.",
+        "originalFile": "EP50_N,N,P R L ,27,M.wav",
+        "patientMeta": "27y · M · Posterior Right Lower (PRL)",
+        "sourceDiagnosis": "Normal",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      },
+      {
+        "file": "media/audio/vesicular_normal_alt.wav",
+        "labelFa": "بزرگسال سالم — ناحیه میانی چپ خلفی",
+        "clinicalContext": "ضبط بالینی واقعی فرد سالم ۲۷ ساله برای مقایسهٔ تنوع طبیعی شدت صدا در نواحی مختلف ریه.",
+        "originalFile": "EP31_N,N,P L M,27,F.wav",
+        "patientMeta": "27y · F · Posterior Left Middle (PLM)",
+        "sourceDiagnosis": "Normal",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "vesicular",
+    "description": "صدای تنفسی طبیعی شنیده‌شده در اغلب میدان‌های محیطی ریه. بافت پرهوای پارانشیم ریه همچون یک فیلتر پایین‌گذر (Low-pass filter) عمل کرده و فرکانس‌های بالای تولیدشده در راه‌های هوایی مرکزی را تضعیف می‌کند؛ در نتیجه صدایی نرم، آرام و با فرکانس پایین به دیوارهٔ قفسهٔ سینه می‌رسد.",
+    "acoustics": {
+      "pitch": "پایین (Low-pitched، عمدتاً ۱۰۰ تا ۶۰۰ هرتز با افت شدید بالای ۲۰۰ هرتز)",
+      "quality": "نرم، خش‌خش ملایم (Soft, rustling) و غیرموزیکال",
+      "intensity": "ملایم تا متوسط",
+      "ieRatio": "دم بسیار طولانی‌تر از بازدم (حدود ۳:۱ شنیداری؛ فاز بازدم تنها در یک‌سوم ابتدایی شنیده می‌شود)",
+      "pause": "بدون وقفهٔ شنیداری بین دم و بازدم"
+    },
+    "timing": "کل دم و تنها یک‌سوم ابتدایی بازدم",
+    "anatomicalLocation": "تقریباً تمام سطح محیطی قفسهٔ سینه (به‌جز روی تراشه، مانوبریوم و فضاهای بین‌دنده‌ای ۱ و ۲ پاراسترنال)",
+    "associatedDiseases": [
+      "بافت طبیعی ریه (عدم وجود کانسلیدیشن یا افیوژن)",
+      "کاهش یا محو شدن آن در: افیوژن پلور، پنوموتوراکس، آمفیزم شدید، آتلکتازی انسدادی و چاقی شدید دیوارهٔ قفسهٔ سینه"
+    ],
+    "relatedDiseaseIds": [
+      "dis-copd",
+      "dis-pleural-effusion",
+      "dis-pneumothorax",
+      "dis-atelectasis"
+    ],
+    "clinicalSignificance": "شنیده شدن صدای وزیکولار متقارن در دو سمت نشانهٔ تهویهٔ مناسب پارانشیم محیطی و عدم وجود مانع در فضای پلور است. کاهش موضعی یا یک‌طرفهٔ آن یکی از حساس‌ترین نشانه‌های بالینی افیوژن پلور، پنوموتوراکس یا انسداد برونش اصلی است؛ و جایگزینی آن با صدای برونکیال نشانهٔ کانسلیدیشن پارانشیمی است.",
+    "comparisons": [
+      {
+        "targetId": "snd-bronchial",
+        "difference": "برخلاف وزیکولار، صدای برونکیال زیرتر (High-pitched)، بلندتر، لوله‌ای‌شکل است، بازدم طولانی‌تر از دم دارد و بین دم و بازدم وقفهٔ مشخص شنیده می‌شود."
+      },
+      {
+        "targetId": "snd-bronchovesicular",
+        "difference": "در برونکووزیکولار طول دم و بازدم برابر (۱:۱) و فرکانس میانی است، در حالی که در وزیکولار دم به‌وضوح طولانی‌تر از بازدم است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 1.0,
+      "end": 7.5
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-bates-exam",
+      "ref-kauh-2021"
+    ]
+  },
+  {
+    "id": "snd-bronchovesicular",
+    "nameFa": "صدای تنفسی برونکووزیکولار",
+    "nameEn": "Bronchovesicular Breath Sounds",
+    "category": "normal",
+    "categoryFa": "صداهای تنفسی طبیعی",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/bronchovesicular_anterior_upper.wav",
+        "labelFa": "بزرگسال سالم — ناحیه قدامی فوقانی راست (ARU)",
+        "clinicalContext": "ضبط واقعی از فرد سالم ۲۹ ساله در ناحیهٔ قدامی فوقانی راست (مجاورت آناتومیک برونش اصلی راست؛ در دیتاست KAUH با برچسب Normal در موقعیت ARU ثبت شده است).",
+        "originalFile": "EP88_N,N,A R U,29,M.wav",
+        "patientMeta": "29y · M · Anterior Right Upper (ARU — 1st–2nd ICS parasternal zone)",
+        "sourceDiagnosis": "Normal",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "bronchovesicular",
+    "description": "صدای تنفسی حدواسط بین وزیکولار و برونکیال که به‌طور طبیعی در نواحی مجاور برونش‌های اصلی (فضای بین‌دنده‌ای اول و دوم در قدام کنار استرنوم، و فضای بین‌کتفی در خلف) شنیده می‌شود. در این مناطق، ضخامت بافت پرهوای بین برونش و دیوارهٔ قفسهٔ سینه کمتر است.",
+    "acoustics": {
+      "pitch": "متوسط (Intermediate pitch)",
+      "quality": "ملایم تا نسبتاً واضح، ترکیبی از بافت نرم وزیکولار و کیفیت هوایی برونکیال",
+      "intensity": "متوسط",
+      "ieRatio": "طول دم و بازدم تقریباً برابر (۱:۱)",
+      "pause": "بدون وقفهٔ واضح یا وقفهٔ بسیار کوتاه بین دم و بازدم"
+    },
+    "timing": "سراسر دم و سراسر بازدم با مدت‌زمان برابر",
+    "anatomicalLocation": "قدام: فضاهای بین‌دنده‌ای ۱ و ۲ در دو سوی استرنوم (در سمت راست کمی واضح‌تر به دلیل کوتاه‌تر و مستقیم‌تر بودن برونش اصلی راست)؛ خلف: بین دو اسکاپولا در سطح T3–T5",
+    "associatedDiseases": [
+      "طبیعی در نواحی پاراسترنال فوقانی و بین‌کتفی",
+      "شنیده شدن در محیط ریه می‌تواند نشانهٔ کانسلیدیشن ناکامل یا فیبروز موضعی باشد"
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap",
+      "dis-atelectasis"
+    ],
+    "clinicalSignificance": "تفسیر صدای برونکووزیکولار کاملاً وابسته به محل سمع است: در قدام فوقانی و بین‌کتفی کاملاً طبیعی است، اما اگر در لوب‌های تحتانی یا محیط ریه شنیده شود، نشانهٔ افزایش هدایت صوتی پارانشیم است.",
+    "comparisons": [
+      {
+        "targetId": "snd-vesicular",
+        "difference": "فاز بازدم در برونکووزیکولار به اندازهٔ دم طول می‌کشد و زیرتر است، ولی در وزیکولار بازدم کوتاه و نرم است."
+      },
+      {
+        "targetId": "snd-bronchial",
+        "difference": "صدای برونکیال زبرتر و لوله‌ای‌تر است، بازدم از دم طولانی‌تر است و مکث بین‌فازی مشخص دارد."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 1.0,
+      "end": 8.0
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-bates-exam",
+      "ref-kauh-2021"
+    ]
+  },
+  {
+    "id": "snd-bronchial",
+    "nameFa": "صدای تنفسی برونکیال (توبولار)",
+    "nameEn": "Bronchial (Tubular) Breath Sounds",
+    "category": "normal",
+    "categoryFa": "صداهای تنفسی طبیعی (پاتولوژیک در محیط ریه)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/bronchial_pneumonia.wav",
+        "labelFa": "بیمار ۶۴ ساله با پنومونی — سمع برونکیال روی لوب تحتانی راست خلفی",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از بیمار مرد ۶۴ ساله مبتلا به پنومونی؛ صدای برونکیال پاتولوژیک بر اثر انتقال بدون فیلتر امواج صوتی از طریق پارانشیم کانسلیده‌شده.",
+        "originalFile": "EP69_pneumonia,Bronchial,P R L ,64,M.wav",
+        "patientMeta": "64y · M · Posterior Right Lower (PRL)",
+        "sourceDiagnosis": "Pneumonia",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "bronchial",
+    "description": "صدای بلند، زیر (High-pitched) و توخالی/لوله‌ای که در حالت طبیعی فقط روی مانوبریوم استرنوم شنیده می‌شود. هنگامی که آلوئول‌های یک لوب از اگزودا پر شوند ولی برونش تغذیه‌کننده باز (Patent) باشد، ریه خاصیت فیلتر پایین‌گذر خود را از دست داده و صداهای فرکانس‌بالای راه‌های هوایی بزرگ مستقیماً به گوشی منتقل می‌شوند.",
+    "acoustics": {
+      "pitch": "بالا (High-pitched؛ حفظ فرکانس‌های بالای ۵۰۰ تا ۱۲۰۰ هرتز)",
+      "quality": "خشن، توخالی و لوله‌ای (Hollow, tubular) — شبیه فوت کردن در لولهٔ توخالی",
+      "intensity": "بلند (Loud)",
+      "ieRatio": "بازدم طولانی‌تر یا برابر با دم (I:E ≈ 1:2 شنیداری)",
+      "pause": "وقفهٔ سکوت مشخص (Distinct silent gap) بین پایان دم و شروع بازدم"
+    },
+    "timing": "دم کوتاه‌تر و بازدم بلندتر و کشیده‌تر همراه با مکث بین دو فاز",
+    "anatomicalLocation": "طبیعی: فقط روی مانوبریوم استرنوم؛ پاتولوژیک: روی هر بخش محیطی ریه با کانسلیدیشن و برونش باز (یا درست بالای مرز فوقانی افیوژن پلور به علت آتلکتازی فشاری)",
+    "associatedDiseases": [
+      "پنومونی لوبار (کلاسیک‌ترین علت پاتولوژیک)",
+      "آتلکتازی فشاری بالای لبهٔ فوقانی افیوژن پلور",
+      "فیبروز شدید یا حفرهٔ بزرگ در ارتباط با برونش باز"
+    ],
+    "relatedDiseaseIds": [
+      "dis-cap",
+      "dis-hap-vap",
+      "dis-pleural-effusion",
+      "dis-lung-abscess",
+      "dis-tb"
+    ],
+    "clinicalSignificance": "یافتن صدای برونکیال در محیط ریه با نسبت احتمال مثبت بالا (LR+ ≈ 3.3 در پنومونی) نشانهٔ کانسلیدیشن پارانشیمی است؛ مشروط بر آنکه برونش منتهی به آن ناحیه باز باشد. اگر برونش بسته باشد (آتلکتازی انسدادی)، به‌جای صدای برونکیال کاهش یا محو شدن صدای تنفسی رخ می‌دهد.",
+    "comparisons": [
+      {
+        "targetId": "snd-vesicular",
+        "difference": "وزیکولار نرم، بم، با دم طولانی و بدون مکث است؛ برونکیال بلند، زیر، لوله‌ای، با بازدم طولانی و مکث واضح بین دم و بازدم."
+      },
+      {
+        "targetId": "snd-tracheal",
+        "difference": "صدای تراکئال حتی خشن‌تر و بلندتر است و مستقیماً روی گردن (تراشه) شنیده می‌شود، با دم و بازدم تقریباً مساوی."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 0.8,
+      "end": 7.5
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-mcgee-ebd",
+      "ref-kauh-2021"
+    ]
+  },
+  {
+    "id": "snd-tracheal",
+    "nameFa": "صدای تنفسی تراکئال",
+    "nameEn": "Tracheal Breath Sounds",
+    "category": "normal",
+    "categoryFa": "صداهای تنفسی طبیعی",
+    "authenticAudioStatus": "missing_open_licensed_recording",
+    "missingAudioNote": "در آرشیوهای بالینی باز با مجوز آزاد CC BY / CC0 (مانند KAUH و SPRSound) ضبط اختصاصی تاییدشدهٔ روی تراشهٔ گردنی در دسترس نبود (پایگاه ICBHI دارای مجوز پژوهشی غیرقابل بازنشر است). طبق اصل اصالت علمی PulmoLab، هیچ صدای مصنوعی به جای ضبط بیمار واقعی قرار داده نشده است. می‌توانید «حالت نمایش آموزشی آکوستیک» را صرفاً برای درک الگوی فرکانس و مکث بین‌فازی فعال کنید یا فایل ضبط واقعی دارای مجوز مؤسسه‌ای را در مسیر media/audio/tracheal_custom.wav قرار دهید.",
+    "expectedDropInPath": "media/audio/tracheal_custom.wav",
+    "recordings": [],
+    "synthProfile": "tracheal",
+    "description": "صدایی بسیار بلند، خشن، با پهنای باند فرکانسی وسیع که مستقیماً روی تراشهٔ خارج‌قفسه‌سینه‌ای در بریدگی فوق‌جناغی (Suprasternal notch) شنیده می‌شود. ناشی از جریان هوای آشفته در گلوتیس و تراشه بدون میانجی‌گری فیلتر بافت ریه است.",
+    "acoustics": {
+      "pitch": "بسیار بالا با طیف پهن (۱۰۰ تا ۴۰۰۰ هرتز، افت انرژی حوالی ۸۰۰ هرتز)",
+      "quality": "بسیار خشن، تیز و توخالی (Harsh, loud, tubular)",
+      "intensity": "بسیار بلند (بلندترین صدای تنفسی طبیعی)",
+      "ieRatio": "دم و بازدم تقریباً هم‌طول (۱:۱)",
+      "pause": "مکث واضح بین پایان دم و شروع بازدم"
+    },
+    "timing": "دم و بازدم با مدت و شدت تقریباً برابر همراه با وقفهٔ واضح بین‌فازی",
+    "anatomicalLocation": "قسمت قدامی گردن، مستقیماً روی تراشه بالای بریدگی استرنال (Suprasternal notch)",
+    "associatedDiseases": [
+      "طبیعی روی تراشه",
+      "کاربرد بالینی مهم: بررسی انسداد راه هوایی فوقانی (استریدور) و پایش تنفس در آپنهٔ خواب و بیهوشی"
+    ],
+    "relatedDiseaseIds": [
+      "dis-tracheal-stenosis",
+      "dis-osa"
+    ],
+    "clinicalSignificance": "سمع تراشه برای افتراق استریدور واقعی از ویزینگ منتقل‌شده از قفسهٔ سینه حیاتی است: استریدور روی تراشه بسیار بلندتر از میدان‌های ریوی شنیده می‌شود.",
+    "comparisons": [
+      {
+        "targetId": "snd-bronchial",
+        "difference": "تراکئال از برونکیال بلندتر، خشن‌تر و دارای طیف فرکانسی پهن‌تر است و روی گردن سمع می‌شود."
+      },
+      {
+        "targetId": "snd-stridor",
+        "difference": "تراکئال طبیعی غیرموزیکال و پهن‌باند است؛ استریدور موزیکال تک‌فرکانسی (مونوفونیک) تیز و اغلب دمی است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 0.0,
+      "end": 6.0
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-bates-exam"
+    ]
+  },
+  {
+    "id": "snd-fine-crackles",
+    "nameFa": "کراکل ظریف (Fine Crackles / Velcro Rales)",
+    "nameEn": "Fine Crackles",
+    "category": "adventitious",
+    "categoryFa": "صداهای اضافی ناپیوسته (Discontinuous)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/fine_crackles_ipf.wav",
+        "labelFa": "بیمار ۵۰ ساله با فیبروز ریوی (IPF) — کراکل‌های ظریف شبیه ولکرو",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از لوب تحتانی راست خلفی بیمار ۵۰ ساله مبتلا به فیبروز ریوی.",
+        "originalFile": "EP23_Lung Fibrosis,Crep,P R L ,50,M.wav",
+        "patientMeta": "50y · M · Posterior Right Lower (PRL)",
+        "sourceDiagnosis": "Lung Fibrosis (ILD)",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      },
+      {
+        "file": "media/audio/fine_crackles_hf.wav",
+        "labelFa": "بیمار ۷۶ ساله با نارسایی قلبی — کراکل‌های ظریف قاعده‌ای",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از لوب تحتانی راست خلفی بیمار ۷۶ ساله با ادم ریوی ناشی از نارسایی قلبی.",
+        "originalFile": "EP24_heart failure,Crep,P R L ,76,F.wav",
+        "patientMeta": "76y · F · Posterior Right Lower (PRL)",
+        "sourceDiagnosis": "Heart Failure (Pulmonary Edema)",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "fine_crackles",
+    "description": "صداهای اضافی ناپیوسته، کوتاه، انفجاری و غیرموزیکال که در اثر باز شدن ناگهانی و پیاپی راه‌های هوایی کوچکِ به‌طور غیرطبیعی بسته‌شده در طول دم ایجاد می‌شوند. صدای آن کلاسیکاً به باز کردن چسب ولکرو (Velcro) یا مالیدن تارهای مو نزدیک گوش شباهت دارد.",
+    "acoustics": {
+      "pitch": "بالا (High-pitched؛ فرکانس غالب حدود ۶۵۰ هرتز)",
+      "quality": "ظریف، خشک، انفجاری و غیرموزیکال (Velcro-like, crisp popping)",
+      "intensity": "ملایم تا متوسط، معمولاً متعدد در هر دم",
+      "ieRatio": "عمدتاً در میانه تا انتهای دم (Mid-to-late inspiratory)",
+      "pause": "مدت هر کراکل تک کمتر از ۵ میلی‌ثانیه"
+    },
+    "timing": "میانه تا انتهای دم (Mid-to-late inspiration)؛ با سرفه پاک نمی‌شوند",
+    "anatomicalLocation": "عمدتاً دوطرفه در قاعدهٔ ریه‌ها (در IPF در قواعد خلفی تحتانی؛ در ادم ریوی در نواحی وابسته به جاذبه)",
+    "associatedDiseases": [
+      "فیبروز ریوی ایدیوپاتیک (IPF) و سایر بیماری‌های بینابینی ریه (ILD)",
+      "ادم ریوی کاردیوژنیک (نارسایی قلبی)",
+      "پنومونی بینابینی یا مرحلهٔ اولیهٔ پنومونی",
+      "آسبستوز"
+    ],
+    "relatedDiseaseIds": [
+      "dis-ipf",
+      "dis-pulmonary-edema",
+      "dis-hp",
+      "dis-asbestosis",
+      "dis-cap"
+    ],
+    "clinicalSignificance": "کراکل‌های ظریفِ انتهای دمِ شبیه ولکرو در قواعد ریه، حساس‌ترین نشانهٔ معاینهٔ بالینی برای تشخیص زودرس IPF هستند و گاه ماه‌ها پیش از تغییرات آشکار CXR ظاهر می‌شوند. برخلاف کراکل خشن، با سرفه برطرف نمی‌شوند.",
+    "comparisons": [
+      {
+        "targetId": "snd-coarse-crackles",
+        "difference": "کراکل ظریف فرکانس بالاتر (~650Hz)، مدت کوتاه‌تر (~5ms)، زمان‌بندی اواخر دم و عدم پاسخ به سرفه دارد؛ کراکل خشن بم‌تر (~350Hz)، بلندتر، طولانی‌تر (~15ms)، در اوایل دم/بازدم و اغلب متغیر با سرفه است."
+      },
+      {
+        "targetId": "snd-pleural-rub",
+        "difference": "صدای مالش پلور دوفازی (دم و بازدم)، موضعی‌تر، با کیفیت سایش چرمی و بدون تعدد پاپ‌های ظریف انتهای دم است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 1.0,
+      "end": 7.5
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-ats-ipf-2022",
+      "ref-mcgee-ebd",
+      "ref-kauh-2021"
+    ]
+  },
+  {
+    "id": "snd-coarse-crackles",
+    "nameFa": "کراکل خشن (Coarse Crackles)",
+    "nameEn": "Coarse Crackles",
+    "category": "adventitious",
+    "categoryFa": "صداهای اضافی ناپیوسته (Discontinuous)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/coarse_crackles_pneumonia.wav",
+        "labelFa": "بیمار ۵۷ ساله با پنومونی — کراکل‌های خشن",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از بیمار مرد ۵۷ ساله مبتلا به پنومونی.",
+        "originalFile": "EP18_pneumonia,C,P R U,57,M.wav",
+        "patientMeta": "57y · M · Posterior Right Upper (PRU)",
+        "sourceDiagnosis": "Pneumonia",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      },
+      {
+        "file": "media/audio/coarse_crackles_bronchiectasis.wav",
+        "labelFa": "بیمار ۲۰ ساله با برونشکتازی — کراکل‌های خشن/مرطوب پایدار",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از لوب تحتانی راست خلفی بیمار ۲۰ ساله مبتلا به برونشکتازی.",
+        "originalFile": "EP21_BRON,Crep,P R L ,20,M.wav",
+        "patientMeta": "20y · M · Posterior Right Lower (PRL)",
+        "sourceDiagnosis": "Bronchiectasis",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "coarse_crackles",
+    "description": "صداهای ناپیوسته، بم‌تر، بلندتر و طولانی‌تر از کراکل ظریف که به صورت حبابی یا غرغرگونه (Bubbling / popping) شنیده می‌شوند. ناشی از عبور بولوس‌های هوا از میان ترشحات جمع‌شده در برونش‌های متوسط و بزرگ یا باز شدن متناوب راه‌های هوایی بزرگ‌تر در اوایل دم هستند.",
+    "acoustics": {
+      "pitch": "پایین‌تر (Low-pitched؛ فرکانس غالب حدود ۳۵۰ هرتز)",
+      "quality": "خشن، مرطوب، حباب‌مانند و غیرموزیکال",
+      "intensity": "بلندتر از کراکل ظریف و با تعداد کمتر در هر سیکل تنفسی",
+      "ieRatio": "عمدتاً اوایل دم (Early inspiratory) و ممکن است تا بازدم ادامه یابد",
+      "pause": "مدت هر پالس حدود ۱۵ میلی‌ثانیه"
+    },
+    "timing": "اوایل دم تا میانهٔ دم و گاهی در بازدم؛ اغلب پس از سرفهٔ مؤثر تغییر می‌کند",
+    "anatomicalLocation": "موضعی (در پنومونی یا برونشکتازی موضعی) یا منتشر (در برونشیت مزمن/COPD و ادم ریوی شدید)",
+    "associatedDiseases": [
+      "برونشکتازی (بسیار شاخص و پایدار)",
+      "پنومونی باکتریال",
+      "برونشیت مزمن / COPD (کراکل‌های اوایل دم)",
+      "ادم ریوی شدید آلوئولار"
+    ],
+    "relatedDiseaseIds": [
+      "dis-bronchiectasis",
+      "dis-cap",
+      "dis-copd",
+      "dis-pulmonary-edema",
+      "dis-lung-abscess"
+    ],
+    "clinicalSignificance": "کراکل‌های اوایل دم در بیماران COPD نشانهٔ درگیری راه‌های هوایی بزرگ و شدت انسداد راه هوایی است. کراکل‌های خشن موضعی پایدار قویاً مطرح‌کنندهٔ برونشکتازی یا ضایعهٔ حفره‌ای هستند.",
+    "comparisons": [
+      {
+        "targetId": "snd-fine-crackles",
+        "difference": "کراکل خشن بم‌تر، بلندتر، اوایل دم و گاهی بازدمی است و با سرفه تغییر می‌کند؛ کراکل ظریف زیرتر، خشک‌تر، اواخر دم و مقاوم به سرفه است."
+      },
+      {
+        "targetId": "snd-rhonchi",
+        "difference": "رونکای پیوسته (>۸۰–۲۵۰ میلی‌ثانیه) و خرخرمانند است؛ کراکل خشن از پالس‌های کوتاه ناپیوسته (~۱۵ میلی‌ثانیه) تشکیل شده است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 1.2,
+      "end": 8.0
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-ers-bronchiectasis",
+      "ref-mcgee-ebd",
+      "ref-kauh-2021"
+    ]
+  },
+  {
+    "id": "snd-wheezes",
+    "nameFa": "ویزینگ (Wheezes / Sibilant)",
+    "nameEn": "Wheezes",
+    "category": "adventitious",
+    "categoryFa": "صداهای اضافی پیوسته (Continuous)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/wheezes_asthma.wav",
+        "labelFa": "بیمار ۵۰ ساله با آسم — ویزینگ بازدمی پلی‌فونیک",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از لوب تحتانی چپ خلفی بیمار ۵۰ ساله مبتلا به آسم.",
+        "originalFile": "EP12_Asthma,E W,P L L,50,F.wav",
+        "patientMeta": "50y · F · Posterior Left Lower (PLL)",
+        "sourceDiagnosis": "Asthma",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      },
+      {
+        "file": "media/audio/wheezes_copd.wav",
+        "labelFa": "بیمار ۶۳ ساله با COPD — ویزینگ بازدمی",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از بیمار ۶۳ ساله مبتلا به COPD.",
+        "originalFile": "EP108_COPD,E W,P R L ,63,M.wav",
+        "patientMeta": "63y · M · Posterior Right Lower (PRL)",
+        "sourceDiagnosis": "COPD",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "wheezes",
+    "description": "صداهای اضافی پیوسته (مدت بالای ۸۰ تا ۲۵۰ میلی‌ثانیه)، موزیکال و سوت‌مانند با فرکانس بالا که در اثر نوسان (Flutter) دیواره‌های راه‌های هوایی تنگ‌شده بر اثر برونکواسپاسم، ادم مخاطی یا فشار خارجی ایجاد می‌شوند.",
+    "acoustics": {
+      "pitch": "بالا (High-pitched؛ فرکانس غالب بالای ۴۰۰ هرتز)",
+      "quality": "موزیکال، سوت‌مانند (Sibilant)؛ پلی‌فونیک (انسداد منتشر) یا مونوفونیک (انسداد موضعی یک برونش)",
+      "intensity": "متغیر؛ هشدار: در آسم بحرانی (Silent Chest) ممکن است به علت جریان هوای بسیار کم محو شود!",
+      "ieRatio": "عمدتاً بازدمی (با طولانی شدن بازدم)؛ در انسداد شدیدتر دمی-بازدمی",
+      "pause": "پیوسته (>۱۰۰ تا ۲۵۰ میلی‌ثانیه)"
+    },
+    "timing": "عمدتاً بازدمی؛ در تنگی شدیدتر هر دو فاز دم و بازدم",
+    "anatomicalLocation": "منتشر و دوطرفه (آسم، COPD، آسم قلبی) یا موضعی مونوفونیک (تومور اندوبرونکیال یا جسم خارجی)",
+    "associatedDiseases": [
+      "آسم برونکیال",
+      "COPD",
+      "نارسایی قلبی / ادم ریوی («آسم قلبی»)",
+      "انسداد موضعی برونش توسط تومور یا جسم خارجی (ویزینگ مونوفونیک ثابت)",
+      "آنافیلاکسی"
+    ],
+    "relatedDiseaseIds": [
+      "dis-asthma",
+      "dis-copd",
+      "dis-pulmonary-edema",
+      "dis-lung-cancer",
+      "dis-bronchiectasis"
+    ],
+    "clinicalSignificance": "همهٔ ویزینگ‌ها آسم نیستند! ویزینگ مونوفونیک ثابت در سیگاری زنگ خطر تومور اندوبرونکیال است. در سالمند قلبی، ویزینگ می‌تواند نشانهٔ «آسم قلبی» (CHF) باشد. و نبود ویزینگ در آسم بحرانی نشانهٔ خطرناک Silent Chest است.",
+    "comparisons": [
+      {
+        "targetId": "snd-rhonchi",
+        "difference": "ویزینگ زیرتر (>400Hz) و سوت‌مانند است؛ رونکای بم‌تر (<200Hz)، خرخرمانند و مرتبط با ترشحات برونش‌های بزرگ‌تر است."
+      },
+      {
+        "targetId": "snd-stridor",
+        "difference": "استریدور عمدتاً دمی و روی گردن/تراشه بلندتر است؛ ویزینگ عمدتاً بازدمی و روی قفسهٔ سینه است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 1.0,
+      "end": 8.0
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-gina-2025",
+      "ref-gold-2025",
+      "ref-kauh-2021"
+    ]
+  },
+  {
+    "id": "snd-rhonchi",
+    "nameFa": "رونکای (Rhonchi / Sonorous Wheezes)",
+    "nameEn": "Rhonchi",
+    "category": "adventitious",
+    "categoryFa": "صداهای اضافی پیوسته (Continuous)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/rhonchi_sprsound.wav",
+        "labelFa": "ضبط بالینی SPRSound — ۵ رویداد برچسب‌گذاری‌شدهٔ رونکای",
+        "clinicalContext": "ضبط بالینی واقعی (SPRSound CC BY 4.0) با ۵ رویداد متوالی رونکای تاییدشده توسط متخصصین.",
+        "originalFile": "66236931_2.0_1_p4_5264.wav",
+        "patientMeta": "2.0y · F · Posterior chest (p4)",
+        "sourceDiagnosis": "Pediatric lower airway secretions (SPRSound CAS)",
+        "dataset": "SPRSound: Open-Source SJTU Paediatric Respiratory Sound Database (Zhang Q et al., IEEE TBioCAS 2022;16(5):867-881)",
+        "doi": "https://doi.org/10.1109/TBCAS.2022.3204910",
+        "repositoryUrl": "https://github.com/SJTU-YONGFU-RESEARCH-GRP/SPRSound",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "Yunting Model II Electronic Stethoscope (8000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": [
+          {
+            "start": "912",
+            "end": "4214",
+            "type": "Rhonchi"
+          },
+          {
+            "start": "4346",
+            "end": "7712",
+            "type": "Rhonchi"
+          },
+          {
+            "start": "7801",
+            "end": "10948",
+            "type": "Rhonchi"
+          },
+          {
+            "start": "11057",
+            "end": "13401",
+            "type": "Rhonchi"
+          },
+          {
+            "start": "13508",
+            "end": "15343",
+            "type": "Rhonchi"
+          }
+        ]
+      }
+    ],
+    "synthProfile": "rhonchi",
+    "description": "صدای اضافی پیوسته و بم با کیفیت خرخر مداوم (Snoring / low-pitched continuous) که از نوسان ترشحات غلیظ در برونش‌های بزرگ و متوسط ایجاد می‌شود.",
+    "acoustics": {
+      "pitch": "پایین (Low-pitched؛ ≤ ۲۰۰ هرتز)",
+      "quality": "پیوسته، بم، خرخرمانند (Snoring, sonorous)",
+      "intensity": "متوسط تا بلند",
+      "ieRatio": "عمدتاً بازدمی، گاهی دمی-بازدمی",
+      "pause": "پیوسته (>۸۰ تا ۲۵۰ میلی‌ثانیه)؛ اغلب پس از سرفه تغییر کرده یا موقتاً پاک می‌شود"
+    },
+    "timing": "اغلب بازدمی و متغیر با سرفه",
+    "anatomicalLocation": "مناطق مرکزی و پروگزیمال میدان‌های ریوی",
+    "associatedDiseases": [
+      "برونشیت حاد و مزمن",
+      "تشدید COPD با ترشحات فراوان",
+      "برونشکتازی",
+      "فیبروز کیستیک"
+    ],
+    "relatedDiseaseIds": [
+      "dis-copd",
+      "dis-bronchiectasis",
+      "dis-cf",
+      "dis-cap"
+    ],
+    "clinicalSignificance": "تغییر یا ناپدید شدن رونکای پس از سرفه کمک می‌کند آن را از برونکواسپاسم خالص (ویزینگ) افتراق دهیم، زیرا ناشی از ترشحات متحرک درون برونش‌های بزرگ است.",
+    "comparisons": [
+      {
+        "targetId": "snd-wheezes",
+        "difference": "رونکای بم (<200Hz) و خرخرمانند است و با سرفه تغییر می‌کند؛ ویزینگ زیر (>400Hz) و سوت‌مانند است."
+      },
+      {
+        "targetId": "snd-coarse-crackles",
+        "difference": "رونکای پیوسته و کشیده است، اما کراکل خشن ناپیوسته و کوتاه است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 0.9,
+      "end": 7.7
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-bates-exam",
+      "ref-sprsound-2022"
+    ]
+  },
+  {
+    "id": "snd-stridor",
+    "nameFa": "استریدور (Stridor)",
+    "nameEn": "Stridor",
+    "category": "adventitious",
+    "categoryFa": "صداهای اضافی پیوسته (اورژانس راه هوایی فوقانی)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/stridor_sprsound.wav",
+        "labelFa": "ضبط بالینی SPRSound — رویداد تاییدشدهٔ استریدور (ثانیه ۶٫۸ تا ۹٫۲)",
+        "clinicalContext": "ضبط بالینی واقعی (SPRSound CC BY 4.0) با رویداد تاییدشدهٔ استریدور در بازهٔ ۶٫۸۴ تا ۹٫۲۰ ثانیه؛ از دکمهٔ «لوپ رویداد کلیدی» برای تکرار دقیق آن استفاده کنید.",
+        "originalFile": "66293753_1.3_0_p1_4841.wav",
+        "patientMeta": "1.3y · M · Posterior chest (p1)",
+        "sourceDiagnosis": "Pediatric upper airway obstruction (SPRSound CAS)",
+        "dataset": "SPRSound: Open-Source SJTU Paediatric Respiratory Sound Database (Zhang Q et al., IEEE TBioCAS 2022;16(5):867-881)",
+        "doi": "https://doi.org/10.1109/TBCAS.2022.3204910",
+        "repositoryUrl": "https://github.com/SJTU-YONGFU-RESEARCH-GRP/SPRSound",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "Yunting Model II Electronic Stethoscope (8000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": [
+          {
+            "start": "6836",
+            "end": "9201",
+            "type": "Stridor"
+          }
+        ]
+      }
+    ],
+    "synthProfile": "stridor",
+    "description": "صدای پیوسته، بلند، زیر و تک‌فرکانسی (مونوفونیک) ناشی از جریان هوای متلاطم از میان تنگی راه هوایی فوقانی (حنجره، ساب‌گلوت یا تراشهٔ فوقانی). اغلب بدون گوشی پزشکی نیز شنیده می‌شود.",
+    "acoustics": {
+      "pitch": "بالا (>۵۰۰ هرتز، مونوفونیک و بسیار نافذ)",
+      "quality": "موزیکال، تیز، خشن/خروسک‌مانند (Crowing)",
+      "intensity": "بسیار بلند، بیشینهٔ شدت روی گردن و تراشه",
+      "ieRatio": "عمدتاً دمی (انسداد خارج‌قفسه‌سینه‌ای)؛ دوفازی در تنگی ثابت یا بحرانی تراشه",
+      "pause": "پیوسته در تمام یا بخش عمدهٔ دم"
+    },
+    "timing": "دمی (خارج‌قفسه‌سینه‌ای)، بازدمی (داخل‌قفسه‌سینه‌ای) یا دوفازی (انسداد شدید/ثابت)",
+    "anatomicalLocation": "بیشترین شدت روی قدام گردن (حنجره و تراشه)",
+    "associatedDiseases": [
+      "تنگی تراشه (پس از انتوباسیون یا تومور)",
+      "آنافیلاکسی و ادم حنجره (اورژانس!)",
+      "جسم خارجی راه هوایی فوقانی",
+      "اپیکگلوتیت و کروپ",
+      "فلج تارهای صوتی و VCD"
+    ],
+    "relatedDiseaseIds": [
+      "dis-tracheal-stenosis",
+      "dis-lung-cancer",
+      "dis-asthma"
+    ],
+    "clinicalSignificance": "استریدور در حالت استراحت یک اورژانس بالقوهٔ راه هوایی است! استریدور دوفازی نشان‌دهندهٔ تنگی بحرانی قطر مجرا است و نیازمند ارزیابی فوری راه هوایی پیش از دکمپانسه شدن بیمار است.",
+    "comparisons": [
+      {
+        "targetId": "snd-wheezes",
+        "difference": "استریدور عمدتاً دمی و روی گردن بلندتر است؛ ویزینگ عمدتاً بازدمی و روی قفسهٔ سینه بلندتر است."
+      },
+      {
+        "targetId": "snd-tracheal",
+        "difference": "تراکئال طبیعی غیرموزیکال و پهن‌باند است؛ استریدور موزیکال، تیز و مونوفونیک است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 6.8,
+      "end": 9.2
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-murray-nadel",
+      "ref-sprsound-2022"
+    ]
+  },
+  {
+    "id": "snd-pleural-rub",
+    "nameFa": "صدای مالش پلور (Pleural Friction Rub)",
+    "nameEn": "Pleural Friction Rub",
+    "category": "adventitious",
+    "categoryFa": "صداهای اضافی پلورال (سایش غیرموزیکال)",
+    "authenticAudioStatus": "missing_open_licensed_recording",
+    "missingAudioNote": "در آرشیوهای بالینی باز با مجوز آزاد CC BY / CC0 (KAUH، SPRSound و Wikimedia Commons) ضبط بالینی تاییدشده از بیمار انسانی با صدای مالش پلور یافت نشد (مجموعه‌های اینترنتی دارای حق نشر اختصاصی یا ضبط مانکن هستند). PulmoLab هیچ صدای مانکن یا مصنوعی را به جای بیمار واقعی معرفی نمی‌کند. الگوی آموزشی آکوستیک صرفاً با برچسب شفاف شبیه‌سازی آموزشی در دسترس است و مسیر media/audio/pleural_rub_custom.wav برای افزودن ضبط مؤسسه‌ای آماده شده است.",
+    "expectedDropInPath": "media/audio/pleural_rub_custom.wav",
+    "recordings": [],
+    "synthProfile": "pleural_rub",
+    "description": "صدای غیرموزیکال، خشن و شبیه کشیده شدن دو تکه چرم نو یا راه رفتن روی برف تازه ناشی از ساییده شدن سطوح ملتهب و زبر پلور احشایی و جداری روی یکدیگر هنگام تنفس.",
+    "acoustics": {
+      "pitch": "پایین (<۳۵۰ هرتز با پالس‌های نامنظم خشن)",
+      "quality": "سایش چرمی، جیرجیر زبر (Leathery, grating, creaking)",
+      "intensity": "موضعی و نزدیک به گوش؛ با فشار بیشتر دیافراگم واضح‌تر می‌شود",
+      "ieRatio": "دوفازی (انتهای دم و اوایل بازدم، با الگوی آینه‌ای)",
+      "pause": "نکتهٔ افتراقی طلایی: با حبس نفس بیمار کاملاً متوقف می‌شود (برخلاف مالش پریکارد!)"
+    },
+    "timing": "دوفازی (انتهای دم و ابتدای بازدم) هم‌زمان با درد پلورتیک",
+    "anatomicalLocation": "موضعی، شایع‌تر در نواحی تحتانی-جانبی قفسهٔ سینه",
+    "associatedDiseases": [
+      "پلوریت عفونی (پنومونی، سل)",
+      "انفارکتوس ریوی ناشی از آمبولی ریه (PE)",
+      "سروزیت خودایمنی (لوپوس، RA)",
+      "بدخیمی پلور"
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion",
+      "dis-pe",
+      "dis-cap",
+      "dis-tb"
+    ],
+    "clinicalSignificance": "ناپدید شدن ناگهانی مالش پلور می‌تواند نشانهٔ بهبود التهاب یا تجمع مایع افیوژن و جدا شدن دو لایهٔ پلور باشد. برای افتراق از Pericardial Rub از بیمار بخواهید چند ثانیه نفس خود را حبس کند.",
+    "comparisons": [
+      {
+        "targetId": "snd-coarse-crackles",
+        "difference": "مالش پلور دوفازی با کیفیت سایش چرمی و بدون تغییر با سرفه است و اغلب با درد پلورتیک همراه است؛ کراکل خشن حباب‌مانند است و با سرفه تغییر می‌کند."
+      },
+      {
+        "targetId": "snd-fine-crackles",
+        "difference": "کراکل ظریف زیرتر، خشک، شبیه ولکرو و اواخر دم است."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 0.0,
+      "end": 6.0
+    },
+    "referenceIds": [
+      "ref-bohadana-2014",
+      "ref-bates-exam",
+      "ref-mcgee-ebd"
+    ]
+  },
+  {
+    "id": "snd-mixed-hf-copd",
+    "nameFa": "صدای ترکیبی بالینی: کراکل دمی + ویزینگ بازدمی (CHF + COPD)",
+    "nameEn": "Mixed Inspiratory Crackles & Expiratory Wheezes",
+    "category": "complex",
+    "categoryFa": "صداهای ترکیبی در بیماران چندبیماری (Multimorbidity)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/mixed_hf_copd_crackles_wheezes.wav",
+        "labelFa": "بیمار ۷۱ ساله با نارسایی قلبی و COPD هم‌زمان",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از بیمار مرد ۷۱ ساله با هم‌ابتلایی تاییدشدهٔ نارسایی قلبی و COPD؛ تداخل واقعی کراکل‌های دمی و ویزینگ بازدمی.",
+        "originalFile": "EP5_Heart Failure + COPD,I C E W,P L R ,71,M.wav",
+        "patientMeta": "71y · M · Posterior Lower Right (PLR)",
+        "sourceDiagnosis": "Heart Failure + COPD (Multimorbidity)",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "mixed_hf_copd",
+    "description": "نمونهٔ واقعی از پیچیدگی بالینی در بیماران چندبیماری: هم‌زمانی کراکل‌های دمی (ادم ریوی در CHF) با ویزینگ بازدمی (برونکواسپاسم COPD و ادم جدار برونش).",
+    "acoustics": {
+      "pitch": "مختلط (پالس‌های انفجاری دمی + مؤلفهٔ موزیکال بازدمی)",
+      "quality": "ترکیب صداهای ناپیوسته و پیوسته در یک سیکل تنفسی واحد",
+      "intensity": "متوسط",
+      "ieRatio": "بازدم طولانی‌شده همراه با ویزینگ + کراکل در دم",
+      "pause": "نیازمند تفکیک شنیداری فاز دم و بازدم"
+    },
+    "timing": "دم (کراکل) + بازدم طولانی‌شده (ویزینگ)",
+    "anatomicalLocation": "قواعد خلفی ریه‌ها (در این بیمار: لوب تحتانی راست خلفی)",
+    "associatedDiseases": [
+      "هم‌ابتلایی نارسایی قلبی (CHF) و COPD",
+      "تشدید COPD همراه با پنومونی یا ادم ریوی",
+      "برونشکتازی با جزء انسدادی"
+    ],
+    "relatedDiseaseIds": [
+      "dis-copd",
+      "dis-pulmonary-edema",
+      "dis-resp-failure"
+    ],
+    "clinicalSignificance": "تک‌تفسیر کردن این صدا صرفاً به نفع «آسم/COPD» یا صرفاً «نارسایی قلبی» از شایع‌ترین خطاهای اورژانس است؛ نیاز به تلفیق با NT-proBNP، CXR و اکوکاردیوگرافی دارد.",
+    "comparisons": [
+      {
+        "targetId": "snd-wheezes",
+        "difference": "در ویزینگ خالص آسم، کراکل‌های قاعده‌ای دمی وجود ندارد؛ حضور کراکل همراه ویزینگ در سالمند شک به ادم ریوی یا پنومونی هم‌زمان را برمی‌انگیزد."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 1.0,
+      "end": 8.5
+    },
+    "referenceIds": [
+      "ref-kauh-2021",
+      "ref-gold-2025",
+      "ref-harrison-21"
+    ]
+  },
+  {
+    "id": "snd-effusion-zone",
+    "nameFa": "سمع ناحیهٔ مرزی افیوژن پلور (کراکل + انتقال برونکیال)",
+    "nameEn": "Pleural Effusion Border Zone (Crackles + Bronchial Transmission)",
+    "category": "complex",
+    "categoryFa": "صداهای ترکیبی در بیماران چندبیماری (Multimorbidity)",
+    "authenticAudioStatus": "verified_patient",
+    "recordings": [
+      {
+        "file": "media/audio/effusion_crackles_bronchial.wav",
+        "labelFa": "بیمار ۸۱ ساله با افیوژن پلور — ناحیهٔ فشردگی پارانشیم",
+        "clinicalContext": "ضبط بالینی واقعی (KAUH CC BY 4.0) از بیمار مرد ۸۱ ساله مبتلا به افیوژن پلور با ثبت هم‌زمان کراکل دمی و کیفیت برونکیال در ناحیهٔ آتلکتازی فشاری بالای مایع.",
+        "originalFile": "EP6_Plueral Effusion,I C B,P L R,81,M.wav",
+        "patientMeta": "81y · M · Posterior Lower Right (PLR)",
+        "sourceDiagnosis": "Pleural Effusion",
+        "dataset": "KAUH Lung Sound Dataset (Fraiwan M, Fraiwan L, Khassawneh B, Ibnian A. Data in Brief. 2021;35:106913)",
+        "doi": "https://doi.org/10.1016/j.dib.2021.106913",
+        "repositoryUrl": "https://data.mendeley.com/datasets/jwyy9np4gv/3",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "device": "3M Littmann Electronic Stethoscope Model 3200 (Extended Range filter, 20–2000 Hz, 4000 Hz PCM WAV)",
+        "processingNote": "DC-offset removal, trimmed to 15.0s, peak normalized to -1.4 dBFS; spectral content unaltered.",
+        "events": []
+      }
+    ],
+    "synthProfile": "bronchial",
+    "description": "در حالی که مستقیماً روی تجمع مایع پلور صدای تنفسی کاهش یا محو می‌شود، درست بالای مرز فوقانی افیوژن به دلیل آتلکتازی فشاری پارانشیم ریه، صدای برونکیال، اگوفونی و گاهی کراکل دمی شنیده می‌شود.",
+    "acoustics": {
+      "pitch": "متوسط تا بالا",
+      "quality": "کیفیت برونکیال همراه با کراکل‌های دمی در مرز آتلکتازی فشاری",
+      "intensity": "کاهش‌یافته در پایین و واضح‌تر در مرز فوقانی مایع",
+      "ieRatio": "بازدم واضح‌تر از وزیکولار طبیعی",
+      "pause": "سمع مقایسه‌ای از قاعده به قله برای یافتن سطح مایع ضروری است"
+    },
+    "timing": "دم و بازدم در لبهٔ فوقانی افیوژن",
+    "anatomicalLocation": "لوب‌های تحتانی خلفی در مرز فوقانی ماتیتهٔ دق",
+    "associatedDiseases": [
+      "افیوژن پلور پاراپنومونیک یا بدخیم",
+      "آتلکتازی فشاری ثانویه به افیوژن"
+    ],
+    "relatedDiseaseIds": [
+      "dis-pleural-effusion",
+      "dis-lung-cancer",
+      "dis-empyema",
+      "dis-atelectasis"
+    ],
+    "clinicalSignificance": "شنیده شدن صدای برونکیال و اگوفونی در یک سمت الزاماً به معنای پنومونی بدون افیوژن نیست؛ در لبهٔ فوقانی یک افیوژن متوسط تا بزرگ نیز همین یافته (همراه با کاهش صدا و ماتیتهٔ سنگی در قاعده) دیده می‌شود.",
+    "comparisons": [
+      {
+        "targetId": "snd-bronchial",
+        "difference": "در کانسلیدیشن خالص، فرمتوس لمسی افزایش می‌یابد؛ در افیوژن پلور، روی مایع فرمتوس و صدای تنفسی کاهش می‌یابند و صدای برونکیال/اگوفونی فقط در مرز فوقانی شنیده می‌شود."
+      }
+    ],
+    "recommendedLoop": {
+      "start": 1.0,
+      "end": 8.0
+    },
+    "referenceIds": [
+      "ref-kauh-2021",
+      "ref-bts-pleural-2023",
+      "ref-mcgee-ebd"
+    ]
+  }
+]

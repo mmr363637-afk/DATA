@@ -164,6 +164,66 @@ def extract_ent(path: Path) -> dict:
     }
 
 
+def identity_list(text: str) -> dict[str, str]:
+    """جدول «شناسنامه درسنامه» (`dl.identity-list`) → نگاشت عنوان→مقدار.
+
+    درسنامه‌های مغز و اعصاب همهٔ فرادادهٔ خود (عنوان بخش کتاب، صفحات، نویسندگان،
+    زمان مطالعه) را در این جدول در آخرین بخش صفحه دارند؛ پس آمار از خود صفحه
+    خوانده می‌شود و به فایل تحویلیِ بسته نیاز نیست.
+    """
+    m = re.search(r'<dl class="identity-list">(.*?)</dl>', text, re.S)
+    if not m:
+        return {}
+    out: dict[str, str] = {}
+    for dt, dd in re.findall(r"<dt>(.*?)</dt>\s*<dd[^>]*>(.*?)</dd>", m.group(1), re.S):
+        out[clean(re.sub(r"<[^>]+>", " ", dt))] = clean(re.sub(r"<[^>]+>", " ", dd))
+    return out
+
+
+def extract_neurology(path: Path) -> dict:
+    """درسنامهٔ مغز و اعصاب (پیش‌ساخته، خودبسنده، با موتور خوانندهٔ درون‌خطی).
+
+    این صفحه‌ها با قالب خود کتابخانه ساخته شده‌اند (`.sec[data-sec-id]`، `.qx__q`،
+    `.fx__q`، شیت‌های نشانه/یادداشت) ولی موتور `medx-reader.js` را درون خود فایل
+    دارند، پس هیچ دارایی بیرونی بارگذاری نمی‌کنند.
+    """
+    text = path.read_text(encoding="utf-8", errors="replace")
+    ident = identity_list(text)
+    slug = path.stem
+
+    # «۱۳. Stroke — سکته مغزی» برای فصل‌ها و «Appendix: … — پیوست: …» برای پیوست.
+    # برچسب این سطر در درسنامه‌ها «عنوان فصل» است و در دو مورد «عنوان بخش».
+    section = ident.get("عنوان فصل") or ident.get("عنوان بخش", "")
+    chapter, title_en = 0, ""
+    m = re.match(r"\s*([۰-۹٠-٩\d]+)\.\s*(.*?)\s*—\s*\S", section)
+    if m:
+        chapter, title_en = num(m.group(1)), m.group(2).strip()
+    else:
+        m = re.match(r"\s*(Appendix:.*?)\s*—\s*\S", section)
+        if m:
+            title_en = m.group(1).strip()
+
+    return {
+        "id": first(text, r'data-lesson="([^"]+)"') or f"neurology/{slug}",
+        "slug": slug,
+        "chapter": chapter or None,
+        "title": first(text, r"<h1[^>]*>(.*?)</h1>"),
+        "titleEn": title_en,
+        "path": f"neurology/{path.name}",
+        "minutes": num(first(text, r'data-minutes="([۰-۹٠-٩\d]+)"')),
+        "sourcePages": ident.get("صفحات کتاب", "").replace(" تا ", "–"),
+        "sections": num(first(text, r'data-secs="([۰-۹٠-٩\d]+)"')),
+        "words": visible_words(text),
+        "tables": count(text, r"<table"),
+        "mcq": count(text, r'class="qx__q"'),
+        "flashcards": count(text, r'class="fx__q"'),
+        "images": count(text, r"<img"),
+        "figures": count(text, r"<figure"),
+        "expansionBlocks": count(text, r'class="batch-review-addition"'),
+        "bookTitle": ident.get("کتاب", ""),
+    }
+
+
 # ---------------------------------------------------------------------------
 # تعریف خانواده‌ها
 # ---------------------------------------------------------------------------
@@ -208,10 +268,33 @@ FAMILIES: dict[str, dict] = {
         },
         "sourceLabel": lambda row: f"· بخش‌های {row['sourceSections']}" if row.get("sourceSections") else "",
     },
+    "neuro": {
+        "dir": "neurology",
+        "pattern": "*.html",
+        "extract": extract_neurology,
+        "name": "مغز و اعصاب",
+        "nameEn": "Neurology",
+        "qbankPart": "neuro",
+        # موتور درون‌خطی این صفحه‌ها همان کلید استاندارد کتابخانه را دارد
+        "progressStorageKey": "medx.state.v1",
+        "source": "درسنامهٔ نورولوژی — Clinical Neurology, 11th edition (2021)، McGraw Hill",
+        "book": {
+            "title": "Clinical Neurology",
+            "authors": ["David A. Greenberg", "Michael J. Aminoff", "Roger P. Simon"],
+            "publisher": "McGraw Hill",
+            "edition": 11,
+            "editionYear": 2021,
+            "deliveredChapters": 14,
+            "note": ("۱۳ فصل + پیوست معاینهٔ اعصاب محیطی؛ هر درسنامه ۱۵ سؤال و ۵ فلش‌کارت دارد. "
+                     "تصویرهای بالینی از Wikimedia Commons با ذکر اثر و مجوز (CC BY-SA / CC0 / مالکیت عمومی) "
+                     "و شماتیک‌ها اختصاصی‌اند."),
+        },
+        "sourceLabel": lambda row: f"· فصل {row['chapter']}" if row.get("chapter") else "· پیوست",
+    },
 }
 
 # ترتیب نمایش در پورتال/manifest: خانواده‌های تازه بعد از قبلی‌ها
-PREBUILT_ORDER = ["ophthalmology", "orthopedics", "infectious", "urology", "ent"]
+PREBUILT_ORDER = ["ophthalmology", "orthopedics", "infectious", "urology", "ent", "neuro"]
 
 
 def scan(key: str) -> list[dict]:
@@ -247,7 +330,8 @@ def family_manifest(key: str, rows: list[dict]) -> dict:
             "sections": row["sections"], "words": row["words"], "tables": row["tables"],
             "mcq": row["mcq"], "flashcards": row["flashcards"],
         })
-        for extra in ("cases", "algorithms", "images", "quickFacts", "selfChecks", "lessonKey"):
+        for extra in ("cases", "algorithms", "images", "figures", "quickFacts",
+                      "selfChecks", "expansionBlocks", "lessonKey"):
             if row.get(extra):
                 item[extra] = row[extra]
         item["source"] = f"{fam['source']} {fam['sourceLabel'](row)}".strip()
@@ -351,8 +435,8 @@ def sync(check_only: bool, only: str | None = None) -> int:
         cfg = load_subject_cfg(key)
         app_keys = cfg.get("appSubjectKeys", [])
 
-        # ۱) manifest خود خانواده
-        fam_path = CONTENT / key / "manifest.json"
+        # ۱) manifest خود خانواده (پوشهٔ خانواده از کلیدش جداست: neuro → neurology)
+        fam_path = CONTENT / FAMILIES[key]["dir"] / "manifest.json"
         fam_text = json.dumps(family_manifest(key, rows), ensure_ascii=False, indent=1) + "\n"
         if not fam_path.exists() or fam_path.read_text(encoding="utf-8") != fam_text:
             changed.append(f"{fam_path.relative_to(ROOT)} ({len(rows)} درس)")
