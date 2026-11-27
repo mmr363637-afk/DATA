@@ -1,0 +1,175 @@
+/* NeuroLab Studio — Deep Neural Observatory Design Tokens
+   Theme anchor aligned with DATA repo: { h: 245, c: 76, a: 192 } */
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../assets/fonts/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../assets/fonts/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../assets/fonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../assets/fonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('../../../assets/fonts/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Core Neural Observatory Surfaces */
+  --bg-0: #050811;
+  --bg-1: #0a1020;
+  --bg-2: #10182d;
+  --bg-3: #16213d;
+  --bg-glass: rgba(12, 18, 36, 0.82);
+  --bg-glass-strong: rgba(8, 13, 27, 0.94);
+
+  /* Hairline Borders & Glows */
+  --border: rgba(148, 163, 224, 0.14);
+  --border-strong: rgba(148, 163, 224, 0.28);
+  --border-accent: rgba(124, 110, 255, 0.48);
+
+  /* Ink & Hierarchy */
+  --text-0: #f3f6ff;
+  --text-1: #d4def7;
+  --text-2: #94a5cc;
+  --text-3: #64759d;
+
+  /* Signature Clinical Accents (Indigo-Violet + Electric Cyan) */
+  --accent: #7c6eff;
+  --accent-bright: #a397ff;
+  --accent-dim: rgba(124, 110, 255, 0.16);
+  --cyan: #22d3ee;
+  --cyan-dim: rgba(34, 211, 238, 0.14);
+  --emerald: #34d399;
+  --emerald-dim: rgba(52, 211, 153, 0.14);
+  --amber: #fbbf24;
+  --amber-dim: rgba(251, 191, 36, 0.14);
+  --rose: #fb7185;
+  --rose-dim: rgba(251, 113, 133, 0.16);
+  --orange: #fb923c;
+  --orange-dim: rgba(251, 146, 60, 0.15);
+
+  /* EEG & Neurophysiology Channel Colors */
+  --eeg-left: #38bdf8;
+  --eeg-right: #c084fc;
+  --eeg-mid: #34d399;
+  --eeg-alert: #fb7185;
+  --eeg-grid: rgba(148, 163, 224, 0.08);
+  --eeg-sec: rgba(148, 163, 224, 0.22);
+
+  /* Typography */
+  --font-sans: 'Vazirmatn', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+
+  /* Metrics & Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --topbar-h: 58px;
+  --sidebar-w: 236px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 16px rgba(2, 4, 12, 0.35);
+  --shadow-md: 0 12px 32px rgba(2, 4, 12, 0.52);
+  --shadow-glow: 0 0 28px rgba(124, 110, 255, 0.22);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 150ms;
+  --dur-med: 260ms;
+}
+
+/* Simulation Mode Subtle Cockpit Visual Signal */
+body[data-mode="simulation"] {
+  --accent: #f59e0b;
+  --accent-bright: #fcd34d;
+  --accent-dim: rgba(245, 158, 11, 0.16);
+  --border-accent: rgba(245, 158, 11, 0.5);
+  --shadow-glow: 0 0 28px rgba(245, 158, 11, 0.22);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg-0);
+  color: var(--text-0);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  background-image:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(124, 110, 255, 0.11), transparent 62%),
+    radial-gradient(ellipse 60% 45% at 90% 10%, rgba(34, 211, 238, 0.08), transparent 60%),
+    linear-gradient(180deg, #050811 0%, #070c19 100%);
+  background-attachment: fixed;
+}
+
+body[data-mode="simulation"] {
+  background-image:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(245, 158, 11, 0.11), transparent 62%),
+    radial-gradient(ellipse 60% 45% at 90% 10%, rgba(251, 113, 133, 0.08), transparent 60%),
+    linear-gradient(180deg, #060811 0%, #0b0d19 100%);
+}
+
+/* Tabular mono numeric discipline (Heart Simulator benchmark) */
+.mono, .num, code, kbd {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Focus accessibility */
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+/* Thin clinical scrollbars */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 224, 0.2);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(148, 163, 224, 0.38); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

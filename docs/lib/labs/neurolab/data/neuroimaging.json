@@ -1,0 +1,3799 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "label": "همه اسکن‌ها (83)"
+    },
+    {
+      "id": "hard",
+      "label": "🔥 اسکن‌های فوق‌سخت و تله‌دار (47)"
+    },
+    {
+      "id": "normal",
+      "label": "آناتومی طبیعی"
+    },
+    {
+      "id": "stroke",
+      "label": "سکته ایسکمیک حاد"
+    },
+    {
+      "id": "hemorrhage",
+      "label": "خونریزی و تروما"
+    },
+    {
+      "id": "oncology",
+      "label": "نوروآنکولوژی و کیست‌ها"
+    },
+    {
+      "id": "infection",
+      "label": "عفونت، متابولیک، دژنراتیو و MS"
+    },
+    {
+      "id": "spine",
+      "label": "نخاع و ستون فقرات"
+    }
+  ],
+  "windowPresets": [
+    {
+      "id": "brain",
+      "label": "پنجره مغز (Brain)",
+      "brightness": 100,
+      "contrast": 105,
+      "invert": false
+    },
+    {
+      "id": "stroke",
+      "label": "پنجره سکته (Narrow)",
+      "brightness": 106,
+      "contrast": 148,
+      "invert": false
+    },
+    {
+      "id": "blood",
+      "label": "پنجره خون/ساب‌دورال",
+      "brightness": 96,
+      "contrast": 128,
+      "invert": false
+    },
+    {
+      "id": "bone",
+      "label": "کنتراست بالا",
+      "brightness": 115,
+      "contrast": 165,
+      "invert": false
+    },
+    {
+      "id": "mri",
+      "label": "استاندارد MRI",
+      "brightness": 102,
+      "contrast": 108,
+      "invert": false
+    }
+  ],
+  "studies": [
+    {
+      "id": "img-normal-ct-head",
+      "category": "normal",
+      "categoryLabel": "آناتومی طبیعی",
+      "title": "سی‌تی اسکن مغز طبیعی بدون کنتراست (Normal NCCT)",
+      "modality": "NCCT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-ncct-dense-mca",
+      "clinicalPrompt": "بیمار ۴۲ ساله با سردرد تنشی؛ سی‌تی اسکن جهت رد خونریزی انجام شده است.",
+      "findings": [
+        "تمایز واضح ماده خاکستری و سفید حفظ شده است",
+        "بطن‌های جانبی و سوم متقارن و بدون جابه‌جایی خط وسط",
+        "سیسترن‌های قاعده‌ای باز و عاری از خونریزی هیپردنس",
+        "عدم مشاهده هیپردنسیتی شریان MCA یا افاسمان شیارها"
+      ],
+      "report": {
+        "modality": "NCCT Brain (Axial)",
+        "compartment": "طبیعی — بدون ضایعه فضاگیر یا خونریزی",
+        "signal": "دانسیته متقارن پارانشیم؛ تمایز طبیعی کورتکس و نوار اینسولار",
+        "massEffect": "ندارد؛ خط وسط و بطن‌ها طبیعی",
+        "territory": "طبیعی (مرجع مقایسه)"
+      },
+      "diagnosis": "سی‌تی اسکن مغز طبیعی (Normal Head CT)",
+      "roi": {
+        "x": 50,
+        "y": 48,
+        "r": 16,
+        "label": "خط وسط متقارن و بطن‌های طبیعی"
+      },
+      "relatedDiseases": [
+        "dis-ais",
+        "dis-migraine"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_normal_ct_head.jpg",
+      "dimensions": "646x468",
+      "attribution": {
+        "author": "Mikael Häggström, M.D. Author info - Reusing images- Conflicts of interest:  None\nMikael Häggström, M.D.Consent note: Written informed consent was obtained from the individual, including online publication.",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:CT_of_a_normal_brain,_axial_21.png",
+        "wikimediaTitle": "File:CT of a normal brain, axial 21.png"
+      }
+    },
+    {
+      "id": "img-normal-mri-t1-sag",
+      "category": "normal",
+      "categoryLabel": "آناتومی طبیعی",
+      "title": "ام‌آر‌آی مغز طبیعی ساجیتال T1 (Normal Sagittal T1)",
+      "modality": "MRI T1 Sagittal",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-chiari",
+      "clinicalPrompt": "بررسی آناتومی خط وسط (جسم پینه‌ای، هیپوفیز، ساقه مغز، مخچه و فورامن مگنوم).",
+      "findings": [
+        "جسم پینه‌ای کامل و با ضخامت طبیعی",
+        "تونسیل‌های مخچه بالاتر از خط فورامن مگنوم قرار دارند",
+        "ساقه مغز و بطن چهارم با مورفولوژی طبیعی",
+        "سلا تورسیکا و غده هیپوفیز بدون توده"
+      ],
+      "report": {
+        "modality": "MRI T1-Weighted Midline Sagittal",
+        "compartment": "آناتومی طبیعی خط وسط",
+        "signal": "CSF هیپواینتنس (تیره)، ماده سفید روشن‌تر از قشر",
+        "massEffect": "ندارد؛ فورامن مگنوم باز",
+        "territory": "خط وسط ساجیتال طبیعی"
+      },
+      "diagnosis": "ام‌آر‌آی ساجیتال T1 طبیعی (مرجع مقایسه کیاری/هیپوفیز)",
+      "roi": {
+        "x": 54,
+        "y": 64,
+        "r": 14,
+        "label": "ساقه مغز و تونسیل‌های مخچه طبیعی"
+      },
+      "relatedDiseases": [
+        "dis-pituitary"
+      ],
+      "refs": [
+        "ref-blumenfeld"
+      ],
+      "file": "media/neuroimaging/neuro_normal_mri_t1_sag.jpg",
+      "dimensions": "920x920",
+      "attribution": {
+        "author": "511KeV",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MRI_Brain_T1_Sag_(13).jpg",
+        "wikimediaTitle": "File:MRI Brain T1 Sag (13).jpg"
+      }
+    },
+    {
+      "id": "img-normal-mri-t2-ax",
+      "category": "normal",
+      "categoryLabel": "آناتومی طبیعی",
+      "title": "ام‌آر‌آی مغز طبیعی آگزیال T2 (Normal Axial T2)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-ms-flair",
+      "clinicalPrompt": "بررسی پارانشیم مغز، بطن‌های جانبی و هسته‌های قاعده‌ای در نمای T2.",
+      "findings": [
+        "مایع مغزی-نخاعی در بطن‌ها و شیارها هیپراینتنس (روشن) است",
+        "ماده سفید تیره‌تر از ماده خاکستری قشری دیده می‌شود",
+        "هسته‌های قاعده‌ای و تالاموس متقارن",
+        "عدم وجود پلاک هیپراینتنس پری‌ونتریکولار"
+      ],
+      "report": {
+        "modality": "MRI T2-Weighted Axial",
+        "compartment": "پارانشیم و بطن‌های طبیعی",
+        "signal": "CSF روشن، ماده سفید تیره، بدون ضایعه فوکال",
+        "massEffect": "ندارد",
+        "territory": "آگزیال میانی طبیعی"
+      },
+      "diagnosis": "ام‌آر‌آی آگزیال T2 طبیعی",
+      "roi": {
+        "x": 50,
+        "y": 46,
+        "r": 16,
+        "label": "بطن‌های جانبی و ماده سفید طبیعی"
+      },
+      "relatedDiseases": [
+        "dis-ms"
+      ],
+      "refs": [
+        "ref-blumenfeld"
+      ],
+      "file": "media/neuroimaging/neuro_normal_mri_t2_ax.jpg",
+      "dimensions": "920x920",
+      "attribution": {
+        "author": "511KeV",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MRI_Brain_T2_Axial_(10).jpg",
+        "wikimediaTitle": "File:MRI Brain T2 Axial (10).jpg"
+      }
+    },
+    {
+      "id": "img-ncct-dense-mca",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "علامت شریان MCA هیپردنس در NCCT (Hyperdense MCA Sign)",
+      "modality": "NCCT Axial",
+      "windowPreset": "stroke",
+      "compareWith": "img-normal-ct-head",
+      "clinicalPrompt": "بیمار ۷۱ ساله با شروع ناگهانی همی‌پلژی و انحراف نگاه؛ ۱.۵ ساعت پس از شروع علائم.",
+      "findings": [
+        "هیپردنسیتی خطی واضح در قطعه پروگزیمال شریان مغزی میانی (ترومبوز حاد داخل لومن)",
+        "نشانه‌ای بسیار زودرس و اختصاصی برای انسداد عروق بزرگ (LVO - M1)",
+        "هنوز هیپودنسیتی گسترده پارانشیمی کامل نشده (بافت قابل نجات!)",
+        "اندیکاسیون فوری برای CTA و ارزیابی ترومبولیز IV + ترومبکتومی"
+      ],
+      "report": {
+        "modality": "NCCT Brain (Stroke Window)",
+        "compartment": "داخل عروقی — قطعه M1 شریان MCA",
+        "signal": "افزایش دانسیته خطی ناشی از لخته حاد",
+        "massEffect": "خفیف یا غایب در فاز فوق‌حاد",
+        "territory": "قلمرو شریان مغزی میانی (LVO)"
+      },
+      "diagnosis": "انسداد حاد M1 شریان مغزی میانی (Hyperdense MCA Sign)",
+      "roi": {
+        "x": 62,
+        "y": 54,
+        "r": 11,
+        "label": "شریان MCA هیپردنس (ترومبوز حاد)"
+      },
+      "relatedDiseases": [
+        "dis-ais"
+      ],
+      "refs": [
+        "ref-aha-ais"
+      ],
+      "file": "media/neuroimaging/neuro_ncct_dense_mca.jpg",
+      "dimensions": "920x587",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dens_media_sign_mit_Mediainfarkt_-_CCT_001.jpg",
+        "wikimediaTitle": "File:Dens media sign mit Mediainfarkt - CCT 001.jpg"
+      }
+    },
+    {
+      "id": "img-ncct-left-mca",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "انفارکتوس وسیع قلمرو MCA چپ در NCCT (Subacute MCA Infarct)",
+      "modality": "NCCT Axial",
+      "windowPreset": "stroke",
+      "compareWith": "img-normal-ct-head",
+      "clinicalPrompt": "بیمار ۶۹ ساله با آفازی گلوبال و همی‌پلژی راست، ۲۴ ساعت پس از شروع علائم.",
+      "findings": [
+        "هیپودنسیتی وسیع گُوه‌ای‌شکل دربرگیرنده کورتکس و ماده سفید نیمکره چپ (قلمرو MCA)",
+        "از بین رفتن کامل تمایز ماده خاکستری-سفید و محو نوار اینسولار",
+        "افاسمان شیارهای قشری و اثر فشاری روی بطن جانبی چپ",
+        "خطر ادم بدخیم MCA در ۴۸–۷۲ ساعت آینده (پایش برای همی‌کرانیئکتومی)"
+      ],
+      "report": {
+        "modality": "NCCT Brain",
+        "compartment": "داخل پارانشیمی — نیمکره چپ",
+        "signal": "هیپودنسیتی مشخص در تمام قلمرو MCA چپ",
+        "massEffect": "افاسمان شیارها و فشردگی بطن جانبی",
+        "territory": "تنه اصلی MCA چپ"
+      },
+      "diagnosis": "سکته ایسکمیک وسیع قلمرو شریان مغزی میانی چپ",
+      "roi": {
+        "x": 68,
+        "y": 48,
+        "r": 19,
+        "label": "هیپودنسیتی وسیع قلمرو MCA چپ"
+      },
+      "relatedDiseases": [
+        "dis-ais"
+      ],
+      "refs": [
+        "ref-aha-ais",
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_ncct_left_mca.jpg",
+      "dimensions": "667x792",
+      "attribution": {
+        "author": "James Heilman, MD",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:LeftsidedstrokeNo.png",
+        "wikimediaTitle": "File:LeftsidedstrokeNo.png"
+      }
+    },
+    {
+      "id": "img-dwi-acute-stroke",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "انفارکتوس فوق‌حاد ۴ ساعته در DWI (Hyperacute DWI Stroke)",
+      "modality": "MRI DWI",
+      "windowPreset": "mri",
+      "compareWith": "img-adc-acute-stroke",
+      "clinicalPrompt": "بیمار ۶۵ ساله با همی‌پارزی حاد راست، ۴ ساعت پس از شروع علائم.",
+      "findings": [
+        "هیپراینتنس درخشان در هسته‌های قاعده‌ای و کپسول چپ در نمای DWI",
+        "ناشی از ادم سیتوتوکسیک و محدودیت انتشار مولکول‌های آب",
+        "تطبیق اجباری با نقشه ADC جهت رد T2 Shine-through ضروری است"
+      ],
+      "report": {
+        "modality": "MRI DWI",
+        "compartment": "هسته‌های قاعده‌ای/لنتیکولواستریات چپ",
+        "signal": "هیپراینتنس شدید (محدودیت انتشار)",
+        "massEffect": "حداقل در ساعت ۴",
+        "territory": "شاخه‌های لنتیکولواستریات MCA چپ"
+      },
+      "diagnosis": "سکته ایسکمیک فوق‌حاد ۴ ساعته (DWI Hyperintense)",
+      "roi": {
+        "x": 63,
+        "y": 44,
+        "r": 14,
+        "label": "هیپراینتنس حاد DWI (ادم سیتوتوکسیک)"
+      },
+      "relatedDiseases": [
+        "dis-ais"
+      ],
+      "refs": [
+        "ref-aha-ais"
+      ],
+      "file": "media/neuroimaging/neuro_dwi_acute_stroke.jpg",
+      "dimensions": "209x225",
+      "attribution": {
+        "author": "Jian-Min Shen, Xian-Wu Xia, Wu-Gen Kang, Jian-Jun Yuan and Liang Sheng",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cerebral_infarction_after_4_hours_on_DWI_MRI.jpg",
+        "wikimediaTitle": "File:Cerebral infarction after 4 hours on DWI MRI.jpg"
+      }
+    },
+    {
+      "id": "img-adc-acute-stroke",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "نقشه ADC متناظر سکته ۴ ساعته (True Restricted Diffusion)",
+      "modality": "MRI ADC Map",
+      "windowPreset": "mri",
+      "compareWith": "img-dwi-acute-stroke",
+      "clinicalPrompt": "تطبیق نقشه ADC با DWI همان بیمار جهت اثبات محدودیت انتشار واقعی.",
+      "findings": [
+        "هیپواینتنس (تیره) واضح متناظر با ناحیه روشن در DWI",
+        "ترکیب «DWI روشن + ADC تیره» = انفارکتوس حاد واقعی (زیر ۷–۱۰ روز)",
+        "پدیده T2 Shine-through رد می‌شود"
+      ],
+      "report": {
+        "modality": "MRI ADC Map",
+        "compartment": "هسته‌های قاعده‌ای چپ",
+        "signal": "هیپواینتنس (کاهش ضریب انتشار ظاهری)",
+        "massEffect": "ناچیز",
+        "territory": "قلمرو لنتیکولواستریات چپ"
+      },
+      "diagnosis": "تأیید محدودیت انتشار واقعی در نقشه ADC",
+      "roi": {
+        "x": 63,
+        "y": 44,
+        "r": 14,
+        "label": "افت سیگنال ADC متناظر با DWI"
+      },
+      "relatedDiseases": [
+        "dis-ais"
+      ],
+      "refs": [
+        "ref-aha-ais"
+      ],
+      "file": "media/neuroimaging/neuro_adc_acute_stroke.jpg",
+      "dimensions": "197x234",
+      "attribution": {
+        "author": "Jian-Min Shen, Xian-Wu Xia, Wu-Gen Kang, Jian-Jun Yuan and Liang Sheng",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cerebral_infarction_after_4_hours_on_ADC_MRI.jpg",
+        "wikimediaTitle": "File:Cerebral infarction after 4 hours on ADC MRI.jpg"
+      }
+    },
+    {
+      "id": "img-dwi-adc-aca",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "مقایسه هم‌زمان DWI و ADC در انفارکتوس قلمرو ACA",
+      "modality": "MRI DWI + ADC",
+      "windowPreset": "mri",
+      "compareWith": "img-ncct-left-mca",
+      "clinicalPrompt": "بیمار ۶۳ ساله با ضعف غالب اندام تحتانی طرف مقابل و بی‌اختیاری ادرار حاد.",
+      "findings": [
+        "نوار هیپراینتنس پاراساژیتال فرونتال در DWI (چپ) همراه افت سیگنال ADC (راست)",
+        "منطبق با قلمرو شریان مغزی قدامی (ACA) در سطح میانی لوب فرونتال",
+        "همبستگی مستقیم با همونکولوس حرکتی پا"
+      ],
+      "report": {
+        "modality": "MRI Paired DWI / ADC",
+        "compartment": "قشر فرونتال پاراساژیتال",
+        "signal": "DWI روشن + ADC تیره",
+        "massEffect": "خفیف",
+        "territory": "شریان مغزی قدامی (ACA)"
+      },
+      "diagnosis": "سکته ایسکمیک حاد شریان مغزی قدامی (ACA Infarction)",
+      "roi": {
+        "x": 28,
+        "y": 30,
+        "r": 13,
+        "label": "انفارکتوس پاراساژیتال ACA در DWI"
+      },
+      "relatedDiseases": [
+        "dis-ais"
+      ],
+      "refs": [
+        "ref-blumenfeld",
+        "ref-aha-ais"
+      ],
+      "file": "media/neuroimaging/neuro_dwi_adc_aca.jpg",
+      "dimensions": "920x383",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unilateraler_Anteriorinfarkt_70M_-_MR_DWI_ADC_TOF_-_001.jpg",
+        "wikimediaTitle": "File:Unilateraler Anteriorinfarkt 70M - MR DWI ADC TOF - 001.jpg"
+      }
+    },
+    {
+      "id": "img-dwi-wallenberg",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "انفارکتوس بصل‌النخاع جانبی در DWI (سندرم والنبرگ)",
+      "modality": "MRI DWI Axial",
+      "windowPreset": "mri",
+      "compareWith": "img-dwi-pica",
+      "clinicalPrompt": "مرد ۵۸ ساله با سرگیجه حاد، دیسفاژی، هورنر هم‌طرف و نقص حسی متقاطع درد/حرارت.",
+      "findings": [
+        "کانون نقطه‌ای هیپراینتنس در بخش خلفی-جانبی بصل‌النخاع در DWI",
+        "در NCCT اولیه تقریباً همیشه منفی است (آرتیفکت استخوانی حفره خلفی)؛ DWI استاندارد طلایی است",
+        "منطبق با انسداد شریان ورتبرال یا PICA"
+      ],
+      "report": {
+        "modality": "MRI DWI (Posterior Fossa)",
+        "compartment": "بصل‌النخاع خلفی-جانبی",
+        "signal": "کانون نقطه‌ای هیپراینتنس با محدودیت انتشار",
+        "massEffect": "ندارد",
+        "territory": "شریان ورتبرال / PICA"
+      },
+      "diagnosis": "سندرم والنبرگ — انفارکتوس بصل‌النخاع جانبی",
+      "roi": {
+        "x": 54,
+        "y": 54,
+        "r": 10,
+        "label": "کانون انفارکتوس بصل‌النخاع جانبی"
+      },
+      "relatedDiseases": [
+        "dis-ais"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-blumenfeld"
+      ],
+      "file": "media/neuroimaging/neuro_dwi_wallenberg.jpg",
+      "dimensions": "512x512",
+      "attribution": {
+        "author": "John S. To, M.D.",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:WallenbergInfarct001.jpg",
+        "wikimediaTitle": "File:WallenbergInfarct001.jpg"
+      }
+    },
+    {
+      "id": "img-dwi-pica",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "انفارکتوس حاد مخچه در قلمرو PICA (Acute Cerebellar Stroke)",
+      "modality": "MRI DWI Axial",
+      "windowPreset": "mri",
+      "compareWith": "img-ct-cerebellar-ich",
+      "clinicalPrompt": "بیمار ۶۴ ساله با آتاکسی حاد، سرگیجه، تهوع و سردرد اکسیپیتال.",
+      "findings": [
+        "ناحیه وسیع هیپراینتنس در بخش تحتانی-خلفی نیمکره مخچه",
+        "خطر حیاتی در ۴۸–۷۲ ساعت اول: ادم مخچه‌ای ← فشردگی بطن چهارم، هیدروسفالی حاد و فتق ساقه مغز",
+        "پایش Neuro-ICU و آمادگی کرانیئکتومی زیرپس‌سری"
+      ],
+      "report": {
+        "modality": "MRI DWI Axial",
+        "compartment": "نیمکره مخچه (حفره خلفی)",
+        "signal": "محدودیت انتشار وسیع در قلمرو PICA",
+        "massEffect": "پتانسیل بالای فشردگی بطن چهارم",
+        "territory": "شریان مخچه‌ای تحتانی خلفی (PICA)"
+      },
+      "diagnosis": "سکته ایسکمیک حاد مخچه در قلمرو PICA",
+      "roi": {
+        "x": 64,
+        "y": 64,
+        "r": 16,
+        "label": "انفارکتوس وسیع مخچه (قلمرو PICA)"
+      },
+      "relatedDiseases": [
+        "dis-ais"
+      ],
+      "refs": [
+        "ref-aha-ais"
+      ],
+      "file": "media/neuroimaging/neuro_dwi_pica.jpg",
+      "dimensions": "920x788",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akuter_PICA-Teilinfarkt_links_83W_-_MR_-_001.jpg",
+        "wikimediaTitle": "File:Akuter PICA-Teilinfarkt links 83W - MR - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mra-circle-willis",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "title": "ام‌آر آنژیوگرافی حلقه ویلیس (TOF-MRA Circle of Willis)",
+      "modality": "MRA (TOF)",
+      "windowPreset": "mri",
+      "compareWith": "img-ncct-dense-mca",
+      "clinicalPrompt": "ارزیابی غیرتهاجمی عروق بزرگ مغزی (کاروتید داخلی، MCA، ACA، بازیلار و PCA).",
+      "findings": [
+        "نمایش جریان خون در شریان‌های کاروتید داخلی، M1/M2، A1/A2 و سیستم ورتبروبازیلار",
+        "ابزار غیرتهاجمی شناسایی تنگی داخل جمجمه، آنوریسم و انسداد LVO"
+      ],
+      "report": {
+        "modality": "Time-of-Flight MRA",
+        "compartment": "عروق حلقه ویلیس",
+        "signal": "سیگنال روشن جریان شریانی",
+        "massEffect": "ندارد",
+        "territory": "حلقه ویلیس کامل"
+      },
+      "diagnosis": "آنژیوگرافی رزونانس مغناطیسی حلقه ویلیس (TOF-MRA)",
+      "roi": {
+        "x": 50,
+        "y": 48,
+        "r": 18,
+        "label": "شریان‌های حلقه ویلیس"
+      },
+      "relatedDiseases": [
+        "dis-ais",
+        "dis-sah"
+      ],
+      "refs": [
+        "ref-blumenfeld"
+      ],
+      "file": "media/neuroimaging/neuro_mra_circle_willis.jpg",
+      "dimensions": "785x920",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Inkompletter_Circulus_willisii_-_TOF.jpg",
+        "wikimediaTitle": "File:Inkompletter Circulus willisii - TOF.jpg"
+      }
+    },
+    {
+      "id": "img-ct-epidural",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی داخل جمجمه",
+      "title": "هماتوم اپیدورال حاد (Acute Epidural Hematoma — EDH)",
+      "modality": "NCCT Axial",
+      "windowPreset": "blood",
+      "compareWith": "img-ct-subdural",
+      "clinicalPrompt": "مرد ۲۹ ساله پس از ضربه به شقیقه، فاصله شفاف (Lucid Interval) و افت هوشیاری با گشادی مردمک.",
+      "findings": [
+        "تجمع خون هیپردنس «عدسی‌شکل / محدب‌الطرفین» (Biconvex)",
+        "از خطوط سوچور عبور نمی‌کند اما می‌تواند از خط وسط عبور کند",
+        "معمولاً ناشی از پارگی شریان مننژیال میانی همراه شکستگی تمپورال",
+        "اورژانس تخلیه جراحی اعصاب در صورت اثر فشاری یا علامت Swirl"
+      ],
+      "report": {
+        "modality": "NCCT Brain",
+        "compartment": "فضای اپیدورال",
+        "signal": "هیپردنس حاد محدب‌الطرفین",
+        "massEffect": "فشردگی پارانشیم و خطر فتق آنکال",
+        "territory": "شریان مننژیال میانی"
+      },
+      "diagnosis": "هماتوم اپیدورال حاد (Acute EDH)",
+      "roi": {
+        "x": 26,
+        "y": 46,
+        "r": 16,
+        "label": "هماتوم عدسی‌شکل اپیدورال"
+      },
+      "relatedDiseases": [
+        "dis-tbi-ich"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_ct_epidural.jpg",
+      "dimensions": "920x510",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Epidurale_Blutung_-_CT_-_WT-KF.jpg",
+        "wikimediaTitle": "File:Epidurale Blutung - CT - WT-KF.jpg"
+      }
+    },
+    {
+      "id": "img-ct-subdural",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی داخل جمجمه",
+      "title": "هماتوم ساب‌دورال حاد (Acute Subdural Hematoma — SDH)",
+      "modality": "NCCT Axial & Coronal",
+      "windowPreset": "blood",
+      "compareWith": "img-ct-epidural",
+      "clinicalPrompt": "سالمند ۸۰ ساله مصرف‌کننده ضدانعقاد پس از زمین خوردن؛ سردرد و خواب‌آلودگی پیشرونده.",
+      "findings": [
+        "تجمع خون هیپردنس «هلالی‌شکل» در امتداد داس مغز (Parafalcine) و سطح نیمکره",
+        "از خطوط سوچور عبور می‌کند، ولی توسط داس مغز و تنتوریوم محدود می‌شود",
+        "ناشی از پارگی وریدهای پل‌زننده (Bridging Veins)"
+      ],
+      "report": {
+        "modality": "NCCT Axial + Coronal",
+        "compartment": "فضای ساب‌دورال پارافالساین چپ",
+        "signal": "هیپردنس هلالی در طول داس مغز",
+        "massEffect": "خفیف تا متوسط؛ اصلاح سریع ضدانعقاد",
+        "territory": "وریدهای پل‌زننده"
+      },
+      "diagnosis": "هماتوم ساب‌دورال حاد (Acute SDH)",
+      "roi": {
+        "x": 28,
+        "y": 46,
+        "r": 13,
+        "label": "خونریزی هلالی ساب‌دورال"
+      },
+      "relatedDiseases": [
+        "dis-tbi-ich"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_subdural.jpg",
+      "dimensions": "920x535",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Links_parafalzin_subdurales_Haematom_80W_-_CT_-_001.jpg",
+        "wikimediaTitle": "File:Links parafalzin subdurales Haematom 80W - CT - 001.jpg"
+      }
+    },
+    {
+      "id": "img-ct-sah-basal",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی داخل جمجمه",
+      "title": "خونریزی زیرعنکبوتیه در سیسترن‌های قاعده‌ای (Aneurysmal SAH)",
+      "modality": "NCCT Axial",
+      "windowPreset": "blood",
+      "compareWith": "img-normal-ct-head",
+      "clinicalPrompt": "زن ۵۵ ساله با بدترین سردرد عمر (Thunderclap)، تهوع، فتوفوبی و سفتی گردن.",
+      "findings": [
+        "خون هیپردنس ستاره‌ای‌شکل پرکننده سیسترن‌های قاعده‌ای و شیارهای سیلویان",
+        "در صورت NCCT منفی و شک قوی بالینی ← انجام LP برای زانتوکرومی",
+        "عوارض کلیدی: خونریزی مجدد، هیدروسفالی حاد و وازواسپاسم (روز ۴–۱۴ ← نیمودیپین خوراکی)"
+      ],
+      "report": {
+        "modality": "NCCT Brain",
+        "compartment": "فضای زیرعنکبوتیه و سیسترن‌های قاعده‌ای",
+        "signal": "هیپردنسیتی ستاره‌ای‌شکل",
+        "massEffect": "خطر هیدروسفالی حاد",
+        "territory": "پارگی آنوریسم حلقه ویلیس"
+      },
+      "diagnosis": "خونریزی زیرعنکبوتیه آنوریسمی (Aneurysmal SAH)",
+      "roi": {
+        "x": 28,
+        "y": 54,
+        "r": 16,
+        "label": "خون هیپردنس در سیسترن‌های قاعده‌ای"
+      },
+      "relatedDiseases": [
+        "dis-sah"
+      ],
+      "refs": [
+        "ref-aha-sah"
+      ],
+      "file": "media/neuroimaging/neuro_ct_sah_basal.jpg",
+      "dimensions": "920x405",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Basale_Subarachnoidalblutung_bei_Anterioraneurysma_43M_-_CT_axial_-_001.jpg",
+        "wikimediaTitle": "File:Basale Subarachnoidalblutung bei Anterioraneurysma 43M - CT axial - 001.jpg"
+      }
+    },
+    {
+      "id": "img-ct-sah-ivh",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی داخل جمجمه",
+      "title": "خونریزی زیرعنکبوتیه شدید با گسترش بطنی (SAH + IVH)",
+      "modality": "NCCT Axial",
+      "windowPreset": "blood",
+      "compareWith": "img-ct-sah-basal",
+      "clinicalPrompt": "بیمار ۵۸ ساله با افت هوشیاری پس از سردرد رعدآسا (Hunt-Hess Grade 4).",
+      "findings": [
+        "خونریزی غلیظ در شیارهای سیلویان و ورود خون به سیستم بطنی (IVH)",
+        "اتساع زودرس بطن‌ها ← اندیکاسیون تعبیه فوری درن بطنی خارجی (EVD)",
+        "بالاترین خطر وازواسپاسم علامت‌دار (Modified Fisher 4)"
+      ],
+      "report": {
+        "modality": "NCCT Brain",
+        "compartment": "زیرعنکبوتیه و بطن‌ها",
+        "signal": "هیپردنس فراگیر با لخته داخل بطنی",
+        "massEffect": "هیدروسفالی حاد",
+        "territory": "آنوریسم حلقه ویلیس"
+      },
+      "diagnosis": "خونریزی زیرعنکبوتیه با گسترش بطنی و هیدروسفالی",
+      "roi": {
+        "x": 50,
+        "y": 50,
+        "r": 18,
+        "label": "خون در سیسترن‌ها و بطن‌ها"
+      },
+      "relatedDiseases": [
+        "dis-sah"
+      ],
+      "refs": [
+        "ref-aha-sah"
+      ],
+      "file": "media/neuroimaging/neuro_ct_sah_ivh.jpg",
+      "dimensions": "776x904",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SAB_bei_Aneurysma_02_Ventrikeleinbruch_02.png",
+        "wikimediaTitle": "File:SAB bei Aneurysma 02 Ventrikeleinbruch 02.png"
+      }
+    },
+    {
+      "id": "img-ct-ich-temporal",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی داخل جمجمه",
+      "title": "خونریزی عمقی پارانشیمی با گسترش بطنی (Hypertensive ICH + IVH)",
+      "modality": "NCCT Axial",
+      "windowPreset": "blood",
+      "compareWith": "img-swi-caa",
+      "clinicalPrompt": "مرد ۶۴ ساله با فشار خون ۲۱۰/۱۲۵، همی‌پلژی ناگهانی و افت هوشیاری.",
+      "findings": [
+        "هماتوم هیپردنس عمقی هسته‌های قاعده‌ای / تالاموس با ورود به بطن (IVH)",
+        "شایع‌ترین علت: هیپرتانسیون مزمن (میکروآنوریسم شارکو-بوشار)",
+        "مدیریت AHA/ASA 2022: کنترل پایدار SBP به ~140 mmHg، اصلاح فوری ضدانعقاد، پایش ICP/EVD"
+      ],
+      "report": {
+        "modality": "NCCT Brain",
+        "compartment": "پارانشیم عمقی + داخل بطنی",
+        "signal": "توده هیپردنس حاد با هاله ادم",
+        "massEffect": "فشردگی بطن و جابه‌جایی خط وسط",
+        "territory": "شریان‌های سوراخ‌کننده عمقی"
+      },
+      "diagnosis": "خونریزی داخل مغزی هیپرتانسیو با گسترش بطنی (Deep ICH + IVH)",
+      "roi": {
+        "x": 54,
+        "y": 42,
+        "r": 17,
+        "label": "هماتوم عمقی با ورود به بطن"
+      },
+      "relatedDiseases": [
+        "dis-ich"
+      ],
+      "refs": [
+        "ref-aha-ich"
+      ],
+      "file": "media/neuroimaging/neuro_ct_ich_temporal.jpg",
+      "dimensions": "744x920",
+      "attribution": {
+        "author": "Glitzy queen00 at English Wikipedia",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Intracerebral_hemorrage_(CT_scan).jpg",
+        "wikimediaTitle": "File:Intracerebral hemorrage (CT scan).jpg"
+      }
+    },
+    {
+      "id": "img-ct-cerebellar-ich",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی داخل جمجمه",
+      "title": "خونریزی حاد مخچه (Cerebellar Hemorrhage)",
+      "modality": "NCCT Multi-Slice",
+      "windowPreset": "blood",
+      "compareWith": "img-dwi-pica",
+      "clinicalPrompt": "بیمار ۶۷ ساله با سردرد پس‌سری، استفراغ مکرر، ناتوانی در ایستادن و خواب‌آلودگی.",
+      "findings": [
+        "هماتوم هیپردنس در حفره خلفی (مخچه) با فشردگی بطن چهارم و هیدروسفالی",
+        "قطر > ۳ سانتی‌متر یا فشردگی ساقه مغز ← اندیکاسیون فوری تخلیه جراحی!",
+        "انجام LP اکیداً ممنوع (خطر فتق تونسیلار)"
+      ],
+      "report": {
+        "modality": "NCCT 4 Axial Levels",
+        "compartment": "پارانشیم مخچه (حفره خلفی)",
+        "signal": "هماتوم هیپردنس مخچه‌ای",
+        "massEffect": "فشردگی بطن چهارم و هیدروسفالی",
+        "territory": "خونریزی مخچه‌ای"
+      },
+      "diagnosis": "خونریزی حاد مخچه (اورژانس جراحی اعصاب)",
+      "roi": {
+        "x": 64,
+        "y": 35,
+        "r": 13,
+        "label": "هماتوم حاد مخچه"
+      },
+      "relatedDiseases": [
+        "dis-ich"
+      ],
+      "refs": [
+        "ref-aha-ich"
+      ],
+      "file": "media/neuroimaging/neuro_ct_cerebellar_ich.jpg",
+      "dimensions": "330x400",
+      "attribution": {
+        "author": "Yadav YR, Mukerji G, Shenoy R, Basoor A, Jain G, Nelson A",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Posterior_fossa_hemorrhage.jpg",
+        "wikimediaTitle": "File:Posterior fossa hemorrhage.jpg"
+      }
+    },
+    {
+      "id": "img-swi-caa",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی داخل جمجمه",
+      "title": "میکروخونریزی‌های لوبار در SWI (آنژیوپاتی آمیلوئید مغزی — CAA)",
+      "modality": "MRI SWI",
+      "windowPreset": "mri",
+      "compareWith": "img-ct-ich-temporal",
+      "clinicalPrompt": "بیمار ۷۸ ساله با حملات گذرای عصبی، افت شناختی و سابقه خونریزی لوبار.",
+      "findings": [
+        "نقاط متعدد سیاه (Blooming Hypointensity) منحصراً در نواحی لوبار کورتیکال-ساب‌کورتیکال (معیار بوستون)",
+        "هسته‌های قاعده‌ای و پونز برخلاف هیپرتانسیون سالم مانده‌اند",
+        "خطر بسیار بالای خونریزی لوبار راجعه با ضدانعقادها"
+      ],
+      "report": {
+        "modality": "MRI SWI",
+        "compartment": "کورتیکال/ساب‌کورتیکال لوبار",
+        "signal": "میکروخونریزی‌های متعدد هموسیدرین",
+        "massEffect": "ندارد",
+        "territory": "رسوب بتاآمیلوئید در عروق لوبار"
+      },
+      "diagnosis": "آنژیوپاتی آمیلوئید مغزی (CAA)",
+      "roi": {
+        "x": 30,
+        "y": 46,
+        "r": 16,
+        "label": "میکروخونریزی‌های لوبار در SWI"
+      },
+      "relatedDiseases": [
+        "dis-ich",
+        "dis-alzheimer"
+      ],
+      "refs": [
+        "ref-aha-ich"
+      ],
+      "file": "media/neuroimaging/neuro_swi_caa.jpg",
+      "dimensions": "920x573",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cerebrale_Amyloidangiopathie_in_der_suszeptibilitaetsgewichteten_MRI_82W_-_MR_SWI_axial_-_001.jpg",
+        "wikimediaTitle": "File:Cerebrale Amyloidangiopathie in der suszeptibilitaetsgewichteten MRI 82W - MR SWI axial - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-gbm-t1c",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "title": "گلیوبلاستوما مولتی‌فرم در T1+C (GBM Ring-Enhancing)",
+      "modality": "MRI T1+C",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-gbm-t2",
+      "clinicalPrompt": "مرد ۶۱ ساله با سردرد صبحگاهی، تشنج کانونی جدید و ضعف اندام طی ۶ هفته.",
+      "findings": [
+        "توده داخل‌محوری با جذب کنتراست حلقوی ضخیم و نامنظم و مرکز نکروتیک",
+        "افتراق کلیدی با آبسه: مرکز نکروتیک GBM در DWI محدودیت انتشار یکنواخت ندارد",
+        "شایع‌ترین تومور اولیه بدخیم مغز در بزرگسالان"
+      ],
+      "report": {
+        "modality": "MRI T1 Post-Gadolinium",
+        "compartment": "داخل‌محوری (Intra-axial)",
+        "signal": "جذب حلقوی ضخیم و نامنظم با مرکز نکروتیک",
+        "massEffect": "قابل‌توجه با ادم وازوژنیک",
+        "territory": "گلیوم WHO Grade 4"
+      },
+      "diagnosis": "گلیوبلاستوما مولتی‌فرم (Glioblastoma)",
+      "roi": {
+        "x": 38,
+        "y": 44,
+        "r": 17,
+        "label": "توده نکروتیک با جذب حلقوی نامنظم"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_gbm_t1c.jpg",
+      "dimensions": "526x555",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glioblastoma_multiforme_-_MRT_T1KM_ax.jpg",
+        "wikimediaTitle": "File:Glioblastoma multiforme - MRT T1KM ax.jpg"
+      }
+    },
+    {
+      "id": "img-mri-gbm-t2",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "title": "ادم وازوژنیک گسترده گلیوبلاستوما در نمای T2",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-gbm-t1c",
+      "clinicalPrompt": "بررسی وسعت ادم انگشتی‌شکل ماده سفید و اثر فشاری تومور همان بیمار.",
+      "findings": [
+        "هیپراینتنس گسترده ماده سفید اطراف توده با نمای انگشتی (Vasogenic Edema)",
+        "فشردگی بطن جانبی و جابه‌جایی خط وسط",
+        "پاسخ سریع علامتی به دگزامتازون وریدی"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "داخل‌محوری با ادم ماده سفید",
+        "signal": "هیپراینتنس ناهمگن توده + ادم وازوژنیک",
+        "massEffect": "جابه‌جایی خط وسط",
+        "territory": "گلیوم درجه بالا"
+      },
+      "diagnosis": "گلیوبلاستوما با ادم وازوژنیک شدید در T2",
+      "roi": {
+        "x": 38,
+        "y": 44,
+        "r": 18,
+        "label": "توده و ادم وازوژنیک در T2"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_gbm_t2.jpg",
+      "dimensions": "508x547",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glioblastoma_multiforme_-_MRT_T2_ax.jpg",
+        "wikimediaTitle": "File:Glioblastoma multiforme - MRT T2 ax.jpg"
+      }
+    },
+    {
+      "id": "img-mri-meningioma",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "title": "مننژیوم بزرگ برون‌محوری فرونتال (Extra-axial Meningioma)",
+      "modality": "MRI T1 Axial",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-gbm-t1c",
+      "clinicalPrompt": "زن ۵۸ ساله با تغییر تدریجی شخصیت، بی‌تفاوتی و سردرد مزمن طی یک سال.",
+      "findings": [
+        "توده خوش‌حدود برون‌محوری با پایه پهن روی سخت‌شامه/داس مغز",
+        "فشردگی کورتکس به داخل (White Matter Buckling) و شکاف CSF",
+        "در T1+C جذب همگن شدید همراه با علامت Dural Tail"
+      ],
+      "report": {
+        "modality": "MRI Axial",
+        "compartment": "برون‌محوری (Extra-axial)",
+        "signal": "ایزواینتنس با کورتکس، خوش‌حدود",
+        "massEffect": "فشردگی لوب فرونتال و بطن جانبی",
+        "territory": "سلول‌های آراکنوئید (مننژیوم)"
+      },
+      "diagnosis": "مننژیوم بزرگ برون‌محوری فرونتال",
+      "roi": {
+        "x": 54,
+        "y": 38,
+        "r": 20,
+        "label": "توده خوش‌حدود برون‌محوری"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_meningioma.jpg",
+      "dimensions": "438x424",
+      "attribution": {
+        "author": "Fowle",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huge_Meningioma.jpg",
+        "wikimediaTitle": "File:Huge Meningioma.jpg"
+      }
+    },
+    {
+      "id": "img-mri-schwannoma",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "title": "شوانوم وستیبولار زاویه پل-مخچه‌ای (CPA Schwannoma)",
+      "modality": "MRI T1+C Axial",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-meningioma",
+      "clinicalPrompt": "بیمار ۴۹ ساله با کاهش شنوایی حسی-عصبی یک‌طرفه، وزوز گوش و کاهش رفلکس قرنیه.",
+      "findings": [
+        "توده برون‌محوری با جذب کنتراست در زاویه پل-مخچه‌ای (نمای قیف بستنی / Ice-Cream Cone)",
+        "گسترش به مجرای شنوایی داخلی و فشردگی پونز/مخچه",
+        "نوع دوطرفه پاتوگنومونیک NF2 است"
+      ],
+      "report": {
+        "modality": "MRI T1+C",
+        "compartment": "زاویه پل-مخچه‌ای (CPA)",
+        "signal": "جذب کنتراست قوی با نمای Ice-Cream Cone",
+        "massEffect": "فشردگی پونز و پدونکل مخچه‌ای",
+        "territory": "عصب جمجمه‌ای هشتم (CN VIII)"
+      },
+      "diagnosis": "شوانوم وستیبولار (Acoustic Neuroma)",
+      "roi": {
+        "x": 64,
+        "y": 54,
+        "r": 14,
+        "label": "توده CPA با نمای قیف بستنی"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor",
+        "dis-vertigo"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_schwannoma.jpg",
+      "dimensions": "811x920",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akustikus-Schwannon_rechts_MRT_T1KM_axial_001.jpg",
+        "wikimediaTitle": "File:Akustikus-Schwannon rechts MRT T1KM axial 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-metastases",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "title": "متاستازهای متعدد مغزی (Multiple Brain Metastases)",
+      "modality": "MRI T1+C",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-abscess",
+      "clinicalPrompt": "بیمار ۶۶ ساله با سابقه سرطان ریه، سردرد و حملات تشنج کانونی.",
+      "findings": [
+        "ضایعات متعدد گرد و خوش‌حدود در مرز ماده خاکستری-سفید (پراکندگی هماتوژن)",
+        "ادم وازوژنیک نامتناسب در اطراف ضایعات",
+        "شایع‌ترین منشأها: ریه، پستان، ملانوم، کلیه و کولون"
+      ],
+      "report": {
+        "modality": "MRI T1+C",
+        "compartment": "مرز کورتکس-ماده سفید (متعدد)",
+        "signal": "ندول‌های متعدد با جذب کنتراست",
+        "massEffect": "ادم وازوژنیک اطراف",
+        "territory": "متاستاز هماتوژن"
+      },
+      "diagnosis": "متاستازهای متعدد مغزی",
+      "roi": {
+        "x": 38,
+        "y": 42,
+        "r": 17,
+        "label": "ضایعات متعدد در مرز خاکستری-سفید"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_mri_metastases.jpg",
+      "dimensions": "468x516",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:BC_-_Hirnmetastasen_MRT_T1KM_ax.jpg",
+        "wikimediaTitle": "File:BC - Hirnmetastasen MRT T1KM ax.jpg"
+      }
+    },
+    {
+      "id": "img-mri-pituitary",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "title": "ماکروآدنوم هیپوفیز ساجیتال (Pituitary Macroadenoma)",
+      "modality": "CT Sagittal",
+      "windowPreset": "brain",
+      "compareWith": "img-normal-mri-t1-sag",
+      "clinicalPrompt": "بیمار ۵۲ ساله با سردرد مزمن و همی‌آنوپی بای‌ترمپورال.",
+      "findings": [
+        "توده بزرگ سلار و سوپراسلار (>۱۰mm) با نمای آدم‌برفی (Snowman / Figure-of-8)",
+        "فشردگی کیاسمای بینایی از پایین ← همی‌آنوپی بای‌ترمپورال",
+        "سردرد ناگهانی + افت بینایی + افتالموپلژی = آپوپلکسی هیپوفیز (هیدروکورتیزون فوری!)"
+      ],
+      "report": {
+        "modality": "CT Sagittal",
+        "compartment": "سلا تورسیکا و سیسترن سوپراسلار",
+        "signal": "توده بافت نرم گسترش‌یافته به سوپراسلار",
+        "massEffect": "فشردگی کیاسمای بینایی",
+        "territory": "آدنوهیپوفیز"
+      },
+      "diagnosis": "ماکروآدنوم هیپوفیز (Pituitary Macroadenoma)",
+      "roi": {
+        "x": 46,
+        "y": 78,
+        "r": 13,
+        "label": "توده سلار-سوپراسلار آدم‌برفی"
+      },
+      "relatedDiseases": [
+        "dis-pituitary"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_pituitary.jpg",
+      "dimensions": "920x761",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Makroadenom_der_Hypophyse_81W_-_CT_sagittal_-_001.jpg",
+        "wikimediaTitle": "File:Makroadenom der Hypophyse 81W - CT sagittal - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-abscess",
+      "category": "infection",
+      "categoryLabel": "عفونت، وریدی و MS",
+      "title": "آبسه مغزی چرکی با کپسول نازک و منظم (Brain Abscess)",
+      "modality": "MRI T1+C",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-gbm-t1c",
+      "clinicalPrompt": "مرد ۴۵ ساله با سینوزیت مزمن، تب، سردرد پیشرونده و همی‌پارزی خفیف.",
+      "findings": [
+        "ضایعه حلقوی با دیواره «نازک و یکنواخت» (برخلاف دیواره ضخیم نامنظم GBM)",
+        "در DWI حفره چرکی مرکزی به‌شدت روشن و در ADC تیره است (کلید طلایی افتراق از تومور!)",
+        "در حضور اثر فشاری، LP اکیداً ممنوع است"
+      ],
+      "report": {
+        "modality": "MRI Post-Contrast",
+        "compartment": "داخل‌محوری با کپسول منظم",
+        "signal": "جذب حلقوی منظم + ادم اطراف",
+        "massEffect": "اثر فشاری موضعی",
+        "territory": "عفونت چرکی پارانشیم"
+      },
+      "diagnosis": "آبسه چرکی مغز (Pyogenic Brain Abscess)",
+      "roi": {
+        "x": 38,
+        "y": 46,
+        "r": 15,
+        "label": "ضایعه حلقوی با کپسول نازک"
+      },
+      "relatedDiseases": [
+        "dis-abscess"
+      ],
+      "refs": [
+        "ref-idsa-men",
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_mri_abscess.jpg",
+      "dimensions": "748x920",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brain_abscess_-_MRI_T1_KM_axial.jpg",
+        "wikimediaTitle": "File:Brain abscess - MRI T1 KM axial.jpg"
+      }
+    },
+    {
+      "id": "img-ct-cvt",
+      "category": "infection",
+      "categoryLabel": "عفونت، وریدی و MS",
+      "title": "ترومبوز سینوس وریدی مغزی در سی‌تی (CVT — Cord/Delta Sign)",
+      "modality": "CT Brain",
+      "windowPreset": "blood",
+      "compareWith": "img-mrv-cvt",
+      "clinicalPrompt": "زن ۳۰ ساله مصرف‌کننده OCP با سردرد پیشرونده، پاپی‌ادم و تشنج جدید.",
+      "findings": [
+        "هیپردنسیتی لخته در سینوس ساژیتال فوقانی / عرضی یا نمای Empty Delta با کنتراست",
+        "انفارکتوس هموراژیک خارج از قلمروهای شریانی کلاسیک",
+        "درمان استاندارد حتی در حضور خونریزی وریدی: ضدانعقاد سیستمیک!"
+      ],
+      "report": {
+        "modality": "CT Brain",
+        "compartment": "سینوس‌های وریدی دورال",
+        "signal": "هیپردنسیتی لخته / نقص پرشدگی",
+        "massEffect": "ادم وریدی",
+        "territory": "سینوس ساژیتال/عرضی"
+      },
+      "diagnosis": "ترومبوز سینوس وریدی مغزی (CVT)",
+      "roi": {
+        "x": 50,
+        "y": 78,
+        "r": 14,
+        "label": "سینوس وریدی ترومبوزه"
+      },
+      "relatedDiseases": [
+        "dis-cvt"
+      ],
+      "refs": [
+        "ref-aha-ais",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_cvt.jpg",
+      "dimensions": "920x792",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ausgedehnte_Sinusthrombose_in_der_nativen_Computertomografie_24W_-_CT_nativ_-_001.jpg",
+        "wikimediaTitle": "File:Ausgedehnte Sinusthrombose in der nativen Computertomografie 24W - CT nativ - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mrv-cvt",
+      "category": "infection",
+      "categoryLabel": "عفونت، وریدی و MS",
+      "title": "تأیید ترومبوز سینوس وریدی در MRV (Absent Flow)",
+      "modality": "MR Venography",
+      "windowPreset": "mri",
+      "compareWith": "img-ct-cvt",
+      "clinicalPrompt": "تأیید غیرتهاجمی انسداد سینوس وریدی در بیمار مشکوک به CVT.",
+      "findings": [
+        "قطع ناگهانی سیگنال جریان در سینوس وریدی درگیر",
+        "استاندارد طلایی غیرتهاجمی همراه با MRI پارانشیم"
+      ],
+      "report": {
+        "modality": "MR Venography",
+        "compartment": "سیستم وریدی مغزی",
+        "signal": "نقص پرشدگی سینوس وریدی",
+        "massEffect": "ندارد",
+        "territory": "سینوس‌های دورال"
+      },
+      "diagnosis": "ترومبوز سینوس وریدی در MRV",
+      "roi": {
+        "x": 52,
+        "y": 32,
+        "r": 16,
+        "label": "قطع جریان سینوس وریدی"
+      },
+      "relatedDiseases": [
+        "dis-cvt"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mrv_cvt.jpg",
+      "dimensions": "368x331",
+      "attribution": {
+        "author": "MBq",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:SVT,_TOF_angiography,_coronal_MIP_reconstruction.jpg",
+        "wikimediaTitle": "File:SVT, TOF angiography, coronal MIP reconstruction.jpg"
+      }
+    },
+    {
+      "id": "img-ct-hydrocephalus",
+      "category": "infection",
+      "categoryLabel": "عفونت، وریدی و MS",
+      "title": "هیدروسفالی حاد و اتساع بطن‌ها (Acute Hydrocephalus)",
+      "modality": "NCCT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-normal-ct-head",
+      "clinicalPrompt": "بیمار ۵۶ ساله با سردرد، تهوع، تاری دید و افت تدریجی هوشیاری.",
+      "findings": [
+        "اتساع چشمگیر بطن‌های جانبی و شاخ‌های تمپورال (شاخص اوانز > ۰.۳۰)",
+        "هیپودنسیتی اطراف شاخ‌های بطن (نشت ترانس‌اپاندیمال CSF)",
+        "محو شدن شیارهای قشری (افتراق از آتروفی مغزی)"
+      ],
+      "report": {
+        "modality": "NCCT Brain",
+        "compartment": "سیستم بطنی",
+        "signal": "اتساع شدید بطن‌ها + ادم پری‌ونتریکولار",
+        "massEffect": "افاسمان شیارهای قشری — افزایش ICP",
+        "territory": "اختلال گردش CSF"
+      },
+      "diagnosis": "هیدروسفالی حاد با فشار بالا",
+      "roi": {
+        "x": 50,
+        "y": 46,
+        "r": 20,
+        "label": "اتساع بطن‌ها و شاخ‌های تمپورال"
+      },
+      "relatedDiseases": [
+        "dis-nph",
+        "dis-sah"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_hydrocephalus.jpg",
+      "dimensions": "920x869",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langjaehrig_bestehender_Hydrocephalus_48M_-_CT_-_001.jpg",
+        "wikimediaTitle": "File:Langjaehrig bestehender Hydrocephalus 48M - CT - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-ms-flair",
+      "category": "infection",
+      "categoryLabel": "عفونت، وریدی و MS",
+      "title": "پلاک‌های دمیلیناسیون در مولتیپل اسکلروزیس (MS Brain MRI)",
+      "modality": "MRI Brain (MS)",
+      "windowPreset": "mri",
+      "compareWith": "img-normal-mri-t2-ax",
+      "clinicalPrompt": "زن ۳۱ ساله با سابقه نوریت اپتیک یک‌طرفه و پارستزی اندام تحتانی.",
+      "findings": [
+        "پلاک‌های بیضی‌شکل ماده سفید پری‌ونتریکولار عمود بر بطن (انگشتان داوسون)",
+        "۴ ناحیه انتشار در مکان (DIS مک‌دونالد): پری‌ونتریکولار، ژوکستاکورتیکال، اینفراتنتوریال، نخاع",
+        "انتشار در زمان (DIT): پلاک فعال + غیرفعال یا باند الیگوکلونال CSF"
+      ],
+      "report": {
+        "modality": "MRI Brain",
+        "compartment": "ماده سفید پری‌ونتریکولار",
+        "signal": "پلاک‌های متعدد دمیلیناسیون",
+        "massEffect": "ندارد",
+        "territory": "دمیلیناسیون CNS"
+      },
+      "diagnosis": "مولتیپل اسکلروزیس (معیار مک‌دونالد)",
+      "roi": {
+        "x": 56,
+        "y": 46,
+        "r": 16,
+        "label": "پلاک‌های پری‌ونتریکولار ماده سفید"
+      },
+      "relatedDiseases": [
+        "dis-ms"
+      ],
+      "refs": [
+        "ref-mcdonald",
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_mri_ms_flair.jpg",
+      "dimensions": "240x265",
+      "attribution": {
+        "author": "Monthly_multiple_sclerosis_anim.gif: Waglione\nderivative work: Garrondo",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monthly_multiple_sclerosis_anim_cropped_no_text.gif",
+        "wikimediaTitle": "File:Monthly multiple sclerosis anim cropped no text.gif"
+      }
+    },
+    {
+      "id": "img-mri-chiari",
+      "category": "infection",
+      "categoryLabel": "عفونت، وریدی و MS",
+      "title": "ناهنجاری کیاری نوع ۱ (Chiari I Malformation)",
+      "modality": "MRI T2 Sagittal",
+      "windowPreset": "mri",
+      "compareWith": "img-normal-mri-t1-sag",
+      "clinicalPrompt": "بیمار ۳۴ ساله با سردرد پس‌سری تشدیدشونده با سرفه/والسالوا و علائم حسی دست‌ها.",
+      "findings": [
+        "نزول میخی‌شکل تونسیل‌های مخچه بیش از ۵ میلی‌متر زیر فورامن مگنوم",
+        "مستعد ایجاد سیرنگومیلی (Syrinx) گردنی به علت انسداد جریان CSF"
+      ],
+      "report": {
+        "modality": "MRI T2 Sagittal",
+        "compartment": "فورامن مگنوم و حفره خلفی",
+        "signal": "فتق تونسیل‌های مخچه به کانال گردنی",
+        "massEffect": "شلوغی فورامن مگنوم",
+        "territory": "اتصال کرانیوسرویکال"
+      },
+      "diagnosis": "ناهنجاری کیاری نوع ۱ (Chiari I)",
+      "roi": {
+        "x": 54,
+        "y": 54,
+        "r": 12,
+        "label": "نزول تونسیل مخچه (>5mm)"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp"
+      ],
+      "refs": [
+        "ref-blumenfeld"
+      ],
+      "file": "media/neuroimaging/neuro_mri_chiari.jpg",
+      "dimensions": "839x838",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chiari-1-Malformation_13W_-_MR_T2_sagittal_-_001.jpg",
+        "wikimediaTitle": "File:Chiari-1-Malformation 13W - MR T2 sagittal - 001.jpg"
+      }
+    },
+    {
+      "id": "img-spine-c6c7",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "title": "فشردگی حاد نخاع گردنی در سطح C6–C7",
+      "modality": "MRI Spine T2 Sag",
+      "windowPreset": "mri",
+      "compareWith": "img-spine-cervical-myelopathy",
+      "clinicalPrompt": "بیمار ۵۵ ساله با بی‌حسی دست‌ها، ناپایداری گام، علامت هافمن و بابینسکی دوطرفه.",
+      "findings": [
+        "فتق دیسک بزرگ C6–C7 با محو کامل CSF و فرورفتگی واضح نخاع گردنی",
+        "افزایش سیگنال T2 درون نخاع (میلومالاسی / ادم نخاعی)",
+        "نیاز به دکمپرشن جراحی پیش از آسیب دائمی"
+      ],
+      "report": {
+        "modality": "MRI Cervical T2 Sag",
+        "compartment": "کانال گردنی C6–C7",
+        "signal": "فتق دیسک + هیپراینتنس درون‌نخاعی",
+        "massEffect": "فشردگی شدید طناب نخاعی",
+        "territory": "سطح C6–C7"
+      },
+      "diagnosis": "فشردگی نخاع گردنی و میلوپاتی C6–C7",
+      "roi": {
+        "x": 48,
+        "y": 58,
+        "r": 13,
+        "label": "فشردگی نخاع گردنی در C6–C7"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_spine_c6c7.jpg",
+      "dimensions": "811x904",
+      "attribution": {
+        "author": "Jmarchn",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Compressive_myeolopathy_C6C7.png",
+        "wikimediaTitle": "File:Compressive myeolopathy C6C7.png"
+      }
+    },
+    {
+      "id": "img-spine-cervical-myelopathy",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "title": "میلوپاتی اسپوندیلوتیک گردنی چندسطحی (CSM)",
+      "modality": "MRI Spine T2 Sag",
+      "windowPreset": "mri",
+      "compareWith": "img-spine-c6c7",
+      "clinicalPrompt": "مرد ۶۸ ساله با ناتوانی در بستن دکمه‌ها، گام اسپاستیک و علامت لرمیت.",
+      "findings": [
+        "تنگی چندسطحی کانال گردنی ناشی از استئوفیت و لیگامان فلاووم",
+        "نمای تسبیحی طناب نخاعی با هیپراینتنس T2 داخل نخاع",
+        "شایع‌ترین علت میلوپاتی غیرتروماتیک بالای ۵۵ سال"
+      ],
+      "report": {
+        "modality": "MRI Cervical T2 Sag",
+        "compartment": "کانال گردنی چندسطحی",
+        "signal": "کاهش CSF و تغییر سیگنال نخاع",
+        "massEffect": "تنگی چندسطحی",
+        "territory": "نخاع گردنی"
+      },
+      "diagnosis": "میلوپاتی اسپوندیلوتیک گردنی (CSM)",
+      "roi": {
+        "x": 50,
+        "y": 46,
+        "r": 15,
+        "label": "تنگی چندسطحی کانال گردنی"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp"
+      ],
+      "refs": [
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_spine_cervical_myelopathy.jpg",
+      "dimensions": "745x920",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zervikaler_Diskusprolaps_mit_spinaler_Stenose_und_Myelopathie_91W_-_MR_T2_-_001.jpg",
+        "wikimediaTitle": "File:Zervikaler Diskusprolaps mit spinaler Stenose und Myelopathie 91W - MR T2 - 001.jpg"
+      }
+    },
+    {
+      "id": "img-spine-lumbar-disc",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "title": "هرنیاسیون دیسک کمری L5–S1 با فشردگی ریشه",
+      "modality": "MRI Lumbar T2 Sag",
+      "windowPreset": "mri",
+      "compareWith": "img-spine-lumbar-stenosis",
+      "clinicalPrompt": "مرد ۴۳ ساله با درد سیاتیکی به کف پا، کاهش رفلکس آشیل و SLR مثبت.",
+      "findings": [
+        "بیرون‌زدگی خلفی دیسک تیره دژنره در L5–S1 با فشار بر کیسه تکال و ریشه S1",
+        "در صورت گسترش میانی وسیع: خطر اورژانس سندرم دم اسب (احتباس ادرار + بی‌حسی زین‌اسبی)"
+      ],
+      "report": {
+        "modality": "MRI Lumbar T2 Sag",
+        "compartment": "اپیدورال قدامی L5–S1",
+        "signal": "دیسک کم‌آب هرنیه‌شده",
+        "massEffect": "فشردگی ریشه S1",
+        "territory": "ریشه S1 / دم اسب"
+      },
+      "diagnosis": "هرنیاسیون دیسک بین‌مهره‌ای کمری",
+      "roi": {
+        "x": 49,
+        "y": 64,
+        "r": 13,
+        "label": "هرنیاسیون دیسک کمری"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp"
+      ],
+      "refs": [
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_spine_lumbar_disc.jpg",
+      "dimensions": "785x920",
+      "attribution": {
+        "author": "Stillwaterising",
+        "license": "CC0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lumbar_MRI_t2-tse-rst-sagittal_05.jpg",
+        "wikimediaTitle": "File:Lumbar MRI t2-tse-rst-sagittal 05.jpg"
+      }
+    },
+    {
+      "id": "img-spine-lumbar-stenosis",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "title": "تنگی شدید کانال نخاعی کمری (Lumbar Stenosis)",
+      "modality": "MRI Lumbar T2 Sag",
+      "windowPreset": "mri",
+      "compareWith": "img-spine-lumbar-disc",
+      "clinicalPrompt": "زن ۷۲ ساله با لنگش نوروژنیک (بهبود درد با خم شدن روی چرخ خرید).",
+      "findings": [
+        "تنگی چندسطحی ساعت‌شنی کانال کمری و فشردگی ریشه‌های دم اسب",
+        "افتراق طلایی از لنگش عروقی: بهبود با فلکسیون کمر (Shopping Cart Sign)"
+      ],
+      "report": {
+        "modality": "MRI Lumbar T2 Sag",
+        "compartment": "کانال کمری L3–L5",
+        "signal": "محو CSF اطراف دم اسب",
+        "massEffect": "فشردگی چندسطحی دم اسب",
+        "territory": "کانال کمری"
+      },
+      "diagnosis": "تنگی کانال نخاعی کمری",
+      "roi": {
+        "x": 50,
+        "y": 54,
+        "r": 14,
+        "label": "تنگی ساعت‌شنی کانال کمری"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_spine_lumbar_stenosis.jpg",
+      "dimensions": "517x920",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaudaredundanz_bei_Spinalkanalstenose_62M_-_MR_T2_sagittal_-_001.jpg",
+        "wikimediaTitle": "File:Kaudaredundanz bei Spinalkanalstenose 62M - MR T2 sagittal - 001.jpg"
+      }
+    },
+    {
+      "id": "img-spine-syringomyelia",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "title": "سیرنگومیلی نخاع گردنی (Cervical Syringomyelia)",
+      "modality": "MRI Spine T2 Sag",
+      "windowPreset": "mri",
+      "compareWith": "img-mri-chiari",
+      "clinicalPrompt": "بیمار ۳۹ ساله با سوختگی‌های بدون درد انگشتان و کاهش حس درد/حرارت شنلی.",
+      "findings": [
+        "حفره طولی پر از مایع (هم‌سیگنال CSF در T2) در مرکز نخاع گردنی",
+        "تخریب کمیشور سفید قدامی ← نقص حسی گسسته شنلی با حفظ ارتعاش",
+        "اغلب همراه ناهنجاری کیاری نوع ۱"
+      ],
+      "report": {
+        "modality": "MRI Cervical T2 Sag",
+        "compartment": "داخل‌نخاعی مرکزی",
+        "signal": "حفره مایع هیپراینتنس مرکزی",
+        "massEffect": "اتساع دوکی‌شکل نخاع",
+        "territory": "کانال مرکزی نخاع"
+      },
+      "diagnosis": "سیرنگومیلی (Syringomyelia)",
+      "roi": {
+        "x": 50,
+        "y": 48,
+        "r": 16,
+        "label": "حفره مرکزی Syrinx"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp"
+      ],
+      "refs": [
+        "ref-blumenfeld"
+      ],
+      "file": "media/neuroimaging/neuro_spine_syringomyelia.jpg",
+      "dimensions": "283x377",
+      "attribution": {
+        "author": "Cyborg Ninja at English Wikipedia",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Syringomyelia.jpg",
+        "wikimediaTitle": "File:Syringomyelia.jpg"
+      }
+    },
+    {
+      "id": "img-spine-meningioma",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "title": "مننژیوم نخاعی اینترادورال-اکسترامدولاری",
+      "modality": "MRI Spine T1+C",
+      "windowPreset": "mri",
+      "compareWith": "img-spine-syringomyelia",
+      "clinicalPrompt": "زن ۶۰ ساله با پیشرفت تدریجی سندرم براون-سکار (ضعف پای راست + بی‌حسی درد چپ).",
+      "findings": [
+        "توده خوش‌حدود با جذب همگن در فضای اینترادورال-اکسترامدولاری",
+        "جابه‌جایی جانبی طناب نخاعی و کلاهک CSF بالا و پایین توده",
+        "شایع‌ترین تومور اینترادورال-اکسترامدولاری سینه‌ای در زنان میانسال"
+      ],
+      "report": {
+        "modality": "MRI Thoracic T1+C",
+        "compartment": "اینترادورال – اکسترامدولاری",
+        "signal": "توده خوش‌حدود با جذب همگن",
+        "massEffect": "فشردگی جانبی نخاع",
+        "territory": "نخاع سینه‌ای"
+      },
+      "diagnosis": "مننژیوم نخاعی اینترادورال-اکسترامدولاری",
+      "roi": {
+        "x": 48,
+        "y": 50,
+        "r": 15,
+        "label": "توده اینترادورال-اکسترامدولاری"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp",
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_spine_meningioma.jpg",
+      "dimensions": "920x620",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meningeom_im_Spinalkanal_MRT.jpg",
+        "wikimediaTitle": "File:Meningeom im Spinalkanal MRT.jpg"
+      }
+    },
+    {
+      "id": "img-ct-chronic-sdh-bilat",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "هماتوم ساب‌دورال مزمن/حاد-روی-مزمن دوطرفه (Bilateral Acute-on-Chronic SDH)",
+      "modality": "NCCT Axial",
+      "windowPreset": "blood",
+      "compareWith": "img-ct-subdural",
+      "clinicalPrompt": "مرد ۷۶ ساله با افت آهسته شناخت طی ۳ هفته و سپس خواب‌آلودگی ناگهانی پس از سقوط خفیف؛ بدون شیفت واضح خط وسط!",
+      "findings": [
+        "تجمع هلالی دوطرفه در فضای ساب‌دورال با «لایه‌بندی دانسیته (Acute-on-Chronic)» در سمت چپ (خون تازه روشن‌تر در خلف و مزمن تیره‌تر در قدام)",
+        "فشردگی متقارن شاخ‌های قدامی بطن‌ها (Rabbit-Ear Ventricles) و محو شدن سولکوس‌ها با حفظ کاذب خط وسط!",
+        "دام کلاسیک رادیولوژی: در ساب‌دورال دوطرفه، شیفت خط وسط به دلیل فشار متقابل دو طرف ایجاد نمی‌شود و ممکن است به اشتباه «طبیعی» گزارش شود!"
+      ],
+      "report": {
+        "modality": "NCCT Axial (پنجره مغز و ساب‌دورال)",
+        "compartment": "فضای ساب‌دورال دوطرفه (غالب در فرونتوتمپورال چپ)",
+        "signal": "مختلط هیپودنس مزمن + هیپردنس حاد خلفی (خونریزی مجدد)",
+        "massEffect": "محو سولکوس‌ها و فشردگی بطن‌ها بدون شیفت خط وسط (اثر متعادل دوطرفه!)",
+        "territory": "وریدهای پل‌زننده (Bridging Veins)"
+      },
+      "diagnosis": "هماتوم ساب‌دورال حاد-روی-مزمن دوطرفه (Bilateral Acute-on-Chronic SDH)",
+      "pitfall": "تله خطرناک: نبود شیفت خط وسط در ساب‌دورال دوطرفه (و دانسیته نزدیک به قشر در مرحله ایزودنس) می‌تواند باعث رد شدن به عنوان CT طبیعی شود — همیشه سولکوس‌های محدبیت را تا تماس با جمجمه دنبال کنید!",
+      "roi": {
+        "x": 82,
+        "y": 38,
+        "r": 13,
+        "label": "ساب‌دورال حاد-روی-مزمن چپ (لایه‌بندی خون)"
+      },
+      "relatedDiseases": [
+        "dis-tbi-ich"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_chronic_sdh_bilat.jpg",
+      "dimensions": "821x882",
+      "attribution": {
+        "author": "James Heilman, MD",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ABilateralSubDur.png",
+        "wikimediaTitle": "File:BilateralSubDur.png"
+      }
+    },
+    {
+      "id": "img-ct-malignant-mca-pca",
+      "category": "stroke",
+      "categoryLabel": "سکته ایسکمیک حاد",
+      "hardCase": true,
+      "title": "انفارکتوس وسیع بدخیم MCA + PCA راست با شیفت خط وسط (Malignant Hemispheric Infarct)",
+      "modality": "NCCT Axial",
+      "windowPreset": "stroke",
+      "compareWith": "img-ncct-left-mca",
+      "clinicalPrompt": "مرد ۵۵ ساله ۳۶ ساعت پس از همی‌پلژی چپ؛ اکنون دچار افت پیشرونده GCS، آنیزوکوری راست و تشدید ادم مغزی شده است.",
+      "findings": [
+        "هیپودانسیته وسیع هم‌زمان قلمرو MCA و PCA راست با محو کامل تمایز ماده خاکستری-سفید",
+        "اثر فشاری شدید: فشردگی کامل بطن جانبی راست و شیفت شدید خط وسط به سمت چپ (خطر فوری فتق اونکال!)",
+        "نیاز فوری به مشاوره جراحی اعصاب برای همی‌کرانیکتومی دکمپرسیو (در <۴۸ ساعت و سن ≤۶۰ سال بقا را به‌شدت بالا می‌برد)"
+      ],
+      "report": {
+        "modality": "NCCT Axial",
+        "compartment": "پارانشیم نیمکره راست (قلمرو وسیع MCA + PCA)",
+        "signal": "هیپودانسیته شدید همگن با تورم ژیروس‌ها",
+        "massEffect": "شدید — محو بطن جانبی راست و شیفت خط وسط به چپ (سندرم MCA بدخیم)",
+        "territory": "انسداد کاروتید داخلی (ICA-T) با PCA جنینی راست"
+      },
+      "diagnosis": "انفارکتوس بدخیم وسیع MCA+PCA راست با فتق ساب‌فالساین",
+      "pitfall": "به‌جای تمرکز صرف روی اندازه سکته، همیشه «شیفت خط وسط و فشردگی سیسترن‌های قاعده‌ای» را برای اندیکاسیون فوری همی‌کرانیکتومی دکمپرسیو چک کنید!",
+      "roi": {
+        "x": 36,
+        "y": 50,
+        "r": 16,
+        "label": "سکته وسیع بدخیم راست + فشردگی بطن"
+      },
+      "relatedDiseases": [
+        "dis-ais",
+        "dis-coma"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-aha-ais"
+      ],
+      "file": "media/neuroimaging/neuro_ct_malignant_mca_pca.jpg",
+      "dimensions": "512x512",
+      "attribution": {
+        "author": "Cerevisae",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ARight_MCA_and_PCA_territories_infarct.jpg",
+        "wikimediaTitle": "File:Right MCA and PCA territories infarct.jpg"
+      }
+    },
+    {
+      "id": "img-ct-pneumocephalus-fuji",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "پنموسفالوس فشاری دوطرفه فرونتال — علامت قله فوجی (Mount Fuji Sign)",
+      "modality": "NCCT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-epidural",
+      "clinicalPrompt": "بیمار ۴۴ ساله ۲۴ ساعت پس از شکستگی قاعده جمجمه (یا تخلیه SDH) با سردرد شدید ناگهانی، افت هوشیاری و نشت مایع شفاف از بینی.",
+      "findings": [
+        "تجمع وسیع هوا (بسیار سیاه / دانسیته 1000- HU) در فضای ساب‌دورال فرونتال دوطرفه",
+        "جداسازی نوک لوب‌های فرونتال از یکدیگر توسط هوای تحت فشار ← نمای کلاسیک «قله کوه فوجی (Mount Fuji Sign)»!",
+        "تمایز حیاتی از پنموسفالوس ساده خوش‌خیم: وجود فشردگی لوب‌های فرونتال و علائم عصبی = اورژانس جراحی اعصاب!"
+      ],
+      "report": {
+        "modality": "NCCT Axial",
+        "compartment": "فضای ساب‌دورال فرونتال دوطرفه",
+        "signal": "دانسیته هوا (کاملاً سیاه، پایین‌تر از CSF)",
+        "massEffect": "فشردگی لوب‌های فرونتال و شکاف بین‌نیمکره‌ای (Mount Fuji Sign)",
+        "territory": "فیستول هوای سینوس/قاعده جمجمه (مکانیسم دریچه یک‌طرفه)"
+      },
+      "diagnosis": "پنموسفالوس فشاری (Tension Pneumocephalus — Mount Fuji Sign)",
+      "pitfall": "تله کلاسیک: اشتباه گرفتن هوای ساب‌دورال با آتروفی فرونتال سالمندی یا ساب‌دورال مزمن! هوا کاملاً سیاه‌تر از CSF (تقریباً -1000 HU) است و نیازمند اکسیژن ۱۰۰٪ + دکمپرسیون اورژانسی است.",
+      "roi": {
+        "x": 56,
+        "y": 20,
+        "r": 14,
+        "label": "هوای فشاری فرونتال (Mount Fuji Sign)"
+      },
+      "relatedDiseases": [
+        "dis-tbi-ich",
+        "dis-coma"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_pneumocephalus_fuji.jpg",
+      "dimensions": "820x900",
+      "attribution": {
+        "author": "Cerevisae",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ACT_brain_shwoing_pneumocephalus_of_bilateral_frontal_lobes.jpg",
+        "wikimediaTitle": "File:CT brain shwoing pneumocephalus of bilateral frontal lobes.jpg"
+      }
+    },
+    {
+      "id": "img-ct-contrecoup-contusion",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "کوفتگی خونریزی‌دهنده فرونتال کنترکوپ (Contrecoup Hemorrhagic Contusion)",
+      "modality": "NCCT Axial",
+      "windowPreset": "blood",
+      "compareWith": "img-ct-epidural",
+      "clinicalPrompt": "مرد ۳۸ ساله پس از سقوط به پشت و ضربه مستقیم به ناحیه پس‌سری (Occipital Coup)؛ اکنون بی‌قرار و دچار اختلال قضاوت شده است.",
+      "findings": [
+        "کانون‌های خونریزی پارانشیمی کورتیکال-ساب‌کورتیکال (Salt-and-Pepper) در قطب فرونتال راست با هاله ادم اطراف",
+        "تورم بافت نرم پوست سر در ناحیه پس‌سری/پریتال مقابل ← تأیید مکانیسم شتاب-کاهش شتاب «کنترکوپ (Contrecoup)»!",
+        "خطر بالای «شکوفایی هموراژیک (Blossoming)» در ۲۴–۴۸ ساعت اول ← الزام تکرار CT و پایش Neuro-ICU"
+      ],
+      "report": {
+        "modality": "NCCT Axial",
+        "compartment": "پارانشیم لوب فرونتال راست (قطب قدامی)",
+        "signal": "کانون‌های متعدد هیپردنس خونریزی کورتیکال + ادم هیپودنس اطراف",
+        "massEffect": "خفیف در مرحله اولیه ولی مستعد گسترش تأخیری (Blossoming)",
+        "territory": "برخورد لوب فرونتال با کف حفره جمجمه‌ای قدامی (Contrecoup)"
+      },
+      "diagnosis": "کوفتگی خونریزی‌دهنده فرونتال کنترکوپ (Contrecoup Hemorrhagic Contusion)",
+      "pitfall": "کوفتگی‌های فرونتوتمپورال کوچک در CT اول می‌توانند طی ۶ تا ۲۴ ساعت ناگهان بزرگ شوند (Blossoming) و باعث فتق شوند — هرگز بدون CT کنترلی و پایش دقیق ترخیص نکنید!",
+      "roi": {
+        "x": 41,
+        "y": 20,
+        "r": 13,
+        "label": "کوفتگی هموراژیک فرونتال کنترکوپ"
+      },
+      "relatedDiseases": [
+        "dis-tbi-ich"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_contrecoup_contusion.jpg",
+      "dimensions": "675x840",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AFrontale_Kontusionsblutung_als_Contre_coup_01.png",
+        "wikimediaTitle": "File:Frontale Kontusionsblutung als Contre coup 01.png"
+      }
+    },
+    {
+      "id": "img-ct-oligodendroglioma",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "hardCase": true,
+      "title": "الیگودندروگلیوما با کلسیفیکاسیون‌های درشت (Oligodendroglioma — IDH+1p/19q)",
+      "modality": "NCCT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-gbm-t1c",
+      "clinicalPrompt": "جوان ۳۷ ساله با تشنج‌های کانونی جدید مقاوم به درمان؛ بدون سابقه تروما یا عفونت.",
+      "findings": [
+        "توده هیپودنس کورتیکال-ساب‌کورتیکال در لوب تمپورال راست با «کلسیفیکاسیون‌های بسیار درشت و نامنظم (Coarse Calcifications)»",
+        "کلسیفیکاسیون در ۷۰ تا ۹۰٪ الیگودندروگلیوماها دیده می‌شود و شایع‌ترین تومور کلسیفیه نیمکره‌ای بالغین است",
+        "تعریف WHO 2021: جهش IDH + کدولشن 1p/19q (سلول‌های تخم‌مرغ نیمرو / Fried-Egg و پاسخ عالی به PCV/تموزولوماید)"
+      ],
+      "report": {
+        "modality": "NCCT Axial",
+        "compartment": "داخل محوری (کورتیکال-ساب‌کورتیکال تمپورال راست)",
+        "signal": "ماتریکس هیپودنس با توده‌های بسیار هیپردنس کلسیفیکاسیون (HU > 200)",
+        "massEffect": "متوسط بدون خونریزی حاد",
+        "territory": "تومور گلیال با رشد آهسته (IDH-mutant, 1p/19q-codeleted)"
+      },
+      "diagnosis": "الیگودندروگلیوما (Oligodendroglioma — WHO 2021)",
+      "pitfall": "تله کلاسیک: اشتباه گرفتن کلسیفیکاسیون‌های بسیار سفید با «خونریزی حاد پارانشیمی (ICH)»! دانسیته کلسیم بسیار بالاتر از خون (>200 HU در برابر 50–80 HU) و همراه با توده مزمن است.",
+      "roi": {
+        "x": 34,
+        "y": 63,
+        "r": 13,
+        "label": "کلسیفیکاسیون درشت الیگودندروگلیوما"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor",
+        "dis-epilepsy-focal"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_oligodendroglioma.jpg",
+      "dimensions": "713x746",
+      "attribution": {
+        "author": "RadsWiki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AOligodendroglioma_001.jpg",
+        "wikimediaTitle": "File:Oligodendroglioma 001.jpg"
+      }
+    },
+    {
+      "id": "img-ct-arachnoid-cyst",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "hardCase": true,
+      "title": "کیست آراکنوئید تمپورال چپ — تلهٔ افتراقی ساب‌دورال مزمن (Arachnoid Cyst)",
+      "modality": "NCCT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-chronic-sdh-bilat",
+      "clinicalPrompt": "جوان ۳۰ ساله پس از تصادف خفیف برای بررسی تروما CT شده است؛ معاینه عصبی کاملاً طبیعی است و پزشک اورژانس به ساب‌دورال مزمن شک کرده است!",
+      "findings": [
+        "ضایعه کاملاً هم‌دانسیته با مایع مغزی-نخاعی (CSF) با حدود بسیار صاف و منظم در حفره جمجمه‌ای میانی چپ (قطب تمپورال)",
+        "نازک‌شدن و برجستگی مزمن استخوان جمجمه مجاور (Scalloping) نشانه ماهیت مادرزادی و قدیمی ضایعه است",
+        "تفاوت کلیدی با کیست اپیدرموئید: در DWI سیگنال کاملاً خاموش (هم‌سان با CSF) است، در حالی که اپیدرموئید در DWI به‌شدت روشن است!"
+      ],
+      "report": {
+        "modality": "NCCT Axial",
+        "compartment": "خارج محوری — حفره جمجمه‌ای میانی چپ (قطب تمپورال)",
+        "signal": "کاملاً ایزودنس با CSF (0–15 HU)، بدون کلسیفیکاسیون یا خونریزی",
+        "massEffect": "بازسازی مزمن استخوان بدون ادم پارانشیم اطراف",
+        "territory": "یافته اتفاقی مادرزادی خوش‌خیم (Leave-Me-Alone Lesion)"
+      },
+      "diagnosis": "کیست آراکنوئید تمپورال چپ (یافته خوش‌خیم — مقلد SDH مزمن)",
+      "pitfall": "تله رایج اورژانس: گزارش اشتباه کیست آراکنوئید اتفاقی به‌عنوان هماتوم ساب‌دورال مزمن یا سکته کهنه! حدود بسیار صاف + هم‌دانسیته بودن کامل با CSF + Scalloping استخوانی کلید تشخیص است.",
+      "roi": {
+        "x": 73,
+        "y": 45,
+        "r": 13,
+        "label": "کیست آراکنوئید تمپورال (هم‌دانسیته CSF)"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_arachnoid_cyst.jpg",
+      "dimensions": "747x840",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ATemporale_Arachnoidalzyste_links_CT_axial.jpg",
+        "wikimediaTitle": "File:Temporale Arachnoidalzyste links CT axial.jpg"
+      }
+    },
+    {
+      "id": "img-ct-avm-coronal",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "مالفورماسیون شریانی-وریدی مغزی (Cerebral AVM — CT Coronal)",
+      "modality": "CT Coronal",
+      "windowPreset": "brain",
+      "compareWith": "img-mra-circle-willis",
+      "clinicalPrompt": "جوان ۳۲ ساله با تشنج کانونی جدید و سردردهای مکرر یک‌طرفه؛ بدون سابقه فشار خون.",
+      "findings": [
+        "کلافه عروقی غیرطبیعی (Nidus) با عروق پیچ‌درپیچ و کلسیفیکاسیون ظریف در محدبیت فرونتال راست بدون اثر فشاری شدید",
+        "تایید طلایی و تعیین گرید Spetzler-Martin (اندازه، درناژ وریدی عمقی، ناحیه حیاتی Eloquent) نیازمند آنژیوگرافی دیجیتال (DSA) است",
+        "ریسک سالانه خونریزی ~۲ تا ۴٪ (و پس از خونریزی اول بسیار بالاتر!)"
+      ],
+      "report": {
+        "modality": "CT Coronal",
+        "compartment": "پارانشیم فرونتال راست (کورتیکال-ساب‌کورتیکال)",
+        "signal": "کلافه ناهمگن عروقی (Nidus) با هیپودانسیته گلیوز موضعی اطراف",
+        "massEffect": "ناچیز (در غیاب خونریزی حاد، AVM اثر فشاری توده‌ای ندارد!)",
+        "territory": "شانت مستقیم شریان به ورید بدون بستر مویرگی"
+      },
+      "diagnosis": "مالفورماسیون شریانی-وریدی مغزی (Cerebral AVM)",
+      "pitfall": "در بیمار جوان (<۴۵ سال) با خونریزی لوبار یا تشنج جدید و کلافه ظریف بدون اثر فشاری، همیشه پیش از جراحی یا بیوپسی به AVM شک کنید و CTA/DSA بگیرید!",
+      "roi": {
+        "x": 24,
+        "y": 19,
+        "r": 12,
+        "label": "نیدوس AVM فرونتال راست"
+      },
+      "relatedDiseases": [
+        "dis-ich",
+        "dis-epilepsy-focal"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_avm_coronal.jpg",
+      "dimensions": "840x789",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3A001_Arteriovenous_Malformation_CT_coronar_01.png",
+        "wikimediaTitle": "File:001 Arteriovenous Malformation CT coronar 01.png"
+      }
+    },
+    {
+      "id": "img-ct-nph-evans",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، وریدی و MS",
+      "hardCase": true,
+      "title": "هیدروسفالی با فشار نرمال (NPH — Evans Index > 0.3 و DESH)",
+      "modality": "NCCT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-hydrocephalus",
+      "clinicalPrompt": "مرد ۷۳ ساله با تریاد کلاسیک «گام مغناطیسی (پاهای چسبیده به زمین) + بی‌اختیاری ادرار + کندی شناخت» طی ۱ سال اخیر.",
+      "findings": [
+        "اتساع نامتناسب شاخ‌های قدامی و خلفی بطن‌های جانبی (شاخص اوانز Evans Index > 0.30) و گشادی فیشر سیلویین",
+        "تفاوت کلیدی از آتروفی آلزایمر (Hydrocephalus Ex-Vacuo): تنگی سولکوس‌های محدبیت بالایی (High-Convexity Tightness / DESH) و زاویه کالوزال حاد (<90°)!",
+        "تایید پاسخ به شانت VP با تست تخلیه حجم بالای CSF (Large-Volume Tap Test 30–50 mL و ارزیابی گام پیش و پس از LP)"
+      ],
+      "report": {
+        "modality": "NCCT Axial",
+        "compartment": "سیستم بطنی (هیدروسفالی ارتباطی)",
+        "signal": "اتساع واضح بطن‌های جانبی و شاخ‌های تمپورال بدون انسداد مکانیکی",
+        "massEffect": "بدون شیفت خط وسط؛ فیشر سیلویین باز و سولکوس‌های بالا فشرده",
+        "territory": "اختلال جذب CSF — دمانس قابل درمان (Reversible Dementia!)"
+      },
+      "diagnosis": "هیدروسفالی با فشار نرمال (Normal Pressure Hydrocephalus — NPH)",
+      "pitfall": "تله رایج: اشتباه گرفتن NPH با آتروفی مغزی سالمندی (آلزایمر)! در NPH شاخ‌های تمپورال و فیشر سیلویین متسع‌اند اما سولکوس‌های قله مغز فشرده هستند (DESH).",
+      "roi": {
+        "x": 50,
+        "y": 42,
+        "r": 16,
+        "label": "اتساع بطن‌های جانبی (Evans Index > 0.3)"
+      },
+      "relatedDiseases": [
+        "dis-nph",
+        "dis-alzheimer"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_nph_evans.jpg",
+      "dimensions": "509x519",
+      "attribution": {
+        "author": "RadsWiki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ANormal_pressure_hydrocephalus_001.jpg",
+        "wikimediaTitle": "File:Normal pressure hydrocephalus 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-cpm-trident",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، وریدی و MS",
+      "hardCase": true,
+      "title": "میلینولیز مرکزی پونز / دمیلیناسیون اسموتیک (CPM / ODS — Trident Sign)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-dwi-wallenberg",
+      "clinicalPrompt": "بیمار ۵۱ ساله با سابقه هیپوناترمی شدید (Na=108) که طی ۲۴ ساعت به ۱۲۸ اصلاح شده است؛ ۳ روز بعد دچار تتراپلژی، دیس‌آرتری و سندرم Locked-In شده است!",
+      "findings": [
+        "افزایش سیگنال T2 کاملاً متقارن در مرکز پونز با حفظ حاشیه محیطی پونز و فیبرهای قشری-نخاعی ← نمای پاتوگنومونیک «نیزه سه‌شاخه (Trident / Piglet Sign)»!",
+        "عدم اثر فشاری شدید و حفظ کامل خطوط وسط (برخلاف گلیوم ساقه مغز یا سکته شریان پارامدیان که یک‌طرفه به خط وسط محدود می‌شود)",
+        "پیشگیری حیاتی: سقف اصلاح سدیم در هیپوناترمی مزمن ≤6–8 mEq/L در ۲۴ ساعت (در اصلاح بیش‌ازحد: دسموپرسین + D5W برای بازگرداندن سدیم!)"
+      ],
+      "report": {
+        "modality": "MRI T2 Fat-Sat Axial (ساقه مغز)",
+        "compartment": "مرکز پونز (Pons)",
+        "signal": "هیپرسیگنال متقارن پروانه‌ای/نیزه‌ای (Trident Sign) با حفظ حاشیه محیطی",
+        "massEffect": "فاقد اثر فشاری قابل توجه",
+        "territory": "سندرم دمیلیناسیون اسموتیک (ODS / CPM)"
+      },
+      "diagnosis": "میلینولیز مرکزی پونز (Central Pontine Myelinolysis — ODS)",
+      "pitfall": "تله مهم: MRI در چند روز اول ممکن است هنوز نرمال باشد و نمای Trident Sign ۱ تا ۲ هفته بعد آشکار شود! همچنین به‌علت تقارن و حفظ حاشیه، با سکته پونز (یک‌طرفه) افتراق داده می‌شود.",
+      "roi": {
+        "x": 50,
+        "y": 49,
+        "r": 12,
+        "label": "نمای Trident Sign در مرکز پونز"
+      },
+      "relatedDiseases": [
+        "dis-metabolic-enceph",
+        "dis-coma"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_cpm_trident.jpg",
+      "dimensions": "591x686",
+      "attribution": {
+        "author": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Jto410&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Jt",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMRI_Central_Pontine_Myelinolysis_fat_sat_T2.jpg",
+        "wikimediaTitle": "File:MRI Central Pontine Myelinolysis fat sat T2.jpg"
+      }
+    },
+    {
+      "id": "img-mri-hsv-encephalitis",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، وریدی و MS",
+      "hardCase": true,
+      "title": "آنسفالیت هرپسی HSV-1 در لوب تمپورال و اینسولا (HSV-1 Encephalitis)",
+      "modality": "MRI T2 Coronal",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-abscess",
+      "clinicalPrompt": "مرد ۴۶ ساله با تب ۳۹.۲، تغییر رفتار ناگهانی، توهم بویایی، تشنج کانونی و CSF لنفوسیتی با ۲۵۰ RBC!",
+      "findings": [
+        "هیپرسیگنال و تورم نامتقارن واضح در قشر و ماده سفید لوب تمپورال مدیال، هیپوکامپ و قشر اینسولار راست با حفظ عقده‌های قاعده‌ای (Lentiform Nucleus Spared!)",
+        "حفظ عقده‌های قاعده‌ای (پوتامن/گلوبوس پالیدوس) کلید طلایی افتراق HSV-1 از سکته حاد MCA است!",
+        "قانون نجات‌بخش: شروع فوری آسیکلوویر ۱۰ mg/kg IV q8h پیش از آماده شدن PCR CSF (مرتالیتی بدون درمان >۷۰٪!)"
+      ],
+      "report": {
+        "modality": "MRI T2 Coronal",
+        "compartment": "لوب تمپورال مدیال، هیپوکامپ و اینسولای راست",
+        "signal": "هیپرسیگنال شدید نامتقارن با تورم قشر و محو شاخ تمپورال",
+        "massEffect": "متوسط روی شاخ تمپورال و سیسترن امبینس (خطر فتق اونکال)",
+        "territory": "سیستم لیمبیک (غیر-شریانی — حفظ عقده‌های قاعده‌ای!)"
+      },
+      "diagnosis": "آنسفالیت هرپسی HSV-1 (Herpes Simplex Encephalitis)",
+      "pitfall": "تله مرگبار: اشتباه گرفتن HSV-1 با سکته MCA یا تعویق آسیکلوویر تا جواب PCR (یا رد تشخیص به خاطر PCR منفی کاذب در ۴۸ ساعت اول!). حفظ عقده‌های قاعده‌ای به نفع HSV است.",
+      "roi": {
+        "x": 24,
+        "y": 63,
+        "r": 15,
+        "label": "ادم لوب تمپورال و اینسولا در HSV-1"
+      },
+      "relatedDiseases": [
+        "dis-encephalitis",
+        "dis-epilepsy-focal"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_hsv_encephalitis.jpg",
+      "dimensions": "480x512",
+      "attribution": {
+        "author": "dr Laughlin Dawes",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AHsv_encephalitis.jpg",
+        "wikimediaTitle": "File:Hsv encephalitis.jpg"
+      }
+    },
+    {
+      "id": "img-mri-pcnsl-t2",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "hardCase": true,
+      "title": "لنفوم اولیه مغز (PCNSL) در سکانس T2 — توده سلولار اطراف بطن",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-pcnsl-t1c",
+      "clinicalPrompt": "مرد ۶۷ ساله ایمنوکمپتنت با کندی شناخت و همی‌پارزی چپ ۵ هفته‌ای؛ فردا صبح بیوپسی استریوتاکتیک برنامه‌ریزی شده است.",
+      "findings": [
+        "توده عمیق اطراف بطن جانبی و کپسول داخلی راست که در T2 «نسبتاً هیپو تا ایزواینتنس» است (به‌دلیل نسبت بسیار بالای هسته به سیتوپلاسم / سلولاریته شدید!)",
+        "ادم وازوژنیک گسترده در ماده سفید لوب فرونتال راست و اثر فشاری روی شاخ قدامی بطن",
+        "با سکانس T1+C همین بیمار مقایسه کنید تا گیرش کاملاً همگن بدون نکروز مرکزی را ببینید!"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "اطراف بطن جانبی و گانگلیون قاعده‌ای راست",
+        "signal": "توده ایزو/هیپو در T2 (سلولاریته بالا) + ادم وازوژنیک وسیع اطراف",
+        "massEffect": "متوسط روی بطن جانبی راست",
+        "territory": "توزیع کلاسیک Periventricular لنفوم اولیه مغز (PCNSL)"
+      },
+      "diagnosis": "لنفوم اولیه سیستم عصبی مرکزی (PCNSL — نمای T2)",
+      "pitfall": "تله کشنده بورد (Ghost Tumor): در شک به PCNSL بدون خطر فوری فتق، هرگز قبل از بیوپسی استریوتاکتیک «دگزامتازون» ندهید!",
+      "roi": {
+        "x": 44,
+        "y": 50,
+        "r": 14,
+        "label": "توده سلولار PCNSL اطراف بطن (T2)"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_pcnsl_t2.jpg",
+      "dimensions": "657x770",
+      "attribution": {
+        "author": "Tdvorak",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ATumor_PrimaryCNSLymphoma_T2.JPG",
+        "wikimediaTitle": "File:Tumor PrimaryCNSLymphoma T2.JPG"
+      }
+    },
+    {
+      "id": "img-mri-pcnsl-t1c",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "hardCase": true,
+      "title": "لنفوم اولیه مغز (PCNSL) در T1+C — گیرش همگن و تلهٔ Ghost Tumor",
+      "modality": "MRI T1+C Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-pcnsl-t2",
+      "clinicalPrompt": "سکانس T1 با کنتراست همان بیمار ۶۷ ساله (شب قبل از بیوپسی) — افتراق حیاتی از GBM و آبسه!",
+      "findings": [
+        "«تقویت کنتراست کاملاً همگن و شدید (Avid Homogeneous Enhancement)» در مجاورت بطن جانبی راست بدون نکروز مرکزی!",
+        "تفاوت کلیدی از GBM: گلیوبلاستوما گیرش حلقوی نامنظم (Ring-Enhancing) با نکروز مرکزی دارد، ولی PCNSL ایمنوکمپتنت همگن است و محدودیت شدید DWI دارد",
+        "تله Ghost Tumor: پرهیز اکید از کورتون پیش از بیوپسی! پس از تأیید DLBCL، درمان شیمی‌درمانی HD-MTX + ریتوکسیماب است (نه جراحی رزکسیون!)"
+      ],
+      "report": {
+        "modality": "MRI T1+C Axial",
+        "compartment": "اطراف بطن جانبی راست (Periventricular)",
+        "signal": "گیرش کنتراست همگن و شدید بدون نکروز مرکزی",
+        "massEffect": "متوسط؛ بدون تهدید فوری فتق",
+        "territory": "لنفوم اولیه CNS (DLBCL — CD20+)"
+      },
+      "diagnosis": "لنفوم اولیه مغز (PCNSL — گیرش همگن، منع استروئید پیش از بیوپسی!)",
+      "pitfall": "دادن دگزامتازون قبل از بیوپسی لنفوسیت‌های PCNSL را ظرف ۲۴–۴۸ ساعت ذوب کرده (Ghost Tumor) و بیوپسی را غیرتشخیصی می‌کند!",
+      "roi": {
+        "x": 47,
+        "y": 51,
+        "r": 13,
+        "label": "گیرش همگن PCNSL (منع استروئید!)"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_pcnsl_t1c.jpg",
+      "dimensions": "607x751",
+      "attribution": {
+        "author": "Tdvorak",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ATumor_PrimaryCNSLymphoma_T1Axial.JPG",
+        "wikimediaTitle": "File:Tumor PrimaryCNSLymphoma T1Axial.JPG"
+      }
+    },
+    {
+      "id": "img-mri-pres-flair",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، وریدی و MS",
+      "hardCase": true,
+      "title": "سندرم آنسفالوپاتی خلفی برگشت‌پذیر (PRES — ادم ظریف اکسیپیتال در FLAIR)",
+      "modality": "MRI FLAIR Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-dwi-acute-stroke",
+      "clinicalPrompt": "زن باردار ۳۴ هفته با BP 184/112، سردرد شدید، تاری دید قشری دوطرفه و یک نوبت تشنج (اکلامپسی).",
+      "findings": [
+        "کانون‌های ظریف هیپرسیگنال FLAIR در قشر و ماده سفید زیرقشری هر دو لوب اکسیپیتال (گردش خلفی آسیب‌پذیر به اختلال اتورگولاسیون!)",
+        "افتراق کلیدی از سکته دوطرفه PCA: در PRES ادم «وازوژنیک» است (در ADC روشن و بدون محدودیت DWI) و پس از کنترل فشار/تاکرولیموس/اکلامپسی برگشت‌پذیر است!",
+        "مدیریت فوری: سولفات منیزیم در اکلامپسی + کاهش کنترل‌شده MAP حدود ۲۰–۲۵٪ (لابتالول/نیکاردیپین IV) یا قطع داروی محرک (تاکرولیموس/سیکلوسپورین)"
+      ],
+      "report": {
+        "modality": "MRI FLAIR Axial",
+        "compartment": "قشری-زیرقشری لوب‌های اکسیپیتال دوطرفه",
+        "signal": "هیپرسیگنال ظریف وازوژنیک دوطرفه (غیرمحدود در DWI/ADC)",
+        "massEffect": "ناچیز؛ برگشت‌پذیر با درمان علت زمینه‌ای",
+        "territory": "گردش خلفی (اتورگولاسیون سمپاتیک ضعیف‌تر)"
+      },
+      "diagnosis": "سندرم آنسفالوپاتی خلفی برگشت‌پذیر (PRES)",
+      "pitfall": "ضایعات اولیه PRES در FLAIR می‌توانند بسیار ظریف باشند و اگر تنها به دنبال سکته یک‌طرفه باشید از دست می‌روند! همیشه هر دو لوب اکسیپیتال و پاریتال را با هم مقایسه کنید.",
+      "roi": {
+        "x": 56,
+        "y": 74,
+        "r": 14,
+        "label": "ادم وازوژنیک اکسیپیتال PRES در FLAIR"
+      },
+      "relatedDiseases": [
+        "dis-status",
+        "dis-cvt"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_pres_flair.jpg",
+      "dimensions": "680x680",
+      "attribution": {
+        "author": "Wikimedia Commons Contributor",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3APosterior_reversible_encephalopathy_syndrome_-_MRI_Brain_-_Axial_Flair_-_Image_13.jpg",
+        "wikimediaTitle": "File:Posterior reversible encephalopathy syndrome - MRI Brain - Axial Flair - Image 13.jpg"
+      }
+    },
+    {
+      "id": "img-mri-medulloblastoma-dwi",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی",
+      "hardCase": true,
+      "title": "مدولوبلاستومای خط وسط مخچه در DWI (Medulloblastoma — Drop Mets!)",
+      "modality": "MRI DWI Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-dwi-pica",
+      "clinicalPrompt": "کودک ۸ ساله با سردرد صبحگاهی، استفراغ جهنده، آتاکسی تنه و ادم پاپی طی ۳ هفته اخیر.",
+      "findings": [
+        "توده خط وسط حفره خلفی (ورمیس و بطن چهارم) با «محدودیت شدید انتشار در DWI» ناشی از سلولاریته بسیار بالا (تومور سلول کوچک گرد آبی / روزت‌های Homer-Wright)",
+        "تله افتراقی حیاتی در حفره خلفی اطفال: پیلوسیتیک آستروسیتوما جانبی و کیست+ندول بدون محدودیت DWI است؛ ولی مدولوبلاستوما خط وسط و به‌شدت DWI-روشن است!",
+        "الزام مرحله‌بندی: انجام MRI کل ستون فقرات با کنتراست برای رد متاستازهای قطره‌ای (Drop Metastases) در طول نخاع!"
+      ],
+      "report": {
+        "modality": "MRI DWI Axial (حفره خلفی)",
+        "compartment": "خط وسط مخچه / بطن چهارم",
+        "signal": "محدودیت انتشار واضح در DWI (سلولاریته بسیار بالا)",
+        "massEffect": "انسداد بطن چهارم و هیدروسفالی انسدادی فوق‌تنتوریال",
+        "territory": "تومور امبریونال گرید ۴ WHO (تومور خط وسط اطفال)"
+      },
+      "diagnosis": "مدولوبلاستومای خط وسط مخچه (Medulloblastoma — WHO Grade 4)",
+      "pitfall": "تله بورد: هرگز مدولوبلاستوما را فقط با MRI مغز مرحله‌بندی نکنید — MRI کل ستون فقرات با کنتراست برای رد Drop Metastases الزامی است!",
+      "roi": {
+        "x": 52,
+        "y": 54,
+        "r": 15,
+        "label": "مدولوبلاستومای DWI-روشن خط وسط"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_medulloblastoma_dwi.jpg",
+      "dimensions": "417x512",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMedulloblastom_-_MRT_-_axial_DWI_-_006.jpg",
+        "wikimediaTitle": "File:Medulloblastom - MRT - axial DWI - 006.jpg"
+      }
+    },
+    {
+      "id": "img-mri-cavernoma-t2",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "کاورتومای مغزی (نمای Popcorn و حلقه هموسیدرین در T2)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-cavernoma-swi",
+      "clinicalPrompt": "زن ۳۰ ساله با یک نوبت تشنج کانونی دست چپ؛ معاینه عصبی بین حملات کاملاً طبیعی است.",
+      "findings": [
+        "ضایعه کاملاً مشخص در ماده سفید فرونتال راست با هسته ناهمگن (نمای پاپ‌کورن / Popcorn Sign ناشی از خون در مراحل مختلف) و «حلقه کامل هموسیدرین سیاه» در اطراف!",
+        "بدون ادم وازوژنیک و بدون اثر فشاری قابل توجه (برخلاف متاستاز خونریزی‌دهنده یا GBM)",
+        "در سکانس SWI متناظر همین بیمار، آرتیفکت Blooming بسیار بزرگ‌تر و ناهنجاری وریدی تکاملی همراه (DVA / Caput Medusae) آشکار می‌شود!"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "پارانشیم فرونتال راست",
+        "signal": "هسته پاپ‌کورنی روشن/تیره با حاشیه کامل هیپواینتنس هموسیدرین",
+        "massEffect": "ندارد (فاقد ادم اطراف)",
+        "territory": "مالفورماسیون عروقی کم‌جریان (آنژیوگرافی DSA مخفی است!)"
+      },
+      "diagnosis": "کاورتومای مغزی (Cerebral Cavernous Malformation — T2 Popcorn Sign)",
+      "pitfall": "کاورتوما یک مالفورماسیون کم‌جریان (Angiographically Occult) است؛ بنابراین در آنژیوگرافی DSA دیده نمی‌شود و بهترین روش تشخیص آن MRI با سکانس‌های T2 و SWI است!",
+      "roi": {
+        "x": 39,
+        "y": 42,
+        "r": 11,
+        "label": "کاورتومای پاپ‌کورنی + حلقه هموسیدرین (T2)"
+      },
+      "relatedDiseases": [
+        "dis-epilepsy-focal",
+        "dis-ich"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_cavernoma_t2.jpg",
+      "dimensions": "300x349",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AKavernom_und_DVA_30W_-_MR_und_CT_-_001.jpg",
+        "wikimediaTitle": "File:Kavernom und DVA 30W - MR und CT - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-cavernoma-swi",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "کاورتوما + ناهنجاری وریدی تکاملی (DVA — Caput Medusae) در SWI",
+      "modality": "MRI SWI Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-cavernoma-t2",
+      "clinicalPrompt": "سکانس SWI همان بیمار ۳۰ ساله — یافتن عروق شعاعی DVA مجاور کاورتوما پیش از هرگونه تصمیم جراحی حیاتی است!",
+      "findings": [
+        "آرتیفکت «بلومینگ (Blooming Artifact)» شدید و کاملاً سیاه روی کاورتوما در فرونتال راست (بسیار حساس‌تر از T2 برای کشف کاورتوماهای متعدد خانوادگی!)",
+        "وریدهای مدولاری شعاعی ظریف که به یک ورید جمع‌کننده می‌ریزند ← نمای کلاسیک «سر مدوسا (Caput Medusae)» ناهنجاری وریدی تکاملی (DVA)!",
+        "قانون طلایی جراحی اعصاب: اگر کاورتوما جراحی شود، **هرگز نباید DVA مجاور را سوزاند یا برداشت** چون تنها مسیر درناژ وریدی بافت سالم مغز است و انفارکتوس وریدی فاجعه‌بار می‌دهد!"
+      ],
+      "report": {
+        "modality": "MRI SWI Axial",
+        "compartment": "پارانشیم فرونتال راست",
+        "signal": "سوسپتیبیلیتی سیاه (Blooming) + وریدهای ستاره‌ای DVA",
+        "massEffect": "ندارد",
+        "territory": "همراهی کلاسیک کاورتوما + DVA"
+      },
+      "diagnosis": "کاورتوما + DVA همراه (SWI Blooming & Caput Medusae)",
+      "pitfall": "تله جراحی اعصاب: برداشتن یا کوآگوله کردن DVA مجاور کاورتوما باعث سکته وریدی وسیع می‌شود — فقط کاورتوما برداشته و DVA کاملاً حفظ می‌شود!",
+      "roi": {
+        "x": 40,
+        "y": 41,
+        "r": 12,
+        "label": "Blooming کاورتوما + رگ‌های DVA (SWI)"
+      },
+      "relatedDiseases": [
+        "dis-epilepsy-focal",
+        "dis-ich"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_cavernoma_swi.jpg",
+      "dimensions": "300x349",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AKavernom_und_DVA_30W_-_MR_und_CT_-_001.jpg",
+        "wikimediaTitle": "File:Kavernom und DVA 30W - MR und CT - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-epidermoid-t2",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "کیست اپیدرموئید در T2 — مقلد کامل کیست آراکنوئید (Epidermoid Cyst T2)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-epidermoid-dwi",
+      "clinicalPrompt": "بیمار ۳۹ ساله با سردرد و اختلال حرکات چشمی؛ در T2 ضایعه‌ای کاملاً هم‌سیگنال با CSF در ناحیه پینه‌آل/تکتال دیده می‌شود که بسیاری آن را کیست آراکنوئید ساده گزارش می‌کنند!",
+      "findings": [
+        "ضایعه خارج‌محوری با سیگنال بسیار روشن در T2 که تقریباً غیرقابل افتراق از مایع مغزی-نخاعی (CSF) و کیست آراکنوئید است",
+        "تمایل به خزیدن در شیارها و سیسترن‌ها (Insinuating growth) به جای صرفاً هل دادن ساختارها",
+        "سکانس نجات‌بخش: حتماً DWI همین بیمار را چک کنید — کیست اپیدرموئید مثل «لامپ سفید» در DWI می‌درخشد!"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "خارج‌محوری (سیسترن کوادری‌ژمینال / پینه‌آل)",
+        "signal": "هیپرسیگنال شدید (تقریباً هم‌سان با CSF در T2)",
+        "massEffect": "ملایم روی صفحه تکتال بدون ادم پارانشیم",
+        "territory": "تومور خوش‌خیم باقیمانده اکتودرمی (اپیدرموئید)"
+      },
+      "diagnosis": "کیست اپیدرموئید داخل جمجمه (نمای فریبنده T2)",
+      "pitfall": "تله معروف نورورادیولوژی: در T1 و T2 کیست اپیدرموئید دقیقاً شبیه کیست آراکنوئید است! هرگز بدون دیدن DWI (و FLAIR) تشخیص کیست آراکنوئید ندهید.",
+      "roi": {
+        "x": 50,
+        "y": 63,
+        "r": 11,
+        "label": "کیست اپیدرموئید (شبیه CSF در T2)"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_epidermoid_t2.jpg",
+      "dimensions": "645x766",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AEpidermoidzyste_MRT_T2_ax.jpg",
+        "wikimediaTitle": "File:Epidermoidzyste MRT T2 ax.jpg"
+      }
+    },
+    {
+      "id": "img-mri-epidermoid-dwi",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "کیست اپیدرموئید در DWI — درخشش لامپ‌مانند (افتراق قطعی از آراکنوئید!)",
+      "modality": "MRI DWI Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-epidermoid-t2",
+      "clinicalPrompt": "سکانس DWI دقیقاً همان بیمار ۳۹ ساله — ضایعه سیاه نمی‌ماند بلکه به‌شدت روشن و محدود شده است!",
+      "findings": [
+        "محدودیت بسیار شدید انتشار در DWI (لامپ سفید درخشان!) به علت لایه‌های متراکم کراتین و کلسترول درون کیست اپیدرموئید",
+        "قانون ۱۰۰٪ قطعی افتراق: کیست آراکنوئید در DWI کاملاً سیاه (مثل CSF) است، ولی کیست اپیدرموئید به‌شدت سفید و روشن است!",
+        "درمان در موارد علامت‌دار: رزکسیون میکروسکوپیک با حفظ عروق و اعصاب جمجمه‌ای درگیر (کپسول به عروق می‌چسبد)"
+      ],
+      "report": {
+        "modality": "MRI DWI Axial",
+        "compartment": "خارج‌محوری (ناحیه پینه‌آل / کوادری‌ژمینال)",
+        "signal": "هیپرسیگنال بسیار شدید (True Diffusion Restriction)",
+        "massEffect": "فشردگی ملایم صفحه تکتال",
+        "territory": "کیست اپیدرموئید (افتراق قطعی از کیست آراکنوئید)"
+      },
+      "diagnosis": "کیست اپیدرموئید (محدودیت شدید DWI — افتراق قطعی از آراکنوئید)",
+      "pitfall": "تنها دو ضایعه کیستیک در مغز در DWI به‌شدت روشن می‌شوند: «آبسه چرکی» (دارای گیرش حلقوی) و «کیست اپیدرموئید» (بدون گیرش کنتراست)!",
+      "roi": {
+        "x": 49,
+        "y": 61,
+        "r": 11,
+        "label": "درخشش شدید اپیدرموئید در DWI"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_epidermoid_dwi.jpg",
+      "dimensions": "716x836",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AEpidermoidzyste_MRT_DWI_ax.jpg",
+        "wikimediaTitle": "File:Epidermoidzyste MRT DWI ax.jpg"
+      }
+    },
+    {
+      "id": "img-mri-wernicke-dwi",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "آنسفالوپاتی حاد ورنیکه در DWI — تالاموس مدیال دوطرفه (Wernicke Thalami)",
+      "modality": "MRI DWI Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-wernicke-pag",
+      "clinicalPrompt": "بیمار ۴۹ ساله پس از جراحی چاقی (یا مصرف مزمن الکل) با استفراغ‌های مداوم، گیجی، نیستاگموس/فلج CN VI و آتاکسی؛ پیش از گلوکز چه باید تزریق کرد؟",
+      "findings": [
+        "هیپرسیگنال کاملاً متقارن دوطرفه در هسته‌های مدیال تالاموس (Dorsomedial Thalami) مجاور بطن سوم در DWI/FLAIR",
+        "سایر نقاط کلاسیک ورنیکه: اجسام پستانی (Mammillary Bodies) و ماده خاکستری اطراف قنات سیلویوس (PAG — برش بعدی استک!)",
+        "اورژانس دارویی مطلق: تیامین ۵۰۰ mg IV TID به مدت ۳ روز **پیش از هرگونه دکستروز**!"
+      ],
+      "report": {
+        "modality": "MRI DWI Axial",
+        "compartment": "تالاموس‌های مدیال دوطرفه (اطراف بطن سوم)",
+        "signal": "هیپرسیگنال متقارن دوطرفه (علامت کلاسیک هاکی‌استیک/مدیال تالاموس)",
+        "massEffect": "ندارد",
+        "territory": "کمبود حاد تیامین (ویتامین B1) — آنسفالوپاتی ورنیکه"
+      },
+      "diagnosis": "آنسفالوپاتی حاد ورنیکه (درگیری متقارن تالاموس مدیال)",
+      "pitfall": "تله مرگبار: تزریق سرم قندی (دکستروز) پیش از تیامین آخرین ذخایر B1 را می‌سوزاند و ورنیکه را به کما و سندرم کورساکف غیرقابل برگشت می‌برد! (افتراق مهم دیگر تالاموس دوطرفه: سکته شریان پرشرون و ترومبوز ورید عمقی ICV و vCJD).",
+      "roi": {
+        "x": 50,
+        "y": 50,
+        "r": 14,
+        "label": "هیپرسیگنال متقارن تالاموس مدیال (ورنیکه)"
+      },
+      "relatedDiseases": [
+        "dis-wernicke",
+        "dis-metabolic-enceph"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_wernicke_dwi.jpg",
+      "dimensions": "637x817",
+      "attribution": {
+        "author": "Jto410",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMRI_DWI_sequence_showing_restricted_diffusion_in_the_mesial_dorsal_thalami.jpg",
+        "wikimediaTitle": "File:MRI DWI sequence showing restricted diffusion in the mesial dorsal thalami.jpg"
+      }
+    },
+    {
+      "id": "img-mri-wernicke-pag",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "آنسفالوپاتی ورنیکه در FLAIR — ماده خاکستری اطراف قنات سیلویوس (PAG)",
+      "modality": "MRI FLAIR Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-wernicke-dwi",
+      "clinicalPrompt": "برش پایین‌تر (مزانسفال) دقیقاً همان بیمار مبتلا به آنسفالوپاتی ورنیکه — حلقه سفید ظریف دور قنات سیلویوس!",
+      "findings": [
+        "افزایش سیگنال متقارن در ماده خاکستری اطراف قنات سیلویوس (Periaqueductal Gray — PAG) و صفحه تکتال مزانسفال",
+        "فقط در کمتر از ۲۰٪ بیماران تریاد کامل (گیجی + افتالموپلژی + آتاکسی) هم‌زمان دیده می‌شود — بنابراین آستانه شک و شروع تیامین باید بسیار پایین باشد!",
+        "در MRI حساسیت حدود ۵۳٪ ولی اختصاصیت ۹۳٪ است (MRI نرمال هرگز ورنیکه را رد نمی‌کند!)"
+      ],
+      "report": {
+        "modality": "MRI FLAIR Axial (مزانسفال)",
+        "compartment": "ماده خاکستری اطراف قنات سیلویوس (PAG)",
+        "signal": "هیپرسیگنال کانونی متقارن در مرکز مزانسفال",
+        "massEffect": "ندارد",
+        "territory": "کمبود حاد تیامین (آنسفالوپاتی ورنیکه)"
+      },
+      "diagnosis": "آنسفالوپاتی ورنیکه (درگیری Periaqueductal Gray — PAG)",
+      "pitfall": "تله بالینی: منتظر نرمال بودن یا نبودن MRI یا آزمایش سطح تیامین نمانید — تیامین IV ایمن و ارزان است و در هر بیمار مشکوک (الکل، جراحی باریاتریک، هیپرامزیس بارداری، سرطان) باید فوری شروع شود!",
+      "roi": {
+        "x": 50,
+        "y": 57,
+        "r": 11,
+        "label": "هیپرسیگنال اطراف قنات سیلویوس (PAG)"
+      },
+      "relatedDiseases": [
+        "dis-wernicke",
+        "dis-metabolic-enceph"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_wernicke_pag.jpg",
+      "dimensions": "741x916",
+      "attribution": {
+        "author": "Jto410",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMRI_FLAIR_sequence_showing_hyperintense_signal_in_the_periaqueducal_grey_matter_in_Wernicke_Encephalopathy.jpg",
+        "wikimediaTitle": "File:MRI FLAIR sequence showing hyperintense signal in the periaqueducal grey matter in Wernicke Encephalopathy.jpg"
+      }
+    },
+    {
+      "id": "img-mri-caa-t2star",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "آمیلوئید آنژیوپاتی مغزی (CAA — میکروخونریزی‌های لوبار در T2* GRE)",
+      "modality": "MRI T2* GRE Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-cavernoma-swi",
+      "clinicalPrompt": "سالمند ۷۴ ساله با خونریزی لوبار راجعه و حملات گذرای «حس سوزن‌سوزن شدن» (TFNEs — Amyloid Spells) که با TIA اشتباه شده و برایش آسپیرین/ضدانعقاد شروع کرده‌اند!",
+      "findings": [
+        "میکروخونریزی‌های سیاه نقطه‌ای متعدد (`Microbleeds`) صرفاً در محل اتصال کورتیکال-ساب‌کورتیکال (لوبار) با **حفظ کامل عقده‌های قاعده‌ای و ساقه مغز** (معیار بوستون ۲.۰!)",
+        "تفاوت حیاتی از میکروخونریزی فشارخونی: فشار خون مزمن نقاط سیاه عمقی در عقده‌های قاعده‌ای، تالاموس و پونز می‌دهد؛ CAA صرفاً قشری-لوبار است!",
+        "خطر بسیار بالای خونریزی مغزی مرگبار در صورت تجویز ضدانعقاد (وارفارین/DOAC) یا ترومبولیز!"
+      ],
+      "report": {
+        "modality": "MRI T2* GRE Axial",
+        "compartment": "قشری-زیرقشری لوبار (اکسیپیتال/پاریتال دوطرفه)",
+        "signal": "کانون‌های نقطه‌ای سیاه Blooming صرفاً در کورتکس (حفظ گانگلیون قاعده‌ای)",
+        "massEffect": "ندارد",
+        "territory": "رسوب بتا-آمیلوئید در عروق لپتومننژیال و کورتیکال (CAA)"
+      },
+      "diagnosis": "آمیلوئید آنژیوپاتی مغزی (Cerebral Amyloid Angiopathy — CAA)",
+      "pitfall": "تله کشنده کلینیک: حملات حسی گذرای CAA (`Amyloid Spells`) دقیقاً شبیه TIA هستند! اگر بدون انجام SWI/GRE برای بیمار آنتی‌پلاکت دوتایی یا ضدانعقاد بدهید ممکن است دچار خونریزی لوبار فاجعه‌بار شود.",
+      "roi": {
+        "x": 52,
+        "y": 74,
+        "r": 18,
+        "label": "میکروخونریزی‌های لوبار کورتیکال CAA"
+      },
+      "relatedDiseases": [
+        "dis-ich",
+        "dis-alzheimer"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-aha-ich"
+      ],
+      "file": "media/neuroimaging/neuro_mri_caa_t2star.jpg",
+      "dimensions": "416x512",
+      "attribution": {
+        "author": "Braegel",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AZerebrale_Amyloidangiopathie_T2Stern.jpg",
+        "wikimediaTitle": "File:Zerebrale Amyloidangiopathie T2Stern.jpg"
+      }
+    },
+    {
+      "id": "img-ct-colloid-ax",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "کیست کلوئید بطن سوم در فورامن مونرو — Axial CT (خطر مرگ ناگهانی!)",
+      "modality": "NCCT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-colloid-cor",
+      "clinicalPrompt": "بیمار با سردردهای شدید وضعیتی (تشدید با خم کردن سر به جلو) و حملات ناگهانی Drop Attack / سنکوپ!",
+      "findings": [
+        "توده گرد و کاملاً خوش‌حدود هیپردنس (روشن به علت محتوای موسین غلیظ و کلسترول) دقیقاً در سقف قدامی بطن سوم در محل فورامن مونرو!",
+        "مکانیسم دریچه توپی (`Ball-Valve`): می‌تواند ناگهان هر دو فورامن مونرو را مسدود کند و باعث هیدروسفالی حاد دوطرفه و **مرگ ناگهانی** شود!",
+        "در برش کرونال هم‌تراز (اسلایس بعدی استک)، قرارگیری دقیق کیست میان دو شاخ بطن جانبی آشکار می‌شود."
+      ],
+      "report": {
+        "modality": "NCCT Axial",
+        "compartment": "سقف قدامی بطن سوم (فورامن مونرو)",
+        "signal": "ندول گرد همگن هیپردنس (موسین غلیظ؛ ممکن است در CT بدون کنتراست شبیه خونریزی به نظر برسد)",
+        "massEffect": "پتانسیل انسداد ناگهانی فورامن مونرو و هیدروسفالی حاد",
+        "territory": "کیست کلوئید مادرزادی خوش‌خیم با موقعیت خطیر"
+      },
+      "diagnosis": "کیست کلوئید بطن سوم (Colloid Cyst of Foramen of Monro)",
+      "pitfall": "تله کشنده اورژانس: کیست کلوئید کوچک به نظر می‌رسد و ممکن است به اشتباه «خونریزی کوچک» یا «کلسیفیکاسیون پلکسوس» گزارش شود؛ اما در بیمار دارای سردرد وضعیتی/هیدروسفالی نیازمند مشاوره جراحی اعصاب (رزکسیون آندوسکوپیک/میکروسکوپیک) است!",
+      "roi": {
+        "x": 47,
+        "y": 44,
+        "r": 10,
+        "label": "کیست کلوئید هیپردنس در فورامن مونرو"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor",
+        "dis-coma"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_colloid_ax.jpg",
+      "dimensions": "483x549",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AKolloidzyste_-_91jw-_CT_nativ_axial_und_coronar_-_001.png",
+        "wikimediaTitle": "File:Kolloidzyste - 91jw- CT nativ axial und coronar - 001.png"
+      }
+    },
+    {
+      "id": "img-ct-colloid-cor",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "کیست کلوئید بطن سوم — بازسازی Coronal CT (جفت هم‌تراز فورامن مونرو)",
+      "modality": "NCCT Coronal",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-colloid-ax",
+      "clinicalPrompt": "بازسازی کرونال دقیقاً همان بیمار — موقعیت کلاسیک کیست گرد سفید در سقف بطن سوم زیر ستون‌های فورنیکس!",
+      "findings": [
+        "تایید ۱۰۰٪ آناتومیک: کیست گرد هیپردنس دقیقاً در سقف بطن سوم بین دو فورامن مونرو معلق است",
+        "چون محتوای کیست پروتئینی/موسینی است، در T1 MRI اغلب روشن و در CT بدون کنتراست هیپردنس است (بدون نیاز به کنتراست!)",
+        "در صورت بروز هیدروسفالی حاد علامت‌دار: گذاشتن EVD دوطرفه (زیرا دو بطن جانبی ممکن است از هم جدا شوند!) + جراحی قطعی"
+      ],
+      "report": {
+        "modality": "NCCT Coronal",
+        "compartment": "سقف بطن سوم (دقیقاً بین دو فورامن مونرو)",
+        "signal": "ندول گرد هیپردنس خوش‌حدود",
+        "massEffect": "انسداد نسبی فورامن مونرو",
+        "territory": "کیست کلوئید بطن سوم"
+      },
+      "diagnosis": "کیست کلوئید بطن سوم (نمای Coronal CT)",
+      "pitfall": "اگر بیمار با کیست کلوئید دچار هیدروسفالی حاد شد، هرگز LP نکنید (خطر فتق فوری) و به یاد داشته باشید که EVD یک‌طرفه ممکن است فقط یک بطن را تخلیه کند!",
+      "roi": {
+        "x": 48,
+        "y": 47,
+        "r": 10,
+        "label": "کیست کلوئید در سقف بطن سوم (Coronal)"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_ct_colloid_cor.jpg",
+      "dimensions": "473x404",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AKolloidzyste_-_91jw-_CT_nativ_axial_und_coronar_-_001.png",
+        "wikimediaTitle": "File:Kolloidzyste - 91jw- CT nativ axial und coronar - 001.png"
+      }
+    },
+    {
+      "id": "img-mri-chiari1-sag",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "hardCase": true,
+      "title": "مالفورماسیون کیاری نوع ۱ (Chiari I — فتق تونسیل‌های مخچه >5mm)",
+      "modality": "MRI T2 Sagittal",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-dandy-walker",
+      "clinicalPrompt": "نوجوان با سردرد پس‌سری شدید هنگام سرفه و عطسه (Valsalva Headache)، اختلال بلع و نیستاگموس روبه‌پایین (Downbeat Nystagmus)!",
+      "findings": [
+        "نزول و نوک‌تیز شدن تونسیل‌های مخچه (`Peg-like Cerebellar Tonsils`) بیش از ۵ میلی‌متر پایین‌تر از خط مک‌ری (فورامن مگنوم) با فشردگی سیسترن مگنا!",
+        "همراهی بسیار مهم (در ۳۰ تا ۷۰٪ موارد): جستجو برای **سیرنگومیلی نخاع گردنی** (سندرم طناب مرکزی: از دست رفتن حس درد و دما شبیه شنل در دو دست با حفظ لمس و حس عمقی!)",
+        "هشدار بحرانی: منع مطلق پونکسیون کمری (LP) در کیاری علامت‌دار به دلیل خطر فتق حاد ساقه مغز!"
+      ],
+      "report": {
+        "modality": "MRI T2 Sagittal (اتصال کرانیوسرویکال)",
+        "compartment": "فورامن مگنوم / حفره خلفی",
+        "signal": "پارانشیم طبیعی مخچه با نزول تونسیل‌ها (>5 mm زیر فورامن مگنوم)",
+        "massEffect": "تنگی شدید جریان CSF در اتصال کرانیوسرویکال",
+        "territory": "مالفورماسیون کیاری نوع ۱ (برخلاف کیاری ۲ که با میلومننگوسل همراه است)"
+      },
+      "diagnosis": "مالفورماسیون کیاری نوع ۱ (Chiari I Malformation)",
+      "pitfall": "تله مهم افتراقی: فتق تونسیل‌های مخچه ممکن است ثانویه به «افت فشار مایع مغزی-نخاعی (SIH / Brain Sagging)» باشد نه کیاری مادرزادی! در SIH کل ساقه مغز پایین کشیده شده و دورا تقویت کنتراست منتشر دارد — درمانش Blood Patch است نه دکمپرسیون حفره خلفی!",
+      "roi": {
+        "x": 52,
+        "y": 80,
+        "r": 12,
+        "label": "فتق تونسیل مخچه زیر فورامن مگنوم (Chiari I)"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp",
+        "dis-vertigo"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_chiari1_sag.jpg",
+      "dimensions": "839x838",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AChiari-1-Malformation_13W_-_MR_T2_sagittal_-_001.jpg",
+        "wikimediaTitle": "File:Chiari-1-Malformation 13W - MR T2 sagittal - 001.jpg"
+      }
+    },
+    {
+      "id": "img-mri-dandy-walker",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "مالفورماسیون / واریانت دندی-واکر (Dandy-Walker Spectrum — Sagittal T2)",
+      "modality": "MRI T2 Sagittal",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-chiari1-sag",
+      "clinicalPrompt": "بیمار با ماکروسفالی/تأخیر تکاملی و آتاکسی؛ در برش ساژیتال T2 حفره خلفی به‌طور وسیع با کیست CSF پر شده است!",
+      "findings": [
+        "اتساع شدید کیستیک بطن چهارم که مستقیماً به فضای وسیع حفره خلفی باز می‌شود همراه با هیپوپلازی و چرخش به بالای ورمیس مخچه",
+        "بالا رفتن چادرینه مخچه (Tentorium) و تورکولا (`Torcular-Lambdoid Inversion`) در شکل کلاسیک",
+        "افتراق مهم از `Mega Cisterna Magna` و `کیست آراکنوئید حفره خلفی`: در آن دو ورمیس مخچه طبیعی است و بطن چهارم سالم و جداست!"
+      ],
+      "report": {
+        "modality": "MRI T2 Sagittal",
+        "compartment": "حفره خلفی (بطن چهارم و ورمیس مخچه)",
+        "signal": "مایع کیستیک هم‌سیگنال CSF با ارتباط مستقیم با بطن چهارم",
+        "massEffect": "بزرگ‌شدگی حفره خلفی و بالا رفتن تنتوریوم",
+        "territory": "طیف ناهنجاری تکاملی دندی-واکر (Dandy-Walker)"
+      },
+      "diagnosis": "طیف مالفورماسیون دندی-واکر (Dandy-Walker Malformation/Variant)",
+      "pitfall": "تله رادیولوژی حفره خلفی: تنها وقتی برچسب دندی-واکر بزنید که **هیپوپلازی/چرخش ورمیس + ارتباط مستقیم با بطن چهارم** وجود داشته باشد؛ در غیر این صورت ممکن است فقط یک Mega Cisterna Magna کاملاً بی‌خطر باشد!",
+      "roi": {
+        "x": 78,
+        "y": 63,
+        "r": 16,
+        "label": "کیست حفره خلفی + هیپوپلازی ورمیس (Dandy-Walker)"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_dandy_walker.jpg",
+      "dimensions": "886x920",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ADandy-Walker-Variante_-_MRT_T2_sagittal.jpg",
+        "wikimediaTitle": "File:Dandy-Walker-Variante - MRT T2 sagittal.jpg"
+      }
+    },
+    {
+      "id": "img-mri-schwannoma-cpa",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "شوانوم وستیبولار زاویه پل-مخچه‌ای — نمای قیف بستنی (CPA Schwannoma)",
+      "modality": "MRI T1+C Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-meningioma",
+      "clinicalPrompt": "مرد ۵۲ ساله با کاهش شنوایی حسی-عصبی پیشرونده یک‌طرفه چپ، وزوز گوش و عدم تعادل طی ۲ سال (اگر دوطرفه بود: NF2!).",
+      "findings": [
+        "توده خارج‌محوری با تقویت کنتراست شدید در زاویه پل-مخچه‌ای چپ (Left CPA) که با گشاد کردن مجرای شنوایی داخلی (IAC) نمای کلاسیک **«قیف بستنی (Ice-Cream Cone Sign)»** ساخته است!",
+        "افتراق کلیدی از مننژیوم CPA: شوانوم روی محور IAC متمرکز است، IAC را گشاد می‌کند و اغلب بدون Dural Tail است؛ مننژیوم پهن‌قاعده با Dural Tail و زاویه منفرجه است",
+        "تله ژنتیکی بورد: شوانوم وستیبولار **دوطرفه** پاتوگنومونیک **نوروفیبروماتوز نوع ۲ (NF2 — کروموزوم ۲۲، ژن مرلین)** است!"
+      ],
+      "report": {
+        "modality": "MRI T1+C Axial (زاویه پل-مخچه‌ای)",
+        "compartment": "خارج‌محوری — زاویه پل-مخچه‌ای (CPA) و مجرای IAC چپ",
+        "signal": "گیرش کنتراست شدید ناهمگن (با جزء کیستیک کوچک مرکزی)",
+        "massEffect": "فشردگی ملایم روی پونز و پایه مخچه‌ای میانی چپ",
+        "territory": "عصب هشتم جمجمه‌ای (شاخه وستیبولار CN VIII)"
+      },
+      "diagnosis": "شوانوم وستیبولار (Acoustic Neuroma — Ice-Cream Cone Sign)",
+      "pitfall": "در هر بیمار با کاهش شنوایی حسی-عصبی یک‌طرفه یا وزوز یک‌طرفه، انجام **MRI اختصاصی IAC با کنتراست** الزامی است — CT ساده به دلیل آرتیفکت استخوان پتروس شوانوم‌های کوچک را از دست می‌دهد!",
+      "roi": {
+        "x": 69,
+        "y": 55,
+        "r": 13,
+        "label": "شوانوم CPA چپ (Ice-Cream Cone Sign)"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor",
+        "dis-vertigo"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_schwannoma_cpa.jpg",
+      "dimensions": "532x576",
+      "attribution": {
+        "author": "see above",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AAcoustic_schwannoma.jpg",
+        "wikimediaTitle": "File:Acoustic schwannoma.jpg"
+      }
+    },
+    {
+      "id": "img-mri-butterfly-gbm",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "گلیوبلاستومای پروانه‌ای جسم پینه‌ای (Butterfly Glioblastoma — Splenium)",
+      "modality": "MRI T1+C Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-gbm-t1c",
+      "clinicalPrompt": "مرد ۶۲ ساله با اختلال شناختی سریع، الکسیا بدون آغرافیا و افت عملکرد اجرایی طی ۶ هفته.",
+      "findings": [
+        "توده بزرگ با گیرش کنتراست حلقوی ضخیم و نامنظم و نکروز وسیع مرکزی که از طریق **اسپلنیوم جسم پینه‌ای (Corpus Callosum)** به هر دو نیمکره گسترش یافته است (**نمای پروانه‌ای / Butterfly Lesion**)!",
+        "فهرست کوتاه بورد «توده‌هایی که از جسم پینه‌ای عبور می‌کنند»: ۱) **گلیوبلاستوما (GBM)** (حلقوی و نکروتیک)، ۲) **لنفوم اولیه مغز (PCNSL)** (همگن بدون نکروز)، ۳) به ندرت توکسوپلاسموزیس یا MS تومفکتیو!",
+        "درمان استاندارد GBM: رزکسیون ایمن حداکثری (یا بیوپسی در درگیری دوطرفه غیرقابل رزکسیون) + پرتودرمانی + تموزولوماید (پروتکل Stupp — وضعیت متیلاسیون MGMT تعیین‌کننده پاسخ)"
+      ],
+      "report": {
+        "modality": "MRI T1+C Axial",
+        "compartment": "داخل‌محوری — اسپلنیوم جسم پینه‌ای و هر دو نیمکره خلفی",
+        "signal": "گیرش حلقوی نامنظم (Ring-Enhancing) با نکروز مرکزی گسترده",
+        "massEffect": "شدید روی شاخ‌های خلفی بطن‌های جانبی",
+        "territory": "تومور گلیال گرید ۴ WHO (IDH-wildtype Glioblastoma)"
+      },
+      "diagnosis": "گلیوبلاستومای پروانه‌ای جسم پینه‌ای (Butterfly Glioblastoma)",
+      "pitfall": "تله افتراقی حیاتی: اگر توده پروانه‌ای جسم پینه‌ای **همگن و بدون نکروز** بود به PCNSL شک کنید و کورتون پیش از بیوپسی ندهید؛ ولی در این تصویر نکروز مرکزی شدید و دیواره ضخیم نامنظم کلاسیک GBM است!",
+      "roi": {
+        "x": 53,
+        "y": 64,
+        "r": 16,
+        "label": "گلیوبلاستومای پروانه‌ای جسم پینه‌ای"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_butterfly_gbm.jpg",
+      "dimensions": "650x650",
+      "attribution": {
+        "author": "John H. Rossmeisl, Kemba Clapp, Theresa E. Pancotto, Samantha Emch, John L. Robertson, Waldemar Debinski",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AButterfly_glioblastoma.png",
+        "wikimediaTitle": "File:Butterfly glioblastoma.png"
+      }
+    },
+    {
+      "id": "img-mri-mts-hippo",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "اسکلروز تمپورال مدیال (Mesial Temporal Sclerosis — MTS ظریف در Coronal T2)",
+      "modality": "MRI T2 Coronal",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-hsv-encephalitis",
+      "clinicalPrompt": "جوان ۲۶ ساله با سابقه تشنج تب‌دار طولانی در کودکی و اکنون تشنج‌های کانونی مقاوم به ۲ دارو همراه با اورای بالا آمدن حس از معده (Epigastric Rising) و دژاوو!",
+      "findings": [
+        "یافته بسیار ظریف در برش کرونال عمود بر هیپوکامپ: **آتروفی (کوچک‌شدن حجم)** و افزایش ظریف سیگنال هیپوکامپ راست همراه با از بین رفتن معماری داخلی و **گشادی جبرانی شاخ تمپورال راست**!",
+        "شایع‌ترین علت صرع لوب تمپورال مقاوم به دارو (Drug-Resistant TLE) در بالغین!",
+        "خبر طلایی درمانی: جراحی رزکسیون لوب تمپورال قدامی / آمیگدالوهیپوکامپکتومی در MTS مقاوم به دارو **۶۰ تا ۸۰٪ آزادی کامل از تشنج** می‌دهد (برتر از ادامه دارودرمانی تنها!)"
+      ],
+      "report": {
+        "modality": "MRI T2 Coronal (پروتکل اختصاصی صرع)",
+        "compartment": "هیپوکامپ راست (لوب تمپورال مدیال)",
+        "signal": "آتروفی + هیپرسیگنال ظریف هیپوکامپ راست با گشادی شاخ تمپورال مجاور",
+        "massEffect": "کاهش حجم (آتروفی) — بدون اثر توده‌ای",
+        "territory": "اسکلروز هیپوکامپ (Mesial Temporal Sclerosis)"
+      },
+      "diagnosis": "اسکلروز تمپورال مدیال راست (Mesial Temporal Sclerosis — MTS)",
+      "pitfall": "تله بسیار رایج: در MRI استاندارد مغز با برش‌های ضخیم آگزیال، MTS به‌راحتی «طبیعی» گزارش می‌شود! تشخیص آن نیازمند **برش‌های نازک Coronal Oblique FLAIR/T2 عمود بر محور هیپوکامپ (پروتکل صرع)** و مقایسه دقیق دو طرف است.",
+      "roi": {
+        "x": 34,
+        "y": 69,
+        "r": 11,
+        "label": "آتروفی هیپوکامپ راست + گشادی شاخ تمپورال (MTS)"
+      },
+      "relatedDiseases": [
+        "dis-epilepsy-focal"
+      ],
+      "refs": [
+        "ref-ilae",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_mts_hippo.jpg",
+      "dimensions": "296x320",
+      "attribution": {
+        "author": "Mercurytoxic",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMesial_Temporal_Sclerosis.jpg",
+        "wikimediaTitle": "File:Mesial Temporal Sclerosis.jpg"
+      }
+    },
+    {
+      "id": "img-mri-spinal-epi-abscess",
+      "category": "spine",
+      "categoryLabel": "نخاع و ستون فقرات",
+      "hardCase": true,
+      "title": "آبسه اپیدورال خلفی نخاع کمری با سندرم دم اسب (Spinal Epidural Abscess)",
+      "modality": "MRI T2 Sagittal (Lumbar)",
+      "windowPreset": "brain",
+      "compareWith": "img-spine-lumbar-stenosis",
+      "clinicalPrompt": "مرد ۵۴ ساله دیابتی با سابقه مصرف تزریقی، تب ۳۸.۹، کمردرد شدید موضعی، بی‌حسی ناحیه زین اسب (Saddle Anesthesia) و احتباس ادرار حاد!",
+      "findings": [
+        "مجموعه چرکی غیرطبیعی در فضای **اپیدورال خلفی کانال نخاع کمری** که به‌شدت روی ساک تکال و ریشه‌های دم اسب (Cauda Equina) فشار می‌آورد!",
+        "شایع‌ترین عامل میکروبی: **استافیلوکوک اورئوس (شامل MRSA)** ← شروع فوری آنتی‌بیوتیک تجربی (ونکومایسین + سفپیم/سفتریاکسون) پس از کشت خون!",
+        "قانون نجات‌بخش اورژانس: وجود نقص عصبی / سندرم دم اسب = **اورژانس جراحی دکمپرسیون فوری (<۲۴ ساعت)** + **منع مطلق پونکسیون کمری (LP)** از روی ناحیه عفونی (خطر کاشت مننژیت چرکی!)"
+      ],
+      "report": {
+        "modality": "MRI T2 Sagittal ستون فقرات کمری",
+        "compartment": "فضای اپیدورال خلفی کمری",
+        "signal": "مجموعه مایع/چرکی اپیدورال با انسداد ستون CSF و فشردگی شدید ریشه‌های دم اسب",
+        "massEffect": "فشردگی بحرانی ساک تکال (سندرم دم اسب حاد)",
+        "territory": "عفونت چرکی فضای اپیدورال نخاع (معمولاً S. aureus)"
+      },
+      "diagnosis": "آبسه اپیدورال نخاع کمری همراه با سندرم دم اسب (Spinal Epidural Abscess)",
+      "pitfall": "تله مرگبار کشیک: تریاد کلاسیک «تب + کمردرد + نقص عصبی» فقط در ~۱۰–۱۵٪ بیماران در مراجعه اول کامل است! و **هرگز** در بیمار مشکوک به آبسه اپیدورال کمری LP انجام ندهید — MRI فوری کل ستون فقرات با کنتراست + ونکومایسین + جراحی اعصاب!",
+      "roi": {
+        "x": 55,
+        "y": 49,
+        "r": 14,
+        "label": "آبسه اپیدورال خلفی + فشردگی دم اسب"
+      },
+      "relatedDiseases": [
+        "dis-cord-comp",
+        "dis-abscess"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_spinal_epi_abscess.jpg",
+      "dimensions": "799x920",
+      "attribution": {
+        "author": "Jing Jing Chan and Jen Jen Oh",
+        "license": "CC BY 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AMRI_of_the_lumbar_spine_with_abscess_in_the_posterior_epidural_space%2C_causing_cauda_equina_syndrome.jpg",
+        "wikimediaTitle": "File:MRI of the lumbar spine with abscess in the posterior epidural space, causing cauda equina syndrome.jpg"
+      }
+    },
+    {
+      "id": "img-mri-hepatocerebral-t1",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "دژنراسیون هپاتوسربرال اکتسابی — هیپرسیگنال T1 دوطرفه گلوبوس پالیدوس (منگنز!)",
+      "modality": "MRI T1 Axial (بدون کنتراست)",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-cpm-trident",
+      "clinicalPrompt": "مرد ۵۸ ساله با سیروز کبدی و شانت پورتوسیستمیک؛ دچار پارکینسونیسم، آتاکسی، آستریکسی و کندی شناخت شده است. این MRI **بدون تزریق کنتراست** است!",
+      "findings": [
+        "افزایش سیگنال شدید و کاملاً متقارن در هر دو **گلوبوس پالیدوس (Bilateral Globus Pallidus T1 Hyperintensity)** در سکانس T1 بدون کنتراست (با T2 طبیعی)!",
+        "علت پاتوفیزیولوژیک کلاسیک بورد: **رسوب منگنز (Manganese Deposition)** ناشی از عبور خون پورت از کبد (سیروز، تغذیه طولانی‌مدت TPN، یا مسمومیت جوشکاری)!",
+        "فهرست طلایی «چیزهایی که در T1 بدون کنتراست سفید هستند»: چربی، خون مت‌هموگلوبین، ملانین، پروتئین غلیظ، کلسیم و **فلزات پارامغناطیس (منگنز/مس)**!"
+      ],
+      "report": {
+        "modality": "MRI T1 Axial بدون کنتراست",
+        "compartment": "هسته‌های گلوبوس پالیدوس دوطرفه (عقده‌های قاعده‌ای)",
+        "signal": "هیپرسیگنال متقارن درخشان در T1 بدون کنتراست",
+        "massEffect": "ندارد",
+        "territory": "رسوب منگنز ناشی از نارسایی کبدی / شانت پورتوسیستمیک"
+      },
+      "diagnosis": "دژنراسیون هپاتوسربرال اکتسابی (رسوب منگنز در گلوبوس پالیدوس)",
+      "pitfall": "تله رایج: اشتباه گرفتن سفیدی T1 دوطرفه با خونریزی حاد عقده‌های قاعده‌ای یا کلسیفیکاسیون فاهر (Fahr)! در CT بدون کنتراست طبیعی است و در T1 سفید و در T2 نرمال است — کلید اصلی «منگنز در سیروز/TPN» است!",
+      "roi": {
+        "x": 40,
+        "y": 55,
+        "r": 12,
+        "label": "هیپرسیگنال T1 گلوبوس پالیدوس (رسوب منگنز)"
+      },
+      "relatedDiseases": [
+        "dis-metabolic-enceph",
+        "dis-parkinson"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_hepatocerebral_t1.jpg",
+      "dimensions": "823x920",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3AAcquired_hepatocerebral_degeneration_MRI_T1ax.png",
+        "wikimediaTitle": "File:Acquired hepatocerebral degeneration MRI T1ax.png"
+      }
+    },
+    {
+      "id": "img-mri-cjd-dwi",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "بیماری کروتزفلد-جاکوب (sCJD) — نمای نوار قشری در DWI (Cortical Ribboning!)",
+      "modality": "MRI DWI Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-dwi-acute-stroke",
+      "clinicalPrompt": "مرد ۶۳ ساله با **دمانس فوق‌سریع طی ۱۰ هفته**، میوکلونوس تشدیدشونده با صدای ناگهانی (Startle Myoclonus)، آتاکسی مخچه‌ای و EEG با کمپلکس‌های تیز دوره‌ای ۱Hz!",
+      "findings": [
+        "محدودیت انتشار خطی درخشان در امتداد نوار قشر مغز (**`Cortical Ribboning`**) در نواحی پاریتو-اکسیپیتال و فرونتوتمپورال (غیرمنطبق بر یک قلمرو شریانی منفرد!) ± درگیری استریاتوم/تالاموس!",
+        "حساس‌ترین روش تصویربرداری (>۹۲٪ حساسیت و اختصاصیت) برای تشخیص sCJD سکانس **DWI/ADC** است — اغلب در FLAIR بسیار ظریف بوده و فقط در DWI آشکار می‌شود!",
+        "تأیید طلایی آزمایشگاهی CSF: تست **RT-QuIC** (اختصاصیت ~۹۹–۱۰۰٪! بسیار دقیق‌تر از 14-3-3 و Tau) + رد علل قابل درمان دمانس سریع (آنسفالیت خودایمنی!)"
+      ],
+      "report": {
+        "modality": "MRI DWI Axial",
+        "compartment": "قشر مغز (نوار قشری پاریتو-اکسیپیتال و اینسولا — نامتقارن)",
+        "signal": "هیپرسیگنال نواری درخشان در DWI (`Cortical Ribboning`) بدون اثر فشاری",
+        "massEffect": "ندارد (برخلاف سکته حاد با ادم)",
+        "territory": "بیماری پریونی (Sporadic Creutzfeldt-Jakob Disease — sCJD)"
+      },
+      "diagnosis": "بیماری کروتزفلد-جاکوب اسپورادیک (sCJD — Cortical Ribboning)",
+      "pitfall": "دو تله حیاتی بورد: ۱) ممکن است با سکته قشری حاد یا تشنج مداوم (`Status Epilepticus`) اشتباه شود — ولی در sCJD از قلمرو شریانی عبور می‌کند و فاقد تورم ژیروس است؛ ۲) پیش از قطعی کردن برچسب کشنده CJD، همیشه علل **قابل درمان** دمانس سریع (آنسفالیت خودایمنی Anti-LGI1/NMDA، تیروئید/هاشیموتو، B12، سیفلیس) را رد و RT-QuIC چک کنید!",
+      "roi": {
+        "x": 29,
+        "y": 74,
+        "r": 16,
+        "label": "نوار قشری درخشان در DWI (Cortical Ribboning — sCJD)"
+      },
+      "relatedDiseases": [
+        "dis-alzheimer",
+        "dis-encephalitis"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_cjd_dwi.jpg",
+      "dimensions": "316x344",
+      "attribution": {
+        "author": "Dr Laughlin Dawes",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ADwi_ax_2.jpg",
+        "wikimediaTitle": "File:Dwi ax 2.jpg"
+      }
+    },
+    {
+      "id": "img-mri-toxoplasmosis",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "توکسوپلاسموزیس مغزی در HIV — افتراق طلایی از لنفوم PCNSL (Cerebral Toxoplasmosis)",
+      "modality": "MRI T1+C Coronal",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-pcnsl-t1c",
+      "clinicalPrompt": "بیمار ۳۶ ساله HIV+ با CD4=35، تب خفیف، سردرد و تشنج کانونی؛ مهم‌ترین افتراق در HIV با CD4<100 کدام است و چه زمانی بیوپسی می‌کنیم؟",
+      "findings": [
+        "ضایعه ندولار/حلقوی تقویت‌شونده در محل اتصال ماده خاکستری-سفید فرونتال راست (یا عقده‌های قاعده‌ای) با هاله ادم وازوژنیک (`Eccentric Target Sign` کلاسیک)",
+        "افتراق حیاتی در بیمار HIV+ (CD4<100): **توکسوپلاسموزیس مغزی** vs **لنفوم اولیه CNS مرتبط با EBV (`PCNSL`)**!",
+        "قانون طلایی کلینیک: در بیمار HIV+ با سرولوژی Toxo IgG+ و ضایعات متعدد/قشری، **ابتدا ۲ هفته درمان تجربی پیریمتامین + سولفادیازین (یا TMP-SMX)** می‌دهیم؛ اگر پس از ۱۴ روز کوچک نشد ← بیوپسی استریوتاکتیک برای PCNSL!"
+      ],
+      "report": {
+        "modality": "MRI T1+C Coronal",
+        "compartment": "اتصال قشر-ماده سفید لوب فرونتال راست",
+        "signal": "گیرش کنتراست کانونی (ندولار/حلقوی) با ادم اطراف",
+        "massEffect": "خفیف تا متوسط",
+        "territory": "عفونت فرصت‌طلب Toxoplasma gondii در CD4<100"
+      },
+      "diagnosis": "توکسوپلاسموزیس مغزی (Cerebral Toxoplasmosis — HIV/CD4<100)",
+      "pitfall": "تله بورد: در HIV+ با ضایعه تقویت‌شونده مغز فوری بیوپسی نکنید (مگر تک‌ضایعه اطراف بطن + Toxo IgG منفی + EBV PCR مثبت یا عدم پاسخ پس از ۲ هفته درمان تجربی ضدتوکسو)! همچنین در Thallium SPECT/PET توکسو سرد و PCNSL داغ است.",
+      "roi": {
+        "x": 42,
+        "y": 40,
+        "r": 11,
+        "label": "ضایعه تقویت‌شونده توکسوپلاسموزیس (HIV+)"
+      },
+      "relatedDiseases": [
+        "dis-abscess",
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_toxoplasmosis.jpg",
+      "dimensions": "672x894",
+      "attribution": {
+        "author": "Jmarchn",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ABrainToxoplasmosis_MRI_11_23.png",
+        "wikimediaTitle": "File:BrainToxoplasmosis MRI 11 23.png"
+      }
+    },
+    {
+      "id": "img-mri-ependymoma-t2",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "اپندیموم بطن چهارم — تومور پلاستیک حفره خلفی (Fourth Ventricular Ependymoma)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-medulloblastoma-dwi",
+      "clinicalPrompt": "کودک ۹ ساله با سردرد صبحگاهی، استفراغ جهنده، دیپلوپی و آتاکسی تنه‌ای پیشرونده طی ۲ ماه؛ چگونه این توده حفره خلفی را از مدولوبلاستوما افتراق می‌دهید؟",
+      "findings": [
+        "توده هتروژن هایپرایتنس در بطن چهارم با رشد شکل‌پذیر (Plastic Growth)",
+        "خروج توده مانند خمیر از فورامن لوشکا (Foramen of Luschka) به سمت زاویه پلی-مخچه‌ای",
+        "فشرده‌سازی قدامی پونز و نبود محدودیت شدید دیفیوژن (برخلاف مدولوبلاستومای پُرسلول)"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "بطن چهارم و فورامن لوشکا",
+        "signal": "هایپرایتنس هتروژن T2",
+        "massEffect": "فشردگی پونز و انسداد خروج CSF",
+        "territory": "تومور اپندیمال حفره خلفی"
+      },
+      "diagnosis": "اپندیموم بطن چهارم (Fourth Ventricular Ependymoma — Plastic Tumor)",
+      "pitfall": "کلید طلایی افتراق در بورد: اپندیموم «تومور پلاستیک» است که از فورامن‌های لوشکا و ماژندی بیرون می‌خزد و اغلب کلسیفیکاسیون دارد؛ مدولوبلاستوما در DWI بسیار روشن (ADC پایین) است.",
+      "roi": {
+        "x": 51,
+        "y": 62,
+        "r": 14,
+        "label": "اپندیموم بطن چهارم با اکستنشن لوشکا"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_ependymoma_t2.jpg",
+      "dimensions": "638x760",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ependymom_ax_T2.jpg",
+        "wikimediaTitle": "File:Ependymom ax T2.jpg"
+      }
+    },
+    {
+      "id": "img-mri-ependymoma-flair",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "اپندیموم بطن چهارم با اکستنشن فورامن ماژندی و هیدروسفالی (MRI FLAIR Sagittal)",
+      "modality": "MRI FLAIR Sagittal",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-chiari1-sag",
+      "clinicalPrompt": "نمای میدساژیتال FLAIR همان بیمار با سردرد صبحگاهی و پاپیل‌ادم؛ بررسی مسیر خروج CSF و گستردگی تومور به سمت سیسترنا ماگنا.",
+      "findings": [
+        "پرشدگی کامل بطن چهارم و خزیدن توده از فورامن ماژندی به سمت پایین (Cisterna Magna)",
+        "اتساع شدید بطن جانبی و بطن سوم (هیدروسفالی انسدادی سه‌بطنی)",
+        "جابه‌جایی قدامی پونز و مدولا بدون منشأ مستقیم از پارانشیم ساقه مغز"
+      ],
+      "report": {
+        "modality": "MRI FLAIR Sagittal",
+        "compartment": "بطن چهارم، فورامن ماژندی و سیسترنا ماگنا",
+        "signal": "هایپرایتنس FLAIR",
+        "massEffect": "هیدروسفالی انسدادی شدید",
+        "territory": "اپندیموم حفره خلفی"
+      },
+      "diagnosis": "اپندیموم بطن چهارم با اکستنشن فورامن ماژندی و هیدروسفالی انسدادی",
+      "pitfall": "پیش از جراحی اپندیموم حفره خلفی حتماً MRI کامل ستون فقرات با کنتراست انجام دهید تا Drop Metastasis در مایع مغزی-نخاعی رد شود؛ رزکسیون کامل جراحی مهم‌ترین عامل پیش‌آگهی است.",
+      "roi": {
+        "x": 58,
+        "y": 66,
+        "r": 14,
+        "label": "اکستنشن توده از فورامن ماژندی"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_ependymoma_flair.jpg",
+      "dimensions": "727x760",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ependymom_sag_FLAIR.jpg",
+        "wikimediaTitle": "File:Ependymom sag FLAIR.jpg"
+      }
+    },
+    {
+      "id": "img-mri-pml-flair",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "لکوآنسفالوپاتی چندکانونی پیشرونده — PML ناشی از ویروس JC (MRI FLAIR Axial)",
+      "modality": "MRI FLAIR Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-ms-flair",
+      "clinicalPrompt": "بیمار ۴۲ ساله مبتلا به MS تحت درمان ۲ ساله با ناتالیزوماب (JCV Ab+ بالا) با همی‌پارزی پیشرونده تحت‌حاد، همی‌آینوپی و اختلال شناختی طی ۳ هفته.",
+      "findings": [
+        "ضایعه وسیع نامتقارن هایپرایتنس FLAIR در ماده سفید زیرقشری آهیانه‌ای-پس‌سری راست با حاشیه کنگره‌ای (Scalloped)",
+        "درگیری کلاسیک فیبرهای U زیرقشری (Subcortical U-fibers) با حفظ قشر خاکستری روی آن",
+        "نبود اثر فشاری (No Mass Effect) به تناسب اندازه بزرگ ضایعه"
+      ],
+      "report": {
+        "modality": "MRI FLAIR Axial",
+        "compartment": "ماده سفید زیرقشری آهیانه‌ای-پس‌سری راست",
+        "signal": "هایپرایتنس FLAIR بدون ادم فشاری",
+        "massEffect": "فاقد اثر فشاری",
+        "territory": "دمیلیناسیون الیگودندروسیتی JC Polyomavirus"
+      },
+      "diagnosis": "لکوآنسفالوپاتی چندکانونی پیشرونده (PML — JC Polyomavirus)",
+      "pitfall": "سه نشانه طلایی PML در MRI: ۱) نامتقارن و درگیرکننده فیبرهای U زیرقشری، ۲) بدون Mass Effect، ۳) بدون تقویت کنتراست (مگر در فاز PML-IRIS). در مصرف ناتالیزوماب فوراً دارو قطع و پلاسمافرز بررسی می‌شود.",
+      "roi": {
+        "x": 36,
+        "y": 62,
+        "r": 14,
+        "label": "ضایعه زیرقشری PML بدون Mass Effect"
+      },
+      "relatedDiseases": [
+        "dis-ms",
+        "dis-encephalitis"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_pml_flair.jpg",
+      "dimensions": "760x629",
+      "attribution": {
+        "author": "NIH Image Gallery from Bethesda, Maryland, USA",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MRI_of_patient_with_PML_(32688495127).jpg",
+        "wikimediaTitle": "File:MRI of patient with PML (32688495127).jpg"
+      }
+    },
+    {
+      "id": "img-mri-pml-t2",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "PML پیشرفته دوطرفه ماده سفید زیرقشری در HIV (MRI T2 Axial)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-pml-flair",
+      "clinicalPrompt": "بیمار ۳۹ ساله مبتلا به HIV پیشرفته (CD4=45) با زوال شناختی تحت‌حاد، ضعف دوطرفه اندام‌ها و آتاکسی بدون تب؛ PCR ویروس JC در CSF مثبت است.",
+      "findings": [
+        "هایپرایتنسیتی هم‌جوش و وسیع T2 در ماده سفید عمقی و زیرقشری دوطرفه با عبور از جسم پینه‌ای",
+        "نبود اثر فشاری روی بطن‌ها و شیارهای قشری علی‌رغم وسعت شدید ضایعه",
+        "تمایز از آنسفالوپاتی HIV که بیشتر متقارنِ اطراف بطنی است و فیبرهای U را درگیر نمی‌کند"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "ماده سفید زیرقشری و عمقی دوطرفه",
+        "signal": "هایپرایتنس هم‌جوش T2",
+        "massEffect": "فاقد اثر فشاری",
+        "territory": "عفونت فرصت‌طلب JC Virus در CD4 پایین"
+      },
+      "diagnosis": "PML پیشرفته در زمینه نقص ایمنی شدید (Advanced JC-Virus PML)",
+      "pitfall": "در بیمار HIV مبتلا به PML تنها درمان مؤثر آغاز فوری ART برای بازسازی ایمنی است؛ مراقب تشدید پارادوکسیکال التهابی (PML-IRIS) با ایجاد Enhancement در هفته‌های بعد باشید.",
+      "roi": {
+        "x": 50,
+        "y": 55,
+        "r": 18,
+        "label": "درگیری هم‌جوش ماده سفید در PML پیشرفته"
+      },
+      "relatedDiseases": [
+        "dis-encephalitis"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_pml_t2.jpg",
+      "dimensions": "341x392",
+      "attribution": {
+        "author": "The copyright holder of this file allows anyone to use it for any purpose, provided that the radswiki.net is properly attributed. Derivative work is permitted.\n\n\n\n This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/3.0CC BY-SA 3.0 Creative Commons Attribution-Share Alike 3.0 truetrue \n.mw-parser-output .messagebox{margin:4px 0;width:auto;border-collapse:collapse;border:2px solid var(--border-color-progressive,#6485d1);background-color:var(--background-color-neutral-subtle,#fbfcff);color:var(--color-base,#202122);box-sizing:border-box;border-inline-start-width:8px}.mw-parser-output .messagebox.mbox-small{font-size:88%;line-height:1.25em}.mw-parser-output .mbox-warning,.mw-parser-output .mbox-speedy{border:2px solid var(--border-color-error,#b22222);background:var(--background-color-error-subtle,#ffdbdb);border-inline-start-width:8px}.mw-parser-output .mbox-serious,.mw-parser-output .mbox-delete,.mw-parser-output .mbox-stop{border:2px solid var(--border-color-error,#b22222);border-inline-start-width:8px}.mw-parser-output .mbox-issue,.mw-parser-output .mbox-content{border:2px solid #f28500;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-query,.mw-parser-output .mbox-style{border:2px solid #f4c430;background:var(--background-color-warning-subtle,#ffe);border-inline-start-width:8px}.mw-parser-output .mbox-shit{border:2px solid #960;border-inline-start-width:8px}.mw-parser-output .mbox-license{border:2px solid #88a;border-inline-start-width:initial}.mw-parser-output .mbox-legal{border:2px solid var(--border-color-notice,#666);background:var(--background-color-base,#fff);border-inline-start-width:8px}.mw-parser-output .mbox-honor{border:2px solid #ca3;background:var(--background-color-warning-subtle,#fcf4db);border-inline-start-width:8px}.mw-parser-output .mbox-growth{border:2px solid #8d4;background:var(--background-color-success-subtle,#d5fdf4);border-inline-start-width:8px}.mw-parser-output .mbox-move{border:2px solid #93c;border-inline-start-width:8px}.mw-parser-output .mbox-protection,.mw-parser-output .mbox-message{border:2px solid var(--border-color-base,#aaa);border-inline-start-width:8px}.mw-parser-output .messagebox .mbox-text{border:none;padding:0.25em 0.9em;width:100%}.mw-parser-output .messagebox .mbox-image{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0.9em;padding-inline-end:0;text-align:center}.mw-parser-output .messagebox .mbox-imageright{border:none;padding-top:2px;padding-bottom:2px;padding-inline-start:0;padding-inline-end:0.9em;text-align:center}.mw-parser-output .messagebox .mbox-empty-cell{border:none;padding:0;width:1px}.mw-parser-output .messagebox .mbox-invalid-type{text-align:center}@media(min-width:720px){.mw-parser-output .messagebox{margin:4px 10%}.mw-parser-output .messagebox.mbox-small{clear:right;float:right;margin:4px 0 4px 1em;width:238px}}body.skin--responsive .mw-parser-output table.messagebox img{max-width:none!important}This work is free and may be used by anyone for any purpose. If you wish to use this content, you do not need to request permission as long as you follow any licensing requirements mentioned on this page.\nThe Wikimedia Foundation has received an e-mail confirming that the copyright holder has approved publication under the terms mentioned on this page. This correspondence has been reviewed by a Volunteer Response Team (VRT) member and stored in our permission archive. The correspondence is available to trusted volunteers as ticket #2013052110003987.\nIf you have questions about the archived correspondence, please use the VRT noticeboard.\nTicket link: https://ticket.wikimedia.org/otrs/index.pl?Action=AgentTicketZoom&amp;TicketNumber=2013052110003987\nFind other files from the same ticket:",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Progressive_multifocal_leukoencephalopathy_002.jpg",
+        "wikimediaTitle": "File:Progressive multifocal leukoencephalopathy 002.jpg"
+      }
+    },
+    {
+      "id": "img-mri-tsc-sega",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "توبروس اسکلروزیس: آستروسیتوم سلول غول‌پیکر ساب‌اپندیمال — SEGA (MRI T1+C)",
+      "modality": "MRI T1+C Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-colloid-ax",
+      "clinicalPrompt": "نوجوان ۱۴ ساله با سابقه تشنج، لکه‌های هیپوپیگمانته Ash-leaf و آنژیوفیبرومای صورت، اکنون با سردرد پیشرونده و پاپیل‌ادم مراجعه کرده است.",
+      "findings": [
+        "توده خوش‌حدود و به‌شدت تقویت‌شونده با گادولینیوم دقیقاً در مجاورت سوراخ مونرو (Foramen of Monro)",
+        "انسداد خروج CSF و هیدروسفالی آشکار بطن‌های جانبی (شاخ‌های اکسیپیتال)",
+        "محل آناتومیک پاتوگنومونیک برای تومور SEGA در زمینه کمپلکس توبروس اسکلروزیس"
+      ],
+      "report": {
+        "modality": "MRI T1+C Axial",
+        "compartment": "دیواره بطن جانبی مجاور فورامن مونرو",
+        "signal": "تقویت کنتراست یکنواخت و شدید T1+C",
+        "massEffect": "انسداد فورامن مونرو و هیدروسفالی",
+        "territory": "کمپلکس توبروس اسکلروزیس (TSC1/TSC2)"
+      },
+      "diagnosis": "توبروس اسکلروزیس با تومور SEGA در فورامن مونرو و هیدروسفالی انسدادی",
+      "pitfall": "هر ندول ساب‌اپندیمال مجاور سوراخ مونرو در بیمار TSC که رشد پیشرونده داشته باشد یا بیش از ۱ سانتی‌متر و تقویت‌شونده باشد SEGA است؛ مهارکننده mTOR (اورولیموس) می‌تواند تومور را کوچک کند!",
+      "roi": {
+        "x": 49,
+        "y": 39,
+        "r": 12,
+        "label": "توده تقویت‌شونده SEGA در فورامن مونرو"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor",
+        "dis-epilepsy-focal"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_tsc_sega.jpg",
+      "dimensions": "387x512",
+      "attribution": {
+        "author": "The Armed Forces Institute of Pathology",
+        "license": "Public domain",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:MRI_of_brain_with_sub-ependymal_giant_cell_astrocytoma.jpg",
+        "wikimediaTitle": "File:MRI of brain with sub-ependymal giant cell astrocytoma.jpg"
+      }
+    },
+    {
+      "id": "img-mri-tsc-sag",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "توبروس اسکلروزیس: توبرهای قشری و ندول‌های ساب‌اپندیمال (MRI T2 Sagittal)",
+      "modality": "MRI T2 Sagittal",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-tsc-sega",
+      "clinicalPrompt": "شیرخوار یک‌ساله با اسپاسم اینفنتایل (سندرم وست) و هیپس‌آریتمی در EEG؛ کدام داروی ضدصرع درمان خط اول این سندرم در زمینه TSC است؟",
+      "findings": [
+        "مناطق پهن‌شدگی ژیروس و افزایش سیگنال قشری-زیرقشری (Cortical/Subcortical Tubers)",
+        "برجستگی‌های ندولار در دیواره اپندیمال بطن جانبی (نمای Candle-Guttering)",
+        "خطوط مهاجرت شعاعی ماده سفید از دیواره بطن به سمت قشر"
+      ],
+      "report": {
+        "modality": "MRI T2 Sagittal",
+        "compartment": "قشر فرونتال-پاریتال و دیواره بطن جانبی",
+        "signal": "توبرهای قشری T2 روشن و ندول ساب‌اپندیمال",
+        "massEffect": "ندارد",
+        "territory": "توبروس اسکلروزیس (TSC)"
+      },
+      "diagnosis": "توبروس اسکلروزیس — توبرهای قشری و ندول‌های ساب‌اپندیمال (TSC)",
+      "pitfall": "درمان خط اول اسپاسم اینفنتایل (سندرم وست) ناشی از توبروس اسکلروزیس **ویگاباترین (Vigabatrin)** است؛ و برای کنترل SEGA و تشنج مقاوم، مهارکننده mTOR (اورولیموس) اندیکاسیون دارد.",
+      "roi": {
+        "x": 52,
+        "y": 32,
+        "r": 15,
+        "label": "توبرهای قشری و ندول ساب‌اپندیمال"
+      },
+      "relatedDiseases": [
+        "dis-epilepsy-focal",
+        "dis-epilepsy-gen"
+      ],
+      "refs": [
+        "ref-ilae",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_tsc_sag.jpg",
+      "dimensions": "656x760",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tuberoese_Sklerose_1J_T2_sagttal.png",
+        "wikimediaTitle": "File:Tuberoese Sklerose 1J T2 sagttal.png"
+      }
+    },
+    {
+      "id": "img-ct-schizencephaly",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "شیزنسفالی لب‌باز — Open-Lip Schizencephaly (CT Axial)",
+      "modality": "CT Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-normal-ct-head",
+      "clinicalPrompt": "جوان ۱۹ ساله با همی‌پارزی اسپاستیک مادرزادی سمت راست و تشنج‌های فوکال مقاوم به دو داروی ضدصرع؛ تفاوت کلیدی این شکاف با کیست پورانسفالیک چیست؟",
+      "findings": [
+        "شکاف وسیع تمام‌ضخامت پر از مایع CSF از سطح پیال قشر تا بطن جانبی چپ (Open-Lip Cleft)",
+        "آستر شدن لبه‌های شکاف توسط ماده خاکستری دیسپلاستیک (پلیمیکروژیریا)",
+        "ارتباط مستقیم فضای ساب‌آراکنوئید با سیستم بطنی (اغلب همراه نبود سپتوم پلوسیدوم)"
+      ],
+      "report": {
+        "modality": "CT Axial",
+        "compartment": "نیمکره چپ از قشر تا بطن جانبی",
+        "signal": "شکاف هم‌دانسیته با CSF با حاشیه ماده خاکستری",
+        "massEffect": "فاقد اثر فشاری (ناهنجاری تکاملی)",
+        "territory": "ناهنجاری مهاجرت نورونی"
+      },
+      "diagnosis": "شیزنسفالی لب‌باز (Open-Lip Schizencephaly)",
+      "pitfall": "کلید افتراق طلایی شیزنسفالی از کیست پورانسفالیک: لبه‌های شکاف شیزنسفالی با **ماده خاکستری (Gray Matter)** پوشیده شده‌اند، اما دیواره کیست پورانسفالیک از ماده سفید گلیوتیک تشکیل شده است.",
+      "roi": {
+        "x": 68,
+        "y": 54,
+        "r": 18,
+        "label": "شکاف Open-Lip متصل به بطن جانبی"
+      },
+      "relatedDiseases": [
+        "dis-epilepsy-focal"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-ilae"
+      ],
+      "file": "media/neuroimaging/neuro_ct_schizencephaly.jpg",
+      "dimensions": "665x760",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schizenzephalie_CT_axial.jpg",
+        "wikimediaTitle": "File:Schizenzephalie CT axial.jpg"
+      }
+    },
+    {
+      "id": "img-mri-huntington-cor",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "بیماری هانتینگتون — آتروفی هسته کودیت و نمای Boxcar Ventricles (MRI T1 Coronal)",
+      "modality": "MRI T1 Coronal",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-nph-evans",
+      "clinicalPrompt": "مرد ۴۶ ساله با حرکات کره‌ای پیشرونده، سقوط مکرر، تغییر خلق و دمانس؛ پدر بیمار در ۵۵ سالگی تابلوی مشابه داشت. نشانه رادیولوژیک پاتوگنومونیک چیست؟",
+      "findings": [
+        "آتروفی شدید و متقارن سر هسته‌های کودیت (Caudate Head Atrophy) دوطرفه",
+        "تخت و مقعر شدن دیواره جانبی شاخ‌های فرونتال بطن‌های جانبی",
+        "نمای پاتوگنومونیک «بطن‌های جعبه‌ای/واگنی» (Boxcar Ventricles) و افزایش نسبت بی-کودیت"
+      ],
+      "report": {
+        "modality": "MRI T1 Coronal",
+        "compartment": "استریاتوم دوطرفه (سر کودیت و پوتامن)",
+        "signal": "آتروفی ساختاری شدید با اتساع جبرانی شاخ فرونتال",
+        "massEffect": "آتروفی (Ex-vacuo)",
+        "territory": "دژنراسیون استریاتال ژن HTT (تکرار CAG)"
+      },
+      "diagnosis": "بیماری هانتینگتون (Huntington Disease — Boxcar Ventricles)",
+      "pitfall": "تکرار سه‌نوکلئوتیدی CAG بیش از ۳۹ روی کروموزوم ۴ (اتوزومال غالب با پدیده Anticipation در انتقال پدری). نمای Boxcar ناشی از محو شدن برجستگی طبیعی سر هسته کودیت در دیواره شاخ فرونتال است.",
+      "roi": {
+        "x": 50,
+        "y": 42,
+        "r": 14,
+        "label": "آتروفی سر کودیت و نمای Boxcar Ventricles"
+      },
+      "relatedDiseases": [
+        "dis-huntington"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_huntington_cor.jpg",
+      "dimensions": "608x760",
+      "attribution": {
+        "author": "Frank Gaillard",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huntington.jpg",
+        "wikimediaTitle": "File:Huntington.jpg"
+      }
+    },
+    {
+      "id": "img-mri-subdural-empyema",
+      "category": "infection",
+      "categoryLabel": "عفونت، متابولیک، دژنراتیو و MS",
+      "hardCase": true,
+      "title": "آمپیم ساب‌دورال حاد با تقویت حاشیه‌ای — اورژانس جراحی مغز و اعصاب (MRI T1+C Coronal)",
+      "modality": "MRI T1+C Coronal",
+      "windowPreset": "brain",
+      "compareWith": "img-ct-chronic-sdh-bilat",
+      "clinicalPrompt": "مرد ۲۸ ساله با سابقه سینوزیت فرونتال چرکی ۲ هفته قبل، اکنون با تب ۳۹.۵، سردرد شدید، تشنج فوکال دست راست و افت هوشیاری؛ آیا انجام LP مجاز است؟",
+      "findings": [
+        "تجمع هلالی‌شکل خارج‌محوری (Crescentic Extra-axial Collection) در فضای ساب‌دورال چپ و روی تنتوریوم",
+        "تقویت حاشیه‌ای واضح و ضخیم مننژال (Thick Rim Enhancement) پس از تزریق گادولینیوم",
+        "ادم نیمکره زیرین و شیفت خط وسط به سمت راست"
+      ],
+      "report": {
+        "modality": "MRI T1+C Coronal",
+        "compartment": "فضای ساب‌دورال محدب و تنتوریال چپ",
+        "signal": "مجموعه هیپوایتنس با تقویت حاشیه‌ای ضخیم",
+        "massEffect": "ادم نیمکره و شیفت خط وسط",
+        "territory": "عفونت چرکی ساب‌دورال ثانویه به سینوزیت"
+      },
+      "diagnosis": "آمپیم ساب‌دورال حاد (Subdural Empyema — اورژانس نوروسرجری)",
+      "pitfall": "آمپیم ساب‌دورال یک اورژانس مرگبار نوروسرجری است! پونکسیون کمری (LP) به‌شدت ممنوع است (خطر هرنیاسیون!) و باید فوراً آنتی‌بیوتیک وسیع‌الطیف (وانکومایسین+سفترایاکسون+مترونیدازول) و تخلیه جراحی اورژانسی انجام شود.",
+      "roi": {
+        "x": 66,
+        "y": 46,
+        "r": 16,
+        "label": "تجمع هلالی ساب‌دورال با Rim Enhancement"
+      },
+      "relatedDiseases": [
+        "dis-abscess",
+        "dis-meningitis"
+      ],
+      "refs": [
+        "ref-idsa-men",
+        "ref-harrison"
+      ],
+      "file": "media/neuroimaging/neuro_mri_subdural_empyema.jpg",
+      "dimensions": "760x710",
+      "attribution": {
+        "author": "Frank Gaillard",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Subdural-empyema.jpg",
+        "wikimediaTitle": "File:Subdural-empyema.jpg"
+      }
+    },
+    {
+      "id": "img-mri-clival-chordoma",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "کوردوم کلیووس — علامت انگشت شست پونز (Clival Chordoma — MRI T2 Axial)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-schwannoma-cpa",
+      "clinicalPrompt": "مرد ۵۳ ساله با دوبینی افقی پیشرونده (فلج عصب ششم جمجمه‌ای دوطرفه) و سردرد عمقی پس‌چشمی؛ چگونه آن را از کندروسارکوم قاعده جمجمه افتراق می‌دهید؟",
+      "findings": [
+        "توده بزرگ خط وسط در کلیووس با سیگنال به‌شدت هایپرایتنس در T2 (غنی از موسین و سلول‌های فیزالیفروس)",
+        "تخریب استخوانی کلیووس و پرکردن سینوس اسفنوئید",
+        "فرورفتگی قدامی پونز و ساقه مغز — نمای کلاسیک Thumb Sign"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "کلیووس خط وسط و سینوس اسفنوئید",
+        "signal": "بسیار هایپرایتنس T2",
+        "massEffect": "فشردگی قدامی پونز (Thumb Sign)",
+        "territory": "بقایای نوتوکورد جنینی"
+      },
+      "diagnosis": "کوردوم کلیووس (Clival Chordoma — Midline Skull Base)",
+      "pitfall": "افتراق بورد بین کوردوم و کندروسارکوم: هر دو در T2 به‌شدت روشن هستند، اما **کوردوم در خط وسط (Midline Clivus)** است و **کندروسارکوم خارج خط وسط (Off-midline در فیسور پترو-اکسیپیتال)**!",
+      "roi": {
+        "x": 51,
+        "y": 46,
+        "r": 16,
+        "label": "توده خط وسط کلیووس با سیگنال T2 بسیار بالا"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_clival_chordoma.jpg",
+      "dimensions": "654x638",
+      "attribution": {
+        "author": "Hassan S, Abdullah JM, Wan Din SJ, Idris Z",
+        "license": "CC BY 2.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chordoma.JPG",
+        "wikimediaTitle": "File:Chordoma.JPG"
+      }
+    },
+    {
+      "id": "img-mri-oligo-flair",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "گلیوم درجه پایین / الیگودندروگلیومای تمپورال راست (MRI FLAIR Axial)",
+      "modality": "MRI FLAIR Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-oligo-t2",
+      "clinicalPrompt": "مرد ۳۸ ساله با اولین تشنج تونیک-کلونیک ژنرالیزه و حملات مکرر دژاوو طی ۶ ماه؛ سکانس FLAIR را با جفت T2 برای بررسی نشانه T2-FLAIR Mismatch مقایسه کنید.",
+      "findings": [
+        "توده قشری-زیرقشری خوش‌حدود در لوب تمپورال راست با حاشیه باریک هایپرایتنس FLAIR",
+        "سرکوب نسبی سیگنال مرکزی توده در FLAIR در مقایسه با T2 روشن",
+        "فشردگی ملایم شاخ گیجگاهی بطن جانبی راست بدون ادم شدید یا نکروز حلقه‌ای"
+      ],
+      "report": {
+        "modality": "MRI FLAIR Axial",
+        "compartment": "لوب گیجگاهی-آهیانه‌ای راست",
+        "signal": "حاشیه روشن FLAIR با سرکوب نسبی مرکزی",
+        "massEffect": "خفیف",
+        "territory": "گلیوم درجه پایین نیمکره‌ای"
+      },
+      "diagnosis": "گلیوم درجه پایین / الیگودندروگلیومای تمپورال راست (Low-Grade Glioma)",
+      "pitfall": "در گلیوم‌های بالغین جوان با تشنج: **کلسیفیکاسیون قشری + کُدلشن 1p/19q** به نفع الیگودندروگلیوما است؛ و **T2-FLAIR Mismatch Sign** ویژگی ۱۰۰٪ اختصاصی برای آستروسیتوم IDH-mutant بدون کُدلشن 1p/19q دارد!",
+      "roi": {
+        "x": 32,
+        "y": 58,
+        "r": 14,
+        "label": "توده تمپورال راست در سکانس FLAIR"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor",
+        "dis-epilepsy-focal"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_oligo_flair.jpg",
+      "dimensions": "681x760",
+      "attribution": {
+        "author": "RadsWiki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oligodendroglioma_003.jpg",
+        "wikimediaTitle": "File:Oligodendroglioma 003.jpg"
+      }
+    },
+    {
+      "id": "img-mri-oligo-t2",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "الیگودندروگلیوما — جفت T2 محوری جهت ارزیابی Mismatch (MRI T2 Axial)",
+      "modality": "MRI T2 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-oligo-flair",
+      "clinicalPrompt": "برش هم‌تراز T2 محوری همان بیمار ۳۸ ساله با تشنج تمپورال؛ مقایسه هم‌زمان سیگنال T2 و FLAIR ابزار کلیدی نورورادیولوژی مولکولی است.",
+      "findings": [
+        "هایپرایتنسیتی همگن و روشن T2 در کل توده تمپورال راست",
+        "تفاوت آشکار با سرکوب مرکزی سیگنال روی FLAIR هم‌تراز",
+        "مرز تیز بدون ادم وازوژنیک وسیع اطراف"
+      ],
+      "report": {
+        "modality": "MRI T2 Axial",
+        "compartment": "لوب گیجگاهی راست",
+        "signal": "هایپرایتنس همگن T2",
+        "massEffect": "خفیف",
+        "territory": "گلیوم درجه پایین"
+      },
+      "diagnosis": "گلیوم درجه پایین تمپورال راست — جفت T2 جهت بررسی T2-FLAIR Mismatch",
+      "pitfall": "همیشه هنگام دیدن توده روشن همگن در T2، سکانس FLAIR را دقیقاً کنارش باز کنید: خاموش شدن مرکز در FLAIR با حاشیه روشن = T2-FLAIR Mismatch Sign!",
+      "roi": {
+        "x": 32,
+        "y": 58,
+        "r": 14,
+        "label": "سیگنال روشن همگن T2 در توده تمپورال"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_oligo_t2.jpg",
+      "dimensions": "681x760",
+      "attribution": {
+        "author": "RadsWiki",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oligodendroglioma_006.jpg",
+        "wikimediaTitle": "File:Oligodendroglioma 006.jpg"
+      }
+    },
+    {
+      "id": "img-mri-craniopharyn-t1c",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "کرانیوفارنژیومای سوپراسلار کیستیک-سالید (Craniopharyngioma — MRI T1+C)",
+      "modality": "MRI T1+C Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-pituitary",
+      "clinicalPrompt": "کودک ۱۱ ساله با کوتاهی قد، دیابت بی‌مزه مرکزی (پرادراری/پرنوشی)، سردرد و همی‌آینوپی بای‌ترمپورال؛ قانون ۹۰٪ این توده سوپراسلار چیست؟",
+      "findings": [
+        "توده لوبوله مختلط کیستیک-سالید در حوضچه سوپراسلار در مجاورت کیاسمای بینایی",
+        "تقویت حاشیه‌ای دیواره کیست‌ها و بخش جامد (Rim + Nodular Enhancement)",
+        "درگیری محور هیپوتالاموس-هیپوفیز در مجاورت حلقه ویلیس"
+      ],
+      "report": {
+        "modality": "MRI T1+C Axial",
+        "compartment": "حوضچه سوپراسلار / کیاسمای بینایی",
+        "signal": "کیستیک-سالید با تقویت حاشیه‌ای و ندولار",
+        "massEffect": "فشردگی کیاسمای بینایی",
+        "territory": "بقایای کیسه راتکه (Rathke Pouch)"
+      },
+      "diagnosis": "کرانیوفارنژیومای سوپراسلار (Adamantinomatous Craniopharyngioma)",
+      "pitfall": "قانون ۹۰٪ کرانیوفارنژیوما در بورد: ۹۰٪ کیستیک، ۹۰٪ کلسیفیه در CT، ۹۰٪ تقویت‌شونده با کنتراست! پیش از جراحی حتماً جایگزینی کورتیزول (هیدروکورتیزون) و لووتیروکسین برای پیشگیری از بحران آدرنال انجام دهید.",
+      "roi": {
+        "x": 51,
+        "y": 42,
+        "r": 12,
+        "label": "توده کیستیک-سالید سوپراسلار با Rim Enhancement"
+      },
+      "relatedDiseases": [
+        "dis-pituitary",
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-adams"
+      ],
+      "file": "media/neuroimaging/neuro_mri_craniopharyn_t1c.jpg",
+      "dimensions": "512x512",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Craniopharyngioma-t1axkm-003.jpg",
+        "wikimediaTitle": "File:Craniopharyngioma-t1axkm-003.jpg"
+      }
+    },
+    {
+      "id": "img-mri-pilocytic-optic",
+      "category": "oncology",
+      "categoryLabel": "نوروآنکولوژی و کیست‌ها",
+      "hardCase": true,
+      "title": "آستروسیتوم پیلوسیتیک مسیر بینایی/دیانسفالیک در NF1 (MRI T1 Axial)",
+      "modality": "MRI T1 Axial",
+      "windowPreset": "brain",
+      "compareWith": "img-mri-craniopharyn-t1c",
+      "clinicalPrompt": "کودک ۷ ساله مبتلا به نوروفیبروماتوز تیپ ۱ (لکه‌های کافه‌اولت و ندول لیش) با کاهش پیشرونده دید چشم چپ و سردرد صبحگاهی.",
+      "findings": [
+        "توده گرد خوش‌حدود هیپوایتنس T1 در ناحیه مسیر بینایی/دیانسفالیک چپ",
+        "انسداد خروج CSF و اتساع آشکار شاخ‌های پس‌سری بطن‌های جانبی",
+        "تطابق کامل با شایع‌ترین تومور CNS در نوروفیبروماتوز تیپ ۱ (NF1)"
+      ],
+      "report": {
+        "modality": "MRI T1 Axial",
+        "compartment": "مسیر بینایی و دیانسفال چپ",
+        "signal": "هیپوایتنس خوش‌حدود T1",
+        "massEffect": "هیدروسفالی انسدادی",
+        "territory": "تومور گلیال WHO Grade 1 مرتبط با NF1"
+      },
+      "diagnosis": "آستروسیتوم پیلوسیتیک مسیر بینایی/دیانسفالیک (Optic Pathway Glioma — NF1)",
+      "pitfall": "شایع‌ترین تومور CNS در NF1، گلیوم پیلوسیتیک مسیر بینایی است؛ در صورت پیشرفت بینایی، شیمی‌درمانی خط اول (کربوپلاتین/وین‌کریستین یا مهارکننده MEK) بر رادیوتراپی ارجح است (خطر مویامویا و تومور ثانویه با اشعه در NF1!).",
+      "roi": {
+        "x": 56,
+        "y": 52,
+        "r": 14,
+        "label": "گلیوم پیلوسیتیک دیانسفالیک/مسیر بینایی"
+      },
+      "relatedDiseases": [
+        "dis-brain-tumor"
+      ],
+      "refs": [
+        "ref-adams",
+        "ref-bradley"
+      ],
+      "file": "media/neuroimaging/neuro_mri_pilocytic_optic.jpg",
+      "dimensions": "454x512",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 3.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pilozytisches_Astrozytom_WHO_I_vom_linken_Optikus_-_MRT_-_T1_axial_-_016.jpg",
+        "wikimediaTitle": "File:Pilozytisches Astrozytom WHO I vom linken Optikus - MRT - T1 axial - 016.jpg"
+      }
+    },
+    {
+      "id": "img-ct-pituitary-postop",
+      "category": "hemorrhage",
+      "categoryLabel": "خونریزی و تروما",
+      "hardCase": true,
+      "title": "نمای پس از جراحی ترانس‌اسفنوئیدال هیپوفیز و پنوموسفالی ریز (CT Sagittal Bone)",
+      "modality": "CT Bone Window Sagittal",
+      "windowPreset": "bone",
+      "compareWith": "img-normal-ct-head",
+      "clinicalPrompt": "مرد ۵۲ ساله در روز دوم پس از جراحی آندوسکوپیک ترانس‌اسفنوئیدال هیپوفیز، با سردرد ارتوستاتیک و ترشح آبکی شفاف از بینی (رینوره CSF) مراجعه کرده است.",
+      "findings": [
+        "نقص استخوانی جراحی در دیواره قدامی-تحتانی سلا تورسیکا و سینوس اسفنوئید",
+        "حباب‌های ریز هوای داخل‌جمجمه‌ای (Pneumocephalus) بالای سلا و در سیسترن‌ها",
+        "تطابق با نشت فعال مایع مغزی-نخاعی پس از جراحی قاعده جمجمه"
+      ],
+      "report": {
+        "modality": "CT Sagittal Bone Window",
+        "compartment": "سلا تورسیکا و سینوس اسفنوئید",
+        "signal": "نقص استخوانی جراحی و کانون هوای داخل‌جمجمه‌ای",
+        "massEffect": "ندارد (خطر Tension Pneumocephalus در صورت پیشرفت)",
+        "territory": "عارضه جراحی ترانس‌اسفنوئیدال"
+      },
+      "diagnosis": "نشت مایع مغزی-نخاعی و پنوموسفالی پس از جراحی ترانس‌اسفنوئیدال هیپوفیز",
+      "pitfall": "رینوره شفاف و پنوموسفالی پس از جراحی ترانس‌اسفنوئیدال نشانه نشت فعال CSF و خطر بالای مننژیت است! تست طلایی تأیید مایع CSF، اندازه‌گیری **Beta-2 Transferrin** است و فین کردن/والسالوا اکیداً ممنوع است.",
+      "roi": {
+        "x": 55,
+        "y": 76,
+        "r": 12,
+        "label": "نقص کف سلا تورسیکا و پنوموسفالی ریز"
+      },
+      "relatedDiseases": [
+        "dis-pituitary",
+        "dis-meningitis"
+      ],
+      "refs": [
+        "ref-harrison",
+        "ref-idsa-men"
+      ],
+      "file": "media/neuroimaging/neuro_ct_pituitary_postop.jpg",
+      "dimensions": "760x605",
+      "attribution": {
+        "author": "Hellerhoff",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zn_transsphenoidaler_Hypophysektomie_52M_-_CT_sagittal_-_001.jpg",
+        "wikimediaTitle": "File:Zn transsphenoidaler Hypophysektomie 52M - CT sagittal - 001.jpg"
+      }
+    }
+  ]
+}

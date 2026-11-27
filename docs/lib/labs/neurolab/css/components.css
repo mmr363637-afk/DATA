@@ -1,0 +1,979 @@
+/* NeuroLab Studio — Clinical Components, PACS, EEG, Monitors & Feedback */
+
+/* Panels & Cards */
+.panel {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  min-width: 0;
+}
+
+.panel-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.card-interactive {
+  background: linear-gradient(160deg, rgba(16, 24, 45, 0.9), rgba(10, 16, 32, 0.92));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+  color: inherit;
+  font-family: inherit;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Badges & Pills */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: rgba(148, 163, 224, 0.1);
+  color: var(--text-1);
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.badge-accent { background: var(--accent-dim); border-color: var(--border-accent); color: var(--accent-bright); }
+.badge-cyan { background: var(--cyan-dim); border-color: rgba(34, 211, 238, 0.4); color: var(--cyan); }
+.badge-emerald { background: var(--emerald-dim); border-color: rgba(52, 211, 153, 0.4); color: var(--emerald); }
+.badge-amber { background: var(--amber-dim); border-color: rgba(251, 191, 36, 0.45); color: var(--amber); }
+.badge-rose { background: var(--rose-dim); border-color: rgba(251, 113, 133, 0.45); color: var(--rose); }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  color: var(--text-0);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--border-accent);
+  background: var(--bg-3);
+}
+
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #5268ff);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(124, 110, 255, 0.35);
+}
+
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  border-color: transparent;
+  color: #fff;
+}
+
+.btn-emerald {
+  background: linear-gradient(135deg, #059669, #0d9488);
+  border-color: transparent;
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-2);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: rgba(148, 163, 224, 0.1);
+  color: var(--text-0);
+}
+
+.btn-sm { padding: 5px 10px; font-size: 11.5px; border-radius: 8px; }
+.btn-icon { width: 34px; height: 34px; padding: 0; }
+
+/* Sub-tabs / Segmented Bars */
+.tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.tab-pill {
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--dur-fast) var(--ease);
+}
+
+.tab-pill:hover { color: var(--text-0); border-color: var(--border-strong); }
+.tab-pill.active {
+  background: var(--accent-dim);
+  border-color: var(--border-accent);
+  color: var(--text-0);
+  box-shadow: inset 0 0 0 1px rgba(124, 110, 255, 0.2);
+}
+
+/* Inputs & Chips */
+.input, .select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-1);
+  color: var(--text-0);
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.input:focus, .select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.finding-chip {
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(16, 24, 45, 0.85);
+  color: var(--text-1);
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.finding-chip:hover { border-color: var(--cyan); color: var(--text-0); }
+.finding-chip.selected {
+  background: linear-gradient(135deg, rgba(124, 110, 255, 0.28), rgba(34, 211, 238, 0.22));
+  border-color: var(--cyan);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Hero Observatory Banner */
+.hero-observatory {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-accent);
+  background:
+    radial-gradient(ellipse 65% 90% at 8% 15%, rgba(124, 110, 255, 0.24), transparent 65%),
+    radial-gradient(ellipse 55% 80% at 92% 85%, rgba(34, 211, 238, 0.16), transparent 60%),
+    linear-gradient(135deg, #0b1126 0%, #101937 55%, #0a1022 100%);
+  padding: 24px 26px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+@media (max-width: 720px) {
+  .stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.stat-tile {
+  background: rgba(5, 8, 17, 0.56);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.stat-tile .val {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-0);
+  line-height: 1.2;
+}
+
+.stat-tile .lbl {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+/* Neuro-ICU Telemetry Monitor Strip */
+.icu-monitor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: #040710;
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.65);
+}
+
+.icu-cell {
+  background: rgba(10, 18, 34, 0.9);
+  border: 1px solid rgba(148, 163, 224, 0.14);
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.icu-cell .k { font-size: 10px; color: var(--text-3); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.icu-cell .v { font-size: 18px; font-weight: 800; line-height: 1.15; }
+.icu-cell .u { font-size: 10.5px; color: var(--text-2); }
+.icu-cell.ok .v { color: var(--emerald); }
+.icu-cell.warn .v { color: var(--amber); }
+.icu-cell.crit { border-color: rgba(251, 113, 133, 0.55); background: rgba(251, 113, 133, 0.08); }
+.icu-cell.crit .v { color: var(--rose); }
+
+/* PACS Neuroimaging Viewport */
+.pacs-stage {
+  position: relative;
+  background: #020308;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  user-select: none;
+  touch-action: none;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pacs-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 760px) {
+  .pacs-compare-grid { grid-template-columns: 1fr; }
+}
+
+.pacs-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: grab;
+}
+.pacs-canvas-wrap:active { cursor: grabbing; }
+.pacs-canvas-wrap.pin-mode { cursor: crosshair; }
+
+.pacs-transform {
+  position: relative;
+  transform-origin: center center;
+  will-change: transform;
+  display: inline-block;
+}
+
+.pacs-img {
+  display: block;
+  max-width: 100%;
+  max-height: 440px;
+  object-fit: contain;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+.pacs-overlay-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.pacs-hud-tl, .pacs-hud-tr, .pacs-hud-bl {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  font-size: 11px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: rgba(4, 7, 16, 0.78);
+  border: 1px solid rgba(148, 163, 224, 0.22);
+  color: var(--cyan);
+}
+.pacs-hud-tl { top: 10px; left: 10px; }
+.pacs-hud-tr { top: 10px; right: 10px; color: var(--text-1); }
+.pacs-hud-bl { bottom: 10px; left: 10px; color: var(--amber); }
+
+.pacs-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}
+
+/* EEG & Neurophysiology Canvas Frame */
+.eeg-frame {
+  position: relative;
+  background: #040710;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.eeg-canvas {
+  display: block;
+  width: 100%;
+  height: 470px;
+  cursor: crosshair;
+}
+
+.emg-canvas {
+  display: block;
+  width: 100%;
+  height: 310px;
+}
+
+/* Time-is-Brain Live Ticker */
+.time-brain-banner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(225, 29, 72, 0.16), rgba(16, 24, 45, 0.94));
+  border: 1px solid rgba(251, 113, 133, 0.45);
+  margin-bottom: 16px;
+}
+@media (max-width: 780px) {
+  .time-brain-banner { grid-template-columns: 1fr; }
+}
+
+.neuron-counter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.neuron-stat {
+  display: flex;
+  flex-direction: column;
+}
+.neuron-stat strong { font-size: 19px; color: var(--rose); line-height: 1.15; }
+.neuron-stat span { font-size: 11px; color: var(--text-2); }
+
+/* Evidence For / Against Reasoning Matrix */
+.evidence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 640px) {
+  .evidence-grid { grid-template-columns: 1fr; }
+}
+.evidence-box {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+}
+.evidence-box.for { background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.32); }
+.evidence-box.against { background: rgba(251, 113, 133, 0.08); border: 1px solid rgba(251, 113, 133, 0.32); }
+
+/* Stepped Interactive Feedback Micro-Animations */
+@keyframes feedbackShimmer {
+  0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); border-color: var(--emerald); }
+  50% { box-shadow: 0 0 28px 4px rgba(52, 211, 153, 0.35); border-color: #6ee7b7; }
+  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); border-color: rgba(52, 211, 153, 0.45); }
+}
+
+@keyframes feedbackShake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+.feedback-correct {
+  animation: feedbackShimmer 750ms var(--ease);
+  border-color: rgba(52, 211, 153, 0.55) !important;
+  background: rgba(52, 211, 153, 0.1) !important;
+}
+
+.feedback-wrong {
+  animation: feedbackShake 420ms var(--ease);
+  border-color: rgba(251, 113, 133, 0.6) !important;
+  background: rgba(251, 113, 133, 0.1) !important;
+}
+
+.feedback-banner {
+  margin-top: 12px;
+  padding: 13px 15px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.feedback-banner.ok { background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.45); }
+.feedback-banner.warn { background: rgba(251, 191, 36, 0.1); border-color: rgba(251, 191, 36, 0.45); }
+.feedback-banner.err { background: rgba(251, 113, 133, 0.11); border-color: rgba(251, 113, 133, 0.5); }
+
+/* Modals & Command Palette */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(3, 6, 15, 0.78);
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 64px 16px 24px;
+}
+
+.modal-backdrop.open { display: flex; }
+
+.modal-card {
+  width: 100%;
+  max-width: 680px;
+  max-height: calc(100dvh - 96px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-1);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
+}
+
+.search-results {
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 460px;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-0);
+  text-align: right;
+  font-family: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+
+.search-row:hover, .search-row.active {
+  background: var(--accent-dim);
+  border-color: var(--border-accent);
+}
+
+/* Interactive Anatomical SVG Styling */
+.neuro-svg-stage {
+  background: radial-gradient(circle at 50% 40%, rgba(22, 33, 61, 0.9), rgba(5, 8, 17, 0.98));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svg-region {
+  cursor: pointer;
+  transition: fill 180ms ease, stroke 180ms ease, filter 180ms ease;
+}
+.svg-region:hover { filter: brightness(1.3); }
+.svg-region.active {
+  stroke: #22d3ee !important;
+  stroke-width: 2.5px !important;
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.7));
+}
+.svg-region.hit {
+  fill: rgba(251, 113, 133, 0.55) !important;
+  stroke: #fb7185 !important;
+  stroke-width: 2.5px !important;
+}
+
+/* Data Tables */
+.clinical-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.clinical-table th, .clinical-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: right;
+  vertical-align: top;
+}
+.clinical-table th {
+  color: var(--text-2);
+  font-weight: 700;
+  background: rgba(16, 24, 45, 0.6);
+}
+
+/* Toast Notification */
+.toast-stack {
+  position: fixed;
+  bottom: 18px;
+  left: 18px;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  background: var(--bg-2);
+  border: 1px solid var(--border-accent);
+  color: var(--text-0);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  box-shadow: var(--shadow-md);
+  max-width: 340px;
+}
+
+/* List styling */
+.clean-list {
+  margin: 0;
+  padding: 0 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.clean-list li { color: var(--text-1); font-size: 13px; }
+.muted { color: var(--text-2); }
+.small { font-size: 12px; }
+.xs { font-size: 11px; }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-6 { gap: 6px; }
+.gap-8 { gap: 8px; }
+.gap-12 { gap: 12px; }
+
+/* =========================================================================
+   NeuroLab Studio v8 — Mobile & Touch Ergonomics Layer (<= 768px / <= 560px)
+   ========================================================================= */
+button, a, .tab-pill, .finding-chip, .svg-region {
+  -webkit-tap-highlight-color: rgba(34, 211, 238, 0.18);
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+  .panel {
+    padding: 13px;
+    border-radius: var(--radius-md);
+  }
+  .panel-head {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .panel-title {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Single-row swipeable horizontal tabs on mobile instead of multi-row wrap clutter */
+  .tab-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+    max-width: 100%;
+  }
+  .tab-bar::-webkit-scrollbar { display: none; }
+  .tab-pill {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    min-height: 40px;
+    padding: 8px 14px;
+    scroll-snap-align: start;
+    font-size: 12.5px;
+  }
+
+  /* Touch-friendly target sizing & iOS Safari 16px anti-zoom rule + ZERO horizontal overflow */
+  .btn {
+    min-height: 40px;
+    padding: 8px 11px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.45;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .btn-sm {
+    min-height: 36px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .badge {
+    white-space: normal;
+    line-height: 1.4;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .finding-chip {
+    min-height: 38px;
+    padding: 7px 12px;
+    font-size: 12px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: right;
+  }
+  .input, .select, textarea {
+    font-size: 16px !important;
+    min-height: 44px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .flex {
+    min-width: 0;
+  }
+  .evidence-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Horizontally scrollable clinical tables without breaking viewport width */
+  .clinical-table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 12px;
+  }
+  .clinical-table th, .clinical-table td {
+    padding: 8px 9px;
+    min-width: 96px;
+  }
+
+  /* Compact touch-ergonomic PACS & EEG viewports */
+  .pacs-stage {
+    min-height: 295px;
+    max-width: 100%;
+  }
+  .pacs-canvas-wrap {
+    height: min(46vh, 370px);
+    min-height: 280px;
+    touch-action: none;
+  }
+  .pacs-img {
+    max-height: min(44vh, 350px);
+  }
+  .pacs-toolbar {
+    padding: 8px 10px;
+    gap: 6px;
+    max-width: 100%;
+  }
+  .pacs-hud-tl, .pacs-hud-tr, .pacs-hud-bl {
+    font-size: 10px;
+    padding: 3px 7px;
+    max-width: calc(100% - 20px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .eeg-canvas {
+    height: 340px;
+    max-width: 100%;
+    touch-action: pan-y;
+  }
+  .emg-canvas {
+    height: 240px;
+    max-width: 100%;
+  }
+
+  /* Hero & ICU Telemetry compactness */
+  .hero-observatory {
+    padding: 15px 13px;
+    border-radius: var(--radius-lg);
+    max-width: 100%;
+  }
+  .icu-monitor {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 9px;
+  }
+
+  /* Mobile Bottom-Sheet Modal & Elevated Toasts (clear of bottom nav bar) */
+  .modal-backdrop {
+    padding: 14px 8px calc(14px + env(safe-area-inset-bottom, 0px));
+    align-items: flex-end;
+  }
+  .modal-card {
+    width: 100%;
+    max-width: 100%;
+    max-height: 84dvh;
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+  }
+  .toast-stack {
+    bottom: calc(74px + env(safe-area-inset-bottom, 0px));
+    left: 10px;
+    right: 10px;
+    align-items: center;
+  }
+  .toast {
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 420px) {
+  .neuro-svg-stage {
+    padding: 8px;
+  }
+  .stat-tile .val {
+    font-size: 17px;
+  }
+  .panel {
+    padding: 11px 10px;
+  }
+}
+
+/* =========================================================================
+   NeuroLab Studio v16 — PulmoLab-Style Glass-Shatter Wrong-Answer FX & Shimmer
+   ========================================================================= */
+.nl-fx-shatter {
+  position: relative !important;
+  overflow: hidden !important;
+  animation: nlShatterShake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  border-color: rgba(251, 113, 133, 0.92) !important;
+  box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.34), 0 0 38px rgba(244, 63, 94, 0.5) !important;
+}
+
+@keyframes nlShatterShake {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  12% { transform: translate3d(-10px, -4px, 0) rotate(-1.3deg); }
+  26% { transform: translate3d(10px, 4px, 0) rotate(1.3deg); }
+  40% { transform: translate3d(-8px, 3px, 0) rotate(-0.9deg); }
+  54% { transform: translate3d(7px, -3px, 0) rotate(0.8deg); }
+  70% { transform: translate3d(-4px, 2px, 0) rotate(-0.4deg); }
+  84% { transform: translate3d(3px, -1px, 0) rotate(0.2deg); }
+}
+
+.nl-viewport-jolt {
+  animation: nlViewportJolt 0.48s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes nlViewportJolt {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  15% { transform: translate3d(-6px, -3px, 0); }
+  32% { transform: translate3d(6px, 3px, 0); }
+  50% { transform: translate3d(-4px, 2px, 0); }
+  72% { transform: translate3d(3px, -1px, 0); }
+}
+
+.nl-shatter-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25), rgba(244, 63, 94, 0.26) 42%, rgba(244, 63, 94, 0.06) 78%);
+  animation: nlOverlayFade 0.98s ease-out forwards;
+}
+
+.nl-shatter-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.65));
+}
+
+.nl-shard {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+}
+.nl-shard-1 { animation: nlShardFly1 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.nl-shard-2 { animation: nlShardFly2 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.nl-shard-3 { animation: nlShardFly3 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.nl-shard-4 { animation: nlShardFly4 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.nl-shard-5 { animation: nlShardFly5 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.nl-shard-6 { animation: nlShardFly6 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+@keyframes nlShardFly1 { 0% { opacity: 1; transform: translate(0, 0) rotate(0); } 100% { opacity: 0; transform: translate(-44px, -36px) rotate(-26deg); } }
+@keyframes nlShardFly2 { 0% { opacity: 1; transform: translate(0, 0) rotate(0); } 100% { opacity: 0; transform: translate(50px, -28px) rotate(28deg); } }
+@keyframes nlShardFly3 { 0% { opacity: 1; transform: translate(0, 0) rotate(0); } 100% { opacity: 0; transform: translate(42px, 44px) rotate(32deg); } }
+@keyframes nlShardFly4 { 0% { opacity: 1; transform: translate(0, 0) rotate(0); } 100% { opacity: 0; transform: translate(-46px, 40px) rotate(-30deg); } }
+@keyframes nlShardFly5 { 0% { opacity: 1; transform: translate(0, 0) rotate(0); } 100% { opacity: 0; transform: translate(-56px, -6px) rotate(-18deg); } }
+@keyframes nlShardFly6 { 0% { opacity: 1; transform: translate(0, 0) rotate(0); } 100% { opacity: 0; transform: translate(22px, -46px) rotate(16deg); } }
+
+@keyframes nlOverlayFade {
+  0% { opacity: 1; }
+  45% { opacity: 0.92; }
+  100% { opacity: 0; }
+}
+
+/* Full-viewport crimson shatter glass fracture layer */
+.nl-screen-crisis {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.08) 10%, rgba(244, 63, 94, 0.38) 85%);
+  box-shadow: inset 0 0 110px rgba(244, 63, 94, 0.65);
+  animation: nlScreenFlash 0.94s ease-out forwards;
+  overflow: hidden;
+}
+
+.nl-screen-crack-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.72));
+}
+
+@keyframes nlScreenFlash {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  55% { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+
+/* Luminous Emerald Shimmer on Correct Answer */
+.nl-fx-shimmer {
+  position: relative !important;
+  overflow: hidden !important;
+  border-color: rgba(52, 211, 153, 0.9) !important;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.25), 0 0 32px rgba(16, 185, 129, 0.38) !important;
+  animation: nlCorrectPop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.nl-fx-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 22%, rgba(52, 211, 153, 0.36) 50%, transparent 78%);
+  transform: translateX(-120%);
+  animation: nlShimmerSweep 0.72s ease-out forwards;
+}
+
+@keyframes nlCorrectPop {
+  0% { transform: scale(0.985); }
+  50% { transform: scale(1.012); }
+  100% { transform: scale(1); }
+}
+
+@keyframes nlShimmerSweep {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(130%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nl-fx-shatter, .nl-viewport-jolt, .nl-fx-shimmer, .nl-shard, .nl-screen-crisis {
+    animation: none !important;
+  }
+}

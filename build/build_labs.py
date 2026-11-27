@@ -7,6 +7,7 @@
   labs/cardiac/index.html          صفحهٔ شبیه‌ساز قلب + راهنمای سناریوها
   labs/cardiac/simulator.html      خود شبیه‌ساز (بدون هیچ ویرایشی)
   labs/pulmolab/**                 آزمایشگاه ریه (بستهٔ چندفایلی، بدون ویرایش)
+  labs/neurolab/**                 آزمایشگاه نورولوژی (بستهٔ چندفایلی، بدون ویرایش)
 
 دو شکل ابزار پشتیبانی می‌شود:
   • wrapper — یک فایل HTML خودبسنده که صفحهٔ معرفی و قاب ایزولهٔ آن را همین
@@ -15,12 +16,13 @@
     مدل آناتومیک + ۱۸ سناریوی بالینی).
   • pwa — بستهٔ چندفایلی با manifest و service worker خودش که بایت‌به‌بایت از
     زیپِ ریشه بیرون می‌آید و کارت‌ها مستقیم به خودِ برنامه پیوند می‌خورند
-    (بدون قاب، چون تمام‌صفحه و آفلاین است). منبع PulmoLab-Studio-Offline.zip.
+    (بدون قاب، چون تمام‌صفحه و آفلاین است). منابع:
+    PulmoLab-Studio-Offline.zip و NeuroLab-Studio-Offline.zip.
 
 اجرا:
     python3 build/build_labs.py                        # ساخت/به‌روزرسانی
     python3 build/build_labs.py --check                # فقط بررسی وضعیت
-    python3 build/build_labs.py --refresh-pulmolab     # بازنویسی بسته از زیپ
+    python3 build/build_labs.py --refresh-pulmolab     # بازنویسی همهٔ بسته‌ها از زیپ
 """
 from __future__ import annotations
 
@@ -49,7 +51,20 @@ PULMO_PREFIX = "PulmoLab-Studio-Offline/content/labs/pulmolab/"
 PULMO_DEST = OUT / "pulmolab"
 PULMO_MANIFEST = PULMO_DEST / "data" / "manifest.json"
 
+# بستهٔ آفلاین NeuroLab Studio: همین قرارداد را دارد، ولی مسیر داخلی زیپ
+# مستقیماً docs/lib/labs/neurolab/ است. فقط همان پوشه وارد bookخانه می‌شود؛
+# نسخهٔ تک‌فایلی، build و اسکریپت پچ (integration/) برای اجرای محلی‌اند.
+NEURO_ZIP = ROOT / "NeuroLab-Studio-Offline.zip"
+NEURO_PREFIX = "docs/lib/labs/neurolab/"
+NEURO_DEST = OUT / "neurolab"
+NEURO_MANIFEST = NEURO_DEST / "data" / "manifest.json"
+
 # آیکون کارت هر ابزار (خطی، هم‌خانواده با بقیهٔ آیکن‌های کتابخانه)
+ART_BRAIN = ('<path d="M12 4.2a3 3 0 0 0-3 3 2.6 2.6 0 0 0-1.6 4.6A3 3 0 0 0 8 17.4a2.8 2.8 0 0 0 4 2.2"/>'
+            '<path d="M12 4.2a3 3 0 0 1 3 3 2.6 2.6 0 0 1 1.6 4.6A3 3 0 0 1 16 17.4a2.8 2.8 0 0 1-4 2.2"/>'
+            '<path d="M12 4.2v15.4"/><path d="M9.4 8.2h1.6"/><path d="M13 8.2h1.6"/>'
+            '<path d="M9 12.4h1.8"/><path d="M13.2 12.4H15"/><path d="M9.8 16.4h1.4"/><path d="M12.8 16.4h1.4"/>')
+
 ART_HEART_ECG = ('<path d="M12 21s-7.5-4.6-9.3-9.4C1.2 7.4 3.6 4 7 4c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 '
                  '3.4 0 5.8 3.4 4.3 7.6C19.5 16.4 12 21 12 21z"/><path d="M4 12.5h4l1.6-3.4L12 15l2-6 '
                  '1.8 3.5H20"/>')
@@ -76,6 +91,7 @@ LABS = [
         "portalLabel": "شبیه‌ساز قلب — ۱۸ سناریو",
         "portalBadge": "۱۸",
         "portalStat": "۱۸ سناریو",
+        "portalBlurb": "قلب تپندهٔ سه‌بعدی با ۱۸ سناریو، ۱۲ لید ECG زنده و همودینامیک",
         "pageDesc": "شبیه‌ساز بالینی قلب: ۱۸ سناریوی بالینی، مدل سه‌بعدی قلب، ۱۲ لید ECG و همودینامیک تعاملی.",
         "licenseNote": """<section class="wrap" style="padding-bottom:44px">
   <div class="lb-hl" style="border-color:var(--b-200);background:var(--b-50)">
@@ -113,12 +129,23 @@ LABS = [
         "portalLabel": "PulmoLab — آزمایشگاه ریه",
         "portalBadge": "۸ ایستگاه",
         "portalStat": "۷۰ رادیوگرافی · ۱۲ صدای سمع",
+        "portalBlurb": "آزمایشگاه ریهٔ PulmoLab با سمع تعاملی، اطلس ۷۰ رادیوگرافی و اسپیرومتری پویا",
         "blurb": "استودیوی آموزش و شبیه‌سازی ریه در هشت ایستگاه: سمع تعاملی روی نقشهٔ قفسهٔ سینه با "
                  "طیف‌نگار زندهٔ صدا، اطلس PACS با ۷۰ رادیوگرافی واقعی، اسپیرومتری و PFT پویا، "
                  "کتابخانهٔ ۳۰ بیماری تنفسی، شبیه‌ساز معاینهٔ قفسهٔ سینه، هشت کیس بالینی ICU/ER با "
                  "مانیتور علائم حیاتی، جستجوی یکپارچه و مدیریت حافظهٔ آفلاین.",
         "tags": ["۸ ایستگاه", "۷۰ رادیوگرافی", "۱۲ صدای سمع", "۳۰ بیماری", "اسپیرومتری",
                  "۸ کیس ICU/ER", "آفلاین"],
+        "licenseNote": """<section class="wrap" style="padding-bottom:44px">
+  <div class="lb-hl" style="border-color:var(--b-200);background:var(--b-50)">
+    <b>یادداشت منابع و مجوز</b>
+    <span>۷۰ رادیوگرافی قفسهٔ سینه و ۱۴ صدای سمع این آزمایشگاه از منابع آزاد
+      (ویکی‌انبار و بانک‌های صوتی با مجوز باز) گرفته شده‌اند: <b>CC BY-SA 4.0</b> ۴۸ مورد،
+      <b>CC BY-SA 3.0</b> ۱۰، <b>CC0</b> ۷، <b>CC BY</b> ۴ و <b>Public Domain</b> ۱.
+      شناسنامهٔ منبع، پدیدآور و مجوز تک‌تک فایل‌ها در
+      <b>media/cxr/ATTRIBUTION.json</b> و <b>media/audio/ATTRIBUTION.json</b> داخل خود بسته ثبت شده است.</span>
+  </div>
+</section>""",
         "highlights": [
             ("سمع روی آناتومی", "۱۲ صدای ریوی روی نقشهٔ قفسهٔ سینه با طیف‌نگار زنده و توضیح "
                                 "بالینی هر صدا؛ ۱۴ فایل صوتی واقعی."),
@@ -129,6 +156,53 @@ LABS = [
             ("آفلاین کامل", "service worker و IndexedDB خودش؛ پس از نخستین بارگذاری بدون شبکه "
                             "کار می‌کند و بسته‌های صوتی/تصویری جداگانه دارد."),
         ],
+    },
+    {
+        "key": "neurolab",
+        "kind": "pwa",
+        "src": NEURO_ZIP,
+        "prefix": NEURO_PREFIX,
+        "dest": NEURO_DEST,
+        "manifestPath": NEURO_MANIFEST,
+        "name": "آزمایشگاه جامع نورولوژی",
+        "nameEn": "NeuroLab Studio",
+        "h": 245, "c": 76, "a": 192,
+        "art": ART_BRAIN,
+        "entry": "neurolab/index.html",
+        "cardHref": "neurolab/index.html",
+        "portalLabel": "NeuroLab — آزمایشگاه نورولوژی",
+        "portalBadge": "۸ ایستگاه",
+        "portalStat": "۸۳ اسکن PACS · ۳۶ کیس سخت",
+        "portalBlurb": "آزمایشگاه نورولوژی با ۸۳ اسکن PACS خام، کشیک شب و بورد ۷۰ سؤالی",
+        "blurb": "استودیوی نورولوژی بالینی در هشت ایستگاه: معاینهٔ عصبی، لوکالیزاسیون ضایعه، ایستگاه "
+                 "PACS با ۸۳ اسکن واقعی خام، کشیک شب نورورادیولوژی، EEG/EMG زنده، ۲۰ کیس چندبیماری، "
+                 "۳۵ بیماری و آزمون شبه‌بورد ۷۰ سؤالی — با پشتیبانی کامل آفلاین.",
+        "tags": ["۸ ایستگاه", "۸۳ اسکن PACS", "۴۷ اسکن تله‌دار", "۱۲ کانال EEG", "۳۵ بیماری",
+                 "بورد ۷۰ سؤالی", "آفلاین"],
+        "highlights": [
+            ("ایستگاه PACS نوروایمیجینگ", "۸۳ اسکن واقعی و کاملاً خام (۴۷ مورد سخت و تله‌دار) با "
+                                         "زوم/پن، خط‌کش، ABC/2، حالت Peek Overlay و ۱۴ استک "
+                                         "چندسکانسی با اسکرول چرخ ماوس."),
+            ("کشیک شب و کیس‌های سخت", "شبیه‌ساز چهار شیفت شش‌بیماره با تریاژ STAT/URGENT/NORMAL و "
+                                      "سنجش Overcall، به‌همراه تورنمنت ۳۶ کیس فوق‌سخت در چهار شاخه."),
+            ("معاینه و لوکالیزاسیون", "هفت حوزهٔ معاینه، ۱۲ عصب کرانیال، هشت گیت، GCS/FOUR، "
+                                      "نوروافتالمولوژی، شبیه‌ساز مانور Epley و HINTS Plus."),
+            ("EEG / EMG زنده", "شبیه‌ساز ۱۲ کاناله با سوئیچ Double Banana ↔ A1/A2، نقشهٔ ۱۰-۲۰ و "
+                               "سینتی‌سایزر صوتی سوزن EMG با Web Audio."),
+            ("بورد و کیس", "۲۰ کیس چندبیماری با افشای مرحله‌ای، ۶۰ فلش‌کارت، آزمون ۷۰ سؤالی زمان‌دار "
+                           "و ذخیرهٔ پیشرفت در IndexedDB."),
+        ],
+        "licenseNote": """<section class="wrap" style="padding-bottom:44px">
+  <div class="lb-hl" style="border-color:var(--b-200);background:var(--b-50)">
+    <b>یادداشت منابع و مجوز</b>
+    <span>هر ۸۳ اسکن نورورادیولوژی این آزمایشگاه تصویر واقعی با مجوز آزاد است
+      (<b>CC BY-SA 4.0</b> ۲۲ مورد، <b>CC BY-SA 3.0</b> ۴۱، <b>CC BY</b> ۱۱،
+      <b>Public Domain</b> ۷ و <b>CC0</b> ۲) و شناسنامهٔ منبع، پدیدآور و مجوز
+      تک‌تک تصاویر در فایل <b>media/neuroimaging/ATTRIBUTION.json</b> داخل خود بسته ثبت شده است.
+      سایر بخش‌ها (EEG، لوکالیزاسیون، کیس‌ها و آزمون) شبیه‌سازی و تجسم آموزشی‌اند
+      و جایگزین قضاوت بالینی یا داده بیمار واقعی نیستند.</span>
+  </div>
+</section>""",
     },
 ]
 
@@ -163,30 +237,36 @@ def read_scenarios(path: Path) -> tuple[list[dict], list[dict]]:
 
 
 # ── بستهٔ چندفایلی (kind="pwa"): کپی بایت‌به‌بایت از زیپ ریشه ──────────────────
-def pulmo_entries() -> list[zipfile.ZipInfo]:
-    with zipfile.ZipFile(PULMO_ZIP) as z:
+def bundle_entries(bundle: dict) -> list[zipfile.ZipInfo]:
+    """فایل‌های یک بستهٔ pwa داخل زیپ (همهٔ بسته‌ها از همین تابع رد می‌شوند)."""
+    with zipfile.ZipFile(bundle["zip"]) as z:
         infos = [i for i in z.infolist()
-                 if i.filename.startswith(PULMO_PREFIX) and not i.filename.endswith("/")]
+                 if i.filename.startswith(bundle["prefix"]) and not i.filename.endswith("/")]
     return sorted(infos, key=lambda i: i.filename)
 
 
-def extract_pulmolab(refresh: bool = False) -> tuple[int, int, int, list[str]]:
-    """بستهٔ PulmoLab را از زیپ ریشه بیرون می‌آورد — بدون هیچ ویرایشی.
+def pulmo_entries() -> list[zipfile.ZipInfo]:
+    return bundle_entries({"zip": PULMO_ZIP, "prefix": PULMO_PREFIX})
+
+
+def extract_bundle(bundle: dict, refresh: bool = False) -> tuple[int, int, int]:
+    """یک بستهٔ pwa را از زیپ ریشه بیرون می‌آورد — بدون هیچ ویرایشی.
 
     مسیرهای نسبی عیناً حفظ می‌شوند (همهٔ ارجاع‌های خودِ برنامه نسبی‌اند). فایلی
     که اندازه و CRC-32ش با زیپ یکی است دوباره نوشته نمی‌شود تا git و آینهٔ
     docs/lib بی‌جهت تغییر نکنند.
     برمی‌گرداند: (تعداد فایل، تعداد بازنویسی‌شده، جمع بایت).
     """
-    if not PULMO_ZIP.exists():
-        raise SystemExit(f"✗ زیپ منبع نیست: {PULMO_ZIP.name}")
-    infos = pulmo_entries()
+    zip_path, prefix, dest_root = bundle["zip"], bundle["prefix"], bundle["dest"]
+    if not zip_path.exists():
+        raise SystemExit(f"✗ زیپ منبع نیست: {zip_path.name}")
+    infos = bundle_entries(bundle)
     if not infos:
-        raise SystemExit(f"✗ در {PULMO_ZIP.name} مسیری زیر {PULMO_PREFIX} پیدا نشد")
+        raise SystemExit(f"✗ در {zip_path.name} مسیری زیر {prefix} پیدا نشد")
     wrote = total = 0
-    with zipfile.ZipFile(PULMO_ZIP) as z:
+    with zipfile.ZipFile(zip_path) as z:
         for info in infos:
-            dest = PULMO_DEST / info.filename[len(PULMO_PREFIX):]
+            dest = dest_root / info.filename[len(prefix):]
             total += info.file_size
             if (not refresh and dest.exists() and dest.stat().st_size == info.file_size
                     and zlib.crc32(dest.read_bytes()) == info.CRC):
@@ -198,38 +278,87 @@ def extract_pulmolab(refresh: bool = False) -> tuple[int, int, int, list[str]]:
     return len(infos), wrote, total
 
 
-def pulmo_status() -> dict:
-    """وضعیت بستهٔ PulmoLab روی دیسک نسبت به زیپ — بدون نوشتن (برای --check)."""
-    if not PULMO_ZIP.exists():
+def extract_pulmolab(refresh: bool = False) -> tuple[int, int, int, list[str]]:
+    return extract_bundle({"zip": PULMO_ZIP, "prefix": PULMO_PREFIX, "dest": PULMO_DEST}, refresh)
+
+
+def bundle_status(bundle: dict) -> dict:
+    """وضعیت یک بسته روی دیسک نسبت به زیپ — بدون نوشتن (برای --check)."""
+    zip_path, prefix, dest_root = bundle["zip"], bundle["prefix"], bundle["dest"]
+    if not zip_path.exists():
         return {"zip": False, "files": 0, "bytes": 0, "missing": [], "differing": [], "extra": []}
-    infos = pulmo_entries()
+    infos = bundle_entries(bundle)
     missing, differing, total = [], [], 0
-    with zipfile.ZipFile(PULMO_ZIP) as z:
+    with zipfile.ZipFile(zip_path) as z:
         for info in infos:
-            rel = info.filename[len(PULMO_PREFIX):]
-            dest = PULMO_DEST / rel
+            rel = info.filename[len(prefix):]
+            dest = dest_root / rel
             total += info.file_size
             if not dest.exists():
                 missing.append(rel)
             elif (dest.stat().st_size != info.file_size
                   or zlib.crc32(dest.read_bytes()) != info.CRC):
                 differing.append(rel)
-    in_zip = {PULMO_DEST / i.filename[len(PULMO_PREFIX):] for i in infos}
-    extra = (sorted(str(f.relative_to(PULMO_DEST)) for f in PULMO_DEST.rglob("*")
+    in_zip = {dest_root / i.filename[len(prefix):] for i in infos}
+    extra = (sorted(str(f.relative_to(dest_root)) for f in dest_root.rglob("*")
                     if f.is_file() and f not in in_zip)
-             if PULMO_DEST.is_dir() else [])
+             if dest_root.is_dir() else [])
     return {"zip": True, "files": len(infos), "bytes": total,
             "missing": missing, "differing": differing, "extra": extra}
 
 
-def pulmo_counts() -> dict:
-    """شمارش‌های خودِ بسته (pulmolab/data/manifest.json) — منبع آمار کارت‌ها."""
-    if not PULMO_MANIFEST.exists():
+def pulmo_status() -> dict:
+    return bundle_status({"zip": PULMO_ZIP, "prefix": PULMO_PREFIX, "dest": PULMO_DEST})
+
+
+def bundle_counts(manifest_path: Path) -> dict:
+    if not manifest_path.exists():
         return {}
     try:
-        return json.loads(PULMO_MANIFEST.read_text(encoding="utf-8")).get("counts") or {}
+        return json.loads(manifest_path.read_text(encoding="utf-8")).get("counts") or {}
     except (json.JSONDecodeError, OSError):
         return {}
+
+
+def pulmo_counts() -> dict:
+    """شمارش‌های خودِ بسته (pulmolab/data/manifest.json) — منبع آمار کارت‌ها."""
+    return bundle_counts(PULMO_MANIFEST)
+
+
+def neurolab_counts(dest: Path) -> dict:
+    """شمارش‌های واقعی NeuroLab از فایل‌های دادهٔ خودش.
+
+    manifest این بسته (برخلاف PulmoLab) بخش counts ندارد، پس آمار از خود
+    داده‌ها گرفته می‌شود تا هیچ عددی دستی و کهنه نشود.
+    """
+    d = dest / "data"
+
+    def load(name):
+        try:
+            return json.loads((d / name).read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return {}
+
+    img = load("neuroimaging.json")
+    dz = load("diseases.json")
+    eeg = load("eeg.json")
+    loc = load("localization.json")
+    cases = load("cases.json")
+    stroke = load("stroke.json")
+    exam = load("exam.json")
+    counts = {
+        "studies": len(img.get("studies") or []),
+        "scansHard": sum(1 for x in (img.get("studies") or []) if x.get("hardCase")),
+        "diseases": len(dz.get("diseases") or []),
+        "diseaseCategories": len(dz.get("categories") or []),
+        "cases": len(cases if isinstance(cases, list) else (cases.get("cases") or [])),
+        "eegPatterns": len(eeg.get("patterns") or []),
+        "neurophys": len(eeg.get("neurophys") or []),
+        "localizationSyndromes": len(loc.get("syndromes") or []),
+        "strokeEmergencies": len(stroke.get("emergencies") or []),
+        "examDomains": len(exam.get("domains") or []),
+    }
+    return counts
 
 
 # ── قالب صفحه ─────────────────────────────────────────────────────────────────
@@ -240,6 +369,7 @@ def shell(*, title: str, desc: str, h: int, c: int, a: int, body: str,
         (f"{upn}/labs/index.html", "همهٔ آزمایشگاه‌ها", "all"),
         (f"{upn}/labs/cardiac/index.html", "شبیه‌ساز قلب", "cardiac"),
         (f"{upn}/labs/pulmolab/index.html", "آزمایشگاه ریه", "pulmolab"),
+        (f"{upn}/labs/neurolab/index.html", "آزمایشگاه نورولوژی", "neurolab"),
         (f"{upn}/sketches/index.html", "اسکچ‌نوت", "sk"),
         (f"{upn}/index.html", "درس‌نامه‌ها", "lib"),
     ]
@@ -356,14 +486,25 @@ def build_index(labs: list[dict]) -> None:
       </span>
     </a>""")
 
+    # یادداشت منابع/مجوز هر ابزار، یک‌جا زیر کارت‌ها (پیش‌تر فقط در صفحهٔ
+    # میزبانِ ابزارهای تک‌فایلی می‌آمد و برای بسته‌های چندفایلی هرگز دیده نمی‌شد).
+    note_parts = []
+    for lab in labs:
+        if lab.get("licenseNote"):
+            inner = re.sub(r"^\s*<section[^>]*>|</section>\s*$", "", lab["licenseNote"].strip())
+            note_parts.append(inner.strip())
+    pwa_names = "، ".join(l["nameEn"] for l in labs if l.get("kind") == "pwa") or "بستهٔ چندفایلی"
+    notes = ("\n".join(f'<section class="wrap" style="padding-bottom:28px">{n}</section>'
+                        for n in note_parts))
+
     body = f"""
 <section class="wrap lb-hero">
   <span class="eyebrow">بخش مستقل · جدا از درس‌نامه‌ها و اسکچ‌نوت‌ها</span>
   <h1>آزمایشگاه تعاملی</h1>
   <p>شبیه‌سازهای بالینی تعاملی که با درس‌نامه‌ها کار می‌کنند ولی مستقل از آن‌ها هستند.
      ابزارهای تک‌فایلی در صفحهٔ خودشان و در یک قاب ایزوله اجرا می‌شوند، پس سرعت و رفتارشان
-     به کتابخانه کاری ندارد؛ ابزارهای چندفایلی (مانند آزمایشگاه ریه) برنامهٔ کامل خودشان
-     هستند و مستقیم در پنجرهٔ خودشان باز می‌شوند.
+     به کتابخانه کاری ندارد؛ ابزارهای چندفایلی ({pwa_names}) هر یک برنامهٔ کامل خودشان
+     هستند — با manifest و service worker مستقل — و مستقیم در پنجرهٔ خودشان باز می‌شوند.
      برای دیدن راهنمای سناریوها و نکات آموزشی هر ابزار، صفحهٔ آن را باز کنید.</p>
 </section>
 
@@ -372,13 +513,14 @@ def build_index(labs: list[dict]) -> None:
 {chr(10).join(cards)}
   </div>
 </section>
+{notes}
 """
     d = OUT
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(shell(
         title="آزمایشگاه تعاملی — شبیه‌سازهای بالینی",
-        desc=("شبیه‌سازهای بالینی تعاملی کتابخانهٔ مدیکال: شبیه‌ساز قلب با ۱۸ سناریوی بالینی "
-              "و آزمایشگاه ریهٔ PulmoLab با سمع تعاملی، ۷۰ رادیوگرافی و اسپیرومتری پویا."),
+        desc=("شبیه‌سازها و آزمایشگاه‌های بالینی تعاملی کتابخانهٔ مدیکال: "
+              + "؛ ".join(f"{l['name']} ({l['nameEn']})" for l in labs) + "."),
         h=258, c=46, a=200, body=body, nav_current="all", up="", upn="..",
     ), encoding="utf-8")
 
@@ -477,9 +619,18 @@ def portal_band(labs: list[dict]) -> str:
     parts += (f'<a class="qpart" href="labs/index.html">همهٔ آزمایشگاه‌ها'
               f'<b>{fa(len(labs))}</b></a>')
     stats = " · ".join(l["portalStat"] for l in labs)
-    blurb = ("شبیه‌سازهای بالینی مستقل از درس‌نامه‌ها: قلب تپندهٔ سه‌بعدی با ۱۸ سناریو، "
-             "۱۲ لید ECG زنده و همودینامیک؛ و آزمایشگاه ریهٔ PulmoLab با سمع تعاملی روی "
-             "نقشهٔ قفسهٔ سینه، اطلس ۷۰ رادیوگرافی و اسپیرومتری پویا.")
+    # نوار خانه متن کوتاه می‌خواهد؛ blurb کاملِ کارت برای اینجا بیش از حد بلند
+    # است. پس portalBlurb هر ابزار (یک بند کوتاه) به کار می‌رود و با افزودن ابزار
+    # تازه خودکار به‌روز می‌شود.
+    blurbs = [l.get("portalBlurb", "").strip() for l in labs if l.get("portalBlurb")]
+    if len(blurbs) == 1:
+        blurb = blurbs[0] + "."
+    elif blurbs:
+        cleaned = [re.sub(r"[.۔۔\s]+$", "", b) for b in blurbs]
+        blurb = ("شبیه‌سازها و آزمایشگاه‌های بالینی مستقل از درس‌نامه‌ها: "
+                 + "؛ و ".join(cleaned) + ".")
+    else:
+        blurb = "شبیه‌سازها و آزمایشگاه‌های بالینی مستقل از درس‌نامه‌ها."
     return f"""{PORTAL_BAND_OPEN}
       <div>
         <div class="qband__title"><span class="ico">{ICO_LABS}</span>{PORTAL_H2}</div>
@@ -546,8 +697,9 @@ def lab_line(lab: dict) -> str:
         c = lab.get("counts") or {}
         return (f"{lab['name']}: {fa(lab['files'])} فایل · "
                 f"{lab['bytes'] / 1048576:.1f} مگابایت از {lab['src'].name} · "
-                f"{fa(c.get('radiographs', 0))} رادیوگرافی، {fa(c.get('sounds', 0))} صدای سمع، "
-                f"{fa(c.get('diseases', 0))} بیماری، {fa(c.get('cases', 0))} کیس بالینی")
+                f"{fa(c.get('radiographs', c.get('studies', 0)))} تصویر، "
+                f"{fa(c.get('sounds', c.get('eegPatterns', 0)))} سیگنال/صدا، "
+                f"{fa(c.get('diseases', 0))} بیماری، {fa(c.get('cases', 0))} کیس")
     return (f"{lab['name']}: {lab['n']} سناریو · "
             f"{lab['dest'].stat().st_size / 1048576:.1f} مگابایت از {lab['src'].name}")
 
@@ -565,19 +717,28 @@ def main() -> int:
         kind = lab.get("kind", "wrapper")
 
         if kind == "pwa":
+            bundle = {"zip": lab["src"], "prefix": lab.get("prefix", PULMO_PREFIX),
+                      "dest": lab.get("dest", PULMO_DEST)}
             if not check or refresh:
-                extract_pulmolab(refresh)
-            st = pulmo_status()
+                extract_bundle(bundle, refresh)
+            st = bundle_status(bundle)
             if st["missing"] or st["differing"]:
                 problems.append(f"{lab['key']}: {len(st['missing'])} فایل جاافتاده و "
                                 f"{len(st['differing'])} فایل ناهمسان با {src.name}")
-            counts = pulmo_counts()
+            counts = bundle_counts(lab.get("manifestPath", PULMO_MANIFEST))
+            if not counts and lab["key"] == "neurolab":
+                counts = neurolab_counts(lab.get("dest", NEURO_DEST))
             if not counts:
                 problems.append(f"{lab['key']}: manifest بسته خوانده نشد "
-                                f"({PULMO_MANIFEST.relative_to(ROOT)})")
+                                f"({lab.get('manifestPath', PULMO_MANIFEST).relative_to(ROOT)})")
+            # زیپِ منبع نباید هرگز داخل بستهٔ منتشرشده بیفتد
+            stray_zips = [x for x in st["extra"] if x.endswith(".zip")]
+            if stray_zips:
+                problems.append(f"{lab['key']}: زیپ منبع داخل بسته افتاده: "
+                                + "، ".join(stray_zips))
             if st["extra"]:
                 print(f"! {lab['key']}: {len(st['extra'])} فایل بیرون از زیپ در "
-                      f"{PULMO_DEST.relative_to(ROOT)} (دست‌نخورده ماند): "
+                      f"{lab.get('dest', PULMO_DEST).relative_to(ROOT)} (دست‌نخورده ماند): "
                       + "، ".join(st["extra"][:4]))
             labs.append({**lab, "n": None, "groups": [], "counts": counts,
                          "files": st["files"], "bytes": st["bytes"]})
@@ -604,12 +765,15 @@ def main() -> int:
         return 0
 
     # خودِ ابزارها: کپی دست‌نخورده (هیچ ویرایشی روی محتوای شما انجام نمی‌شود)
+    # فقط ابزارهای wrapper یک فایل مقصد دارند؛ برای pwa مقصد یک *پوشه* است و
+    # منبعش زیپ — کپی‌کردن زیپ روی پوشه، خود زیپ را داخل بسته می‌ریزد (باگ).
     for lab in labs:
-        if lab.get("dest"):
-            lab["dest"].parent.mkdir(parents=True, exist_ok=True)
-            if (not lab["dest"].exists()
-                    or lab["dest"].stat().st_size != lab["src"].stat().st_size):
-                shutil.copy2(lab["src"], lab["dest"])
+        if lab.get("kind", "wrapper") != "wrapper" or not lab.get("dest"):
+            continue
+        lab["dest"].parent.mkdir(parents=True, exist_ok=True)
+        if (not lab["dest"].exists()
+                or lab["dest"].stat().st_size != lab["src"].stat().st_size):
+            shutil.copy2(lab["src"], lab["dest"])
 
     build_index(labs)
     for lab in labs:
@@ -625,7 +789,7 @@ def main() -> int:
         }
         if l.get("kind") == "pwa":
             row.update({
-                "manifest": str(PULMO_MANIFEST.relative_to(OUT)),
+                "manifest": str(l.get("manifestPath", PULMO_MANIFEST).relative_to(OUT)),
                 "files": l["files"], "bytes": l["bytes"], "counts": l["counts"],
             })
         else:

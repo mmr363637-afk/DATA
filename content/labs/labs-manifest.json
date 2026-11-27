@@ -47,6 +47,35 @@
     "diseases": 30,
     "cases": 8
    }
+  },
+  {
+   "key": "neurolab",
+   "name": "آزمایشگاه جامع نورولوژی",
+   "nameEn": "NeuroLab Studio",
+   "type": "modular-pwa",
+   "theme": {
+    "h": 245,
+    "c": 76,
+    "a": 192
+   },
+   "entry": "neurolab/index.html",
+   "app": "neurolab/index.html",
+   "source": "NeuroLab-Studio-Offline.zip",
+   "manifest": "neurolab/data/manifest.json",
+   "files": 131,
+   "bytes": 6182357,
+   "counts": {
+    "studies": 83,
+    "scansHard": 47,
+    "diseases": 35,
+    "diseaseCategories": 16,
+    "cases": 20,
+    "eegPatterns": 12,
+    "neurophys": 8,
+    "localizationSyndromes": 15,
+    "strokeEmergencies": 8,
+    "examDomains": 7
+   }
   }
  ]
 }
