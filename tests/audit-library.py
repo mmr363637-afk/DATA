@@ -41,8 +41,10 @@ ROOT_BANKS = [ROOT / "chashm.html", ROOT / "ortho.html", ROOT / "ofuni.html"]
 #   cardiac/simulator.html  فایل تک‌فایلی شبیه‌ساز قلب (۴٫۱ مگابایت، WebGL)
 #   pulmolab/               بستهٔ چندفایلی PulmoLab Studio (manifest و service
 #                           worker خودش را دارد و بایت‌به‌بایت از زیپ می‌آید)
+#   neurolab/               بستهٔ چندفایلی NeuroLab Studio (همان قرارداد؛
+#                           manifest و service worker مستقل، ۱۳۱ فایل)
 VENDORED = {CONTENT / "labs" / "cardiac" / "simulator.html"}
-VENDORED_DIRS = {CONTENT / "labs" / "pulmolab"}
+VENDORED_DIRS = {CONTENT / "labs" / "pulmolab", CONTENT / "labs" / "neurolab"}
 
 
 def is_vendored(path: Path) -> bool:

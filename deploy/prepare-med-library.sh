@@ -59,6 +59,12 @@ python3 build/build_labs.py --check || { echo "خطا: بستهٔ آزمایشگ
 [ -f docs/lib/labs/pulmolab/data/manifest.json ] || { echo "خطا: manifest بستهٔ ریه ساخته نشد"; exit 1; }
 [ "$(find docs/lib/labs/pulmolab -type f | wc -l)" -eq 122 ] || { echo "خطا: بستهٔ ریه ۱۲۲ فایل نیست"; exit 1; }
 grep -q 'labs/pulmolab/index.html' docs/lib/index.html || { echo "خطا: نوار آزمایشگاه در صفحهٔ خانه به ریه پیوند نمی‌دهد"; exit 1; }
+# بستهٔ NeuroLab Studio: همان قرارداد PulmoLab — ۱۳۱ فایل بایت‌به‌بایت از زیپ
+[ -f docs/lib/labs/neurolab/index.html ] || { echo "خطا: آزمایشگاه نورولوژی در docs/lib/labs ساخته نشد"; exit 1; }
+[ -f docs/lib/labs/neurolab/data/manifest.json ] || { echo "خطا: manifest بستهٔ نورولوژی ساخته نشد"; exit 1; }
+[ -f docs/lib/labs/neurolab/media/neuroimaging/ATTRIBUTION.json ] || { echo "خطا: شناسنامهٔ تصاویر نوروایمیجینگ نیست"; exit 1; }
+[ "$(find docs/lib/labs/neurolab -type f | wc -l)" -eq 131 ] || { echo "خطا: بستهٔ نورولوژی ۱۳۱ فایل نیست"; exit 1; }
+grep -q 'labs/neurolab/index.html' docs/lib/index.html || { echo "خطا: نوار آزمایشگاه در صفحهٔ خانه به نورولوژی پیوند نمی‌دهد"; exit 1; }
 
 echo "── ۳٫۷) راستی‌آزمایی مشتق‌های اسکچ‌نوت ────────────────────"
 # ⚠ اگر thumb/ و mid/ ساخته نشوند، گالری‌ها روی Pages آیکون شکسته می‌دهند.
@@ -145,6 +151,9 @@ checks = [
     ('docs/lib/labs/pulmolab/index.html', pathlib.Path('docs/lib/labs/pulmolab/index.html').is_file()),
     ('docs/lib/labs/pulmolab/media/cxr/ATTRIBUTION.json',
      pathlib.Path('docs/lib/labs/pulmolab/media/cxr/ATTRIBUTION.json').is_file()),
+    ('docs/lib/labs/neurolab/index.html', pathlib.Path('docs/lib/labs/neurolab/index.html').is_file()),
+    ('docs/lib/labs/neurolab/media/neuroimaging/ATTRIBUTION.json',
+     pathlib.Path('docs/lib/labs/neurolab/media/neuroimaging/ATTRIBUTION.json').is_file()),
     ('docs/.nojekyll', pathlib.Path('docs/.nojekyll').is_file()),
     ('raw_src منتشر نشده', not pathlib.Path('raw_src').exists()),
     # qbank/raw ورودی محلیِ git-ignore است (با qb_extract.py از بانک تک‌فایلی ساخته
@@ -155,11 +164,11 @@ checks = [
 # ---- هایلایت و اعتبار نویسنده در همهٔ صفحه‌های منتشرشده ----
 import re
 AUTHOR = 'مهدی محمدرحیمی'
-# دو ابزار بخش «آزمایشگاه تعاملی» خودبسنده‌اند و عمداً دست نمی‌خورند (مثل
-# tests/audit-library.py که آن‌ها را VENDORED می‌شناسد). اعتبار نویسندهٔ هر دو در
-# صفحهٔ میزبان docs/lib/labs/index.html و در labs-manifest.json آمده است.
+# سه ابزار بخش «آزمایشگاه تعاملی» خودبسنده‌اند و عمداً دست نمی‌خورند (همان
+# فهرستی که tests/audit-library.py به‌عنوان VENDORED می‌شناسد). اعتبار نویسندهٔ
+# هر سه در صفحهٔ میزبان docs/lib/labs/index.html و در labs-manifest.json آمده است.
 VENDORED = {'docs/lib/labs/cardiac/simulator.html'}
-VENDORED_DIRS = ('docs/lib/labs/pulmolab/',)
+VENDORED_DIRS = ('docs/lib/labs/pulmolab/', 'docs/lib/labs/neurolab/')
 no_credit, no_mark = [], []
 for f in sorted(pathlib.Path('docs/lib').rglob('*.html')):
     rel = f.as_posix()

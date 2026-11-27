@@ -1,0 +1,188 @@
+{
+  "id": "neurolab",
+  "version": "16.0.0",
+  "title": "آزمایشگاه جامع نورولوژی بالینی",
+  "englishTitle": "NeuroLab Studio",
+  "theme": {
+    "h": 245,
+    "c": 76,
+    "a": 192
+  },
+  "modules": [
+    {
+      "id": "home",
+      "title": "داشبورد فرماندهی",
+      "short": "خانه",
+      "badge": "۷ آزمایشگاه"
+    },
+    {
+      "id": "exam",
+      "title": "آزمایشگاه معاینه عصبی",
+      "short": "معاینه عصبی",
+      "badge": "۷ حوزه"
+    },
+    {
+      "id": "localization",
+      "title": "نوروآناتومی و لوکالیزاسیون ضایعه",
+      "short": "لوکالیزاسیون",
+      "badge": "موتور هوشمند"
+    },
+    {
+      "id": "imaging",
+      "title": "آزمایشگاه نوروایمیجینگ PACS",
+      "short": "نوروایمیجینگ",
+      "badge": "۸۳ اسکن + کشیک شب"
+    },
+    {
+      "id": "eeg",
+      "title": "نوار مغز (EEG) و نوروفیزیولوژی",
+      "short": "EEG / EMG",
+      "badge": "۱۲ کانال زنده"
+    },
+    {
+      "id": "stroke",
+      "title": "کد سکته، اورژانس، CSF و OSCE",
+      "short": "سکته، CSF و OSCE",
+      "badge": "NIHSS + OSCE"
+    },
+    {
+      "id": "cases",
+      "title": "موتور کیس‌های بالینی چندبیماری",
+      "short": "کیس‌های بالینی",
+      "badge": "۲۰ کیس پیچیده"
+    },
+    {
+      "id": "diseases",
+      "title": "کتابخانه جامع بیماری‌های نورولوژی",
+      "short": "کتابخانه بیماری‌ها",
+      "badge": "۳۵ بیماری"
+    }
+  ],
+  "offlinePacks": [
+    {
+      "id": "pack-stroke-emerg",
+      "title": "بسته آفلاین سکته و اورژانس‌های حاد",
+      "description": "اسکن‌های NCCT، DWI/ADC، MRA، خونریزی‌های داخل جمجمه (EDH/SDH/SAH/ICH) و هیدروسفالی حاد",
+      "images": [
+        "media/neuroimaging/neuro_normal_ct_head.jpg",
+        "media/neuroimaging/neuro_ncct_dense_mca.jpg",
+        "media/neuroimaging/neuro_ncct_left_mca.jpg",
+        "media/neuroimaging/neuro_dwi_acute_stroke.jpg",
+        "media/neuroimaging/neuro_adc_acute_stroke.jpg",
+        "media/neuroimaging/neuro_dwi_adc_aca.jpg",
+        "media/neuroimaging/neuro_dwi_wallenberg.jpg",
+        "media/neuroimaging/neuro_dwi_pica.jpg",
+        "media/neuroimaging/neuro_mra_circle_willis.jpg",
+        "media/neuroimaging/neuro_ct_epidural.jpg",
+        "media/neuroimaging/neuro_ct_subdural.jpg",
+        "media/neuroimaging/neuro_ct_sah_basal.jpg",
+        "media/neuroimaging/neuro_ct_sah_ivh.jpg",
+        "media/neuroimaging/neuro_ct_ich_temporal.jpg",
+        "media/neuroimaging/neuro_ct_cerebellar_ich.jpg",
+        "media/neuroimaging/neuro_ct_hydrocephalus.jpg"
+      ]
+    },
+    {
+      "id": "pack-onco-demyel",
+      "title": "بسته آفلاین نوروآنکولوژی، عفونت و دمیلیناسیون",
+      "description": "MRI تومورها (GBM، مننژیوم، شوانوم، متاستاز، هیپوفیز)، آبسه، CVT/MRV، MS، CAA و کیاری",
+      "images": [
+        "media/neuroimaging/neuro_normal_mri_t1_sag.jpg",
+        "media/neuroimaging/neuro_normal_mri_t2_ax.jpg",
+        "media/neuroimaging/neuro_mri_gbm_t1c.jpg",
+        "media/neuroimaging/neuro_mri_gbm_t2.jpg",
+        "media/neuroimaging/neuro_mri_meningioma.jpg",
+        "media/neuroimaging/neuro_mri_schwannoma.jpg",
+        "media/neuroimaging/neuro_mri_metastases.jpg",
+        "media/neuroimaging/neuro_mri_pituitary.jpg",
+        "media/neuroimaging/neuro_mri_abscess.jpg",
+        "media/neuroimaging/neuro_ct_cvt.jpg",
+        "media/neuroimaging/neuro_mrv_cvt.jpg",
+        "media/neuroimaging/neuro_mri_ms_flair.jpg",
+        "media/neuroimaging/neuro_swi_caa.jpg",
+        "media/neuroimaging/neuro_mri_chiari.jpg"
+      ]
+    },
+    {
+      "id": "pack-spine",
+      "title": "بسته آفلاین نخاع و ستون فقرات (Spine MRI)",
+      "description": "میلوپاتی گردنی، فشردگی نخاع C6-C7، هرنیاسیون دیسک کمری، تنگی کانال، سیرنگومیلی و مننژیوم نخاعی",
+      "images": [
+        "media/neuroimaging/neuro_spine_c6c7.jpg",
+        "media/neuroimaging/neuro_spine_cervical_myelopathy.jpg",
+        "media/neuroimaging/neuro_spine_lumbar_disc.jpg",
+        "media/neuroimaging/neuro_spine_lumbar_stenosis.jpg",
+        "media/neuroimaging/neuro_spine_syringomyelia.jpg",
+        "media/neuroimaging/neuro_spine_meningioma.jpg"
+      ]
+    },
+    {
+      "id": "pack-hard-pacs",
+      "title": "بسته آفلاین کیس‌های سخت و تله‌دار PACS (۱۶ اسکن)",
+      "description": "ساب‌دورال حاد-روی-مزمن دوطرفه، پنموسفالوس Mount Fuji، کنترکوپ، میلینولیز پونز (Trident)، HSV-1، PCNSL، PRES، کاورتوما/DVA، الیگودندروگلیوما، AVM، NPH، مدولوبلاستوما و کیست آراکنوئید",
+      "images": [
+        "media/neuroimaging/neuro_ct_chronic_sdh_bilat.jpg",
+        "media/neuroimaging/neuro_ct_malignant_mca_pca.jpg",
+        "media/neuroimaging/neuro_ct_pneumocephalus_fuji.jpg",
+        "media/neuroimaging/neuro_ct_contrecoup_contusion.jpg",
+        "media/neuroimaging/neuro_ct_oligodendroglioma.jpg",
+        "media/neuroimaging/neuro_ct_arachnoid_cyst.jpg",
+        "media/neuroimaging/neuro_ct_avm_coronal.jpg",
+        "media/neuroimaging/neuro_ct_nph_evans.jpg",
+        "media/neuroimaging/neuro_mri_cpm_trident.jpg",
+        "media/neuroimaging/neuro_mri_hsv_encephalitis.jpg",
+        "media/neuroimaging/neuro_mri_pcnsl_t2.jpg",
+        "media/neuroimaging/neuro_mri_pcnsl_t1c.jpg",
+        "media/neuroimaging/neuro_mri_pres_flair.jpg",
+        "media/neuroimaging/neuro_mri_medulloblastoma_dwi.jpg",
+        "media/neuroimaging/neuro_mri_cavernoma_t2.jpg",
+        "media/neuroimaging/neuro_mri_cavernoma_swi.jpg"
+      ]
+    },
+    {
+      "id": "pack-hard-pacs-v15",
+      "title": "بسته آفلاین موج دوم کیس‌های فوق‌سخت PACS (۱۶ اسکن جدید v15)",
+      "description": "اپیدرموئید T2/DWI، ورنیکه DWI/PAG، کیست کلوئید Axial/Coronal، CAA، کیاری ۱، دندی-واکر، SAH+IVH، شوانوم CPA، گلیوم پروانه‌ای، اسکلروز هیپوکامپ MTS، آبسه اپیدورال نخاع، هپاتوسربرال منگنز و sCJD Cortical Ribboning",
+      "images": [
+        "media/neuroimaging/neuro_mri_epidermoid_t2.jpg",
+        "media/neuroimaging/neuro_mri_epidermoid_dwi.jpg",
+        "media/neuroimaging/neuro_mri_wernicke_dwi.jpg",
+        "media/neuroimaging/neuro_mri_wernicke_pag.jpg",
+        "media/neuroimaging/neuro_mri_caa_t2star.jpg",
+        "media/neuroimaging/neuro_ct_colloid_ax.jpg",
+        "media/neuroimaging/neuro_ct_colloid_cor.jpg",
+        "media/neuroimaging/neuro_mri_chiari1_sag.jpg",
+        "media/neuroimaging/neuro_mri_dandy_walker.jpg",
+        "media/neuroimaging/neuro_mri_toxoplasmosis.jpg",
+        "media/neuroimaging/neuro_mri_schwannoma_cpa.jpg",
+        "media/neuroimaging/neuro_mri_butterfly_gbm.jpg",
+        "media/neuroimaging/neuro_mri_mts_hippo.jpg",
+        "media/neuroimaging/neuro_mri_spinal_epi_abscess.jpg",
+        "media/neuroimaging/neuro_mri_hepatocerebral_t1.jpg",
+        "media/neuroimaging/neuro_mri_cjd_dwi.jpg"
+      ]
+    },
+    {
+      "id": "pack-hard-pacs-v16",
+      "title": "بسته آفلاین موج سوم کیس‌های فوق‌سخت PACS (۱۵ اسکن جدید v16 — جمع ۸۳ اسکن)",
+      "description": "اپندیموم بطن چهارم T2/FLAIR، لکوآنسفالوپاتی PML دو توالی، توبروس اسکلروزیس SEGA/توبر، شیزنسفالی لب‌باز، هانتینگتون Boxcar، آمپیم ساب‌دورال، کوردوم کلیووس، الیگودندروگلیوما FLAIR/T2، کرانیوفارنژیوما، پیلوسیتیک اپتیک NF1 و پنوموسفالی پس از ترانس‌اسفنوئیدال",
+      "images": [
+        "media/neuroimaging/neuro_mri_ependymoma_t2.jpg",
+        "media/neuroimaging/neuro_mri_ependymoma_flair.jpg",
+        "media/neuroimaging/neuro_mri_pml_flair.jpg",
+        "media/neuroimaging/neuro_mri_pml_t2.jpg",
+        "media/neuroimaging/neuro_mri_tsc_sega.jpg",
+        "media/neuroimaging/neuro_mri_tsc_sag.jpg",
+        "media/neuroimaging/neuro_ct_schizencephaly.jpg",
+        "media/neuroimaging/neuro_mri_huntington_cor.jpg",
+        "media/neuroimaging/neuro_mri_subdural_empyema.jpg",
+        "media/neuroimaging/neuro_mri_clival_chordoma.jpg",
+        "media/neuroimaging/neuro_mri_oligo_flair.jpg",
+        "media/neuroimaging/neuro_mri_oligo_t2.jpg",
+        "media/neuroimaging/neuro_mri_craniopharyn_t1c.jpg",
+        "media/neuroimaging/neuro_mri_pilocytic_optic.jpg",
+        "media/neuroimaging/neuro_ct_pituitary_postop.jpg"
+      ]
+    }
+  ]
+}

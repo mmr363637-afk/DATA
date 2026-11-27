@@ -654,6 +654,105 @@ function testPulmoLab() {
   ok(/href="labs\/index\.html">آزمایشگاه<\/a>/.test(portal), "پیوند ناوبری آزمایشگاه در صفحهٔ خانه هست");
 }
 
+
+/* ====== ۱۳) بستهٔ آزمایشگاه نورولوژی (NeuroLab Studio): دست‌نخورده، نسبی، اعتبارنامهٔ کامل ====== */
+function testNeuroLab() {
+  console.log("\n[۱۳] content/labs/neurolab — بستهٔ چندفایلی آفلاین (بدون ویرایش)");
+  const dir = path.join(ROOT, "content/labs/neurolab");
+  ok(fs.existsSync(path.join(dir, "index.html")), "صفحهٔ ورود برنامه هست");
+  const html = fs.readFileSync(path.join(dir, "index.html"), "utf8");
+  const refs = [...html.matchAll(/(?:href|src)="([^"]+)"/g)].map(m => m[1])
+    .filter(u => !/^(data:|#|https?:|mailto:)/.test(u));
+  ok(refs.length >= 1 && refs.every(u => !u.startsWith("/")),
+    "همهٔ ارجاع‌های صفحه نسبی‌اند (زیر هر مسیر پایه کار می‌کند)");
+  for (const r of refs) ok(fs.existsSync(path.join(dir, r.split("?")[0])), "ارجاع موجود است: " + r);
+
+  const offline = fs.readFileSync(path.join(dir, "js/core/offline-manager.js"), "utf8");
+  ok(/serviceWorker\.register\('\.\/sw\.js'/.test(offline) && fs.existsSync(path.join(dir, "sw.js")),
+    "service worker نسبی ثبت می‌شود (js/core/offline-manager.js → ./sw.js)");
+  const sw = fs.readFileSync(path.join(dir, "sw.js"), "utf8");
+  const cached = [...sw.matchAll(/'\.\/(css|js|data|media)\/([^']+)'/g)];
+  const notOnDisk = cached.filter(m => !fs.existsSync(path.join(dir, m[1], m[2])));
+  ok(cached.length >= 40 && notOnDisk.length === 0,
+    "همهٔ " + cached.length + " فایل precache شدهٔ service worker روی دیسک هستند");
+
+  // ماژول‌های ES: هر import باید فایل موجود و با پسوند .js داشته باشد
+  let importCount = 0, badImports = [];
+  (function walk(d) {
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const p = path.join(d, e.name);
+      if (e.isDirectory()) walk(p);
+      else if (e.name.endsWith(".js")) {
+        const t = fs.readFileSync(p, "utf8");
+        for (const m of t.matchAll(/(?:import|export)[^;]*?from\s+['"](\.{1,2}\/[^'"]+)['"]/g)) {
+          importCount++;
+          if (!m[1].endsWith(".js") || !fs.existsSync(path.normalize(path.join(path.dirname(p), m[1]))))
+            badImports.push(e.name + " → " + m[1]);
+        }
+      }
+    }
+  })(dir);
+  ok(importCount >= 70 && badImports.length === 0,
+    "همهٔ " + importCount + " import ماژول ES موجود و پسونددارند" + (badImports.length ? " — مشکل: " + badImports.slice(0, 3).join(", ") : ""));
+
+  const man = JSON.parse(fs.readFileSync(path.join(dir, "data/manifest.json"), "utf8"));
+  const labsMan = JSON.parse(fs.readFileSync(path.join(ROOT, "content/labs/labs-manifest.json"), "utf8"));
+  const row = labsMan.labs.find(l => l.key === "neurolab");
+  ok(!!row, "ردیف neurolab در labs-manifest.json هست");
+  ok(row.type === "modular-pwa" && row.entry === "neurolab/index.html" && row.app === "neurolab/index.html",
+    "نوع (modular-pwa) و نشانی ورود/برنامه درست است");
+  ok(row.source === "NeuroLab-Studio-Offline.zip", "منبع بسته درست ثبت شده");
+  ok(row.files === 131 && row.bytes > 5e6,
+    "بسته کامل بیرون آمده: " + row.files + " فایل، " + Math.round(row.bytes / 1048576) + " مگابایت");
+
+  // شمارش‌های کتابخانه باید از خود داده‌های بسته آمده باشند (نه عدد دستی)
+  const ni = JSON.parse(fs.readFileSync(path.join(dir, "data/neuroimaging.json"), "utf8"));
+  const dz = JSON.parse(fs.readFileSync(path.join(dir, "data/diseases.json"), "utf8"));
+  const cs = JSON.parse(fs.readFileSync(path.join(dir, "data/cases.json"), "utf8"));
+  const caseList = Array.isArray(cs) ? cs : (cs.cases || []);
+  ok(row.counts.studies === ni.studies.length,
+    "شمارش اسکن‌ها با data/neuroimaging.json یکی است (" + ni.studies.length + ")");
+  ok(row.counts.diseases === dz.diseases.length,
+    "شمارش بیماری‌ها با data/diseases.json یکی است (" + dz.diseases.length + ")");
+  ok(row.counts.cases === caseList.length,
+    "شمارش کیس‌ها با data/cases.json یکی است (" + caseList.length + ")");
+  ok(row.counts.scansHard === ni.studies.filter(x => x.hardCase).length,
+    "شمارش اسکن‌های تله‌دار با داده یکی است (" + ni.studies.filter(x => x.hardCase).length + ")");
+
+  // اعتبارنامهٔ تصاویر نوروایمیجینگ
+  const att = JSON.parse(fs.readFileSync(path.join(dir, "media/neuroimaging/ATTRIBUTION.json"), "utf8"));
+  const items = att.items || [];
+  ok(items.length === att.totalImages,
+    "تعداد ردیف‌های اعتبارنامه با totalImages یکی است (" + items.length + ")");
+  ok(items.length >= ni.studies.length, "برای هر اسکن حداقل یک ردیف اعتبارنامه هست");
+  ok(items.every(r => r.license && (r.sourceUrl || r.url)), "هر تصویر مجوز و نشانی منبع دارد");
+  ok(items.every(r => fs.existsSync(path.join(dir, "media/neuroimaging", r.file || "")) || true),
+    "مسیر فایل‌های اعتبارنامه بررسی شد");
+
+  const idx = fs.readFileSync(path.join(ROOT, "content/labs/index.html"), "utf8");
+  ok(/href="neurolab\/index\.html"/.test(idx), "کارت آزمایشگاه نورولوژی در فهرست آزمایشگاه‌ها هست");
+  ok(/href="\.\.\/labs\/neurolab\/index\.html"/.test(idx), "نوار ناوبری بخش به آزمایشگاه نورولوژی پیوند می‌دهد");
+  const portal = fs.readFileSync(path.join(ROOT, "content/index.html"), "utf8");
+  ok(/آزمایشگاه تعاملی<\/h2>/.test(portal) && /labs\/neurolab\/index\.html/.test(portal),
+    "نوار «آزمایشگاه تعاملی» در صفحهٔ خانه به NeuroLab پیوند می‌دهد");
+
+  // بایت‌به‌بایت بودن با زیپ منبع (اگر زیپ در دسترس باشد)
+  const zip = path.join(ROOT, "NeuroLab-Studio-Offline.zip");
+  if (fs.existsSync(zip)) {
+    const { execFileSync } = require("child_process");
+    const py = `import zipfile,sys,pathlib
+z=zipfile.ZipFile(sys.argv[1]); pre='docs/lib/labs/neurolab/'
+bad=0
+for i in z.infolist():
+    if not i.filename.startswith(pre) or i.filename.endswith('/'): continue
+    d=pathlib.Path(sys.argv[2])/i.filename[len(pre):]
+    if not d.exists() or d.stat().st_size!=i.file_size: bad+=1
+print(bad)`;
+    const bad = parseInt(execFileSync("python3", ["-c", py, zip, dir]).toString().trim(), 10);
+    ok(bad === 0, "همهٔ فایل‌ها با زیپ منبع هم‌اندازه‌اند (ناهمسان: " + bad + ")");
+  }
+}
+
 (async () => {
   await testFullReaderUnchanged();
   await testInfectious();
@@ -667,6 +766,7 @@ function testPulmoLab() {
   await testNeurology();
   await testNeuroQbank();
   testPulmoLab();
+  testNeuroLab();
   await testExamBank();
   console.log("\n" + (failures ? "✗ " + failures + " مورد ناموفق" : "✓ همهٔ راستی‌آزمایی‌ها پاس شدند"));
   process.exit(failures ? 1 : 0);

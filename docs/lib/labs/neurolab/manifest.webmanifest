@@ -1,0 +1,22 @@
+{
+  "name": "آزمایشگاه جامع نورولوژی بالینی | NeuroLab Studio",
+  "short_name": "NeuroLab",
+  "description": "پلتفرم پیشرفته یادگیری و شبیه‌سازی نورولوژی بالینی: معاینه عصبی، لوکالیزاسیون ضایعه، نوروایمیجینگ PACS، نوار مغز EEG/EMG، کد سکته و کیس‌های چندبیماری.",
+  "start_url": "./index.html#home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "dir": "rtl",
+  "lang": "fa",
+  "background_color": "#050811",
+  "theme_color": "#7c6eff",
+  "categories": ["education", "medical"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%230a1020'/%3E%3Ccircle cx='96' cy='96' r='64' fill='none' stroke='%237c6eff' stroke-width='8'/%3E%3Cpath d='M62 104c0-28 18-48 34-48s34 20 34 48c0 20-12 32-34 32s-34-12-34-32z' fill='none' stroke='%2322d3ee' stroke-width='7'/%3E%3Cpath d='M96 56v80M68 86c10 4 18 4 28 0M96 104c10-4 18-4 28 0' stroke='%23a397ff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
